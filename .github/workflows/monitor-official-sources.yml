@@ -18,7 +18,7 @@ concurrency:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     env:
       CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -57,6 +57,12 @@ jobs:
               f.write('changed=%s\n' % ('true' if r.get('changed_sources') else 'false'))
               f.write('blocked=%s\n' % ('true' if r.get('blocked_pages') else 'false'))
               f.write('facts=%s\n' % ('true' if r.get('fact_updates') else 'false'))
+              f.write('coverage=%s\n' % ('true' if r.get('coverage_ok') else 'false'))
+              f.write('errors=%s\n' % len(r.get('errors',[])))
+          print('baseline_complete=',r.get('baseline_complete'))
+          print('coverage_ok=',r.get('coverage_ok'))
+          print('errors=',len(r.get('errors',[])))
+          print('critical_errors=',len(r.get('critical_errors',[])))
           PY
 
       - name: Commit monitored state
@@ -71,6 +77,12 @@ jobs:
             git push
           fi
 
+      - name: Validate monitoring coverage
+        if: steps.report.outputs.coverage != 'true'
+        run: |
+          echo 'ERROR: the official-source baseline is incomplete. See monitor/report.json.'
+          exit 1
+
       - name: Open review issue when content is quarantined
         if: steps.report.outputs.blocked == 'true'
         env:
@@ -79,7 +91,7 @@ jobs:
           python - <<'PY' > /tmp/issue.md
           import json
           r=json.load(open('monitor/report.json',encoding='utf-8'))
-          print('Uma fonte oficial mudou e o Guia retirou automaticamente a orientação potencialmente desatualizada.\n')
+          print('Uma fonte oficial mudou ou ficou indisponível e o Guia retirou automaticamente a orientação potencialmente desatualizada.\n')
           print('## Páginas afetadas')
           for p,ids in sorted(r.get('blocked_pages',{}).items()): print(f'- `{p}` — {", ".join(ids)}')
           print('\nRever a fonte oficial, corrigir PT e EN e validar antes de retirar a quarentena.')
@@ -89,7 +101,7 @@ jobs:
           if [ -z "$EXISTING" ]; then gh issue create --title 'Fonte oficial alterada — revisão necessária' --label official-source-change --body-file /tmp/issue.md; else gh issue comment "$EXISTING" --body-file /tmp/issue.md; fi
 
       - name: Deploy updated site
-        if: (steps.report.outputs.changed == 'true' || steps.report.outputs.facts == 'true' || steps.report.outputs.blocked == 'true') && env.CF_API_TOKEN != '' && env.CF_ACCOUNT_ID != ''
+        if: steps.report.outputs.coverage == 'true' && (steps.report.outputs.changed == 'true' || steps.report.outputs.facts == 'true' || steps.report.outputs.blocked == 'true') && env.CF_API_TOKEN != '' && env.CF_ACCOUNT_ID != ''
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

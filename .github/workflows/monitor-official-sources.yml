@@ -9,6 +9,8 @@ on:
       - 'monitor/dre_fallback.py'
       - 'monitor/source_review_filters.py'
       - 'monitor/recover_required_sources.py'
+      - 'monitor/expand_locale_coverage.py'
+      - 'site/data/locales.json'
       - 'requirements-monitor.txt'
       - '.github/workflows/monitor-official-sources.yml'
   schedule:
@@ -46,11 +48,16 @@ jobs:
           test -f monitor/dre_fallback.py
           test -f monitor/source_review_filters.py
           test -f monitor/recover_required_sources.py
+          test -f monitor/expand_locale_coverage.py
+          test -f site/data/locales.json
           test -f scripts/qa.py
           test -d site
 
       - name: Install monitor dependencies
         run: pip install -r requirements-monitor.txt
+
+      - name: Expand source coverage to live translations
+        run: python monitor/expand_locale_coverage.py
 
       - name: Check official sources
         run: python monitor/monitor_sources.py
@@ -124,7 +131,7 @@ jobs:
               print('\n## Nova legislação potencialmente relevante no Diário da República')
               for a in alerts:
                   print(f"- {a.get('title') or 'Sem título'} — {a.get('url') or a.get('source')}")
-          print('\nRever a fonte oficial, corrigir PT e EN quando necessário e validar antes de retirar qualquer quarentena.')
+          print('\nRever a fonte oficial, corrigir PT e todas as traduções ativas quando necessário e validar antes de retirar qualquer quarentena.')
           PY
           gh label create official-source-change --color D93F0B --description 'Fonte oficial alterada' 2>/dev/null || true
           EXISTING=$(gh issue list --state open --label official-source-change --json number --jq '.[0].number // empty')

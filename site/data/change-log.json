@@ -2,6 +2,21 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-20T19:37:58Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "baseline_seeded_from_verified_official_page",
+      "reason": "https://justica.gov.pt/Registos/Civil/Casamento"
+    },
+    {
+      "time": "2026-08-20T19:37:45Z",
+      "state": "invalid_baselines_rejected",
+      "source_ids": [
+        "src_fb82d424d16e"
+      ],
+      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
+    },
+    {
       "time": "2026-08-20T18:22:55Z",
       "state": "invalid_baselines_rejected",
       "source_ids": [

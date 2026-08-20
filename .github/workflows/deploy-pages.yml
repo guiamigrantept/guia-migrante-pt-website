@@ -14,6 +14,7 @@ on:
       - 'scripts/build_route_locales_ru.py'
       - 'scripts/build_living_locales.py'
       - 'scripts/build_remaining_locales.py'
+      - 'scripts/check_locale_parity.py'
       - 'scripts/finalize_live_locales.py'
       - 'scripts/build_sitemap.py'
       - '.github/workflows/deploy-pages.yml'
@@ -53,6 +54,8 @@ jobs:
         run: python scripts/build_living_locales.py
       - name: Build remaining staged translations
         run: python scripts/build_remaining_locales.py
+      - name: Check full page and feature parity before locale publication
+        run: python scripts/check_locale_parity.py
       - name: Finalize published translations
         run: python scripts/finalize_live_locales.py
       - name: Build multilingual sitemap

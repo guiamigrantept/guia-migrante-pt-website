@@ -2,9 +2,14 @@ name: Monitor official sources
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'monitor/monitor_sources.py'
+      - 'requirements-monitor.txt'
+      - '.github/workflows/monitor-official-sources.yml'
   schedule:
     - cron: '17 */3 * * *'
-      timezone: 'Europe/Lisbon'
 
 permissions:
   contents: write
@@ -69,7 +74,7 @@ jobs:
         run: |
           git config user.name 'Guia Migrante Source Monitor'
           git config user.email 'actions@users.noreply.github.com'
-          git add monitor/snapshots monitor/sources.json monitor/report.json site/data/source-status.json site/data/facts.json site/data/change-log.json
+          git add monitor/snapshots monitor/candidates monitor/sources.json monitor/report.json site/data/source-status.json site/data/facts.json site/data/change-log.json
           if git diff --cached --quiet; then
             echo 'No repository changes.'
           else
@@ -91,7 +96,7 @@ jobs:
           python - <<'PY' > /tmp/issue.md
           import json
           r=json.load(open('monitor/report.json',encoding='utf-8'))
-          print('Uma fonte oficial mudou ou ficou indisponível e o Guia retirou automaticamente a orientação potencialmente desatualizada.\n')
+          print('Uma fonte oficial mudou ou foi retirada e o Guia retirou automaticamente a orientação potencialmente desatualizada.\n')
           print('## Páginas afetadas')
           for p,ids in sorted(r.get('blocked_pages',{}).items()): print(f'- `{p}` — {", ".join(ids)}')
           print('\nRever a fonte oficial, corrigir PT e EN e validar antes de retirar a quarentena.')

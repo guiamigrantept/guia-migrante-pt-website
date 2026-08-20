@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "sources": [
     {
       "id": "src_08741fbb1e64",
@@ -10,17 +10,12 @@
         "mudanca-saida.html"
       ],
       "watch_terms": [
-        "acting",
         "address",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "morada"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": false
     },
     {
       "id": "src_3504f1eb6b62",
@@ -40,7 +35,6 @@
         "braga",
         "cacém",
         "cascais",
-        "check",
         "cidadão",
         "coimbra",
         "confirmar",
@@ -48,9 +42,11 @@
         "faro",
         "frança",
         "funchal",
-        "horário"
+        "horário",
+        "lisboa"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_076880484ab9",
@@ -61,13 +57,7 @@
         "en/asilo.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "guia",
         "guide",
         "internacional",
@@ -76,7 +66,8 @@
         "protection",
         "proteção"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": false
     },
     {
       "id": "src_6be8c3783532",
@@ -95,14 +86,8 @@
         "situacoes-especiais.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
         "autorização",
-        "before",
-        "confirm",
-        "confirme",
         "cplp",
         "faqs",
         "integration",
@@ -113,7 +98,8 @@
         "services",
         "serviços"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_2c926c8cea06",
@@ -124,19 +110,14 @@
         "en/cplp.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
         "concessão",
-        "confirm",
-        "confirme",
         "cplp",
         "first",
         "grant"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_db2bf0a41ff1",
@@ -147,20 +128,15 @@
         "protecao-temporaria.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "faqs",
         "protection",
         "proteção",
         "temporary",
         "temporária"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_c32f3c43a12c",
@@ -177,14 +153,8 @@
         "situacoes-especiais.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
         "claim",
-        "confirm",
-        "confirme",
         "encontrar",
         "find",
         "near",
@@ -192,7 +162,8 @@
         "perto",
         "rede"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_f0b1b75348f3",
@@ -218,7 +189,8 @@
         "transitional",
         "transitório"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_66b58cce4354",
@@ -229,18 +201,13 @@
         "en/cplp.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "cplp",
         "renewal",
         "renovação"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_064cff7e6d52",
@@ -256,7 +223,8 @@
         "estrutura",
         "procura"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_81f1d1f37f02",
@@ -282,7 +250,8 @@
         "oficial",
         "renovação"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_863b5ed4598b",
@@ -302,7 +271,8 @@
         "study",
         "área"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_996c678197f2",
@@ -314,13 +284,7 @@
       ],
       "watch_terms": [
         "acolhimento",
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "cursos",
         "host",
         "language",
@@ -328,7 +292,8 @@
         "portuguese",
         "português"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_e392a810f5d3",
@@ -341,20 +306,15 @@
         "ue-familiares.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
         "cidadãos",
         "citizens",
-        "confirm",
-        "confirme",
         "familiares",
         "family",
         "members"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_4fb71a74680c",
@@ -365,19 +325,14 @@
         "ue-familiares.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
         "certificado",
         "certificate",
-        "confirm",
-        "confirme",
         "registo",
         "registration"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_553e19536460",
@@ -390,19 +345,14 @@
         "ue-familiares.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "permanent",
         "permanente",
         "residence",
         "residência"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_cbed4d38b3bf",
@@ -413,19 +363,14 @@
         "situacoes-urgentes.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "dados",
         "replacement",
         "residence-card",
         "título"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_48b0a401cee7",
@@ -448,7 +393,8 @@
         "update",
         "único"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_984aab257167",
@@ -459,19 +405,14 @@
         "ue-familiares.html"
       ],
       "watch_terms": [
-        "acting",
         "agendamento",
-        "agir",
         "aima",
-        "antes",
         "appointments",
-        "before",
-        "confirm",
-        "confirme",
         "familiares",
         "family-member"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_0bb3fdad0761",
@@ -482,20 +423,15 @@
         "mudanca-saida.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "contact",
         "form",
         "formulário",
         "title",
         "título"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_2b0880736b8a",
@@ -509,13 +445,13 @@
         "2026",
         "aima",
         "atualização",
-        "checked",
         "concessão",
         "nova",
         "renovação",
         "update"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_7c058712b7c1",
@@ -527,17 +463,12 @@
       ],
       "watch_terms": [
         "2027",
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "extension",
         "prorrogação"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_7ef818918ee4",
@@ -562,7 +493,8 @@
         "visto",
         "waiver"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_f7af44a4f429",
@@ -582,7 +514,8 @@
         "work",
         "área"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_136e595aa025",
@@ -593,21 +526,16 @@
         "en/altamente-qualificado.html"
       ],
       "watch_terms": [
-        "acting",
         "activity",
-        "agir",
         "aima",
         "altamente",
-        "antes",
         "atividade",
-        "before",
-        "confirm",
-        "confirme",
         "highly",
         "qualificada",
         "qualified"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_0bac1c39c7d8",
@@ -618,17 +546,12 @@
         "en/altamente-qualificado.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "tech",
         "visa"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_8673ad284f9a",
@@ -647,7 +570,8 @@
         "oficial",
         "página"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_2c93b8684649",
@@ -658,20 +582,15 @@
         "independente-empreendedor.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
         "atividade",
-        "before",
-        "confirm",
-        "confirme",
         "independente",
         "permit",
         "residence",
         "self-employment"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_482b94cf7722",
@@ -690,7 +609,8 @@
         "oficial",
         "página"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_7e11330093ac",
@@ -701,13 +621,7 @@
         "trabalho.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "job-search",
         "procura",
         "residence",
@@ -716,7 +630,8 @@
         "visa",
         "visto"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_485a932adf3e",
@@ -727,19 +642,14 @@
         "nomada-digital.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "digitais",
         "digital",
         "nomads",
         "nómadas"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_b5f7c69a3a4d",
@@ -750,13 +660,7 @@
         "longa-duracao.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "duração",
         "estatuto",
         "long-term",
@@ -765,7 +669,8 @@
         "residente",
         "status"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_3b1a39e98563",
@@ -776,15 +681,10 @@
         "investimento.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme"
+        "aima"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_eab89101abb0",
@@ -795,18 +695,13 @@
         "investimento.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "portal",
         "renewals",
         "renovações"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_139f74e2e14d",
@@ -817,19 +712,14 @@
         "situacoes-especiais.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "trafficking",
         "tráfico",
         "victims",
         "vítimas"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_f1f0aab11199",
@@ -842,14 +732,8 @@
         "pais-terceiro.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
         "autorização",
-        "before",
-        "confirm",
-        "confirme",
         "general",
         "gerais",
         "permit",
@@ -859,9 +743,11 @@
         "residence",
         "residência",
         "route",
-        "visa"
+        "visa",
+        "visto"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_1108a2df22fa",
@@ -872,19 +758,14 @@
         "en/altamente-qualificado.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
         "azul",
-        "before",
         "blue",
         "card",
-        "cartão",
-        "confirm",
-        "confirme"
+        "cartão"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_a4c0a29d56f8",
@@ -895,20 +776,15 @@
         "situacoes-especiais.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "aima",
-        "antes",
-        "before",
         "born",
         "child",
-        "confirm",
-        "confirme",
         "menor",
         "nascido",
         "portugal"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_46b89dc01528",
@@ -925,7 +801,8 @@
         "reagrupamento",
         "reunification"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_3a0611c027d0",
@@ -936,19 +813,14 @@
         "familia.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "familiar",
         "family",
         "portugal",
         "reagrupamento",
         "reunification"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_db343c2f6967",
@@ -959,12 +831,6 @@
         "familia.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "familiar",
         "family",
         "fora",
@@ -973,7 +839,8 @@
         "reagrupamento",
         "reunification"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_1a5a6913096f",
@@ -984,19 +851,14 @@
         "servicos-casa.html"
       ],
       "watch_terms": [
-        "acting",
         "address",
-        "agir",
         "anacom",
-        "antes",
-        "before",
         "change",
-        "check",
-        "confirme",
         "morada",
         "mudança"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_1d0d8bb32004",
@@ -1007,18 +869,13 @@
         "servicos-casa.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
         "anacom",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "contracts",
         "contratos",
         "telecom"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_5c8489b0954a",
@@ -1029,22 +886,17 @@
         "en/banco-pagamentos.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "banco",
         "bancários",
         "banking",
         "basic",
-        "before",
-        "check",
-        "confirme",
         "mínimos",
         "portugal",
         "services",
         "serviços"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_61b0e60be0fa",
@@ -1055,19 +907,14 @@
         "en/banco-pagamentos.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "bancário",
         "bank",
-        "before",
-        "check",
         "cliente",
-        "confirme",
         "customer",
         "portal"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_65c308f94048",
@@ -1082,7 +929,8 @@
         "form",
         "open"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_e36005383a29",
@@ -1095,7 +943,6 @@
       "watch_terms": [
         "2026",
         "bisneto",
-        "check",
         "consultar",
         "great-grandchild",
         "legal",
@@ -1110,9 +957,11 @@
         "país",
         "português",
         "residence",
-        "situations"
+        "situations",
+        "tenho"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_08724fd769d4",
@@ -1124,15 +973,10 @@
       ],
       "watch_terms": [
         "2024",
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "cicdr",
-        "confirm",
-        "confirme"
+        "cicdr"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_3bb47b3b8f19",
@@ -1147,7 +991,8 @@
         "nacionalidade",
         "residência"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_374e8dd744ee",
@@ -1158,20 +1003,15 @@
         "habitacao.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "authority",
-        "before",
-        "confirm",
-        "confirme",
         "finanças",
         "receipts",
         "recibos",
         "renda",
         "rent"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_6400da2dbb70",
@@ -1184,20 +1024,14 @@
         "mudanca-saida.html"
       ],
       "watch_terms": [
-        "acting",
         "address",
-        "agir",
-        "antes",
         "authority",
-        "before",
-        "check",
-        "confirm",
-        "confirme",
         "finanças",
         "fiscal",
         "morada"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_cac85a755325",
@@ -1208,19 +1042,14 @@
         "impostos.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "authority",
-        "before",
-        "confirm",
-        "confirme",
         "finanças",
         "non-resident",
         "resident",
         "residente"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_0ea9b0928bd2",
@@ -1243,7 +1072,8 @@
         "união",
         "vivo"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_10df7741dfe0",
@@ -1264,7 +1094,8 @@
         "portuguese",
         "português"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_962f8edbc412",
@@ -1286,7 +1117,8 @@
         "pais",
         "portugal"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_ac02e2cb2311",
@@ -1307,7 +1139,8 @@
         "portuguese",
         "português"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_aa440bba100b",
@@ -1331,7 +1164,8 @@
         "portuguese",
         "português"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_3c7634597430",
@@ -1344,21 +1178,15 @@
         "situacoes-urgentes.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "apresentar",
-        "before",
-        "check",
         "complaint",
-        "confirm",
-        "confirme",
         "file",
         "justice",
         "justiça",
         "queixa"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_1a10460aaa69",
@@ -1371,7 +1199,6 @@
       "watch_terms": [
         "acesso",
         "case",
-        "check",
         "consultar",
         "guarde",
         "processo",
@@ -1379,7 +1206,8 @@
         "senha",
         "status"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_fb82d424d16e",
@@ -1390,18 +1218,13 @@
         "registos-civis.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "casamento",
-        "check",
-        "confirme",
         "justice",
         "justiça",
         "marriage"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_d3d76ad6c512",
@@ -1412,19 +1235,14 @@
         "en/discriminacao-apoio.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "apoio",
-        "before",
-        "confirm",
-        "confirme",
         "judiciário",
         "justice",
         "justiça",
         "legal"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_8075539b4165",
@@ -1441,7 +1259,8 @@
         "pedido",
         "serviço"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_2e8500a7bec3",
@@ -1452,19 +1271,14 @@
         "registos-civis.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "birth",
-        "check",
-        "confirme",
         "justice",
         "justiça",
         "nascimento",
         "registration"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_ea73d986f525",
@@ -1477,7 +1291,6 @@
       "watch_terms": [
         "2026",
         "abrir",
-        "checked",
         "concessão",
         "nova",
         "open",
@@ -1486,7 +1299,8 @@
         "renovação",
         "renovações"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_0f7eff34ab40",
@@ -1501,7 +1315,6 @@
         "abrir",
         "aima",
         "ainda",
-        "before",
         "contributions",
         "existe",
         "interesse",
@@ -1514,7 +1327,8 @@
         "social",
         "started"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_7373fed611f4",
@@ -1525,19 +1339,14 @@
         "servicos-casa.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "contracted",
         "contratada",
         "erse",
         "potência",
         "power"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_2b928469124c",
@@ -1548,19 +1357,14 @@
         "servicos-casa.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "check",
         "comparador",
         "comparison",
-        "confirme",
         "energia",
         "energy",
         "erse"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_60492ffd3a5c",
@@ -1571,18 +1375,31 @@
         "situacoes-urgentes.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "domestic",
         "doméstica",
         "violence",
         "violência"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_9ddecb880ea8",
+      "url": "https://www.cm-amadora.pt/pt/intervencao-social/interculturalidade/10606-claim-centro-local-de-apoio-a-integracao-de-migrantes.html",
+      "domain": "www.cm-amadora.pt",
+      "pages": [
+        "contactos.html",
+        "en/contactos.html"
+      ],
+      "watch_terms": [
+        "2026",
+        "amadora",
+        "atualizada",
+        "claim",
+        "municipal"
+      ],
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_558a74079aff",
@@ -1593,19 +1410,14 @@
         "qualificacoes.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "dges",
         "recognition",
         "reconhecimento",
         "tipos",
         "types"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_a819c8428bc5",
@@ -1616,20 +1428,15 @@
         "servicos-casa.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "changing",
-        "check",
         "comercializador",
-        "confirme",
         "energy",
         "erse",
         "mudança",
         "supplier"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_2b7fd322021d",
@@ -1640,19 +1447,14 @@
         "escola-familias.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "education",
         "ensino",
         "gov.pt",
         "migrantes",
         "migrants"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_87d4fe096076",
@@ -1665,13 +1467,7 @@
         "trabalho.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "business",
-        "confirm",
-        "confirme",
         "criar",
         "gov.pt",
         "guia",
@@ -1680,7 +1476,8 @@
         "trabalhar",
         "work"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_1d26a663b9c8",
@@ -1691,18 +1488,13 @@
         "trabalho-direitos.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "gov.pt",
         "portugal",
         "trabalhar",
         "working"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_348272c45029",
@@ -1713,12 +1505,6 @@
         "mudanca-saida.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "dados",
         "data",
         "gov.pt",
@@ -1726,7 +1512,8 @@
         "segurança",
         "social"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_e9c2fda70bd4",
@@ -1750,7 +1537,8 @@
         "lisbon",
         "missions"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_8066e6d33e60",
@@ -1761,16 +1549,11 @@
         "situacoes-urgentes.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "gov.pt",
         "oficial"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_94e2ebb14db9",
@@ -1783,14 +1566,8 @@
         "saude-completa.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "centre",
         "centro",
-        "check",
-        "confirme",
         "distinction",
         "gov.pt",
         "health",
@@ -1802,7 +1579,8 @@
         "saúde",
         "utente"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_1b8b2c1bcde6",
@@ -1813,15 +1591,10 @@
         "en/consumidor.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "gov.pt"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_5c470c1c6222",
@@ -1832,20 +1605,15 @@
         "saude-completa.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "centre",
         "centro",
         "change",
-        "check",
-        "confirme",
         "gov.pt",
         "health",
         "mudar"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_b55923d59614",
@@ -1873,7 +1641,8 @@
         "todas",
         "vínculo"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_2e5a8d9c1488",
@@ -1884,21 +1653,16 @@
         "escola-familias.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "basic",
-        "before",
         "básicas",
-        "confirm",
-        "confirme",
         "equivalence",
         "equivalência",
         "habilitações",
         "secondary",
         "secundárias"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_b223c78629bb",
@@ -1927,7 +1691,8 @@
         "social",
         "your"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_0d3e737b44ae",
@@ -1940,7 +1705,6 @@
         "index.html"
       ],
       "watch_terms": [
-        "confirm",
         "consultar",
         "fiscal",
         "gov.pt",
@@ -1953,7 +1717,8 @@
         "where",
         "your"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_f95c7a71032d",
@@ -1980,7 +1745,8 @@
         "user",
         "utente"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_5677a3a829ee",
@@ -1991,12 +1757,6 @@
         "qualificacoes.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "degree",
         "foreign",
         "gov.pt",
@@ -2004,7 +1764,8 @@
         "recognition",
         "reconhecimento"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_e83566f7adcc",
@@ -2017,7 +1778,6 @@
       ],
       "watch_terms": [
         "2026",
-        "checked",
         "citizen",
         "combined",
         "completos",
@@ -2035,7 +1795,8 @@
         "shops",
         "unificado"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_51345bfaef9d",
@@ -2048,12 +1809,6 @@
         "fora-de-portugal.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "estudo",
         "gov.pt",
         "residence",
@@ -2062,7 +1817,8 @@
         "visa",
         "visto"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_33c397772684",
@@ -2075,14 +1831,8 @@
         "fora-de-portugal.html"
       ],
       "watch_terms": [
-        "acting",
         "activity",
-        "agir",
         "altamente",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "gov.pt",
         "highly",
         "investigação",
@@ -2092,7 +1842,8 @@
         "visa",
         "visto"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_d047de31a87b",
@@ -2105,12 +1856,6 @@
         "trabalho.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "dependente",
         "employment",
         "gov.pt",
@@ -2119,7 +1864,8 @@
         "visa",
         "visto"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_c1912bc0f3da",
@@ -2132,13 +1878,7 @@
         "independente-empreendedor.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "atividade",
-        "before",
-        "confirm",
-        "confirme",
         "empreendedor",
         "entrepreneur",
         "gov.pt",
@@ -2147,7 +1887,8 @@
         "visa",
         "visto"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_e5000174ce7b",
@@ -2158,20 +1899,15 @@
         "registos-civis.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "casamento",
-        "check",
-        "confirme",
         "foreign",
         "gov.pt",
         "marriage",
         "transcription",
         "transcrição"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_42ae5fe404b9",
@@ -2182,19 +1918,14 @@
         "registos-civis.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "birth",
-        "check",
-        "confirme",
         "gov.pt",
         "nascimento",
         "registar",
         "register"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_6262714f7433",
@@ -2205,20 +1936,15 @@
         "en/carta-conducao.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "carta",
-        "confirm",
-        "confirme",
         "driving",
         "estrangeira",
         "foreign",
         "licence",
         "tenho"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_d5d7259f1e55",
@@ -2229,20 +1955,15 @@
         "en/consumidor.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "book",
-        "check",
         "complaints",
-        "confirme",
         "electronic",
         "eletrónico",
         "livro",
         "reclamações"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_768fda908f67",
@@ -2253,19 +1974,14 @@
         "en/discriminacao-apoio.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
         "assembleia",
-        "before",
         "cicdr",
-        "confirm",
-        "confirme",
         "parliament",
         "portuguese",
         "república"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_576f835cf78e",
@@ -2278,16 +1994,11 @@
         "habitacao.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "jovem",
         "porta"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_3ec3c96219da",
@@ -2298,15 +2009,10 @@
         "habitacao.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "porta"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_5e43ca0ff104",
@@ -2317,17 +2023,12 @@
         "en/apoios-sociais.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "security",
         "segurança",
         "social"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_d771f142ded7",
@@ -2338,18 +2039,13 @@
         "saude-completa.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "check",
-        "confirme",
         "direitos",
         "patient",
         "rights",
         "utente"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_f85f411871fc",
@@ -2360,15 +2056,10 @@
         "saude-completa.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "callback",
-        "check",
-        "confirme"
+        "callback"
       ],
-      "risk": "medium"
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_5d4da7730964",
@@ -2381,12 +2072,6 @@
         "rendimentos-proprios.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "gov.pt",
         "own-income",
         "próprios",
@@ -2398,7 +2083,8 @@
         "visa",
         "visto"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_c37bb2face2a",
@@ -2410,18 +2096,13 @@
       ],
       "watch_terms": [
         "abono",
-        "acting",
-        "agir",
         "allowance",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "family",
         "família",
         "gov.pt"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_76e249b224e7",
@@ -2432,19 +2113,14 @@
         "qualificacoes.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "gov.pt",
         "professional",
         "profissionais",
         "qualifications",
         "qualificações"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_8c6490bfe53c",
@@ -2459,21 +2135,15 @@
         "trabalho-direitos.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "check",
         "complaint",
-        "confirm",
-        "confirme",
         "employment",
         "fazer",
         "file",
         "laboral",
         "queixa"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_fd8d32085235",
@@ -2484,16 +2154,11 @@
         "trabalho-direitos.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
-        "confirm",
-        "confirme",
         "informações",
         "pedir"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_9e47f0771d1a",
@@ -2504,13 +2169,7 @@
         "en/carta-conducao.html"
       ],
       "watch_terms": [
-        "acting",
-        "agir",
-        "antes",
-        "before",
         "carta",
-        "confirm",
-        "confirme",
         "estrangeira",
         "exchange",
         "foreign",
@@ -2518,7 +2177,8 @@
         "licence",
         "trocar"
       ],
-      "risk": "high"
+      "risk": "high",
+      "required": true
     }
   ]
 }

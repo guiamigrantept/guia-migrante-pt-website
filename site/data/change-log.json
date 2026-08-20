@@ -2,6 +2,59 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-20T17:27:59Z",
+      "source_id": "src_76e249b224e7",
+      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
+      "state": "false_positive_resolved",
+      "reason": "gov.pt page migration/formatting accepted after semantic equivalence check (ratio=1.0000, jaccard=1.0000)"
+    },
+    {
+      "time": "2026-08-20T17:27:59Z",
+      "state": "access_block_false_positive_resolved",
+      "source_ids": [
+        "src_fb82d424d16e"
+      ],
+      "reason": "temporary WAF/access-block content rejected as monitoring noise"
+    },
+    {
+      "time": "2026-08-20T17:27:58Z",
+      "source_id": "src_76e249b224e7",
+      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/qualificacoes.html",
+        "qualificacoes.html"
+      ],
+      "candidate_sha256": "fc54809a8905063c8474847b98661d5ba28ca1675a86630dc84a1b32b4bbdbae",
+      "diff_excerpt": "-Voltar ao índice de conteúdos\n+Guias práticos\n-Acesso a profissões regulamentadas\n+Atualizado em\n+11/05/2026\n+Nesta página\n+Qualificações profissionais\n+Guias relacionados\n-em Portugal – tem de pedir o reconhecimento das suas qualificações profissionais junto da autoridade competente.\n+em Portugal – tem de pedir o reconhecimento das suas qualificações profissionais junto da autoridade competente\n-– tem de apresentar à autoridade competente uma declaração escrita antes de iniciar a prestação de serviços (declaração prévia). Essa declaração é válida por um ano, a contar da data da sua apresentação.\n+– tem de apresentar à autoridade competente uma declaração escrita antes de iniciar a prestação de serviços (declaração prévia). Essa declaração é válida por um ano, a contar da data da sua apresentação\n-Depois de selecionar a sua profissão, veja se o campo “Prior Check of Qualifications Under Article 7(4)” está marcado com “Yes”.\n+Depois de selecionar a sua profissão, veja se o campo “Prior Check of Qualifications Under Article 7(4)” está marcado com “Yes”\n-junto da autoridade competente pela profissão no país para onde se vai deslocar.\n+junto da autoridade competente pela profissão no "
+    },
+    {
+      "time": "2026-08-20T17:27:39Z",
+      "source_id": "src_b223c78629bb",
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
+      "state": "changed_pending_review",
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/index.html",
+        "index.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir o Número de Identificação da Segurança Social (NISS)\n-O Número de Identificação da Segurança Social (NISS) é o número que permite aceder a direitos e cumprir deveres na Segurança Social.\n-Podem pedir o NISS as pessoas estrangeiras, e portuguesas com bilhete de identidade vitalício. O pedido é feito online.\n-Consulte também a página\n-\"Como pedir o NIF e o NISS para pessoas estrangeiras em Portugal\"\n-nas seguintes línguas:\n-português\n-inglês\n-árabe\n-hindi\n-mandarim\n-Realizar serviço\n-Atualizado em\n-23.03.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-O Número de Identificação da Segurança Social pode ser pedido por:\n-Pessoas estrangeiras\n-Pessoas portuguesas com bilhete de identidade vitalício\n-Representantes legais em nome da pessoa estrangeira\n-Entidades empregadoras em nome da pessoa estrangeira que estejam a contratar\n-No caso de o pedido ser feito pela entidade empregadora, para que o NISS seja atribuído é necessário que a entidade empregadora celebre, previamente, um contrato de trabalho com a pessoa em causa, e comunique o vínculo de trabalho na\n-Segura"
+    },
+    {
+      "time": "2026-08-20T17:27:26Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "d8cd7250a52f9bdeb2c7967fbfc3ac3d8fa4553374df6faf90dba079a528cdb8",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 20-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
       "time": "2026-08-20T17:11:50Z",
       "source_id": "src_76e249b224e7",
       "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",

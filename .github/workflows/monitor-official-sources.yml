@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'monitor/monitor_sources.py'
+      - 'monitor/dre_fallback.py'
       - 'requirements-monitor.txt'
       - '.github/workflows/monitor-official-sources.yml'
   schedule:
@@ -40,6 +41,7 @@ jobs:
         run: |
           test -f requirements-monitor.txt
           test -f monitor/monitor_sources.py
+          test -f monitor/dre_fallback.py
           test -f scripts/qa.py
           test -d site
 
@@ -48,6 +50,9 @@ jobs:
 
       - name: Check official sources
         run: python monitor/monitor_sources.py
+
+      - name: Recover DRE ELI sources
+        run: python monitor/dre_fallback.py
 
       - name: Run QA
         run: python scripts/qa.py
@@ -68,6 +73,7 @@ jobs:
           print('coverage_ok=',r.get('coverage_ok'))
           print('errors=',len(r.get('errors',[])))
           print('critical_errors=',len(r.get('critical_errors',[])))
+          print('dre_eli_recovered=',len(r.get('dre_eli_recovered',[])))
           PY
 
       - name: Commit monitored state

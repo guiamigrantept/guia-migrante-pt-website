@@ -4,15 +4,15 @@ from __future__ import annotations
 import json
 import re
 import sys
+from collections import Counter, defaultdict
 from pathlib import Path
 from bs4 import BeautifulSoup, Comment
 
 SITE = Path('site')
+REPORT = SITE / 'data' / 'translation-audit.json'
 CFG = json.loads((SITE / 'data/locales.json').read_text(encoding='utf-8'))
 TARGETS = [x for x in CFG.get('locales', []) if x.get('code') not in {'pt', 'en'}]
 
-# Strong Portuguese signals. We deliberately avoid generic words shared with
-# Spanish/French and ignore proper names/acronyms handled by the whitelist.
 PT_PATTERNS = [
     r'\b(?:não|também|você|vocês|seu|sua|seus|suas|para|com|sem|uma|umas|uns|dos|das|pela|pelo|pelos|pelas)\b',
     r'\b(?:informação|informações|situação|situações|documentos|documento|serviço|serviços|pedido|pedidos|direitos|trabalho|saúde|habitação|nacionalidade|residência|renovação|apoio|contactos|ferramentas)\b',
@@ -25,7 +25,6 @@ WHITELIST = {
     'Portugal', 'Portal das Finanças', 'Segurança Social', 'Diário da República',
     'Autoridade Tributária', 'IRN', 'IMT', 'DGES', 'ACT', 'CIG', 'ERSE',
 }
-
 SKIP_TAGS = {'script', 'style', 'noscript', 'svg', 'code'}
 
 
@@ -41,16 +40,14 @@ def visible_strings(path: Path):
         text = ' '.join(str(node).split())
         if len(text) < 10 or text in WHITELIST:
             continue
-        out.append(text)
-    # Also inspect accessibility labels/placeholders, because untranslated UI can
-    # otherwise be invisible to a visual-only QA pass.
+        out.append(('text', text))
     for tag in soup.find_all(True):
         for attr in ('aria-label', 'placeholder', 'title'):
             value = tag.get(attr)
             if value:
                 text = ' '.join(str(value).split())
                 if len(text) >= 10 and text not in WHITELIST:
-                    out.append(text)
+                    out.append((attr, text))
     return out
 
 
@@ -59,30 +56,57 @@ def suspicious(text: str) -> bool:
 
 
 problems = []
-summary = []
+report = {'version': 1, 'strict_when_live': True, 'locales': {}}
+
 for loc in TARGETS:
     code = loc['code']
     folder = SITE / code
     if not folder.exists():
         continue
+
     hits = []
+    page_counts = Counter()
+    attr_counts = Counter()
     files = 0
+    unique = set()
+
     for fp in sorted(folder.glob('*.html')):
         files += 1
-        for text in visible_strings(fp):
+        for kind, text in visible_strings(fp):
             if suspicious(text):
-                hits.append((fp.name, text))
-    summary.append((code, files, len(hits), loc.get('status')))
+                key = (fp.name, kind, text)
+                if key in unique:
+                    continue
+                unique.add(key)
+                hits.append({'page': fp.name, 'kind': kind, 'text': text})
+                page_counts[fp.name] += 1
+                attr_counts[kind] += 1
 
-    # Preparing locales may legitimately contain untranslated copy while work is
-    # in progress. A locale marked live, however, must not ship with obvious
-    # Portuguese residue.
-    if loc.get('status') == 'live' and hits:
-        examples = '; '.join(f'{page}: {text[:100]}' for page, text in hits[:8])
+    status = loc.get('status')
+    report['locales'][code] = {
+        'status': status,
+        'files': files,
+        'portuguese_looking_nodes': len(hits),
+        'pages_with_hits': len(page_counts),
+        'worst_pages': [
+            {'page': page, 'hits': count}
+            for page, count in page_counts.most_common(15)
+        ],
+        'by_kind': dict(attr_counts),
+        'examples': hits[:40],
+    }
+
+    print(f'{code}: {len(hits)} Portuguese-looking node(s) across {files} files [{status}]')
+    if page_counts:
+        print('  worst pages: ' + ', '.join(f'{p}={n}' for p, n in page_counts.most_common(8)))
+
+    if status == 'live' and hits:
+        examples = '; '.join(f"{x['page']}: {x['text'][:100]}" for x in hits[:8])
         problems.append(f'{code}: {len(hits)} Portuguese-looking text node(s) remain. {examples}')
 
-for code, files, hits, status in summary:
-    print(f'{code}: {hits} Portuguese-looking node(s) across {files} files [{status}]')
+REPORT.parent.mkdir(parents=True, exist_ok=True)
+REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+print(f'Wrote {REPORT}')
 
 if problems:
     print('\n'.join(problems))

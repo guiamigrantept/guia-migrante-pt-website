@@ -9,7 +9,6 @@ on:
       - 'monitor/dre_fallback.py'
       - 'monitor/source_review_filters.py'
       - 'monitor/recover_required_sources.py'
-      - 'monitor/expand_locale_coverage.py'
       - 'site/data/locales.json'
       - 'requirements-monitor.txt'
       - '.github/workflows/monitor-official-sources.yml'
@@ -48,16 +47,12 @@ jobs:
           test -f monitor/dre_fallback.py
           test -f monitor/source_review_filters.py
           test -f monitor/recover_required_sources.py
-          test -f monitor/expand_locale_coverage.py
           test -f site/data/locales.json
           test -f scripts/qa.py
           test -d site
 
       - name: Install monitor dependencies
         run: pip install -r requirements-monitor.txt
-
-      - name: Expand source coverage to live translations
-        run: python monitor/expand_locale_coverage.py
 
       - name: Check official sources
         run: python monitor/monitor_sources.py

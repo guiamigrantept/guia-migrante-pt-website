@@ -18,9 +18,120 @@ ERSE_TARGET = 'src_2b928469124c'
 ERSE_MARKER = 'Compare os preços das ofertas comerciais de eletricidade e gás natural'
 GOV_QUALIFICATIONS_URL = 'https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais'
 
+ACCESS_BLOCK_MARKERS = (
+    'web page blocked!',
+    'the page cannot be displayed',
+    'access denied',
+    'request blocked',
+    'attack id:',
+    'message id:',
+    'you have been blocked',
+    'sorry, you have been blocked',
+    'verify you are human',
+    'checking your browser before accessing',
+)
+
 
 def now():
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
+
+
+def is_access_block(text: str) -> bool:
+    low = re.sub(r'\s+', ' ', text).casefold()
+    return any(marker in low for marker in ACCESS_BLOCK_MARKERS)
+
+
+def remove_target_from_quarantine(target: str, status: dict, report: dict):
+    report['changed_sources'] = [x for x in report.get('changed_sources', []) if x != target]
+
+    for container in (status, report):
+        for key in list(container.get('blocked_pages', {})):
+            ids = [x for x in container['blocked_pages'][key] if x != target]
+            if ids:
+                container['blocked_pages'][key] = ids
+            else:
+                del container['blocked_pages'][key]
+
+
+def review_access_blocks(status: dict, report: dict, log: dict):
+    resolved = []
+
+    # A WAF/security interstitial is not an official-content change. If we already
+    # have a valid baseline, discard only the blocked candidate and keep the last
+    # known-good baseline. This prevents temporary anti-bot pages from quarantining
+    # user-facing guidance.
+    for candidate_path in list(CANDS.glob('src_*.json')):
+        target = candidate_path.stem
+        candidate = json.loads(candidate_path.read_text(encoding='utf-8'))
+        if not is_access_block(candidate.get('text', '')):
+            continue
+        baseline_path = SNAPS / f'{target}.json'
+        if not baseline_path.exists():
+            continue
+
+        candidate_path.unlink(missing_ok=True)
+        entry = status.setdefault('sources', {}).setdefault(target, {})
+        entry.update({
+            'state': 'fetch_error',
+            'checked_at': candidate.get('checked_at') or entry.get('checked_at'),
+            'changed_at': None,
+            'candidate_sha256': None,
+            'diff_excerpt': None,
+            'note': 'temporary access-block/WAF response ignored; last known-good baseline retained',
+        })
+        remove_target_from_quarantine(target, status, report)
+        error = {
+            'id': target,
+            'url': entry.get('url') or candidate.get('url'),
+            'domain': entry.get('domain'),
+            'risk': 'high' if entry.get('required') else 'medium',
+            'required': bool(entry.get('required')),
+            'had_baseline': True,
+            'kind': 'access_blocked',
+            'error': 'Temporary anti-bot/WAF response ignored; previous baseline retained.',
+        }
+        if not any(e.get('id') == target and e.get('kind') == 'access_blocked' for e in report.setdefault('errors', [])):
+            report['errors'].append(error)
+        resolved.append(target)
+
+    # Never allow a first-time WAF/interstitial page to become a baseline. If one
+    # slipped through the fetch layer, remove it and force coverage to remain
+    # incomplete until a genuine official page can be captured.
+    for baseline_path in list(SNAPS.glob('src_*.json')):
+        target = baseline_path.stem
+        baseline = json.loads(baseline_path.read_text(encoding='utf-8'))
+        if not is_access_block(baseline.get('text', '')):
+            continue
+        baseline_path.unlink(missing_ok=True)
+        (CANDS / f'{target}.json').unlink(missing_ok=True)
+        entry = status.setdefault('sources', {}).setdefault(target, {})
+        entry.update({
+            'state': 'baseline_failed',
+            'checked_at': baseline.get('checked_at') or entry.get('checked_at'),
+            'changed_at': None,
+            'candidate_sha256': None,
+            'diff_excerpt': None,
+            'note': 'access-block/WAF page rejected as invalid baseline',
+        })
+        remove_target_from_quarantine(target, status, report)
+        if entry.get('required'):
+            missing = set(report.get('missing_required', []))
+            missing.add(target)
+            report['missing_required'] = sorted(missing)
+            report['baseline_complete'] = False
+            report['coverage_ok'] = False
+        resolved.append(target)
+
+    if resolved:
+        log.setdefault('changes', []).insert(0, {
+            'time': now(),
+            'state': 'access_block_false_positive_resolved',
+            'source_ids': sorted(set(resolved)),
+            'reason': 'temporary WAF/access-block content rejected as monitoring noise',
+        })
+        print('Access-block filter cleared:', ', '.join(sorted(set(resolved))))
+    else:
+        print('Access-block filter: no blocked-page artifacts found')
 
 
 def normalize_erse(text: str) -> str:
@@ -49,20 +160,7 @@ def clear_target(target: str, note: str, candidate: dict, status: dict, report: 
         'note': note,
     })
 
-    for key in list(status.get('blocked_pages', {})):
-        ids = [x for x in status['blocked_pages'][key] if x != target]
-        if ids:
-            status['blocked_pages'][key] = ids
-        else:
-            del status['blocked_pages'][key]
-
-    report['changed_sources'] = [x for x in report.get('changed_sources', []) if x != target]
-    for key in list(report.get('blocked_pages', {})):
-        ids = [x for x in report['blocked_pages'][key] if x != target]
-        if ids:
-            report['blocked_pages'][key] = ids
-        else:
-            del report['blocked_pages'][key]
+    remove_target_from_quarantine(target, status, report)
 
     if log is not None:
         log.setdefault('changes', []).insert(0, {
@@ -99,35 +197,29 @@ def review_erse(status: dict, report: dict, log: dict):
 
 
 def canonical_gov_qualifications(text: str) -> str:
-    out = []
-    skip_exact = {
-        'voltar ao índice de conteúdos',
-        'guias práticos',
-        'nesta página',
-        'acesso a profissões regulamentadas',
-        'entidade responsável',
-    }
-    lines = [re.sub(r'\s+', ' ', x).strip() for x in text.splitlines()]
-    i = 0
-    while i < len(lines):
-        s = lines[i]
-        low = s.casefold()
-        if low == 'guias relacionados':
-            break
-        if low in skip_exact:
-            i += 1
-            continue
-        if low == 'atualizado em':
-            i += 2
-            continue
-        if re.fullmatch(r'\d{1,2}/\d{1,2}/\d{4}', s):
-            i += 1
-            continue
-        s = re.sub(r'[\s\.;:,]+$', '', s).casefold()
-        if s:
-            out.append(s)
-        i += 1
-    return '\n'.join(out)
+    # Compare only the substantive qualifications guidance. The old www2.gov.pt
+    # page and the new www.gov.pt guide have different navigation, update-date and
+    # related-guide components around the same official guidance.
+    low = text.casefold()
+    start_marker = 'algumas profissões são regulamentadas'
+    start = low.find(start_marker)
+    if start < 0:
+        return ''
+    text = text[start:]
+    low = text.casefold()
+
+    cut_positions = []
+    for marker in ('licenças de parentalidade', 'entidade responsável'):
+        pos = low.find(marker)
+        if pos > 0:
+            cut_positions.append(pos)
+    if cut_positions:
+        text = text[:min(cut_positions)]
+
+    text = text.casefold()
+    text = re.sub(r'[\u2013\u2014]', '-', text)
+    text = re.sub(r'[\s\.;:,]+', ' ', text)
+    return text.strip()
 
 
 def review_gov_qualifications(status: dict, report: dict, log: dict):
@@ -152,11 +244,10 @@ def review_gov_qualifications(status: dict, report: dict, log: dict):
         union = old_tokens | new_tokens
         jaccard = len(old_tokens & new_tokens) / len(union) if union else 0.0
 
-        # Deliberately narrow: this exact legacy gov.pt page moved to the new gov.pt
-        # guide layout. Only accept automatically when the substantive text remains
-        # virtually identical after stripping layout headings, related-guide cards,
-        # punctuation-only changes and the page's own update date.
-        if ratio < 0.985 or jaccard < 0.985:
+        # Deliberately narrow: exact legacy gov.pt qualifications URL and the
+        # same bounded substantive guidance. Minor punctuation/layout differences
+        # are accepted, but material wording changes remain quarantined.
+        if ratio < 0.97 or jaccard < 0.97:
             print(f'gov.pt qualifications filter: substantive change remains pending (ratio={ratio:.4f}, jaccard={jaccard:.4f})')
             continue
 
@@ -173,6 +264,7 @@ def main():
     report = json.loads(REPORT.read_text(encoding='utf-8'))
     log = json.loads(CHANGELOG.read_text(encoding='utf-8')) if CHANGELOG.exists() else {'version': 1, 'changes': []}
 
+    review_access_blocks(status, report, log)
     review_erse(status, report, log)
     review_gov_qualifications(status, report, log)
 

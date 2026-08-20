@@ -4,6 +4,7 @@ import json, sys, subprocess
 from bs4 import BeautifulSoup
 
 site=Path('site')
+base='https://guia-migrante-pt.pages.dev'
 files=list(site.rglob('*.html'))
 relmap={str(f.relative_to(site)).replace('\\','/'):f for f in files}
 ids={}
@@ -46,8 +47,8 @@ for p in site.glob('*.html'):
     if f'href="../{p.name}"' not in en: problems.append(f'en/{p.name}: missing EN→PT')
 
 # Multilingual rollout guard: a locale cannot be marked live until it mirrors all
-# public PT pages that already have an English counterpart. This prevents a
-# half-translated language from becoming selectable by mistake.
+# public PT pages that already have an English counterpart. Live translations must
+# also be indexable and expose a complete hreflang cluster.
 locale_file=site/'data/locales.json'
 if not locale_file.exists():
     problems.append('data/locales.json: missing locale configuration')
@@ -59,9 +60,17 @@ else:
         codes=[x.get('code') for x in locales]
         if set(codes)!=expected: problems.append(f'data/locales.json: locale set mismatch {codes}')
         if len(codes)!=len(set(codes)): problems.append('data/locales.json: duplicate locale code')
-        live={x.get('code') for x in locales if x.get('status')=='live'}
+        live_locales=[x for x in locales if x.get('status')=='live']
+        live={x.get('code') for x in live_locales}
         if not {'pt','en'}.issubset(live): problems.append('data/locales.json: PT and EN must remain live')
         source_pages=[p.name for p in site.glob('*.html') if p.name!='404.html' and (site/'en'/p.name).exists()]
+
+        def localized_file(code,name):
+            return site/name if code=='pt' else site/code/name
+
+        def localized_url(code,name):
+            return f'{base}/{name}' if code=='pt' else f'{base}/{code}/{name}'
+
         for code in sorted(live-{'pt'}):
             folder=site/code
             if not folder.exists():
@@ -69,6 +78,36 @@ else:
                 continue
             missing=[name for name in source_pages if not (folder/name).exists()]
             if missing: problems.append(f'{code}: locale marked live but missing {len(missing)} mirrored pages')
+
+        for loc in live_locales:
+            code=loc.get('code')
+            if code in {'pt','en'}:
+                continue
+            for name in source_pages:
+                fp=localized_file(code,name)
+                if not fp.exists():
+                    continue
+                soup=BeautifulSoup(fp.read_text(encoding='utf-8'),'html.parser')
+                robots=soup.find('meta',attrs={'name':'robots'})
+                if robots and 'noindex' in (robots.get('content') or '').lower():
+                    problems.append(f'{code}/{name}: live translation is still noindex')
+                status=soup.find('meta',attrs={'name':'translation-status'})
+                if not status or status.get('content')!='live':
+                    problems.append(f'{code}/{name}: missing live translation marker')
+                if soup.select_one('.review-strip') is not None:
+                    problems.append(f'{code}/{name}: staging review strip still present')
+
+                alternates={}
+                for link in soup.find_all('link',href=True):
+                    rel=link.get('rel') or []
+                    if 'alternate' in rel and link.get('hreflang'):
+                        alternates[link.get('hreflang')]=link.get('href')
+                for alt in live_locales:
+                    expected_href=localized_url(alt['code'],name)
+                    if alternates.get(alt['hreflang'])!=expected_href:
+                        problems.append(f'{code}/{name}: missing/wrong hreflang {alt["hreflang"]}')
+                if alternates.get('x-default')!=localized_url('pt',name):
+                    problems.append(f'{code}/{name}: missing/wrong x-default')
     except Exception as exc:
         problems.append(f'data/locales.json: invalid JSON/configuration ({exc})')
 
@@ -84,4 +123,4 @@ for js in ['ux.js','ux-en.js','sw.js','ops-v12.js','source-guard.js','language-s
 if problems:
     print('\n'.join(problems[:200]))
     sys.exit(1)
-print(f'QA OK — {len(files)} HTML files; multilingual rollout guard active.')
+print(f'QA OK — {len(files)} HTML files; all live locales complete and indexable.')

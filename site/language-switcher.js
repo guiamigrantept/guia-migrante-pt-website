@@ -5,22 +5,22 @@
   const FALLBACK = [
     {code:'pt',native_name:'Português',status:'live'},
     {code:'en',native_name:'English',status:'live'},
-    {code:'fr',native_name:'Français',status:'preparing'},
-    {code:'es',native_name:'Español',status:'preparing'},
-    {code:'uk',native_name:'Українська',status:'preparing'},
-    {code:'ru',native_name:'Русский',status:'preparing'},
-    {code:'hi',native_name:'हिन्दी',status:'preparing'},
-    {code:'bn',native_name:'বাংলা',status:'preparing'}
+    {code:'fr',native_name:'Français',status:'live'},
+    {code:'es',native_name:'Español',status:'live'},
+    {code:'uk',native_name:'Українська',status:'live'},
+    {code:'ru',native_name:'Русский',status:'live'},
+    {code:'hi',native_name:'हिन्दी',status:'live'},
+    {code:'bn',native_name:'বাংলা',status:'live'}
   ];
   const COPY = {
-    pt:{label:'Idioma',preparing:'Em tradução',note:'Novos idiomas só ficam ativos depois de a tradução integral ser revista.'},
-    en:{label:'Language',preparing:'In translation',note:'New languages only become active after the full translation has been reviewed.'},
-    fr:{label:'Langue',preparing:'Traduction en cours',note:'Les nouvelles langues ne sont activées qu’après révision complète de la traduction.'},
-    es:{label:'Idioma',preparing:'En traducción',note:'Los nuevos idiomas solo se activan después de revisar toda la traducción.'},
-    uk:{label:'Мова',preparing:'Перекладається',note:'Нові мови стають активними лише після повної перевірки перекладу.'},
-    ru:{label:'Язык',preparing:'Переводится',note:'Новые языки включаются только после полной проверки перевода.'},
-    hi:{label:'भाषा',preparing:'अनुवाद जारी',note:'नई भाषाएँ पूर्ण अनुवाद की समीक्षा के बाद ही सक्रिय होती हैं।'},
-    bn:{label:'ভাষা',preparing:'অনুবাদ চলছে',note:'সম্পূর্ণ অনুবাদ পর্যালোচনার পরেই নতুন ভাষা সক্রিয় করা হয়।'}
+    pt:{label:'Idioma',preparing:'Em tradução',note:'Escolha o idioma em que quer consultar o Guia.'},
+    en:{label:'Language',preparing:'In translation',note:'Choose the language you want to use for the Guide.'},
+    fr:{label:'Langue',preparing:'Traduction en cours',note:'Choisissez la langue dans laquelle vous souhaitez consulter le Guide.'},
+    es:{label:'Idioma',preparing:'En traducción',note:'Elige el idioma en el que quieres consultar la Guía.'},
+    uk:{label:'Мова',preparing:'Перекладається',note:'Оберіть мову, якою хочете користуватися довідником.'},
+    ru:{label:'Язык',preparing:'Переводится',note:'Выберите язык, на котором хотите пользоваться справочником.'},
+    hi:{label:'भाषा',preparing:'अनुवाद जारी',note:'वह भाषा चुनें जिसमें आप गाइड देखना चाहते हैं।'},
+    bn:{label:'ভাষা',preparing:'অনুবাদ চলছে',note:'যে ভাষায় গাইডটি দেখতে চান সেটি নির্বাচন করুন।'}
   };
 
   function pathInfo(){

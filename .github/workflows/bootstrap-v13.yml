@@ -11,19 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
-      - uses: actions/setup-python@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-          cache: pip
+
+      - name: Verify bootstrap files
+        run: |
+          test -f requirements-monitor.txt
+          test -f monitor/monitor_sources.py
+          test -f scripts/qa.py
+          test -f site-base-v13.zip
 
       - name: Install dependencies
         run: pip install -r requirements-monitor.txt
 
       - name: Unpack V13 site
         run: |
-          test -f site-base-v13.zip
           rm -rf site
           mkdir site
           unzip -q site-base-v13.zip -d site
@@ -40,5 +47,5 @@ jobs:
           git config user.email 'actions@users.noreply.github.com'
           git add site monitor/snapshots monitor/sources.json monitor/report.json
           git rm -f site-base-v13.zip bootstrap/part1.b64 2>/dev/null || true
-          git commit -m 'feat: activate V13 automatic source monitoring'
+          git commit -m 'feat: activate V13 automatic source monitoring' || exit 0
           git push

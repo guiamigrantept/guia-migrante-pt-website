@@ -9,6 +9,7 @@ on:
       - 'scripts/qa.py'
       - 'scripts/build_locales.py'
       - 'scripts/build_locales_uk_ru.py'
+      - 'scripts/build_locales_hi_bn.py'
       - 'scripts/build_sitemap.py'
       - '.github/workflows/deploy-pages.yml'
 
@@ -37,6 +38,8 @@ jobs:
         run: python scripts/build_locales.py
       - name: Build staged Ukrainian and Russian translations
         run: python scripts/build_locales_uk_ru.py
+      - name: Build staged Hindi and Bengali translations
+        run: python scripts/build_locales_hi_bn.py
       - name: Build multilingual sitemap
         run: python scripts/build_sitemap.py
       - name: Run site QA

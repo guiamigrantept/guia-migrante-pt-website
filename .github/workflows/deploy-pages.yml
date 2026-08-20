@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - 'site/**'
+      - 'scripts/qa.py'
+      - 'scripts/build_sitemap.py'
       - '.github/workflows/deploy-pages.yml'
 
 permissions:
@@ -29,7 +31,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install beautifulsoup4
-      - run: python scripts/qa.py
+      - name: Build multilingual sitemap
+        run: python scripts/build_sitemap.py
+      - name: Run site QA
+        run: python scripts/qa.py
       - name: Cloudflare secrets not configured yet
         if: env.CF_API_TOKEN == '' || env.CF_ACCOUNT_ID == ''
         run: echo 'QA passed. Deployment waits for Cloudflare secrets.'

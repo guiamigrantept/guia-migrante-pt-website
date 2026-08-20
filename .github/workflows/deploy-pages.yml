@@ -14,6 +14,7 @@ on:
       - 'scripts/build_route_locales_ru.py'
       - 'scripts/build_living_locales.py'
       - 'scripts/build_remaining_locales.py'
+      - 'scripts/build_structural_parity_locales.py'
       - 'scripts/check_locale_parity.py'
       - 'scripts/finalize_live_locales.py'
       - 'scripts/build_sitemap.py'
@@ -54,6 +55,8 @@ jobs:
         run: python scripts/build_living_locales.py
       - name: Build remaining staged translations
         run: python scripts/build_remaining_locales.py
+      - name: Rebuild staged locales from complete Portuguese page structure
+        run: python scripts/build_structural_parity_locales.py
       - name: Check full page and feature parity before locale publication
         run: python scripts/check_locale_parity.py
       - name: Finalize published translations

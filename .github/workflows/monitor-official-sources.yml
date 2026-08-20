@@ -8,6 +8,7 @@ on:
       - 'monitor/monitor_sources.py'
       - 'monitor/dre_fallback.py'
       - 'monitor/source_review_filters.py'
+      - 'monitor/recover_required_sources.py'
       - 'requirements-monitor.txt'
       - '.github/workflows/monitor-official-sources.yml'
   schedule:
@@ -44,6 +45,7 @@ jobs:
           test -f monitor/monitor_sources.py
           test -f monitor/dre_fallback.py
           test -f monitor/source_review_filters.py
+          test -f monitor/recover_required_sources.py
           test -f scripts/qa.py
           test -d site
 
@@ -55,6 +57,9 @@ jobs:
 
       - name: Filter known dynamic-source noise
         run: python monitor/source_review_filters.py
+
+      - name: Recover required legacy sources
+        run: python monitor/recover_required_sources.py
 
       - name: Check Diário da República RSS
         run: python monitor/dre_fallback.py

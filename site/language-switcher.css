@@ -1,0 +1,23 @@
+/* Guia Migrante PT — multilingual selector */
+.gm-language{position:relative;display:inline-flex;align-items:center;z-index:80}
+.gm-language-button{min-height:40px;display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line,#dce5e5);border-radius:11px;background:#fff;color:var(--brand-dark,#032954);padding:8px 10px;font:inherit;font-size:.78rem;font-weight:850;box-shadow:0 2px 8px rgba(3,41,84,.04)}
+.gm-language-button:hover{border-color:#b9dece;background:#f7fbf9}
+.gm-language-button svg{width:16px;height:16px;flex:0 0 auto}
+.gm-language-button .gm-current-code{letter-spacing:.03em}
+.gm-language-button .gm-chevron{font-size:.72rem;color:var(--muted,#607080)}
+.gm-language-menu{position:absolute;top:calc(100% + 8px);right:0;display:none;width:min(286px,calc(100vw - 24px));padding:8px;border:1px solid var(--line,#dce5e5);border-radius:14px;background:#fff;box-shadow:0 18px 45px rgba(3,41,84,.16)}
+.gm-language.open .gm-language-menu{display:grid;gap:3px}
+.gm-language-option{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:42px;padding:9px 10px;border-radius:10px;color:#24384d;text-decoration:none;font-size:.82rem;font-weight:720}
+.gm-language-option:hover{background:#eef8f3;color:#006939}
+.gm-language-option[aria-current="page"]{background:#eef8f3;color:#006939;font-weight:900}
+.gm-language-option.is-preparing{cursor:not-allowed;color:#84919d;background:transparent}
+.gm-language-option.is-preparing:hover{background:#f8faf9;color:#84919d}
+.gm-language-name{display:flex;align-items:center;gap:9px;min-width:0}
+.gm-language-code{width:30px;display:inline-grid;place-items:center;padding:3px 4px;border-radius:7px;background:#eef4f8;color:#09315c;font-size:.67rem;font-weight:900;letter-spacing:.04em}
+.gm-language-option[aria-current="page"] .gm-language-code{background:#fff;color:#057244}
+.gm-language-status{font-size:.66rem;color:#8b98a5;font-weight:800;white-space:nowrap}
+.gm-language-note{margin:5px 5px 2px;padding-top:8px;border-top:1px solid #edf1f1;color:#71808f;font-size:.69rem;line-height:1.4}
+.gm-language-backdrop{display:none;position:fixed;inset:0;z-index:70;background:transparent}
+.gm-language.open+.gm-language-backdrop{display:block}
+.site-lang.gm-enhanced{display:none!important}
+@media(max-width:699px){.gm-language-button{min-height:39px;padding:7px 9px}.gm-language-menu{position:fixed;top:76px;right:12px;left:12px;width:auto;max-height:calc(100vh - 100px);overflow:auto}}

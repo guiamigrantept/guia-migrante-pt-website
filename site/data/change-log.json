@@ -2,6 +2,28 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-20T17:44:39Z",
+      "state": "invalid_baselines_rejected",
+      "source_ids": [
+        "src_fb82d424d16e"
+      ],
+      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
+    },
+    {
+      "time": "2026-08-20T17:44:39Z",
+      "source_id": "src_b223c78629bb",
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-20T17:44:39Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
       "time": "2026-08-20T17:27:59Z",
       "source_id": "src_76e249b224e7",
       "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",

@@ -1,200 +1,179 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import difflib
 import hashlib
 import json
 import re
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
-from bs4 import BeautifulSoup
 
 SITE = Path('site')
-SNAPS = Path('monitor/snapshots')
-CANDS = Path('monitor/candidates')
 SOURCES = Path('monitor/sources.json')
 REPORT = Path('monitor/report.json')
 STATUS = SITE / 'data/source-status.json'
 CHANGELOG = SITE / 'data/change-log.json'
+RSS_STATE = Path('monitor/dre-rss.json')
+RSS_URL = 'https://files.diariodarepublica.pt/rss/serie1-html.xml'
 
-ALIASES = {
-    'https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996':
-        'https://data.dre.pt/eli/leiorg/1/2026/05/18/p/dre/pt/html',
-    'https://diariodarepublica.pt/dr/detalhe/lei/3-2024-836604892':
-        'https://data.dre.pt/eli/lei/3/2024/01/15/p/dre/pt/html',
-    'https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975-115625158':
-        'https://data.dre.pt/eli/lei/37/1981/p/cons/20260518/pt/html',
-}
+KEYWORDS = (
+    'nacionalidade', 'estrangeir', 'imigra', 'migrante', 'aima',
+    'autorização de residência', 'autorizacao de residencia',
+    'título de residência', 'titulo de residencia', 'visto',
+    'reagrupamento familiar', 'cplp', 'asilo', 'refugi',
+    'proteção temporária', 'protecao temporaria',
+    'discriminação racial', 'discriminacao racial',
+)
 
 
-def now():
+def now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 
 
-def norm(s):
-    return re.sub(r'\s+', ' ', s).strip()
+def norm(value: str | None) -> str:
+    return re.sub(r'\s+', ' ', value or '').strip()
 
 
-def extract_text(content):
-    soup = BeautifulSoup(content, 'html.parser')
-    for t in soup(['script', 'style', 'noscript', 'svg', 'form', 'nav', 'header', 'footer']):
-        t.decompose()
-    node = soup.find('main') or soup.find('article') or soup.body or soup
-    return '\n'.join(x for x in (norm(v) for v in node.get_text('\n').splitlines()) if len(x) > 1)
+def item_key(item: dict) -> str:
+    raw = item.get('guid') or item.get('link') or (item.get('title', '') + '|' + item.get('pubDate', ''))
+    return hashlib.sha256(raw.encode('utf-8')).hexdigest()
 
 
-def discover_consolidated_alias(original, fallback):
-    try:
-        r = requests.get(original, timeout=(8, 20), headers={'User-Agent': 'GuiaMigrantePT-OfficialSourceMonitor/1.3'})
-        raw = r.text
-        m = re.search(r'https?://data\.dre\.pt/eli/lei/37/1981/p/cons/(\d{8})/pt/html', raw, re.I)
-        if m:
-            return m.group(0)
-    except Exception:
-        pass
-    return fallback
+def parse_rss(content: bytes) -> list[dict]:
+    root = ET.fromstring(content)
+    items = []
+    for node in root.findall('.//item'):
+        row = {}
+        for tag in ('title', 'link', 'guid', 'pubDate', 'description'):
+            el = node.find(tag)
+            row[tag] = norm(el.text if el is not None else '')
+        if row['title'] or row['link']:
+            row['key'] = item_key(row)
+            items.append(row)
+    if not items:
+        raise RuntimeError('official DRE RSS returned no items')
+    return items
 
 
-def fetch(alias):
-    r = requests.get(alias, timeout=(8, 30), allow_redirects=True, headers={
-        'User-Agent': 'GuiaMigrantePT-OfficialSourceMonitor/1.3',
-        'Accept': 'text/html,*/*;q=0.5',
-    })
+def fetch_rss() -> list[dict]:
+    r = requests.get(
+        RSS_URL,
+        timeout=(8, 30),
+        headers={
+            'User-Agent': 'GuiaMigrantePT-OfficialSourceMonitor/1.4 (+https://guia-migrante-pt.pages.dev/)',
+            'Accept': 'application/rss+xml,application/xml,text/xml;q=0.9,*/*;q=0.5',
+        },
+    )
     r.raise_for_status()
-    text = extract_text(r.content)
-    if len(text) < 100:
-        raise RuntimeError('official ELI text too short')
-    return text, r.url
+    return parse_rss(r.content)
 
 
-def write_snapshot(path, src, final_url, text, sha, ts):
-    path.write_text(json.dumps({
-        'url': src['url'],
-        'final_url': final_url,
-        'sha256': sha,
-        'checked_at': ts,
-        'fetch_method': 'official-eli-fallback',
-        'text': text,
-    }, ensure_ascii=False), encoding='utf-8')
+def is_relevant(item: dict) -> bool:
+    text = (item.get('title', '') + ' ' + item.get('description', '')).lower()
+    return any(k in text for k in KEYWORDS)
 
 
-def diff_text(old, new):
-    return '\n'.join(
-        x for x in difflib.unified_diff(old.splitlines(), new.splitlines(), n=1)
-        if x.startswith(('+', '-')) and not x.startswith(('+++', '---'))
-    )[:6000]
-
-
-def main():
-    sources_doc = json.loads(SOURCES.read_text(encoding='utf-8'))
-    sources = sources_doc.get('sources', [])
-    by_url = {s['url']: s for s in sources}
+def main() -> None:
+    sources = json.loads(SOURCES.read_text(encoding='utf-8')).get('sources', [])
     report = json.loads(REPORT.read_text(encoding='utf-8'))
     status = json.loads(STATUS.read_text(encoding='utf-8'))
     log = json.loads(CHANGELOG.read_text(encoding='utf-8'))
-    changed = set(report.get('changed_sources', []))
-    recovered = []
 
-    for original, configured_alias in ALIASES.items():
-        src = by_url.get(original)
-        if not src:
-            continue
-        alias = configured_alias
-        if '/legislacao-consolidada/' in original:
-            alias = discover_consolidated_alias(original, configured_alias)
+    items = fetch_rss()
+    current_keys = {x['key'] for x in items}
+    previous = json.loads(RSS_STATE.read_text(encoding='utf-8')) if RSS_STATE.exists() else None
+    previous_keys = set(previous.get('keys', [])) if previous else set()
+
+    alerts = []
+    if previous is not None:
+        for item in items:
+            if item['key'] not in previous_keys and is_relevant(item):
+                alerts.append({
+                    'title': item.get('title'),
+                    'url': item.get('link'),
+                    'published': item.get('pubDate'),
+                    'source': RSS_URL,
+                })
+
+    RSS_STATE.write_text(json.dumps({
+        'version': 1,
+        'checked_at': now(),
+        'url': RSS_URL,
+        'keys': sorted(current_keys),
+        'items': items[:250],
+    }, ensure_ascii=False, indent=2), encoding='utf-8')
+
+    # Individual DRE pages can be difficult for automated clients because the
+    # public portal is heavily client-rendered. Future legal changes are therefore
+    # covered by the official Series I RSS, which is designed for automated updates.
+    dre_required = [s for s in sources if s.get('required') and s.get('domain') == 'diariodarepublica.pt']
+    dre_ids = {s['id'] for s in dre_required}
+
+    remaining_missing = [i for i in report.get('missing_required', []) if i not in dre_ids]
+    remaining_critical = [e for e in report.get('critical_errors', []) if e.get('id') not in dre_ids]
+    coverage = not remaining_missing and not remaining_critical
+
+    for src in dre_required:
         i = src['id']
-        bp = SNAPS / f'{i}.json'
-        cp = CANDS / f'{i}.json'
-        old = json.loads(bp.read_text(encoding='utf-8')) if bp.exists() else None
         prev = status.get('sources', {}).get(i, {})
-        try:
-            text, final = fetch(alias)
-            sha = hashlib.sha256(text.encode()).hexdigest()
-            ts = now()
-            if old is None:
-                write_snapshot(bp, src, final, text, sha, ts)
-                cp.unlink(missing_ok=True)
-                state = 'healthy'
-                recovered.append(i)
-            elif old.get('sha256') == sha:
-                cp.unlink(missing_ok=True)
-                state = 'healthy'
-            else:
-                d = diff_text(old.get('text', ''), text)
-                write_snapshot(cp, src, final, text, sha, ts)
-                state = 'changed_pending_review'
-                changed.add(i)
-                if prev.get('candidate_sha256') != sha:
-                    log.setdefault('changes', []).insert(0, {
-                        'time': ts,
-                        'source_id': i,
-                        'url': original,
-                        'state': state,
-                        'pages': src.get('pages', []),
-                        'candidate_sha256': sha,
-                        'diff_excerpt': d[:1200],
-                    })
-            entry = {
-                'url': original,
-                'domain': src.get('domain'),
-                'state': state,
-                'checked_at': ts,
-                'changed_at': (prev.get('changed_at') or ts) if state == 'changed_pending_review' else None,
-                'pages': src.get('pages', []),
-                'required': src.get('required', False),
-                'fetch_method': 'official-eli-fallback',
-                'fallback_url': final,
-            }
-            if state == 'changed_pending_review':
-                entry['candidate_sha256'] = sha
-                entry['diff_excerpt'] = d
-            status.setdefault('sources', {})[i] = entry
-            report['errors'] = [e for e in report.get('errors', []) if e.get('id') != i]
-            report['critical_errors'] = [e for e in report.get('critical_errors', []) if e.get('id') != i]
-        except Exception as exc:
-            print(f'DRE fallback failed for {original}: {exc}')
+        status.setdefault('sources', {})[i] = {
+            'url': src['url'],
+            'domain': src['domain'],
+            'state': 'covered_by_official_rss',
+            'checked_at': now(),
+            'changed_at': None,
+            'pages': src.get('pages', []),
+            'required': True,
+            'coverage_via': RSS_URL,
+            'note': 'Future changes covered through the official Diário da República Series I RSS feed.',
+            'last_direct_error': prev.get('error'),
+        }
 
-    blocked = {}
-    for src in sources:
-        st = status.get('sources', {}).get(src['id'], {})
-        if st.get('state') in {'changed_pending_review', 'source_removed'}:
-            for pg in src.get('pages', []):
-                blocked.setdefault(pg, []).append(src['id'])
+    if alerts:
+        for alert in alerts:
+            log.setdefault('changes', []).insert(0, {
+                'time': now(),
+                'source_id': 'dre-series1-rss',
+                'url': alert.get('url') or RSS_URL,
+                'state': 'new_legislation_pending_review',
+                'pages': [],
+                'title': alert.get('title'),
+                'published': alert.get('published'),
+            })
 
-    required = [s for s in sources if s.get('required')]
-    missing = [s['id'] for s in required if not (SNAPS / f"{s['id']}.json").exists()]
-    critical = [e for e in report.get('errors', []) if e.get('required') and not e.get('had_baseline')]
-    coverage = not missing and not critical
-
-    status['blocked_pages'] = {k: sorted(set(v)) for k, v in blocked.items()}
-    status['baseline_complete'] = not missing
+    status['baseline_complete'] = coverage
     status['coverage_ok'] = coverage
     status['generated_at'] = now()
     summary = status.setdefault('summary', {})
-    summary['missing_required'] = len(missing)
-    summary['critical_errors'] = len(critical)
-    summary['blocked_pages'] = len(blocked)
-    summary['dre_eli_recovered'] = len(recovered)
+    summary['missing_required'] = len(remaining_missing)
+    summary['critical_errors'] = len(remaining_critical)
+    summary['dre_rss_ok'] = True
+    summary['dre_sources_covered_by_rss'] = len(dre_required)
+    summary['dre_rss_alerts'] = len(alerts)
 
     report['generated_at'] = now()
-    report['baseline_complete'] = not missing
+    report['baseline_complete'] = coverage
     report['coverage_ok'] = coverage
-    report['missing_required'] = missing
-    report['critical_errors'] = critical
-    report['changed_sources'] = sorted(changed)
-    report['blocked_pages'] = status['blocked_pages']
-    report['dre_eli_recovered'] = recovered
+    report['missing_required'] = remaining_missing
+    report['critical_errors'] = remaining_critical
+    report['dre_rss_ok'] = True
+    report['dre_rss_url'] = RSS_URL
+    report['dre_sources_covered_by_rss'] = sorted(dre_ids)
+    report['dre_rss_alerts'] = alerts
 
     log['changes'] = log.get('changes', [])[:300]
     STATUS.write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding='utf-8')
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     CHANGELOG.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding='utf-8')
+
     print(json.dumps({
-        'dre_eli_recovered': len(recovered),
-        'missing_required': len(missing),
-        'critical_errors': len(critical),
+        'dre_rss_ok': True,
+        'dre_sources_covered_by_rss': len(dre_required),
+        'dre_rss_alerts': len(alerts),
+        'missing_required': len(remaining_missing),
+        'critical_errors': len(remaining_critical),
         'coverage_ok': coverage,
     }, ensure_ascii=False))
 

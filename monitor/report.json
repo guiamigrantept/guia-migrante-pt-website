@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T13:35:01Z",
+  "generated_at": "2026-08-20T14:18:25Z",
   "changed_sources": [],
   "blocked_pages": {},
   "errors": [
@@ -209,16 +209,6 @@
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/reagrupamento-familiar-com-familiar-fora-de-territorio-nacional-art-98-o-n-o-1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
-      "id": "src_1a5a6913096f",
-      "url": "https://anacom.pt/render.jsp?contentId=1825544",
-      "error": "HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f6c3e04a8a0>, 'Connection to anacom.pt timed out. (connect timeout=10)'))"
-    },
-    {
-      "id": "src_1d0d8bb32004",
-      "url": "https://anacom.pt/render.jsp?contentId=1842813",
-      "error": "HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f6c3df23a40>, 'Connection to anacom.pt timed out. (connect timeout=10)'))"
-    },
-    {
       "id": "src_5c8489b0954a",
       "url": "https://clientebancario.bportugal.pt/pt-pt/o-que-sao",
       "error": "403 Client Error: Forbidden for url: https://clientebancario.bportugal.pt/pt-pt/o-que-sao"
@@ -231,7 +221,7 @@
     {
       "id": "src_65c308f94048",
       "url": "https://contactenos.aima.gov.pt/contact-form",
-      "error": "HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f6c3df22300>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=10)'))"
+      "error": "HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f168520c8c0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=10)'))"
     },
     {
       "id": "src_e36005383a29",
@@ -326,7 +316,7 @@
     {
       "id": "src_0f7eff34ab40",
       "url": "https://services.aima.gov.pt/",
-      "error": "HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f6c3ddb5520>, 'Connection to services.aima.gov.pt timed out. (connect timeout=10)'))"
+      "error": "HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f1685023a70>, 'Connection to services.aima.gov.pt timed out. (connect timeout=10)'))"
     },
     {
       "id": "src_2b928469124c",

@@ -7,6 +7,7 @@ on:
     paths:
       - 'site/**'
       - 'scripts/qa.py'
+      - 'scripts/build_locales.py'
       - 'scripts/build_sitemap.py'
       - '.github/workflows/deploy-pages.yml'
 
@@ -31,6 +32,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install beautifulsoup4
+      - name: Build staged translations
+        run: python scripts/build_locales.py
       - name: Build multilingual sitemap
         run: python scripts/build_sitemap.py
       - name: Run site QA

@@ -15,6 +15,7 @@ on:
       - 'scripts/build_living_locales.py'
       - 'scripts/build_remaining_locales.py'
       - 'scripts/build_structural_parity_locales.py'
+      - 'scripts/apply_full_structure_translation_copy.py'
       - 'scripts/check_locale_parity.py'
       - 'scripts/finalize_live_locales.py'
       - 'scripts/build_sitemap.py'
@@ -41,25 +42,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install beautifulsoup4
-      - name: Build staged French and Spanish translations
-        run: python scripts/build_locales.py
-      - name: Build staged Ukrainian and Russian translations
-        run: python scripts/build_locales_uk_ru.py
-      - name: Build staged Hindi and Bengali translations
-        run: python scripts/build_locales_hi_bn.py
-      - name: Build staged migration route translations
-        run: python scripts/build_route_locales.py
-      - name: Build native Russian migration route translations
-        run: python scripts/build_route_locales_ru.py
-      - name: Build staged living-in-Portugal translations
-        run: python scripts/build_living_locales.py
-      - name: Build remaining staged translations
-        run: python scripts/build_remaining_locales.py
-      - name: Rebuild staged locales from complete Portuguese page structure
+      - name: Rebuild every staged locale from complete Portuguese page structure
         run: python scripts/build_structural_parity_locales.py
-      - name: Check full page and feature parity before locale publication
+      - name: Overlay translated copy without changing the page structure
+        run: python scripts/apply_full_structure_translation_copy.py
+      - name: Check full page and feature parity after translation overlay
         run: python scripts/check_locale_parity.py
-      - name: Finalize published translations
+      - name: Finalize only locales explicitly marked live
         run: python scripts/finalize_live_locales.py
       - name: Build multilingual sitemap
         run: python scripts/build_sitemap.py

@@ -1,0 +1,169 @@
+
+/* =========================================================
+   GUIA MIGRANTE PT — IDENTIDADE OFICIAL V4
+   Paleta retirada do logótipo oficial:
+   Azul principal  #09315C
+   Azul profundo   #032954
+   Verde principal #057244
+   Verde profundo  #006939
+   ========================================================= */
+
+:root{
+  --brand:#09315c !important;
+  --brand-dark:#032954 !important;
+  --brand-mid:#0b4777 !important;
+  --brand-soft:#eef4f8 !important;
+  --brand-green:#057244;
+  --brand-green-dark:#006939;
+  --brand-green-soft:#eef8f3;
+  --bg:#f7faf9 !important;
+  --surface:#ffffff !important;
+  --text:#102235 !important;
+  --muted:#607080 !important;
+  --line:#dce5e5 !important;
+  --success:#057244 !important;
+  --success-soft:#eef8f3 !important;
+}
+
+:focus-visible{outline-color:#149166 !important}
+
+/* Cabeçalho e logótipo */
+.brand{gap:11px !important}
+.brand-mark{
+  width:50px !important;height:50px !important;padding:0 !important;
+  border-radius:50% !important;overflow:hidden !important;
+  background:white !important;
+  border:1px solid rgba(9,49,92,.10) !important;
+  box-shadow:0 8px 22px rgba(3,41,84,.14) !important;
+}
+.brand-mark.brand-mark-official{display:grid !important;place-items:center !important}
+.brand-logo{width:100%;height:100%;display:block;object-fit:contain}
+.brand-name{color:#032954 !important}
+.brand-name small{color:#587083 !important}
+
+.topbar{
+  background:linear-gradient(90deg,#032954 0%,#09315c 58%,#064b47 100%) !important;
+  color:#f0f7f5 !important;
+}
+.status-dot{
+  background:#2fbd7b !important;
+  box-shadow:0 0 0 4px rgba(47,189,123,.16) !important;
+}
+.brand-stripe{
+  height:4px;
+  background:linear-gradient(90deg,#09315c 0 50%,#057244 50% 100%);
+}
+
+/* Navegação */
+.desktop-nav a:hover,
+.desktop-nav a[aria-current="page"],
+.mobile-nav a:hover{
+  color:#006939 !important;
+  background:#eef8f3 !important;
+}
+.lang button.active{color:#057244 !important}
+
+/* Hero e chamadas principais */
+.hero{
+  background:
+    radial-gradient(circle at 88% 13%,rgba(5,114,68,.11),transparent 27%),
+    radial-gradient(circle at 73% 5%,rgba(9,49,92,.07),transparent 22%),
+    linear-gradient(180deg,#fff 0%,#f7faf9 100%) !important;
+}
+.eyebrow{
+  border-color:#b9dece !important;
+  background:#eef8f3 !important;
+  color:#006939 !important;
+}
+.hero h1 span,.tools-hero h1 span{color:#057244 !important}
+.btn-primary,.tool-btn.primary{
+  background:linear-gradient(135deg,#09315c,#057244) !important;
+  box-shadow:0 10px 24px rgba(3,41,84,.14) !important;
+}
+.btn-primary:hover,.tool-btn.primary:hover{filter:brightness(.96)}
+.btn-secondary:hover{
+  color:#006939 !important;border-color:#afd8c5 !important;background:#f4fbf7 !important;
+}
+
+/* Elementos gráficos */
+.hero-point b,.result-step b,.ux-guide-step b{
+  background:linear-gradient(145deg,#09315c,#057244) !important;
+}
+.hero-card,.tool-card,.card,.step,.faq-item{border-color:#dce5e5 !important}
+.hero-card{box-shadow:0 20px 50px rgba(3,41,84,.08) !important}
+
+.official-hero-logo{
+  width:86px;height:86px;border-radius:50%;object-fit:contain;
+  display:block;margin:0 0 14px auto;background:white;
+  box-shadow:0 10px 28px rgba(3,41,84,.12);
+  border:1px solid rgba(9,49,92,.10);
+}
+
+/* UX V3 com as cores oficiais */
+.ux-intent-head .ux-kicker,.ux-intent-icon,.tool-kicker{color:#057244 !important}
+.ux-intent-card:hover{
+  border-color:#b9dece !important;
+  box-shadow:0 12px 28px rgba(3,41,84,.08) !important;
+}
+.ux-progress-fill,.progress-bar{
+  background:linear-gradient(90deg,#09315c,#057244) !important;
+}
+.ux-header-search{color:#09315c !important}
+.ux-header-search:hover,
+.ux-bottom-nav .active,
+.ux-bottom-nav a:hover,
+.ux-bottom-nav button:hover{
+  color:#057244 !important;background:#eef8f3 !important;
+}
+.ux-result:hover{background:#f0f8f4 !important;border-color:#c7e4d7 !important}
+.ux-result-icon{background:#eef8f3 !important;color:#057244 !important}
+.ux-search-box:focus-within{
+  border-color:#61b28c !important;
+  box-shadow:0 0 0 3px rgba(5,114,68,.09) !important;
+}
+.ux-search-hints button:hover,.ux-mini-action:hover{
+  border-color:#b9dece !important;background:#eef8f3 !important;color:#006939 !important;
+}
+.ux-guide-choice:hover,.ux-guide-choice.selected{
+  border-color:#83c6a6 !important;background:#eef8f3 !important;
+}
+.ux-guide-actions .primary{
+  background:linear-gradient(135deg,#09315c,#057244) !important;
+  border-color:transparent !important;
+}
+.ux-share{color:#057244 !important;border-color:#cfe3d9 !important}
+.ux-install-card{border-color:#b9dece !important;background:#eef8f3 !important}
+.ux-install-card button{background:linear-gradient(135deg,#09315c,#057244) !important}
+
+/* Ferramentas */
+.choice input,.check-row input{accent-color:#057244 !important}
+.field select:focus,.field input:focus{
+  border-color:#61b28c !important;
+  box-shadow:0 0 0 3px rgba(5,114,68,.08) !important;
+}
+.privacy-badge{
+  background:linear-gradient(145deg,#032954 0%,#09315c 55%,#064b47 100%) !important;
+}
+.privacy-icon{background:#eef8f3 !important;color:#057244 !important}
+.counter-result{background:linear-gradient(145deg,#032954,#064b47) !important}
+.service-result a,.result-step a{color:#057244 !important}
+.jump-nav a:hover{
+  background:#eef8f3 !important;border-color:#b9dece !important;color:#006939 !important;
+}
+
+/* Rodapé */
+footer{
+  background:
+    radial-gradient(circle at 12% 10%,rgba(5,114,68,.13),transparent 25%),
+    linear-gradient(135deg,#021f40 0%,#032954 58%,#043f3b 100%) !important;
+}
+footer .brand-mark{border-color:rgba(255,255,255,.14) !important;background:white !important}
+footer .brand-name{color:white !important}
+footer .brand-name small{color:#c6d8d1 !important}
+.footer-links a:hover{color:#8fe0b8 !important}
+
+@media(max-width:520px){
+  .brand-mark{width:44px !important;height:44px !important}
+  .brand-name{font-size:.9rem !important}
+  .brand-name small{display:none !important}
+}

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#09315c" name="theme-color"/>
+<meta content="English guide to NIF, NISS, NHS/SNS user number and the 2026 combined identification service for foreign nationals in Portugal." name="description"/>
+<link href="https://guia-migrante-pt.pages.dev/en/dia-a-dia.html" rel="canonical"/>
+<link href="https://guia-migrante-pt.pages.dev/dia-a-dia.html" hreflang="pt-PT" rel="alternate"/>
+<link href="https://guia-migrante-pt.pages.dev/en/dia-a-dia.html" hreflang="en" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Guia Migrante PT" property="og:site_name"/>
+<meta content="Daily Life — NIF, NISS and NHS/SNS | Guia Migrante PT" property="og:title"/>
+<meta content="English guide to NIF, NISS, NHS/SNS user number and the 2026 combined identification service for foreign nationals in Portugal." property="og:description"/>
+<meta content="https://guia-migrante-pt.pages.dev/en/dia-a-dia.html" property="og:url"/>
+<meta content="https://guia-migrante-pt.pages.dev/logo-guia-migrante.png" property="og:image"/>
+<meta content="2026-08-20" name="last-reviewed"/>
+<title>Daily Life — NIF, NISS and NHS/SNS | Guia Migrante PT</title>
+<link href="../favicon.png" rel="icon" type="image/png"/>
+<link href="../manifest-en.webmanifest" rel="manifest"/>
+<style>
+    :root{
+      --brand:#1e3a8a;
+      --brand-dark:#172554;
+      --brand-mid:#2563eb;
+      --brand-soft:#eff6ff;
+      --bg:#f8fafc;
+      --surface:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --success:#047857;
+      --success-soft:#ecfdf5;
+      --warning:#a16207;
+      --warning-soft:#fffbeb;
+      --danger:#b91c1c;
+      --danger-soft:#fef2f2;
+      --radius-sm:12px;
+      --radius:18px;
+      --radius-lg:26px;
+      --shadow-sm:0 8px 24px rgba(15,23,42,.06);
+      --shadow:0 18px 44px rgba(15,23,42,.09);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    svg{display:block}
+    :focus-visible{outline:3px solid #60a5fa;outline-offset:3px}
+
+    .container{width:min(calc(100% - 24px),var(--max));margin-inline:auto}
+    .sr-only{
+      position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0
+    }
+
+    /* Top notice */
+    .topbar{
+      background:var(--brand-dark);
+      color:#dbeafe;
+      font-size:.78rem;
+    }
+    .topbar-inner{
+      min-height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      text-align:center;
+      padding:6px 0;
+    }
+    .status-dot{
+      width:7px;height:7px;border-radius:50%;
+      background:#34d399;
+      box-shadow:0 0 0 4px rgba(52,211,153,.12);
+      flex:0 0 auto;
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{
+      min-height:70px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:max-content;
+    }
+    .brand-mark{
+      width:42px;height:42px;
+      border-radius:13px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(145deg,var(--brand),var(--brand-dark));
+      color:white;
+      box-shadow:0 9px 22px rgba(30,58,138,.2);
+    }
+    .brand-name{
+      color:var(--brand-dark);
+      font-weight:900;
+      font-size:.98rem;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    .brand-name small{
+      display:block;
+      margin-top:4px;
+      font-size:.65rem;
+      font-weight:650;
+      color:var(--muted);
+      letter-spacing:0;
+    }
+
+    .desktop-nav{
+      display:none;
+      justify-content:center;
+      gap:2px;
+    }
+    .desktop-nav a{
+      padding:9px 11px;
+      border-radius:10px;
+      color:#334155;
+      font-weight:750;
+      font-size:.88rem;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a[aria-current="page"]{
+      color:var(--brand);
+      background:var(--brand-soft);
+    }
+
+    .header-actions{
+      justify-self:end;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .lang{
+      display:none;
+      padding:3px;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:var(--bg);
+    }
+    .lang button{
+      border:0;
+      background:transparent;
+      color:var(--muted);
+      font-size:.76rem;
+      font-weight:850;
+      padding:6px 8px;
+      border-radius:8px;
+    }
+    .lang button.active{
+      background:white;
+      color:var(--brand);
+      box-shadow:0 2px 7px rgba(15,23,42,.08);
+    }
+    .menu-btn{
+      width:41px;height:41px;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:white;
+      color:var(--brand-dark);
+    }
+    .mobile-nav{
+      display:none;
+      background:white;
+      border-top:1px solid var(--line);
+      padding:10px 12px 16px;
+    }
+    .mobile-nav.open{display:grid}
+    .mobile-nav a{
+      padding:12px;
+      border-radius:10px;
+      font-weight:750;
+      color:#334155;
+    }
+    .mobile-nav a:hover{background:var(--brand-soft);color:var(--brand)}
+
+    /* Hero */
+    .hero{
+      padding:52px 0 42px;
+      background:
+        radial-gradient(circle at 86% 14%,rgba(37,99,235,.08),transparent 28%),
+        linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+    }
+    .hero-grid{
+      display:grid;
+      gap:30px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid #bfdbfe;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-weight:850;
+      font-size:.76rem;
+    }
+    .hero h1{
+      margin:17px 0 0;
+      max-width:780px;
+      color:var(--brand-dark);
+      font-size:clamp(2.35rem,11vw,4.8rem);
+      line-height:1;
+      letter-spacing:-.052em;
+    }
+    .hero h1 span{color:var(--brand)}
+    .hero p{
+      max-width:690px;
+      margin:20px 0 0;
+      color:var(--muted);
+      font-size:1rem;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:23px;
+    }
+    .btn-primary,.btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:44px;
+      padding:10px 14px;
+      border-radius:11px;
+      font-size:.84rem;
+      font-weight:850;
+    }
+    .btn-primary{background:var(--brand);color:white}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-secondary{background:white;color:var(--brand);border:1px solid var(--line)}
+    .hero-card{
+      border-radius:var(--radius-lg);
+      background:var(--brand-dark);
+      color:white;
+      padding:23px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card small{
+      color:#93c5fd;
+      font-weight:850;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+    .hero-card h2{
+      margin:7px 0 8px;
+      font-size:1.45rem;
+      line-height:1.15;
+      letter-spacing:-.025em;
+    }
+    .hero-card p{
+      color:#cbd5e1;
+      margin:0;
+      font-size:.9rem;
+    }
+    .hero-points{
+      display:grid;
+      gap:9px;
+      margin-top:18px;
+    }
+    .hero-point{
+      display:grid;
+      grid-template-columns:31px 1fr;
+      gap:10px;
+      align-items:center;
+      padding:10px;
+      border-radius:11px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.09);
+      font-size:.85rem;
+      font-weight:700;
+    }
+    .hero-point b{
+      width:29px;height:29px;border-radius:9px;
+      display:grid;place-items:center;
+      background:#dbeafe;color:var(--brand-dark);
+      font-size:.74rem;
+    }
+
+    /* Current alert */
+    .current{padding:16px 0 0}
+    .current-alert{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      align-items:start;
+      padding:17px;
+      border-radius:15px;
+      background:#eff6ff;
+      border:1px solid #bfdbfe;
+    }
+    .current-icon{
+      width:39px;height:39px;
+      border-radius:11px;
+      display:grid;place-items:center;
+      background:white;
+      color:var(--brand);
+    }
+    .current-alert strong{
+      display:block;
+      color:var(--brand-dark);
+      font-size:.92rem;
+    }
+    .current-alert p{
+      margin:4px 0 0;
+      color:#52647b;
+      font-size:.84rem;
+    }
+    .current-alert a{
+      display:inline-flex;
+      margin-top:9px;
+      color:var(--brand);
+      font-size:.8rem;
+      font-weight:850;
+    }
+
+    /* Sections */
+    section.content{padding:60px 0}
+    .section-head{margin-bottom:24px}
+    .section-kicker{
+      display:block;
+      color:var(--brand);
+      font-size:.73rem;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      margin-bottom:7px;
+    }
+    .section-head h2{
+      margin:0;
+      color:var(--brand-dark);
+      font-size:clamp(1.9rem,8vw,3rem);
+      line-height:1.06;
+      letter-spacing:-.042em;
+    }
+    .section-head p{
+      max-width:680px;
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    /* 30 days cards */
+    .steps-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .step-card{
+      position:relative;
+      overflow:hidden;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:21px;
+      box-shadow:var(--shadow-sm);
+    }
+    .step-card::before{
+      content:"";
+      position:absolute;
+      left:0;top:0;bottom:0;width:4px;
+      background:var(--brand);
+    }
+    .step-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .step-num{
+      width:39px;height:39px;
+      border-radius:11px;
+      display:grid;place-items:center;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-weight:900;
+      font-size:.78rem;
+    }
+    .step-label{
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:850;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+    .step-card h3{
+      margin:17px 0 7px;
+      color:var(--brand-dark);
+      font-size:1.2rem;
+      letter-spacing:-.02em;
+    }
+    .step-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.86rem;
+    }
+    .fact-list{
+      list-style:none;
+      padding:0;
+      margin:16px 0 0;
+      display:grid;
+      gap:8px;
+    }
+    .fact-list li{
+      display:grid;
+      grid-template-columns:18px 1fr;
+      gap:8px;
+      align-items:start;
+      color:#475569;
+      font-size:.81rem;
+    }
+    .fact-list li::before{
+      content:"✓";
+      width:18px;height:18px;
+      border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--success-soft);
+      color:var(--success);
+      font-size:.69rem;
+      font-weight:900;
+      margin-top:2px;
+    }
+    .critical{
+      margin-top:14px;
+      padding:11px 12px;
+      border-radius:10px;
+      background:var(--warning-soft);
+      border:1px solid #fde68a;
+      color:#713f12;
+      font-size:.79rem;
+    }
+    .step-link{
+      display:inline-flex;
+      margin-top:15px;
+      color:var(--brand);
+      font-size:.8rem;
+      font-weight:850;
+    }
+
+    /* Security */
+    .security-section{background:white}
+    .security-wrap{
+      display:grid;
+      gap:20px;
+      align-items:start;
+    }
+    .security-intro{
+      padding:23px;
+      border-radius:var(--radius-lg);
+      background:linear-gradient(145deg,var(--brand-dark),var(--brand));
+      color:white;
+      box-shadow:var(--shadow);
+    }
+    .security-intro .section-kicker{color:#bfdbfe}
+    .security-intro h2{
+      margin:0;
+      font-size:2rem;
+      line-height:1.08;
+      letter-spacing:-.035em;
+    }
+    .security-intro p{
+      color:#dbeafe;
+      font-size:.88rem;
+      margin:10px 0 0;
+    }
+    .security-list{display:grid;gap:10px}
+    .safety-item{
+      display:grid;
+      grid-template-columns:35px 1fr;
+      gap:11px;
+      align-items:start;
+      background:var(--bg);
+      border:1px solid var(--line);
+      border-radius:13px;
+      padding:14px;
+    }
+    .safety-check{
+      width:34px;height:34px;
+      display:grid;place-items:center;
+      border-radius:10px;
+      background:var(--success-soft);
+      color:var(--success);
+      font-weight:900;
+    }
+    .safety-item strong{
+      display:block;
+      color:var(--brand-dark);
+      font-size:.86rem;
+    }
+    .safety-item p{
+      margin:3px 0 0;
+      color:var(--muted);
+      font-size:.8rem;
+    }
+    .scam-note{
+      padding:13px 14px;
+      border-radius:11px;
+      background:var(--warning-soft);
+      border:1px solid #fde68a;
+      color:#713f12;
+      font-size:.79rem;
+    }
+
+    /* FAQ */
+    .faq-section{background:var(--bg)}
+    .faq-list{display:grid;gap:9px}
+    .faq-item{
+      border:1px solid var(--line);
+      border-radius:13px;
+      background:white;
+      overflow:hidden;
+    }
+    .faq-question{
+      width:100%;
+      border:0;
+      background:white;
+      color:var(--brand-dark);
+      padding:16px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:13px;
+      align-items:center;
+      text-align:left;
+      font-weight:800;
+      font-size:.88rem;
+    }
+    .faq-question:hover{background:#fbfdff}
+    .faq-symbol{
+      width:28px;height:28px;
+      border-radius:8px;
+      display:grid;place-items:center;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-size:1.1rem;
+      line-height:1;
+    }
+    .faq-answer{
+      display:none;
+      padding:0 16px 16px;
+      color:var(--muted);
+      font-size:.83rem;
+    }
+    .faq-item.open .faq-answer{display:block}
+    .faq-answer p{margin:0 0 9px}
+    .faq-answer p:last-child{margin-bottom:0}
+    .faq-answer a{color:var(--brand);font-weight:800}
+
+    /* Footer */
+    footer{
+      background:var(--brand-dark);
+      color:#cbd5e1;
+      padding:38px 0 22px;
+    }
+    .footer-grid{
+      display:grid;
+      gap:25px;
+    }
+    .footer-brand p{
+      max-width:470px;
+      margin:11px 0 0;
+      color:#aebdd1;
+      font-size:.8rem;
+    }
+    .footer-title{
+      color:white;
+      font-size:.81rem;
+      font-weight:850;
+      margin-bottom:9px;
+    }
+    .footer-links{
+      display:grid;
+      gap:7px;
+    }
+    .footer-links a{
+      color:#bac8dc;
+      font-size:.79rem;
+    }
+    .footer-links a:hover{color:white}
+    .legal{
+      margin-top:27px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.11);
+      color:#91a3bb;
+      font-size:.73rem;
+    }
+    .legal strong{color:#cbd5e1}
+    .footer-bottom{
+      margin-top:17px;
+      display:flex;
+      gap:12px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      color:#8395ad;
+      font-size:.71rem;
+    }
+
+    /* Toast */
+    .toast{
+      position:fixed;
+      z-index:100;
+      left:12px;right:12px;bottom:14px;
+      display:none;
+      background:var(--brand-dark);
+      color:white;
+      padding:13px 14px;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      font-size:.82rem;
+    }
+    .toast.show{display:block}
+
+    @media (min-width:700px){
+      .container{width:min(calc(100% - 40px),var(--max))}
+      .lang{display:flex}
+      .hero{padding:68px 0 52px}
+      .hero-grid{grid-template-columns:1.15fr .85fr;gap:44px}
+      .steps-grid{grid-template-columns:1fr 1fr}
+      .security-wrap{grid-template-columns:.9fr 1.1fr;gap:26px}
+      .footer-grid{grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+      .toast{left:auto;right:20px;width:360px}
+    }
+
+    @media (min-width:980px){
+      .desktop-nav{display:flex}
+      .menu-btn{display:none}
+      .mobile-nav{display:none!important}
+      .steps-grid{grid-template-columns:repeat(4,1fr)}
+      .section-head{
+        display:flex;
+        justify-content:space-between;
+        align-items:end;
+        gap:28px;
+      }
+      .section-head p{margin:0;max-width:530px}
+      .footer-grid{grid-template-columns:1.5fr repeat(3,1fr)}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important;animation:none!important}
+    }
+  </style>
+<link href="../ux.css" rel="stylesheet"/>
+<link href="../brand.css" rel="stylesheet"/>
+<link href="../verify.css" rel="stylesheet"/>
+<link href="../en.css" rel="stylesheet"/>
+<style></style>
+<link href="../qa-v8.css" rel="stylesheet"/>
+<link href="../routes-v9.css" rel="stylesheet"/>
+<link href="../life-v10.css" rel="stylesheet"/>
+<link href="../practical-v11.css" rel="stylesheet"/>
+<link href="../ops-v12.css" rel="stylesheet"/>
+<meta content="src_0d3e737b44ae src_94e2ebb14db9 src_b223c78629bb src_e83566f7adcc src_f95c7a71032d" name="official-source-ids"/>
+<meta content="quarantine" name="source-policy"/>
+  <link rel="stylesheet" href="../source-guard.css">
+</head>
+<body>
+<div class="topbar">
+<div class="container topbar-inner">
+<span><span class="status-dot"></span> Independent information · Verified with official sources</span>
+<span>Checked on 20/08/2026</span>
+</div>
+</div>
+<header>
+<div class="container header-inner">
+<a aria-label="Guia Migrante PT — Home" class="brand" href="index.html">
+<span aria-hidden="true" class="brand-mark brand-mark-official">
+<img alt="" class="brand-logo" src="../logo-guia-migrante-256.png"/>
+</span>
+<span class="brand-name">Guia Migrante PT<small>Information · Guidance · Trust</small></span>
+</a>
+<nav aria-label="Main navigation" class="desktop-nav"><a href="index.html">Home</a><a href="percursos.html">Routes</a><a href="viver-em-portugal.html">Living in Portugal</a><a href="nacionalidade.html">Nationality</a><a href="ferramentas.html">Tools</a><a href="contactos.html">Contacts</a></nav>
+<div class="header-actions">
+<div aria-label="Language" class="site-lang">
+<a href="../dia-a-dia.html">PT</a>
+<a aria-current="page" class="active" href="dia-a-dia.html">EN</a>
+</div>
+<button aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu" class="menu-btn" id="menuButton" type="button">
+<svg aria-hidden="true" fill="none" height="21" viewbox="0 0 24 24" width="21">
+<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<nav aria-label="Mobile navigation" class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="percursos.html">Routes</a><a href="viver-em-portugal.html">Living in Portugal</a><a href="nacionalidade.html">Nationality</a><a href="ferramentas.html">Tools</a><a href="contactos.html">Contacts</a></nav>
+</header>
+<div aria-hidden="true" class="brand-stripe"></div>
+<div class="verification-strip">
+<div class="container verification-inner">
+<span class="verified-badge">Key information checked on 20/08/2026</span>
+<span>Priority sources: AIMA · gov.pt · Justice / Diário da República · Social Security · SNS</span>
+<a href="atualizacoes.html">See what changed →</a>
+</div>
+</div>
+<main id="content">
+<section class="en-hero">
+<div class="container">
+<div class="en-breadcrumbs"><a href="index.html">Home</a><span>›</span><span>Daily Life</span></div>
+<span class="en-kicker">NIF · NISS · Healthcare</span>
+<h1>The documents that unlock <span>everyday life.</span></h1>
+<p>NIF, NISS and the NHS/SNS user number are different identifiers. This page explains what each one is for and where to start.</p>
+<div class="en-meta"><span>Checked 20/08/2026</span><span>gov.pt / Social Security / SNS</span></div>
+</div>
+</section>
+<div class="en-jump"><div class="container"><a href="#nif">NIF</a><a href="#niss">NISS</a><a href="#sns">NHS/SNS</a><a href="#combined">Combined service</a><a href="#practical">Practical life</a></div></div>
+<section class="en-section white" id="nif"><div class="container">
+<div class="en-head"><span class="en-label">Tax identification</span><h2>NIF — Tax Identification Number</h2><p>Used for tax matters and many everyday contracts and transactions.</p></div>
+<div class="en-grid two">
+<article class="en-card"><h3>Who can request it?</h3><p>Portuguese or foreign individuals, whether resident or non-resident in Portugal, can request a NIF.</p><ul><li>The official request is free.</li><li>Required documents depend on residence and tax-representation rules.</li><li>A private representative may charge for their own professional service; that is not a government NIF fee.</li></ul></article>
+<article class="en-card"><h3>Where to confirm</h3><p>Use the official gov.pt / Tax Authority information before submitting your request.</p><a class="en-source" href="https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular" rel="noopener" target="_blank">NIF — official service ↗</a></article>
+</div>
+</div></section>
+<section class="en-section" id="niss"><div class="container">
+<div class="en-head"><span class="en-label">Social Security</span><h2>NISS — Social Security Identification Number</h2><p>The number identifies a person within the Portuguese Social Security system.</p></div>
+<div class="en-grid two">
+<article class="en-card"><h3>Foreign nationals can apply online</h3><p>The official NISS request for foreign nationals is available online and is free.</p><ul><li>The person can apply.</li><li>A legal representative can apply where appropriate.</li><li>An employer may submit the request in situations covered by the service.</li></ul></article>
+<article class="en-card"><h3>Do not buy a “NISS slot”</h3><p>A private adviser may charge professional fees, but the official NISS application itself is free. Verify any payment request.</p><a class="en-source" href="https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-" rel="noopener" target="_blank">NISS — official service ↗</a></article>
+</div>
+</div></section>
+<section class="en-section white" id="sns"><div class="container">
+<div class="en-head"><span class="en-label">Health</span><h2>NHS/SNS user number</h2><p>For foreign nationals, the national user number may be assigned when they first access a public health unit.</p></div>
+<div class="en-grid two">
+<article class="en-card"><h3>Assignment of the number</h3><ul><li>It may be assigned at a public health centre or hospital.</li><li>Assignment of the number is free.</li><li>Registration at a health centre can have additional documentation requirements.</li></ul><a class="en-source" href="https://www.gov.pt/servicos/pedir-o-numero-de-utente-do-sns" rel="noopener" target="_blank">NHS/SNS user number ↗</a></article>
+<article class="en-card"><h3>Important distinction</h3><p>Having an NHS/SNS user number does not, by itself, mean every healthcare cost is automatically covered. Coverage and exemptions depend on the applicable situation.</p><a class="en-source" href="https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude" rel="noopener" target="_blank">Register at a health centre ↗</a></article>
+</div>
+</div></section>
+<section class="en-section" id="combined"><div class="container">
+<div class="en-head"><span class="en-label">2026 combined service</span><h2>NIF + NISS + NHS/SNS user number in one appointment</h2><p>Eligible foreign residents can request the three identifiers together at participating Citizen Shops.</p></div>
+<div class="en-card">
+<h3>Checked on 20/08/2026: <span data-fact="combined_id_locations">12</span> participating Citizen Shops</h3>
+<p>gov.pt currently lists <span data-fact="combined_id_locations">12</span> participating locations. The service is for foreign nationals with an address in Portugal, without a Portuguese Citizen Card, who meet at least one of the official eligibility conditions, such as having applied for or obtained residence, being an EU citizen, or being in certain international-protection situations.</p>
+<div class="en-warning" style="margin-top:12px">Do not travel to a Citizen Shop solely because you read about the service online. First check the current eligibility conditions and participating locations on gov.pt.</div>
+<a class="en-source" href="https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros" rel="noopener" target="_blank">Combined service — gov.pt ↗</a>
+</div>
+</div></section>
+<section class="en-section white" id="practical"><div class="container">
+<div class="en-head"><span class="en-label">Practical organisation</span><h2>Keep a simple folder for your Portuguese paperwork.</h2><p>You do not need to upload these documents to Guia Migrante PT.</p></div>
+<div class="en-grid three">
+<article class="en-card"><h3>Identity and residence</h3><p>Passport, visa, residence card/certificate and relevant AIMA evidence.</p></article>
+<article class="en-card"><h3>Address and contracts</h3><p>Housing evidence, contracts and documents that may be needed to prove your address.</p></article>
+<article class="en-card"><h3>Receipts and submissions</h3><p>Keep e-mails, receipts, reference numbers and confirmation messages from official submissions.</p></article>
+</div>
+<div class="en-actions"><a class="en-btn primary" href="ferramentas.html#checklist">Open free checklist</a><a class="en-btn secondary" href="contactos.html">Find a service</a></div>
+</div></section>
+</main>
+<footer>
+<div class="container footer-grid">
+<div>
+<a class="brand footer-brand" href="index.html">
+<span aria-hidden="true" class="brand-mark brand-mark-official"><img alt="" class="brand-logo" src="../logo-guia-migrante-256.png"/></span>
+<span class="brand-name">Guia Migrante PT<small>Information · Guidance · Trust</small></span>
+</a>
+<p class="footer-note">Independent and free information and guidance portal for migrants in Portugal.</p>
+</div>
+<div>
+<div class="footer-title">Portal</div>
+<div class="footer-links">
+<a href="index.html">Home</a><a href="percursos.html">Routes</a><a href="viver-em-portugal.html">Living in Portugal</a><a href="legalizacao.html">Residence</a><a href="dia-a-dia.html">Daily Life</a>
+<a href="nacionalidade.html">Nationality</a><a href="ferramentas.html">Tools</a><a href="contactos.html">Contacts</a>
+</div>
+</div>
+<div>
+<div class="footer-title">Trust</div>
+<div class="footer-links">
+<a href="seguranca.html">Avoid scams</a><a href="faq.html">FAQs</a><a href="atualizacoes.html">What changed?</a>
+<a href="privacidade.html">Privacy Policy</a><a href="acessibilidade.html">Accessibility</a><a href="estado-informacao.html">Information status</a><a href="termos.html">Terms &amp; Conditions</a>
+</div>
+</div>
+<div>
+<div class="footer-title">Official sources</div>
+<div class="footer-links">
+<a href="https://aima.gov.pt/" rel="noopener" target="_blank">AIMA ↗</a>
+<a href="https://justica.gov.pt/" rel="noopener" target="_blank">Justice ↗</a>
+<a href="https://www.gov.pt/" rel="noopener" target="_blank">gov.pt ↗</a>
+<a href="https://www.seg-social.pt/" rel="noopener" target="_blank">Social Security ↗</a>
+</div>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© 2026 Guia Migrante PT.</span>
+<span>Guia Migrante PT does not belong to or represent AIMA, the Portuguese Government, the Tax Authority, Social Security, the NHS/SNS or any other public body.</span>
+</div>
+</footer>
+<script>
+    const menuButton=document.getElementById('menuButton');
+    const mobileNav=document.getElementById('mobileNav');
+    if(menuButton&&mobileNav){
+      menuButton.addEventListener('click',()=>{
+        const open=mobileNav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded',String(open));
+      });
+    }
+  </script>
+<script defer="" src="../ux-en.js"></script>
+<script defer="" src="../ops-v12.js"></script>
+  <script src="../source-guard.js" defer></script>
+</body>
+</html>

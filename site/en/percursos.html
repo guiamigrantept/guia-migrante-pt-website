@@ -1,0 +1,732 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09315c"><meta name="description" content="Major migration and residence routes in Portugal, organised by profile.">
+<link rel="canonical" href="https://guia-migrante-pt.pages.dev/en/percursos.html"><link rel="alternate" hreflang="pt-PT" href="https://guia-migrante-pt.pages.dev/percursos.html"><link rel="alternate" hreflang="en" href="https://guia-migrante-pt.pages.dev/en/percursos.html">
+<meta name="last-reviewed" content="2026-08-20">
+  <title>All Migration Routes | Guia Migrante PT</title><link rel="icon" href="../favicon.png"><style>
+    :root{
+      --brand:#1e3a8a;
+      --brand-dark:#172554;
+      --brand-mid:#2563eb;
+      --brand-soft:#eff6ff;
+      --bg:#f8fafc;
+      --surface:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --success:#047857;
+      --success-soft:#ecfdf5;
+      --warning:#a16207;
+      --warning-soft:#fffbeb;
+      --danger:#b91c1c;
+      --danger-soft:#fef2f2;
+      --radius-sm:12px;
+      --radius:18px;
+      --radius-lg:26px;
+      --shadow-sm:0 8px 24px rgba(15,23,42,.06);
+      --shadow:0 18px 44px rgba(15,23,42,.09);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    svg{display:block}
+    :focus-visible{outline:3px solid #60a5fa;outline-offset:3px}
+
+    .container{width:min(calc(100% - 24px),var(--max));margin-inline:auto}
+    .sr-only{
+      position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0
+    }
+
+    /* Top notice */
+    .topbar{
+      background:var(--brand-dark);
+      color:#dbeafe;
+      font-size:.78rem;
+    }
+    .topbar-inner{
+      min-height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      text-align:center;
+      padding:6px 0;
+    }
+    .status-dot{
+      width:7px;height:7px;border-radius:50%;
+      background:#34d399;
+      box-shadow:0 0 0 4px rgba(52,211,153,.12);
+      flex:0 0 auto;
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{
+      min-height:70px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:max-content;
+    }
+    .brand-mark{
+      width:42px;height:42px;
+      border-radius:13px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(145deg,var(--brand),var(--brand-dark));
+      color:white;
+      box-shadow:0 9px 22px rgba(30,58,138,.2);
+    }
+    .brand-name{
+      color:var(--brand-dark);
+      font-weight:900;
+      font-size:.98rem;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    .brand-name small{
+      display:block;
+      margin-top:4px;
+      font-size:.65rem;
+      font-weight:650;
+      color:var(--muted);
+      letter-spacing:0;
+    }
+
+    .desktop-nav{
+      display:none;
+      justify-content:center;
+      gap:2px;
+    }
+    .desktop-nav a{
+      padding:9px 11px;
+      border-radius:10px;
+      color:#334155;
+      font-weight:750;
+      font-size:.88rem;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a[aria-current="page"]{
+      color:var(--brand);
+      background:var(--brand-soft);
+    }
+
+    .header-actions{
+      justify-self:end;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .lang{
+      display:none;
+      padding:3px;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:var(--bg);
+    }
+    .lang button{
+      border:0;
+      background:transparent;
+      color:var(--muted);
+      font-size:.76rem;
+      font-weight:850;
+      padding:6px 8px;
+      border-radius:8px;
+    }
+    .lang button.active{
+      background:white;
+      color:var(--brand);
+      box-shadow:0 2px 7px rgba(15,23,42,.08);
+    }
+    .menu-btn{
+      width:41px;height:41px;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:white;
+      color:var(--brand-dark);
+    }
+    .mobile-nav{
+      display:none;
+      background:white;
+      border-top:1px solid var(--line);
+      padding:10px 12px 16px;
+    }
+    .mobile-nav.open{display:grid}
+    .mobile-nav a{
+      padding:12px;
+      border-radius:10px;
+      font-weight:750;
+      color:#334155;
+    }
+    .mobile-nav a:hover{background:var(--brand-soft);color:var(--brand)}
+
+    /* Hero */
+    .hero{
+      padding:52px 0 42px;
+      background:
+        radial-gradient(circle at 86% 14%,rgba(37,99,235,.08),transparent 28%),
+        linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+    }
+    .hero-grid{
+      display:grid;
+      gap:30px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid #bfdbfe;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-weight:850;
+      font-size:.76rem;
+    }
+    .hero h1{
+      margin:17px 0 0;
+      max-width:780px;
+      color:var(--brand-dark);
+      font-size:clamp(2.35rem,11vw,4.8rem);
+      line-height:1;
+      letter-spacing:-.052em;
+    }
+    .hero h1 span{color:var(--brand)}
+    .hero p{
+      max-width:690px;
+      margin:20px 0 0;
+      color:var(--muted);
+      font-size:1rem;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:23px;
+    }
+    .btn-primary,.btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:44px;
+      padding:10px 14px;
+      border-radius:11px;
+      font-size:.84rem;
+      font-weight:850;
+    }
+    .btn-primary{background:var(--brand);color:white}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-secondary{background:white;color:var(--brand);border:1px solid var(--line)}
+    .hero-card{
+      border-radius:var(--radius-lg);
+      background:var(--brand-dark);
+      color:white;
+      padding:23px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card small{
+      color:#93c5fd;
+      font-weight:850;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+    .hero-card h2{
+      margin:7px 0 8px;
+      font-size:1.45rem;
+      line-height:1.15;
+      letter-spacing:-.025em;
+    }
+    .hero-card p{
+      color:#cbd5e1;
+      margin:0;
+      font-size:.9rem;
+    }
+    .hero-points{
+      display:grid;
+      gap:9px;
+      margin-top:18px;
+    }
+    .hero-point{
+      display:grid;
+      grid-template-columns:31px 1fr;
+      gap:10px;
+      align-items:center;
+      padding:10px;
+      border-radius:11px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.09);
+      font-size:.85rem;
+      font-weight:700;
+    }
+    .hero-point b{
+      width:29px;height:29px;border-radius:9px;
+      display:grid;place-items:center;
+      background:#dbeafe;color:var(--brand-dark);
+      font-size:.74rem;
+    }
+
+    /* Current alert */
+    .current{padding:16px 0 0}
+    .current-alert{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      align-items:start;
+      padding:17px;
+      border-radius:15px;
+      background:#eff6ff;
+      border:1px solid #bfdbfe;
+    }
+    .current-icon{
+      width:39px;height:39px;
+      border-radius:11px;
+      display:grid;place-items:center;
+      background:white;
+      color:var(--brand);
+    }
+    .current-alert strong{
+      display:block;
+      color:var(--brand-dark);
+      font-size:.92rem;
+    }
+    .current-alert p{
+      margin:4px 0 0;
+      color:#52647b;
+      font-size:.84rem;
+    }
+    .current-alert a{
+      display:inline-flex;
+      margin-top:9px;
+      color:var(--brand);
+      font-size:.8rem;
+      font-weight:850;
+    }
+
+    /* Sections */
+    section.content{padding:60px 0}
+    .section-head{margin-bottom:24px}
+    .section-kicker{
+      display:block;
+      color:var(--brand);
+      font-size:.73rem;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      margin-bottom:7px;
+    }
+    .section-head h2{
+      margin:0;
+      color:var(--brand-dark);
+      font-size:clamp(1.9rem,8vw,3rem);
+      line-height:1.06;
+      letter-spacing:-.042em;
+    }
+    .section-head p{
+      max-width:680px;
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    /* 30 days cards */
+    .steps-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .step-card{
+      position:relative;
+      overflow:hidden;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:21px;
+      box-shadow:var(--shadow-sm);
+    }
+    .step-card::before{
+      content:"";
+      position:absolute;
+      left:0;top:0;bottom:0;width:4px;
+      background:var(--brand);
+    }
+    .step-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .step-num{
+      width:39px;height:39px;
+      border-radius:11px;
+      display:grid;place-items:center;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-weight:900;
+      font-size:.78rem;
+    }
+    .step-label{
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:850;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+    .step-card h3{
+      margin:17px 0 7px;
+      color:var(--brand-dark);
+      font-size:1.2rem;
+      letter-spacing:-.02em;
+    }
+    .step-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.86rem;
+    }
+    .fact-list{
+      list-style:none;
+      padding:0;
+      margin:16px 0 0;
+      display:grid;
+      gap:8px;
+    }
+    .fact-list li{
+      display:grid;
+      grid-template-columns:18px 1fr;
+      gap:8px;
+      align-items:start;
+      color:#475569;
+      font-size:.81rem;
+    }
+    .fact-list li::before{
+      content:"✓";
+      width:18px;height:18px;
+      border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--success-soft);
+      color:var(--success);
+      font-size:.69rem;
+      font-weight:900;
+      margin-top:2px;
+    }
+    .critical{
+      margin-top:14px;
+      padding:11px 12px;
+      border-radius:10px;
+      background:var(--warning-soft);
+      border:1px solid #fde68a;
+      color:#713f12;
+      font-size:.79rem;
+    }
+    .step-link{
+      display:inline-flex;
+      margin-top:15px;
+      color:var(--brand);
+      font-size:.8rem;
+      font-weight:850;
+    }
+
+    /* Security */
+    .security-section{background:white}
+    .security-wrap{
+      display:grid;
+      gap:20px;
+      align-items:start;
+    }
+    .security-intro{
+      padding:23px;
+      border-radius:var(--radius-lg);
+      background:linear-gradient(145deg,var(--brand-dark),var(--brand));
+      color:white;
+      box-shadow:var(--shadow);
+    }
+    .security-intro .section-kicker{color:#bfdbfe}
+    .security-intro h2{
+      margin:0;
+      font-size:2rem;
+      line-height:1.08;
+      letter-spacing:-.035em;
+    }
+    .security-intro p{
+      color:#dbeafe;
+      font-size:.88rem;
+      margin:10px 0 0;
+    }
+    .security-list{display:grid;gap:10px}
+    .safety-item{
+      display:grid;
+      grid-template-columns:35px 1fr;
+      gap:11px;
+      align-items:start;
+      background:var(--bg);
+      border:1px solid var(--line);
+      border-radius:13px;
+      padding:14px;
+    }
+    .safety-check{
+      width:34px;height:34px;
+      display:grid;place-items:center;
+      border-radius:10px;
+      background:var(--success-soft);
+      color:var(--success);
+      font-weight:900;
+    }
+    .safety-item strong{
+      display:block;
+      color:var(--brand-dark);
+      font-size:.86rem;
+    }
+    .safety-item p{
+      margin:3px 0 0;
+      color:var(--muted);
+      font-size:.8rem;
+    }
+    .scam-note{
+      padding:13px 14px;
+      border-radius:11px;
+      background:var(--warning-soft);
+      border:1px solid #fde68a;
+      color:#713f12;
+      font-size:.79rem;
+    }
+
+    /* FAQ */
+    .faq-section{background:var(--bg)}
+    .faq-list{display:grid;gap:9px}
+    .faq-item{
+      border:1px solid var(--line);
+      border-radius:13px;
+      background:white;
+      overflow:hidden;
+    }
+    .faq-question{
+      width:100%;
+      border:0;
+      background:white;
+      color:var(--brand-dark);
+      padding:16px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:13px;
+      align-items:center;
+      text-align:left;
+      font-weight:800;
+      font-size:.88rem;
+    }
+    .faq-question:hover{background:#fbfdff}
+    .faq-symbol{
+      width:28px;height:28px;
+      border-radius:8px;
+      display:grid;place-items:center;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-size:1.1rem;
+      line-height:1;
+    }
+    .faq-answer{
+      display:none;
+      padding:0 16px 16px;
+      color:var(--muted);
+      font-size:.83rem;
+    }
+    .faq-item.open .faq-answer{display:block}
+    .faq-answer p{margin:0 0 9px}
+    .faq-answer p:last-child{margin-bottom:0}
+    .faq-answer a{color:var(--brand);font-weight:800}
+
+    /* Footer */
+    footer{
+      background:var(--brand-dark);
+      color:#cbd5e1;
+      padding:38px 0 22px;
+    }
+    .footer-grid{
+      display:grid;
+      gap:25px;
+    }
+    .footer-brand p{
+      max-width:470px;
+      margin:11px 0 0;
+      color:#aebdd1;
+      font-size:.8rem;
+    }
+    .footer-title{
+      color:white;
+      font-size:.81rem;
+      font-weight:850;
+      margin-bottom:9px;
+    }
+    .footer-links{
+      display:grid;
+      gap:7px;
+    }
+    .footer-links a{
+      color:#bac8dc;
+      font-size:.79rem;
+    }
+    .footer-links a:hover{color:white}
+    .legal{
+      margin-top:27px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.11);
+      color:#91a3bb;
+      font-size:.73rem;
+    }
+    .legal strong{color:#cbd5e1}
+    .footer-bottom{
+      margin-top:17px;
+      display:flex;
+      gap:12px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      color:#8395ad;
+      font-size:.71rem;
+    }
+
+    /* Toast */
+    .toast{
+      position:fixed;
+      z-index:100;
+      left:12px;right:12px;bottom:14px;
+      display:none;
+      background:var(--brand-dark);
+      color:white;
+      padding:13px 14px;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      font-size:.82rem;
+    }
+    .toast.show{display:block}
+
+    @media (min-width:700px){
+      .container{width:min(calc(100% - 40px),var(--max))}
+      .lang{display:flex}
+      .hero{padding:68px 0 52px}
+      .hero-grid{grid-template-columns:1.15fr .85fr;gap:44px}
+      .steps-grid{grid-template-columns:1fr 1fr}
+      .security-wrap{grid-template-columns:.9fr 1.1fr;gap:26px}
+      .footer-grid{grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+      .toast{left:auto;right:20px;width:360px}
+    }
+
+    @media (min-width:980px){
+      .desktop-nav{display:flex}
+      .menu-btn{display:none}
+      .mobile-nav{display:none!important}
+      .steps-grid{grid-template-columns:repeat(4,1fr)}
+      .section-head{
+        display:flex;
+        justify-content:space-between;
+        align-items:end;
+        gap:28px;
+      }
+      .section-head p{margin:0;max-width:530px}
+      .footer-grid{grid-template-columns:1.5fr repeat(3,1fr)}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important;animation:none!important}
+    }
+  </style>
+<link rel="stylesheet" href="../ux.css"><link rel="stylesheet" href="../brand.css"><link rel="stylesheet" href="../verify.css"><link rel="stylesheet" href="../v7.css"><link rel="stylesheet" href="../qa-v8.css"><link rel="stylesheet" href="../routes-v9.css">
+  <link rel="stylesheet" href="../life-v10.css">
+  <link rel="stylesheet" href="../practical-v11.css">
+  <link rel="stylesheet" href="../ops-v12.css">
+  <link rel="stylesheet" href="../source-guard.css">
+</head><body>
+  <div class="topbar"><div class="container topbar-inner"><span><span class="status-dot"></span> Independent information for migrants in Portugal</span><span>Checked 20/08/2026</span></div></div>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Guia Migrante PT">
+        <span class="brand-mark brand-mark-official" aria-hidden="true"><img class="brand-logo" src="../logo-guia-migrante-256.png" alt=""></span>
+        <span class="brand-name">Guia Migrante PT<small>Information · Guidance · Trust</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="percursos.html" aria-current="page">Routes</a><a href="viver-em-portugal.html">Living in Portugal</a><a href="nacionalidade.html">Nationality</a><a href="ferramentas.html">Tools</a><a href="contactos.html">Contacts</a></nav>
+      <div class="header-actions"><div class="site-lang" aria-label="Language"><a href="../percursos.html">PT</a><a class="active" href="percursos.html" aria-current="page">EN</a></div>
+        <button class="menu-btn" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="percursos.html">Routes</a><a href="viver-em-portugal.html">Living in Portugal</a><a href="nacionalidade.html">Nationality</a><a href="ferramentas.html">Tools</a><a href="contactos.html">Contacts</a></nav>
+  </header>
+  <div class="brand-stripe" aria-hidden="true"></div>
+  <div class="verification-strip"><div class="container verification-inner">
+    <span class="verified-badge">Key information checked on 20/08/2026</span>
+    <span>Official sources prioritised</span>
+    <a href="atualizacoes.html">See what changed →</a>
+  </div></div>
+<main id="content">
+<section class="route-hero"><div class="container"><div class="route-breadcrumbs"><a href="index.html">Home</a><span>›</span><span>Routes</span></div><span class="route-kicker">All routes</span><h1>Find the route that <span>fits your situation.</span></h1><p>Start with who you are and what you want to do. The portal then sends you to the right information area instead of forcing every migrant into the same procedure.</p><div class="route-meta"><span>Checked 20/08/2026</span><span>17 profile routes</span></div></div></section>
+<section class="route-section white"><div class="container"><div class="route-head"><span class="route-label">Quick finder</span><h2>Two questions to find where to start</h2></div>
+<div class="route-filter"><div class="route-filter-grid"><div class="route-field"><label>Where are you now?</label><select id="v9Loc"><option value="">Choose</option><option value="outside">Outside Portugal</option><option value="inside">Already in Portugal</option></select></div><div class="route-field"><label>Which profile best describes you?</label><select id="v9Prof"><option value="">Choose</option><option value="eu">EU/EEA/Swiss or family</option><option value="cplp">CPLP national</option><option value="work">Work</option><option value="student">Study</option><option value="remote">Remote work</option><option value="high">Highly qualified</option><option value="income">Retired / own income</option><option value="family">Family</option><option value="asylum">Asylum / protection</option><option value="ukraine">Temporary protection Ukraine</option><option value="years">Living legally in Portugal for years</option><option value="special">Special/vulnerable situation</option><option value="unknown">I am not sure</option></select></div></div><div class="route-actions"><button class="route-btn primary" id="v9Find" type="button">Show my starting point</button><a class="route-btn secondary" href="ferramentas.html#route">Full personalised route</a></div><div class="route-match" id="v9Match"><div class="route-match-card"><strong id="v9MatchTitle">Suggested starting point</strong><p id="v9MatchText"></p><a class="route-source" id="v9MatchLink" href="#">Open route →</a></div></div></div></div></section>
+<section class="route-section"><div class="container"><div class="route-head"><span class="route-label">By profile</span><h2>Choose the situation closest to yours</h2><p>If none is an exact match, use Special situations or the personalised route.</p></div><div class="route-hub-grid"><a class="route-hub-card" href="fora-de-portugal.html" data-route="fora-de-portugal" data-text="i am still outside portugal before travelling, the key decision is choosing an entry route that matches your real purpose: employment, study, self-employment/business, own income, remote work, highly qualified activity or another legal basis."><span class="route-hub-icon">→PT</span><span><strong>I am still outside Portugal</strong><span>Before travelling, the key decision is choosing an entry route that matches your real purpose: employment, study, self-employment/business, own income, remote work, highly qualified activity or another legal basis.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="ue-familiares.html" data-route="ue-familiares" data-text="i am an eu/eea/swiss citizen or family member eu/eea/swiss citizens and their family members should not be treated as a standard third-country residence-permit case."><span class="route-hub-icon">EU</span><span><strong>I am an EU/EEA/Swiss citizen or family member</strong><span>EU/EEA/Swiss citizens and their family members should not be treated as a standard third-country residence-permit case.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="pais-terceiro.html" data-route="pais-terceiro" data-text="i am a third-country national in broad terms, a third-country national is someone outside the eu/eea/swiss free-movement regime. within this category there are many routes: work, study, family, cplp, own income, remote work and others."><span class="route-hub-icon">3C</span><span><strong>I am a third-country national</strong><span>In broad terms, a third-country national is someone outside the EU/EEA/Swiss free-movement regime.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="cplp.html" data-route="cplp" data-text="i am a cplp national the cplp residence permit now uses the uniform residence-card model. current first-grant rules require close attention to the consular visa and aima&#x27;s stated appointment channel."><span class="route-hub-icon">CPLP</span><span><strong>I am a CPLP national</strong><span>The CPLP residence permit now uses the uniform residence-card model.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="trabalho.html" data-route="trabalho" data-text="i want to work in portugal employment, job-search visas, self-employment, seasonal work, remote work, highly qualified activity and performing arts are not the same route."><span class="route-hub-icon">JOB</span><span><strong>I want to work in Portugal</strong><span>Employment, job-search visas, self-employment, seasonal work, remote work, highly qualified activity and performing arts are not the same route.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="independente-empreendedor.html" data-route="independente-empreendedor" data-text="i am self-employed or an entrepreneur self-employment can be based on services, a professional activity or a company. for people still abroad, there is a specific residence-visa route."><span class="route-hub-icon">BIZ</span><span><strong>I am self-employed or an entrepreneur</strong><span>Self-employment can be based on services, a professional activity or a company.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="nomada-digital.html" data-route="nomada-digital" data-text="i work remotely for outside portugal aima has a residence-permit route for professional activity performed remotely for persons/entities based outside portugal, preceded by the corresponding residence visa."><span class="route-hub-icon">WEB</span><span><strong>I work remotely for outside Portugal</strong><span>AIMA has a residence-permit route for professional activity performed remotely for persons/entities based outside Portugal, preceded by the corresponding residence visa.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="altamente-qualificado.html" data-route="altamente-qualificado" data-text="i am a highly qualified professional the general article 90 route, eu blue card and tech visa are not the same. professional profile, contract, employer and qualifications determine which route may be relevant."><span class="route-hub-icon">HQ</span><span><strong>I am a highly qualified professional</strong><span>The general Article 90 route, EU Blue Card and Tech Visa are not the same.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="estudantes.html" data-route="estudantes" data-text="i will study, research or do a traineeship higher education, exchange, traineeships, volunteering and research should not be reduced to one checklist. visa and residence rules depend on the programme and duration."><span class="route-hub-icon">EDU</span><span><strong>I will study, research or do a traineeship</strong><span>Higher education, exchange, traineeships, volunteering and research should not be reduced to one checklist.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="rendimentos-proprios.html" data-route="rendimentos-proprios" data-text="i am retired or live from my own income portugal provides a residence-visa route for retired people, religious persons and people living from their own income. evidence of income/means of subsistence is central."><span class="route-hub-icon">€</span><span><strong>I am retired or live from my own income</strong><span>Portugal provides a residence-visa route for retired people, religious persons and people living from their own income.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="familia.html" data-route="familia" data-text="i want to reunite or live with my family the family route depends on who holds the underlying right, nationality, and whether the family member is inside or outside portugal. family members of eu/portuguese citizens may use a different regime from family reunification with a third-country residence-permit holder."><span class="route-hub-icon">FAM</span><span><strong>I want to reunite or live with my family</strong><span>The family route depends on who holds the underlying right, nationality, and whether the family member is inside or outside Portugal.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="investimento.html" data-route="investimento" data-text="i am an investor / ari applicant the residence permit for investment is a specific regime and should not be confused with a normal employee/entrepreneur residence route."><span class="route-hub-icon">ARI</span><span><strong>I am an investor / ARI applicant</strong><span>The Residence Permit for Investment is a specific regime and should not be confused with a normal employee/entrepreneur residence route.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="asilo.html" data-route="asilo" data-text="i want to seek asylum / international protection asylum is not an alternative work visa or ordinary residence permit. it is designed for people seeking international protection and follows its own aima/cnar procedure."><span class="route-hub-icon">ASYL</span><span><strong>I want to seek asylum / international protection</strong><span>Asylum is not an alternative work visa or ordinary residence permit.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="protecao-temporaria.html" data-route="protecao-temporaria" data-text="i have temporary protection / i was displaced from ukraine portugal&#x27;s temporary-protection regime for people displaced from ukraine has specific eligibility, registration, minor, document and transition rules."><span class="route-hub-icon">UA</span><span><strong>I have temporary protection / I was displaced from Ukraine</strong><span>Portugal&#x27;s temporary-protection regime for people displaced from Ukraine has specific eligibility, registration, minor, document and transition rules.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="longa-duracao.html" data-route="longa-duracao" data-text="i have lived legally in portugal for several years long-term resident status (erld) is a specific regime. eu citizens have separate permanent-residence documents under law 37/2006."><span class="route-hub-icon">5Y</span><span><strong>I have lived legally in Portugal for several years</strong><span>Long-Term Resident Status (ERLD) is a specific regime.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="situacoes-especiais.html" data-route="situacoes-especiais" data-text="i have a special or vulnerable situation minors, trafficking victims, humanitarian situations, article 122 cases and other exceptional situations should not be forced into a work/study checklist."><span class="route-hub-icon">!</span><span><strong>I have a special or vulnerable situation</strong><span>Minors, trafficking victims, humanitarian situations, Article 122 cases and other exceptional situations should not be forced into a work/study checklist.</span></span><span class="arrow">›</span></a><a class="route-hub-card" href="integracao.html" data-route="integracao" data-text="i already live in portugal and want to organise integration after migration documents, practical life includes work, healthcare, taxes, social security, school, qualifications, portuguese language, housing and local support."><span class="route-hub-icon">PT</span><span><strong>I already live in Portugal and want to organise integration</strong><span>After migration documents, practical life includes work, healthcare, taxes, Social Security, school, qualifications, Portuguese language, housing and local support.</span></span><span class="arrow">›</span></a></div></div></section>
+<section class="route-section white"><div class="container"><div class="route-callout"><strong>Coverage note:</strong> This area covers the major current profiles and legal routes, but rare combinations can require individual assessment.</div></div></section>
+</main>
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark brand-mark-official" aria-hidden="true"><img class="brand-logo" src="../logo-guia-migrante-256.png" alt=""></span><span class="brand-name">Guia Migrante PT<small>Information · Guidance · Trust</small></span></a>
+        <p class="footer-note">Independent and free information and guidance portal for migrants in Portugal.</p>
+      </div>
+      <div><div class="footer-title">Portal</div><div class="footer-links">
+        <a href="index.html">Home</a><a href="percursos.html">Routes</a><a href="viver-em-portugal.html">Living in Portugal</a>
+        <a href="legalizacao.html">Residence</a><a href="dia-a-dia.html">Daily Life</a>
+        <a href="nacionalidade.html">Nationality</a><a href="ferramentas.html">Tools</a><a href="contactos.html">Contacts</a>
+      </div></div>
+      <div><div class="footer-title">Trust</div><div class="footer-links">
+        <a href="seguranca.html">Avoid scams</a><a href="faq.html">FAQs</a>
+        <a href="atualizacoes.html">What changed?</a>
+        <a href="privacidade.html">Privacy Policy</a><a href="acessibilidade.html">Accessibility</a><a href="estado-informacao.html">Information status</a><a href="termos.html">Terms & Conditions</a>
+      </div></div>
+      <div><div class="footer-title">Official sources</div><div class="footer-links">
+        <a href="https://aima.gov.pt/" target="_blank" rel="noopener">AIMA ↗</a><a href="https://www.gov.pt/" target="_blank" rel="noopener">gov.pt ↗</a>
+        <a href="https://justica.gov.pt/" target="_blank" rel="noopener">Justice ↗</a><a href="https://www.seg-social.pt/" target="_blank" rel="noopener">Social Security ↗</a>
+      </div></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Guia Migrante PT.</span><span>Independent information portal; it does not represent public authorities.</span></div>
+  </footer>
+<script>
+const menuButton=document.getElementById('menuButton'),mobileNav=document.getElementById('mobileNav');if(menuButton&&mobileNav)menuButton.addEventListener('click',()=>{const o=mobileNav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(o));});
+const v9Map={
+ eu:['EU/EEA/Swiss & family','ue-familiares.html'],
+ cplp:['CPLP','cplp.html'], work:['Work','trabalho.html'], student:['Students','estudantes.html'],
+ remote:['Digital nomad / remote work','nomada-digital.html'], high:['Highly qualified','altamente-qualificado.html'],
+ income:['Retired / own income','rendimentos-proprios.html'], family:['Family','familia.html'],
+ asylum:['Asylum / international protection','asilo.html'], ukraine:['Temporary protection','protecao-temporaria.html'],
+ years:['Long-term / permanent status','longa-duracao.html'], special:['Special situations','situacoes-especiais.html'],
+ unknown:['All routes','percursos.html']
+};
+document.getElementById('v9Find').addEventListener('click',()=>{let p=v9Prof.value,l=v9Loc.value;if(!p&&l==='outside')p='unknown';if(!p){alert('Choose a profile.');return};let d=v9Map[p];if(l==='outside'&&['work','student','remote','high','income','unknown'].includes(p)){d=['Start before travelling','fora-de-portugal.html']};v9MatchText.textContent=d[0];v9MatchLink.href=d[1];v9Match.classList.add('show')});
+</script><script src="../ux-en.js" defer></script>  <script src="../ops-v12.js" defer></script>
+  <script src="../source-guard.js" defer></script>
+</body></html>

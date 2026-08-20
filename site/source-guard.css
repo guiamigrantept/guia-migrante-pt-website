@@ -1,0 +1,15 @@
+
+.source-change-banner{
+  margin:14px auto 0;max-width:1120px;
+  border:1px solid #fed7aa;background:#fff7ed;color:#7c2d12;
+  border-radius:14px;padding:14px 16px;font-size:.78rem;line-height:1.58
+}
+.source-change-banner strong{color:#9a3412}
+.source-change-banner a{color:#9a3412;font-weight:900;text-decoration:underline}
+.source-quarantine main > section:not(:first-of-type){display:none !important}
+.source-quarantine main > .review-status:not(.source-change-banner){display:none !important}
+.source-auto-update{
+  margin:10px auto;max-width:1120px;color:#285444;font-size:.68rem;
+  padding:7px 10px;border:1px solid #b9dece;background:#f3faf6;border-radius:999px;
+  width:max-content;max-width:calc(100% - 28px)
+}

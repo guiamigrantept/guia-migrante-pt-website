@@ -1,0 +1,9 @@
+
+/* V7 language switch */
+.site-lang{
+  display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;background:white;padding:3px;gap:2px
+}
+.site-lang a{
+  min-width:34px;text-align:center;padding:6px 7px;border-radius:7px;color:#64748b;font-size:.68rem;font-weight:900
+}
+.site-lang a.active{background:#eef8f3;color:#057244}

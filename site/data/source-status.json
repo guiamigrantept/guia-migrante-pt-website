@@ -1,0 +1,1309 @@
+{
+  "version": 1,
+  "generated_at": "2026-08-20T13:35:01Z",
+  "baseline_complete": false,
+  "blocked_pages": {},
+  "sources": {
+    "src_08741fbb1e64": {
+      "url": "https://aima.gov.pt/documents/respostas-perguntas-frequentes-informacoes-032026.pdf",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:25Z",
+      "changed_at": null,
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_3504f1eb6b62": {
+      "url": "https://aima.gov.pt/en/lojas-aima",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:26Z",
+      "changed_at": null,
+      "pages": [
+        "contactos.html",
+        "en/contactos.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /en/lojas-aima (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_076880484ab9": {
+      "url": "https://aima.gov.pt/media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:27Z",
+      "changed_at": null,
+      "pages": [
+        "asilo.html",
+        "en/asilo.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_6be8c3783532": {
+      "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:27Z",
+      "changed_at": null,
+      "pages": [
+        "en/estudantes.html",
+        "en/integracao.html",
+        "en/legalizacao.html",
+        "en/pais-terceiro.html",
+        "en/situacoes-especiais.html",
+        "estudantes.html",
+        "integracao.html",
+        "legalizacao.html",
+        "pais-terceiro.html",
+        "situacoes-especiais.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/a-aima/perguntas-frequentes-faqs (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_2c926c8cea06": {
+      "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/concessao-de-autorizacao-de-residencia-cplp",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:27Z",
+      "changed_at": null,
+      "pages": [
+        "cplp.html",
+        "en/cplp.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/a-aima/perguntas-frequentes-faqs/concessao-de-autorizacao-de-residencia-cplp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_db2bf0a41ff1": {
+      "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/protecao-temporaria",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:28Z",
+      "changed_at": null,
+      "pages": [
+        "en/protecao-temporaria.html",
+        "protecao-temporaria.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/a-aima/perguntas-frequentes-faqs/protecao-temporaria (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_c32f3c43a12c": {
+      "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/rede-claim",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:29Z",
+      "changed_at": null,
+      "pages": [
+        "contactos.html",
+        "en/contactos.html",
+        "en/integracao.html",
+        "en/portugues.html",
+        "en/situacoes-especiais.html",
+        "integracao.html",
+        "portugues.html",
+        "situacoes-especiais.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/a-aima/perguntas-frequentes-faqs/rede-claim (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_f0b1b75348f3": {
+      "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/regime-transitorio",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:29Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "index.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/a-aima/perguntas-frequentes-faqs/regime-transitorio (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_66b58cce4354": {
+      "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/renovacao-de-titulo-de-residencia-cplp",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:30Z",
+      "changed_at": null,
+      "pages": [
+        "cplp.html",
+        "en/cplp.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/a-aima/perguntas-frequentes-faqs/renovacao-de-titulo-de-residencia-cplp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_064cff7e6d52": {
+      "url": "https://aima.gov.pt/pt/a-aima/sobre-nos/estatutos",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:30Z",
+      "changed_at": null,
+      "pages": [
+        "contactos.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/a-aima/sobre-nos/estatutos (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_81f1d1f37f02": {
+      "url": "https://aima.gov.pt/pt/decreto-regulamentar-da-lei-de-estrangeiros-alteracoes/perguntas-frequentes",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:31Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "index.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/decreto-regulamentar-da-lei-de-estrangeiros-alteracoes/perguntas-frequentes (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_863b5ed4598b": {
+      "url": "https://aima.gov.pt/pt/estudar",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:31Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/estudar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_996c678197f2": {
+      "url": "https://aima.gov.pt/pt/lingua-portuguesa/cursos-de-portugues-lingua-de-acolhimento-pla",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:32Z",
+      "changed_at": null,
+      "pages": [
+        "en/portugues.html",
+        "portugues.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/lingua-portuguesa/cursos-de-portugues-lingua-de-acolhimento-pla (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_e392a810f5d3": {
+      "url": "https://aima.gov.pt/pt/nacionais-ue-e-familiares/familiares-de-nacionais-ue",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:32Z",
+      "changed_at": null,
+      "pages": [
+        "en/familia.html",
+        "en/ue-familiares.html",
+        "familia.html",
+        "ue-familiares.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/nacionais-ue-e-familiares/familiares-de-nacionais-ue (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_4fb71a74680c": {
+      "url": "https://aima.gov.pt/pt/nacionais-ue-e-familiares/nacionais-ue/certificado-de-registo-para-nacionais-ue",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:33Z",
+      "changed_at": null,
+      "pages": [
+        "en/ue-familiares.html",
+        "ue-familiares.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/nacionais-ue-e-familiares/nacionais-ue/certificado-de-registo-para-nacionais-ue (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_553e19536460": {
+      "url": "https://aima.gov.pt/pt/nacionais-ue-e-familiares/nacionais-ue/certificado-de-residencia-permanente-para-nacionais-ue",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:33Z",
+      "changed_at": null,
+      "pages": [
+        "en/longa-duracao.html",
+        "en/ue-familiares.html",
+        "longa-duracao.html",
+        "ue-familiares.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/nacionais-ue-e-familiares/nacionais-ue/certificado-de-residencia-permanente-para-nacionais-ue (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_cbed4d38b3bf": {
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:34Z",
+      "changed_at": null,
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/noticias/aima-lanca-novo-servico-online (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_48b0a401cee7": {
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:34Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/noticias/atualizacao-da-tabela-de-taxas (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_984aab257167": {
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:34Z",
+      "changed_at": null,
+      "pages": [
+        "en/ue-familiares.html",
+        "ue-familiares.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/noticias/formulario-de-contacto (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_0bb3fdad0761": {
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:35Z",
+      "changed_at": null,
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_2b0880736b8a": {
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:35Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_7c058712b7c1": {
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:35Z",
+      "changed_at": null,
+      "pages": [
+        "en/protecao-temporaria.html",
+        "protecao-temporaria.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_7ef818918ee4": {
+      "url": "https://aima.gov.pt/pt/pesquisa?q=artigo+122",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:36Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/pesquisa?q=artigo+122 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_f7af44a4f429": {
+      "url": "https://aima.gov.pt/pt/trabalhar",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:36Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/trabalhar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_136e595aa025": {
+      "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-atividade-altamente-qualificada-art-90-o",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:37Z",
+      "changed_at": null,
+      "pages": [
+        "altamente-qualificado.html",
+        "en/altamente-qualificado.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/trabalhar/autorizacao-de-residencia-para-atividade-altamente-qualificada-art-90-o (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_0bac1c39c7d8": {
+      "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-atividade-altamente-qualificada-exercida-para-empresa-certificada-art-90-o-tech-visa",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:37Z",
+      "changed_at": null,
+      "pages": [
+        "altamente-qualificado.html",
+        "en/altamente-qualificado.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/trabalhar/autorizacao-de-residencia-para-atividade-altamente-qualificada-exercida-para-empresa-certificada-art-90-o-tech-visa (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_8673ad284f9a": {
+      "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-independente-com-dispensa-de-visto-de-residencia-art-89-o-n-o",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:38Z",
+      "changed_at": null,
+      "pages": [
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-independente-com-dispensa-de-visto-de-residencia-art-89-o-n-o (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_2c93b8684649": {
+      "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-independente-com-visto-de-residencia-art-89-o-n-o1",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:38Z",
+      "changed_at": null,
+      "pages": [
+        "en/independente-empreendedor.html",
+        "independente-empreendedor.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-independente-com-visto-de-residencia-art-89-o-n-o1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_482b94cf7722": {
+      "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-subordinada-com-dispensa-de-visto-de-residencia-art-88-o-n-o-",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:38Z",
+      "changed_at": null,
+      "pages": [
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-subordinada-com-dispensa-de-visto-de-residencia-art-88-o-n-o- (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_7e11330093ac": {
+      "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-subordinada-com-visto-para-procura-de-trabalho-art-88-o-n-o7",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:39Z",
+      "changed_at": null,
+      "pages": [
+        "en/trabalho.html",
+        "trabalho.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-subordinada-com-visto-para-procura-de-trabalho-art-88-o-n-o7 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_485a932adf3e": {
+      "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-com-visto-de-residencia-para-o-exe",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:39Z",
+      "changed_at": null,
+      "pages": [
+        "en/nomada-digital.html",
+        "nomada-digital.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/trabalhar/autorizacao-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-com-visto-de-residencia-para-o-exe (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_b5f7c69a3a4d": {
+      "url": "https://aima.gov.pt/pt/viver/aquisicao-do-estatuto-de-residente-de-longa-duracao-erld-art-125-o",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:39Z",
+      "changed_at": null,
+      "pages": [
+        "en/longa-duracao.html",
+        "longa-duracao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/aquisicao-do-estatuto-de-residente-de-longa-duracao-erld-art-125-o (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_3b1a39e98563": {
+      "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:40Z",
+      "changed_at": null,
+      "pages": [
+        "en/investimento.html",
+        "investimento.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_eab89101abb0": {
+      "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:40Z",
+      "changed_at": null,
+      "pages": [
+        "en/investimento.html",
+        "investimento.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_139f74e2e14d": {
+      "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-vitimas-de-trafico-de-pessoas-ou-de-acao-de-auxilio-a-imigracao-ilegal-art-109-o",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:41Z",
+      "changed_at": null,
+      "pages": [
+        "en/situacoes-especiais.html",
+        "situacoes-especiais.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/autorizacao-de-residencia-para-vitimas-de-trafico-de-pessoas-ou-de-acao-de-auxilio-a-imigracao-ilegal-art-109-o (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_f1f0aab11199": {
+      "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-regime-e-requisitos-gerais-art-o-77-o-n-o-1",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:41Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "en/pais-terceiro.html",
+        "legalizacao.html",
+        "pais-terceiro.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/autorizacao-de-residencia-regime-e-requisitos-gerais-art-o-77-o-n-o-1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_1108a2df22fa": {
+      "url": "https://aima.gov.pt/pt/viver/concessao-de-cartao-azul-ue-e-autorizacao-de-residencia-para-titulares-de-cartao-azul-ue-noutro-estado-membro-art-121-o-a-e-segu",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:42Z",
+      "changed_at": null,
+      "pages": [
+        "altamente-qualificado.html",
+        "en/altamente-qualificado.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/concessao-de-cartao-azul-ue-e-autorizacao-de-residencia-para-titulares-de-cartao-azul-ue-noutro-estado-membro-art-121-o-a-e-segu (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_a4c0a29d56f8": {
+      "url": "https://aima.gov.pt/pt/viver/menores-filhos-de-cidadaos-estrangeiros-titulares-de-autorizacao-de-residencia-nascidos-em-portugal-art-122-o-1-al-a",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:43Z",
+      "changed_at": null,
+      "pages": [
+        "en/situacoes-especiais.html",
+        "situacoes-especiais.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/menores-filhos-de-cidadaos-estrangeiros-titulares-de-autorizacao-de-residencia-nascidos-em-portugal-art-122-o-1-al-a (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_46b89dc01528": {
+      "url": "https://aima.gov.pt/pt/viver/reagrupamento-familiar",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:43Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/reagrupamento-familiar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_3a0611c027d0": {
+      "url": "https://aima.gov.pt/pt/viver/reagrupamento-familiar-com-familiar-em-territorio-nacional-art-98-o-n-o-2",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:43Z",
+      "changed_at": null,
+      "pages": [
+        "en/familia.html",
+        "familia.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/reagrupamento-familiar-com-familiar-em-territorio-nacional-art-98-o-n-o-2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_db343c2f6967": {
+      "url": "https://aima.gov.pt/pt/viver/reagrupamento-familiar-com-familiar-fora-de-territorio-nacional-art-98-o-n-o-1",
+      "domain": "aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:44Z",
+      "changed_at": null,
+      "pages": [
+        "en/familia.html",
+        "familia.html"
+      ],
+      "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /pt/viver/reagrupamento-familiar-com-familiar-fora-de-territorio-nacional-art-98-o-n-o-1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_1a5a6913096f": {
+      "url": "https://anacom.pt/render.jsp?contentId=1825544",
+      "domain": "anacom.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:33:54Z",
+      "changed_at": null,
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "error": "HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f6c3e04a8a0>, 'Connection to anacom.pt timed out. (connect timeout=10)'))"
+    },
+    "src_1d0d8bb32004": {
+      "url": "https://anacom.pt/render.jsp?contentId=1842813",
+      "domain": "anacom.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:04Z",
+      "changed_at": null,
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "error": "HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f6c3df23a40>, 'Connection to anacom.pt timed out. (connect timeout=10)'))"
+    },
+    "src_5c8489b0954a": {
+      "url": "https://clientebancario.bportugal.pt/pt-pt/o-que-sao",
+      "domain": "clientebancario.bportugal.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:05Z",
+      "changed_at": null,
+      "pages": [
+        "banco-pagamentos.html",
+        "en/banco-pagamentos.html"
+      ],
+      "error": "403 Client Error: Forbidden for url: https://clientebancario.bportugal.pt/pt-pt/o-que-sao"
+    },
+    "src_61b0e60be0fa": {
+      "url": "https://clientebancario.bportugal.pt/pt-pt/perguntas-frequentes",
+      "domain": "clientebancario.bportugal.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:06Z",
+      "changed_at": null,
+      "pages": [
+        "banco-pagamentos.html",
+        "en/banco-pagamentos.html"
+      ],
+      "error": "403 Client Error: Forbidden for url: https://clientebancario.bportugal.pt/pt-pt/perguntas-frequentes"
+    },
+    "src_65c308f94048": {
+      "url": "https://contactenos.aima.gov.pt/contact-form",
+      "domain": "contactenos.aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:17Z",
+      "changed_at": null,
+      "pages": [
+        "en/contactos.html"
+      ],
+      "error": "HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f6c3df22300>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=10)'))"
+    },
+    "src_e36005383a29": {
+      "url": "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996",
+      "domain": "diariodarepublica.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:17Z",
+      "changed_at": null,
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_08724fd769d4": {
+      "url": "https://diariodarepublica.pt/dr/detalhe/lei/3-2024-836604892",
+      "domain": "diariodarepublica.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:17Z",
+      "changed_at": null,
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_3bb47b3b8f19": {
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975-115625158",
+      "domain": "diariodarepublica.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:17Z",
+      "changed_at": null,
+      "pages": [
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_374e8dd744ee": {
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Casa_e_propriedades/Arrendamento/Recibos/Paginas/default.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:19Z",
+      "changed_at": null,
+      "pages": [
+        "en/habitacao.html",
+        "habitacao.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_6400da2dbb70": {
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Dados_pessoais_familia/Dados_pessoais/Morada/Paginas/default.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:19Z",
+      "changed_at": null,
+      "pages": [
+        "en/impostos.html",
+        "en/mudanca-saida.html",
+        "impostos.html",
+        "mudanca-saida.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_cac85a755325": {
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Residir_em_Portugal/Alteracao_nao_residente_para_residente/Paginas/default.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:19Z",
+      "changed_at": null,
+      "pages": [
+        "en/impostos.html",
+        "impostos.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_0ea9b0928bd2": {
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:20Z",
+      "changed_at": null,
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_10df7741dfe0": {
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:20Z",
+      "changed_at": null,
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_962f8edbc412": {
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:21Z",
+      "changed_at": null,
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_ac02e2cb2311": {
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:21Z",
+      "changed_at": null,
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_aa440bba100b": {
+      "url": "https://justica.gov.pt/Registos/Nacionalidade/Nacionalidade-portuguesa",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:21Z",
+      "changed_at": null,
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_3c7634597430": {
+      "url": "https://justica.gov.pt/Servicos/Apresentar-queixa",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:21Z",
+      "changed_at": null,
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html",
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_1a10460aaa69": {
+      "url": "https://justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:21Z",
+      "changed_at": null,
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_fb82d424d16e": {
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:22Z",
+      "changed_at": null,
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "error": "500 Server Error: Internal Server Error for url: https://conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento"
+    },
+    "src_d3d76ad6c512": {
+      "url": "https://justica.gov.pt/Servicos/Pedir-apoio-judiciario",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:23Z",
+      "changed_at": null,
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_8075539b4165": {
+      "url": "https://justica.gov.pt/Servicos/Submeter-pedido-de-nacionalidade",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:23Z",
+      "changed_at": null,
+      "pages": [
+        "nacionalidade.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_2e8500a7bec3": {
+      "url": "https://justica.gov.pt/servicos/registar-nascimento",
+      "domain": "justica.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:23Z",
+      "changed_at": null,
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_ea73d986f525": {
+      "url": "https://portal-renovacoes.aima.gov.pt/",
+      "domain": "portal-renovacoes.aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:24Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='portal-renovacoes.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    },
+    "src_0f7eff34ab40": {
+      "url": "https://services.aima.gov.pt/",
+      "domain": "services.aima.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:34Z",
+      "changed_at": null,
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "error": "HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f6c3ddb5520>, 'Connection to services.aima.gov.pt timed out. (connect timeout=10)'))"
+    },
+    "src_7373fed611f4": {
+      "url": "https://simuladorpotencia.erse.pt/",
+      "domain": "simuladorpotencia.erse.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:36Z",
+      "changed_at": null,
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ]
+    },
+    "src_2b928469124c": {
+      "url": "https://simuladorprecos.erse.pt/",
+      "domain": "simuladorprecos.erse.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:37Z",
+      "changed_at": null,
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_60492ffd3a5c": {
+      "url": "https://www.cig.gov.pt/area-portal-da-violencia/portal-violencia-domestica/apoio-vitimas-violencia-domestica",
+      "domain": "www.cig.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:38Z",
+      "changed_at": null,
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ]
+    },
+    "src_9ddecb880ea8": {
+      "url": "https://www.cm-amadora.pt/pt/intervencao-social/interculturalidade/10606-claim-centro-local-de-apoio-a-integracao-de-migrantes.html",
+      "domain": "www.cm-amadora.pt",
+      "state": "awaiting_baseline",
+      "changed_at": null,
+      "checked_at": null,
+      "pages": [
+        "contactos.html",
+        "en/contactos.html"
+      ]
+    },
+    "src_558a74079aff": {
+      "url": "https://www.dges.gov.pt/pt/pagina/reconhecimento?canal=Sou-Estudante",
+      "domain": "www.dges.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:41Z",
+      "changed_at": null,
+      "pages": [
+        "en/qualificacoes.html",
+        "qualificacoes.html"
+      ]
+    },
+    "src_a819c8428bc5": {
+      "url": "https://www.erse.pt/consumidores-de-energia/destaques/mudanca-de-comercializador",
+      "domain": "www.erse.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:43Z",
+      "changed_at": null,
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ]
+    },
+    "src_2b7fd322021d": {
+      "url": "https://www.gov.pt/guias/migrantes-ensino-em-portugal-para-criancas-jovens-e-adultos",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:44Z",
+      "changed_at": null,
+      "pages": [
+        "en/escola-familias.html",
+        "escola-familias.html"
+      ]
+    },
+    "src_87d4fe096076": {
+      "url": "https://www.gov.pt/guias/migrantes-trabalhar-e-criar-um-negocio-em-portugal",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:44Z",
+      "changed_at": null,
+      "pages": [
+        "en/integracao.html",
+        "en/trabalho.html",
+        "integracao.html",
+        "trabalho.html"
+      ]
+    },
+    "src_1d26a663b9c8": {
+      "url": "https://www.gov.pt/guias/trabalhar-em-portugal",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:44Z",
+      "changed_at": null,
+      "pages": [
+        "en/trabalho-direitos.html",
+        "trabalho-direitos.html"
+      ]
+    },
+    "src_348272c45029": {
+      "url": "https://www.gov.pt/servicos/alterar-a-morada-e-outros-dados-registados-na-seguranca-social",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:44Z",
+      "changed_at": null,
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ]
+    },
+    "src_e9c2fda70bd4": {
+      "url": "https://www.gov.pt/servicos/consultar-corpo-diplomatico-acreditado-em-lisboa",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:44Z",
+      "changed_at": null,
+      "pages": [
+        "contactos.html",
+        "en/contactos.html"
+      ]
+    },
+    "src_8066e6d33e60": {
+      "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:44Z",
+      "changed_at": null,
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ]
+    },
+    "src_94e2ebb14db9": {
+      "url": "https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:45Z",
+      "changed_at": null,
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/saude-completa.html",
+        "saude-completa.html"
+      ]
+    },
+    "src_1b8b2c1bcde6": {
+      "url": "https://www.gov.pt/servicos/livro-de-reclamacoes-compra",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:45Z",
+      "changed_at": null,
+      "pages": [
+        "consumidor.html",
+        "en/consumidor.html"
+      ]
+    },
+    "src_5c470c1c6222": {
+      "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:45Z",
+      "changed_at": null,
+      "pages": [
+        "en/saude-completa.html",
+        "saude-completa.html"
+      ]
+    },
+    "src_b55923d59614": {
+      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:45Z",
+      "changed_at": null,
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ]
+    },
+    "src_2e5a8d9c1488": {
+      "url": "https://www.gov.pt/servicos/pedir-equivalencia-de-habilitacoes-estrangeiras-do-ensino-basico-e-secundario",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:45Z",
+      "changed_at": null,
+      "pages": [
+        "en/escola-familias.html",
+        "escola-familias.html"
+      ]
+    },
+    "src_b223c78629bb": {
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:46Z",
+      "changed_at": null,
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/index.html",
+        "index.html"
+      ]
+    },
+    "src_0d3e737b44ae": {
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:46Z",
+      "changed_at": null,
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/index.html",
+        "index.html"
+      ]
+    },
+    "src_f95c7a71032d": {
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-utente-do-sns",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:46Z",
+      "changed_at": null,
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/index.html",
+        "index.html"
+      ]
+    },
+    "src_5677a3a829ee": {
+      "url": "https://www.gov.pt/servicos/pedir-o-reconhecimento-de-graus-academicos-e-diplomas-de-ensino-superior-estrangeiros",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:46Z",
+      "changed_at": null,
+      "pages": [
+        "en/qualificacoes.html",
+        "qualificacoes.html"
+      ]
+    },
+    "src_e83566f7adcc": {
+      "url": "https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:47Z",
+      "changed_at": null,
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "index.html"
+      ]
+    },
+    "src_51345bfaef9d": {
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-estudo-intercambio-de-estudantes-estagio-profissional-ou-voluntariado",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:47Z",
+      "changed_at": null,
+      "pages": [
+        "en/estudantes.html",
+        "en/fora-de-portugal.html",
+        "estudantes.html",
+        "fora-de-portugal.html"
+      ]
+    },
+    "src_33c397772684": {
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:47Z",
+      "changed_at": null,
+      "pages": [
+        "altamente-qualificado.html",
+        "en/altamente-qualificado.html",
+        "en/fora-de-portugal.html",
+        "fora-de-portugal.html"
+      ]
+    },
+    "src_d047de31a87b": {
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-trabalho-dependente",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:47Z",
+      "changed_at": null,
+      "pages": [
+        "en/fora-de-portugal.html",
+        "en/trabalho.html",
+        "fora-de-portugal.html",
+        "trabalho.html"
+      ]
+    },
+    "src_c1912bc0f3da": {
+      "url": "https://www.gov.pt/servicos/pedir-visto-de-residencia-para-o-exercicio-de-atividade-profissional-independente-ou-para-imigrantes-empreendedores",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:47Z",
+      "changed_at": null,
+      "pages": [
+        "en/fora-de-portugal.html",
+        "en/independente-empreendedor.html",
+        "fora-de-portugal.html",
+        "independente-empreendedor.html"
+      ]
+    },
+    "src_e5000174ce7b": {
+      "url": "https://www.gov.pt/servicos/realizar-o-processo-de-transcricao-do-assento-de-casamento-no-estrangeiro",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:48Z",
+      "changed_at": null,
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ]
+    },
+    "src_42ae5fe404b9": {
+      "url": "https://www.gov.pt/servicos/registar-um-nascimento",
+      "domain": "www.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:48Z",
+      "changed_at": null,
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ]
+    },
+    "src_6262714f7433": {
+      "url": "https://www.imt-ip.pt/condutores/informacoes-gerais/quero-ser-condutor/tenho-carta-de-conducao-estrangeira",
+      "domain": "www.imt-ip.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:50Z",
+      "changed_at": null,
+      "pages": [
+        "carta-conducao.html",
+        "en/carta-conducao.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_d5d7259f1e55": {
+      "url": "https://www.livroreclamacoes.pt/",
+      "domain": "www.livroreclamacoes.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:51Z",
+      "changed_at": null,
+      "pages": [
+        "consumidor.html",
+        "en/consumidor.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_768fda908f67": {
+      "url": "https://www.parlamento.pt/Parlamento/Paginas/entidades-administrativas-independentes.aspx",
+      "domain": "www.parlamento.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:52Z",
+      "changed_at": null,
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html"
+      ]
+    },
+    "src_576f835cf78e": {
+      "url": "https://www.portaldahabitacao.pt/porta-65-jovem",
+      "domain": "www.portaldahabitacao.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:53Z",
+      "changed_at": null,
+      "pages": [
+        "apoios-sociais.html",
+        "en/apoios-sociais.html",
+        "en/habitacao.html",
+        "habitacao.html"
+      ]
+    },
+    "src_3ec3c96219da": {
+      "url": "https://www.portaldahabitacao.pt/porta-65mais",
+      "domain": "www.portaldahabitacao.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:54Z",
+      "changed_at": null,
+      "pages": [
+        "en/habitacao.html",
+        "habitacao.html"
+      ]
+    },
+    "src_5e43ca0ff104": {
+      "url": "https://www.seg-social.pt/",
+      "domain": "www.seg-social.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:55Z",
+      "changed_at": null,
+      "pages": [
+        "apoios-sociais.html",
+        "en/apoios-sociais.html"
+      ]
+    },
+    "src_d771f142ded7": {
+      "url": "https://www.sns24.gov.pt/pt/guia/direitos-e-deveres-do-utente",
+      "domain": "www.sns24.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:57Z",
+      "changed_at": null,
+      "pages": [
+        "en/saude-completa.html",
+        "saude-completa.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_f85f411871fc": {
+      "url": "https://www.sns24.gov.pt/pt/servico/servico-telefonico-de-callback",
+      "domain": "www.sns24.gov.pt",
+      "state": "baseline_failed",
+      "checked_at": "2026-08-20T13:34:57Z",
+      "changed_at": null,
+      "pages": [
+        "en/saude-completa.html",
+        "saude-completa.html"
+      ],
+      "error": "source text too short"
+    },
+    "src_5d4da7730964": {
+      "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
+      "domain": "www2.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:58Z",
+      "changed_at": null,
+      "pages": [
+        "en/fora-de-portugal.html",
+        "en/rendimentos-proprios.html",
+        "fora-de-portugal.html",
+        "rendimentos-proprios.html"
+      ]
+    },
+    "src_c37bb2face2a": {
+      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
+      "domain": "www2.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:59Z",
+      "changed_at": null,
+      "pages": [
+        "apoios-sociais.html",
+        "en/apoios-sociais.html"
+      ]
+    },
+    "src_76e249b224e7": {
+      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
+      "domain": "www2.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:34:59Z",
+      "changed_at": null,
+      "pages": [
+        "en/qualificacoes.html",
+        "qualificacoes.html"
+      ]
+    },
+    "src_8c6490bfe53c": {
+      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
+      "domain": "www2.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:35:00Z",
+      "changed_at": null,
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html",
+        "en/situacoes-urgentes.html",
+        "en/trabalho-direitos.html",
+        "situacoes-urgentes.html",
+        "trabalho-direitos.html"
+      ]
+    },
+    "src_fd8d32085235": {
+      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
+      "domain": "www2.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:35:00Z",
+      "changed_at": null,
+      "pages": [
+        "en/trabalho-direitos.html",
+        "trabalho-direitos.html"
+      ]
+    },
+    "src_9e47f0771d1a": {
+      "url": "https://www2.gov.pt/pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "domain": "www2.gov.pt",
+      "state": "healthy",
+      "checked_at": "2026-08-20T13:35:01Z",
+      "changed_at": null,
+      "pages": [
+        "carta-conducao.html",
+        "en/carta-conducao.html"
+      ]
+    }
+  },
+  "summary": {
+    "checked": 106,
+    "new_baselines": 36,
+    "relevant_changes": 0,
+    "errors": 70,
+    "fact_updates": 0
+  }
+}

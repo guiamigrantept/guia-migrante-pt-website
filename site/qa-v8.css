@@ -1,0 +1,43 @@
+
+/* GUIA MIGRANTE PT — V8 QA / MOBILE REFINEMENTS */
+.header-actions{flex:0 0 auto;min-width:max-content}
+.menu-btn{flex:0 0 42px}
+.site-lang{flex:0 0 auto}
+.site-lang a{
+  min-width:38px !important;
+  min-height:36px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center
+}
+.verification-inner a{
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:4px 0
+}
+.en-source{min-height:34px;align-items:center}
+.footer-links a{min-height:32px;display:flex;align-items:center}
+@media(max-width:520px){
+  .header-inner{gap:8px !important}
+  .header-actions{gap:7px !important}
+  .site-lang a{
+    min-width:36px !important;
+    min-height:36px;
+    padding:5px 6px !important
+  }
+  .menu-btn{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
+    display:grid !important;
+    place-items:center !important
+  }
+  .verification-inner{gap:5px !important}
+  .verification-inner a{min-height:36px}
+}
+@media(max-width:979px){
+  .ux-bottom-nav{
+    padding-bottom:max(6px, env(safe-area-inset-bottom)) !important
+  }
+}

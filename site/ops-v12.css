@@ -1,0 +1,67 @@
+
+/* =========================================================
+   GUIA MIGRANTE PT — V12 OPERAÇÃO, ACESSIBILIDADE E FRESCURA
+   ========================================================= */
+.skip-link{
+  position:fixed;left:12px;top:-80px;z-index:99999;
+  background:#032954;color:#fff;padding:11px 14px;border-radius:10px;
+  font-weight:900;font-size:.78rem;box-shadow:0 8px 24px rgba(0,0,0,.2)
+}
+.skip-link:focus{top:12px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{
+  outline:3px solid #0a7b4a !important;
+  outline-offset:3px !important;
+  border-radius:8px
+}
+html{scroll-padding-top:100px}
+main[id]{scroll-margin-top:100px}
+.review-status{
+  border:1px solid #b9dece;background:#f3faf6;border-radius:14px;
+  padding:12px 14px;color:#285444;font-size:.74rem;line-height:1.55
+}
+.review-status strong{color:#006939}
+.review-status.stale{border-color:#fed7aa;background:#fff7ed;color:#7c2d12}
+.review-status.stale strong{color:#9a3412}
+.status-grid{display:grid;gap:10px}
+.status-card{
+  border:1px solid var(--line);background:white;border-radius:15px;padding:15px
+}
+.status-card strong{display:block;color:#032954;font-size:.8rem}
+.status-card span{display:block;color:var(--muted);font-size:.7rem;margin-top:3px;line-height:1.45}
+.status-card time{display:inline-flex;margin-top:8px;padding:5px 8px;border-radius:999px;background:#eef8f3;color:#057244;font-size:.65rem;font-weight:900}
+.status-card time.soon{background:#fff7ed;color:#9a3412}
+.status-search{
+  display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;
+  border:1px solid var(--line);background:white;border-radius:12px;padding:10px 12px;margin-bottom:14px
+}
+.status-search input{border:0;outline:0;background:transparent;width:100%;font:inherit}
+.ops-footer-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.ops-footer-links a{font-size:.7rem;font-weight:850;color:#057244}
+.feedback-ready{
+  margin-top:18px;border:1px dashed #b9dece;background:#fbfefd;border-radius:13px;
+  padding:12px;color:#526a5e;font-size:.72rem;line-height:1.5
+}
+.feedback-ready strong{color:#032954}
+.a11y-list{display:grid;gap:9px}
+.a11y-item{border:1px solid var(--line);background:white;border-radius:12px;padding:12px}
+.a11y-item strong{display:block;color:#032954;font-size:.78rem}
+.a11y-item span{display:block;color:var(--muted);font-size:.7rem;margin-top:3px;line-height:1.5}
+
+@media(min-width:720px){
+  .status-grid{grid-template-columns:1fr 1fr}
+  .a11y-list{grid-template-columns:1fr 1fr}
+}
+@media(min-width:1050px){
+  .status-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important
+  }
+}
+@media(forced-colors:active){
+  .verified-badge,.review-status,.status-card,.a11y-item{border:1px solid CanvasText}
+}

@@ -1,0 +1,118 @@
+
+/* =========================================================
+   GUIA MIGRANTE PT — V10 VIVER EM PORTUGAL
+   ========================================================= */
+.life-hero{
+  padding:58px 0 38px;
+  background:
+    radial-gradient(circle at 88% 10%,rgba(5,114,68,.11),transparent 27%),
+    radial-gradient(circle at 72% 3%,rgba(9,49,92,.08),transparent 22%),
+    linear-gradient(180deg,#fff 0%,#f7faf9 100%);
+}
+.life-breadcrumbs{display:flex;gap:7px;flex-wrap:wrap;color:var(--muted);font-size:.74rem;margin-bottom:13px}
+.life-breadcrumbs a{color:#057244;font-weight:850}
+.life-kicker{
+  display:inline-flex;align-items:center;padding:7px 10px;border:1px solid #b9dece;
+  background:#eef8f3;color:#006939;border-radius:999px;font-size:.69rem;font-weight:900;
+  letter-spacing:.075em;text-transform:uppercase
+}
+.life-hero h1{
+  margin:13px 0 0;color:#032954;max-width:980px;
+  font-size:clamp(2.25rem,9vw,4.6rem);line-height:1;letter-spacing:-.052em
+}
+.life-hero h1 span{color:#057244}
+.life-hero p{margin:16px 0 0;max-width:860px;color:var(--muted);font-size:.94rem;line-height:1.65}
+.life-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}
+.life-meta span{padding:7px 9px;border:1px solid var(--line);background:white;border-radius:999px;color:#526273;font-size:.68rem;font-weight:800}
+
+.life-section{padding:54px 0}
+.life-section.white{background:#fff}
+.life-head{margin-bottom:22px}
+.life-label{display:block;color:#057244;font-size:.69rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;margin-bottom:7px}
+.life-head h2{margin:0;color:#032954;font-size:clamp(1.8rem,7vw,2.7rem);line-height:1.05;letter-spacing:-.04em}
+.life-head p{margin:9px 0 0;color:var(--muted);max-width:830px;font-size:.84rem;line-height:1.62}
+.life-grid{display:grid;gap:12px}
+.life-grid.two,.life-grid.three{grid-template-columns:1fr}
+.life-card{
+  border:1px solid var(--line);background:white;border-radius:17px;padding:18px;
+  box-shadow:0 9px 26px rgba(3,41,84,.055)
+}
+.life-section.white .life-card{background:#f8fbfa}
+.life-card h2,.life-card h3{margin:0;color:#032954;letter-spacing:-.025em}
+.life-card h2{font-size:1.28rem}.life-card h3{font-size:.98rem}
+.life-card p,.life-card li{color:var(--muted);font-size:.79rem;line-height:1.62}
+.life-card p{margin:8px 0 0}
+.life-card ul,.life-card ol{padding-left:19px;margin:10px 0 0}
+.life-card li+li{margin-top:5px}
+.life-card a{color:#057244;font-weight:850}
+.life-num{
+  width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#09315c,#057244);color:#fff;font-weight:900;font-size:.7rem;margin-bottom:11px
+}
+.life-callout{
+  margin-top:14px;border:1px solid #b9dece;background:#eef8f3;color:#174c38;
+  border-radius:14px;padding:14px;font-size:.78rem;line-height:1.58
+}
+.life-warning{
+  margin-top:14px;border:1px solid #fed7aa;background:#fff7ed;color:#7c2d12;
+  border-radius:14px;padding:14px;font-size:.78rem;line-height:1.58
+}
+.life-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.life-btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:42px;
+  padding:10px 13px;border-radius:11px;border:1px solid var(--line);font-size:.75rem;font-weight:900
+}
+.life-btn.primary{border:0;background:linear-gradient(135deg,#09315c,#057244);color:#fff}
+.life-btn.secondary{background:white;color:#057244}
+.life-source{display:inline-flex;min-height:34px;align-items:center;margin-top:9px;color:#057244;font-size:.72rem;font-weight:900}
+
+.life-hub-grid{display:grid;gap:10px}
+.life-hub-card{
+  border:1px solid var(--line);background:white;border-radius:15px;padding:15px;
+  display:grid;grid-template-columns:42px 1fr auto;gap:11px;align-items:center;
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease
+}
+.life-hub-card:hover{transform:translateY(-2px);border-color:#b9dece;box-shadow:0 10px 26px rgba(3,41,84,.07)}
+.life-hub-icon{
+  width:41px;height:41px;border-radius:12px;background:#eef8f3;color:#057244;
+  display:grid;place-items:center;font-size:.76rem;font-weight:950
+}
+.life-hub-card strong{display:block;color:#032954;font-size:.8rem}
+.life-hub-card span{display:block;color:var(--muted);font-size:.7rem;margin-top:2px;line-height:1.4}
+.life-hub-card .arrow{color:#94a3b8;font-size:1.1rem}
+
+.life-quick{
+  border:1px solid var(--line);background:white;border-radius:17px;padding:18px;
+  box-shadow:0 9px 26px rgba(3,41,84,.05)
+}
+.life-quick select{
+  width:100%;min-height:44px;border:1px solid var(--line);background:#fff;color:var(--text);
+  border-radius:10px;padding:9px 11px
+}
+.life-result{display:none;margin-top:14px;border:1px solid #b9dece;background:#eef8f3;border-radius:14px;padding:14px}
+.life-result.show{display:block}
+.life-result strong{display:block;color:#032954;font-size:.9rem}
+.life-result p{margin:5px 0 0;color:#526a5e;font-size:.75rem;line-height:1.55}
+
+.life-related{display:grid;gap:9px}
+.life-related a{
+  border:1px solid var(--line);background:white;border-radius:12px;padding:11px;
+  color:#032954;font-size:.76rem;font-weight:850
+}
+.life-related a:hover{background:#eef8f3;color:#057244;border-color:#b9dece}
+
+@media(min-width:720px){
+  .life-grid.two{grid-template-columns:1fr 1fr}
+  .life-grid.three{grid-template-columns:repeat(3,1fr)}
+  .life-hub-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:1050px){
+  .life-hub-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:900px){
+  .desktop-nav a{padding-left:9px !important;padding-right:9px !important;font-size:.82rem !important}
+}
+@media(max-width:520px){
+  .life-hub-card{grid-template-columns:38px 1fr auto;padding:12px}
+  .life-hub-icon{width:37px;height:37px}
+}

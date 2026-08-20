@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09315c">
+  <meta name="description" content="Condições de utilização do portal público e gratuito Guia Migrante PT.">
+  <link rel="canonical" href="https://guia-migrante-pt.pages.dev/termos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Guia Migrante PT">
+  <meta property="og:title" content="Termos e Condições | Guia Migrante PT">
+  <meta property="og:description" content="Condições de utilização do portal público e gratuito Guia Migrante PT.">
+  <meta property="og:url" content="https://guia-migrante-pt.pages.dev/termos.html">
+  <meta property="og:image" content="https://guia-migrante-pt.pages.dev/logo-guia-migrante.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="last-reviewed" content="2026-08-20">
+  <title>Termos e Condições | Guia Migrante PT</title>
+  <link rel="alternate" hreflang="pt-PT" href="https://guia-migrante-pt.pages.dev/termos.html">
+  <link rel="alternate" hreflang="en" href="https://guia-migrante-pt.pages.dev/en/termos.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    :root{
+      --brand:#1e3a8a;
+      --brand-dark:#172554;
+      --brand-mid:#2563eb;
+      --brand-soft:#eff6ff;
+      --bg:#f8fafc;
+      --surface:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --success:#047857;
+      --success-soft:#ecfdf5;
+      --warning:#a16207;
+      --warning-soft:#fffbeb;
+      --danger:#b91c1c;
+      --danger-soft:#fef2f2;
+      --radius-sm:12px;
+      --radius:18px;
+      --radius-lg:26px;
+      --shadow-sm:0 8px 24px rgba(15,23,42,.06);
+      --shadow:0 18px 44px rgba(15,23,42,.09);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    svg{display:block}
+    :focus-visible{outline:3px solid #60a5fa;outline-offset:3px}
+
+    .container{width:min(calc(100% - 24px),var(--max));margin-inline:auto}
+    .sr-only{
+      position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0
+    }
+
+    /* Top notice */
+    .topbar{
+      background:var(--brand-dark);
+      color:#dbeafe;
+      font-size:.78rem;
+    }
+    .topbar-inner{
+      min-height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      text-align:center;
+      padding:6px 0;
+    }
+    .status-dot{
+      width:7px;height:7px;border-radius:50%;
+      background:#34d399;
+      box-shadow:0 0 0 4px rgba(52,211,153,.12);
+      flex:0 0 auto;
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{
+      min-height:70px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:max-content;
+    }
+    .brand-mark{
+      width:42px;height:42px;
+      border-radius:13px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(145deg,var(--brand),var(--brand-dark));
+      color:white;
+      box-shadow:0 9px 22px rgba(30,58,138,.2);
+    }
+    .brand-name{
+      color:var(--brand-dark);
+      font-weight:900;
+      font-size:.98rem;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    .brand-name small{
+      display:block;
+      margin-top:4px;
+      font-size:.65rem;
+      font-weight:650;
+      color:var(--muted);
+      letter-spacing:0;
+    }
+
+    .desktop-nav{
+      display:none;
+      justify-content:center;
+      gap:2px;
+    }
+    .desktop-nav a{
+      padding:9px 11px;
+      border-radius:10px;
+      color:#334155;
+      font-weight:750;
+      font-size:.88rem;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a[aria-current="page"]{
+      color:var(--brand);
+      background:var(--brand-soft);
+    }
+
+    .header-actions{
+      justify-self:end;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .lang{
+      display:none;
+      padding:3px;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:var(--bg);
+    }
+    .lang button{
+      border:0;
+      background:transparent;
+      color:var(--muted);
+      font-size:.76rem;
+      font-weight:850;
+      padding:6px 8px;
+      border-radius:8px;
+    }
+    .lang button.active{
+      background:white;
+      color:var(--brand);
+      box-shadow:0 2px 7px rgba(15,23,42,.08);
+    }
+    .menu-btn{
+      width:41px;height:41px;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:white;
+      color:var(--brand-dark);
+    }
+    .mobile-nav{
+      display:none;
+      background:white;
+      border-top:1px solid var(--line);
+      padding:10px 12px 16px;
+    }
+    .mobile-nav.open{display:grid}
+    .mobile-nav a{
+      padding:12px;
+      border-radius:10px;
+      font-weight:750;
+      color:#334155;
+    }
+    .mobile-nav a:hover{background:var(--brand-soft);color:var(--brand)}
+
+    /* Hero */
+    .hero{
+      padding:52px 0 42px;
+      background:
+        radial-gradient(circle at 86% 14%,rgba(37,99,235,.08),transparent 28%),
+        linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+    }
+    .hero-grid{
+      display:grid;
+      gap:30px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid #bfdbfe;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-weight:850;
+      font-size:.76rem;
+    }
+    .hero h1{
+      margin:17px 0 0;
+      max-width:780px;
+      color:var(--brand-dark);
+      font-size:clamp(2.35rem,11vw,4.8rem);
+      line-height:1;
+      letter-spacing:-.052em;
+    }
+    .hero h1 span{color:var(--brand)}
+    .hero p{
+      max-width:690px;
+      margin:20px 0 0;
+      color:var(--muted);
+      font-size:1rem;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:23px;
+    }
+    .btn-primary,.btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:44px;
+      padding:10px 14px;
+      border-radius:11px;
+      font-size:.84rem;
+      font-weight:850;
+    }
+    .btn-primary{background:var(--brand);color:white}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-secondary{background:white;color:var(--brand);border:1px solid var(--line)}
+    .hero-card{
+      border-radius:var(--radius-lg);
+      background:var(--brand-dark);
+      color:white;
+      padding:23px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card small{
+      color:#93c5fd;
+      font-weight:850;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+    .hero-card h2{
+      margin:7px 0 8px;
+      font-size:1.45rem;
+      line-height:1.15;
+      letter-spacing:-.025em;
+    }
+    .hero-card p{
+      color:#cbd5e1;
+      margin:0;
+      font-size:.9rem;
+    }
+    .hero-points{
+      display:grid;
+      gap:9px;
+      margin-top:18px;
+    }
+    .hero-point{
+      display:grid;
+      grid-template-columns:31px 1fr;
+      gap:10px;
+      align-items:center;
+      padding:10px;
+      border-radius:11px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.09);
+      font-size:.85rem;
+      font-weight:700;
+    }
+    .hero-point b{
+      width:29px;height:29px;border-radius:9px;
+      display:grid;place-items:center;
+      background:#dbeafe;color:var(--brand-dark);
+      font-size:.74rem;
+    }
+
+    /* Current alert */
+    .current{padding:16px 0 0}
+    .current-alert{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      align-items:start;
+      padding:17px;
+      border-radius:15px;
+      background:#eff6ff;
+      border:1px solid #bfdbfe;
+    }
+    .current-icon{
+      width:39px;height:39px;
+      border-radius:11px;
+      display:grid;place-items:center;
+      background:white;
+      color:var(--brand);
+    }
+    .current-alert strong{
+      display:block;
+      color:var(--brand-dark);
+      font-size:.92rem;
+    }
+    .current-alert p{
+      margin:4px 0 0;
+      color:#52647b;
+      font-size:.84rem;
+    }
+    .current-alert a{
+      display:inline-flex;
+      margin-top:9px;
+      color:var(--brand);
+      font-size:.8rem;
+      font-weight:850;
+    }
+
+    /* Sections */
+    section.content{padding:60px 0}
+    .section-head{margin-bottom:24px}
+    .section-kicker{
+      display:block;
+      color:var(--brand);
+      font-size:.73rem;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      margin-bottom:7px;
+    }
+    .section-head h2{
+      margin:0;
+      color:var(--brand-dark);
+      font-size:clamp(1.9rem,8vw,3rem);
+      line-height:1.06;
+      letter-spacing:-.042em;
+    }
+    .section-head p{
+      max-width:680px;
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    /* 30 days cards */
+    .steps-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .step-card{
+      position:relative;
+      overflow:hidden;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:21px;
+      box-shadow:var(--shadow-sm);
+    }
+    .step-card::before{
+      content:"";
+      position:absolute;
+      left:0;top:0;bottom:0;width:4px;
+      background:var(--brand);
+    }
+    .step-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .step-num{
+      width:39px;height:39px;
+      border-radius:11px;
+      display:grid;place-items:center;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-weight:900;
+      font-size:.78rem;
+    }
+    .step-label{
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:850;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+    .step-card h3{
+      margin:17px 0 7px;
+      color:var(--brand-dark);
+      font-size:1.2rem;
+      letter-spacing:-.02em;
+    }
+    .step-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.86rem;
+    }
+    .fact-list{
+      list-style:none;
+      padding:0;
+      margin:16px 0 0;
+      display:grid;
+      gap:8px;
+    }
+    .fact-list li{
+      display:grid;
+      grid-template-columns:18px 1fr;
+      gap:8px;
+      align-items:start;
+      color:#475569;
+      font-size:.81rem;
+    }
+    .fact-list li::before{
+      content:"✓";
+      width:18px;height:18px;
+      border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--success-soft);
+      color:var(--success);
+      font-size:.69rem;
+      font-weight:900;
+      margin-top:2px;
+    }
+    .critical{
+      margin-top:14px;
+      padding:11px 12px;
+      border-radius:10px;
+      background:var(--warning-soft);
+      border:1px solid #fde68a;
+      color:#713f12;
+      font-size:.79rem;
+    }
+    .step-link{
+      display:inline-flex;
+      margin-top:15px;
+      color:var(--brand);
+      font-size:.8rem;
+      font-weight:850;
+    }
+
+    /* Security */
+    .security-section{background:white}
+    .security-wrap{
+      display:grid;
+      gap:20px;
+      align-items:start;
+    }
+    .security-intro{
+      padding:23px;
+      border-radius:var(--radius-lg);
+      background:linear-gradient(145deg,var(--brand-dark),var(--brand));
+      color:white;
+      box-shadow:var(--shadow);
+    }
+    .security-intro .section-kicker{color:#bfdbfe}
+    .security-intro h2{
+      margin:0;
+      font-size:2rem;
+      line-height:1.08;
+      letter-spacing:-.035em;
+    }
+    .security-intro p{
+      color:#dbeafe;
+      font-size:.88rem;
+      margin:10px 0 0;
+    }
+    .security-list{display:grid;gap:10px}
+    .safety-item{
+      display:grid;
+      grid-template-columns:35px 1fr;
+      gap:11px;
+      align-items:start;
+      background:var(--bg);
+      border:1px solid var(--line);
+      border-radius:13px;
+      padding:14px;
+    }
+    .safety-check{
+      width:34px;height:34px;
+      display:grid;place-items:center;
+      border-radius:10px;
+      background:var(--success-soft);
+      color:var(--success);
+      font-weight:900;
+    }
+    .safety-item strong{
+      display:block;
+      color:var(--brand-dark);
+      font-size:.86rem;
+    }
+    .safety-item p{
+      margin:3px 0 0;
+      color:var(--muted);
+      font-size:.8rem;
+    }
+    .scam-note{
+      padding:13px 14px;
+      border-radius:11px;
+      background:var(--warning-soft);
+      border:1px solid #fde68a;
+      color:#713f12;
+      font-size:.79rem;
+    }
+
+    /* FAQ */
+    .faq-section{background:var(--bg)}
+    .faq-list{display:grid;gap:9px}
+    .faq-item{
+      border:1px solid var(--line);
+      border-radius:13px;
+      background:white;
+      overflow:hidden;
+    }
+    .faq-question{
+      width:100%;
+      border:0;
+      background:white;
+      color:var(--brand-dark);
+      padding:16px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:13px;
+      align-items:center;
+      text-align:left;
+      font-weight:800;
+      font-size:.88rem;
+    }
+    .faq-question:hover{background:#fbfdff}
+    .faq-symbol{
+      width:28px;height:28px;
+      border-radius:8px;
+      display:grid;place-items:center;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-size:1.1rem;
+      line-height:1;
+    }
+    .faq-answer{
+      display:none;
+      padding:0 16px 16px;
+      color:var(--muted);
+      font-size:.83rem;
+    }
+    .faq-item.open .faq-answer{display:block}
+    .faq-answer p{margin:0 0 9px}
+    .faq-answer p:last-child{margin-bottom:0}
+    .faq-answer a{color:var(--brand);font-weight:800}
+
+    /* Footer */
+    footer{
+      background:var(--brand-dark);
+      color:#cbd5e1;
+      padding:38px 0 22px;
+    }
+    .footer-grid{
+      display:grid;
+      gap:25px;
+    }
+    .footer-brand p{
+      max-width:470px;
+      margin:11px 0 0;
+      color:#aebdd1;
+      font-size:.8rem;
+    }
+    .footer-title{
+      color:white;
+      font-size:.81rem;
+      font-weight:850;
+      margin-bottom:9px;
+    }
+    .footer-links{
+      display:grid;
+      gap:7px;
+    }
+    .footer-links a{
+      color:#bac8dc;
+      font-size:.79rem;
+    }
+    .footer-links a:hover{color:white}
+    .legal{
+      margin-top:27px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.11);
+      color:#91a3bb;
+      font-size:.73rem;
+    }
+    .legal strong{color:#cbd5e1}
+    .footer-bottom{
+      margin-top:17px;
+      display:flex;
+      gap:12px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      color:#8395ad;
+      font-size:.71rem;
+    }
+
+    /* Toast */
+    .toast{
+      position:fixed;
+      z-index:100;
+      left:12px;right:12px;bottom:14px;
+      display:none;
+      background:var(--brand-dark);
+      color:white;
+      padding:13px 14px;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      font-size:.82rem;
+    }
+    .toast.show{display:block}
+
+    @media (min-width:700px){
+      .container{width:min(calc(100% - 40px),var(--max))}
+      .lang{display:flex}
+      .hero{padding:68px 0 52px}
+      .hero-grid{grid-template-columns:1.15fr .85fr;gap:44px}
+      .steps-grid{grid-template-columns:1fr 1fr}
+      .security-wrap{grid-template-columns:.9fr 1.1fr;gap:26px}
+      .footer-grid{grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+      .toast{left:auto;right:20px;width:360px}
+    }
+
+    @media (min-width:980px){
+      .desktop-nav{display:flex}
+      .menu-btn{display:none}
+      .mobile-nav{display:none!important}
+      .steps-grid{grid-template-columns:repeat(4,1fr)}
+      .section-head{
+        display:flex;
+        justify-content:space-between;
+        align-items:end;
+        gap:28px;
+      }
+      .section-head p{margin:0;max-width:530px}
+      .footer-grid{grid-template-columns:1.5fr repeat(3,1fr)}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important;animation:none!important}
+    }
+  </style>
+  <link rel="stylesheet" href="ux.css">
+  <link rel="stylesheet" href="brand.css">
+  
+  <style>
+    .trust-hero{
+      padding:56px 0 34px;
+      background:
+        radial-gradient(circle at 86% 12%,rgba(5,114,68,.10),transparent 28%),
+        linear-gradient(180deg,#fff 0%,#f7faf9 100%);
+    }
+    .trust-hero .breadcrumbs{
+      display:flex;gap:7px;flex-wrap:wrap;align-items:center;
+      color:var(--muted);font-size:.74rem;margin-bottom:13px;
+    }
+    .trust-hero .breadcrumbs a{color:var(--brand-green);font-weight:850}
+    .trust-hero h1{
+      margin:9px 0 0;color:var(--brand-dark);
+      font-size:clamp(2.25rem,9vw,4.4rem);line-height:1;letter-spacing:-.05em;
+      max-width:900px;
+    }
+    .trust-hero h1 span{color:var(--brand-green)}
+    .trust-hero p{margin:16px 0 0;color:var(--muted);max-width:800px;font-size:.94rem}
+    .trust-layout{padding:50px 0 70px}
+    .trust-grid{display:grid;gap:18px}
+    .trust-card{
+      background:white;border:1px solid var(--line);border-radius:18px;padding:20px;
+      box-shadow:0 10px 30px rgba(3,41,84,.055)
+    }
+    .trust-card h2,.trust-card h3{margin:0;color:var(--brand-dark);letter-spacing:-.025em}
+    .trust-card h2{font-size:1.4rem}
+    .trust-card h3{font-size:1rem}
+    .trust-card p,.trust-card li{color:var(--muted);font-size:.82rem;line-height:1.65}
+    .trust-card p{margin:9px 0 0}
+    .trust-card ul,.trust-card ol{padding-left:20px;margin:10px 0 0}
+    .trust-card li+li{margin-top:6px}
+    .trust-card a{color:var(--brand-green);font-weight:850}
+    .notice{
+      border-left:4px solid var(--brand-green);background:var(--brand-green-soft);
+      padding:13px 14px;border-radius:0 12px 12px 0;margin-top:14px;
+      color:#174c38;font-size:.78rem;
+    }
+    .warning-box{
+      border:1px solid #fed7aa;background:#fff7ed;border-radius:14px;padding:15px;
+      color:#7c2d12;font-size:.79rem;margin-top:14px
+    }
+    .safe-box{
+      border:1px solid #b9dece;background:var(--brand-green-soft);border-radius:14px;padding:15px;
+      color:#174c38;font-size:.79rem;margin-top:14px
+    }
+    .page-meta{
+      display:flex;gap:8px;flex-wrap:wrap;margin-top:17px
+    }
+    .page-meta span{
+      padding:7px 9px;border:1px solid var(--line);background:white;border-radius:999px;
+      color:#526273;font-size:.68rem;font-weight:800
+    }
+    .faq-search{
+      display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;
+      border:1px solid var(--line);background:white;border-radius:13px;padding:11px 13px;
+      margin-bottom:17px
+    }
+    .faq-search input{width:100%;border:0;outline:0;background:transparent;font:inherit;color:var(--text)}
+    .faq-category{margin-top:25px}
+    .faq-category:first-of-type{margin-top:0}
+    .faq-category>h2{
+      margin:0 0 10px;color:var(--brand-dark);font-size:1.25rem;letter-spacing:-.03em
+    }
+    .faq-v5{display:grid;gap:9px}
+    .faq-v5 article{border:1px solid var(--line);border-radius:13px;background:white;overflow:hidden}
+    .faq-v5 button{
+      width:100%;display:flex;justify-content:space-between;gap:12px;align-items:center;
+      border:0;background:white;padding:14px 15px;color:var(--brand-dark);
+      text-align:left;font-weight:850;font-size:.81rem
+    }
+    .faq-v5 button:hover{background:#f7fbf9}
+    .faq-v5 .answer{display:none;padding:0 15px 15px;color:var(--muted);font-size:.78rem;line-height:1.6}
+    .faq-v5 article.open .answer{display:block}
+    .faq-v5 article.hidden-by-search{display:none}
+    .faq-plus{font-size:1.05rem;color:var(--brand-green);flex:0 0 auto}
+    .risk-grid{display:grid;gap:12px}
+    .risk{
+      border:1px solid var(--line);background:white;border-radius:15px;padding:16px
+    }
+    .risk b{
+      width:35px;height:35px;border-radius:10px;display:grid;place-items:center;
+      background:#fff7ed;color:#c2410c;margin-bottom:9px
+    }
+    .risk strong{display:block;color:var(--brand-dark);font-size:.86rem}
+    .risk p{margin:5px 0 0}
+    .check-grid{display:grid;gap:9px;margin-top:12px}
+    .check-item{
+      display:grid;grid-template-columns:27px 1fr;gap:9px;align-items:start;
+      border:1px solid #cde5d8;background:#f6fbf8;border-radius:11px;padding:10px
+    }
+    .check-item b{
+      width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+      background:var(--brand-green);color:white;font-size:.7rem
+    }
+    .check-item strong{display:block;color:#174c38;font-size:.78rem}
+    .check-item span{display:block;color:#537261;font-size:.71rem;margin-top:2px}
+    .section-label{
+      display:block;color:var(--brand-green);font-size:.7rem;font-weight:900;
+      letter-spacing:.09em;text-transform:uppercase;margin-bottom:7px
+    }
+    @media(min-width:760px){
+      .trust-grid.two{grid-template-columns:1fr 1fr}
+      .risk-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+
+  
+  <link rel="stylesheet" href="verify.css">
+  <link rel="stylesheet" href="v7.css">
+  <link rel="stylesheet" href="qa-v8.css">
+  <link rel="stylesheet" href="routes-v9.css">
+  <link rel="stylesheet" href="life-v10.css">
+  <link rel="stylesheet" href="practical-v11.css">
+  <link rel="stylesheet" href="ops-v12.css">
+  <link rel="stylesheet" href="source-guard.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span><span class="status-dot"></span> Informação independente para migrantes em Portugal</span>
+      <span>Guia Migrante PT</span>
+    </div>
+  </div>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Guia Migrante PT — Início">
+        <span class="brand-mark brand-mark-official" aria-hidden="true">
+          <img class="brand-logo" src="logo-guia-migrante-256.png" alt="">
+        </span>
+        <span class="brand-name">Guia Migrante PT<small>Informação · Orientação · Confiança</small></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="percursos.html">Percursos</a><a href="viver-em-portugal.html">Viver em Portugal</a><a href="nacionalidade.html">Nacionalidade</a><a href="ferramentas.html">Ferramentas</a><a href="contactos.html">Contactos</a></nav>
+
+      <div class="header-actions"><div class="site-lang" aria-label="Idioma"><a class="active" href="termos.html" aria-current="page">PT</a><a href="en/termos.html">EN</a></div>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação móvel"><a href="index.html">Início</a><a href="percursos.html">Percursos</a><a href="viver-em-portugal.html">Viver em Portugal</a><a href="nacionalidade.html">Nacionalidade</a><a href="ferramentas.html">Ferramentas</a><a href="contactos.html">Contactos</a></nav>
+  </header>
+  <div class="brand-stripe" aria-hidden="true"></div>
+
+  <div class="verification-strip">
+    <div class="container verification-inner">
+      <span class="verified-badge">Informação principal verificada em 20/08/2026</span>
+      <span>Fontes prioritárias: AIMA · gov.pt · Justiça/Diário da República · Segurança Social · SNS</span>
+      <a href="atualizacoes.html">Ver o que mudou →</a>
+    </div>
+  </div>
+
+
+  <main id="conteudo">
+    <section class="trust-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">Início</a><span>›</span><span>Termos e Condições</span></div>
+        <span class="eyebrow">Termos e Condições</span>
+        <h1>Informação útil, com <span>limites claros.</span></h1>
+        <p>O Guia ajuda a compreender e organizar procedimentos, mas não substitui a entidade competente nem garante resultados.</p>
+        <div class="page-meta">
+          <span>Guia Migrante PT</span>
+          <span>Verificado em 20/08/2026</span>
+          <span>Portal independente</span>
+        </div>
+      </div>
+    </section>
+    
+<section class="trust-layout">
+  <div class="container trust-grid">
+    <article class="trust-card">
+      <span class="section-label">1. Natureza do portal</span>
+      <h2>Informação e orientação — não decisão oficial</h2>
+      <p>O Guia Migrante PT é um projeto independente de informação e orientação. Não pertence, não representa e não substitui a AIMA, o Governo de Portugal, o IRN, a Autoridade Tributária, a Segurança Social, o SNS, consulados ou qualquer outra entidade pública.</p>
+      <div class="notice">A decisão sobre um pedido, prazo, documento, taxa ou direito pertence sempre à entidade competente e depende da situação concreta.</div>
+    </article>
+
+    <article class="trust-card">
+      <span class="section-label">2. Uso da informação</span>
+      <h2>Confirme procedimentos sensíveis na fonte oficial</h2>
+      <p>O Guia procura traduzir informação complexa para linguagem simples e indicar fontes oficiais. A legislação, os canais digitais, os prazos, as taxas e os procedimentos podem mudar.</p>
+      <p>Antes de apresentar um pedido ou efetuar um pagamento, confirme a informação relevante na fonte oficial indicada.</p>
+    </article>
+
+    <article class="trust-card">
+      <span class="section-label">3. Ferramentas</span>
+      <h2>Roteiros e checklists são auxiliares de organização</h2>
+      <p>Questionários, contadores, roteiros, checklists e outras ferramentas do portal servem para ajudar a organizar passos e informação. Não constituem parecer jurídico, decisão de elegibilidade ou garantia de resultado.</p>
+    </article>
+
+    <article class="trust-card">
+      <span class="section-label">4. Gratuidade</span>
+      <h2>O acesso ao portal é gratuito</h2>
+      <p>As páginas e ferramentas atualmente disponibilizadas pelo Guia Migrante PT são de acesso gratuito. O Guia não cobra para “garantir” marcações, acelerar processos ou assegurar decisões de entidades públicas.</p>
+      <a href="seguranca.html">Ver como evitar burlas →</a>
+    </article>
+
+    <article class="trust-card">
+      <span class="section-label">5. Links externos</span>
+      <h2>Conteúdo de terceiros</h2>
+      <p>O portal contém ligações para websites oficiais e outros recursos externos. Esses websites são geridos pelas respetivas entidades, que podem alterar conteúdos, endereços, disponibilidade e condições sem controlo do Guia.</p>
+    </article>
+
+    <article class="trust-card">
+      <span class="section-label">6. Disponibilidade</span>
+      <h2>O serviço pode ser atualizado</h2>
+      <p>O Guia pode corrigir, reorganizar, substituir ou retirar conteúdos e ferramentas para melhorar a precisão, segurança ou experiência de utilização.</p>
+    </article>
+
+    <article class="trust-card">
+      <span class="section-label">7. Propriedade e utilização</span>
+      <h2>Conteúdo do Guia</h2>
+      <p>O nome, identidade visual, organização editorial, textos próprios e elementos gráficos do Guia Migrante PT estão protegidos nos termos aplicáveis. É permitido partilhar links para as páginas públicas. A reprodução integral com aparência de fonte oficial ou com alteração enganosa do conteúdo não é autorizada.</p>
+    </article>
+
+    <article class="trust-card">
+      <span class="section-label">8. Responsabilidade do utilizador</span>
+      <h2>Proteja os seus dados e confirme a entidade</h2>
+      <p>Não partilhe passwords, códigos de autenticação ou documentos sensíveis com pessoas ou páginas cuja identidade não tenha confirmado. Verifique sempre o endereço do website antes de introduzir dados ou efetuar pagamentos.</p>
+    </article>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark brand-mark-official" aria-hidden="true">
+            <img class="brand-logo" src="logo-guia-migrante-256.png" alt="">
+          </span>
+          <span class="brand-name">Guia Migrante PT<small>Informação · Orientação · Confiança</small></span>
+        </a>
+        <p class="footer-note">Portal independente e gratuito de informação e orientação para migrantes em Portugal.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Portal</div>
+        <div class="footer-links">
+          <a href="index.html">Início</a><a href="percursos.html">Percursos</a><a href="viver-em-portugal.html">Viver em Portugal</a>
+          <a href="legalizacao.html">Regularização</a>
+          <a href="dia-a-dia.html">Dia a Dia</a>
+          <a href="nacionalidade.html">Nacionalidade</a>
+          <a href="ferramentas.html">Ferramentas</a>
+          <a href="contactos.html">Contactos</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Confiança</div>
+        <div class="footer-links">
+          <a href="seguranca.html">Evite burlas</a>
+          <a href="faq.html">FAQs</a>
+          <a href="privacidade.html">Política de Privacidade</a><a href="acessibilidade.html">Acessibilidade</a><a href="estado-informacao.html">Estado da informação</a>
+          <a href="termos.html">Termos e Condições</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Fontes úteis</div>
+        <div class="footer-links">
+          <a href="https://aima.gov.pt/" target="_blank" rel="noopener">AIMA ↗</a>
+          <a href="https://justica.gov.pt/" target="_blank" rel="noopener">Justiça ↗</a>
+          <a href="https://www.gov.pt/" target="_blank" rel="noopener">gov.pt ↗</a>
+          <a href="https://www.seg-social.pt/" target="_blank" rel="noopener">Segurança Social ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Guia Migrante PT.</span>
+      <span>Não pertence nem representa a AIMA, o Governo de Portugal, a Autoridade Tributária, a Segurança Social, o SNS ou qualquer outra entidade pública.</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton=document.getElementById('menuButton');
+    const mobileNav=document.getElementById('mobileNav');
+    if(menuButton&&mobileNav){
+      menuButton.addEventListener('click',()=>{
+        const open=mobileNav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded',String(open));
+      });
+    }
+  </script>
+  
+  <script src="ux.js" defer></script>
+  <script src="ops-v12.js" defer></script>
+  <script src="source-guard.js" defer></script>
+</body>
+</html>

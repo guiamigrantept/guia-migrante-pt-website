@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "facts": {
+    "aima_phone": {
+      "type": "text",
+      "value": "(+351) 217 115 000",
+      "source_id": "factsrc_aima_phone",
+      "updated_at": "2026-08-20"
+    },
+    "aima_hours": {
+      "type": "time_range",
+      "value": "08:00-20:00",
+      "source_id": "factsrc_aima_hours",
+      "updated_at": "2026-08-20"
+    },
+    "renewal_start": {
+      "type": "date",
+      "value": "2025-07-01",
+      "source_id": "factsrc_renewal_start",
+      "updated_at": "2026-08-20"
+    },
+    "renewal_end": {
+      "type": "date",
+      "value": "2026-10-31",
+      "source_id": "factsrc_renewal_end",
+      "updated_at": "2026-08-20"
+    },
+    "temporary_protection_end": {
+      "type": "date",
+      "value": "2027-03-04",
+      "source_id": "factsrc_temporary_protection_end",
+      "updated_at": "2026-08-20"
+    },
+    "combined_id_locations": {
+      "type": "integer",
+      "value": 12,
+      "source_id": "factsrc_combined_id_locations",
+      "updated_at": "2026-08-20"
+    },
+    "basic_banking_max_fee": {
+      "type": "currency_eur",
+      "value": 5.37,
+      "source_id": "factsrc_basic_banking_max_fee",
+      "updated_at": "2026-08-20"
+    }
+  }
+}

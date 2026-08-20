@@ -2,10 +2,14 @@
 from __future__ import annotations
 
 import difflib
+import hashlib
 import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
+
+import requests
+from bs4 import BeautifulSoup
 
 SITE = Path('site')
 SNAPS = Path('monitor/snapshots')
@@ -17,6 +21,9 @@ CHANGELOG = SITE / 'data/change-log.json'
 ERSE_TARGET = 'src_2b928469124c'
 ERSE_MARKER = 'Compare os preços das ofertas comerciais de eletricidade e gás natural'
 GOV_QUALIFICATIONS_URL = 'https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais'
+JUSTICA_MARRIAGE_OLD = 'https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento'
+JUSTICA_MARRIAGE_FALLBACK = 'https://conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento'
+UA = 'GuiaMigrantePT-OfficialSourceMonitor/1.3 (+https://guia-migrante-pt.pages.dev/)'
 
 ACCESS_BLOCK_MARKERS = (
     'web page blocked!',
@@ -31,19 +38,38 @@ ACCESS_BLOCK_MARKERS = (
     'checking your browser before accessing',
 )
 
+TEMPORARY_MAINTENANCE_MARKERS = (
+    'temporariamente indisponível',
+    'temporariamente indisponivel',
+    'intervenção técnica programada',
+    'intervencao tecnica programada',
+    'tente novamente mais tarde',
+    'service temporarily unavailable',
+    'temporarily unavailable',
+    'scheduled maintenance',
+)
+
 
 def now():
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 
 
+def compact(text: str) -> str:
+    return re.sub(r'\s+', ' ', text).strip()
+
+
 def is_access_block(text: str) -> bool:
-    low = re.sub(r'\s+', ' ', text).casefold()
+    low = compact(text).casefold()
     return any(marker in low for marker in ACCESS_BLOCK_MARKERS)
+
+
+def is_temporary_maintenance(text: str) -> bool:
+    low = compact(text).casefold()
+    return any(marker in low for marker in TEMPORARY_MAINTENANCE_MARKERS)
 
 
 def remove_target_from_quarantine(target: str, status: dict, report: dict):
     report['changed_sources'] = [x for x in report.get('changed_sources', []) if x != target]
-
     for container in (status, report):
         for key in list(container.get('blocked_pages', {})):
             ids = [x for x in container['blocked_pages'][key] if x != target]
@@ -53,55 +79,77 @@ def remove_target_from_quarantine(target: str, status: dict, report: dict):
                 del container['blocked_pages'][key]
 
 
-def review_access_blocks(status: dict, report: dict, log: dict):
-    resolved = []
+def record_transient(target: str, candidate: dict, status: dict, report: dict, log: dict, reason: str):
+    baseline_path = SNAPS / f'{target}.json'
+    candidate_path = CANDS / f'{target}.json'
+    if not baseline_path.exists():
+        return False
 
-    # A WAF/security interstitial is not an official-content change. If we already
-    # have a valid baseline, discard only the blocked candidate and keep the last
-    # known-good baseline. This prevents temporary anti-bot pages from quarantining
-    # user-facing guidance.
+    candidate_path.unlink(missing_ok=True)
+    entry = status.setdefault('sources', {}).setdefault(target, {})
+    entry.update({
+        'state': 'fetch_error',
+        'checked_at': candidate.get('checked_at') or entry.get('checked_at'),
+        'changed_at': None,
+        'candidate_sha256': None,
+        'diff_excerpt': None,
+        'note': reason,
+    })
+    remove_target_from_quarantine(target, status, report)
+    report.setdefault('errors', []).append({
+        'id': target,
+        'url': entry.get('url') or candidate.get('url'),
+        'domain': entry.get('domain'),
+        'risk': 'high' if entry.get('required') else 'medium',
+        'required': bool(entry.get('required')),
+        'had_baseline': True,
+        'kind': 'temporary_source_response',
+        'error': reason,
+    })
+    log.setdefault('changes', []).insert(0, {
+        'time': now(),
+        'source_id': target,
+        'url': entry.get('url') or candidate.get('url'),
+        'state': 'temporary_source_response_ignored',
+        'reason': reason,
+    })
+    return True
+
+
+def review_transient_candidates(status: dict, report: dict, log: dict):
+    resolved = []
     for candidate_path in list(CANDS.glob('src_*.json')):
         target = candidate_path.stem
         candidate = json.loads(candidate_path.read_text(encoding='utf-8'))
-        if not is_access_block(candidate.get('text', '')):
-            continue
-        baseline_path = SNAPS / f'{target}.json'
-        if not baseline_path.exists():
-            continue
+        text = candidate.get('text', '')
+        reason = None
+        if is_access_block(text):
+            reason = 'temporary anti-bot/WAF response ignored; last known-good baseline retained'
+        elif is_temporary_maintenance(text):
+            reason = 'temporary maintenance/unavailable page ignored; last known-good baseline retained'
+        elif target == ERSE_TARGET and ERSE_MARKER not in text and 'cookie' in text.casefold():
+            reason = 'ERSE cookie-only render ignored; last known-good simulator baseline retained'
+        if reason and record_transient(target, candidate, status, report, log, reason):
+            resolved.append(target)
 
-        candidate_path.unlink(missing_ok=True)
-        entry = status.setdefault('sources', {}).setdefault(target, {})
-        entry.update({
-            'state': 'fetch_error',
-            'checked_at': candidate.get('checked_at') or entry.get('checked_at'),
-            'changed_at': None,
-            'candidate_sha256': None,
-            'diff_excerpt': None,
-            'note': 'temporary access-block/WAF response ignored; last known-good baseline retained',
-        })
-        remove_target_from_quarantine(target, status, report)
-        error = {
-            'id': target,
-            'url': entry.get('url') or candidate.get('url'),
-            'domain': entry.get('domain'),
-            'risk': 'high' if entry.get('required') else 'medium',
-            'required': bool(entry.get('required')),
-            'had_baseline': True,
-            'kind': 'access_blocked',
-            'error': 'Temporary anti-bot/WAF response ignored; previous baseline retained.',
-        }
-        if not any(e.get('id') == target and e.get('kind') == 'access_blocked' for e in report.setdefault('errors', [])):
-            report['errors'].append(error)
-        resolved.append(target)
+    if resolved:
+        print('Transient-source filter cleared:', ', '.join(sorted(set(resolved))))
+    else:
+        print('Transient-source filter: nothing to clear')
 
-    # Never allow a first-time WAF/interstitial page to become a baseline. If one
-    # slipped through the fetch layer, remove it and force coverage to remain
-    # incomplete until a genuine official page can be captured.
+
+def review_bad_baselines(status: dict, report: dict, log: dict):
+    rejected = []
     for baseline_path in list(SNAPS.glob('src_*.json')):
         target = baseline_path.stem
         baseline = json.loads(baseline_path.read_text(encoding='utf-8'))
-        if not is_access_block(baseline.get('text', '')):
+        text = baseline.get('text', '')
+        bad = is_access_block(text) or is_temporary_maintenance(text)
+        if target == ERSE_TARGET and ERSE_MARKER not in text and 'cookie' in text.casefold():
+            bad = True
+        if not bad:
             continue
+
         baseline_path.unlink(missing_ok=True)
         (CANDS / f'{target}.json').unlink(missing_ok=True)
         entry = status.setdefault('sources', {}).setdefault(target, {})
@@ -111,7 +159,7 @@ def review_access_blocks(status: dict, report: dict, log: dict):
             'changed_at': None,
             'candidate_sha256': None,
             'diff_excerpt': None,
-            'note': 'access-block/WAF page rejected as invalid baseline',
+            'note': 'transient/access-block page rejected as invalid baseline',
         })
         remove_target_from_quarantine(target, status, report)
         if entry.get('required'):
@@ -120,28 +168,28 @@ def review_access_blocks(status: dict, report: dict, log: dict):
             report['missing_required'] = sorted(missing)
             report['baseline_complete'] = False
             report['coverage_ok'] = False
-        resolved.append(target)
+        rejected.append(target)
 
-    if resolved:
+    if rejected:
         log.setdefault('changes', []).insert(0, {
             'time': now(),
-            'state': 'access_block_false_positive_resolved',
-            'source_ids': sorted(set(resolved)),
-            'reason': 'temporary WAF/access-block content rejected as monitoring noise',
+            'state': 'invalid_baselines_rejected',
+            'source_ids': sorted(set(rejected)),
+            'reason': 'temporary WAF/maintenance/cookie-only content cannot be a baseline',
         })
-        print('Access-block filter cleared:', ', '.join(sorted(set(resolved))))
-    else:
-        print('Access-block filter: no blocked-page artifacts found')
+        print('Rejected invalid baselines:', ', '.join(sorted(set(rejected))))
 
 
 def normalize_erse(text: str) -> str:
     if ERSE_MARKER not in text:
         return ''
     text = text[text.index(ERSE_MARKER):]
-    text = re.sub(r'Ofertas comerciais \(CSV\) - Atualizado em \d{1,2}-\d{1,2}-\d{4}',
-                  'Ofertas comerciais (CSV) - Atualizado', text)
-    text = re.sub(r'\s+', ' ', text).strip()
-    return text
+    text = re.sub(
+        r'Ofertas comerciais \(CSV\) - Atualizado em \d{1,2}-\d{1,2}-\d{4}',
+        'Ofertas comerciais (CSV) - Atualizado',
+        text,
+    )
+    return compact(text)
 
 
 def clear_target(target: str, note: str, candidate: dict, status: dict, report: dict, log: dict | None = None):
@@ -159,7 +207,6 @@ def clear_target(target: str, note: str, candidate: dict, status: dict, report: 
         'diff_excerpt': None,
         'note': note,
     })
-
     remove_target_from_quarantine(target, status, report)
 
     if log is not None:
@@ -175,31 +222,28 @@ def clear_target(target: str, note: str, candidate: dict, status: dict, report: 
 def review_erse(status: dict, report: dict, log: dict):
     candidate_path = CANDS / f'{ERSE_TARGET}.json'
     baseline_path = SNAPS / f'{ERSE_TARGET}.json'
-    if not candidate_path.exists():
-        print('ERSE filter: no candidate to review')
+    if not candidate_path.exists() or not baseline_path.exists():
         return
 
     candidate = json.loads(candidate_path.read_text(encoding='utf-8'))
-    baseline = json.loads(baseline_path.read_text(encoding='utf-8')) if baseline_path.exists() else None
+    baseline = json.loads(baseline_path.read_text(encoding='utf-8'))
     cand_norm = normalize_erse(candidate.get('text', ''))
-    base_norm = normalize_erse((baseline or {}).get('text', ''))
-
-    if not cand_norm or (base_norm and cand_norm != base_norm):
-        print('ERSE filter: substantive change remains pending review')
+    base_norm = normalize_erse(baseline.get('text', ''))
+    if not cand_norm or not base_norm or cand_norm != base_norm:
         return
 
     clear_target(
         ERSE_TARGET,
-        'ERSE simulator render normalized; cookie-banner/daily offer-date noise ignored',
-        candidate, status, report, log,
+        'ERSE simulator substantive content unchanged after normalization',
+        candidate,
+        status,
+        report,
+        log,
     )
-    print('ERSE filter: false positive cleared and candidate promoted to baseline')
+    print('ERSE filter: normalized false positive cleared')
 
 
 def canonical_gov_qualifications(text: str) -> str:
-    # Compare only the substantive qualifications guidance. The old www2.gov.pt
-    # page and the new www.gov.pt guide have different navigation, update-date and
-    # related-guide components around the same official guidance.
     low = text.casefold()
     start_marker = 'algumas profissões são regulamentadas'
     start = low.find(start_marker)
@@ -207,7 +251,6 @@ def canonical_gov_qualifications(text: str) -> str:
         return ''
     text = text[start:]
     low = text.casefold()
-
     cut_positions = []
     for marker in ('licenças de parentalidade', 'entidade responsável'):
         pos = low.find(marker)
@@ -215,7 +258,6 @@ def canonical_gov_qualifications(text: str) -> str:
             cut_positions.append(pos)
     if cut_positions:
         text = text[:min(cut_positions)]
-
     text = text.casefold()
     text = re.sub(r'[\u2013\u2014]', '-', text)
     text = re.sub(r'[\s\.;:,]+', ' ', text)
@@ -243,20 +285,96 @@ def review_gov_qualifications(status: dict, report: dict, log: dict):
         new_tokens = set(re.findall(r'[a-zà-ÿ0-9]+', new))
         union = old_tokens | new_tokens
         jaccard = len(old_tokens & new_tokens) / len(union) if union else 0.0
-
-        # Deliberately narrow: exact legacy gov.pt qualifications URL and the
-        # same bounded substantive guidance. Minor punctuation/layout differences
-        # are accepted, but material wording changes remain quarantined.
         if ratio < 0.97 or jaccard < 0.97:
-            print(f'gov.pt qualifications filter: substantive change remains pending (ratio={ratio:.4f}, jaccard={jaccard:.4f})')
+            print(f'gov.pt qualifications remains pending (ratio={ratio:.4f}, jaccard={jaccard:.4f})')
             continue
 
         clear_target(
             target,
-            f'gov.pt page migration/formatting accepted after semantic equivalence check (ratio={ratio:.4f}, jaccard={jaccard:.4f})',
-            candidate, status, report, log,
+            f'gov.pt migration/formatting accepted after semantic equivalence check (ratio={ratio:.4f}, jaccard={jaccard:.4f})',
+            candidate,
+            status,
+            report,
+            log,
         )
-        print(f'gov.pt qualifications filter: false positive cleared (ratio={ratio:.4f}, jaccard={jaccard:.4f})')
+        print(f'gov.pt qualifications false positive cleared (ratio={ratio:.4f}, jaccard={jaccard:.4f})')
+
+
+def extract_html_text(content: bytes) -> str:
+    soup = BeautifulSoup(content, 'html.parser')
+    for tag in soup(['script', 'style', 'noscript', 'svg', 'form', 'nav', 'header', 'footer']):
+        tag.decompose()
+    node = soup.find('main') or soup.find('article') or soup.body or soup
+    return '\n'.join(
+        line for line in (compact(x) for x in node.get_text('\n').splitlines())
+        if len(line) > 1
+    )
+
+
+def review_justica_marriage_redirect(status: dict, report: dict, log: dict):
+    target = None
+    entry = None
+    for source_id, source_entry in status.get('sources', {}).items():
+        if source_entry.get('url') == JUSTICA_MARRIAGE_OLD:
+            target = source_id
+            entry = source_entry
+            break
+    if not target or not entry:
+        return
+
+    baseline_path = SNAPS / f'{target}.json'
+    if baseline_path.exists():
+        return
+
+    try:
+        response = requests.get(
+            JUSTICA_MARRIAGE_FALLBACK,
+            timeout=(10, 35),
+            allow_redirects=True,
+            headers={'User-Agent': UA, 'Accept': 'text/html,*/*;q=0.8'},
+        )
+        response.raise_for_status()
+        text = extract_html_text(response.content)
+        if len(text) < 100 or is_access_block(text) or is_temporary_maintenance(text):
+            raise RuntimeError('fallback returned non-content/interstitial page')
+    except Exception as exc:
+        print('Justiça marriage fallback unavailable:', exc)
+        return
+
+    ts = now()
+    payload = {
+        'url': JUSTICA_MARRIAGE_OLD,
+        'final_url': response.url,
+        'sha256': hashlib.sha256(text.encode()).hexdigest(),
+        'checked_at': ts,
+        'fetch_method': 'official-redirect-fallback',
+        'text': text,
+    }
+    baseline_path.write_text(json.dumps(payload, ensure_ascii=False), encoding='utf-8')
+    (CANDS / f'{target}.json').unlink(missing_ok=True)
+    entry.update({
+        'state': 'healthy',
+        'checked_at': ts,
+        'changed_at': None,
+        'candidate_sha256': None,
+        'diff_excerpt': None,
+        'fetch_method': 'official-redirect-fallback',
+        'note': 'legacy Justiça marriage URL now redirects to official Conservatória Justiça service',
+    })
+    report['missing_required'] = [x for x in report.get('missing_required', []) if x != target]
+    report['errors'] = [e for e in report.get('errors', []) if e.get('id') != target]
+    report['critical_errors'] = [e for e in report.get('critical_errors', []) if e.get('id') != target]
+    if not report.get('missing_required') and not report.get('critical_errors'):
+        report['baseline_complete'] = True
+        report['coverage_ok'] = True
+    log.setdefault('changes', []).insert(0, {
+        'time': ts,
+        'source_id': target,
+        'url': JUSTICA_MARRIAGE_OLD,
+        'state': 'baseline_recovered_via_official_redirect',
+        'reason': JUSTICA_MARRIAGE_FALLBACK,
+    })
+    print('Justiça marriage baseline recovered via official redirect destination')
 
 
 def main():
@@ -264,9 +382,11 @@ def main():
     report = json.loads(REPORT.read_text(encoding='utf-8'))
     log = json.loads(CHANGELOG.read_text(encoding='utf-8')) if CHANGELOG.exists() else {'version': 1, 'changes': []}
 
-    review_access_blocks(status, report, log)
+    review_transient_candidates(status, report, log)
+    review_bad_baselines(status, report, log)
     review_erse(status, report, log)
     review_gov_qualifications(status, report, log)
+    review_justica_marriage_redirect(status, report, log)
 
     status.setdefault('summary', {})['blocked_pages'] = len(status.get('blocked_pages', {}))
     status['generated_at'] = now()

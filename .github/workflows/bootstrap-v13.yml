@@ -1,0 +1,44 @@
+name: Bootstrap V13 site
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-monitor.txt
+
+      - name: Unpack V13 site
+        run: |
+          test -f site-base-v13.zip
+          rm -rf site
+          mkdir site
+          unzip -q site-base-v13.zip -d site
+
+      - name: Build official-source baseline
+        run: python monitor/monitor_sources.py
+
+      - name: Run QA
+        run: python scripts/qa.py
+
+      - name: Commit prepared V13
+        run: |
+          git config user.name 'Guia Migrante V13 Setup'
+          git config user.email 'actions@users.noreply.github.com'
+          git add site monitor/snapshots monitor/sources.json monitor/report.json
+          git rm -f site-base-v13.zip bootstrap/part1.b64 2>/dev/null || true
+          git commit -m 'feat: activate V13 automatic source monitoring'
+          git push

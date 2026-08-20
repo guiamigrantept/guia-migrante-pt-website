@@ -12,6 +12,7 @@ on:
       - 'scripts/build_locales_hi_bn.py'
       - 'scripts/build_route_locales.py'
       - 'scripts/build_route_locales_ru.py'
+      - 'scripts/build_living_locales.py'
       - 'scripts/build_sitemap.py'
       - '.github/workflows/deploy-pages.yml'
 
@@ -46,6 +47,8 @@ jobs:
         run: python scripts/build_route_locales.py
       - name: Build native Russian migration route translations
         run: python scripts/build_route_locales_ru.py
+      - name: Build staged living-in-Portugal translations
+        run: python scripts/build_living_locales.py
       - name: Build multilingual sitemap
         run: python scripts/build_sitemap.py
       - name: Run site QA

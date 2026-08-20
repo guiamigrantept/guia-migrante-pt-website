@@ -17,6 +17,7 @@ on:
       - 'scripts/build_structural_parity_locales.py'
       - 'scripts/apply_full_structure_translation_copy.py'
       - 'scripts/check_locale_parity.py'
+      - 'scripts/check_translation_completeness.py'
       - 'scripts/finalize_live_locales.py'
       - 'scripts/build_sitemap.py'
       - '.github/workflows/deploy-pages.yml'
@@ -48,6 +49,8 @@ jobs:
         run: python scripts/apply_full_structure_translation_copy.py
       - name: Check full page and feature parity after translation overlay
         run: python scripts/check_locale_parity.py
+      - name: Audit translation completeness before locale publication
+        run: python scripts/check_translation_completeness.py
       - name: Finalize only locales explicitly marked live
         run: python scripts/finalize_live_locales.py
       - name: Build multilingual sitemap

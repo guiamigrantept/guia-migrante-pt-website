@@ -51,7 +51,7 @@ jobs:
       - name: Check official sources
         run: python monitor/monitor_sources.py
 
-      - name: Recover DRE ELI sources
+      - name: Check Diário da República RSS
         run: python monitor/dre_fallback.py
 
       - name: Run QA
@@ -68,19 +68,21 @@ jobs:
               f.write('blocked=%s\n' % ('true' if r.get('blocked_pages') else 'false'))
               f.write('facts=%s\n' % ('true' if r.get('fact_updates') else 'false'))
               f.write('coverage=%s\n' % ('true' if r.get('coverage_ok') else 'false'))
+              f.write('dre_alerts=%s\n' % ('true' if r.get('dre_rss_alerts') else 'false'))
               f.write('errors=%s\n' % len(r.get('errors',[])))
           print('baseline_complete=',r.get('baseline_complete'))
           print('coverage_ok=',r.get('coverage_ok'))
           print('errors=',len(r.get('errors',[])))
           print('critical_errors=',len(r.get('critical_errors',[])))
-          print('dre_eli_recovered=',len(r.get('dre_eli_recovered',[])))
+          print('dre_rss_ok=',r.get('dre_rss_ok'))
+          print('dre_rss_alerts=',len(r.get('dre_rss_alerts',[])))
           PY
 
       - name: Commit monitored state
         run: |
           git config user.name 'Guia Migrante Source Monitor'
           git config user.email 'actions@users.noreply.github.com'
-          git add monitor/snapshots monitor/candidates monitor/sources.json monitor/report.json site/data/source-status.json site/data/facts.json site/data/change-log.json
+          git add monitor/snapshots monitor/candidates monitor/sources.json monitor/report.json monitor/dre-rss.json site/data/source-status.json site/data/facts.json site/data/change-log.json
           if git diff --cached --quiet; then
             echo 'No repository changes.'
           else
@@ -91,21 +93,28 @@ jobs:
       - name: Validate monitoring coverage
         if: steps.report.outputs.coverage != 'true'
         run: |
-          echo 'ERROR: the official-source baseline is incomplete. See monitor/report.json.'
+          echo 'ERROR: the official-source monitoring coverage is incomplete. See monitor/report.json.'
           exit 1
 
-      - name: Open review issue when content is quarantined
-        if: steps.report.outputs.blocked == 'true'
+      - name: Open review issue when official information needs review
+        if: steps.report.outputs.blocked == 'true' || steps.report.outputs.dre_alerts == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           python - <<'PY' > /tmp/issue.md
           import json
           r=json.load(open('monitor/report.json',encoding='utf-8'))
-          print('Uma fonte oficial mudou ou foi retirada e o Guia retirou automaticamente a orientação potencialmente desatualizada.\n')
-          print('## Páginas afetadas')
-          for p,ids in sorted(r.get('blocked_pages',{}).items()): print(f'- `{p}` — {", ".join(ids)}')
-          print('\nRever a fonte oficial, corrigir PT e EN e validar antes de retirar a quarentena.')
+          blocked=r.get('blocked_pages',{})
+          alerts=r.get('dre_rss_alerts',[])
+          if blocked:
+              print('Uma fonte oficial mudou ou foi retirada e o Guia colocou a orientação potencialmente desatualizada em quarentena.\n')
+              print('## Páginas afetadas')
+              for p,ids in sorted(blocked.items()): print(f'- `{p}` — {", ".join(ids)}')
+          if alerts:
+              print('\n## Nova legislação potencialmente relevante no Diário da República')
+              for a in alerts:
+                  print(f"- {a.get('title') or 'Sem título'} — {a.get('url') or a.get('source')}")
+          print('\nRever a fonte oficial, corrigir PT e EN quando necessário e validar antes de retirar qualquer quarentena.')
           PY
           gh label create official-source-change --color D93F0B --description 'Fonte oficial alterada' 2>/dev/null || true
           EXISTING=$(gh issue list --state open --label official-source-change --json number --jq '.[0].number // empty')

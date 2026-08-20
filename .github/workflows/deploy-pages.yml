@@ -8,6 +8,7 @@ on:
       - 'site/**'
       - 'scripts/qa.py'
       - 'scripts/build_locales.py'
+      - 'scripts/build_locales_uk_ru.py'
       - 'scripts/build_sitemap.py'
       - '.github/workflows/deploy-pages.yml'
 
@@ -32,8 +33,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install beautifulsoup4
-      - name: Build staged translations
+      - name: Build staged French and Spanish translations
         run: python scripts/build_locales.py
+      - name: Build staged Ukrainian and Russian translations
+        run: python scripts/build_locales_uk_ru.py
       - name: Build multilingual sitemap
         run: python scripts/build_sitemap.py
       - name: Run site QA

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import sys, subprocess
+import json, sys, subprocess
 from bs4 import BeautifulSoup
 
 site=Path('site')
@@ -45,7 +45,37 @@ for p in site.glob('*.html'):
     if f'href="en/{p.name}"' not in pt: problems.append(f'{p.name}: missing PT→EN')
     if f'href="../{p.name}"' not in en: problems.append(f'en/{p.name}: missing EN→PT')
 
-for js in ['ux.js','ux-en.js','sw.js','ops-v12.js','source-guard.js']:
+# Multilingual rollout guard: a locale cannot be marked live until it mirrors all
+# public PT pages that already have an English counterpart. This prevents a
+# half-translated language from becoming selectable by mistake.
+locale_file=site/'data/locales.json'
+if not locale_file.exists():
+    problems.append('data/locales.json: missing locale configuration')
+else:
+    try:
+        locale_data=json.loads(locale_file.read_text(encoding='utf-8'))
+        locales=locale_data.get('locales',[])
+        expected={'pt','en','fr','es','uk','ru','hi','bn'}
+        codes=[x.get('code') for x in locales]
+        if set(codes)!=expected: problems.append(f'data/locales.json: locale set mismatch {codes}')
+        if len(codes)!=len(set(codes)): problems.append('data/locales.json: duplicate locale code')
+        live={x.get('code') for x in locales if x.get('status')=='live'}
+        if not {'pt','en'}.issubset(live): problems.append('data/locales.json: PT and EN must remain live')
+        source_pages=[p.name for p in site.glob('*.html') if p.name!='404.html' and (site/'en'/p.name).exists()]
+        for code in sorted(live-{'pt'}):
+            folder=site/code
+            if not folder.exists():
+                problems.append(f'{code}: locale marked live but folder is missing')
+                continue
+            missing=[name for name in source_pages if not (folder/name).exists()]
+            if missing: problems.append(f'{code}: locale marked live but missing {len(missing)} mirrored pages')
+    except Exception as exc:
+        problems.append(f'data/locales.json: invalid JSON/configuration ({exc})')
+
+for required in ['language-switcher.js','language-switcher.css']:
+    if not (site/required).exists(): problems.append(f'{required}: missing multilingual asset')
+
+for js in ['ux.js','ux-en.js','sw.js','ops-v12.js','source-guard.js','language-switcher.js']:
     fp=site/js
     if fp.exists():
         r=subprocess.run(['node','--check',str(fp)],capture_output=True,text=True)
@@ -54,4 +84,4 @@ for js in ['ux.js','ux-en.js','sw.js','ops-v12.js','source-guard.js']:
 if problems:
     print('\n'.join(problems[:200]))
     sys.exit(1)
-print(f'QA OK — {len(files)} HTML files.')
+print(f'QA OK — {len(files)} HTML files; multilingual rollout guard active.')

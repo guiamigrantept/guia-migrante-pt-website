@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import re
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 from bs4 import BeautifulSoup, Comment
 
@@ -56,7 +56,7 @@ def suspicious(text: str) -> bool:
 
 
 problems = []
-report = {'version': 1, 'strict_when_live': True, 'locales': {}}
+report = {'version': 2, 'strict_when_live': True, 'locales': {}}
 
 for loc in TARGETS:
     code = loc['code']
@@ -90,15 +90,21 @@ for loc in TARGETS:
         'pages_with_hits': len(page_counts),
         'worst_pages': [
             {'page': page, 'hits': count}
-            for page, count in page_counts.most_common(15)
+            for page, count in page_counts.most_common(20)
         ],
         'by_kind': dict(attr_counts),
-        'examples': hits[:40],
+        'examples': hits[:120],
     }
 
     print(f'{code}: {len(hits)} Portuguese-looking node(s) across {files} files [{status}]')
     if page_counts:
-        print('  worst pages: ' + ', '.join(f'{p}={n}' for p, n in page_counts.most_common(8)))
+        print('  worst pages: ' + ', '.join(f'{p}={n}' for p, n in page_counts.most_common(10)))
+        print('  sample residues:')
+        for item in hits[:20]:
+            sample = item['text'].replace('\n', ' ')
+            if len(sample) > 180:
+                sample = sample[:177] + '...'
+            print(f"    - {item['page']} [{item['kind']}]: {sample}")
 
     if status == 'live' and hits:
         examples = '; '.join(f"{x['page']}: {x['text'][:100]}" for x in hits[:8])

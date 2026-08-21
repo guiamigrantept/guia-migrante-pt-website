@@ -2,6 +2,61 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-21T11:00:52Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-21T10:58:33Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "9fc0010952dbc031be3c9ff821ac246a642036e67a99aff50605f9fd123b50a6",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 68.220.61.209\n+Attack ID: 20000051\n+Message ID: 006944278457"
+    },
+    {
+      "time": "2026-08-21T10:56:12Z",
+      "source_id": "src_db343c2f6967",
+      "url": "https://aima.gov.pt/pt/viver/reagrupamento-familiar-com-familiar-fora-de-territorio-nacional-art-98-o-n-o-1",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/familia.html",
+        "familia.html"
+      ],
+      "candidate_sha256": "daeaf8ef29de00cac3797a412780045b5002cfb32e1c629aafb0b1dfc39a0a1d",
+      "diff_excerpt": "-Início\n-Notícias | News\n-A AIMA\n-FAQs\n-Viver | Living\n-Estudar | Studying\n-Trabalhar | Working\n-Empreender | Investing\n-Língua Portuguesa\n-Proteção Temporária\n-Brexit\n-Contactos | Contacts\n-Reagrupamento Familiar, com Familiar Fora de Território Nacional – Art. 98.º, n.º 1\n-Imprimir\n-Copiar\n-Partilhar\n-Facebook\n-ex Twitter\n-Mail\n-Documentos Necessários\n-O pedido é formulado mediante agendamento e é entregue presencialmente com impresso próprio assinado pelo requerente/titular do direito ao reagrupamento familiar e pode ser apresentado em qualquer Loja AIMA, que o pode remeter, após instrução e decisão, para os serviços da área de residência do requerente. Deve ser acompanhado de:\n-Autorização de Residência do cidadão que se encontra a residir em Portugal;\n-Cópia\n-autenticada\n-do passaporte do familiar a reagrupar;\n-Comprovativos devidamente\n-autenticados\n-dos vínculos familiares invocados (ver documentos específicos abaixo);\n-Declaração, sob compromisso de honra, da morada de residência, referindo em que termos se encontra a residir na habitação indicada\n-(ex. proprietário, arrendatário, subarrendatário, usufrutuário, comodatário, entre outras); e\n-Nas situações em que habita no l"
+    },
+    {
+      "time": "2026-08-21T10:56:04Z",
+      "source_id": "src_a4c0a29d56f8",
+      "url": "https://aima.gov.pt/pt/viver/menores-filhos-de-cidadaos-estrangeiros-titulares-de-autorizacao-de-residencia-nascidos-em-portugal-art-122-o-1-al-a",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-especiais.html",
+        "situacoes-especiais.html"
+      ],
+      "candidate_sha256": "daeaf8ef29de00cac3797a412780045b5002cfb32e1c629aafb0b1dfc39a0a1d",
+      "diff_excerpt": "-Início\n-Notícias | News\n-A AIMA\n-FAQs\n-Viver | Living\n-Estudar | Studying\n-Trabalhar | Working\n-Empreender | Investing\n-Língua Portuguesa\n-Proteção Temporária\n-Brexit\n-Contactos | Contacts\n-Menores, filhos ou filhas de cidadãos estrangeiros titulares de Autorização de Residência, nascidos ou nascidas em Portugal - Art. 122.º/1 al. a)\n-Imprimir\n-Copiar\n-Partilhar\n-Facebook\n-ex Twitter\n-Mail\n-Documentos Necessários\n-Passaporte válido;\n-Declaração, sob compromisso de honra, da morada de residência, referindo em que termos se encontra a residir na habitação indicada\n-(ex. proprietário, arrendatário, subarrendatário, usufrutuário, comodatário, entre outras); e\n-Nas situações em que habita no local por ser proprietário ou usufrutuário, deve apresentar certidão de registo predial ou disponibilização do respetivo código de acesso para comprovar o direito de propriedade ou o direito de usufruto, ou\n-Nas situações em que habita no local como arrendatário ou locatário, etc., declaração do senhorio do imóvel ou da entidade alojadora, com menção da situação jurídica subjacente ao direito de uso do imóvel;\n-Comprovativo de\n-meios de subsistência\n-Certidão de registo de nascimento do menor;\n-Cer"
+    },
+    {
+      "time": "2026-08-21T10:55:56Z",
+      "source_id": "src_139f74e2e14d",
+      "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-vitimas-de-trafico-de-pessoas-ou-de-acao-de-auxilio-a-imigracao-ilegal-art-109-o",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-especiais.html",
+        "situacoes-especiais.html"
+      ],
+      "candidate_sha256": "daeaf8ef29de00cac3797a412780045b5002cfb32e1c629aafb0b1dfc39a0a1d",
+      "diff_excerpt": "-Início\n-Notícias | News\n-A AIMA\n-FAQs\n-Viver | Living\n-Estudar | Studying\n-Trabalhar | Working\n-Empreender | Investing\n-Língua Portuguesa\n-Proteção Temporária\n-Brexit\n-Contactos | Contacts\n-Autorização de Residência para Vítimas de Tráfico de Pessoas ou de Ação de Auxílio à Imigração Ilegal – Art. 109.º\n-Imprimir\n-Copiar\n-Partilhar\n-Facebook\n-ex Twitter\n-Mail\n-Requisitos\n-A Autorização de Residência é concedida ao cidadão estrangeiro que seja ou tenha sido vítima de infrações penais ligadas ao tráfico de pessoas ou ao auxílio à imigração ilegal, mesmo que:\n-Tenha entrado ilegalmente no país ou\n-Não preencha as condições de concessão de Autorização de Residência\n-O procedimento é iniciado após comunicação à AIMA pelas Autoridades responsáveis pela investigação\n-Notas\n-A autorização de residência é válida (emitida) pelo período de 1 ano.\n-Finda a situação que gerou a concessão da Autorização de Residência a Vítimas de Tráfico de Pessoas ou de Ação de Auxílio à Imigração Ilegal, poderá solicitar concessão de Autorização de Residência Temporária nos termos da alínea\n-) do n.º 1 do art.º 122º da Lei de Estrangeiros.\n-Taxas\n-Tabela de taxas e demais encargos a cobrar pelos procedimentos"
+    },
+    {
       "time": "2026-08-21T08:15:34Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",

@@ -1,12 +1,31 @@
 {
-  "generated_at": "2026-08-21T08:15:43Z",
+  "generated_at": "2026-08-21T11:01:04Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
   "required_sources": 81,
   "missing_required": [],
-  "changed_sources": [],
-  "blocked_pages": {},
+  "changed_sources": [
+    "src_139f74e2e14d",
+    "src_a4c0a29d56f8",
+    "src_db343c2f6967"
+  ],
+  "blocked_pages": {
+    "en/situacoes-especiais.html": [
+      "src_139f74e2e14d",
+      "src_a4c0a29d56f8"
+    ],
+    "situacoes-especiais.html": [
+      "src_139f74e2e14d",
+      "src_a4c0a29d56f8"
+    ],
+    "en/familia.html": [
+      "src_db343c2f6967"
+    ],
+    "familia.html": [
+      "src_db343c2f6967"
+    ]
+  },
   "errors": [
     {
       "id": "src_08741fbb1e64",
@@ -16,7 +35,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
+      "failure_count": 13,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -27,7 +46,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
+      "failure_count": 13,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -38,8 +57,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7fb5e19473e0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://contactenos.aima.gov.pt/contact-form']' timed out after 70 seconds"
+      "failure_count": 13,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7efd98b69220>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://contactenos.aima.gov.pt/contact-form']' timed out after 70 seconds"
     },
     {
       "id": "src_e36005383a29",
@@ -82,7 +101,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
+      "failure_count": 13,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
@@ -93,7 +112,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
+      "failure_count": 13,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
@@ -104,7 +123,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
+      "failure_count": 13,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
@@ -115,8 +134,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7fb5e1905f10>, 'Connection to services.aima.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://services.aima.gov.pt/']' timed out after 70 seconds"
+      "failure_count": 13,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7efd988b35f0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://services.aima.gov.pt/']' timed out after 70 seconds"
     },
     {
       "id": "src_6262714f7433",
@@ -126,7 +145,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
+      "failure_count": 13,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
@@ -137,18 +156,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 12,
+      "failure_count": 13,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
-    },
-    {
-      "id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "domain": "simuladorprecos.erse.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
     }
   ],
   "critical_errors": [],

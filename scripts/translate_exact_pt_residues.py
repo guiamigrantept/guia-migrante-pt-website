@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import runpy
 import time
 from pathlib import Path
@@ -10,7 +11,9 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'site'
 CFG = json.loads((SITE / 'data/locales.json').read_text(encoding='utf-8'))
-TARGETS = [x['code'] for x in CFG.get('locales', []) if x.get('code') not in {'pt', 'en'}]
+ALL_TARGETS = [x['code'] for x in CFG.get('locales', []) if x.get('code') not in {'pt', 'en'}]
+REQUESTED = [x.strip() for x in os.getenv('TRANSLATION_LOCALES', '').split(',') if x.strip()]
+TARGETS = [x for x in ALL_TARGETS if not REQUESTED or x in REQUESTED]
 REPORT = SITE / 'data' / 'exact-residue-translation-report.json'
 
 base = runpy.run_path(str(ROOT / 'scripts' / 'auto_translate_untranslated_copy.py'))
@@ -35,9 +38,6 @@ def translatable(text: str) -> bool:
 
 def collect_exact_matches(source_soup: BeautifulSoup, target_soup: BeautifulSoup):
     pairs = []
-
-    # Do not zip text nodes: translated markup can introduce/remove text nodes
-    # without changing page structure. Match by exact Portuguese source value.
     source_texts = {norm(str(node)) for node in visible_text_nodes(source_soup)}
     for dst in visible_text_nodes(target_soup):
         current = norm(str(dst))
@@ -51,12 +51,14 @@ def collect_exact_matches(source_soup: BeautifulSoup, target_soup: BeautifulSoup
         current = norm(str(tag.get(attr, '')))
         if current in source_attrs.get(attr, set()) and translatable(current):
             pairs.append(('attr', (tag, attr), current))
-
     return pairs
 
 
 def main():
-    report = {'version': 1, 'method': 'exact-source-value matching', 'locales': {}}
+    if REQUESTED and not TARGETS:
+        raise SystemExit(f'No supported locale selected: {REQUESTED}')
+    print('Exact-residue worker locales: ' + ', '.join(TARGETS))
+    report = {'version': 2, 'method': 'exact-source-value matching', 'locales': {}}
 
     for code in TARGETS:
         folder = SITE / code
@@ -88,7 +90,7 @@ def main():
             except Exception as exc:
                 failures.append({'batch': n, 'size': len(batch), 'error': str(exc)})
                 print(f'  WARNING {code}: batch {n}/{len(batches)} failed: {exc}')
-            time.sleep(0.18)
+            time.sleep(0.25)
 
         changed_nodes = 0
         changed_pages = 0
@@ -119,6 +121,8 @@ def main():
             'failed_batches': failures,
         }
         print(f'{code}: replaced {changed_nodes} exact Portuguese field(s) across {changed_pages} page(s); failures={len(failures)}')
+        if failures:
+            raise SystemExit(f'{code}: exact residue translation failed for {len(failures)} batch(es)')
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')

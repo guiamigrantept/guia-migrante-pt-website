@@ -33,9 +33,45 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  qa-and-deploy:
+  translate-locales:
+    name: Translate ${{ matrix.locale }} on isolated worker
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        locale: [fr, es, uk, ru, hi, bn]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install beautifulsoup4
+      - name: Rebuild complete locale structure
+        run: python scripts/build_structural_parity_locales.py
+      - name: Overlay reviewed translated copy
+        run: python scripts/apply_full_structure_translation_copy.py
+      - name: Fill untranslated copy for ${{ matrix.locale }}
+        env:
+          TRANSLATION_LOCALES: ${{ matrix.locale }}
+        run: python scripts/auto_translate_untranslated_copy.py
+      - name: Translate exact Portuguese residues for ${{ matrix.locale }}
+        env:
+          TRANSLATION_LOCALES: ${{ matrix.locale }}
+        run: python scripts/translate_exact_pt_residues.py
+      - name: Upload localized pages
+        uses: actions/upload-artifact@v4
+        with:
+          name: locale-${{ matrix.locale }}
+          path: site/${{ matrix.locale }}/
+          if-no-files-found: error
+          retention-days: 1
+
+  qa-and-deploy:
+    needs: translate-locales
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
     env:
       CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -45,15 +81,35 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install beautifulsoup4
-      - name: Rebuild every staged locale from complete Portuguese page structure
+      - name: Rebuild complete staged locale structure
         run: python scripts/build_structural_parity_locales.py
-      - name: Overlay reviewed translated copy without changing the page structure
+      - name: Overlay reviewed translated copy
         run: python scripts/apply_full_structure_translation_copy.py
-      - name: Fill remaining untranslated copy while preserving the complete structure
-        run: python scripts/auto_translate_untranslated_copy.py
-      - name: Translate exact Portuguese residues without relying on text-node alignment
-        run: python scripts/translate_exact_pt_residues.py
-      - name: Check full page and feature parity after translation overlay
+      - uses: actions/download-artifact@v4
+        with:
+          name: locale-fr
+          path: site/fr
+      - uses: actions/download-artifact@v4
+        with:
+          name: locale-es
+          path: site/es
+      - uses: actions/download-artifact@v4
+        with:
+          name: locale-uk
+          path: site/uk
+      - uses: actions/download-artifact@v4
+        with:
+          name: locale-ru
+          path: site/ru
+      - uses: actions/download-artifact@v4
+        with:
+          name: locale-hi
+          path: site/hi
+      - uses: actions/download-artifact@v4
+        with:
+          name: locale-bn
+          path: site/bn
+      - name: Check full page and feature parity after translation
         run: python scripts/check_locale_parity.py
       - name: Audit translation completeness before locale publication
         run: python scripts/check_translation_completeness.py

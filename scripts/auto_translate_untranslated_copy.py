@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import time
 from pathlib import Path
@@ -13,13 +14,12 @@ from bs4 import BeautifulSoup, Comment
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'site'
 CFG = json.loads((SITE / 'data/locales.json').read_text(encoding='utf-8'))
-TARGETS = [x['code'] for x in CFG.get('locales', []) if x.get('code') not in {'pt', 'en'}]
+ALL_TARGETS = [x['code'] for x in CFG.get('locales', []) if x.get('code') not in {'pt', 'en'}]
+REQUESTED = [x.strip() for x in os.getenv('TRANSLATION_LOCALES', '').split(',') if x.strip()]
+TARGETS = [x for x in ALL_TARGETS if not REQUESTED or x in REQUESTED]
 SKIP_TAGS = {'script', 'style', 'noscript', 'svg', 'code'}
 REPORT = SITE / 'data' / 'auto-translation-report.json'
 
-# These are names/acronyms/technical tokens that should remain unchanged when
-# they appear alone. They may still appear inside a longer sentence that needs
-# translation; Google normally preserves them there.
 DO_NOT_TRANSLATE_ALONE = {
     'Guia Migrante PT', 'AIMA', 'NIF', 'NISS', 'SNS', 'SNS 24', 'CPLP', 'CLAIM',
     'Portugal', 'Portal das Finanças', 'Segurança Social', 'Diário da República',
@@ -42,7 +42,6 @@ def should_translate(source: str, current: str) -> bool:
         return False
     if len(s) < 2:
         return False
-    # Ignore values with no letters at all (dates, separators, pure numbers).
     if not any(ch.isalpha() for ch in s):
         return False
     return True
@@ -71,7 +70,7 @@ def attr_slots(soup: BeautifulSoup):
     return slots
 
 
-def post_translate(text: str, target: str, attempts: int = 3) -> str:
+def post_translate(text: str, target: str, attempts: int = 4) -> str:
     endpoint = 'https://translate.googleapis.com/translate_a/single'
     payload = urlencode({
         'client': 'gtx',
@@ -92,7 +91,7 @@ def post_translate(text: str, target: str, attempts: int = 3) -> str:
                 },
                 method='POST',
             )
-            with urlopen(req, timeout=25) as response:
+            with urlopen(req, timeout=30) as response:
                 data = json.loads(response.read().decode('utf-8'))
             chunks = data[0] if data and isinstance(data[0], list) else []
             result = ''.join((part[0] or '') for part in chunks if isinstance(part, list) and part)
@@ -101,11 +100,11 @@ def post_translate(text: str, target: str, attempts: int = 3) -> str:
             last_error = RuntimeError('empty translation response')
         except (URLError, HTTPError, TimeoutError, ValueError, OSError) as exc:
             last_error = exc
-        time.sleep(1.5 * (attempt + 1))
+        time.sleep(2.0 * (attempt + 1))
     raise RuntimeError(f'translation request failed: {last_error}')
 
 
-def make_batches(strings: list[str], max_chars: int = 2800):
+def make_batches(strings: list[str], max_chars: int = 2400):
     batches = []
     current = []
     total = 0
@@ -132,12 +131,10 @@ def translate_batch(strings: list[str], target: str) -> dict[str, str]:
     translated = post_translate(payload, target)
     matches = list(MARKER_RE.finditer(translated))
     if len(matches) != len(strings):
-        # Marker preservation can vary. Fall back to individual requests only for
-        # this batch rather than risking text being assigned to the wrong node.
         out = {}
         for text in strings:
             out[text] = post_translate(text, target)
-            time.sleep(0.12)
+            time.sleep(0.15)
         return out
 
     out = {}
@@ -152,7 +149,7 @@ def translate_batch(strings: list[str], target: str) -> dict[str, str]:
         missing = [s for s in strings if s not in out]
         for text in missing:
             out[text] = post_translate(text, target)
-            time.sleep(0.12)
+            time.sleep(0.15)
     return out
 
 
@@ -183,7 +180,10 @@ def collect_page_pairs(source_soup: BeautifulSoup, target_soup: BeautifulSoup):
 
 
 def main():
-    report = {'version': 1, 'provider': 'Google Translate draft fallback', 'locales': {}}
+    if REQUESTED and not TARGETS:
+        raise SystemExit(f'No supported locale selected: {REQUESTED}')
+    print('Translation worker locales: ' + ', '.join(TARGETS))
+    report = {'version': 2, 'provider': 'Google Translate draft fallback', 'locales': {}}
 
     for code in TARGETS:
         folder = SITE / code
@@ -216,7 +216,7 @@ def main():
             except Exception as exc:
                 failures.append({'batch': n, 'size': len(batch), 'error': str(exc)})
                 print(f'  WARNING {code}: batch {n}/{len(batches)} failed: {exc}')
-            time.sleep(0.18)
+            time.sleep(0.25)
 
         changed_nodes = 0
         changed_pages = 0
@@ -247,6 +247,8 @@ def main():
             'failed_batches': failures,
         }
         print(f'{code}: filled {changed_nodes} untranslated field(s) across {changed_pages} page(s); failures={len(failures)}')
+        if failures:
+            raise SystemExit(f'{code}: translation provider failed for {len(failures)} batch(es)')
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')

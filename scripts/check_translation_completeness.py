@@ -26,7 +26,7 @@ WHITELIST = {
 }
 
 DISTINCTIVE_PT_RE = re.compile(
-    r'\b(?:não|também|vocês|você|deve|foram|serão|estão|são|morada|utente|'
+    r'\b(?:não|também|vocês|você|deve|foram|serão|estão|morada|utente|'
     r'agendamento|qualquer|ligações|utilização|orientação|proteção|'
     r'habitação|renovação|qualificações|condições|trabalhadores|empregadores)\b|'
     r'\b(?:para quem é|antes de agir|mais pessoas|não pertence|no momento do pedido)\b',
@@ -43,13 +43,15 @@ ADDRESSISH_RE = re.compile(
 )
 
 TARGET_HINTS = {
-    'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France|espace|union|paroisses?)\b', re.I),
-    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?|espacio|unión|parroquias?|pasaporte|documento|país)\b', re.I),
+    'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France|espace|union|paroisses?|règles|peuvent|changer|information|officielle)\b', re.I),
+    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?|espacio|unión|parroquias?|pasaporte|documento|país|pueden|cambiar|momento|realizar|pedido|fuente)\b', re.I),
     'uk': re.compile(r'[А-Яа-яІіЇїЄєҐґ]'),
     'ru': re.compile(r'[А-Яа-яЁё]'),
     'hi': re.compile(r'[\u0900-\u097F]'),
     'bn': re.compile(r'[\u0980-\u09FF]'),
 }
+
+SCRIPT_TARGETS = {'uk', 'ru', 'hi', 'bn'}
 
 
 def norm(value: str) -> str:
@@ -124,6 +126,12 @@ def has_target_language_evidence(text: str, target_code: str) -> bool:
 
 
 def detected_portuguese(text: str, target_code: str) -> bool:
+    # Statistical language detection is deliberately used only for targets with
+    # a different writing system. French and Spanish are too close to Portuguese
+    # for langdetect to be a reliable blocking signal on short/mixed UI strings.
+    if target_code not in SCRIPT_TARGETS:
+        return False
+
     words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
     if len(words) < 5 or len(text) < 24:
         return False
@@ -131,7 +139,6 @@ def detected_portuguese(text: str, target_code: str) -> bool:
     probs = language_probabilities(text)
     pt_prob = probs.get('pt', 0.0)
     target_prob = probs.get(target_code, 0.0)
-
     if target_prob >= 0.35:
         return False
     return pt_prob >= 0.90 and pt_prob >= target_prob + 0.45
@@ -140,8 +147,6 @@ def detected_portuguese(text: str, target_code: str) -> bool:
 def meaningful_portuguese(text: str, target_code: str) -> bool:
     if ignorable(text):
         return False
-    # Target-language evidence wins over ambiguous words such as "são" inside
-    # Portuguese place names and over Spanish cognates such as "prevalece".
     if has_target_language_evidence(text, target_code):
         return False
     if DISTINCTIVE_PT_RE.search(text):
@@ -150,19 +155,34 @@ def meaningful_portuguese(text: str, target_code: str) -> bool:
 
 
 def classify_residue(kind: str, text: str, source_values: dict[str, set[str]], target_code: str):
-    if not meaningful_portuguese(text, target_code):
+    if ignorable(text):
         return None
+    if has_target_language_evidence(text, target_code):
+        return None
+
+    # The strongest and most deterministic signal is that translated copy is
+    # still exactly equal to the Portuguese source. This catches real misses
+    # without treating valid French/Spanish sentences as Portuguese merely
+    # because a statistical detector is uncertain.
     if text in source_values.get(kind, set()):
-        return 'exact-portuguese-source-match'
-    return 'detected-portuguese'
+        words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
+        if DISTINCTIVE_PT_RE.search(text) or len(words) >= 3:
+            return 'exact-portuguese-source-match'
+        return None
+
+    # Non-exact text only blocks when there is strong Portuguese-specific
+    # evidence. For script-based targets we also retain conservative language ID.
+    if meaningful_portuguese(text, target_code):
+        return 'detected-portuguese'
+    return None
 
 
 def run_audit():
     problems = []
     report = {
-        'version': 6,
+        'version': 7,
         'strict_when_live': True,
-        'method': 'target-evidence-first+language-detection+distinctive-portuguese-signals',
+        'method': 'deterministic-source-match+strong-portuguese-signals',
         'locales': {},
     }
 

@@ -17,6 +17,8 @@ REPORT = SITE / 'data' / 'translation-audit.json'
 CFG = json.loads((SITE / 'data/locales.json').read_text(encoding='utf-8'))
 TARGETS = [x for x in CFG.get('locales', []) if x.get('code') not in {'pt', 'en'}]
 SKIP_TAGS = {'script', 'style', 'noscript', 'svg', 'code'}
+SCRIPT_TARGETS = {'uk', 'ru', 'hi', 'bn'}
+ROMANCE_TARGETS = {'fr', 'es'}
 
 WHITELIST = {
     'Guia Migrante PT', 'AIMA', 'NIF', 'NISS', 'SNS', 'SNS 24', 'CPLP', 'CLAIM',
@@ -28,7 +30,9 @@ WHITELIST = {
 DISTINCTIVE_PT_RE = re.compile(
     r'\b(?:não|também|vocês|você|deve|foram|serão|estão|morada|utente|'
     r'agendamento|qualquer|ligações|utilização|orientação|proteção|'
-    r'habitação|renovação|qualificações|condições|trabalhadores|empregadores)\b|'
+    r'habitação|renovação|qualificações|condições|trabalhadores|empregadores|'
+    r'informação|serviços|saúde|residência|documentação|cidadão|cidadania|'
+    r'necessário|necessária|possível|português|portuguesa)\b|'
     r'\b(?:para quem é|antes de agir|mais pessoas|não pertence|no momento do pedido)\b',
     re.IGNORECASE,
 )
@@ -38,20 +42,18 @@ URLISH_RE = re.compile(r'^(?:https?://|mailto:|www\.|[\w.-]+\.(?:pt|com|org|eu))
 TECH_TOKEN_RE = re.compile(r'^(?:html?|pt|en|fr|es|uk|ru|hi|bn|aima|nif|niss|sns|cplp|claim|irn|imt|dges|act|cig|erse)(?:\s*[↗→])?$', re.I)
 COPYRIGHT_RE = re.compile(r'^©\s*\d{4}\s+Guia Migrante PT\.?$', re.I)
 ADDRESSISH_RE = re.compile(
-    r'\b(?:Rua|R\.|Avenida|Av\.|Estrada|Praça|Largo|Travessa|Lisboa|Porto|Oporto|Cacém|Odivelas|Cascais)\b',
+    r'\b(?:Rua|R\.|Avenida|Av\.|Estrada|Praça|Largo|Travessa|Lisboa|Porto|Oporto|Cacém|Odivelas|Cascais|Cedofeita|Ildefonso|Miragaia|Vitória)\b',
     re.I,
 )
 
 TARGET_HINTS = {
-    'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France|espace|union|paroisses?|règles|peuvent|changer|information|officielle)\b', re.I),
-    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?|espacio|unión|parroquias?|pasaporte|documento|país|pueden|cambiar|momento|realizar|pedido|fuente)\b', re.I),
+    'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France|espace|union|paroisses?|règles|peuvent|changer|information|officielle|page|chercher|documents?|travail|santé|résidence)\b', re.I),
+    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?|espacio|unión|parroquias?|pasaporte|documento|país|pueden|cambiar|momento|realizar|pedido|fuente|servicios?|trabajo|salud|residencia)\b', re.I),
     'uk': re.compile(r'[А-Яа-яІіЇїЄєҐґ]'),
     'ru': re.compile(r'[А-Яа-яЁё]'),
     'hi': re.compile(r'[\u0900-\u097F]'),
     'bn': re.compile(r'[\u0980-\u09FF]'),
 }
-
-SCRIPT_TARGETS = {'uk', 'ru', 'hi', 'bn'}
 
 
 def norm(value: str) -> str:
@@ -93,11 +95,11 @@ def ignorable(text: str) -> bool:
         return True
     if not any(ch.isalpha() for ch in text):
         return True
-    if POSTAL_RE.search(text) and not DISTINCTIVE_PT_RE.search(text):
-        return True
     if EMAIL_RE.match(cleaned) or URLISH_RE.match(cleaned):
         return True
-    if TECH_TOKEN_RE.match(text.strip()) or COPYRIGHT_RE.match(text.strip()):
+    if TECH_TOKEN_RE.match(cleaned) or COPYRIGHT_RE.match(cleaned):
+        return True
+    if POSTAL_RE.search(text) and not DISTINCTIVE_PT_RE.search(text):
         return True
     if ADDRESSISH_RE.search(text) and not DISTINCTIVE_PT_RE.search(text):
         return True
@@ -117,31 +119,39 @@ def has_target_language_evidence(text: str, target_code: str) -> bool:
     hint = TARGET_HINTS.get(target_code)
     if hint and hint.search(text):
         return True
-
     words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
     if len(words) < 4 or len(text) < 20:
         return False
     probs = language_probabilities(text)
-    return probs.get(target_code, 0.0) >= 0.35
+    return probs.get(target_code, 0.0) >= 0.45
 
 
-def detected_portuguese(text: str, target_code: str) -> bool:
-    # Statistical language detection is deliberately used only for targets with
-    # a different writing system. French and Spanish are too close to Portuguese
-    # for langdetect to be a reliable blocking signal on short/mixed UI strings.
-    if target_code not in SCRIPT_TARGETS:
-        return False
-
+def source_is_clearly_portuguese(text: str, target_code: str) -> bool:
+    if DISTINCTIVE_PT_RE.search(text):
+        return True
     words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
     if len(words) < 5 or len(text) < 24:
         return False
+    probs = language_probabilities(text)
+    pt_prob = probs.get('pt', 0.0)
+    target_prob = probs.get(target_code, 0.0)
+    if target_code in ROMANCE_TARGETS:
+        return pt_prob >= 0.96 and target_prob <= 0.15
+    return pt_prob >= 0.80
 
+
+def detected_portuguese(text: str, target_code: str) -> bool:
+    if target_code not in SCRIPT_TARGETS:
+        return False
+    words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
+    if len(words) < 5 or len(text) < 24:
+        return False
     probs = language_probabilities(text)
     pt_prob = probs.get('pt', 0.0)
     target_prob = probs.get(target_code, 0.0)
     if target_prob >= 0.35:
         return False
-    return pt_prob >= 0.90 and pt_prob >= target_prob + 0.45
+    return pt_prob >= 0.90
 
 
 def meaningful_portuguese(text: str, target_code: str) -> bool:
@@ -160,18 +170,16 @@ def classify_residue(kind: str, text: str, source_values: dict[str, set[str]], t
     if has_target_language_evidence(text, target_code):
         return None
 
-    # The strongest and most deterministic signal is that translated copy is
-    # still exactly equal to the Portuguese source. This catches real misses
-    # without treating valid French/Spanish sentences as Portuguese merely
-    # because a statistical detector is uncertain.
     if text in source_values.get(kind, set()):
         words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
-        if DISTINCTIVE_PT_RE.search(text) or len(words) >= 3:
+        if target_code in SCRIPT_TARGETS:
+            if DISTINCTIVE_PT_RE.search(text) or len(words) >= 3:
+                return 'exact-portuguese-source-match'
+            return None
+        if source_is_clearly_portuguese(text, target_code):
             return 'exact-portuguese-source-match'
         return None
 
-    # Non-exact text only blocks when there is strong Portuguese-specific
-    # evidence. For script-based targets we also retain conservative language ID.
     if meaningful_portuguese(text, target_code):
         return 'detected-portuguese'
     return None
@@ -180,9 +188,9 @@ def classify_residue(kind: str, text: str, source_values: dict[str, set[str]], t
 def run_audit():
     problems = []
     report = {
-        'version': 7,
+        'version': 8,
         'strict_when_live': True,
-        'method': 'deterministic-source-match+strong-portuguese-signals',
+        'method': 'exact-source+strong-portuguese-evidence; statistical-blocking-only-for-distinct-script-targets',
         'locales': {},
     }
 

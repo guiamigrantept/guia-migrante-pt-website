@@ -25,10 +25,6 @@ WHITELIST = {
     'EN', 'PT', 'html', 'HTML',
 }
 
-# Short expressions that are strongly Portuguese even without enough context for
-# reliable statistical language detection. Avoid shared Spanish words such as
-# para, portal, contactos, idioma, documentos or información/informação-like
-# cognates unless they contain Portuguese-specific spelling.
 DISTINCTIVE_PT_RE = re.compile(
     r'\b(?:não|também|vocês|você|deve|foram|serão|estão|são|morada|utente|'
     r'agendamento|qualquer|prevalece|ligações|utilização|orientação|proteção|'
@@ -41,6 +37,18 @@ EMAIL_RE = re.compile(r'^[^\s@]+@[^\s@]+\.[^\s@]+$')
 URLISH_RE = re.compile(r'^(?:https?://|mailto:|www\.|[\w.-]+\.(?:pt|com|org|eu))(?:\b|/)', re.I)
 TECH_TOKEN_RE = re.compile(r'^(?:html?|pt|en|fr|es|uk|ru|hi|bn|aima|nif|niss|sns|cplp|claim|irn|imt|dges|act|cig|erse)(?:\s*[↗→])?$', re.I)
 COPYRIGHT_RE = re.compile(r'^©\s*\d{4}\s+Guia Migrante PT\.?$', re.I)
+
+# Positive evidence that the surrounding copy is already in the target language.
+# These are only used to suppress statistical false positives; a distinctive
+# Portuguese expression above still wins and is reported.
+TARGET_HINTS = {
+    'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France)\b', re.I),
+    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?)\b', re.I),
+    'uk': re.compile(r'[А-Яа-яІіЇїЄєҐґ]'),
+    'ru': re.compile(r'[А-Яа-яЁё]'),
+    'hi': re.compile(r'[\u0900-\u097F]'),
+    'bn': re.compile(r'[\u0980-\u09FF]'),
+}
 
 
 def norm(value: str) -> str:
@@ -88,38 +96,59 @@ def ignorable(text: str) -> bool:
         return True
     if TECH_TOKEN_RE.match(text.strip()) or COPYRIGHT_RE.match(text.strip()):
         return True
-    # Common proper-name / venue fragments are not evidence of untranslated copy.
     if len(text.split()) <= 4 and ('–' in text or '-' in text) and not DISTINCTIVE_PT_RE.search(text):
         return True
     return False
 
 
-def detected_portuguese(text: str) -> bool:
-    # Language ID is useful only with enough lexical context. This deliberately
-    # ignores short shared labels such as "Contactos" or "Portal".
+def language_probabilities(text: str) -> dict[str, float]:
+    try:
+        return {g.lang: g.prob for g in detect_langs(text)}
+    except LangDetectException:
+        return {}
+
+
+def has_target_language_evidence(text: str, target_code: str) -> bool:
+    hint = TARGET_HINTS.get(target_code)
+    if hint and hint.search(text):
+        return True
+
+    words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
+    if len(words) < 4 or len(text) < 20:
+        return False
+    probs = language_probabilities(text)
+    return probs.get(target_code, 0.0) >= 0.35
+
+
+def detected_portuguese(text: str, target_code: str) -> bool:
     words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
     if len(words) < 5 or len(text) < 24:
         return False
-    try:
-        guesses = detect_langs(text)
-    except LangDetectException:
+
+    probs = language_probabilities(text)
+    pt_prob = probs.get('pt', 0.0)
+    target_prob = probs.get(target_code, 0.0)
+
+    # Do not call translated/mixed UI copy Portuguese when the intended target
+    # language is itself strongly represented. This removes false positives from
+    # official Portuguese proper names embedded in otherwise translated text.
+    if target_prob >= 0.35:
         return False
-    for guess in guesses:
-        if guess.lang == 'pt' and guess.prob >= 0.80:
-            return True
-    return False
+    return pt_prob >= 0.90 and pt_prob >= target_prob + 0.45
 
 
-def meaningful_portuguese(text: str) -> bool:
+def meaningful_portuguese(text: str, target_code: str) -> bool:
     if ignorable(text):
         return False
     if DISTINCTIVE_PT_RE.search(text):
         return True
-    return detected_portuguese(text)
+    if has_target_language_evidence(text, target_code):
+        return False
+    return detected_portuguese(text, target_code)
 
 
-def classify_residue(kind: str, text: str, source_values: dict[str, set[str]]):
-    if not meaningful_portuguese(text):
+def classify_residue(kind: str, text: str, source_values: dict[str, set[str]], target_code: str):
+    if not meaningful_portuguese(text, target_code):
         return None
     if text in source_values.get(kind, set()):
         return 'exact-portuguese-source-match'
@@ -128,9 +157,9 @@ def classify_residue(kind: str, text: str, source_values: dict[str, set[str]]):
 
 problems = []
 report = {
-    'version': 4,
+    'version': 5,
     'strict_when_live': True,
-    'method': 'meaningful-exact-source-match+language-detection',
+    'method': 'target-aware-language-detection+distinctive-portuguese-signals',
     'locales': {},
 }
 
@@ -154,7 +183,7 @@ for loc in TARGETS:
             continue
         source_values = source_sets(source_path)
         for kind, text in visible_items(fp):
-            reason = classify_residue(kind, text, source_values)
+            reason = classify_residue(kind, text, source_values, code)
             if not reason:
                 continue
             key = (fp.name, kind, text)

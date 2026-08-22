@@ -27,7 +27,7 @@ WHITELIST = {
 
 DISTINCTIVE_PT_RE = re.compile(
     r'\b(?:não|também|vocês|você|deve|foram|serão|estão|são|morada|utente|'
-    r'agendamento|qualquer|prevalece|ligações|utilização|orientação|proteção|'
+    r'agendamento|qualquer|ligações|utilização|orientação|proteção|'
     r'habitação|renovação|qualificações|condições|trabalhadores|empregadores)\b|'
     r'\b(?:para quem é|antes de agir|mais pessoas|não pertence|no momento do pedido)\b',
     re.IGNORECASE,
@@ -37,10 +37,14 @@ EMAIL_RE = re.compile(r'^[^\s@]+@[^\s@]+\.[^\s@]+$')
 URLISH_RE = re.compile(r'^(?:https?://|mailto:|www\.|[\w.-]+\.(?:pt|com|org|eu))(?:\b|/)', re.I)
 TECH_TOKEN_RE = re.compile(r'^(?:html?|pt|en|fr|es|uk|ru|hi|bn|aima|nif|niss|sns|cplp|claim|irn|imt|dges|act|cig|erse)(?:\s*[↗→])?$', re.I)
 COPYRIGHT_RE = re.compile(r'^©\s*\d{4}\s+Guia Migrante PT\.?$', re.I)
+ADDRESSISH_RE = re.compile(
+    r'\b(?:Rua|R\.|Avenida|Av\.|Estrada|Praça|Largo|Travessa|Lisboa|Porto|Oporto|Cacém|Odivelas|Cascais)\b',
+    re.I,
+)
 
 TARGET_HINTS = {
-    'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France)\b', re.I),
-    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?)\b', re.I),
+    'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France|espace|union|paroisses?)\b', re.I),
+    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?|espacio|unión|parroquias?|pasaporte|documento|país)\b', re.I),
     'uk': re.compile(r'[А-Яа-яІіЇїЄєҐґ]'),
     'ru': re.compile(r'[А-Яа-яЁё]'),
     'hi': re.compile(r'[\u0900-\u097F]'),
@@ -93,6 +97,8 @@ def ignorable(text: str) -> bool:
         return True
     if TECH_TOKEN_RE.match(text.strip()) or COPYRIGHT_RE.match(text.strip()):
         return True
+    if ADDRESSISH_RE.search(text) and not DISTINCTIVE_PT_RE.search(text):
+        return True
     if len(text.split()) <= 4 and ('–' in text or '-' in text) and not DISTINCTIVE_PT_RE.search(text):
         return True
     return False
@@ -134,10 +140,12 @@ def detected_portuguese(text: str, target_code: str) -> bool:
 def meaningful_portuguese(text: str, target_code: str) -> bool:
     if ignorable(text):
         return False
-    if DISTINCTIVE_PT_RE.search(text):
-        return True
+    # Target-language evidence wins over ambiguous words such as "são" inside
+    # Portuguese place names and over Spanish cognates such as "prevalece".
     if has_target_language_evidence(text, target_code):
         return False
+    if DISTINCTIVE_PT_RE.search(text):
+        return True
     return detected_portuguese(text, target_code)
 
 
@@ -152,9 +160,9 @@ def classify_residue(kind: str, text: str, source_values: dict[str, set[str]], t
 def run_audit():
     problems = []
     report = {
-        'version': 5,
+        'version': 6,
         'strict_when_live': True,
-        'method': 'target-aware-language-detection+distinctive-portuguese-signals',
+        'method': 'target-evidence-first+language-detection+distinctive-portuguese-signals',
         'locales': {},
     }
 

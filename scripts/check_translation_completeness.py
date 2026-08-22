@@ -38,9 +38,6 @@ URLISH_RE = re.compile(r'^(?:https?://|mailto:|www\.|[\w.-]+\.(?:pt|com|org|eu))
 TECH_TOKEN_RE = re.compile(r'^(?:html?|pt|en|fr|es|uk|ru|hi|bn|aima|nif|niss|sns|cplp|claim|irn|imt|dges|act|cig|erse)(?:\s*[↗→])?$', re.I)
 COPYRIGHT_RE = re.compile(r'^©\s*\d{4}\s+Guia Migrante PT\.?$', re.I)
 
-# Positive evidence that the surrounding copy is already in the target language.
-# These are only used to suppress statistical false positives; a distinctive
-# Portuguese expression above still wins and is reported.
 TARGET_HINTS = {
     'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France)\b', re.I),
     'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?)\b', re.I),
@@ -129,9 +126,6 @@ def detected_portuguese(text: str, target_code: str) -> bool:
     pt_prob = probs.get('pt', 0.0)
     target_prob = probs.get(target_code, 0.0)
 
-    # Do not call translated/mixed UI copy Portuguese when the intended target
-    # language is itself strongly represented. This removes false positives from
-    # official Portuguese proper names embedded in otherwise translated text.
     if target_prob >= 0.35:
         return False
     return pt_prob >= 0.90 and pt_prob >= target_prob + 0.45
@@ -155,80 +149,88 @@ def classify_residue(kind: str, text: str, source_values: dict[str, set[str]], t
     return 'detected-portuguese'
 
 
-problems = []
-report = {
-    'version': 5,
-    'strict_when_live': True,
-    'method': 'target-aware-language-detection+distinctive-portuguese-signals',
-    'locales': {},
-}
-
-for loc in TARGETS:
-    code = loc['code']
-    folder = SITE / code
-    if not folder.exists():
-        continue
-
-    hits = []
-    page_counts = Counter()
-    kind_counts = Counter()
-    reason_counts = Counter()
-    files = 0
-    unique = set()
-
-    for fp in sorted(folder.glob('*.html')):
-        files += 1
-        source_path = SITE / fp.name
-        if not source_path.exists():
-            continue
-        source_values = source_sets(source_path)
-        for kind, text in visible_items(fp):
-            reason = classify_residue(kind, text, source_values, code)
-            if not reason:
-                continue
-            key = (fp.name, kind, text)
-            if key in unique:
-                continue
-            unique.add(key)
-            hits.append({'page': fp.name, 'kind': kind, 'reason': reason, 'text': text})
-            page_counts[fp.name] += 1
-            kind_counts[kind] += 1
-            reason_counts[reason] += 1
-
-    status = loc.get('status')
-    report['locales'][code] = {
-        'status': status,
-        'files': files,
-        'portuguese_residues': len(hits),
-        'pages_with_hits': len(page_counts),
-        'by_reason': dict(reason_counts),
-        'by_kind': dict(kind_counts),
-        'worst_pages': [{'page': page, 'hits': count} for page, count in page_counts.most_common(20)],
-        'examples': hits[:120],
+def run_audit():
+    problems = []
+    report = {
+        'version': 5,
+        'strict_when_live': True,
+        'method': 'target-aware-language-detection+distinctive-portuguese-signals',
+        'locales': {},
     }
 
-    print(f'{code}: {len(hits)} meaningful Portuguese residue(s) across {files} files [{status}]')
-    if page_counts:
-        print('  reasons: ' + ', '.join(f'{k}={v}' for k, v in reason_counts.items()))
-        print('  worst pages: ' + ', '.join(f'{p}={n}' for p, n in page_counts.most_common(10)))
-        print('  sample residues:')
-        for item in hits[:20]:
-            sample = item['text'].replace('\n', ' ')
-            if len(sample) > 180:
-                sample = sample[:177] + '...'
-            print(f"    - {item['page']} [{item['kind']}/{item['reason']}]: {sample}")
+    for loc in TARGETS:
+        code = loc['code']
+        folder = SITE / code
+        if not folder.exists():
+            continue
 
-    if status == 'live' and hits:
-        examples = '; '.join(f"{x['page']}: {x['text'][:100]}" for x in hits[:8])
-        problems.append(f'{code}: {len(hits)} meaningful Portuguese residue(s) remain. {examples}')
+        hits = []
+        page_counts = Counter()
+        kind_counts = Counter()
+        reason_counts = Counter()
+        files = 0
+        unique = set()
 
-REPORT.parent.mkdir(parents=True, exist_ok=True)
-REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
-print(f'Wrote {REPORT}')
+        for fp in sorted(folder.glob('*.html')):
+            files += 1
+            source_path = SITE / fp.name
+            if not source_path.exists():
+                continue
+            source_values = source_sets(source_path)
+            for kind, text in visible_items(fp):
+                reason = classify_residue(kind, text, source_values, code)
+                if not reason:
+                    continue
+                key = (fp.name, kind, text)
+                if key in unique:
+                    continue
+                unique.add(key)
+                hits.append({'page': fp.name, 'kind': kind, 'reason': reason, 'text': text})
+                page_counts[fp.name] += 1
+                kind_counts[kind] += 1
+                reason_counts[reason] += 1
 
-if problems:
-    print('\n'.join(problems))
-    print('Translation completeness FAILED for one or more live locales.')
-    sys.exit(1)
+        status = loc.get('status')
+        report['locales'][code] = {
+            'status': status,
+            'files': files,
+            'portuguese_residues': len(hits),
+            'pages_with_hits': len(page_counts),
+            'by_reason': dict(reason_counts),
+            'by_kind': dict(kind_counts),
+            'worst_pages': [{'page': page, 'hits': count} for page, count in page_counts.most_common(20)],
+            'examples': hits[:120],
+        }
 
-print('Translation completeness audit OK (strict for live locales; reporting only for preparing locales).')
+        print(f'{code}: {len(hits)} meaningful Portuguese residue(s) across {files} files [{status}]')
+        if page_counts:
+            print('  reasons: ' + ', '.join(f'{k}={v}' for k, v in reason_counts.items()))
+            print('  worst pages: ' + ', '.join(f'{p}={n}' for p, n in page_counts.most_common(10)))
+            print('  sample residues:')
+            for item in hits[:20]:
+                sample = item['text'].replace('\n', ' ')
+                if len(sample) > 180:
+                    sample = sample[:177] + '...'
+                print(f"    - {item['page']} [{item['kind']}/{item['reason']}]: {sample}")
+
+        if status == 'live' and hits:
+            examples = '; '.join(f"{x['page']}: {x['text'][:100]}" for x in hits[:8])
+            problems.append(f'{code}: {len(hits)} meaningful Portuguese residue(s) remain. {examples}')
+
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
+    REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f'Wrote {REPORT}')
+    return report, problems
+
+
+def main():
+    _report, problems = run_audit()
+    if problems:
+        print('\n'.join(problems))
+        print('Translation completeness FAILED for one or more live locales.')
+        sys.exit(1)
+    print('Translation completeness audit OK (strict for live locales; reporting only for preparing locales).')
+
+
+if __name__ == '__main__':
+    main()

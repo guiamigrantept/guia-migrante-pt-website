@@ -6,7 +6,11 @@ import re
 import sys
 from collections import Counter
 from pathlib import Path
+
 from bs4 import BeautifulSoup, Comment
+from langdetect import DetectorFactory, LangDetectException, detect_langs
+
+DetectorFactory.seed = 0
 
 SITE = Path('site')
 REPORT = SITE / 'data' / 'translation-audit.json'
@@ -18,21 +22,25 @@ WHITELIST = {
     'Guia Migrante PT', 'AIMA', 'NIF', 'NISS', 'SNS', 'SNS 24', 'CPLP', 'CLAIM',
     'Portugal', 'Portal das Finanças', 'Segurança Social', 'Diário da República',
     'Autoridade Tributária', 'IRN', 'IMT', 'DGES', 'ACT', 'CIG', 'ERSE', 'gov.pt',
+    'EN', 'PT', 'html', 'HTML',
 }
 
-# Conservative Portuguese-only signals. Deliberately avoid words such as
-# "para", "uma", "documentos" or "pedido", which also occur in Spanish.
-STRONG_PT_RE = re.compile(
-    r'\b(?:não|também|vocês|você|deve|pode|foram|serão|estão|são|'
-    r'informação|informações|situação|situações|habitação|renovação|ligação|ligações|'
-    r'utilização|orientação|proteção|documentação|qualificação|qualificações|condições|'
-    r'ferramentas|trabalhador|trabalhadores|empregador|empregadores|regras|taxas|utente|'
-    r'agendamento|morada|mudança|gratuita|gratuito)\b|'
-    r'\b(?:em portugal|fontes oficiais|para quem é|antes de agir|mais pessoas|qualquer outra|'
-    r'não pertence|no momento do pedido|prevalece a informação)\b',
+# Short expressions that are strongly Portuguese even without enough context for
+# reliable statistical language detection. Avoid shared Spanish words such as
+# para, portal, contactos, idioma, documentos or información/informação-like
+# cognates unless they contain Portuguese-specific spelling.
+DISTINCTIVE_PT_RE = re.compile(
+    r'\b(?:não|também|vocês|você|deve|foram|serão|estão|são|morada|utente|'
+    r'agendamento|qualquer|prevalece|ligações|utilização|orientação|proteção|'
+    r'habitação|renovação|qualificações|condições|trabalhadores|empregadores)\b|'
+    r'\b(?:para quem é|antes de agir|mais pessoas|não pertence|no momento do pedido)\b',
     re.IGNORECASE,
 )
 POSTAL_RE = re.compile(r'\b\d{4}-\d{3}\b')
+EMAIL_RE = re.compile(r'^[^\s@]+@[^\s@]+\.[^\s@]+$')
+URLISH_RE = re.compile(r'^(?:https?://|mailto:|www\.|[\w.-]+\.(?:pt|com|org|eu))(?:\b|/)', re.I)
+TECH_TOKEN_RE = re.compile(r'^(?:html?|pt|en|fr|es|uk|ru|hi|bn|aima|nif|niss|sns|cplp|claim|irn|imt|dges|act|cig|erse)(?:\s*[↗→])?$', re.I)
+COPYRIGHT_RE = re.compile(r'^©\s*\d{4}\s+Guia Migrante PT\.?$', re.I)
 
 
 def norm(value: str) -> str:
@@ -69,29 +77,62 @@ def source_sets(path: Path):
 
 
 def ignorable(text: str) -> bool:
-    if text in WHITELIST:
+    cleaned = text.strip().rstrip('↗→').strip()
+    if cleaned in WHITELIST:
         return True
     if not any(ch.isalpha() for ch in text):
         return True
-    if POSTAL_RE.search(text) and not STRONG_PT_RE.search(text):
+    if POSTAL_RE.search(text) and not DISTINCTIVE_PT_RE.search(text):
         return True
-    if text.startswith(('http://', 'https://', 'mailto:')):
+    if EMAIL_RE.match(cleaned) or URLISH_RE.match(cleaned):
+        return True
+    if TECH_TOKEN_RE.match(text.strip()) or COPYRIGHT_RE.match(text.strip()):
+        return True
+    # Common proper-name / venue fragments are not evidence of untranslated copy.
+    if len(text.split()) <= 4 and ('–' in text or '-' in text) and not DISTINCTIVE_PT_RE.search(text):
         return True
     return False
 
 
-def classify_residue(kind: str, text: str, source_values: dict[str, set[str]]):
+def detected_portuguese(text: str) -> bool:
+    # Language ID is useful only with enough lexical context. This deliberately
+    # ignores short shared labels such as "Contactos" or "Portal".
+    words = re.findall(r"[^\W\d_]+", text, flags=re.UNICODE)
+    if len(words) < 5 or len(text) < 24:
+        return False
+    try:
+        guesses = detect_langs(text)
+    except LangDetectException:
+        return False
+    for guess in guesses:
+        if guess.lang == 'pt' and guess.prob >= 0.80:
+            return True
+    return False
+
+
+def meaningful_portuguese(text: str) -> bool:
     if ignorable(text):
+        return False
+    if DISTINCTIVE_PT_RE.search(text):
+        return True
+    return detected_portuguese(text)
+
+
+def classify_residue(kind: str, text: str, source_values: dict[str, set[str]]):
+    if not meaningful_portuguese(text):
         return None
     if text in source_values.get(kind, set()):
-        return 'exact-source-match'
-    if len(text) >= 10 and STRONG_PT_RE.search(text):
-        return 'strong-portuguese-signal'
-    return None
+        return 'exact-portuguese-source-match'
+    return 'detected-portuguese'
 
 
 problems = []
-report = {'version': 3, 'strict_when_live': True, 'method': 'exact-source-match+conservative-pt-signals', 'locales': {}}
+report = {
+    'version': 4,
+    'strict_when_live': True,
+    'method': 'meaningful-exact-source-match+language-detection',
+    'locales': {},
+}
 
 for loc in TARGETS:
     code = loc['code']
@@ -137,7 +178,7 @@ for loc in TARGETS:
         'examples': hits[:120],
     }
 
-    print(f'{code}: {len(hits)} Portuguese residue(s) across {files} files [{status}]')
+    print(f'{code}: {len(hits)} meaningful Portuguese residue(s) across {files} files [{status}]')
     if page_counts:
         print('  reasons: ' + ', '.join(f'{k}={v}' for k, v in reason_counts.items()))
         print('  worst pages: ' + ', '.join(f'{p}={n}' for p, n in page_counts.most_common(10)))
@@ -150,7 +191,7 @@ for loc in TARGETS:
 
     if status == 'live' and hits:
         examples = '; '.join(f"{x['page']}: {x['text'][:100]}" for x in hits[:8])
-        problems.append(f'{code}: {len(hits)} Portuguese residue(s) remain. {examples}')
+        problems.append(f'{code}: {len(hits)} meaningful Portuguese residue(s) remain. {examples}')
 
 REPORT.parent.mkdir(parents=True, exist_ok=True)
 REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')

@@ -8,6 +8,15 @@ from bs4 import BeautifulSoup
 SITE = Path('site')
 BASE = 'https://guia-migrante-pt.pages.dev'
 
+MANIFEST_COPY = {
+    'fr': 'Informations indépendantes et outils gratuits pour les migrants au Portugal.',
+    'es': 'Información independiente y herramientas gratuitas para migrantes en Portugal.',
+    'uk': 'Незалежна інформація та безкоштовні інструменти для мігрантів у Португалії.',
+    'ru': 'Независимая информация и бесплатные инструменты для мигрантов в Португалии.',
+    'hi': 'पुर्तगाल में प्रवासियों के लिए स्वतंत्र जानकारी और निःशुल्क उपकरण।',
+    'bn': 'পর্তুগালে অভিবাসীদের জন্য স্বাধীন তথ্য ও বিনামূল্যের সরঞ্জাম।',
+}
+
 
 def page_path(code: str, page: str) -> Path:
     return SITE / page if code == 'pt' else SITE / code / page
@@ -26,27 +35,63 @@ def make_link(soup: BeautifulSoup, rel: str, href: str, hreflang: str | None = N
     return tag
 
 
+def manifest_href(code: str) -> str:
+    if code == 'pt':
+        return '/manifest.webmanifest'
+    if code == 'en':
+        return '/manifest-en.webmanifest'
+    return f'/manifest-{code}.webmanifest'
+
+
+def write_generated_manifest(code: str, native_name: str) -> None:
+    if code in {'pt', 'en'}:
+        return
+    payload = {
+        'name': f'Guia Migrante PT — {native_name}',
+        'short_name': 'Guia Migrante',
+        'start_url': f'/{code}/index.html',
+        'scope': f'/{code}/',
+        'display': 'standalone',
+        'background_color': '#f7faf9',
+        'theme_color': '#09315c',
+        'description': MANIFEST_COPY.get(code, 'Guia Migrante PT'),
+        'icons': [
+            {'src': '/icon-192.png', 'sizes': '192x192', 'type': 'image/png', 'purpose': 'any maskable'},
+            {'src': '/icon-512.png', 'sizes': '512x512', 'type': 'image/png', 'purpose': 'any maskable'},
+        ],
+    }
+    (SITE / f'manifest-{code}.webmanifest').write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+    )
+
+
 def main() -> None:
     cfg = json.loads((SITE / 'data/locales.json').read_text(encoding='utf-8'))
     locales = [x for x in cfg.get('locales', []) if x.get('status') == 'live']
     by_code = {x['code']: x for x in locales}
-    new_codes = [c for c in by_code if c not in {'pt', 'en'}]
 
     source_pages = sorted(
         p.name for p in SITE.glob('*.html')
         if p.name != '404.html' and (SITE / 'en' / p.name).exists()
     )
 
+    for loc in locales:
+        write_generated_manifest(loc['code'], loc.get('native_name') or loc.get('name') or loc['code'])
+
     changed = 0
-    for code in new_codes:
-        folder = SITE / code
-        if not folder.exists():
+    for loc in locales:
+        code = loc['code']
+        if code != 'pt' and not (SITE / code).exists():
             raise SystemExit(f'{code}: live locale folder missing')
 
-        # Remove staging treatment from the localized 404 too, but keep it noindex.
-        candidates = source_pages + (['404.html'] if (folder / '404.html').exists() else [])
+        candidates = list(source_pages)
+        if code not in {'pt'} and (SITE / code / '404.html').exists():
+            candidates.append('404.html')
+        elif code == 'pt' and (SITE / '404.html').exists():
+            candidates.append('404.html')
+
         for page in candidates:
-            fp = folder / page
+            fp = page_path(code, page)
             if not fp.exists():
                 raise SystemExit(f'{code}: missing live page {page}')
 
@@ -55,40 +100,54 @@ def main() -> None:
             if head is None:
                 raise SystemExit(f'{code}/{page}: missing <head>')
 
-            # The translation builders deliberately emit a staging banner and noindex.
-            # Once the locale is marked live, remove those staging-only controls.
-            strip = soup.select_one('.review-strip')
-            if strip is not None:
-                strip.decompose()
+            # Generated locales are staged before final publication.
+            if code not in {'pt', 'en'}:
+                strip = soup.select_one('.review-strip')
+                if strip is not None:
+                    strip.decompose()
 
-            robots = head.find('meta', attrs={'name': 'robots'})
-            if page != '404.html' and robots is not None and 'noindex' in (robots.get('content') or '').lower():
-                robots.decompose()
+                robots = head.find('meta', attrs={'name': 'robots'})
+                if page != '404.html' and robots is not None and 'noindex' in (robots.get('content') or '').lower():
+                    robots.decompose()
 
-            # Keep one explicit marker so QA and future tooling can distinguish
-            # live translations from staged output.
-            marker = head.find('meta', attrs={'name': 'translation-status'})
-            if marker is None:
-                marker = soup.new_tag('meta')
-                marker['name'] = 'translation-status'
-                head.append(marker)
-            marker['content'] = 'live'
+                marker = head.find('meta', attrs={'name': 'translation-status'})
+                if marker is None:
+                    marker = soup.new_tag('meta')
+                    marker['name'] = 'translation-status'
+                    head.append(marker)
+                marker['content'] = 'live'
 
-            # Replace the limited PT/EN alternates emitted during staging with the
-            # complete set of published languages for this exact page.
+                # Do not publish Portuguese FAQ structured data on translated pages.
+                # The visible page remains available; schema can be restored when a
+                # locale-specific FAQ JSON-LD payload is generated.
+                for script in list(head.find_all('script', attrs={'type': 'application/ld+json'})):
+                    if 'FAQPage' in script.get_text():
+                        script.decompose()
+
+            # Every published version of the page must expose the same complete
+            # hreflang cluster, including PT, EN and all generated live locales.
             for alt in list(head.find_all('link', rel=lambda v: v and 'alternate' in v)):
                 alt.decompose()
 
-            available = [loc for loc in locales if page_path(loc['code'], page).exists()]
-            for loc in available:
-                head.append(make_link(soup, 'alternate', page_url(loc['code'], page), loc['hreflang']))
+            available = [item for item in locales if page_path(item['code'], page).exists()]
+            for alt in available:
+                head.append(make_link(soup, 'alternate', page_url(alt['code'], page), alt['hreflang']))
             if 'pt' in by_code and page_path('pt', page).exists():
                 head.append(make_link(soup, 'alternate', page_url('pt', page), 'x-default'))
+
+            # Keep PWA installation in the current language instead of falling back
+            # to the Portuguese manifest on generated locale pages.
+            for tag in list(head.find_all('link', rel=lambda v: v and 'manifest' in v)):
+                tag.decompose()
+            manifest = soup.new_tag('link')
+            manifest['rel'] = 'manifest'
+            manifest['href'] = manifest_href(code)
+            head.append(manifest)
 
             fp.write_text(str(soup), encoding='utf-8')
             changed += 1
 
-    print(f'Finalized {changed} localized pages across {len(new_codes)} live locales.')
+    print(f'Finalized {changed} pages across {len(locales)} live locales.')
 
 
 if __name__ == '__main__':

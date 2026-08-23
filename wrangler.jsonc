@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "guia-migrante-pt",
+  "pages_build_output_dir": "./site",
+  "compatibility_date": "2026-08-24",
+  "d1_databases": [
+    {
+      "binding": "CONTACT_DB",
+      "database_name": "guia-migrante-contact"
+    }
+  ]
+}

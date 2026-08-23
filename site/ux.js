@@ -1,463 +1,67 @@
-
 (() => {
   "use strict";
 
-  const UX = {
-    checklistKey: "guiaMigranteChecklistV1",
-    settingsKey: "guiaMigranteUxSettingsV3",
-    routeKey: "guiaMigranteRouteV3",
-    installPrompt: null
+  const UX={checklistKey:"guiaMigranteChecklistV1",settingsKey:"guiaMigranteUxSettingsV3",routeKey:"guiaMigranteRouteV3",installPrompt:null};
+  const rawLang=(document.documentElement.lang||"pt-PT").toLowerCase();
+  const locale=rawLang.startsWith("fr")?"fr":rawLang.startsWith("es")?"es":rawLang.startsWith("uk")?"uk":rawLang.startsWith("ru")?"ru":rawLang.startsWith("hi")?"hi":rawLang.startsWith("bn")?"bn":rawLang.startsWith("en")?"en":"pt";
+  const safe={
+    nav:{search_label:"Search the Guide",quick_nav:"Quick navigation",home:"Home",search:"Search",tools:"Tools",help:"Help"},
+    search:{title:"Search the Guide",close:"Close",question:"What are you looking for?",placeholder:"E.g. residence renewal, NIF, nationality...",hints:["NIF","Renewal","AIMA","Nationality","CLAIM"],larger_text:"A+ Larger text",high_contrast:"◐ High contrast",no_results:"No direct match found.",try:"Try AIMA, NISS, renewal or nationality.",text_on:"Text enlarged.",text_off:"Normal text size.",contrast_on:"High contrast enabled.",contrast_off:"Normal contrast."},
+    share:{label:"Share this page",text:"See this information on Guia Migrante PT",copied:"Link copied."},
+    progress:{title:"Continue where you left off",open_checklist:"Open checklist →",template:"{done} of {total} steps completed · {pct}%"},
+    home:{kicker:"Start with your problem, not the agency",title:"What do you need to solve now?",lead:"Choose your situation and we will point you to the right content.",intents:[{icon:"🧭",title:"Just arrived",text:"Organise the first steps",value:"start"},{icon:"🪪",title:"Residence",text:"Deal with AIMA or my permit",value:"residence"},{icon:"↻",title:"Renew",text:"My permit is expiring or expired",value:"renew"},{icon:"💼",title:"Work",text:"NISS, Social Security and documents",value:"work"},{icon:"✚",title:"Health",text:"User number and health centre",value:"health"},{icon:"PT",title:"Nationality",text:"Find which route applies",value:"nationality"},{icon:"?",title:"Not sure",text:"Answer 3 quick questions",value:"guide"}],install_title:"Add the Guide to your home screen",install_text:"Open it like an app for quicker access to key pages.",install_button:"Install"},
+    guide:{title:"Quick route",close:"Close",back:"← Back",next:"Continue →",cancel:"Cancel",choose:"Choose an option to continue.",finish:"Finish",review:"← Review",open:"Open →",result_title:"Your starting point",result_lead:"This is not a legal decision. It is an order of content to help you know where to start.",steps:[{question:"Where are you now?",help:"This only helps order the content.",choices:[{value:"portugal",label:"I am already in Portugal"},{value:"outside",label:"I am still outside Portugal"}]},{question:"What is your main goal now?",help:"Choose the most urgent topic.",choices:[{value:"start",label:"Organise my first steps"},{value:"residence",label:"Residence / AIMA"},{value:"renew",label:"Renew my permit"},{value:"work",label:"Work / Social Security"},{value:"health",label:"Health / user number"},{value:"nationality",label:"Portuguese nationality"},{value:"family",label:"Family / children"},{value:"help",label:"I need in-person support"}]},{question:"Do you already have essential documents?",help:"Choose the option that best describes your situation.",choices:[{value:"none",label:"I do not yet have NIF, NISS or a user number"},{value:"some",label:"I already have at least one"},{value:"most",label:"I already have the essential documents"}]}],results:{outside:{title:"Check the appropriate entry route first",text:"Visa and entry conditions depend on your goal and nationality.",url:"legalizacao.html#vias"},none:{title:"Organise the essential identifiers",text:"Start with NIF and check whether the combined NIF + NISS + user-number service applies.",url:"dia-a-dia.html"},some:{title:"Complete the missing essential documents",text:"Use the free checklist to see what you already have.",url:"ferramentas.html#checklist"},start:{title:"Follow the first 30 days route",text:"Use a practical order and confirm each step with official sources.",url:"index.html#roteiro"},residence:{title:"Check your residence route",text:"First issue, renewal and transitional arrangements are different procedures.",url:"legalizacao.html"},renew:{title:"Check the current renewal rules",text:"Confirm whether your permit and date are covered by the current portal.",url:"legalizacao.html#renovacoes"},work:{title:"Organise NISS and your employment situation",text:"Then check the residence route that applies to your case.",url:"dia-a-dia.html#niss"},health:{title:"Deal with SNS / user number",text:"See how the number is assigned and how to register at a health centre.",url:"dia-a-dia.html#sns"},nationality:{title:"Identify your nationality route",text:"Residence, marriage and descent have different requirements.",url:"nacionalidade.html"},family:{title:"Review family, residence and daily services",text:"Start with the documents and the applicable family basis.",url:"legalizacao.html#vias"},help:{title:"Find suitable in-person support",text:"CLAIM can guide locally; AIMA handles migration procedures.",url:"contactos.html"},nearby:{title:"Find the right contact near you",text:"Use AIMA, CLAIM and other channels only when they match the issue.",url:"contactos.html"},save:{title:"Save your progress without an account",text:"The checklist stays only on this device.",url:"ferramentas.html#checklist"}}}
   };
 
-  const searchIndex = [
-    {code:"NIF", title:"NIF — identificação fiscal", text:"Como pedir, documentos, custo e canais das Finanças.", url:"dia-a-dia.html#nif", keys:"nif finanças fiscal contribuinte banco contratos"},
-    {code:"NSS", title:"NISS — Segurança Social", text:"Pedido online, documentos e trabalho.", url:"dia-a-dia.html#niss", keys:"niss segurança social trabalho emprego contribuições"},
-    {code:"SNS", title:"SNS e número de utente", text:"Número de utente, centro de saúde e acesso ao SNS.", url:"dia-a-dia.html#sns", keys:"sns saúde utente centro hospital médico"},
-    {code:"3×", title:"NIF + NISS + Utente", text:"Serviço conjunto nos Espaços Cidadão aderentes para quem cumpre os critérios.", url:"dia-a-dia.html#servico-unificado", keys:"pedido conjunto unificado espaço cidadão nif niss utente"},
-    {code:"AR", title:"Autorização de residência", text:"Vias de residência, concessão e documentos comuns.", url:"legalizacao.html#vias", keys:"aima residência autorização legalização concessão visto"},
-    {code:"MI", title:"Manifestação de Interesse", text:"O que foi revogado e como funcionam processos anteriores e regime transitório.", url:"legalizacao.html#manifestacao-interesse", keys:"manifestação interesse artigo 88 89 regime transitório"},
-    {code:"REN", title:"Renovação de residência", text:"Portal de Renovações e diferença entre renovação e primeira concessão.", url:"legalizacao.html#renovacoes", keys:"renovar renovação título residência portal"},
-    {code:"AIM", title:"Contactar a AIMA", text:"Telefone, formulário, lojas e canais oficiais.", url:"contactos.html#aima", keys:"aima telefone email formulário agendamento"},
-    {code:"LOJ", title:"Lojas AIMA", text:"Pesquisar balcões por cidade e região.", url:"contactos.html#lojas", keys:"loja aima lisboa porto faro cacem queluz odivelas"},
-    {code:"CLM", title:"Rede CLAIM", text:"Apoio local gratuito, integração e encaminhamento.", url:"contactos.html#claim", keys:"claim apoio local integração migrante"},
-    {code:"CON", title:"Consulados e embaixadas", text:"Diretório oficial para documentos do seu país.", url:"contactos.html#consulados", keys:"consulado embaixada passaporte país documentos estrangeiros"},
-    {code:"NAC", title:"Nacionalidade por residência", text:"Regras de 2026, residência legal e requisitos.", url:"nacionalidade.html#residencia", keys:"nacionalidade cidadania residência 7 anos 10 anos"},
-    {code:"FIL", title:"Filho, neto ou bisneto de português", text:"Vias de nacionalidade por descendência.", url:"nacionalidade.html#situacoes", keys:"filho neto bisneto português descendente nacionalidade"},
-    {code:"CAS", title:"Casamento / união com português", text:"Via própria de nacionalidade e condições.", url:"nacionalidade.html#situacoes", keys:"casamento união facto português nacionalidade"},
-    {code:"TOO", title:"Ferramentas gratuitas", text:"Roteiro, checklist, validade, documentos e glossário.", url:"ferramentas.html", keys:"ferramentas checklist roteiro validade glossário documentos"},
-    {code:"DOC", title:"Checklist de documentos", text:"Crie uma lista base para NIF, NISS, SNS, residência ou nacionalidade.", url:"ferramentas.html#documentos", keys:"documentos checklist imprimir pdf"},
-    {code:"EMG", title:"Emergência e linhas úteis", text:"112, SNS 24, emergência social e Segurança Social.", url:"contactos.html#emergencia", keys:"emergência 112 sns 24 144 ajuda urgente"},
-    {code:"FAQ", title:"Perguntas frequentes", text:"Respostas rápidas sobre residência, documentos, nacionalidade, contactos e ferramentas.", url:"faq.html", keys:"faq perguntas dúvidas respostas"},
-    {code:"SAFE", title:"Evite burlas", text:"Sinais de alerta antes de pagar, enviar documentos ou seguir instruções.", url:"seguranca.html", keys:"burla fraude segurança pagamento vaga falsa"},
-    {code:"PRV", title:"Política de Privacidade", text:"O que fica no dispositivo e como funcionam os dados na versão pública do Guia.", url:"privacidade.html", keys:"privacidade dados localstorage cookies"},
-    {code:"TER", title:"Termos e Condições", text:"Natureza independente do portal e limites das ferramentas de orientação.", url:"termos.html", keys:"termos condições responsabilidade independente"},
-    {code:"NEW", title:"O que mudou?", text:"Atualizações verificadas sobre AIMA, renovações, nacionalidade, NIF, NISS e SNS.", url:"atualizacoes.html", keys:"novidades atualizações mudanças 2026 verificado"},
-    {code:"ROT", title:"Todos os percursos", text:"UE, CPLP, trabalho, estudo, família, asilo, nómadas digitais, longa duração e situações especiais.", url:"percursos.html", keys:"percursos perfis tipos imigrantes ue cplp estudante trabalho asilo nomada"},
-    {code:"VIDA", title:"Viver em Portugal", text:"Trabalho, casa, escola, carta de condução, diplomas, impostos, apoios, português e direitos.", url:"viver-em-portugal.html", keys:"viver portugal trabalho habitação escola carta condução qualificações impostos apoios português discriminação"},
-    {code:"BANK", title:"Banco e pagamentos", text:"Conta bancária, serviços mínimos e comissões.", url:"banco-pagamentos.html", keys:"banco conta iban pagamentos"},
-    {code:"CASA", title:"Serviços da casa", text:"Eletricidade, água, gás, internet e telecomunicações.", url:"servicos-casa.html", keys:"energia água gás internet telecom"},
-    {code:"REC", title:"Consumidor e reclamações", text:"Livro de Reclamações, provas e reguladores.", url:"consumidor.html", keys:"consumidor reclamação"},
-    {code:"SNS+", title:"Saúde completa", text:"Centro de saúde, SNS 24, direitos e cuidados.", url:"saude-completa.html", keys:"saúde sns médico urgência"},
-    {code:"IRN", title:"Registos civis", text:"Nascimento, casamento e registos.", url:"registos-civis.html", keys:"nascimento casamento registo"},
-    {code:"MOR", title:"Mudar morada / sair de Portugal", text:"Finanças, Segurança Social, AIMA e contratos.", url:"mudanca-saida.html", keys:"morada sair portugal fiscal"},
-    {code:"SOS", title:"Situações urgentes", text:"Perigo, violência, exploração e perda de documentos.", url:"situacoes-urgentes.html", keys:"urgente violência exploração emergência"},
-    {code:"A11Y", title:"Acessibilidade", text:"Teclado, foco visível, contraste, texto maior e movimento reduzido.", url:"acessibilidade.html", keys:"acessibilidade teclado contraste foco leitor ecrã"},
-    {code:"STAT", title:"Estado da informação", text:"Datas de verificação e próximas revisões editoriais.", url:"estado-informacao.html", keys:"estado informação revisão atualizado verificado"},
-    {code:"UE", title:"UE/EEE/Suíça e familiares", text:"Livre circulação, certificado municipal, cartões de familiares e residência permanente.", url:"ue-familiares.html", keys:"ue união europeia familiar eea swiss"},
-    {code:"CPLP", title:"Percurso CPLP", text:"Concessão, renovação e substituição da autorização CPLP.", url:"cplp.html", keys:"cplp"},
-    {code:"ASY", title:"Asilo e proteção internacional", text:"Pedido de proteção internacional perante AIMA/CNAR.", url:"asilo.html", keys:"asilo refugio proteção internacional"},
-    {code:"REM", title:"Nómada digital / trabalho remoto", text:"Trabalho remoto para entidade ou cliente fora de Portugal.", url:"nomada-digital.html", keys:"nomada digital remoto remote"},
-    {code:"5Y", title:"Residente de longa duração", text:"Estatuto próprio depois de residência legal prolongada quando os requisitos se verificam.", url:"longa-duracao.html", keys:"longa duração cinco anos permanente"}
-  ];
+  let t=safe;
+  let searchIndexPromise=null;
+  const norm=s=>(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
+  const page=()=>location.pathname.split("/").filter(Boolean).pop()||"index.html";
+  const fmt=(template,data)=>Object.entries(data).reduce((s,[k,v])=>s.replaceAll(`{${k}}`,String(v)),template||"");
 
-  const guideSteps = [
-    {
-      q:"Onde está neste momento?",
-      help:"Isto serve apenas para ordenar os conteúdos.",
-      choices:[
-        ["portugal","Já estou em Portugal"],
-        ["outside","Ainda estou fora de Portugal"]
-      ]
-    },
-    {
-      q:"Qual é o seu principal objetivo agora?",
-      help:"Escolha o assunto mais urgente.",
-      choices:[
-        ["start","Organizar os primeiros passos"],
-        ["residence","Tratar da residência / AIMA"],
-        ["renew","Renovar o meu título"],
-        ["work","Trabalhar / Segurança Social"],
-        ["health","Saúde / número de utente"],
-        ["nationality","Nacionalidade portuguesa"],
-        ["family","Família / filhos"],
-        ["help","Preciso de apoio presencial"]
-      ]
-    },
-    {
-      q:"Já tem alguns documentos essenciais?",
-      help:"Selecione a opção que melhor descreve a sua situação.",
-      choices:[
-        ["none","Ainda não tenho NIF, NISS nem número de utente"],
-        ["some","Já tenho pelo menos um deles"],
-        ["most","Já tenho os documentos essenciais"]
-      ]
-    }
-  ];
-
-  function normalize(s){
-    return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
+  async function loadCopy(){
+    try{const r=await fetch(`/data/ux-copy-${locale}.json`,{cache:"no-store"});if(!r.ok)throw new Error(String(r.status));t=await r.json();}catch{t=safe;}
   }
-
-  function toast(message){
-    let el = document.querySelector(".ux-toast");
-    if(!el){
-      el = document.createElement("div");
-      el.className = "ux-toast";
-      el.setAttribute("role","status");
-      el.setAttribute("aria-live","polite");
-      document.body.appendChild(el);
-    }
-    el.textContent = message;
-    el.classList.add("show");
-    clearTimeout(el._timer);
-    el._timer = setTimeout(()=>el.classList.remove("show"),2600);
+  async function loadSearchIndex(){
+    try{const r=await fetch(`/data/search-${locale}.json`,{cache:"no-store"});if(!r.ok)throw new Error(String(r.status));const data=await r.json();return Array.isArray(data.items)?data.items:[];}catch{return [];}
   }
+  function toast(message){let el=document.querySelector(".ux-toast");if(!el){el=document.createElement("div");el.className="ux-toast";el.setAttribute("role","status");el.setAttribute("aria-live","polite");document.body.appendChild(el);}el.textContent=message;el.classList.add("show");clearTimeout(el._timer);el._timer=setTimeout(()=>el.classList.remove("show"),2600);}
+  function icon(name){const icons={home:'<path d="M3 10.8 12 3l9 7.8v9.2a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.2Z"/>',search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',tools:'<path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3 2.4-2.4Z"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.5 2.5 0 1 1 4.3 1.7c-.9.8-2 1.2-2 2.8M12 17h.01"/>',share:'<circle cx="18" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="18" cy="19" r="2"/><path d="m8 11 8-5M8 13l8 5"/>'};return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]||""}</svg>`;}
 
-  function icon(name){
-    const icons = {
-      home:'<path d="M3 10.8 12 3l9 7.8v9.2a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.2Z"/>',
-      search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
-      tools:'<path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3 2.4-2.4Z"/>',
-      help:'<circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.5 2.5 0 1 1 4.3 1.7c-.9.8-2 1.2-2 2.8M12 17h.01"/>',
-      share:'<circle cx="18" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="18" cy="19" r="2"/><path d="m8 11 8-5M8 13l8 5"/>',
-      close:'<path d="m6 6 12 12M18 6 6 18"/>'
-    };
-    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]||""}</svg>`;
-  }
-
-  function addHeaderSearch(){
-    const actions = document.querySelector(".header-actions");
-    if(!actions || actions.querySelector(".ux-header-search")) return;
-    const b = document.createElement("button");
-    b.className = "ux-header-search";
-    b.type = "button";
-    b.setAttribute("aria-label","Pesquisar no Guia");
-    b.innerHTML = icon("search");
-    b.addEventListener("click", openSearch);
-    actions.insertBefore(b, actions.firstChild);
-  }
-
-  function addBottomNav(){
-    if(document.querySelector(".ux-bottom-nav")) return;
-    const current = location.pathname.split("/").pop() || "index.html";
-    const nav = document.createElement("nav");
-    nav.className = "ux-bottom-nav";
-    nav.setAttribute("aria-label","Navegação rápida");
-    nav.innerHTML = `
-      <a href="index.html" class="${current==="index.html"||current===""?"active":""}">${icon("home")}<span>Início</span></a>
-      <button type="button" data-ux-search>${icon("search")}<span>Pesquisar</span></button>
-      <a href="ferramentas.html" class="${current==="ferramentas.html"?"active":""}">${icon("tools")}<span>Ferramentas</span></a>
-      <a href="contactos.html">${icon("help")}<span>Ajuda</span></a>`;
-    document.body.appendChild(nav);
-    nav.querySelector("[data-ux-search]").addEventListener("click",openSearch);
-  }
+  function addHeaderSearch(){const actions=document.querySelector(".header-actions");if(!actions||actions.querySelector(".ux-header-search"))return;const b=document.createElement("button");b.className="ux-header-search";b.type="button";b.setAttribute("aria-label",t.nav.search_label);b.innerHTML=icon("search");b.addEventListener("click",openSearch);actions.insertBefore(b,actions.firstChild);}
+  function addBottomNav(){if(document.querySelector(".ux-bottom-nav"))return;const current=page(),nav=document.createElement("nav");nav.className="ux-bottom-nav";nav.setAttribute("aria-label",t.nav.quick_nav);nav.innerHTML=`<a href="index.html" class="${current==="index.html"?"active":""}">${icon("home")}<span>${t.nav.home}</span></a><button type="button" data-ux-search>${icon("search")}<span>${t.nav.search}</span></button><a href="ferramentas.html" class="${current==="ferramentas.html"?"active":""}">${icon("tools")}<span>${t.nav.tools}</span></a><a href="contactos.html">${icon("help")}<span>${t.nav.help}</span></a>`;document.body.appendChild(nav);nav.querySelector("[data-ux-search]").addEventListener("click",openSearch);}
 
   function buildSearch(){
-    if(document.getElementById("uxSearchOverlay")) return;
-    const overlay = document.createElement("div");
-    overlay.id = "uxSearchOverlay";
-    overlay.className = "ux-overlay";
-    overlay.innerHTML = `
-      <section class="ux-dialog" role="dialog" aria-modal="true" aria-labelledby="uxSearchTitle">
-        <div class="ux-dialog-head">
-          <strong id="uxSearchTitle">Pesquisar no Guia</strong>
-          <button class="ux-close" type="button" aria-label="Fechar">×</button>
-        </div>
-        <label class="ux-search-box">
-          ${icon("search")}
-          <span class="sr-only">O que procura?</span>
-          <input type="search" id="uxGlobalSearch" autocomplete="off" placeholder="Ex.: renovar residência, NIF, nacionalidade...">
-        </label>
-        <div class="ux-search-hints">
-          <button type="button">NIF</button><button type="button">Renovação</button>
-          <button type="button">AIMA</button><button type="button">Nacionalidade</button>
-          <button type="button">CLAIM</button>
-        </div>
-        <div class="ux-tools-row">
-          <button class="ux-mini-action" type="button" data-ux-font>A+ Aumentar texto</button>
-          <button class="ux-mini-action" type="button" data-ux-contrast>◐ Alto contraste</button>
-        </div>
-        <div class="ux-search-results" id="uxSearchResults"></div>
-      </section>`;
+    if(document.getElementById("uxSearchOverlay"))return;
+    const overlay=document.createElement("div");overlay.id="uxSearchOverlay";overlay.className="ux-overlay";
+    overlay.innerHTML=`<section class="ux-dialog" role="dialog" aria-modal="true" aria-labelledby="uxSearchTitle"><div class="ux-dialog-head"><strong id="uxSearchTitle">${t.search.title}</strong><button class="ux-close" type="button" aria-label="${t.search.close}">×</button></div><label class="ux-search-box">${icon("search")}<span class="sr-only">${t.search.question}</span><input type="search" id="uxGlobalSearch" autocomplete="off" placeholder="${t.search.placeholder}"></label><div class="ux-search-hints">${t.search.hints.map(x=>`<button type="button">${x}</button>`).join("")}</div><div class="ux-tools-row"><button class="ux-mini-action" type="button" data-ux-font>${t.search.larger_text}</button><button class="ux-mini-action" type="button" data-ux-contrast>${t.search.high_contrast}</button></div><div class="ux-search-results" id="uxSearchResults"></div></section>`;
     document.body.appendChild(overlay);
-
-    const input = overlay.querySelector("#uxGlobalSearch");
-    const results = overlay.querySelector("#uxSearchResults");
-    overlay.querySelector(".ux-close").addEventListener("click",closeSearch);
-    overlay.addEventListener("click",e=>{if(e.target===overlay) closeSearch();});
-    document.addEventListener("keydown",e=>{if(e.key==="Escape" && overlay.classList.contains("open")) closeSearch();});
-
-    function render(q){
-      const nq = normalize(q);
-      let matches = searchIndex;
-      if(nq){
-        matches = searchIndex.filter(item =>
-          normalize(item.title+" "+item.text+" "+item.keys).includes(nq)
-        );
-      } else {
-        matches = searchIndex.slice(0,7);
-      }
-      results.innerHTML = matches.length ? matches.slice(0,10).map(item=>`
-        <a class="ux-result" href="${item.url}">
-          <span class="ux-result-icon">${item.code}</span>
-          <span><strong>${item.title}</strong><span>${item.text}</span></span>
-          <span class="ux-result-arrow">›</span>
-        </a>`).join("") :
-        `<div class="ux-no-results">Não encontrámos uma correspondência direta.<br>Experimente “AIMA”, “NISS”, “renovação” ou “nacionalidade”.</div>`;
-    }
-    input.addEventListener("input",()=>render(input.value));
-    overlay.querySelectorAll(".ux-search-hints button").forEach(b=>b.addEventListener("click",()=>{
-      input.value=b.textContent;render(input.value);input.focus();
-    }));
-
-    overlay.querySelector("[data-ux-font]").addEventListener("click",()=>{
-      document.body.classList.toggle("ux-large-text"); saveSettings(); toast(document.body.classList.contains("ux-large-text")?"Texto aumentado.":"Tamanho de texto normal.");
-    });
-    overlay.querySelector("[data-ux-contrast]").addEventListener("click",()=>{
-      document.body.classList.toggle("ux-high-contrast"); saveSettings(); toast(document.body.classList.contains("ux-high-contrast")?"Alto contraste ativado.":"Contraste normal.");
-    });
-    render("");
+    const input=overlay.querySelector("#uxGlobalSearch"),results=overlay.querySelector("#uxSearchResults");
+    overlay.querySelector(".ux-close").addEventListener("click",closeSearch);overlay.addEventListener("click",e=>{if(e.target===overlay)closeSearch();});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&overlay.classList.contains("open"))closeSearch();});
+    async function render(q){const items=await(searchIndexPromise||=(loadSearchIndex()));const nq=norm(q);const matches=nq?items.filter(item=>norm(`${item.title||""} ${item.text||""} ${item.keys||""}`).includes(nq)):items.slice(0,7);results.innerHTML=matches.length?matches.slice(0,10).map(item=>`<a class="ux-result" href="${item.url}"><span class="ux-result-icon">${item.code||"•"}</span><span><strong>${item.title||""}</strong><span>${item.text||""}</span></span><span class="ux-result-arrow">›</span></a>`).join(""):`<div class="ux-no-results">${t.search.no_results}<br>${t.search.try}</div>`;}
+    input.addEventListener("input",()=>render(input.value));overlay.querySelectorAll(".ux-search-hints button").forEach(b=>b.addEventListener("click",()=>{input.value=b.textContent;render(input.value);input.focus();}));
+    overlay.querySelector("[data-ux-font]").addEventListener("click",()=>{document.body.classList.toggle("ux-large-text");saveSettings();toast(document.body.classList.contains("ux-large-text")?t.search.text_on:t.search.text_off);});
+    overlay.querySelector("[data-ux-contrast]").addEventListener("click",()=>{document.body.classList.toggle("ux-high-contrast");saveSettings();toast(document.body.classList.contains("ux-high-contrast")?t.search.contrast_on:t.search.contrast_off);});render("");
   }
+  function openSearch(){buildSearch();const overlay=document.getElementById("uxSearchOverlay");overlay.classList.add("open");document.body.classList.add("ux-lock");setTimeout(()=>overlay.querySelector("#uxGlobalSearch").focus(),50);}
+  function closeSearch(){const overlay=document.getElementById("uxSearchOverlay");if(overlay)overlay.classList.remove("open");document.body.classList.remove("ux-lock");}
+  function saveSettings(){localStorage.setItem(UX.settingsKey,JSON.stringify({large:document.body.classList.contains("ux-large-text"),contrast:document.body.classList.contains("ux-high-contrast")}));}
+  function loadSettings(){try{const s=JSON.parse(localStorage.getItem(UX.settingsKey)||"{}");if(s.large)document.body.classList.add("ux-large-text");if(s.contrast)document.body.classList.add("ux-high-contrast");}catch{}}
 
-  function openSearch(){
-    buildSearch();
-    const overlay = document.getElementById("uxSearchOverlay");
-    overlay.classList.add("open");
-    document.body.classList.add("ux-lock");
-    setTimeout(()=>overlay.querySelector("#uxGlobalSearch").focus(),50);
-  }
-  function closeSearch(){
-    const overlay = document.getElementById("uxSearchOverlay");
-    if(overlay) overlay.classList.remove("open");
-    document.body.classList.remove("ux-lock");
-  }
-
-  function saveSettings(){
-    localStorage.setItem(UX.settingsKey,JSON.stringify({
-      large:document.body.classList.contains("ux-large-text"),
-      contrast:document.body.classList.contains("ux-high-contrast")
-    }));
-  }
-  function loadSettings(){
-    try{
-      const s=JSON.parse(localStorage.getItem(UX.settingsKey)||"{}");
-      if(s.large) document.body.classList.add("ux-large-text");
-      if(s.contrast) document.body.classList.add("ux-high-contrast");
-    }catch{}
-  }
-
-  function addShare(){
-    if(document.querySelector(".ux-share")) return;
-    const b=document.createElement("button");
-    b.className="ux-share";
-    b.type="button";
-    b.setAttribute("aria-label","Partilhar esta página");
-    b.innerHTML=icon("share");
-    b.addEventListener("click", async ()=>{
-      const data={title:document.title,text:"Veja esta informação no Guia Migrante PT",url:location.href};
-      try{
-        if(navigator.share) await navigator.share(data);
-        else{
-          await navigator.clipboard.writeText(location.href);
-          toast("Link copiado.");
-        }
-      }catch{}
-    });
-    document.body.appendChild(b);
-  }
-
-  function checklistProgress(){
-    try{
-      const data=JSON.parse(localStorage.getItem(UX.checklistKey)||"{}");
-      const keys=["nif","niss","sns","residence","bank","address","school","officials"];
-      const done=keys.filter(k=>data[k]).length;
-      return {done,total:keys.length,pct:Math.round(done/keys.length*100)};
-    }catch{return {done:0,total:8,pct:0}}
-  }
-
-  function addHomeProgress(){
-    if(!/index\.html$/.test(location.pathname) && location.pathname!=="/") return;
-    const heroCopy=document.querySelector(".hero-grid>div");
-    if(!heroCopy || document.querySelector(".ux-progress-card")) return;
-    const p=checklistProgress();
-    if(p.done===0) return;
-    const box=document.createElement("div");
-    box.className="ux-progress-card show";
-    box.innerHTML=`
-      <div class="ux-progress-top"><strong>Continuar de onde ficou</strong><a href="ferramentas.html#checklist">Abrir checklist →</a></div>
-      <div class="ux-progress-track"><div class="ux-progress-fill" style="width:${p.pct}%"></div></div>
-      <div class="ux-progress-copy">${p.done} de ${p.total} passos marcados como concluídos · ${p.pct}%</div>`;
-    heroCopy.appendChild(box);
-  }
-
-  function addHomeIntents(){
-    if(!/index\.html$/.test(location.pathname) && location.pathname!=="/") return;
-    if(document.querySelector(".ux-intent-section")) return;
-    const hero=document.querySelector(".hero");
-    if(!hero) return;
-    const sec=document.createElement("section");
-    sec.className="ux-intent-section";
-    sec.innerHTML=`
-      <div class="container">
-        <div class="ux-intent-head">
-          <span class="ux-kicker">Comece pelo seu problema, não pela entidade</span>
-          <h2>O que precisa de resolver agora?</h2>
-          <p>Não precisa de saber se deve procurar AIMA, IRN ou Segurança Social. Escolha a situação e nós encaminhamos para o conteúdo certo.</p>
-        </div>
-        <div class="ux-intent-grid">
-          ${[
-            ["🧭","Cheguei agora","Quero organizar os primeiros passos","start"],
-            ["🪪","Residência","Preciso de tratar da AIMA ou do meu título","residence"],
-            ["↻","Renovar","O meu título está a expirar ou expirou","renew"],
-            ["💼","Trabalho","NISS, Segurança Social e documentação","work"],
-            ["✚","Saúde","Número de utente e centro de saúde","health"],
-            ["PT","Nacionalidade","Quero perceber qual via se aplica","nationality"],
-            ["?","Não sei","Quero responder a 3 perguntas rápidas","guide"]
-          ].map(x=>`
-            <button class="ux-intent-card" type="button" data-intent="${x[3]}">
-              <span class="ux-intent-icon">${x[0]}</span>
-              <span><strong>${x[1]}</strong><span>${x[2]}</span></span>
-              <span class="arrow">›</span>
-            </button>`).join("")}
-        </div>
-        <div class="ux-install-card" id="uxInstallCard">
-          <div><strong>Adicionar o Guia ao ecrã inicial</strong><span>Abra como uma app e tenha acesso mais rápido às páginas principais.</span></div>
-          <button type="button" data-install>Instalar</button>
-        </div>
-      </div>`;
-    hero.insertAdjacentElement("afterend",sec);
-    sec.querySelectorAll("[data-intent]").forEach(b=>b.addEventListener("click",()=>{
-      const v=b.dataset.intent;
-      if(v==="guide"||v==="start") openGuide(v==="start"?"start":null);
-      else {
-        const links={
-          residence:"legalizacao.html",renew:"legalizacao.html#renovacoes",
-          work:"dia-a-dia.html#niss",health:"dia-a-dia.html#sns",
-          nationality:"nacionalidade.html"
-        };
-        location.href=links[v];
-      }
-    }));
-  }
+  function addShare(){if(document.querySelector(".ux-share"))return;const b=document.createElement("button");b.className="ux-share";b.type="button";b.setAttribute("aria-label",t.share.label);b.innerHTML=icon("share");b.addEventListener("click",async()=>{const data={title:document.title,text:t.share.text,url:location.href};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(location.href);toast(t.share.copied);}}catch{}});document.body.appendChild(b);}
+  function checklistProgress(){try{const data=JSON.parse(localStorage.getItem(UX.checklistKey)||"{}"),keys=["nif","niss","sns","residence","bank","address","school","officials"],done=keys.filter(k=>data[k]).length;return{done,total:keys.length,pct:Math.round(done/keys.length*100)};}catch{return{done:0,total:8,pct:0}}}
+  function addHomeProgress(){if(page()!=="index.html")return;const heroCopy=document.querySelector(".hero-grid>div");if(!heroCopy||document.querySelector(".ux-progress-card"))return;const p=checklistProgress();if(p.done===0)return;const box=document.createElement("div");box.className="ux-progress-card show";box.innerHTML=`<div class="ux-progress-top"><strong>${t.progress.title}</strong><a href="ferramentas.html#checklist">${t.progress.open_checklist}</a></div><div class="ux-progress-track"><div class="ux-progress-fill" style="width:${p.pct}%"></div></div><div class="ux-progress-copy">${fmt(t.progress.template,p)}</div>`;heroCopy.appendChild(box);}
+  function addHomeIntents(){if(page()!=="index.html"||document.querySelector(".ux-intent-section"))return;const hero=document.querySelector(".hero");if(!hero)return;const sec=document.createElement("section");sec.className="ux-intent-section";sec.innerHTML=`<div class="container"><div class="ux-intent-head"><span class="ux-kicker">${t.home.kicker}</span><h2>${t.home.title}</h2><p>${t.home.lead}</p></div><div class="ux-intent-grid">${t.home.intents.map(x=>`<button class="ux-intent-card" type="button" data-intent="${x.value}"><span class="ux-intent-icon">${x.icon}</span><span><strong>${x.title}</strong><span>${x.text}</span></span><span class="arrow">›</span></button>`).join("")}</div><div class="ux-install-card" id="uxInstallCard"><div><strong>${t.home.install_title}</strong><span>${t.home.install_text}</span></div><button type="button" data-install>${t.home.install_button}</button></div></div>`;hero.insertAdjacentElement("afterend",sec);sec.querySelectorAll("[data-intent]").forEach(b=>b.addEventListener("click",()=>{const v=b.dataset.intent;if(v==="guide"||v==="start")openGuide(v==="start"?"start":null);else{const links={residence:"legalizacao.html",renew:"legalizacao.html#renovacoes",work:"dia-a-dia.html#niss",health:"dia-a-dia.html#sns",nationality:"nacionalidade.html"};location.href=links[v];}}));}
 
   let guideState={step:0,answers:{}};
-  function buildGuide(){
-    if(document.getElementById("uxGuideOverlay")) return;
-    const overlay=document.createElement("div");
-    overlay.id="uxGuideOverlay";
-    overlay.className="ux-overlay";
-    overlay.innerHTML=`
-      <section class="ux-dialog" role="dialog" aria-modal="true" aria-labelledby="uxGuideTitle">
-        <div class="ux-dialog-head">
-          <strong id="uxGuideTitle">Roteiro rápido</strong>
-          <button class="ux-close" type="button" aria-label="Fechar">×</button>
-        </div>
-        <div class="ux-guide-progress"><i></i><i></i><i></i></div>
-        <div class="ux-guide-body" id="uxGuideBody"></div>
-        <div class="ux-guide-actions">
-          <button type="button" data-back>← Voltar</button>
-          <button type="button" class="primary" data-next>Continuar →</button>
-        </div>
-      </section>`;
-    document.body.appendChild(overlay);
-    overlay.querySelector(".ux-close").addEventListener("click",closeGuide);
-    overlay.addEventListener("click",e=>{if(e.target===overlay) closeGuide();});
-    overlay.querySelector("[data-back]").addEventListener("click",()=>{
-      if(guideState.step>0){guideState.step--;renderGuide();}
-      else closeGuide();
-    });
-    overlay.querySelector("[data-next]").addEventListener("click",()=>{
-      if(guideState.step>=guideSteps.length){closeGuide();return;}
-      const selected=overlay.querySelector(".ux-guide-choice.selected");
-      if(!selected){toast("Escolha uma opção para continuar.");return;}
-      guideState.answers[guideState.step]=selected.dataset.value;
-      guideState.step++;
-      renderGuide();
-    });
-  }
-  function openGuide(prefill){
-    buildGuide();
-    guideState={step:0,answers:{}};
-    if(prefill==="start") guideState.answers.prefill="start";
-    const o=document.getElementById("uxGuideOverlay");
-    o.classList.add("open");document.body.classList.add("ux-lock");renderGuide();
-  }
-  function closeGuide(){
-    const o=document.getElementById("uxGuideOverlay");
-    if(o)o.classList.remove("open");
-    document.body.classList.remove("ux-lock");
-  }
-  function renderGuide(){
-    const overlay=document.getElementById("uxGuideOverlay");
-    const body=overlay.querySelector("#uxGuideBody");
-    const dots=[...overlay.querySelectorAll(".ux-guide-progress i")];
-    dots.forEach((d,i)=>d.classList.toggle("done",i<guideState.step+1));
-    const back=overlay.querySelector("[data-back]");
-    const next=overlay.querySelector("[data-next]");
+  function buildGuide(){if(document.getElementById("uxGuideOverlay"))return;const overlay=document.createElement("div");overlay.id="uxGuideOverlay";overlay.className="ux-overlay";overlay.innerHTML=`<section class="ux-dialog" role="dialog" aria-modal="true" aria-labelledby="uxGuideTitle"><div class="ux-dialog-head"><strong id="uxGuideTitle">${t.guide.title}</strong><button class="ux-close" type="button" aria-label="${t.guide.close}">×</button></div><div class="ux-guide-progress"><i></i><i></i><i></i></div><div class="ux-guide-body" id="uxGuideBody"></div><div class="ux-guide-actions"><button type="button" data-back>${t.guide.back}</button><button type="button" class="primary" data-next>${t.guide.next}</button></div></section>`;document.body.appendChild(overlay);overlay.querySelector(".ux-close").addEventListener("click",closeGuide);overlay.addEventListener("click",e=>{if(e.target===overlay)closeGuide();});overlay.querySelector("[data-back]").addEventListener("click",()=>{if(guideState.step>0){guideState.step--;renderGuide();}else closeGuide();});overlay.querySelector("[data-next]").addEventListener("click",()=>{if(guideState.step>=t.guide.steps.length){closeGuide();return;}const selected=overlay.querySelector(".ux-guide-choice.selected");if(!selected){toast(t.guide.choose);return;}guideState.answers[guideState.step]=selected.dataset.value;guideState.step++;renderGuide();});}
+  function openGuide(prefill){buildGuide();guideState={step:0,answers:{}};if(prefill==="start")guideState.answers.prefill="start";const o=document.getElementById("uxGuideOverlay");o.classList.add("open");document.body.classList.add("ux-lock");renderGuide();}
+  function closeGuide(){const o=document.getElementById("uxGuideOverlay");if(o)o.classList.remove("open");document.body.classList.remove("ux-lock");}
+  function renderGuide(){const overlay=document.getElementById("uxGuideOverlay"),body=overlay.querySelector("#uxGuideBody"),dots=[...overlay.querySelectorAll(".ux-guide-progress i")],back=overlay.querySelector("[data-back]"),next=overlay.querySelector("[data-next]");dots.forEach((d,i)=>d.classList.toggle("done",i<guideState.step+1));if(guideState.step<t.guide.steps.length){const s=t.guide.steps[guideState.step];body.innerHTML=`<h2>${s.question}</h2><p>${s.help}</p><div class="ux-guide-choices">${s.choices.map(c=>`<button class="ux-guide-choice" type="button" data-value="${c.value}">${c.label}</button>`).join("")}</div>`;body.querySelectorAll(".ux-guide-choice").forEach(b=>b.addEventListener("click",()=>{body.querySelectorAll(".ux-guide-choice").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");}));next.textContent=t.guide.next;back.textContent=guideState.step?t.guide.back:t.guide.cancel;}else{const result=guideResult(guideState.answers);localStorage.setItem(UX.routeKey,JSON.stringify({answers:guideState.answers,createdAt:Date.now()}));body.innerHTML=`<h2>${t.guide.result_title}</h2><p>${t.guide.result_lead}</p><div class="ux-guide-result">${result.map((r,i)=>`<div class="ux-guide-step"><b>${i+1}</b><div><strong>${r.title}</strong><span>${r.text} <a href="${r.url}">${t.guide.open}</a></span></div></div>`).join("")}</div>`;next.textContent=t.guide.finish;back.textContent=t.guide.review;}}
+  function guideResult(a){const locationState=a[0],need=a[1]||a.prefill||"start",docs=a[2],r=t.guide.results,out=[];if(locationState==="outside"&&r.outside)out.push(r.outside);if(docs==="none"&&r.none)out.push(r.none);else if(docs==="some"&&r.some)out.push(r.some);if(r[need])out.unshift(r[need]);if(locationState==="portugal"&&r.nearby)out.push(r.nearby);if(r.save)out.push(r.save);return out.slice(0,4);}
 
-    if(guideState.step<guideSteps.length){
-      const s=guideSteps[guideState.step];
-      body.innerHTML=`<h2>${s.q}</h2><p>${s.help}</p><div class="ux-guide-choices">${s.choices.map(c=>`<button class="ux-guide-choice" type="button" data-value="${c[0]}">${c[1]}</button>`).join("")}</div>`;
-      body.querySelectorAll(".ux-guide-choice").forEach(b=>b.addEventListener("click",()=>{
-        body.querySelectorAll(".ux-guide-choice").forEach(x=>x.classList.remove("selected"));
-        b.classList.add("selected");
-      }));
-      next.textContent="Continuar →";
-      back.textContent=guideState.step?"← Voltar":"Cancelar";
-    }else{
-      const result=guideResult(guideState.answers);
-      localStorage.setItem(UX.routeKey,JSON.stringify({answers:guideState.answers,createdAt:Date.now()}));
-      body.innerHTML=`<h2>O seu ponto de partida</h2><p>Não é uma decisão jurídica. É uma ordem de conteúdos para saber onde começar.</p><div class="ux-guide-result">${result.map((r,i)=>`<div class="ux-guide-step"><b>${i+1}</b><div><strong>${r[0]}</strong><span>${r[1]} <a href="${r[2]}">Abrir →</a></span></div></div>`).join("")}</div>`;
-      next.textContent="Concluir";
-      back.textContent="← Rever";
-    }
-  }
-  function guideResult(a){
-    const locationState=a[0], need=a[1]||a.prefill||"start", docs=a[2];
-    const out=[];
-    if(locationState==="outside"){
-      out.push(["Confirme primeiro a via de entrada adequada","Vistos e condições de entrada dependem do objetivo e da nacionalidade.","legalizacao.html#vias"]);
-    }
-    if(docs==="none"){
-      out.push(["Organize os identificadores essenciais","Comece por NIF e veja se o serviço conjunto NIF + NISS + Utente se aplica.","dia-a-dia.html"]);
-    } else if(docs==="some"){
-      out.push(["Complete os documentos essenciais em falta","Use a checklist gratuita para ver o que já tem.","ferramentas.html#checklist"]);
-    }
-    const needs={
-      start:["Siga o roteiro dos primeiros 30 dias","Use uma ordem prática e confirme cada passo nas fontes oficiais.","index.html#roteiro"],
-      residence:["Confirme a sua via de residência","Primeira concessão, renovação e regime transitório são procedimentos diferentes.","legalizacao.html"],
-      renew:["Veja as regras atuais de renovação","Confirme se o seu título/data estão abrangidos pelo portal atual.","legalizacao.html#renovacoes"],
-      work:["Organize NISS e situação profissional","Depois confirme a via de residência correspondente ao seu caso.","dia-a-dia.html#niss"],
-      health:["Trate do SNS / número de utente","Veja atribuição do número e inscrição no centro de saúde.","dia-a-dia.html#sns"],
-      nationality:["Identifique a sua via de nacionalidade","Residência, casamento e descendência têm requisitos diferentes.","nacionalidade.html"],
-      family:["Veja família, residência e serviços do dia a dia","Comece pelos documentos e pelo fundamento familiar aplicável.","legalizacao.html#vias"],
-      help:["Procure apoio presencial adequado","CLAIM pode orientar e encaminhar localmente; AIMA trata processos migratórios.","contactos.html"]
-    };
-    if(needs[need]) out.unshift(needs[need]);
-    if(locationState==="portugal") out.push(["Encontre o contacto certo perto de si","Use Lojas AIMA, CLAIM e outros canais apenas quando correspondem ao assunto.","contactos.html"]);
-    out.push(["Guarde o seu progresso sem conta","A checklist fica apenas neste dispositivo.","ferramentas.html#checklist"]);
-    return out.slice(0,4);
-  }
+  function registerSW(){if("serviceWorker" in navigator&&location.protocol==="https:")navigator.serviceWorker.register("/sw.js").catch(()=>{});window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();UX.installPrompt=e;const card=document.getElementById("uxInstallCard");if(card)card.classList.add("show");});document.addEventListener("click",async e=>{if(!e.target.matches("[data-install]")||!UX.installPrompt)return;UX.installPrompt.prompt();try{await UX.installPrompt.userChoice}catch{}UX.installPrompt=null;const card=document.getElementById("uxInstallCard");if(card)card.classList.remove("show");});}
 
-  function registerSW(){
-    if("serviceWorker" in navigator && location.protocol==="https:"){
-      navigator.serviceWorker.register("sw.js").catch(()=>{});
-    }
-    window.addEventListener("beforeinstallprompt",e=>{
-      e.preventDefault();UX.installPrompt=e;
-      const card=document.getElementById("uxInstallCard");
-      if(card) card.classList.add("show");
-    });
-    document.addEventListener("click",async e=>{
-      if(!e.target.matches("[data-install]")||!UX.installPrompt)return;
-      UX.installPrompt.prompt();
-      try{await UX.installPrompt.userChoice}catch{}
-      UX.installPrompt=null;
-      const card=document.getElementById("uxInstallCard");if(card)card.classList.remove("show");
-    });
-  }
-
-  function init(){
-    loadSettings();
-    addHeaderSearch();
-    addBottomNav();
-    addShare();
-    addHomeIntents();
-    addHomeProgress();
-    buildSearch();
-    registerSW();
-  }
-
-  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init);
-  else init();
+  async function init(){await loadCopy();loadSettings();addHeaderSearch();addBottomNav();addShare();addHomeIntents();addHomeProgress();buildSearch();registerSW();}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();

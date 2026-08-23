@@ -40,7 +40,6 @@ for rel,f in relmap.items():
         if sep and anchor and target in ids and anchor not in ids[target]:
             problems.append(f'{rel}: missing anchor {h}')
 
-# Repository-level PT/EN cross-links remain mandatory even in source-monitor mode.
 for p in site.glob('*.html'):
     ep=site/'en'/p.name
     if p.name=='404.html' or not ep.exists(): continue
@@ -80,9 +79,6 @@ else:
             missing=[name for name in source_pages if not (folder/name).exists()]
             if missing: problems.append(f'{code}: locale marked live but missing {len(missing)} mirrored pages')
 
-        # The production deploy runs finalize_live_locales.py before QA. At that
-        # point every live page, including PT and EN, must advertise the same
-        # complete hreflang cluster and a valid language-aware web manifest.
         if not source_monitor_mode:
             for loc in live_locales:
                 code=loc.get('code')
@@ -119,12 +115,32 @@ else:
                         problems.append(f'{code}/{name}: expected exactly one web manifest')
                     else:
                         href=manifests[0]['href'].split('?',1)[0]
-                        if href.startswith('/'):
-                            manifest_path=site/href.lstrip('/')
-                        else:
-                            manifest_path=(fp.parent/href).resolve()
+                        manifest_path=site/href.lstrip('/') if href.startswith('/') else (fp.parent/href).resolve()
                         if not manifest_path.exists():
                             problems.append(f'{code}/{name}: missing web manifest {href}')
+
+                runtime=site/'data'/f'ux-copy-{code}.json'
+                search=site/'data'/f'search-{code}.json'
+                if not runtime.exists():
+                    problems.append(f'{code}: missing localized runtime UX copy')
+                else:
+                    try:
+                        payload=json.loads(runtime.read_text(encoding='utf-8'))
+                        for key in ['nav','search','share','progress','home','guide']:
+                            if not payload.get(key): problems.append(f'{code}: runtime UX copy missing {key}')
+                    except Exception as exc:
+                        problems.append(f'{code}: invalid runtime UX copy ({exc})')
+                if not search.exists():
+                    problems.append(f'{code}: missing localized search index')
+                else:
+                    try:
+                        payload=json.loads(search.read_text(encoding='utf-8'))
+                        items=payload.get('items',[])
+                        if len(items)<max(10,len(source_pages)//2): problems.append(f'{code}: search index unexpectedly small ({len(items)} items)')
+                        for item in items:
+                            if not item.get('title') or not item.get('url'): problems.append(f'{code}: malformed search index item')
+                    except Exception as exc:
+                        problems.append(f'{code}: invalid search index ({exc})')
     except Exception as exc:
         problems.append(f'data/locales.json: invalid JSON/configuration ({exc})')
 
@@ -143,4 +159,4 @@ if problems:
 if source_monitor_mode:
     print(f'QA OK — {len(files)} repository HTML files; source-monitor mode validated PT/EN and shared assets. Generated live locales remain gated by the deploy pipeline.')
 else:
-    print(f'QA OK — {len(files)} HTML files; all live locales complete, indexable, hreflang-aligned and PWA-linked.')
+    print(f'QA OK — {len(files)} HTML files; live locales complete, indexable, hreflang-aligned, PWA-linked and runtime-localized.')

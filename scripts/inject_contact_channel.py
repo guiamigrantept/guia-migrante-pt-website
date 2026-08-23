@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'site'
 DATA=SITE/'data'
+ASSET_VERSION='20260824-2'
 
 
 def file_for(code):
@@ -28,10 +29,10 @@ def main():
         if soup.head is None or soup.body is None:
             raise SystemExit(f'{fp}: missing head/body')
         css=soup.new_tag('link')
-        css['rel']='stylesheet';css['href']='/contact-form.css';css['data-contact-channel-asset']=''
+        css['rel']='stylesheet';css['href']=f'/contact-form.css?v={ASSET_VERSION}';css['data-contact-channel-asset']=''
         soup.head.append(css)
         js=soup.new_tag('script')
-        js['src']='/contact-form.js';js['defer']='';js['data-contact-channel-asset']=''
+        js['src']=f'/contact-form.js?v={ASSET_VERSION}';js['defer']='';js['data-contact-channel-asset']=''
         soup.body.append(js)
         fp.write_text(str(soup),encoding='utf-8')
         changed+=1

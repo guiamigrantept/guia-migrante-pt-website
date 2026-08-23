@@ -32,10 +32,10 @@ for code in live:
         problems.append(f'{code}: missing contactos.html')
         continue
     soup=BeautifulSoup(page.read_text(encoding='utf-8'),'html.parser')
-    css=[x.get('href') for x in soup.find_all('link',attrs={'data-contact-channel-asset':True})]
-    js=[x.get('src') for x in soup.find_all('script',attrs={'data-contact-channel-asset':True})]
-    if '/contact-form.css' not in css: problems.append(f'{code}: contact form stylesheet not injected')
-    if '/contact-form.js' not in js: problems.append(f'{code}: contact form runtime not injected')
+    css=[x.get('href') or '' for x in soup.find_all('link',attrs={'data-contact-channel-asset':True})]
+    js=[x.get('src') or '' for x in soup.find_all('script',attrs={'data-contact-channel-asset':True})]
+    if not any(x.startswith('/contact-form.css') for x in css): problems.append(f'{code}: contact form stylesheet not injected')
+    if not any(x.startswith('/contact-form.js') for x in js): problems.append(f'{code}: contact form runtime not injected')
     copy=DATA/f'contact-copy-{code}.json'
     if not copy.exists():
         problems.append(f'{code}: missing localized contact copy')

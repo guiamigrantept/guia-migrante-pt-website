@@ -1,0 +1,30 @@
+{
+  "title": "Fale com o Guia",
+  "kicker": "Mensagem para a administração",
+  "lead": "Encontrou um erro, tem uma sugestão ou precisa de nos contactar sobre o próprio Guia? Envie uma mensagem por aqui sem expor o nosso email publicamente.",
+  "not_official": "Este canal é da administração do Guia Migrante PT. Não substitui AIMA, IRN, Segurança Social, SNS ou qualquer entidade pública.",
+  "privacy": "Não envie passaporte, NIF, título de residência, comprovativos, números de processo ou outros dados sensíveis. As mensagens são guardadas por até 180 dias apenas para gestão do contacto.",
+  "name": "Nome",
+  "name_optional": "opcional",
+  "email": "Email para resposta",
+  "email_optional": "opcional",
+  "topic": "Assunto",
+  "message": "Mensagem",
+  "message_placeholder": "Explique de forma breve o que pretende comunicar ao Guia.",
+  "consent": "Confirmo que li o aviso acima e que não estou a enviar documentos nem dados pessoais sensíveis.",
+  "submit": "Enviar mensagem",
+  "sending": "A enviar...",
+  "success": "Mensagem enviada com sucesso. Obrigado por ajudar a melhorar o Guia.",
+  "error": "Não foi possível enviar a mensagem. Tente novamente dentro de alguns minutos.",
+  "unavailable": "O canal de mensagens está temporariamente indisponível. Tente novamente mais tarde.",
+  "too_fast": "Por segurança, aguarde alguns segundos antes de enviar.",
+  "duplicate": "Esta mensagem parece já ter sido enviada recentemente.",
+  "invalid": "Revise os campos obrigatórios antes de enviar.",
+  "topics": [
+    {"value":"site_error","label":"Erro ou informação incorreta no site"},
+    {"value":"suggestion","label":"Sugestão de melhoria"},
+    {"value":"technical","label":"Problema técnico"},
+    {"value":"partnership","label":"Parceria ou colaboração"},
+    {"value":"other","label":"Outro assunto"}
+  ]
+}

@@ -10,7 +10,6 @@ on:
       - 'monitor/source_review_filters.py'
       - 'monitor/recover_required_sources.py'
       - 'site/data/locales.json'
-      - 'scripts/qa.py'
       - 'requirements-monitor.txt'
       - '.github/workflows/monitor-official-sources.yml'
   schedule:

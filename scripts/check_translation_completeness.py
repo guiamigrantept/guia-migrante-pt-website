@@ -48,7 +48,7 @@ ADDRESSISH_RE = re.compile(
 
 TARGET_HINTS = {
     'fr': re.compile(r'\b(?:sources?|prioritaires?|services?|bancaires?|sécurité|avenue|vivre|premiers?|recherche|indépendant|gratuit|orientation|migrants?|France|espace|union|paroisses?|règles|peuvent|changer|information|officielle|page|chercher|documents?|travail|santé|résidence)\b', re.I),
-    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?|espacio|unión|parroquias?|pasaporte|documento|país|pueden|cambiar|momento|realizar|pedido|fuente|servicios?|trabajo|salud|residencia)\b', re.I),
+    'es': re.compile(r'\b(?:fuentes?|prioritarias?|página|buscar|reglas|canales|tarifas|información|oficial|vigente|seguridad|estudiaré|investigaré|haré|avenida|salida|inmigrantes?|espacio|unión|parroquias?|pasaporte|documento|país|pueden|cambiar|momento|realizar|pedido|fuente|servicios?|trabajo|salud|residencia|nacionalidad)\b', re.I),
     'uk': re.compile(r'[А-Яа-яІіЇїЄєҐґ]'),
     'ru': re.compile(r'[А-Яа-яЁё]'),
     'hi': re.compile(r'[\u0900-\u097F]'),

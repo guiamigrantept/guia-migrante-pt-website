@@ -131,6 +131,22 @@ def prepare_page(source: Path, code: str, hreflang: str) -> str:
                 a['aria-current'] = 'page'
             site_lang.append(a)
 
+    # Inline page scripts are copied structurally from PT. Keep their behaviour,
+    # but localize any human-facing text they create at runtime through a shared
+    # observer + dialog wrapper. The locale-specific phrase maps are generated in
+    # the deploy pipeline after all translated pages have been assembled.
+    for old in list(soup.find_all('script', attrs={'data-inline-i18n': True})):
+        old.decompose()
+    if code not in {'pt', 'en'}:
+        runtime = soup.new_tag('script')
+        runtime['src'] = '../runtime-inline-i18n.js'
+        runtime['defer'] = ''
+        runtime['data-inline-i18n'] = ''
+        if soup.body is not None:
+            soup.body.append(runtime)
+        else:
+            head.append(runtime)
+
     return str(soup)
 
 

@@ -27,41 +27,61 @@ attr_slots = base['attr_slots']
 translate_batch = base['translate_batch']
 make_batches = base['make_batches']
 preserve_outer_whitespace = base['preserve_outer_whitespace']
-meaningful_portuguese = audit['meaningful_portuguese']
+classify_residue = audit['classify_residue']
+source_sets = audit['source_sets']
 
 
-def collect_flagged(soup: BeautifulSoup, code: str):
+def collect_flagged(soup: BeautifulSoup, code: str, source_values: dict[str, set[str]]):
+    """Return only nodes the final QA auditor would actually block on."""
     items = []
     for node in visible_text_nodes(soup):
         text = norm(str(node))
-        if meaningful_portuguese(text, code):
-            items.append(('text', node, text))
+        reason = classify_residue('text', text, source_values, code)
+        if reason:
+            items.append(('text', node, text, reason))
     for tag, attr in attr_slots(soup):
         text = norm(str(tag.get(attr, '')))
-        if meaningful_portuguese(text, code):
-            items.append(('attr', (tag, attr), text))
+        reason = classify_residue(attr, text, source_values, code)
+        if reason:
+            items.append(('attr', (tag, attr), text, reason))
     return items
+
+
+def source_values_for(fp: Path):
+    source_path = SITE / fp.name
+    if not source_path.exists():
+        return {'text': set(), 'aria-label': set(), 'placeholder': set(), 'title': set()}
+    return source_sets(source_path)
 
 
 def apply_pass(code: str):
     folder = SITE / code
     pages = {}
     unique_sources = set()
+    reason_counts = {}
 
     for fp in sorted(folder.glob('*.html')):
         soup = BeautifulSoup(fp.read_text(encoding='utf-8'), 'html.parser')
-        flagged = collect_flagged(soup, code)
+        flagged = collect_flagged(soup, code, source_values_for(fp))
         pages[fp] = (soup, flagged)
-        unique_sources.update(text for _, _, text in flagged)
+        for _, _, text, reason in flagged:
+            unique_sources.add(text)
+            reason_counts[reason] = reason_counts.get(reason, 0) + 1
 
     strings = sorted(unique_sources, key=lambda x: (len(x), x))
     if not strings:
-        return {'flagged_strings': 0, 'changed_nodes': 0, 'changed_pages': 0, 'failures': []}
+        return {
+            'flagged_strings': 0,
+            'changed_nodes': 0,
+            'changed_pages': 0,
+            'reasons': reason_counts,
+            'failures': [],
+        }
 
     translated_map = {}
     failures = []
     batches = make_batches(strings)
-    print(f'{code}: cleanup pass has {len(strings)} detected Portuguese residue string(s) in {len(batches)} batch(es).')
+    print(f'{code}: cleanup pass has {len(strings)} QA-blocking Portuguese residue string(s) in {len(batches)} batch(es).')
 
     for n, batch in enumerate(batches, 1):
         try:
@@ -76,7 +96,7 @@ def apply_pass(code: str):
     changed_pages = 0
     for fp, (soup, flagged) in pages.items():
         page_changed = 0
-        for kind, slot, source_text in flagged:
+        for kind, slot, source_text, _reason in flagged:
             translated = translated_map.get(source_text)
             if not translated or norm(translated) == source_text:
                 continue
@@ -96,12 +116,26 @@ def apply_pass(code: str):
         'flagged_strings': len(strings),
         'changed_nodes': changed_nodes,
         'changed_pages': changed_pages,
+        'reasons': reason_counts,
         'failures': failures,
     }
 
 
+def remaining_blocking_nodes(code: str) -> int:
+    folder = SITE / code
+    remaining = 0
+    for fp in sorted(folder.glob('*.html')):
+        soup = BeautifulSoup(fp.read_text(encoding='utf-8'), 'html.parser')
+        remaining += len(collect_flagged(soup, code, source_values_for(fp)))
+    return remaining
+
+
 def main():
-    report = {'version': 1, 'method': 'target-aware detected Portuguese cleanup', 'locales': {}}
+    report = {
+        'version': 2,
+        'method': 'cleanup uses the exact same classifier as final translation QA',
+        'locales': {},
+    }
 
     for code in TARGETS:
         folder = SITE / code
@@ -116,13 +150,9 @@ def main():
             if result['flagged_strings'] == 0 or result['changed_nodes'] == 0:
                 break
 
-        remaining = 0
-        for fp in sorted(folder.glob('*.html')):
-            soup = BeautifulSoup(fp.read_text(encoding='utf-8'), 'html.parser')
-            remaining += len(collect_flagged(soup, code))
-
+        remaining = remaining_blocking_nodes(code)
         report['locales'][code] = {'passes': passes, 'remaining_flagged_nodes': remaining}
-        print(f'{code}: cleanup finished; remaining detected Portuguese nodes={remaining}')
+        print(f'{code}: cleanup finished; remaining QA-blocking Portuguese nodes={remaining}')
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')

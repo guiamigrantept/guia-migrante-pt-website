@@ -40,6 +40,7 @@ for rel,f in relmap.items():
         if sep and anchor and target in ids and anchor not in ids[target]:
             problems.append(f'{rel}: missing anchor {h}')
 
+# Repository-level PT/EN cross-links remain mandatory even in source-monitor mode.
 for p in site.glob('*.html'):
     ep=site/'en'/p.name
     if p.name=='404.html' or not ep.exists(): continue
@@ -47,11 +48,6 @@ for p in site.glob('*.html'):
     if f'href="en/{p.name}"' not in pt: problems.append(f'{p.name}: missing PT→EN')
     if f'href="../{p.name}"' not in en: problems.append(f'en/{p.name}: missing EN→PT')
 
-# Multilingual rollout guard. The production deploy materializes generated locales
-# before this strict check. The source-monitor workflow intentionally works from the
-# canonical repository tree, where generated locale folders are absent; in that mode
-# PT/EN and shared assets are still fully validated and generated locales remain the
-# responsibility of the deploy pipeline's parity + translation checks.
 locale_file=site/'data/locales.json'
 if not locale_file.exists():
     problems.append('data/locales.json: missing locale configuration')
@@ -77,45 +73,58 @@ else:
         for code in sorted(live-{'pt'}):
             folder=site/code
             if not folder.exists():
-                if source_monitor_mode and code not in {'en'}:
+                if source_monitor_mode and code!='en':
                     continue
                 problems.append(f'{code}: locale marked live but folder is missing')
                 continue
             missing=[name for name in source_pages if not (folder/name).exists()]
             if missing: problems.append(f'{code}: locale marked live but missing {len(missing)} mirrored pages')
 
-        for loc in live_locales:
-            code=loc.get('code')
-            if code in {'pt','en'}:
-                continue
-            folder=site/code
-            if source_monitor_mode and not folder.exists():
-                continue
-            for name in source_pages:
-                fp=localized_file(code,name)
-                if not fp.exists():
-                    continue
-                soup=BeautifulSoup(fp.read_text(encoding='utf-8'),'html.parser')
-                robots=soup.find('meta',attrs={'name':'robots'})
-                if robots and 'noindex' in (robots.get('content') or '').lower():
-                    problems.append(f'{code}/{name}: live translation is still noindex')
-                status=soup.find('meta',attrs={'name':'translation-status'})
-                if not status or status.get('content')!='live':
-                    problems.append(f'{code}/{name}: missing live translation marker')
-                if soup.select_one('.review-strip') is not None:
-                    problems.append(f'{code}/{name}: staging review strip still present')
+        # The production deploy runs finalize_live_locales.py before QA. At that
+        # point every live page, including PT and EN, must advertise the same
+        # complete hreflang cluster and a valid language-aware web manifest.
+        if not source_monitor_mode:
+            for loc in live_locales:
+                code=loc.get('code')
+                for name in source_pages:
+                    fp=localized_file(code,name)
+                    if not fp.exists():
+                        continue
+                    soup=BeautifulSoup(fp.read_text(encoding='utf-8'),'html.parser')
 
-                alternates={}
-                for link in soup.find_all('link',href=True):
-                    rel=link.get('rel') or []
-                    if 'alternate' in rel and link.get('hreflang'):
-                        alternates[link.get('hreflang')]=link.get('href')
-                for alt in live_locales:
-                    expected_href=localized_url(alt['code'],name)
-                    if alternates.get(alt['hreflang'])!=expected_href:
-                        problems.append(f'{code}/{name}: missing/wrong hreflang {alt["hreflang"]}')
-                if alternates.get('x-default')!=localized_url('pt',name):
-                    problems.append(f'{code}/{name}: missing/wrong x-default')
+                    if code not in {'pt','en'}:
+                        robots=soup.find('meta',attrs={'name':'robots'})
+                        if robots and 'noindex' in (robots.get('content') or '').lower():
+                            problems.append(f'{code}/{name}: live translation is still noindex')
+                        status=soup.find('meta',attrs={'name':'translation-status'})
+                        if not status or status.get('content')!='live':
+                            problems.append(f'{code}/{name}: missing live translation marker')
+                        if soup.select_one('.review-strip') is not None:
+                            problems.append(f'{code}/{name}: staging review strip still present')
+
+                    alternates={}
+                    for link in soup.find_all('link',href=True):
+                        rel=link.get('rel') or []
+                        if 'alternate' in rel and link.get('hreflang'):
+                            alternates[link.get('hreflang')]=link.get('href')
+                    for alt in live_locales:
+                        expected_href=localized_url(alt['code'],name)
+                        if alternates.get(alt['hreflang'])!=expected_href:
+                            problems.append(f'{code}/{name}: missing/wrong hreflang {alt["hreflang"]}')
+                    if alternates.get('x-default')!=localized_url('pt',name):
+                        problems.append(f'{code}/{name}: missing/wrong x-default')
+
+                    manifests=[x for x in soup.find_all('link',href=True) if 'manifest' in (x.get('rel') or [])]
+                    if len(manifests)!=1:
+                        problems.append(f'{code}/{name}: expected exactly one web manifest')
+                    else:
+                        href=manifests[0]['href'].split('?',1)[0]
+                        if href.startswith('/'):
+                            manifest_path=site/href.lstrip('/')
+                        else:
+                            manifest_path=(fp.parent/href).resolve()
+                        if not manifest_path.exists():
+                            problems.append(f'{code}/{name}: missing web manifest {href}')
     except Exception as exc:
         problems.append(f'data/locales.json: invalid JSON/configuration ({exc})')
 
@@ -134,4 +143,4 @@ if problems:
 if source_monitor_mode:
     print(f'QA OK — {len(files)} repository HTML files; source-monitor mode validated PT/EN and shared assets. Generated live locales remain gated by the deploy pipeline.')
 else:
-    print(f'QA OK — {len(files)} HTML files; all live locales complete and indexable.')
+    print(f'QA OK — {len(files)} HTML files; all live locales complete, indexable, hreflang-aligned and PWA-linked.')

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json, sys, subprocess
+import json, os, sys, subprocess
 from bs4 import BeautifulSoup
 
 site=Path('site')
 base='https://guia-migrante-pt.pages.dev'
+source_monitor_mode=os.getenv('QA_SOURCE_MONITOR')=='1'
 files=list(site.rglob('*.html'))
 relmap={str(f.relative_to(site)).replace('\\','/'):f for f in files}
 ids={}
@@ -46,9 +47,11 @@ for p in site.glob('*.html'):
     if f'href="en/{p.name}"' not in pt: problems.append(f'{p.name}: missing PT→EN')
     if f'href="../{p.name}"' not in en: problems.append(f'en/{p.name}: missing EN→PT')
 
-# Multilingual rollout guard: a locale cannot be marked live until it mirrors all
-# public PT pages that already have an English counterpart. Live translations must
-# also be indexable and expose a complete hreflang cluster.
+# Multilingual rollout guard. The production deploy materializes generated locales
+# before this strict check. The source-monitor workflow intentionally works from the
+# canonical repository tree, where generated locale folders are absent; in that mode
+# PT/EN and shared assets are still fully validated and generated locales remain the
+# responsibility of the deploy pipeline's parity + translation checks.
 locale_file=site/'data/locales.json'
 if not locale_file.exists():
     problems.append('data/locales.json: missing locale configuration')
@@ -74,6 +77,8 @@ else:
         for code in sorted(live-{'pt'}):
             folder=site/code
             if not folder.exists():
+                if source_monitor_mode and code not in {'en'}:
+                    continue
                 problems.append(f'{code}: locale marked live but folder is missing')
                 continue
             missing=[name for name in source_pages if not (folder/name).exists()]
@@ -82,6 +87,9 @@ else:
         for loc in live_locales:
             code=loc.get('code')
             if code in {'pt','en'}:
+                continue
+            folder=site/code
+            if source_monitor_mode and not folder.exists():
                 continue
             for name in source_pages:
                 fp=localized_file(code,name)
@@ -123,4 +131,7 @@ for js in ['ux.js','ux-en.js','sw.js','ops-v12.js','source-guard.js','language-s
 if problems:
     print('\n'.join(problems[:200]))
     sys.exit(1)
-print(f'QA OK — {len(files)} HTML files; all live locales complete and indexable.')
+if source_monitor_mode:
+    print(f'QA OK — {len(files)} repository HTML files; source-monitor mode validated PT/EN and shared assets. Generated live locales remain gated by the deploy pipeline.')
+else:
+    print(f'QA OK — {len(files)} HTML files; all live locales complete and indexable.')

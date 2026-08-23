@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - 'site/**'
+      - 'functions/**'
+      - 'wrangler.jsonc'
       - 'scripts/qa.py'
       - 'scripts/build_locales.py'
       - 'scripts/build_locales_uk_ru.py'
@@ -23,8 +25,11 @@ on:
       - 'scripts/check_translation_completeness.py'
       - 'scripts/finalize_live_locales.py'
       - 'scripts/build_locale_ux_copy.py'
+      - 'scripts/build_contact_copy.py'
       - 'scripts/build_search_indexes.py'
       - 'scripts/build_inline_runtime_copy.py'
+      - 'scripts/inject_contact_channel.py'
+      - 'scripts/check_contact_channel.py'
       - 'scripts/build_sitemap.py'
       - '.github/workflows/deploy-pages.yml'
 
@@ -79,7 +84,7 @@ jobs:
   qa-and-deploy:
     needs: translate-locales
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 40
     env:
       CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -125,12 +130,18 @@ jobs:
         run: python scripts/finalize_live_locales.py
       - name: Build localized dynamic UX copy
         run: python scripts/build_locale_ux_copy.py
+      - name: Build localized administration contact copy
+        run: python scripts/build_contact_copy.py
       - name: Build localized search indexes
         run: python scripts/build_search_indexes.py
       - name: Build localized inline-script runtime copy
         run: python scripts/build_inline_runtime_copy.py
+      - name: Inject administration contact channel
+        run: python scripts/inject_contact_channel.py
       - name: Build multilingual sitemap
         run: python scripts/build_sitemap.py
+      - name: Check administration contact channel
+        run: python scripts/check_contact_channel.py
       - name: Run site QA
         run: python scripts/qa.py
       - name: Cloudflare secrets not configured yet

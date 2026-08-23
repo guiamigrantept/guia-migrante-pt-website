@@ -97,6 +97,9 @@ else:
                             problems.append(f'{code}/{name}: missing live translation marker')
                         if soup.select_one('.review-strip') is not None:
                             problems.append(f'{code}/{name}: staging review strip still present')
+                        inline_runtime=soup.find('script',attrs={'data-inline-i18n':True})
+                        if inline_runtime is None or not (inline_runtime.get('src') or '').endswith('runtime-inline-i18n.js'):
+                            problems.append(f'{code}/{name}: missing inline-script localization runtime')
 
                     alternates={}
                     for link in soup.find_all('link',href=True):
@@ -141,13 +144,26 @@ else:
                             if not item.get('title') or not item.get('url'): problems.append(f'{code}: malformed search index item')
                     except Exception as exc:
                         problems.append(f'{code}: invalid search index ({exc})')
+                if code not in {'pt','en'}:
+                    inline_map=site/'data'/f'inline-runtime-{code}.json'
+                    if not inline_map.exists():
+                        problems.append(f'{code}: missing inline-script runtime locale map')
+                    else:
+                        try:
+                            payload=json.loads(inline_map.read_text(encoding='utf-8'))
+                            phrases=payload.get('phrases',{})
+                            if payload.get('locale')!=code: problems.append(f'{code}: inline runtime locale marker mismatch')
+                            if len(phrases)<10: problems.append(f'{code}: inline runtime phrase map unexpectedly small ({len(phrases)})')
+                            if any(not src or not dst for src,dst in phrases.items()): problems.append(f'{code}: malformed inline runtime phrase map')
+                        except Exception as exc:
+                            problems.append(f'{code}: invalid inline runtime locale map ({exc})')
     except Exception as exc:
         problems.append(f'data/locales.json: invalid JSON/configuration ({exc})')
 
-for required in ['language-switcher.js','language-switcher.css']:
+for required in ['language-switcher.js','language-switcher.css','runtime-inline-i18n.js']:
     if not (site/required).exists(): problems.append(f'{required}: missing multilingual asset')
 
-for js in ['ux.js','ux-en.js','sw.js','ops-v12.js','source-guard.js','language-switcher.js']:
+for js in ['ux.js','ux-en.js','sw.js','ops-v12.js','source-guard.js','language-switcher.js','runtime-inline-i18n.js']:
     fp=site/js
     if fp.exists():
         r=subprocess.run(['node','--check',str(fp)],capture_output=True,text=True)
@@ -159,4 +175,4 @@ if problems:
 if source_monitor_mode:
     print(f'QA OK — {len(files)} repository HTML files; source-monitor mode validated PT/EN and shared assets. Generated live locales remain gated by the deploy pipeline.')
 else:
-    print(f'QA OK — {len(files)} HTML files; live locales complete, indexable, hreflang-aligned, PWA-linked and runtime-localized.')
+    print(f'QA OK — {len(files)} HTML files; live locales complete, indexable, hreflang-aligned, PWA-linked and runtime-localized, including inline-script output.')

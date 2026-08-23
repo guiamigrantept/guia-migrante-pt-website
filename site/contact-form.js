@@ -1,8 +1,9 @@
 (() => {
   'use strict';
 
-  const current=(location.pathname.split('/').filter(Boolean).pop()||'index.html').toLowerCase();
-  if(current!=='contactos.html') return;
+  const path=(location.pathname||'/').replace(/\/+$/,'');
+  const current=(path.split('/').filter(Boolean).pop()||'index.html').toLowerCase();
+  if(current!=='contactos.html'&&current!=='contactos') return;
 
   const raw=(document.documentElement.lang||'pt').toLowerCase();
   const locale=raw.startsWith('fr')?'fr':raw.startsWith('es')?'es':raw.startsWith('uk')?'uk':raw.startsWith('ru')?'ru':raw.startsWith('hi')?'hi':raw.startsWith('bn')?'bn':raw.startsWith('en')?'en':'pt';
@@ -23,9 +24,17 @@
 
   const esc=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 
+  function ensureStyles(){
+    if(document.querySelector('link[href^="/contact-form.css"]')) return;
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='/contact-form.css?v=20260824-2';
+    document.head.appendChild(link);
+  }
+
   async function getCopy(){
     try{
-      const r=await fetch(`/data/contact-copy-${locale}.json`,{cache:'no-store'});
+      const r=await fetch(`/data/contact-copy-${locale}.json?v=20260824-2`,{cache:'no-store'});
       if(!r.ok) throw new Error(String(r.status));
       return await r.json();
     }catch{return fallback;}
@@ -35,6 +44,7 @@
     if(document.getElementById('fale-com-o-guia')) return;
     const main=document.querySelector('main');
     if(!main) return;
+    ensureStyles();
 
     const section=document.createElement('section');
     section.id='fale-com-o-guia';

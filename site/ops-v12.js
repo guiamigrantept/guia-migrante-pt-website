@@ -9,8 +9,8 @@ const ui={
   fr:{skip:"Aller au contenu principal",stale:"<strong>Avertissement de révision :</strong> cette page n’a pas été vérifiée éditorialement depuis plus de 90 jours. Vérifiez la source officielle indiquée avant d’agir.",newtab:" — s’ouvre dans un nouvel onglet"},
   es:{skip:"Saltar al contenido principal",stale:"<strong>Aviso de revisión:</strong> esta página no se ha verificado editorialmente en más de 90 días. Consulte la fuente oficial indicada antes de actuar.",newtab:" — se abre en una pestaña nueva"},
   uk:{skip:"Перейти до основного вмісту",stale:"<strong>Попередження про перевірку:</strong> цю сторінку редакційно не перевіряли понад 90 днів. Перед діями перевірте вказане офіційне джерело.",newtab:" — відкривається в новій вкладці"},
-  ru:{skip:"Перейти к основному содержанию",stale:"<strong>Предупреждение о проверке:</strong> эта страница не проходила редакционную проверку более 90 дней. Перед действиями проверьте указанное официальное источник.",newtab:" — откроется в новой вкладке"},
-  hi:{skip:"मुख्य सामग्री पर जाएँ",stale:"<strong>समीक्षा चेतावनी:</strong> इस पृष्ठ की 90 दिनों से अधिक समय से संपादकीय समीक्षा नहीं हुई है। कोई कदम उठाने से पहले दी गई आधिकारिक स्रोत की जाँच करें।",newtab:" — नई टैब में खुलेगा"},
+  ru:{skip:"Перейти к основному содержанию",stale:"<strong>Предупреждение о проверке:</strong> эта страница не проходила редакционную проверку более 90 дней. Перед действиями проверьте указанный официальный источник.",newtab:" — откроется в новой вкладке"},
+  hi:{skip:"मुख्य सामग्री पर जाएँ",stale:"<strong>समीक्षा चेतावनी:</strong> इस पृष्ठ की 90 दिनों से अधिक समय से संपादकीय समीक्षा नहीं हुई है। कोई कदम उठाने से पहले दिए गए आधिकारिक स्रोत की जाँच करें।",newtab:" — नई टैब में खुलेगा"},
   bn:{skip:"মূল বিষয়বস্তুতে যান",stale:"<strong>পর্যালোচনা সতর্কতা:</strong> এই পৃষ্ঠাটি ৯০ দিনের বেশি সময় ধরে সম্পাদকীয়ভাবে যাচাই করা হয়নি। কোনো পদক্ষেপ নেওয়ার আগে উল্লেখিত সরকারি উৎস যাচাই করুন।",newtab:" — নতুন ট্যাবে খুলবে"}
 };
 const code=lang.startsWith("fr")?"fr":lang.startsWith("es")?"es":lang.startsWith("uk")?"uk":lang.startsWith("ru")?"ru":lang.startsWith("hi")?"hi":lang.startsWith("bn")?"bn":isEN?"en":"pt";
@@ -58,6 +58,13 @@ document.querySelectorAll('a[target="_blank"]').forEach(a=>{
     a.setAttribute("aria-label",text+copy.newtab);
   }
 });
+
+/* Register the single root service worker from every locale. PT/EN legacy UX
+   scripts may also attempt registration; this root registration is idempotent and
+   prevents /fr/sw.js, /es/sw.js, etc. from becoming the effective PWA path. */
+if("serviceWorker" in navigator && location.protocol==="https:"){
+  navigator.serviceWorker.register("/sw.js",{scope:"/"}).catch(()=>{});
+}
 
 /* Load the shared multilingual selector. PT is at root; translated versions live one level down. */
 const pathParts=location.pathname.split('/').filter(Boolean);

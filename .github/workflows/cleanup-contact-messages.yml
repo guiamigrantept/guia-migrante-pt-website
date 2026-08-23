@@ -1,0 +1,33 @@
+name: Clean old administration messages
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      DB_NAME: guia-migrante-contact
+    steps:
+      - name: Remove messages older than 180 days
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$CF_API_TOKEN" || exit 0
+          test -n "$CF_ACCOUNT_ID" || exit 0
+          LIST=$(curl -fsS "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database?name=$DB_NAME" \
+            -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json')
+          DB_ID=$(printf '%s' "$LIST" | jq -r '.result[0].uuid // empty')
+          if [ -z "$DB_ID" ]; then echo 'Contact database does not exist yet.'; exit 0; fi
+          BODY=$(jq -nc --arg sql "DELETE FROM contact_messages WHERE created_at < datetime('now','-180 days')" '{sql:$sql}')
+          curl -fsS -X POST "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database/$DB_ID/query" \
+            -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json' --data "$BODY" >/dev/null
+          echo 'Contact retention cleanup completed.'

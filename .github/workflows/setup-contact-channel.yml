@@ -1,0 +1,90 @@
+name: Configure administration contact channel
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/setup-contact-channel.yml'
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      PROJECT_NAME: guia-migrante-pt
+      DB_NAME: guia-migrante-contact
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Validate Cloudflare credentials
+        run: |
+          test -n "$CF_API_TOKEN" || { echo 'Missing CLOUDFLARE_API_TOKEN'; exit 1; }
+          test -n "$CF_ACCOUNT_ID" || { echo 'Missing CLOUDFLARE_ACCOUNT_ID'; exit 1; }
+      - name: Find or create EU D1 database
+        id: d1
+        shell: bash
+        run: |
+          set -euo pipefail
+          LIST=$(curl -fsS "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database?name=$DB_NAME" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H 'Content-Type: application/json')
+          DB_ID=$(printf '%s' "$LIST" | jq -r '.result[0].uuid // empty')
+          if [ -z "$DB_ID" ]; then
+            CREATED=$(curl -fsS -X POST "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database" \
+              -H "Authorization: Bearer $CF_API_TOKEN" \
+              -H 'Content-Type: application/json' \
+              --data "{\"name\":\"$DB_NAME\",\"jurisdiction\":\"eu\"}")
+            DB_ID=$(printf '%s' "$CREATED" | jq -r '.result.uuid // empty')
+          fi
+          test -n "$DB_ID" || { echo 'Could not obtain D1 database id. The Cloudflare token needs D1 Write permission.'; exit 1; }
+          echo "database_id=$DB_ID" >> "$GITHUB_OUTPUT"
+          echo 'D1 database ready.'
+      - name: Write Pages Wrangler binding
+        env:
+          DB_ID: ${{ steps.d1.outputs.database_id }}
+        run: |
+          cat > wrangler.jsonc <<EOF
+          {
+            "$schema": "node_modules/wrangler/config-schema.json",
+            "name": "guia-migrante-pt",
+            "pages_build_output_dir": "./site",
+            "compatibility_date": "2026-08-24",
+            "d1_databases": [
+              {
+                "binding": "CONTACT_DB",
+                "database_name": "guia-migrante-contact",
+                "database_id": "$DB_ID"
+              }
+            ]
+          }
+          EOF
+      - name: Commit binding configuration
+        run: |
+          if git diff --quiet -- wrangler.jsonc; then
+            echo 'Wrangler binding already current.'
+          else
+            git config user.name 'guiamigrantept'
+            git config user.email 'actions@users.noreply.github.com'
+            git add wrangler.jsonc
+            git commit -m 'config: bind internal contact database'
+            git push origin HEAD:main
+          fi
+      - name: Dispatch fresh production deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -fsS -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H 'Accept: application/vnd.github+json' \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-pages.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo 'Production deploy dispatched.'

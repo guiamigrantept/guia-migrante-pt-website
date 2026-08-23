@@ -121,21 +121,23 @@ def apply_pass(code: str):
     }
 
 
-def remaining_blocking_nodes(code: str) -> int:
+def remaining_blocking_items(code: str):
     folder = SITE / code
-    remaining = 0
+    remaining = []
     for fp in sorted(folder.glob('*.html')):
         soup = BeautifulSoup(fp.read_text(encoding='utf-8'), 'html.parser')
-        remaining += len(collect_flagged(soup, code, source_values_for(fp)))
+        for kind, _slot, text, reason in collect_flagged(soup, code, source_values_for(fp)):
+            remaining.append({'page': fp.name, 'kind': kind, 'reason': reason, 'text': text})
     return remaining
 
 
 def main():
     report = {
-        'version': 2,
-        'method': 'cleanup uses the exact same classifier as final translation QA',
+        'version': 3,
+        'method': 'cleanup uses the exact same classifier as final translation QA and fails if blockers remain',
         'locales': {},
     }
+    unresolved = {}
 
     for code in TARGETS:
         folder = SITE / code
@@ -150,13 +152,29 @@ def main():
             if result['flagged_strings'] == 0 or result['changed_nodes'] == 0:
                 break
 
-        remaining = remaining_blocking_nodes(code)
-        report['locales'][code] = {'passes': passes, 'remaining_flagged_nodes': remaining}
+        remaining_items = remaining_blocking_items(code)
+        remaining = len(remaining_items)
+        report['locales'][code] = {
+            'passes': passes,
+            'remaining_flagged_nodes': remaining,
+            'remaining_examples': remaining_items[:40],
+        }
         print(f'{code}: cleanup finished; remaining QA-blocking Portuguese nodes={remaining}')
+        for item in remaining_items[:12]:
+            sample = item['text'].replace('\n', ' ')
+            if len(sample) > 180:
+                sample = sample[:177] + '...'
+            print(f"  REMAINS {code}: {item['page']} [{item['kind']}/{item['reason']}]: {sample}")
+        if remaining:
+            unresolved[code] = remaining
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f'Wrote {REPORT}')
+
+    if unresolved:
+        summary = ', '.join(f'{code}={count}' for code, count in sorted(unresolved.items()))
+        raise SystemExit(f'QA-blocking Portuguese residues remain after cleanup: {summary}')
 
 
 if __name__ == '__main__':

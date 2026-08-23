@@ -5,10 +5,11 @@ from xml.sax.saxutils import escape
 
 SITE=Path('site')
 BASE='https://guia-migrante-pt.pages.dev'
+PRIVATE_PAGES={'admin-mensagens.html'}
 config=json.loads((SITE/'data/locales.json').read_text(encoding='utf-8'))
 locales=[x for x in config.get('locales',[]) if x.get('status')=='live']
 
-root_pages=sorted(p.name for p in SITE.glob('*.html') if p.name!='404.html')
+root_pages=sorted(p.name for p in SITE.glob('*.html') if p.name!='404.html' and p.name not in PRIVATE_PAGES)
 
 def file_for(code,page):
     return SITE/page if code=='pt' else SITE/code/page
@@ -25,7 +26,6 @@ for page in root_pages:
         links=[]
         for alt in available:
             links.append(f'<xhtml:link rel="alternate" hreflang="{escape(alt["hreflang"])}" href="{escape(url_for(alt["code"],page))}"/>')
-        # Portuguese is the x-default while it is the source language.
         if any(x['code']=='pt' for x in available):
             links.append(f'<xhtml:link rel="alternate" hreflang="x-default" href="{escape(url_for("pt",page))}"/>')
         rows.append(f'  <url><loc>{escape(url_for(current["code"],page))}</loc>{"".join(links)}</url>')

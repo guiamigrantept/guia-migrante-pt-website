@@ -53,7 +53,7 @@ jobs:
         run: |
           cat > wrangler.jsonc <<EOF
           {
-            "$schema": "node_modules/wrangler/config-schema.json",
+            "\$schema": "node_modules/wrangler/config-schema.json",
             "name": "guia-migrante-pt",
             "pages_build_output_dir": "./site",
             "compatibility_date": "2026-08-24",

@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-from auto_translate_untranslated_copy import translate_batch
+from auto_translate_untranslated_copy import make_batches, translate_batch
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'site'
@@ -59,8 +59,8 @@ def translate_strings(strings, target):
         reverse[p]=slots
     unique=sorted(set(protected.values()),key=lambda x:(len(x),x))
     translated={}
-    for start in range(0,len(unique),35):
-        batch=unique[start:start+35]
+    batches=make_batches(unique,max_chars=2200)
+    for batch in batches:
         translated.update(translate_batch(batch,target))
     out={}
     for source,p in protected.items():

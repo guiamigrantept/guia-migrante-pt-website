@@ -100,6 +100,7 @@
         const data=await r.json().catch(()=>({}));
         if(r.ok){
           form.reset();status.textContent=copy.success;status.classList.add('success');
+          window.dispatchEvent(new CustomEvent('gmp:contact-success'));
         }else if(r.status===429&&data.code==='duplicate'){
           status.textContent=copy.duplicate;status.classList.add('error');
         }else if(r.status===429||data.code==='too_fast'){

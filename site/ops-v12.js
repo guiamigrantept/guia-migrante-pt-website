@@ -59,6 +59,34 @@ document.querySelectorAll('a[target="_blank"]').forEach(a=>{
   }
 });
 
+/* Privacy-first first-party analytics.
+   No cookies, persistent IDs, IP storage, user-agent storage or full referrer URLs.
+   Global Privacy Control and Do Not Track are respected. */
+const analyticsBlocked=location.pathname.startsWith('/admin-')||location.pathname.startsWith('/api/')||navigator.globalPrivacyControl===true||navigator.doNotTrack==='1'||window.doNotTrack==='1';
+const params=new URLSearchParams(location.search);
+let referrerHost='';
+try{if(document.referrer){const u=new URL(document.referrer);if(u.hostname!==location.hostname)referrerHost=u.hostname.toLowerCase();}}catch{}
+const campaign={
+  utmSource:(params.get('utm_source')||'').slice(0,120),
+  utmMedium:(params.get('utm_medium')||'').slice(0,120),
+  utmCampaign:(params.get('utm_campaign')||'').slice(0,160)
+};
+function track(event,targetHost=''){
+  if(analyticsBlocked) return;
+  const payload={event,path:location.pathname,locale:code,referrerHost,targetHost:String(targetHost||'').slice(0,180).toLowerCase(),...campaign};
+  fetch('/api/analytics',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload),keepalive:true,credentials:'same-origin'}).catch(()=>{});
+}
+window.GMPAnalytics={track};
+if(!analyticsBlocked) track('page_view');
+window.addEventListener('gmp:contact-success',()=>track('contact_submit'));
+
+const officialHosts=['gov.pt','www.gov.pt','aima.gov.pt','www.aima.gov.pt','seg-social.pt','www.seg-social.pt','sns24.gov.pt','www.sns24.gov.pt','justica.gov.pt','www.justica.gov.pt','dre.pt','www.dre.pt','irn.justica.gov.pt'];
+document.addEventListener('click',event=>{
+  const a=event.target?.closest?.('a[href]');
+  if(!a) return;
+  try{const u=new URL(a.href,location.href);if(officialHosts.includes(u.hostname.toLowerCase()))track('official_link_click',u.hostname);}catch{}
+},{capture:true});
+
 /* Register the single root service worker from every locale. PT/EN legacy UX
    scripts may also attempt registration; this root registration is idempotent and
    prevents /fr/sw.js, /es/sw.js, etc. from becoming the effective PWA path. */

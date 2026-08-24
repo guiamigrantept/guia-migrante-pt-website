@@ -1,4 +1,4 @@
-name: Clean old administration messages
+name: Clean old administration data
 
 on:
   schedule:
@@ -17,7 +17,7 @@ jobs:
       CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       DB_NAME: guia-migrante-contact
     steps:
-      - name: Remove messages older than 180 days
+      - name: Apply retention rules
         shell: bash
         run: |
           set -euo pipefail
@@ -26,8 +26,9 @@ jobs:
           LIST=$(curl -fsS "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database?name=$DB_NAME" \
             -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json')
           DB_ID=$(printf '%s' "$LIST" | jq -r '.result[0].uuid // empty')
-          if [ -z "$DB_ID" ]; then echo 'Contact database does not exist yet.'; exit 0; fi
-          BODY=$(jq -nc --arg sql "DELETE FROM contact_messages WHERE created_at < datetime('now','-180 days')" '{sql:$sql}')
+          if [ -z "$DB_ID" ]; then echo 'Administration database does not exist yet.'; exit 0; fi
+          SQL="CREATE TABLE IF NOT EXISTS analytics_events (id TEXT PRIMARY KEY, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, event_type TEXT NOT NULL, path TEXT NOT NULL, locale TEXT NOT NULL, referrer_host TEXT, target_host TEXT, utm_source TEXT, utm_medium TEXT, utm_campaign TEXT); DELETE FROM contact_messages WHERE created_at < datetime('now','-180 days'); DELETE FROM analytics_events WHERE created_at < datetime('now','-90 days');"
+          BODY=$(jq -nc --arg sql "$SQL" '{sql:$sql}')
           curl -fsS -X POST "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database/$DB_ID/query" \
             -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json' --data "$BODY" >/dev/null
-          echo 'Contact retention cleanup completed.'
+          echo 'Administration retention cleanup completed: messages 180 days, analytics 90 days.'

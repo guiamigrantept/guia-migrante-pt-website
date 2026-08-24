@@ -66,6 +66,43 @@ jobs:
             ]
           }
           EOF
+      - name: Bind D1 directly to Cloudflare Pages environments
+        env:
+          DB_ID: ${{ steps.d1.outputs.database_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PROJECT=$(curl -fsS "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H 'Content-Type: application/json')
+          BODY=$(printf '%s' "$PROJECT" | jq --arg id "$DB_ID" '{
+            deployment_configs: {
+              production: {
+                d1_databases: ((.result.deployment_configs.production.d1_databases // {}) + {CONTACT_DB:{id:$id}})
+              },
+              preview: {
+                d1_databases: ((.result.deployment_configs.preview.d1_databases // {}) + {CONTACT_DB:{id:$id}})
+              }
+            }
+          }')
+          UPDATED=$(curl -fsS -X PATCH "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H 'Content-Type: application/json' \
+            --data "$BODY")
+          printf '%s' "$UPDATED" | jq -e '.success == true' >/dev/null
+          echo 'Cloudflare Pages D1 binding updated.'
+      - name: Verify Pages production binding
+        env:
+          DB_ID: ${{ steps.d1.outputs.database_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PROJECT=$(curl -fsS "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H 'Content-Type: application/json')
+          GOT=$(printf '%s' "$PROJECT" | jq -r '.result.deployment_configs.production.d1_databases.CONTACT_DB.id // empty')
+          test "$GOT" = "$DB_ID" || { echo "CONTACT_DB binding verification failed: got '$GOT'"; exit 1; }
+          echo 'CONTACT_DB is bound to the production Pages environment.'
       - name: Commit binding configuration
         run: |
           if git diff --quiet -- wrangler.jsonc; then

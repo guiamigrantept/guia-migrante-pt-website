@@ -5,7 +5,7 @@ from xml.sax.saxutils import escape
 
 SITE=Path('site')
 BASE='https://guia-migrante-pt.pages.dev'
-PRIVATE_PAGES={'admin-mensagens.html'}
+PRIVATE_PAGES={'admin-mensagens.html','admin-estatisticas.html'}
 config=json.loads((SITE/'data/locales.json').read_text(encoding='utf-8'))
 locales=[x for x in config.get('locales',[]) if x.get('status')=='live']
 

@@ -11,20 +11,20 @@ São registados apenas:
 - idioma;
 - hostname de origem externa, quando o navegador o fornece;
 - hostname da fonte oficial clicada;
-- parâmetros UTM `source`, `medium` e `campaign`, quando existirem no URL.
+- parâmetros UTM `source`, `medium` e `campaign`, quando existirem.
 
-Não são guardados pela aplicação:
+Para atribuir uma conversão posterior à campanha que trouxe a visita, apenas as etiquetas UTM podem ser conservadas temporariamente em `sessionStorage` durante a sessão atual do navegador. Não é criado um identificador de utilizador ou dispositivo. Se Global Privacy Control ou Do Not Track estiver ativo, não são enviados eventos de analytics nem são guardadas essas etiquetas de campanha para medição.
+
+Não são guardados pela aplicação no sistema de analytics:
 - endereço IP;
 - user-agent;
 - cookies publicitários;
 - identificadores persistentes de utilizador ou dispositivo;
 - URL completo do referenciador;
 - conteúdo das mensagens;
-- assunto da mensagem dentro do sistema de analytics.
+- assunto da mensagem.
 
-Global Privacy Control e Do Not Track são respeitados pelo JavaScript de medição.
 Os eventos de analytics são eliminados após 90 dias.
-
 A área protegida `/admin-estatisticas.html` mostra apenas agregados úteis para avaliar páginas, idiomas, campanhas e conversões.
 
 ## Feedback / contacto

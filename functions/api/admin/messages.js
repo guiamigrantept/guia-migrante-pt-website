@@ -1,4 +1,4 @@
-const ADMIN_KEY_HASH='ca7277f975a09c411505b0b6a82a066bdcde5938ac8e0475a3519300f4c034fe';
+const ADMIN_KEY_HASH='33c4e0fac8895bcff60ce878c938ee09171d669f6078be99f5a8be58517178e0';
 const STATUSES=new Set(['new','read','closed']);
 
 function json(data,status=200){return new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','X-Robots-Tag':'noindex, nofollow'}})}

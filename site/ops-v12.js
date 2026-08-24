@@ -28,7 +28,6 @@ if(main){
 }
 document.querySelectorAll("main").forEach(m=>m.setAttribute("tabindex","-1"));
 
-/* Announce dynamic search result changes when the existing search UI is present. */
 const obs=new MutationObserver(()=>{
   document.querySelectorAll(".ux-search-results").forEach(el=>{
     if(!el.hasAttribute("role")){el.setAttribute("role","status");el.setAttribute("aria-live","polite");}
@@ -36,14 +35,11 @@ const obs=new MutationObserver(()=>{
 });
 obs.observe(document.documentElement,{childList:true,subtree:true});
 
-/* Staleness warning using the page's last-reviewed meta.
-   No network request and no personal data transmission. */
 const meta=document.querySelector('meta[name="last-reviewed"]');
 if(meta && main && !document.querySelector(".review-runtime")){
   const d=new Date(meta.content+"T00:00:00");
   const age=Math.floor((Date.now()-d.getTime())/86400000);
-  const limit=90;
-  if(Number.isFinite(age) && age>limit){
+  if(Number.isFinite(age) && age>90){
     const box=document.createElement("div");
     box.className="review-status stale review-runtime";
     box.innerHTML=copy.stale;
@@ -51,7 +47,6 @@ if(meta && main && !document.querySelector(".review-runtime")){
   }
 }
 
-/* Improve external-link announcement without changing visible text. */
 document.querySelectorAll('a[target="_blank"]').forEach(a=>{
   if(!a.getAttribute("aria-label")){
     const text=(a.textContent||"").trim();
@@ -61,16 +56,25 @@ document.querySelectorAll('a[target="_blank"]').forEach(a=>{
 
 /* Privacy-first first-party analytics.
    No cookies, persistent IDs, IP storage, user-agent storage or full referrer URLs.
-   Global Privacy Control and Do Not Track are respected. */
+   Only campaign labels may be kept in sessionStorage for the current browser session
+   so a later contact conversion can still be attributed to its campaign. */
 const analyticsBlocked=location.pathname.startsWith('/admin-')||location.pathname.startsWith('/api/')||navigator.globalPrivacyControl===true||navigator.doNotTrack==='1'||window.doNotTrack==='1';
 const params=new URLSearchParams(location.search);
 let referrerHost='';
 try{if(document.referrer){const u=new URL(document.referrer);if(u.hostname!==location.hostname)referrerHost=u.hostname.toLowerCase();}}catch{}
-const campaign={
-  utmSource:(params.get('utm_source')||'').slice(0,120),
-  utmMedium:(params.get('utm_medium')||'').slice(0,120),
-  utmCampaign:(params.get('utm_campaign')||'').slice(0,160)
-};
+let campaign={utmSource:'',utmMedium:'',utmCampaign:''};
+if(!analyticsBlocked){
+  const current={utmSource:(params.get('utm_source')||'').slice(0,120),utmMedium:(params.get('utm_medium')||'').slice(0,120),utmCampaign:(params.get('utm_campaign')||'').slice(0,160)};
+  if(current.utmSource||current.utmMedium||current.utmCampaign){
+    campaign=current;
+    try{sessionStorage.setItem('gmpCampaign',JSON.stringify(current));}catch{}
+  }else{
+    try{
+      const saved=JSON.parse(sessionStorage.getItem('gmpCampaign')||'{}');
+      campaign={utmSource:String(saved.utmSource||'').slice(0,120),utmMedium:String(saved.utmMedium||'').slice(0,120),utmCampaign:String(saved.utmCampaign||'').slice(0,160)};
+    }catch{}
+  }
+}
 function track(event,targetHost=''){
   if(analyticsBlocked) return;
   const payload={event,path:location.pathname,locale:code,referrerHost,targetHost:String(targetHost||'').slice(0,180).toLowerCase(),...campaign};
@@ -87,14 +91,10 @@ document.addEventListener('click',event=>{
   try{const u=new URL(a.href,location.href);if(officialHosts.includes(u.hostname.toLowerCase()))track('official_link_click',u.hostname);}catch{}
 },{capture:true});
 
-/* Register the single root service worker from every locale. PT/EN legacy UX
-   scripts may also attempt registration; this root registration is idempotent and
-   prevents /fr/sw.js, /es/sw.js, etc. from becoming the effective PWA path. */
 if("serviceWorker" in navigator && location.protocol==="https:"){
   navigator.serviceWorker.register("/sw.js",{scope:"/"}).catch(()=>{});
 }
 
-/* Load the shared multilingual selector. PT is at root; translated versions live one level down. */
 const pathParts=location.pathname.split('/').filter(Boolean);
 const translated=['en','fr','es','uk','ru','hi','bn'].includes(pathParts[0]);
 const prefix=translated?'../':'';

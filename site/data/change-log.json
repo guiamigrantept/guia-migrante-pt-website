@@ -2,6 +2,56 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-25T08:30:04Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-25T08:30:04Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-08-25T08:29:55Z",
+      "source_id": "src_3ec3c96219da",
+      "url": "https://www.portaldahabitacao.pt/porta-65mais",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/habitacao.html",
+        "habitacao.html"
+      ],
+      "candidate_sha256": "753556f10117784354a4a840079aad58eb66f89a4ed57936fac75584c588f991",
+      "diff_excerpt": "-Porta 65 +\n-Porta 65+\n-Candidatura Por Perda de Rendimentos\n-Candidatura por Família Monoparental\n-Lista de Resultados\n-Porta 65+\n-Na sequência da publicação do Decreto-Lei n.º 38/2023, de 29 de maio, que procedeu à alteração do Decreto-Lei n.º 308/2007, de 3 de setembro, foi criado e regulamentado o programa de apoio financeiro Porta 65, que prevê uma nova modalidade de apoio ao arrendamento – Porta 65 +.\n-Portaria n.º 346-A/2023, de 10 de novembro - Diário da República n.º 218/2023, 1º Suplemento, Série I de 2023-11-10\n-Decreto-Lei n.º 38/2023, de 29 de maio - Diário da República n.º 103/2023, Série I de 2023-05-29\n-Este apoio é atribuído mediante a concessão de uma subvenção mensal, independentemente da idade dos candidatos, destinado a:\n-Agregados com quebra de rendimentos superior a 20 % face aos rendimentos dos três meses precedentes ou do mesmo período homólogo do ano anterior;\n-Agregados monoparentais.\n-São requisitos de acesso ao apoio:\n-Os titulares do contrato de arrendamento terem residência permanente na habitação a que se refere a candidatura;\n-O contrato de arrendamento estar registado no portal das finanças;\n-Nenhum dos membros do agregado ser proprietário ou arren"
+    },
+    {
+      "time": "2026-08-25T08:29:37Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 20-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-08-25T08:27:48Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "7e22a28ec2295c49545fa903ee426faf9da63c5d6897977da00008f1e1b995f9",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 52.162.137.101\n+Attack ID: 20000051\n+Message ID: 006980522414"
+    },
+    {
       "time": "2026-08-25T03:37:45Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",

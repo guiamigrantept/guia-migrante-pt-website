@@ -2,6 +2,46 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-26T11:24:56Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-26T11:24:56Z",
+      "source_id": "src_87d4fe096076",
+      "url": "https://www.gov.pt/guias/migrantes-trabalhar-e-criar-um-negocio-em-portugal",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-26T11:24:36Z",
+      "source_id": "src_87d4fe096076",
+      "url": "https://www.gov.pt/guias/migrantes-trabalhar-e-criar-um-negocio-em-portugal",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/integracao.html",
+        "en/trabalho.html",
+        "integracao.html",
+        "trabalho.html"
+      ],
+      "candidate_sha256": "eb9b9835973056e1de18e0c2e341106a9a79679b78d33ba483067af3ce4fdc54",
+      "diff_excerpt": "-Guias práticos\n-Migrantes: trabalhar e criar um negócio em Portugal\n-Atualizado em\n-05/05/2026\n-Nesta página\n-Trabalhar e criar um negócio em Portugal\n-Procurar emprego em Portugal\n-Trabalhar em Portugal - direitos e deveres\n-Criar um negócio em Portugal\n-Qualificação profissional, estágios e formação\n-Se é natural de um país fora do Espaço Económico Europeu e pretende exercer uma profissão em Portugal, vai precisar de um título de residência que lhe permita ter acesso ao emprego em território nacional.\n-Pode trabalhar por conta de outrem ou como trabalhador/a independente (por exemplo, como freelancer ou criar o seu próprio negócio). Para isso deve\n-pedir um visto de residência específico para atividade profissional subordinada ou atividade profissional independente\n-Nota\n-: O visto de residência para exercício de uma atividade profissional subordinada ou os vistos de curta duração e de estada temporária para trabalho sazonal dependem da existência de contrato de trabalho ou promessa de contrato de trabalho (que devem ser entregues logo no pedido de instrução do visto ainda no país de origem).\n-Para informações relacionadas com a situação de conflito na Ucrânia,\n-consulte a págin"
+    },
+    {
+      "time": "2026-08-26T11:22:27Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "45d95a675cb53f97079fdd39e3e9b514377b380a727babf18740156679700fb6",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 4.236.173.23\n+Attack ID: 20000051\n+Message ID: 006995387006"
+    },
+    {
       "time": "2026-08-26T08:31:17Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",

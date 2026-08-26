@@ -2,6 +2,89 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-26T14:53:24Z",
+      "source_id": "src_76e249b224e7",
+      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-26T14:53:24Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-26T14:53:24Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-08-26T14:53:22Z",
+      "source_id": "src_76e249b224e7",
+      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/qualificacoes.html",
+        "qualificacoes.html"
+      ],
+      "candidate_sha256": "deb6ea34594c485b8c05bf4b344f8ab74f1dd93eba0124e8e938307f6dedb57b",
+      "diff_excerpt": "-Guias práticos\n-Qualificações profissionais\n-Atualizado em\n-11/05/2026\n-Nesta página\n-Qualificações profissionais\n-Guias relacionados\n-Algumas profissões são regulamentadas nos países da União Europeia (UE), Espaço Económico Europeu (EEE) e Suíça. Se quer trabalhar em Portugal numa profissão regulamentada, e obteve as suas qualificações profissionais noutro país da UE, EEE ou na Suíça, tem de pedir o reconhecimento de qualificações profissionais antes de começar a trabalhar.\n-Se obteve as suas qualificações profissionais num país fora da UE, EEE ou Suíça, deve contactar a autoridade competente dessa profissão para pedir o reconhecimento de qualificações.\n-Consulte a base de dados de Nomes Genéricos de Profissão\n-para saber se a sua profissão é regulamentada.\n-A entidade coordenadora para o reconhecimento de qualificações profissionais em Portugal é a\n-Direção-Geral do Emprego e das Relações de Trabalho\n-Pedir o reconhecimento de qualificações profissionais\n-Cada profissão regulamentada é da responsabilidade de uma autoridade competente em cada país. São as autoridades competentes que avaliam o seu pedido e dão autorização para trabalhar.\n-Por exemplo, se quer trabalhar em Portugal"
+    },
+    {
+      "time": "2026-08-26T14:53:01Z",
+      "source_id": "src_42ae5fe404b9",
+      "url": "https://www.gov.pt/servicos/registar-um-nascimento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "b65369a9907e7350b950a873f4e0e06243f988c77d1bea22970a520c57963f77",
+      "diff_excerpt": "-Serviços\n-Registar um nascimento\n-Todas as crianças que nascem em Portugal têm de ser registadas, mesmo se os pais forem estrangeiros. O registo de nascimento do bebé é obrigatório. Quando as crianças nascem no estrangeiro e, pelo menos, um dos pais é português, têm direito à nacionalidade portuguesa.\n-Durante o processo do pedido online do registo de nascimento também é possível\n-pedir o Cartão de Cidadão\n-Registar\n-Atualizado em\n-25.06.2026\n-Nesta página\n-Informação à sua medida\n-Quem pode registar um nascimento\n-Quando se pode registar um nascimento\n-Como e onde se pode registar um nascimento\n-Quanto tempo demora a receber o registo?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação à sua medida\n-Responda a um breve questionário e veja apenas a informação que lhe interessa.\n-1 / 2\n-Quem vai registar o nascimento?\n-Um ou ambos os pais\n-Outra pessoa\n-Anterior\n-Próximo\n-Pedido online\n-Se a criança nasceu em Portugal:\n-Pode ser feito por qualquer um dos progenitores, desde que sejam casados um com o outro.\n-Se os pais não forem casados\n-, um progenitor submete a declaração online e outro recebe um email para confirmar o registo.\n-Se um dos progenitores e"
+    },
+    {
+      "time": "2026-08-26T14:52:48Z",
+      "source_id": "src_87d4fe096076",
+      "url": "https://www.gov.pt/guias/migrantes-trabalhar-e-criar-um-negocio-em-portugal",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/integracao.html",
+        "en/trabalho.html",
+        "integracao.html",
+        "trabalho.html"
+      ],
+      "candidate_sha256": "0ca549b085c8dd3541ee6deec61be7b19969de5d82a32bb9536d67fbbd1a0219",
+      "diff_excerpt": "+Guias relacionados\n+Migrantes: encontrar alojamento e casa em Portugal\n+Opções para encontrar alojamento em Portugal, incluindo arrendamento, compra de casa, apoios públicos e soluções temporárias para migrantes.\n+Ver guia\n+Migrantes: ensino em Portugal para crianças, jovens e adultos\n+Ensino em Portugal para migrantes: sistema educativo, integração de crianças e jovens, aprendizagem de português e formação para adultos.\n+Ver guia"
+    },
+    {
+      "time": "2026-08-26T14:52:40Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 20-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-08-26T14:50:52Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "bc9c2e8deeddd15f9b0101360ecfec346a90e4ae47adea5d5fb6b86bcef5c754",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 172.171.6.115\n+Attack ID: 20000051\n+Message ID: 006998052424"
+    },
+    {
       "time": "2026-08-26T11:24:56Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",

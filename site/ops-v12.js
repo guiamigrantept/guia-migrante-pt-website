@@ -6,7 +6,7 @@ const isEN=lang.startsWith("en");
 const ui={
   pt:{skip:"Saltar para o conteúdo principal",stale:"<strong>Aviso de revisão:</strong> esta página não é revista editorialmente há mais de 90 dias. Confirme a fonte oficial indicada antes de agir.",newtab:" — abre num novo separador"},
   en:{skip:"Skip to main content",stale:"<strong>Review warning:</strong> this page has not been editorially verified for more than 90 days. Check the linked official source before acting.",newtab:" — opens in a new tab"},
-  fr:{skip:"Aller au contenu principal",stale:"<strong>Avertissement de révision :</strong> cette page n’a pas été vérifiée éditorialement depuis plus de 90 dias. Vérifiez la source officielle indiquée avant d’agir.",newtab:" — s’ouvre dans un nouvel onglet"},
+  fr:{skip:"Aller au contenu principal",stale:"<strong>Avertissement de révision :</strong> cette page n’a pas été vérifiée éditorialement depuis plus de 90 jours. Vérifiez la source officielle indiquée avant d’agir.",newtab:" — s’ouvre dans un nouvel onglet"},
   es:{skip:"Saltar al contenido principal",stale:"<strong>Aviso de revisión:</strong> esta página no se ha verificado editorialmente en más de 90 días. Consulte la fuente oficial indicada antes de actuar.",newtab:" — se abre en una pestaña nueva"},
   uk:{skip:"Перейти до основного вмісту",stale:"<strong>Попередження про перевірку:</strong> цю сторінку редакційно не перевіряли понад 90 днів. Перед діями перевірте вказане офіційне джерело.",newtab:" — відкривається в новій вкладці"},
   ru:{skip:"Перейти к основному содержанию",stale:"<strong>Предупреждение о проверке:</strong> эта страница не проходила редакционную проверку более 90 дней. Перед действиями проверьте указанный официальный источник.",newtab:" — откроется в новой вкладке"},

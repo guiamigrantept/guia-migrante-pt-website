@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'monitor/monitor_sources.py'
+      - 'monitor/discover_official_updates.py'
       - 'monitor/dre_fallback.py'
       - 'monitor/source_review_filters.py'
       - 'monitor/recover_required_sources.py'
@@ -26,7 +27,7 @@ concurrency:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 40
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -40,6 +41,7 @@ jobs:
         run: |
           test -f requirements-monitor.txt
           test -f monitor/monitor_sources.py
+          test -f monitor/discover_official_updates.py
           test -f monitor/dre_fallback.py
           test -f monitor/source_review_filters.py
           test -f monitor/recover_required_sources.py
@@ -49,6 +51,9 @@ jobs:
 
       - name: Install monitor dependencies
         run: pip install -r requirements-monitor.txt
+
+      - name: Discover recent official AIMA updates
+        run: python monitor/discover_official_updates.py
 
       - name: Check official sources
         run: python monitor/monitor_sources.py
@@ -73,12 +78,18 @@ jobs:
           python - <<'PY'
           import json, os
           r=json.load(open('monitor/report.json',encoding='utf-8'))
+          try:
+              d=json.load(open('monitor/discovery-report.json',encoding='utf-8'))
+          except Exception:
+              d={'ok':False,'new_updates':[],'error':'discovery report missing'}
           with open(os.environ['GITHUB_OUTPUT'],'a',encoding='utf-8') as f:
               f.write('changed=%s\n' % ('true' if r.get('changed_sources') else 'false'))
               f.write('blocked=%s\n' % ('true' if r.get('blocked_pages') else 'false'))
               f.write('facts=%s\n' % ('true' if r.get('fact_updates') else 'false'))
               f.write('coverage=%s\n' % ('true' if r.get('coverage_ok') else 'false'))
               f.write('dre_alerts=%s\n' % ('true' if r.get('dre_rss_alerts') else 'false'))
+              f.write('discovery_ok=%s\n' % ('true' if d.get('ok') else 'false'))
+              f.write('discovery_new=%s\n' % ('true' if d.get('new_updates') else 'false'))
               f.write('errors=%s\n' % len(r.get('errors',[])))
           print('baseline_complete=',r.get('baseline_complete'))
           print('coverage_ok=',r.get('coverage_ok'))
@@ -86,6 +97,8 @@ jobs:
           print('critical_errors=',len(r.get('critical_errors',[])))
           print('dre_rss_ok=',r.get('dre_rss_ok'))
           print('dre_rss_alerts=',len(r.get('dre_rss_alerts',[])))
+          print('aima_discovery_ok=',d.get('ok'))
+          print('aima_new_updates=',len(d.get('new_updates',[])))
           PY
 
       - name: Validate monitoring coverage
@@ -98,7 +111,7 @@ jobs:
         run: |
           git config user.name 'Guia Migrante Source Monitor'
           git config user.email 'actions@users.noreply.github.com'
-          git add monitor/snapshots monitor/candidates monitor/sources.json monitor/report.json monitor/dre-rss.json site/data/source-status.json site/data/facts.json site/data/change-log.json
+          git add monitor/snapshots monitor/candidates monitor/sources.json monitor/report.json monitor/dre-rss.json monitor/discovery-report.json site/data/source-status.json site/data/facts.json site/data/change-log.json site/data/official-updates.json
           if git diff --cached --quiet; then
             echo 'No repository changes.'
           else
@@ -107,24 +120,38 @@ jobs:
           fi
 
       - name: Open review issue when official information needs review
-        if: steps.report.outputs.blocked == 'true' || steps.report.outputs.dre_alerts == 'true'
+        if: steps.report.outputs.blocked == 'true' || steps.report.outputs.dre_alerts == 'true' || steps.report.outputs.discovery_new == 'true' || steps.report.outputs.discovery_ok != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           python - <<'PY' > /tmp/issue.md
           import json
           r=json.load(open('monitor/report.json',encoding='utf-8'))
+          try:
+              d=json.load(open('monitor/discovery-report.json',encoding='utf-8'))
+          except Exception:
+              d={'ok':False,'new_updates':[],'error':'discovery report missing'}
           blocked=r.get('blocked_pages',{})
           alerts=r.get('dre_rss_alerts',[])
+          discovered=d.get('new_updates',[])
           if blocked:
               print('Uma fonte oficial mudou ou foi retirada e o Guia colocou a orientação potencialmente desatualizada em quarentena.\n')
               print('## Páginas afetadas')
               for p,ids in sorted(blocked.items()): print(f'- `{p}` — {", ".join(ids)}')
+          if discovered:
+              print('\n## Novas publicações relevantes detetadas na AIMA')
+              for item in discovered:
+                  print(f"- {item.get('date') or 'Sem data'} — {item.get('title') or 'Sem título'} — {item.get('url')}")
+                  pages=item.get('pages') or []
+                  if pages: print(f"  - Páginas potencialmente relacionadas: {', '.join(pages)}")
+          if not d.get('ok'):
+              print('\n## Falha na descoberta de notícias AIMA')
+              print(d.get('error') or 'Falha sem detalhe; foi mantido o último feed válido.')
           if alerts:
               print('\n## Nova legislação potencialmente relevante no Diário da República')
               for a in alerts:
                   print(f"- {a.get('title') or 'Sem título'} — {a.get('url') or a.get('source')}")
-          print('\nRever a fonte oficial, corrigir PT e todas as traduções ativas quando necessário e validar antes de retirar qualquer quarentena.')
+          print('\nRever alterações substantivas, corrigir PT e todas as traduções ativas quando necessário e validar antes de retirar qualquer quarentena. As atualizações oficiais recentes são publicadas no feed do Guia sem substituir automaticamente orientação jurídica ambígua.')
           PY
           gh label create official-source-change --color D93F0B --description 'Fonte oficial alterada' 2>/dev/null || true
           EXISTING=$(gh issue list --state open --label official-source-change --json number --jq '.[0].number // empty')

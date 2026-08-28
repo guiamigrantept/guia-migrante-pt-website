@@ -46,11 +46,15 @@ jobs:
           test -f monitor/source_review_filters.py
           test -f monitor/recover_required_sources.py
           test -f site/data/locales.json
+          test -f site/official-updates.js
           test -f scripts/qa.py
           test -d site
 
       - name: Install monitor dependencies
         run: pip install -r requirements-monitor.txt
+
+      - name: Validate official-update client
+        run: node --check site/official-updates.js
 
       - name: Discover recent official AIMA updates
         run: python monitor/discover_official_updates.py

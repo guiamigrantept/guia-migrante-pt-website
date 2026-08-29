@@ -2,6 +2,51 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-29T23:29:31Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-29T23:29:25Z",
+      "source_id": "src_3ec3c96219da",
+      "url": "https://www.portaldahabitacao.pt/porta-65mais",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/habitacao.html",
+        "habitacao.html"
+      ],
+      "candidate_sha256": "d6c4f19fc06d241ab2e82182769c041d21b40de04acd26baa4d51d049c6a2471",
+      "diff_excerpt": "-Porta 65 +\n-Porta 65+\n-Candidatura Por Perda de Rendimentos\n-Candidatura por Família Monoparental\n-Lista de Resultados\n-Porta 65+\n-Na sequência da publicação do Decreto-Lei n.º 38/2023, de 29 de maio, que procedeu à alteração do Decreto-Lei n.º 308/2007, de 3 de setembro, foi criado e regulamentado o programa de apoio financeiro Porta 65, que prevê uma nova modalidade de apoio ao arrendamento – Porta 65 +.\n-Portaria n.º 346-A/2023, de 10 de novembro - Diário da República n.º 218/2023, 1º Suplemento, Série I de 2023-11-10\n-Decreto-Lei n.º 38/2023, de 29 de maio - Diário da República n.º 103/2023, Série I de 2023-05-29\n-Este apoio é atribuído mediante a concessão de uma subvenção mensal, independentemente da idade dos candidatos, destinado a:\n-Agregados com quebra de rendimentos superior a 20 % face aos rendimentos dos três meses precedentes ou do mesmo período homólogo do ano anterior;\n-Agregados monoparentais.\n-São requisitos de acesso ao apoio:\n-Os titulares do contrato de arrendamento terem residência permanente na habitação a que se refere a candidatura;\n-O contrato de arrendamento estar registado no portal das finanças;\n-Nenhum dos membros do agregado ser proprietário ou arren"
+    },
+    {
+      "time": "2026-08-29T23:29:21Z",
+      "source_id": "src_576f835cf78e",
+      "url": "https://www.portaldahabitacao.pt/porta-65-jovem",
+      "state": "changed_pending_review",
+      "pages": [
+        "apoios-sociais.html",
+        "en/apoios-sociais.html",
+        "en/habitacao.html",
+        "habitacao.html"
+      ],
+      "candidate_sha256": "d6c4f19fc06d241ab2e82182769c041d21b40de04acd26baa4d51d049c6a2471",
+      "diff_excerpt": "-Porta 65 Jovem\n-BEM-VINDO\n-Lista de Resultados\n-Novas Candidaturas\n-BENEFICIÁRIOS\n-COMO SE CANDIDATAR\n-PERGUNTAS FREQUENTES\n-LEGISLAÇÃO APLICÁVEL\n-LOCAIS ONDE PODE OBTER ESCLARECIMENTOS\n-RENDAS MÁXIMAS POR MUNICÍPIO\n-CONTACTOS\n-Bem-vindo à Porta 65 Jovem\n-O Programa Porta 65 Jovem visa apoiar os jovens dos 18 aos 35 anos no arrendamento de habitação para residência permanente, atribuindo uma percentagem do valor da renda como subvenção mensal.\n-Através do Decreto-Lei n.º 42/2024, de 2 de julho, foi introduzida a possibilidade de efetuares a candidatura sem contrato de arrendamento.\n-Caso estejas nesta situação, consulta o separador “NOVAS CANDIDATURAS”.\n-Poderás efetuar uma simulação da subvenção através do seguinte simulador:\n-Simulador\n+Service Unavailable\n+The server is temporarily unable to service your\n+request due to maintenance downtime or capacity\n+problems. Please try again later."
+    },
+    {
+      "time": "2026-08-29T23:27:25Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "72705963800f070fdd9b0ab197832fb90a1e93ebd86d9679fe65757316e0a81b",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 4.236.155.65\n+Attack ID: 20000051\n+Message ID: 007039392166"
+    },
+    {
       "time": "2026-08-29T21:05:34Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",

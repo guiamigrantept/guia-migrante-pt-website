@@ -2,6 +2,70 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-29T01:52:35Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-29T01:52:35Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-08-29T01:52:12Z",
+      "source_id": "src_87d4fe096076",
+      "url": "https://www.gov.pt/guias/migrantes-trabalhar-e-criar-um-negocio-em-portugal",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/integracao.html",
+        "en/trabalho.html",
+        "integracao.html",
+        "trabalho.html"
+      ],
+      "candidate_sha256": "0ca549b085c8dd3541ee6deec61be7b19969de5d82a32bb9536d67fbbd1a0219",
+      "diff_excerpt": "+Guias relacionados\n+Migrantes: encontrar alojamento e casa em Portugal\n+Opções para encontrar alojamento em Portugal, incluindo arrendamento, compra de casa, apoios públicos e soluções temporárias para migrantes.\n+Ver guia\n+Migrantes: ensino em Portugal para crianças, jovens e adultos\n+Ensino em Portugal para migrantes: sistema educativo, integração de crianças e jovens, aprendizagem de português e formação para adultos.\n+Ver guia"
+    },
+    {
+      "time": "2026-08-29T01:52:12Z",
+      "source_id": "src_2b7fd322021d",
+      "url": "https://www.gov.pt/guias/migrantes-ensino-em-portugal-para-criancas-jovens-e-adultos",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/escola-familias.html",
+        "escola-familias.html"
+      ],
+      "candidate_sha256": "0a8f5b2f9469ced0b7be10e50de21bb82018190b8945d427de51c42edb4f0e9f",
+      "diff_excerpt": "+Guias relacionados\n+Migrantes: vistos e autorizações para entrar e viver em Portugal\n+Vistos e autorizações para entrar e viver em Portugal: tipos de visto, condições de entrada e regras para autorização de residência.\n+Ver guia\n+Migrantes: apoio para situações de tráfico de pessoas\n+Informação para migrantes sobre tráfico de pessoas em Portugal: sinais de alerta, prevenção, direitos das vítimas e contactos de apoio.\n+Ver guia"
+    },
+    {
+      "time": "2026-08-29T01:52:05Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 20-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-08-29T01:50:23Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "df7a21f8e129d87c9c5f9bee92bdf5cf7d18ddf21d2677b7ed7fac7259fd13d7",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 128.24.160.167\n+Attack ID: 20000051\n+Message ID: 007032548885"
+    },
+    {
       "time": "2026-08-28T15:29:20Z",
       "source_id": "dre-series1-rss",
       "url": "https://diariodarepublica.pt/dr/detalhe/portaria/395-2026-1163562937",

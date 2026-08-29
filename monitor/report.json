@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-28T15:29:20Z",
+  "generated_at": "2026-08-29T01:52:47Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
   "required_sources": 81,
   "missing_required": [],
   "changed_sources": [
-    "src_1d26a663b9c8",
     "src_2b7fd322021d",
-    "src_8066e6d33e60",
     "src_87d4fe096076"
   ],
   "blocked_pages": {
@@ -29,18 +27,6 @@
     ],
     "trabalho.html": [
       "src_87d4fe096076"
-    ],
-    "en/trabalho-direitos.html": [
-      "src_1d26a663b9c8"
-    ],
-    "trabalho-direitos.html": [
-      "src_1d26a663b9c8"
-    ],
-    "en/situacoes-urgentes.html": [
-      "src_8066e6d33e60"
-    ],
-    "situacoes-urgentes.html": [
-      "src_8066e6d33e60"
     ]
   },
   "errors": [
@@ -52,7 +38,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
+      "failure_count": 47,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -63,7 +49,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
+      "failure_count": 47,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -74,8 +60,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f9f2bba8470>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://contactenos.aima.gov.pt/contact-form']' timed out after 70 seconds"
+      "failure_count": 47,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f6e5cdc4f20>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://contactenos.aima.gov.pt/contact-form']' timed out after 70 seconds"
     },
     {
       "id": "src_e36005383a29",
@@ -118,7 +104,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
+      "failure_count": 47,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
@@ -129,7 +115,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
+      "failure_count": 47,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
@@ -140,7 +126,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
+      "failure_count": 47,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
@@ -151,19 +137,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f9f2b8acd40>, 'Connection to services.aima.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://services.aima.gov.pt/']' timed out after 70 seconds"
-    },
-    {
-      "id": "src_9ddecb880ea8",
-      "url": "https://www.cm-amadora.pt/pt/intervencao-social/interculturalidade/10606-claim-centro-local-de-apoio-a-integracao-de-migrantes.html",
-      "domain": "www.cm-amadora.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "fetch_error",
-      "failure_count": 1,
-      "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
+      "failure_count": 47,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f6e5d0a1b80>, 'Connection to services.aima.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://services.aima.gov.pt/']' timed out after 70 seconds"
     },
     {
       "id": "src_6262714f7433",
@@ -173,7 +148,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
+      "failure_count": 47,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
@@ -184,8 +159,18 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 46,
+      "failure_count": 47,
       "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
+    },
+    {
+      "id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "domain": "simuladorprecos.erse.pt",
+      "risk": "medium",
+      "required": false,
+      "had_baseline": true,
+      "kind": "temporary_source_response",
+      "error": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
     }
   ],
   "critical_errors": [],
@@ -197,12 +182,5 @@
     "src_3bb47b3b8f19",
     "src_e36005383a29"
   ],
-  "dre_rss_alerts": [
-    {
-      "title": "Portaria n.º 395/2026/1 - Diário da República n.º 167/2026, Série I de 2026-08-28",
-      "url": "https://diariodarepublica.pt/dr/detalhe/portaria/395-2026-1163562937",
-      "published": "",
-      "source": "https://files.diariodarepublica.pt/rss/serie1-html.xml"
-    }
-  ]
+  "dre_rss_alerts": []
 }

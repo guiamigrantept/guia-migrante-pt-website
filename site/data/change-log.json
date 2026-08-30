@@ -2,6 +2,56 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-30T16:48:30Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-30T16:48:30Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-08-30T16:48:05Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 28-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-08-30T16:46:25Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "5339d658421b1b903a3885592c6d556b2c4c51eed74a06cf532ddae9c4eb7e4f",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 64.236.153.84\n+Attack ID: 20000051\n+Message ID: 007043287482"
+    },
+    {
+      "time": "2026-08-30T16:44:15Z",
+      "source_id": "src_1a5a6913096f",
+      "url": "https://anacom.pt/render.jsp?contentId=1825544",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "fb1ade0a7062677a760628a86757311e5b2de58e603cacb45dba165affcb335b",
+      "diff_excerpt": "-Já está disponível o vídeo 4 da rubrica Dicas ANACOM, transmitida no programa Bom dia Portugal (RTP1), entre as 9h e as 9h30, todas as segundas, quartas e sextas. O episódio explica o que fazer em caso de mudança de morada quando existe fidelização.\n-Dicas ANACOM | Vídeo 4 | Mudei de morada: posso cancelar o contrato?\n+JÃ¡ estÃ¡ disponÃ­vel o vÃ­deo 4 da rubrica Dicas ANACOM, transmitida no programa Bom dia Portugal (RTP1), entre as 9h e as 9h30, todas as segundas, quartas e sextas. O episÃ³dio explica o que fazer em caso de mudanÃ§a de morada quando existe fidelizaÃ§Ã£o.\n+Dicas ANACOM | VÃ­deo 4 | Mudei de morada: posso cancelar o contrato?\n-RTP PLAY – Dicas ANACOM\n+RTP PLAY â Dicas ANACOM\n-Portal do Consumidor – Dicas ANACOM\n+Portal do Consumidor â Dicas ANACOM"
+    },
+    {
       "time": "2026-08-30T12:01:06Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",

@@ -7,5 +7,17 @@
 /sw.js
   Cache-Control: no-cache
 
+/update-health.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/data/monitor-health.json
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/data/source-status.json
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/data/facts.json
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /*.html
   Cache-Control: no-cache

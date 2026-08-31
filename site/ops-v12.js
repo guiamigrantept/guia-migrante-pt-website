@@ -84,7 +84,7 @@ window.GMPAnalytics={track};
 if(!analyticsBlocked) track('page_view');
 window.addEventListener('gmp:contact-success',()=>track('contact_submit'));
 
-const officialHosts=['gov.pt','www.gov.pt','aima.gov.pt','www.aima.gov.pt','seg-social.pt','www.seg-social.pt','sns24.gov.pt','www.sns24.gov.pt','justica.gov.pt','www.justica.gov.pt','dre.pt','www.dre.pt','irn.justica.gov.pt'];
+const officialHosts=['gov.pt','www.gov.pt','aima.gov.pt','www.aima.gov.pt','seg-social.pt','www.seg-social.pt','sns24.gov.pt','www.sns24.gov.pt','justica.gov.pt','www.justica.gov.pt','dre.pt','www.dre.pt','diariodarepublica.pt','www.diariodarepublica.pt','irn.justica.gov.pt'];
 document.addEventListener('click',event=>{
   const a=event.target?.closest?.('a[href]');
   if(!a) return;
@@ -98,6 +98,14 @@ if("serviceWorker" in navigator && location.protocol==="https:"){
 const pathParts=location.pathname.split('/').filter(Boolean);
 const translated=['en','fr','es','uk','ru','hi','bn'].includes(pathParts[0]);
 const prefix=translated?'../':'';
+function loadScript(attr,src){
+  if(document.querySelector(`script[${attr}]`)) return;
+  const script=document.createElement('script');
+  script.src=prefix+src;
+  script.defer=true;
+  script.setAttribute(attr,'');
+  document.head.appendChild(script);
+}
 if(!document.querySelector('link[data-gm-language]')){
   const css=document.createElement('link');
   css.rel='stylesheet';
@@ -105,18 +113,8 @@ if(!document.querySelector('link[data-gm-language]')){
   css.dataset.gmLanguage='style';
   document.head.appendChild(css);
 }
-if(!document.querySelector('script[data-gm-language]')){
-  const script=document.createElement('script');
-  script.src=prefix+'language-switcher.js';
-  script.defer=true;
-  script.dataset.gmLanguage='script';
-  document.head.appendChild(script);
-}
-if(!document.querySelector('script[data-gm-official-updates]')){
-  const script=document.createElement('script');
-  script.src=prefix+'official-updates.js';
-  script.defer=true;
-  script.dataset.gmOfficialUpdates='script';
-  document.head.appendChild(script);
-}
+loadScript('data-gm-language','language-switcher.js');
+loadScript('data-gm-official-updates','official-updates.js');
+loadScript('data-gm-verified-facts','verified-facts.js');
+loadScript('data-gm-update-health','update-health.js');
 })();

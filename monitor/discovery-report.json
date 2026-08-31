@@ -1,8 +1,36 @@
 {
-  "generated_at": "2026-08-31T13:51:46Z",
-  "ok": true,
-  "source": "https://aima.gov.pt/pt/noticias",
+  "generated_at": "2026-08-31T19:05:14Z",
+  "ok": false,
+  "partial_ok": true,
+  "sources_total": 4,
+  "sources_ok": 1,
+  "sources": [
+    {
+      "source": "AIMA",
+      "ok": true,
+      "count": 6,
+      "error": null
+    },
+    {
+      "source": "gov.pt",
+      "ok": false,
+      "count": 0,
+      "error": "no relevant entries extracted"
+    },
+    {
+      "source": "Justiça",
+      "ok": false,
+      "count": 0,
+      "error": "no relevant entries extracted"
+    },
+    {
+      "source": "IRN",
+      "ok": false,
+      "count": 0,
+      "error": "no relevant entries extracted"
+    }
+  ],
   "count": 6,
   "new_updates": [],
-  "error": null
+  "error": "one or more official update indexes failed; last known-good entries retained"
 }

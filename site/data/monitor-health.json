@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "generated_at": "2026-08-31T19:12:32Z",
+  "state": "degraded",
+  "schedule_hours": 3,
+  "warning_after_hours": 6,
+  "critical_after_hours": 12,
+  "source_coverage_ok": true,
+  "procedure_coverage_ok": true,
+  "required_sources": 81,
+  "missing_required": [],
+  "blocked_pages": [
+    "en/escola-familias.html",
+    "en/integracao.html",
+    "en/trabalho.html",
+    "escola-familias.html",
+    "integracao.html",
+    "trabalho.html"
+  ],
+  "critical_error_count": 0,
+  "source_error_count": 13,
+  "repeated_source_failure_count": 9,
+  "discovery_ok": false,
+  "discovery_error": "one or more official update indexes failed; last known-good entries retained",
+  "dre_rss_ok": true,
+  "dre_alert_count": 0,
+  "fact_updates": [],
+  "policy": {
+    "objective_facts": "automatic",
+    "ambiguous_legal_or_procedural_changes": "quarantine_and_review",
+    "publication": "qa_before_deploy"
+  }
+}

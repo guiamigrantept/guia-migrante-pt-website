@@ -1,0 +1,353 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "procedures": {
+    "regularizacao_aima": {
+      "priority": "critical",
+      "pages": [
+        {
+          "page": "legalizacao.html",
+          "exists": true,
+          "official_sources": 22,
+          "source_ids": [
+            "src_2b0880736b8a",
+            "src_46b89dc01528",
+            "src_482b94cf7722",
+            "src_48b0a401cee7",
+            "src_6be8c3783532",
+            "src_7ef818918ee4",
+            "src_81f1d1f37f02",
+            "src_863b5ed4598b",
+            "src_8673ad284f9a",
+            "src_f0b1b75348f3",
+            "src_f1f0aab11199",
+            "src_f7af44a4f429"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "renewal_start",
+        "renewal_end",
+        "aima_phone",
+        "aima_hours"
+      ],
+      "review_required_for": [
+        "eligibility",
+        "legal_basis",
+        "document_requirements",
+        "exceptions"
+      ]
+    },
+    "cplp": {
+      "priority": "critical",
+      "pages": [
+        {
+          "page": "cplp.html",
+          "exists": true,
+          "official_sources": 4,
+          "source_ids": [
+            "src_2c926c8cea06",
+            "src_66b58cce4354"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "aima_phone",
+        "aima_hours"
+      ],
+      "review_required_for": [
+        "eligibility",
+        "conversion_rules",
+        "document_requirements",
+        "legal_basis"
+      ]
+    },
+    "familiares_ue": {
+      "priority": "critical",
+      "pages": [
+        {
+          "page": "ue-familiares.html",
+          "exists": true,
+          "official_sources": 8,
+          "source_ids": [
+            "src_4fb71a74680c",
+            "src_553e19536460",
+            "src_984aab257167",
+            "src_e392a810f5d3"
+          ]
+        },
+        {
+          "page": "familia.html",
+          "exists": true,
+          "official_sources": 6,
+          "source_ids": [
+            "src_3a0611c027d0",
+            "src_db343c2f6967",
+            "src_e392a810f5d3"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "aima_phone",
+        "aima_hours"
+      ],
+      "review_required_for": [
+        "eligibility",
+        "document_requirements",
+        "deadlines",
+        "exceptions"
+      ]
+    },
+    "nacionalidade": {
+      "priority": "critical",
+      "pages": [
+        {
+          "page": "nacionalidade.html",
+          "exists": true,
+          "official_sources": 16,
+          "source_ids": [
+            "src_0ea9b0928bd2",
+            "src_10df7741dfe0",
+            "src_1a10460aaa69",
+            "src_3bb47b3b8f19",
+            "src_8075539b4165",
+            "src_962f8edbc412",
+            "src_aa440bba100b",
+            "src_ac02e2cb2311",
+            "src_e36005383a29"
+          ]
+        }
+      ],
+      "auto_fact_ids": [],
+      "review_required_for": [
+        "eligibility",
+        "residence_period",
+        "document_requirements",
+        "legal_basis",
+        "transitional_rules"
+      ]
+    },
+    "asilo": {
+      "priority": "critical",
+      "pages": [
+        {
+          "page": "asilo.html",
+          "exists": true,
+          "official_sources": 2,
+          "source_ids": [
+            "src_076880484ab9"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "aima_phone",
+        "aima_hours"
+      ],
+      "review_required_for": [
+        "procedure",
+        "rights",
+        "deadlines",
+        "appeal_rules"
+      ]
+    },
+    "protecao_temporaria": {
+      "priority": "critical",
+      "pages": [
+        {
+          "page": "protecao-temporaria.html",
+          "exists": true,
+          "official_sources": 4,
+          "source_ids": [
+            "src_7c058712b7c1",
+            "src_db2bf0a41ff1"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "temporary_protection_end"
+      ],
+      "review_required_for": [
+        "eligibility",
+        "extensions",
+        "rights",
+        "exceptions"
+      ]
+    },
+    "trabalho": {
+      "priority": "high",
+      "pages": [
+        {
+          "page": "trabalho.html",
+          "exists": true,
+          "official_sources": 4,
+          "source_ids": [
+            "src_87d4fe096076",
+            "src_d047de31a87b"
+          ]
+        },
+        {
+          "page": "integracao.html",
+          "exists": true,
+          "official_sources": 2,
+          "source_ids": [
+            "src_87d4fe096076"
+          ]
+        },
+        {
+          "page": "trabalho-direitos.html",
+          "exists": true,
+          "official_sources": 2,
+          "source_ids": [
+            "src_1d26a663b9c8"
+          ]
+        }
+      ],
+      "auto_fact_ids": [],
+      "review_required_for": [
+        "employment_rights",
+        "social_security",
+        "programme_rules"
+      ]
+    },
+    "estudantes": {
+      "priority": "high",
+      "pages": [
+        {
+          "page": "estudantes.html",
+          "exists": true,
+          "official_sources": 4,
+          "source_ids": [
+            "src_51345bfaef9d",
+            "src_6be8c3783532"
+          ]
+        },
+        {
+          "page": "escola-familias.html",
+          "exists": true,
+          "official_sources": 4,
+          "source_ids": [
+            "src_2b7fd322021d",
+            "src_2e5a8d9c1488"
+          ]
+        }
+      ],
+      "auto_fact_ids": [],
+      "review_required_for": [
+        "residence_requirements",
+        "enrolment",
+        "family_rules"
+      ]
+    },
+    "contactos_aima": {
+      "priority": "critical",
+      "pages": [
+        {
+          "page": "contactos.html",
+          "exists": true,
+          "official_sources": 6,
+          "source_ids": [
+            "src_064cff7e6d52",
+            "src_3504f1eb6b62",
+            "src_65c308f94048",
+            "src_c32f3c43a12c"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "aima_phone",
+        "aima_hours"
+      ],
+      "review_required_for": [
+        "service_channels",
+        "office_availability"
+      ]
+    },
+    "identificacao_servicos": {
+      "priority": "high",
+      "pages": [
+        {
+          "page": "dia-a-dia.html",
+          "exists": true,
+          "official_sources": 10,
+          "source_ids": [
+            "src_0d3e737b44ae",
+            "src_94e2ebb14db9",
+            "src_b223c78629bb",
+            "src_e83566f7adcc",
+            "src_f95c7a71032d"
+          ]
+        },
+        {
+          "page": "impostos.html",
+          "exists": true,
+          "official_sources": 4,
+          "source_ids": [
+            "src_6400da2dbb70",
+            "src_cac85a755325"
+          ]
+        },
+        {
+          "page": "saude-completa.html",
+          "exists": true,
+          "official_sources": 8,
+          "source_ids": [
+            "src_5c470c1c6222",
+            "src_94e2ebb14db9",
+            "src_d771f142ded7",
+            "src_f85f411871fc"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "combined_id_locations"
+      ],
+      "review_required_for": [
+        "eligibility",
+        "documents",
+        "service_channels"
+      ]
+    },
+    "banca": {
+      "priority": "medium",
+      "pages": [
+        {
+          "page": "banco-pagamentos.html",
+          "exists": true,
+          "official_sources": 4,
+          "source_ids": [
+            "src_5c8489b0954a",
+            "src_61b0e60be0fa"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "basic_banking_max_fee"
+      ],
+      "review_required_for": [
+        "eligibility",
+        "banking_rights"
+      ]
+    },
+    "conducao": {
+      "priority": "high",
+      "pages": [
+        {
+          "page": "carta-conducao.html",
+          "exists": true,
+          "official_sources": 2,
+          "source_ids": [
+            "src_6262714f7433"
+          ]
+        }
+      ],
+      "auto_fact_ids": [],
+      "review_required_for": [
+        "exchange_rules",
+        "deadlines",
+        "country_exceptions",
+        "documents"
+      ]
+    }
+  }
+}

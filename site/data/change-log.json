@@ -2,6 +2,44 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-31T19:12:19Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-31T19:12:19Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-08-31T19:11:47Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 28-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-08-31T19:10:03Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "a3c4358d7e3c6764f2a7c14d95d85fa243775429e0c27e2e00b0b4c7ca710b1d",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 52.225.29.7\n+Attack ID: 20000051\n+Message ID: 007056297608"
+    },
+    {
       "time": "2026-08-31T13:58:57Z",
       "source_id": "dre-series1-rss",
       "url": "https://diariodarepublica.pt/dr/detalhe/portaria/396-2026-1164128606",
@@ -2918,60 +2956,6 @@
       ],
       "candidate_sha256": "2a89df85a89558eae4f2c55f3b7ec6196ad2fc0fceb721908de641308a5b3a8a",
       "diff_excerpt": "-Serviços\n-Registar um nascimento\n-Todas as crianças que nascem em Portugal têm de ser registadas, mesmo se os pais forem estrangeiros. O registo de nascimento do bebé é obrigatório. Quando as crianças nascem no estrangeiro e, pelo menos, um dos pais é português, têm direito à nacionalidade portuguesa.\n-Durante o processo do pedido online do registo de nascimento também é possível\n-pedir o Cartão de Cidadão\n-Registar\n-Atualizado em\n-25.06.2026\n-Nesta página\n-Informação à sua medida\n-Quem pode registar um nascimento\n-Quando se pode registar um nascimento\n-Como e onde se pode registar um nascimento\n-Quanto tempo demora a receber o registo?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação à sua medida\n-Responda a um breve questionário e veja apenas a informação que lhe interessa.\n-1 / 2\n-Quem vai registar o nascimento?\n-Um ou ambos os pais\n-Outra pessoa\n-Anterior\n-Próximo\n-Pedido online\n-Se a criança nasceu em Portugal:\n-Pode ser feito por qualquer um dos progenitores, desde que sejam casados um com o outro.\n-Se os pais não forem casados\n-, um progenitor submete a declaração online e outro recebe um email para confirmar o registo.\n-Se um dos progenitores e"
-    },
-    {
-      "time": "2026-08-20T17:11:26Z",
-      "source_id": "src_e5000174ce7b",
-      "url": "https://www.gov.pt/servicos/realizar-o-processo-de-transcricao-do-assento-de-casamento-no-estrangeiro",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "ef49ac57422461ba1e408a65103cd34a998aaa1712975736a61da7fd9a139309",
-      "diff_excerpt": "-Serviços\n-Registar um casamento realizado perante as autoridades de um país estrangeiro\n-Se casou perante as autoridades (civis ou religiosas) de outro país, deve contactar um posto consular para transcrever o assento do seu casamento para o registo civil português. Assim, o seu casamento fica registado em Portugal.\n-Atualizado em\n-20.07.2026\n-Nesta página\n-Quem pode registar o casamento\n-Quando se pode registar o casamento\n-Como e onde se pode registar o casamento\n-Conteúdos relacionados\n-Entidade responsável\n-Pessoas de nacionalidade portuguesa que tenham casado perante as autoridades de outro país, com uma pessoa portuguesa ou estrangeira.\n-A qualquer momento após a celebração do casamento no estrangeiro.\n-Serviços\n-Casar no estrangeiro\n-Ver todos os serviços\n-Temas\n-Família\n-Casamento e união de facto\n-Viajar e viver no estrangeiro\n-Emigrar\n-Entidade responsável\n-O serviço \"Registar um casamento realizado perante as autoridades de um país estrangeiro\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n-Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas\n-Ir para a página da entidade\n+block\n+Web Page Blocked!\n+"
-    },
-    {
-      "time": "2026-08-20T17:11:24Z",
-      "source_id": "src_c1912bc0f3da",
-      "url": "https://www.gov.pt/servicos/pedir-visto-de-residencia-para-o-exercicio-de-atividade-profissional-independente-ou-para-imigrantes-empreendedores",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/fora-de-portugal.html",
-        "en/independente-empreendedor.html",
-        "fora-de-portugal.html",
-        "independente-empreendedor.html"
-      ],
-      "candidate_sha256": "5313956fd8e103a42bbbe7e5b92898878ce0cfefc8b3e1702ae686c48e0e7029",
-      "diff_excerpt": "-Serviços\n-Pedir visto de residência para o exercício de atividade profissional independente ou para imigrantes empreendedores\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade profissional independente ou para imigrantes empreendedores em Portugal.\n-Atualizado em\n-25.05.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Prazo\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Todos os cidadãos estrangeiros, que não sejam nacionais de Estados Membros UE, do Espaço Económico Europeu e Suíça que pretendam exercer uma atividade independente ou investir em Portugal.\n-Deverá ser consultado o Posto Consular competente de modo a saber os horários de atendimento para receção de pedidos de visto.\n-Tem um prazo de 60 dias.\n-Legislação\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional\n-Regula os Meios de Subsistência\n-Altera a Portaria dos Meios de Subsistên"
-    },
-    {
-      "time": "2026-08-20T17:11:23Z",
-      "source_id": "src_d047de31a87b",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-trabalho-dependente",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/fora-de-portugal.html",
-        "en/trabalho.html",
-        "fora-de-portugal.html",
-        "trabalho.html"
-      ],
-      "candidate_sha256": "bdd6be414b421e325c18f92c674de4f386fb85cc566c6ff8b1fe4b2ead8d5857",
-      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para trabalho dependente\n-Informações sobre onde e como realizar o pedido de visto de residência para o exercício de uma atividade profissional subordinada em Portugal.\n-Atualizado em\n-16.04.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Todos os cidadãos estrangeiros, que não sejam nacionais de Estados Membros UE, do Espaço Económico Europeu e Suíça que pretendam trabalhar em Portugal.\n-Deverá ser consultado o Posto Consular competente de modo a saber os horários de atendimento para receção de pedidos de visto.\n-Legislação\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Altera a portaria dos meios de subsistência.\n-Regula os meios de subsistência.\n-Resolução que aprova o Contingente Global de Oportunidades de Trabalho Anual\n-Tabela de Emolumentos Consulares.\n-Temas\n-Cidadania e documentos\n-Outros docume"
-    },
-    {
-      "time": "2026-08-20T17:11:21Z",
-      "source_id": "src_33c397772684",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "altamente-qualificado.html",
-        "en/altamente-qualificado.html",
-        "en/fora-de-portugal.html",
-        "fora-de-portugal.html"
-      ],
-      "candidate_sha256": "66371ca7389c932c3f9499ba63350eafcce38bf72e2c394544bcb6d54c459fd1",
-      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Quando pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Onde pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Como pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-O que precisa para pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Prazo\n-Qual o preço pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade de investigação ou altamente qualificada em Portugal.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que"
     }
   ]
 }

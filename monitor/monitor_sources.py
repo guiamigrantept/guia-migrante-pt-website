@@ -13,7 +13,7 @@ from urllib3.util.retry import Retry
 
 SITE=Path('site'); SNAPS=Path('monitor/snapshots'); CANDS=Path('monitor/candidates')
 SNAPS.mkdir(parents=True,exist_ok=True); CANDS.mkdir(parents=True,exist_ok=True)
-UA='GuiaMigrantePT-OfficialSourceMonitor/1.2 (+https://guia-migrante-pt.pages.dev/)'
+UA='GuiaMigrantePT-OfficialSourceMonitor/1.3 (+https://guia-migrante-pt.pages.dev/)'
 OFFICIAL={
 'aima.gov.pt','contactenos.aima.gov.pt','portal-renovacoes.aima.gov.pt','services.aima.gov.pt',
 'gov.pt','www.gov.pt','www2.gov.pt','justica.gov.pt','diariodarepublica.pt','info.portaldasfinancas.gov.pt',
@@ -89,10 +89,11 @@ def browser_fetch(u):
  txt=html_text(raw)
  if len(txt)<100: raise RuntimeError('browser-rendered source text too short')
  return txt,u,'browser'
-def fetch(sess,u):
+def fetch(sess,u,allow_browser=True,fast_fail=False):
  err=None
  try:
-  r=sess.get(u,timeout=(8,30),allow_redirects=True,headers={'User-Agent':UA,'Accept':'text/html,application/pdf;q=0.9,*/*;q=0.5'})
+  timeout=(4,12) if fast_fail else (8,30)
+  r=sess.get(u,timeout=timeout,allow_redirects=True,headers={'User-Agent':UA,'Accept':'text/html,application/pdf;q=0.9,*/*;q=0.5'})
   if r.status_code in (404,410): raise SourceRemovedError(f'official source returned HTTP {r.status_code}')
   r.raise_for_status(); c=(r.headers.get('content-type') or '').lower()
   if len(r.content)>15_000_000: raise RuntimeError('source over 15MB')
@@ -103,6 +104,8 @@ def fetch(sess,u):
  except SourceRemovedError: raise
  except Exception as e: err=e
  if is_pdf(u): raise err or RuntimeError('PDF fetch failed')
+ if not allow_browser:
+  raise RuntimeError(f'primary fetch failed: {err}; browser fallback skipped for repeatedly failing optional source')
  try: return browser_fetch(u)
  except Exception as b: raise RuntimeError(f'primary fetch failed: {err}; browser fallback failed: {b}') from b
 
@@ -143,7 +146,8 @@ def main():
  for src in sources:
   i=src['id']; bp=SNAPS/f'{i}.json'; cp=CANDS/f'{i}.json'; old=json.loads(bp.read_text(encoding='utf-8')) if bp.exists() else None; prev=status.get('sources',{}).get(i,{})
   try:
-   text,final,method=fetch(sess,src['url']); h=hashlib.sha256(text.encode()).hexdigest(); ts=now()
+   repeated_optional=(not src['required'] and int(prev.get('failure_count',0))>=3)
+   text,final,method=fetch(sess,src['url'],allow_browser=not repeated_optional,fast_fail=repeated_optional); h=hashlib.sha256(text.encode()).hexdigest(); ts=now()
    if old is None:
     write_snap(bp,src,final,text,h,ts,method); cp.unlink(missing_ok=True); baseline+=1; update_facts(src['url'],text,facts,fact_changes); state='healthy'
     status.setdefault('sources',{})[i]={'url':src['url'],'domain':src['domain'],'state':state,'checked_at':ts,'changed_at':None,'pages':src['pages'],'required':src['required'],'fetch_method':method}; continue

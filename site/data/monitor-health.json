@@ -1,7 +1,7 @@
 {
-  "version": 1,
-  "generated_at": "2026-08-31T19:39:26Z",
-  "state": "degraded",
+  "version": 2,
+  "generated_at": "2026-08-31T20:17:49Z",
+  "state": "healthy",
   "schedule_hours": 3,
   "warning_after_hours": 6,
   "critical_after_hours": 12,
@@ -11,16 +11,18 @@
   "missing_required": [],
   "blocked_pages": [],
   "critical_error_count": 0,
-  "source_error_count": 12,
-  "repeated_source_failure_count": 9,
-  "discovery_ok": false,
-  "discovery_error": "one or more official update indexes failed; fallbacks attempted and last known-good entries retained",
+  "source_error_count": 15,
+  "optional_source_error_count": 12,
+  "repeated_source_failure_count": 0,
+  "discovery_ok": true,
+  "discovery_error": null,
   "dre_rss_ok": true,
   "dre_alert_count": 0,
   "fact_updates": [],
   "policy": {
     "objective_facts": "automatic",
     "ambiguous_legal_or_procedural_changes": "quarantine_and_review",
+    "optional_source_failures": "advisory_when_critical_coverage_is_intact",
     "publication": "qa_before_deploy"
   }
 }

@@ -17,13 +17,13 @@ truststore.inject_into_ssl()
 
 OUT = Path("site/data/official-updates.json")
 REPORT = Path("monitor/discovery-report.json")
-UA = "GuiaMigrantePT-OfficialUpdateDiscovery/2.0 (+https://guia-migrante-pt.pages.dev/)"
+UA = "GuiaMigrantePT-OfficialUpdateDiscovery/2.1 (+https://guia-migrante-pt.pages.dev/)"
 
 SOURCES = [
-    {"name": "AIMA", "index": "https://aima.gov.pt/pt/noticias", "host": "aima.gov.pt", "prefixes": ["/pt/noticias/"]},
-    {"name": "gov.pt", "index": "https://www.gov.pt/noticias", "host": "www.gov.pt", "prefixes": ["/noticias/"]},
-    {"name": "Justiça", "index": "https://justica.gov.pt/Noticias", "host": "justica.gov.pt", "prefixes": ["/Noticias/"]},
-    {"name": "IRN", "index": "https://irn.justica.gov.pt/Noticias-do-IRN", "host": "irn.justica.gov.pt", "prefixes": ["/Noticias-do-IRN/"]},
+    {"name": "AIMA", "indexes": ["https://aima.gov.pt/pt/noticias", "https://aima.gov.pt/"], "host": "aima.gov.pt", "prefixes": ["/pt/noticias/"]},
+    {"name": "gov.pt", "indexes": ["https://www.gov.pt/", "https://www.gov.pt/noticias"], "host": "www.gov.pt", "prefixes": ["/noticias/"]},
+    {"name": "Justiça", "indexes": ["https://justica.gov.pt/", "https://justica.gov.pt/Noticias"], "host": "justica.gov.pt", "prefixes": ["/Noticias/", "/justicagovpt/ModuleID/"]},
+    {"name": "IRN", "indexes": ["https://irn.justica.gov.pt/", "https://irn.justica.gov.pt/Noticias-do-IRN"], "host": "irn.justica.gov.pt", "prefixes": ["/Noticias-do-IRN/"]},
 ]
 
 RELEVANT_TERMS = {
@@ -91,7 +91,7 @@ def nearest_container(anchor):
 
 def extract_title(anchor, container) -> str:
     text = compact(anchor.get_text(" ", strip=True))
-    if len(text) >= 8 and text.casefold() not in {"ler mais", "read more", "saber mais", "ver mais"}:
+    if len(text) >= 8 and text.casefold() not in {"ler mais", "read more", "saber mais", "ver mais", "mais notícias", "mais noticias"}:
         return text
     heading = container.find(["h1", "h2", "h3", "h4"]) if container else None
     return compact(heading.get_text(" ", strip=True)) if heading else text
@@ -142,11 +142,11 @@ def mapped_pages(title: str) -> list[str]:
     if "cplp" in low:
         pages.add("cplp.html")
     if any(x in low for x in ("nif", "fiscal")):
-        pages.add("nif.html")
+        pages.update({"dia-a-dia.html", "impostos.html"})
     if any(x in low for x in ("niss", "segurança social", "seguranca social")):
-        pages.add("niss.html")
+        pages.update({"dia-a-dia.html", "apoios-sociais.html"})
     if "sns" in low:
-        pages.add("sns.html")
+        pages.add("saude-completa.html")
     return sorted(pages)
 
 
@@ -157,11 +157,11 @@ def summaries(source: str, title: str) -> tuple[str, str]:
     )
 
 
-def parse_source(config: dict, html: str) -> list[dict]:
+def parse_source(config: dict, html: str, base_url: str) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     found, seen = [], set()
     for anchor in soup.find_all("a", href=True):
-        href = urljoin(config["index"], anchor.get("href", ""))
+        href = urljoin(base_url, anchor.get("href", ""))
         parsed = urlparse(href)
         if parsed.netloc.lower() != config["host"]:
             continue
@@ -185,6 +185,20 @@ def parse_source(config: dict, html: str) -> list[dict]:
     return found
 
 
+def discover_one(config: dict) -> tuple[list[dict], str, list[str]]:
+    errors = []
+    for index in config["indexes"]:
+        try:
+            html = fetch_html(index)
+            items = parse_source(config, html, index)
+            if items:
+                return items, index, errors
+            errors.append(f"{index}: no relevant entries extracted")
+        except Exception as exc:
+            errors.append(f"{index}: {exc}")
+    raise RuntimeError(" | ".join(errors))
+
+
 def main() -> None:
     previous = {}
     if OUT.exists():
@@ -203,18 +217,14 @@ def main() -> None:
     successful = 0
     for config in SOURCES:
         try:
-            html = fetch_html(config["index"])
-            items = parse_source(config, html)
-            if not items:
-                raise RuntimeError("no relevant entries extracted")
+            items, used_index, prior_errors = discover_one(config)
             successful += 1
             all_items.extend(items)
-            source_report.append({"source": config["name"], "ok": True, "count": len(items), "error": None})
+            source_report.append({"source": config["name"], "ok": True, "count": len(items), "index": used_index, "fallback_errors": prior_errors, "error": None})
         except Exception as exc:
-            # Retain last known-good items for a failed index so one outage never erases the feed.
             retained = previous_by_source.get(config["name"], [])
             all_items.extend(retained)
-            source_report.append({"source": config["name"], "ok": False, "count": len(retained), "error": str(exc)})
+            source_report.append({"source": config["name"], "ok": False, "count": len(retained), "index": None, "fallback_errors": [], "error": str(exc)})
 
     dedup = {}
     for item in all_items:
@@ -229,7 +239,7 @@ def main() -> None:
 
     generated = now()
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({"version": 2, "generated_at": generated, "sources": [x["index"] for x in SOURCES], "updates": updates}, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUT.write_text(json.dumps({"version": 3, "generated_at": generated, "sources": [index for x in SOURCES for index in x["indexes"]], "updates": updates}, ensure_ascii=False, indent=2), encoding="utf-8")
 
     new_updates = [x for x in updates if x.get("url") not in previous_urls] if previous_urls else []
     ok = successful == len(SOURCES)
@@ -242,7 +252,7 @@ def main() -> None:
         "sources": source_report,
         "count": len(updates),
         "new_updates": new_updates,
-        "error": None if ok else "one or more official update indexes failed; last known-good entries retained",
+        "error": None if ok else "one or more official update indexes failed; fallbacks attempted and last known-good entries retained",
     }
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"official update discovery: {successful}/{len(SOURCES)} indexes OK; {len(updates)} relevant entries; {len(new_updates)} new")

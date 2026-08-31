@@ -2,6 +2,34 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-31T13:58:57Z",
+      "source_id": "dre-series1-rss",
+      "url": "https://diariodarepublica.pt/dr/detalhe/portaria/396-2026-1164128606",
+      "state": "new_legislation_pending_review",
+      "pages": [],
+      "title": "Portaria n.º 396/2026/1 - Diário da República n.º 168/2026, Série I de 2026-08-31",
+      "published": ""
+    },
+    {
+      "time": "2026-08-31T13:58:47Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-31T13:56:35Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "950e25e2aa231685fef37c248598d1daeef06e8d669cf00a893d7bbfa8e7665b",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 52.173.13.226\n+Attack ID: 20000051\n+Message ID: 007052028905"
+    },
+    {
       "time": "2026-08-31T05:44:39Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2944,45 +2972,6 @@
       ],
       "candidate_sha256": "66371ca7389c932c3f9499ba63350eafcce38bf72e2c394544bcb6d54c459fd1",
       "diff_excerpt": "-Serviços\n-Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Quando pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Onde pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Como pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-O que precisa para pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Prazo\n-Qual o preço pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade de investigação ou altamente qualificada em Portugal.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que"
-    },
-    {
-      "time": "2026-08-20T17:11:20Z",
-      "source_id": "src_51345bfaef9d",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-estudo-intercambio-de-estudantes-estagio-profissional-ou-voluntariado",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/estudantes.html",
-        "en/fora-de-portugal.html",
-        "estudantes.html",
-        "fora-de-portugal.html"
-      ],
-      "candidate_sha256": "933f5cda86aa98c26b164ed5cabcebb7c4d775ae9424b52466a591ee5bd3f527",
-      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\n-Aviso: Esta página pode estar desatualizada.\n-Aceda ao portal do MNE para consultar informação mais atualizada\n-Informação sobre como e onde realizar o pedido de informação e instrução de visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado em Portugal.\n-Atualizado em\n-06.08.2026\n-Nesta página\n-Quem pode pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\n-Quando se pode pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\n-Como e onde se pode pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer cidadão estrangeiro que não seja nacional de Estados Membros da União Europeia (UE), do Espaço Económico Europeu e Suíça que pretendam estudar num estabelecimento de ensino reconhecido, participar num programa de intercâmbio de estudantes, estágio profissional ou de voluntariado.\n-A qualquer momento,"
-    },
-    {
-      "time": "2026-08-20T17:11:18Z",
-      "source_id": "src_e83566f7adcc",
-      "url": "https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "index.html"
-      ],
-      "candidate_sha256": "46861737e0e22803d2823578a1adf2d29145ab4ffe2fa491030c0f1d64f8b2b9",
-      "diff_excerpt": "-Serviços\n-Pedir os números de identificação fiscal, segurança social e nacional de utente (saúde) para estrangeiros\n-As pessoas estrangeiras com morada em Portugal podem pedir, de uma só vez, o Número de Identificação Fiscal (NIF), o Número de Identificação da Segurança Social (NISS), e o número nacional de utente do Serviço Nacional de Saúde (SNS).\n-O pedido destes números de identificação é feito, de momento, em 12 Espaços Cidadão.\n-Atualizado em\n-15.06.2026\n-Nesta página\n-Quem pode pedir o NIF, o NISS e o número nacional de utente (saúde) para estrangeiros?\n-Como e onde pedir o NIF, o NISS e o número nacional de utente (saúde) para estrangeiros?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Podem pedir os números de identificação as pessoas estrangeiras, com morada portuguesa, que não tenham Cartão de Cidadão português, e que cumpram uma das seguintes condições:\n-Ter pedido ou já ter obtido autorização de residência\n-Ter nacionalidade de um país da União Europeia (UE)\n-Ter pedido Proteção Internacional (inclui requerentes de asilo e proteção subsidiária)\n-Ter o estatuto de refugiados ou beneficiários de proteção internacional\n-O pedido pode ser feito pela p"
-    },
-    {
-      "time": "2026-08-20T17:11:16Z",
-      "source_id": "src_5677a3a829ee",
-      "url": "https://www.gov.pt/servicos/pedir-o-reconhecimento-de-graus-academicos-e-diplomas-de-ensino-superior-estrangeiros",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/qualificacoes.html",
-        "qualificacoes.html"
-      ],
-      "candidate_sha256": "d08224ab96b8ce2b0638d0ed00018b36e686b91b97fbf0ba6e0a44a4c08e9b1f",
-      "diff_excerpt": "-Serviços\n-Pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros\n-Quem tenha concluído um curso de ensino superior no estrangeiro pode pedir o reconhecimento de graus académicos e diplomas em Portugal.\n-Pedir reconhecimento\n-Atualizado em\n-08.05.2026\n-Nesta página\n-Quem pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Quando se pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Como e onde se pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa que tenha concluído um curso de ensino superior no estrangeiro, numa instituição de ensino superior reconhecida/acreditada pelas autoridades competentes do respetivo país.\n-A qualquer momento.\n-Legislação\n-Decreto-Lei n.º 66/2018, de 16 de agosto\n-- Aprova o regime jurídico de reconhecimento de graus académicos e diplomas de ensino superior atribuídos por instituições de ensino superior estrangeiras.\n-Portaria n.º 33/2019, de 25 de janeiro\n-- Regula os processos inerentes ao pedido de reconhecimento de gra"
     }
   ]
 }

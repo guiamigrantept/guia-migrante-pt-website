@@ -7,6 +7,7 @@ on:
     paths:
       - 'monitor/monitor_sources.py'
       - 'monitor/discover_official_updates.py'
+      - 'monitor/normalize_discovery.py'
       - 'monitor/validate_procedure_catalog.py'
       - 'monitor/build_monitor_health.py'
       - 'monitor/dre_fallback.py'
@@ -49,6 +50,7 @@ jobs:
           test -f requirements-monitor.txt
           test -f monitor/monitor_sources.py
           test -f monitor/discover_official_updates.py
+          test -f monitor/normalize_discovery.py
           test -f monitor/validate_procedure_catalog.py
           test -f monitor/build_monitor_health.py
           test -f monitor/dre_fallback.py
@@ -74,6 +76,9 @@ jobs:
 
       - name: Discover recent official updates
         run: python monitor/discover_official_updates.py
+
+      - name: Normalize discovery results
+        run: python monitor/normalize_discovery.py
 
       - name: Check official sources
         run: python monitor/monitor_sources.py
@@ -165,7 +170,7 @@ jobs:
           alerts=r.get('dre_rss_alerts',[])
           discovered=d.get('new_updates',[])
           print(f"Estado automático do monitor: **{h.get('state','unknown')}**")
-          print(f"Fontes obrigatórias: {h.get('required_sources',0)} · erros: {h.get('source_error_count',0)} · falhas repetidas: {h.get('repeated_source_failure_count',0)}\n")
+          print(f"Fontes obrigatórias: {h.get('required_sources',0)} · erros: {h.get('source_error_count',0)} · falhas repetidas acionáveis: {h.get('repeated_source_failure_count',0)}\n")
           if blocked:
               print('## Orientação em quarentena')
               for p,ids in sorted(blocked.items()): print(f'- `{p}` — {", ".join(ids)}')

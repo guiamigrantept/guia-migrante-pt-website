@@ -2,6 +2,44 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-31T05:44:39Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-31T05:44:39Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-08-31T05:44:16Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 28-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-08-31T05:42:37Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "2bdc8945f115e1d5058c14037897d5e8a601b8cbeb59e18d39a9e4db0b6d2bf7",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 20.127.238.82\n+Attack ID: 20000051\n+Message ID: 007046877720"
+    },
+    {
       "time": "2026-08-30T23:39:44Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2945,60 +2983,6 @@
       ],
       "candidate_sha256": "d08224ab96b8ce2b0638d0ed00018b36e686b91b97fbf0ba6e0a44a4c08e9b1f",
       "diff_excerpt": "-Serviços\n-Pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros\n-Quem tenha concluído um curso de ensino superior no estrangeiro pode pedir o reconhecimento de graus académicos e diplomas em Portugal.\n-Pedir reconhecimento\n-Atualizado em\n-08.05.2026\n-Nesta página\n-Quem pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Quando se pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Como e onde se pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa que tenha concluído um curso de ensino superior no estrangeiro, numa instituição de ensino superior reconhecida/acreditada pelas autoridades competentes do respetivo país.\n-A qualquer momento.\n-Legislação\n-Decreto-Lei n.º 66/2018, de 16 de agosto\n-- Aprova o regime jurídico de reconhecimento de graus académicos e diplomas de ensino superior atribuídos por instituições de ensino superior estrangeiras.\n-Portaria n.º 33/2019, de 25 de janeiro\n-- Regula os processos inerentes ao pedido de reconhecimento de gra"
-    },
-    {
-      "time": "2026-08-20T17:11:15Z",
-      "source_id": "src_f95c7a71032d",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-utente-do-sns",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "20b02bb8d6a0797dc6f9093c478bca71596f183780cd079ba9fea09ce5e4cd1c",
-      "diff_excerpt": "-Serviços\n-Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\n-O número nacional de utente do Serviço Nacional de Saúde (SNS) é atribuído a quem precise de cuidados de saúde nas unidades públicas do SNS.\n-As pessoas de cidadania portuguesa obtêm o número nacional de utente de forma automática, quando pedem o Cartão de Cidadão (o número aparece no verso do documento). Para pessoas estrangeiras, o número é atribuído na primeira vez que se dirijam a uma unidade de saúde pública, por exemplo, um centro de saúde ou hospital.\n-A atribuição do número de utente de saúde não garante a cobertura das despesas dos cuidados de saúde pelo SNS.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como se pode realizar o serviço?\n-Conteúdos relacionados\n-Entidade responsável\n-Pessoas estrangeiras que acedem pela primeira vez aos serviços das unidades públicas de cuidados de saúde do Serviço Nacional de Saúde.\n-Quem tem Cartão de Cidadão português não precisa de pedir o número de utente.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\" é da responsabilidade da entidade Admin"
-    },
-    {
-      "time": "2026-08-20T17:11:13Z",
-      "source_id": "src_0d3e737b44ae",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "87e875477324294a236612b7f69a9c0ac9491a8d4c1c86b26f29019d2b09d907",
-      "diff_excerpt": "-Serviços\n-Pedir o Número de Identificação Fiscal (NIF) para pessoa singular\n-O Número de Identificação Fiscal (NIF), também conhecido por número de contribuinte, é necessário para comprar bens ou serviços, fazer contratos ou abrir contas bancárias. Para pessoas com nacionalidade portuguesa e Cartão de Cidadão, o NIF é atribuído automaticamente. Nos restantes casos, é necessário pedir o NIF.\n-É possível consultar também a página \"Como pedir o NIF e o NISS para pessoas estrangeiras em Portugal\" nas seguintes línguas:\n-português\n-inglês\n-árabe\n-hindi\n-mandarim\n-Realizar serviço\n-Atualizado em\n-07.04.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa portuguesa ou estrangeira, residente ou não residente em Portugal pode pedir o número de contribuinte.\n-Para ser considerado residente em Portugal, precisa de cumprir pelo menos um dos seguintes requisitos:\n-Viver em Portugal mais de 183 dias, seguidos ou interpolados, num ano\n-Ter em Portugal habitação permanente disponível (arrendamento de longa duração ou casa própria), presumindo-s"
-    },
-    {
-      "time": "2026-08-20T17:10:36Z",
-      "source_id": "src_94e2ebb14db9",
-      "url": "https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/saude-completa.html",
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "8d79e5a57983e17b54f2bbf1f7d45a27f877f2aed137c028a994eaa614239baf",
-      "diff_excerpt": "-Serviços\n-Inscrever-se no centro de saúde\n-Pode inscrever-se no centro de saúde apresentando o seu número de utente do Serviço Nacional de Saúde (SNS). Dê preferência ao centro de saúde da sua área de residência. Se não tiver número de utente, pode obter o número de utente no momento em que se inscrever no centro de saúde.\n-Os centros de saúde do SNS asseguram consultas, medicina familiar, cuidados de enfermagem e serviços de proximidade (nutrição, psicologia, saúde oral e apoio social).\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode inscrever-se no centro de saúde?\n-Como e onde se pode inscrever no centro de saúde?\n-Conteúdos relacionados\n-Entidade responsável\n-Pode inscrever-se no centro de saúde qualquer pessoa com nacionalidade portuguesa, ou pessoa de nacionalidade estrangeira com autorização de residência em Portugal.\n-Para fazer a inscrição é preciso ter número nacional de utente de saúde, e apresentar alguns documentos e informações.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Inscrever-se no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n-Administração Central do Sistema de Saúde\n-Ir para a página"
-    },
-    {
-      "time": "2026-08-20T17:10:33Z",
-      "source_id": "src_8066e6d33e60",
-      "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/situacoes-urgentes.html",
-        "situacoes-urgentes.html"
-      ],
-      "candidate_sha256": "de11b54b2b78fd673f72eb9ed27d8d2b61589b75f9df038a5e8d82d2e492aed0",
-      "diff_excerpt": "-Serviços\n-Contactar Linha Telefónica de Informação às Vítimas de Violência Doméstica\n-O serviço de informação às vítimas de violência doméstica disponibiliza apoio e informação gratuita, de forma anónima e confidencial. A linha dá informação, em chamada, sobre direitos das vítimas, recursos de apoio existentes em Portugal e onde obter apoio psicológico, social e jurídico.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Como e onde se pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa pode contactar a linha de apoio, incluindo vítimas, familiares, profissionais ou quem precise de informação, esclarecimento ou orientação sobre violência doméstica.\n-Legislação\n-Lei n.º 112/2009, de 16 de setembro\n-– Estabelece o regime jurídico aplicável à prevenção da violência doméstica, à proteção e assistência das suas vítimas.\n-Decreto-Lei n.º 48/95, de 15 de março\n-– Aprova o Código Penal, que prevê e pune o crime de violência doméstica no artigo 152.º.\n-Decreto-Lei n.º 78/87, de 17 de fevereiro\n-– A"
     }
   ]
 }

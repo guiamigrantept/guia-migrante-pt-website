@@ -14,6 +14,9 @@ on:
       - 'monitor/recover_required_sources.py'
       - 'site/data/locales.json'
       - 'site/data/procedure-catalog.json'
+      - 'site/official-updates.js'
+      - 'site/verified-facts.js'
+      - 'site/update-health.js'
       - 'requirements-monitor.txt'
       - '.github/workflows/monitor-official-sources.yml'
   schedule:
@@ -53,14 +56,19 @@ jobs:
           test -f site/data/locales.json
           test -f site/data/procedure-catalog.json
           test -f site/official-updates.js
+          test -f site/verified-facts.js
+          test -f site/update-health.js
           test -f scripts/qa.py
           test -d site
 
       - name: Install monitor dependencies
         run: pip install -r requirements-monitor.txt
 
-      - name: Validate official-update client
-        run: node --check site/official-updates.js
+      - name: Validate live update clients
+        run: |
+          node --check site/official-updates.js
+          node --check site/verified-facts.js
+          node --check site/update-health.js
 
       - name: Discover recent official updates
         run: python monitor/discover_official_updates.py

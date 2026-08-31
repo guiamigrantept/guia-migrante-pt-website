@@ -55,10 +55,11 @@ document.querySelectorAll('a[target="_blank"]').forEach(a=>{
 });
 
 /* Privacy-first first-party analytics.
-   No cookies, persistent IDs, IP storage, user-agent storage or full referrer URLs.
-   Only campaign labels may be kept in sessionStorage for the current browser session
-   so a later contact conversion can still be attributed to its campaign. */
-const analyticsBlocked=location.pathname.startsWith('/admin-')||location.pathname.startsWith('/api/')||navigator.globalPrivacyControl===true||navigator.doNotTrack==='1'||window.doNotTrack==='1';
+   No cookies, persistent user/device IDs, IP storage, user-agent storage or full referrer URLs.
+   The administration can locally exclude its own browser from measurement. */
+let localExclude=false;
+try{localExclude=localStorage.getItem('gmpAnalyticsExclude')==='1'}catch{}
+const analyticsBlocked=localExclude||location.pathname.startsWith('/admin-')||location.pathname.startsWith('/api/')||navigator.globalPrivacyControl===true||navigator.doNotTrack==='1'||window.doNotTrack==='1';
 const params=new URLSearchParams(location.search);
 let referrerHost='';
 try{if(document.referrer){const u=new URL(document.referrer);if(u.hostname!==location.hostname)referrerHost=u.hostname.toLowerCase();}}catch{}
@@ -82,6 +83,17 @@ function track(event,targetHost=''){
 }
 window.GMPAnalytics={track};
 if(!analyticsBlocked) track('page_view');
+
+/* A second, stricter signal is sent only after a real interaction with the page.
+   This lets the admin compare raw page views with likely human/engaged visits without identifying anyone. */
+let engagedSent=false;
+function markEngaged(){
+  if(engagedSent||analyticsBlocked||document.visibilityState!=='visible') return;
+  engagedSent=true;
+  track('engaged_view');
+  ['pointerdown','touchstart','keydown','scroll'].forEach(type=>window.removeEventListener(type,markEngaged,true));
+}
+['pointerdown','touchstart','keydown','scroll'].forEach(type=>window.addEventListener(type,markEngaged,{capture:true,passive:true,once:false}));
 window.addEventListener('gmp:contact-success',()=>track('contact_submit'));
 
 const officialHosts=['gov.pt','www.gov.pt','aima.gov.pt','www.aima.gov.pt','seg-social.pt','www.seg-social.pt','sns24.gov.pt','www.sns24.gov.pt','justica.gov.pt','www.justica.gov.pt','dre.pt','www.dre.pt','diariodarepublica.pt','www.diariodarepublica.pt','irn.justica.gov.pt'];

@@ -11,6 +11,7 @@ on:
       - 'monitor/build_monitor_health.py'
       - 'monitor/dre_fallback.py'
       - 'monitor/source_review_filters.py'
+      - 'monitor/accept_non_substantive_gov_changes.py'
       - 'monitor/recover_required_sources.py'
       - 'site/data/locales.json'
       - 'site/data/procedure-catalog.json'
@@ -52,6 +53,7 @@ jobs:
           test -f monitor/build_monitor_health.py
           test -f monitor/dre_fallback.py
           test -f monitor/source_review_filters.py
+          test -f monitor/accept_non_substantive_gov_changes.py
           test -f monitor/recover_required_sources.py
           test -f site/data/locales.json
           test -f site/data/procedure-catalog.json
@@ -78,6 +80,9 @@ jobs:
 
       - name: Filter known dynamic-source noise
         run: python monitor/source_review_filters.py
+
+      - name: Resolve non-substantive gov.pt guide changes
+        run: python monitor/accept_non_substantive_gov_changes.py
 
       - name: Recover required legacy sources
         run: python monitor/recover_required_sources.py

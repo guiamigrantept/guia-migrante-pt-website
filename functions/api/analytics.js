@@ -1,4 +1,4 @@
-const EVENTS=new Set(['page_view','contact_submit','official_link_click']);
+const EVENTS=new Set(['page_view','engaged_view','contact_submit','official_link_click']);
 const LOCALES=new Set(['pt','en','fr','es','uk','ru','hi','bn']);
 
 function json(data,status=200){return new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}})}

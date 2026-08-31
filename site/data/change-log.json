@@ -2,6 +2,39 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-08-31T19:39:17Z",
+      "source_id": "src_87d4fe096076",
+      "url": "https://www.gov.pt/guias/migrantes-trabalhar-e-criar-um-negocio-em-portugal",
+      "state": "non_substantive_change_accepted",
+      "reason": "only gov.pt related-guide/navigation cards were appended; substantive monitored text is unchanged"
+    },
+    {
+      "time": "2026-08-31T19:39:17Z",
+      "source_id": "src_2b7fd322021d",
+      "url": "https://www.gov.pt/guias/migrantes-ensino-em-portugal-para-criancas-jovens-e-adultos",
+      "state": "non_substantive_change_accepted",
+      "reason": "only gov.pt related-guide/navigation cards were appended; substantive monitored text is unchanged"
+    },
+    {
+      "time": "2026-08-31T19:39:17Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-08-31T19:36:41Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "e0972c2115b6046b696291691adfecaf9a75fbec0aca0f2002bdfca85fb8b45a",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 20.94.54.88\n+Attack ID: 20000051\n+Message ID: 007056585361"
+    },
+    {
       "time": "2026-08-31T19:12:19Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2906,56 +2939,6 @@
       ],
       "candidate_sha256": "fc54809a8905063c8474847b98661d5ba28ca1675a86630dc84a1b32b4bbdbae",
       "diff_excerpt": "-Voltar ao índice de conteúdos\n+Guias práticos\n-Acesso a profissões regulamentadas\n+Atualizado em\n+11/05/2026\n+Nesta página\n+Qualificações profissionais\n+Guias relacionados\n-em Portugal – tem de pedir o reconhecimento das suas qualificações profissionais junto da autoridade competente.\n+em Portugal – tem de pedir o reconhecimento das suas qualificações profissionais junto da autoridade competente\n-– tem de apresentar à autoridade competente uma declaração escrita antes de iniciar a prestação de serviços (declaração prévia). Essa declaração é válida por um ano, a contar da data da sua apresentação.\n+– tem de apresentar à autoridade competente uma declaração escrita antes de iniciar a prestação de serviços (declaração prévia). Essa declaração é válida por um ano, a contar da data da sua apresentação\n-Depois de selecionar a sua profissão, veja se o campo “Prior Check of Qualifications Under Article 7(4)” está marcado com “Yes”.\n+Depois de selecionar a sua profissão, veja se o campo “Prior Check of Qualifications Under Article 7(4)” está marcado com “Yes”\n-junto da autoridade competente pela profissão no país para onde se vai deslocar.\n+junto da autoridade competente pela profissão no "
-    },
-    {
-      "time": "2026-08-20T17:27:39Z",
-      "source_id": "src_b223c78629bb",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
-      "diff_excerpt": "-Serviços\n-Pedir o Número de Identificação da Segurança Social (NISS)\n-O Número de Identificação da Segurança Social (NISS) é o número que permite aceder a direitos e cumprir deveres na Segurança Social.\n-Podem pedir o NISS as pessoas estrangeiras, e portuguesas com bilhete de identidade vitalício. O pedido é feito online.\n-Consulte também a página\n-\"Como pedir o NIF e o NISS para pessoas estrangeiras em Portugal\"\n-nas seguintes línguas:\n-português\n-inglês\n-árabe\n-hindi\n-mandarim\n-Realizar serviço\n-Atualizado em\n-23.03.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-O Número de Identificação da Segurança Social pode ser pedido por:\n-Pessoas estrangeiras\n-Pessoas portuguesas com bilhete de identidade vitalício\n-Representantes legais em nome da pessoa estrangeira\n-Entidades empregadoras em nome da pessoa estrangeira que estejam a contratar\n-No caso de o pedido ser feito pela entidade empregadora, para que o NISS seja atribuído é necessário que a entidade empregadora celebre, previamente, um contrato de trabalho com a pessoa em causa, e comunique o vínculo de trabalho na\n-Segura"
-    },
-    {
-      "time": "2026-08-20T17:27:26Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "d8cd7250a52f9bdeb2c7967fbfc3ac3d8fa4553374df6faf90dba079a528cdb8",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 20-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-08-20T17:11:50Z",
-      "source_id": "src_76e249b224e7",
-      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/qualificacoes.html",
-        "qualificacoes.html"
-      ],
-      "candidate_sha256": "4d0ef11d815fcd09b8386366e544060e671007b233540471d1d0b5f7caa33bfc",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Qualificações profissionais\n-Acesso a profissões regulamentadas\n-Algumas profissões são regulamentadas nos países da União Europeia (UE), Espaço Económico Europeu (EEE) e Suíça. Se quer trabalhar em Portugal numa profissão regulamentada, e obteve as suas qualificações profissionais noutro país da UE, EEE ou na Suíça, tem de pedir o reconhecimento de qualificações profissionais antes de começar a trabalhar.\n-Se obteve as suas qualificações profissionais num país fora da UE, EEE ou Suíça, deve contactar a autoridade competente dessa profissão para pedir o reconhecimento de qualificações.\n-Consulte a base de dados de Nomes Genéricos de Profissão\n-para saber se a sua profissão é regulamentada.\n-A entidade coordenadora para o reconhecimento de qualificações profissionais em Portugal é a\n-Direção-Geral do Emprego e das Relações de Trabalho\n-Pedir o reconhecimento de qualificações profissionais\n-Cada profissão regulamentada é da responsabilidade de uma autoridade competente em cada país. São as autoridades competentes que avaliam o seu pedido e dão autorização para trabalhar.\n-Por exemplo, se quer trabalhar em Portugal como farmacêutico, terá de contatar a "
-    },
-    {
-      "time": "2026-08-20T17:11:28Z",
-      "source_id": "src_42ae5fe404b9",
-      "url": "https://www.gov.pt/servicos/registar-um-nascimento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "2a89df85a89558eae4f2c55f3b7ec6196ad2fc0fceb721908de641308a5b3a8a",
-      "diff_excerpt": "-Serviços\n-Registar um nascimento\n-Todas as crianças que nascem em Portugal têm de ser registadas, mesmo se os pais forem estrangeiros. O registo de nascimento do bebé é obrigatório. Quando as crianças nascem no estrangeiro e, pelo menos, um dos pais é português, têm direito à nacionalidade portuguesa.\n-Durante o processo do pedido online do registo de nascimento também é possível\n-pedir o Cartão de Cidadão\n-Registar\n-Atualizado em\n-25.06.2026\n-Nesta página\n-Informação à sua medida\n-Quem pode registar um nascimento\n-Quando se pode registar um nascimento\n-Como e onde se pode registar um nascimento\n-Quanto tempo demora a receber o registo?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação à sua medida\n-Responda a um breve questionário e veja apenas a informação que lhe interessa.\n-1 / 2\n-Quem vai registar o nascimento?\n-Um ou ambos os pais\n-Outra pessoa\n-Anterior\n-Próximo\n-Pedido online\n-Se a criança nasceu em Portugal:\n-Pode ser feito por qualquer um dos progenitores, desde que sejam casados um com o outro.\n-Se os pais não forem casados\n-, um progenitor submete a declaração online e outro recebe um email para confirmar o registo.\n-Se um dos progenitores e"
     }
   ]
 }

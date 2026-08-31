@@ -1,36 +1,71 @@
 {
-  "generated_at": "2026-08-31T19:05:14Z",
+  "generated_at": "2026-08-31T19:32:45Z",
   "ok": false,
   "partial_ok": true,
   "sources_total": 4,
-  "sources_ok": 1,
+  "sources_ok": 2,
   "sources": [
     {
       "source": "AIMA",
       "ok": true,
       "count": 6,
+      "index": "https://aima.gov.pt/pt/noticias",
+      "fallback_errors": [],
       "error": null
     },
     {
       "source": "gov.pt",
-      "ok": false,
-      "count": 0,
-      "error": "no relevant entries extracted"
+      "ok": true,
+      "count": 2,
+      "index": "https://www.gov.pt/",
+      "fallback_errors": [],
+      "error": null
     },
     {
       "source": "Justiça",
       "ok": false,
       "count": 0,
-      "error": "no relevant entries extracted"
+      "index": null,
+      "fallback_errors": [],
+      "error": "https://justica.gov.pt/: no relevant entries extracted | https://justica.gov.pt/Noticias: no relevant entries extracted"
     },
     {
       "source": "IRN",
       "ok": false,
       "count": 0,
-      "error": "no relevant entries extracted"
+      "index": null,
+      "fallback_errors": [],
+      "error": "https://irn.justica.gov.pt/: no relevant entries extracted | https://irn.justica.gov.pt/Noticias-do-IRN: no relevant entries extracted"
     }
   ],
-  "count": 6,
-  "new_updates": [],
-  "error": "one or more official update indexes failed; last known-good entries retained"
+  "count": 8,
+  "new_updates": [
+    {
+      "source": "gov.pt",
+      "title": "Documentos necessários para familiares de cidadãos da UE",
+      "date": "",
+      "url": "https://www.gov.pt/noticias/pedidos-de-certificados-e-cartoes-de-residencia-permanente-no-portal-de-renovacoes-da-aima",
+      "pages": [
+        "atualizacoes.html",
+        "familia.html",
+        "ue-familiares.html"
+      ],
+      "summary_pt": "Nova informação oficial publicada por gov.pt com potencial impacto em procedimentos ou direitos de pessoas migrantes em Portugal. Confirme os detalhes na fonte oficial.",
+      "summary_en": "New official information published by gov.pt that may affect procedures or rights for migrants in Portugal. Check the official source for details."
+    },
+    {
+      "source": "gov.pt",
+      "title": "Cartão do Munícipe já está na app gov.pt",
+      "date": "",
+      "url": "https://www.gov.pt/noticias/candidaturas-ao-fundo-de-emergencia-municipal-abertas-ate-30-de-novembro",
+      "pages": [
+        "atualizacoes.html",
+        "legalizacao.html",
+        "ue-familiares.html"
+      ],
+      "summary_pt": "Nova informação oficial publicada por gov.pt com potencial impacto em procedimentos ou direitos de pessoas migrantes em Portugal. Confirme os detalhes na fonte oficial.",
+      "summary_en": "New official information published by gov.pt that may affect procedures or rights for migrants in Portugal. Check the official source for details."
+    }
+  ],
+  "error": "one or more official update indexes failed; fallbacks attempted and last known-good entries retained"
 }

@@ -52,7 +52,7 @@
       "review_required_for": ["eligibility", "extensions", "rights", "exceptions"]
     },
     "trabalho": {
-      "pages": ["trabalho.html", "integracao.html"],
+      "pages": ["trabalho.html", "integracao.html", "trabalho-direitos.html"],
       "priority": "high",
       "official_domains": ["gov.pt", "www.gov.pt", "seg-social.pt", "www.seg-social.pt"],
       "auto_fact_ids": [],
@@ -73,7 +73,7 @@
       "review_required_for": ["service_channels", "office_availability"]
     },
     "identificacao_servicos": {
-      "pages": ["nif.html", "niss.html", "sns.html"],
+      "pages": ["dia-a-dia.html", "impostos.html", "saude-completa.html"],
       "priority": "high",
       "official_domains": ["gov.pt", "www.gov.pt", "info.portaldasfinancas.gov.pt", "seg-social.pt", "www.seg-social.pt", "sns24.gov.pt", "www.sns24.gov.pt"],
       "auto_fact_ids": ["combined_id_locations"],
@@ -87,7 +87,7 @@
       "review_required_for": ["eligibility", "banking_rights"]
     },
     "conducao": {
-      "pages": ["conducao.html"],
+      "pages": ["carta-conducao.html"],
       "priority": "high",
       "official_domains": ["imt-ip.pt", "www.imt-ip.pt", "gov.pt", "www.gov.pt"],
       "auto_fact_ids": [],

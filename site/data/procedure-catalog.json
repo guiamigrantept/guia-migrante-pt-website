@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "policy": {
+    "check_interval_hours": 3,
+    "warning_after_hours": 6,
+    "critical_after_hours": 12,
+    "automatic_updates": "objective_facts_only",
+    "ambiguous_legal_changes": "quarantine_and_review",
+    "publication_gate": "qa_required"
+  },
+  "procedures": {
+    "regularizacao_aima": {
+      "pages": ["legalizacao.html"],
+      "priority": "critical",
+      "official_domains": ["aima.gov.pt", "gov.pt", "www.gov.pt", "diariodarepublica.pt"],
+      "auto_fact_ids": ["renewal_start", "renewal_end", "aima_phone", "aima_hours"],
+      "review_required_for": ["eligibility", "legal_basis", "document_requirements", "exceptions"]
+    },
+    "cplp": {
+      "pages": ["cplp.html"],
+      "priority": "critical",
+      "official_domains": ["aima.gov.pt", "gov.pt", "www.gov.pt", "diariodarepublica.pt"],
+      "auto_fact_ids": ["aima_phone", "aima_hours"],
+      "review_required_for": ["eligibility", "conversion_rules", "document_requirements", "legal_basis"]
+    },
+    "familiares_ue": {
+      "pages": ["ue-familiares.html", "familia.html"],
+      "priority": "critical",
+      "official_domains": ["aima.gov.pt", "gov.pt", "www.gov.pt"],
+      "auto_fact_ids": ["aima_phone", "aima_hours"],
+      "review_required_for": ["eligibility", "document_requirements", "deadlines", "exceptions"]
+    },
+    "nacionalidade": {
+      "pages": ["nacionalidade.html"],
+      "priority": "critical",
+      "official_domains": ["justica.gov.pt", "irn.justica.gov.pt", "diariodarepublica.pt"],
+      "auto_fact_ids": [],
+      "review_required_for": ["eligibility", "residence_period", "document_requirements", "legal_basis", "transitional_rules"]
+    },
+    "asilo": {
+      "pages": ["asilo.html"],
+      "priority": "critical",
+      "official_domains": ["aima.gov.pt", "diariodarepublica.pt"],
+      "auto_fact_ids": ["aima_phone", "aima_hours"],
+      "review_required_for": ["procedure", "rights", "deadlines", "appeal_rules"]
+    },
+    "protecao_temporaria": {
+      "pages": ["protecao-temporaria.html"],
+      "priority": "critical",
+      "official_domains": ["aima.gov.pt", "gov.pt", "www.gov.pt", "diariodarepublica.pt"],
+      "auto_fact_ids": ["temporary_protection_end"],
+      "review_required_for": ["eligibility", "extensions", "rights", "exceptions"]
+    },
+    "trabalho": {
+      "pages": ["trabalho.html", "integracao.html"],
+      "priority": "high",
+      "official_domains": ["gov.pt", "www.gov.pt", "seg-social.pt", "www.seg-social.pt"],
+      "auto_fact_ids": [],
+      "review_required_for": ["employment_rights", "social_security", "programme_rules"]
+    },
+    "estudantes": {
+      "pages": ["estudantes.html", "escola-familias.html"],
+      "priority": "high",
+      "official_domains": ["aima.gov.pt", "gov.pt", "www.gov.pt", "dges.gov.pt", "www.dges.gov.pt"],
+      "auto_fact_ids": [],
+      "review_required_for": ["residence_requirements", "enrolment", "family_rules"]
+    },
+    "contactos_aima": {
+      "pages": ["contactos.html"],
+      "priority": "critical",
+      "official_domains": ["aima.gov.pt", "contactenos.aima.gov.pt"],
+      "auto_fact_ids": ["aima_phone", "aima_hours"],
+      "review_required_for": ["service_channels", "office_availability"]
+    },
+    "identificacao_servicos": {
+      "pages": ["nif.html", "niss.html", "sns.html"],
+      "priority": "high",
+      "official_domains": ["gov.pt", "www.gov.pt", "info.portaldasfinancas.gov.pt", "seg-social.pt", "www.seg-social.pt", "sns24.gov.pt", "www.sns24.gov.pt"],
+      "auto_fact_ids": ["combined_id_locations"],
+      "review_required_for": ["eligibility", "documents", "service_channels"]
+    },
+    "banca": {
+      "pages": ["banco-pagamentos.html"],
+      "priority": "medium",
+      "official_domains": ["clientebancario.bportugal.pt"],
+      "auto_fact_ids": ["basic_banking_max_fee"],
+      "review_required_for": ["eligibility", "banking_rights"]
+    },
+    "conducao": {
+      "pages": ["conducao.html"],
+      "priority": "high",
+      "official_domains": ["imt-ip.pt", "www.imt-ip.pt", "gov.pt", "www.gov.pt"],
+      "auto_fact_ids": [],
+      "review_required_for": ["exchange_rules", "deadlines", "country_exceptions", "documents"]
+    }
+  }
+}

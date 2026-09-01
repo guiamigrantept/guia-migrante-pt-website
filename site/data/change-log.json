@@ -2,6 +2,153 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-09-01T00:41:29Z",
+      "state": "invalid_baselines_rejected",
+      "source_ids": [
+        "src_5e43ca0ff104"
+      ],
+      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
+    },
+    {
+      "time": "2026-09-01T00:41:29Z",
+      "source_id": "src_5d4da7730964",
+      "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-01T00:41:29Z",
+      "source_id": "src_c37bb2face2a",
+      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-01T00:41:29Z",
+      "source_id": "src_76e249b224e7",
+      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-01T00:41:29Z",
+      "source_id": "src_8c6490bfe53c",
+      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-01T00:41:29Z",
+      "source_id": "src_fd8d32085235",
+      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-01T00:41:29Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-01T00:41:29Z",
+      "source_id": "src_9e47f0771d1a",
+      "url": "https://www2.gov.pt/pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-01T00:41:29Z",
+      "source_id": "src_9e47f0771d1a",
+      "url": "https://www2.gov.pt/pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "state": "changed_pending_review",
+      "pages": [
+        "carta-conducao.html",
+        "en/carta-conducao.html"
+      ],
+      "candidate_sha256": "ca56a52fb0133e9dc5b43d0ca4c6ae6ae37469b5e100b488b3c48b7734547946",
+      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Trocar carta de condução estrangeira por portuguesa\n-As cartas de condução de países como Angola, Brasil, Cabo Verde, Reino Unido e Suíça, entre outros membros da OCDE e CPLP, permitem conduzir em Portugal sem necessidade de as trocar por um título de condução português.\n-Se a sua carta de condução for de um país da União Europeia pode conduzir em Portugal até ao fim da validade do documento.\n-Caso a carta de condução seja de um país com acordo bilateral com Portugal, terá até 2 anos para a trocar por uma carta portuguesa. Mas se a carta tiver sido emitida por um país não aderente às convenções internacionais, deve trocá-la imediatamente.\n-Conheça todas as condições em baixo.\n-Canais de atendimento\n-Trocar online\n-Trocar online\n-Preencha o\n-formulário online\n-30€ (poderá haver mais custos associados)\n-Consulte a lista de documentos necessários\n-Trocar agora\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-I"
+    },
+    {
+      "time": "2026-09-01T00:41:18Z",
+      "source_id": "src_fd8d32085235",
+      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/trabalho-direitos.html",
+        "trabalho-direitos.html"
+      ],
+      "candidate_sha256": "e3094a30ad87632538e4424e9061110746d3a7f88d0dbb338bc77718cf0421ac",
+      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Pedir informações à Autoridade para as Condições do Trabalho (ACT)\n-A Autoridade para as Condições do Trabalho (ACT) responde às suas questões sobre relações laborais, segurança e saúde no trabalho.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir online\n-Pedir por telefone\n-Pedir no local\n-Pedir online\n-Preencha e envie o formulário\n-, disponível no site da ACT\n-Gratuito\n-Pedir agora\n-Pedir por telefone\n-Ligue 300 069 300\n-Custo de uma chamada para a rede fixa nacional\n-Disponível aos dias úteis, das 9h às 12h30\n-Pedir por telefone\n-Pedir no local\n-Faça a marcação na\n-plataforma SIGA\n-Gratuito\n-Dirija-se a um dos\n-serviços desconcentrados da ACT\n-Procurar balcão\n-Quem pode pedir informações à Autoridade para as Condições do Trabalho (ACT)?\n-O/A trabalhador/a.\n-O/A empregador/a.\n-O/A representante do/a trabalhador/a.\n-Qualquer outra pessoa interessada.\n-Ver mais\n-Qual o preço para pedir informações à Autoridade para as Condições do Trabalho (ACT)?\n-Tem o custo de uma chamada para a rede fixa nacional.\n-Temas relacionados\n-Trabalho\n-Trabalhadores independentes\n-Direitos e deveres de trabalhadores\n-Ve"
+    },
+    {
+      "time": "2026-09-01T00:41:12Z",
+      "source_id": "src_8c6490bfe53c",
+      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
+      "state": "changed_pending_review",
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html",
+        "en/situacoes-urgentes.html",
+        "en/trabalho-direitos.html",
+        "situacoes-urgentes.html",
+        "trabalho-direitos.html"
+      ],
+      "candidate_sha256": "27e1a5c54ab85a8615b3c479ffbcbe46e917a881978f49501665dc596f2090f0",
+      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Fazer uma queixa à Autoridade para as Condições do Trabalho (ACT)\n-Se a sua entidade empregadora não estiver a respeitar os direitos e condições de trabalho, pode fazer uma queixa.\n-Também é possível denunciar a situação mesmo que não seja a pessoa diretamente afetada. O anonimato é sempre garantido.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Fazer queixa\n-Entregar no Local\n-Fazer queixa\n-Faça queixa da sua entidade empregadora se não estiverem a respeitar os seus direitos e condições. O anonimato é garantido\n-Gratuito\n-Preencha o formulário e envie online para a ACT através do botão 'fazer queixa'\n-Fazer queixa\n-Entregar no Local\n-Faça uma queixa da sua entidade empregadora se não estiverem a respeitar os seus direitos e condições. O anonimato é garantido\n-Gratuito\n-Preencha o formulário e entregue ao serviço da ACT que abranja a morada do seu local de trabalho\n-Procurar balcão\n-Quem pode fazer uma queixa à Autoridade para as Condições do Trabalho (ACT)?\n-Qualquer pessoa pode apresentar uma queixa, incluindo:\n-A pessoa trabalhadora que foi diretamente afetada\n-Um representante da pessoa trabalhador"
+    },
+    {
+      "time": "2026-09-01T00:41:06Z",
+      "source_id": "src_76e249b224e7",
+      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/qualificacoes.html",
+        "qualificacoes.html"
+      ],
+      "candidate_sha256": "2b164d23cdaff4ecbd89f8787470d48a0d789d806cd98b01084e2ed89e1b962b",
+      "diff_excerpt": "-Guias práticos\n-Qualificações profissionais\n-Atualizado em\n-11/05/2026\n-Nesta página\n-Qualificações profissionais\n-Guias relacionados\n-Algumas profissões são regulamentadas nos países da União Europeia (UE), Espaço Económico Europeu (EEE) e Suíça. Se quer trabalhar em Portugal numa profissão regulamentada, e obteve as suas qualificações profissionais noutro país da UE, EEE ou na Suíça, tem de pedir o reconhecimento de qualificações profissionais antes de começar a trabalhar.\n-Se obteve as suas qualificações profissionais num país fora da UE, EEE ou Suíça, deve contactar a autoridade competente dessa profissão para pedir o reconhecimento de qualificações.\n-Consulte a base de dados de Nomes Genéricos de Profissão\n-para saber se a sua profissão é regulamentada.\n-A entidade coordenadora para o reconhecimento de qualificações profissionais em Portugal é a\n-Direção-Geral do Emprego e das Relações de Trabalho\n-Pedir o reconhecimento de qualificações profissionais\n-Cada profissão regulamentada é da responsabilidade de uma autoridade competente em cada país. São as autoridades competentes que avaliam o seu pedido e dão autorização para trabalhar.\n-Por exemplo, se quer trabalhar em Portugal"
+    },
+    {
+      "time": "2026-09-01T00:41:00Z",
+      "source_id": "src_c37bb2face2a",
+      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
+      "state": "changed_pending_review",
+      "pages": [
+        "apoios-sociais.html",
+        "en/apoios-sociais.html"
+      ],
+      "candidate_sha256": "34ad74a1db2f59f0b77d3d174ebc9540e00aa7ab2aae9bf3e6d934f7bc60dddc",
+      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Receber o abono de família para crianças e jovens\n-O abono de família é uma prestação em dinheiro, paga mensalmente, para compensar os encargos familiares relativos ao sustento e educação das crianças e jovens.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir agora\n-Pedir no local\n-Pedir agora\n-Através da\n-Segurança Social Direta\n-Gratuito\n-Para aceder à Segurança Social Direta (SSD)\n-vai precisar de se autenticar com um dos seguintes meios:\n-Cartão de Cidadão\n-Chave Móvel Digital\n-(CMD)\n-Número de identificação da Segurança Social e palavra passe\n-Pedir online\n-Pedir no local\n-Dirija-se a um dos\n-balcões de atendimento da Segurança Social\n-ou a uma das\n-Lojas de Cidadão ou Espaços Cidadão\n-Gratuito\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-Ilha do faial\n-Ilha do pico\n-Ilha terceira\n-Leiria\n-Lisboa\n-Portalegre\n-Porto\n-Santarém\n-Setúbal\n-Viana do Cas"
+    },
+    {
+      "time": "2026-09-01T00:40:54Z",
+      "source_id": "src_5d4da7730964",
+      "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/fora-de-portugal.html",
+        "en/rendimentos-proprios.html",
+        "fora-de-portugal.html",
+        "rendimentos-proprios.html"
+      ],
+      "candidate_sha256": "631b3fce6f52aea02123b6be433df428ab8c56088b2ba75b04bdf288da3b7e9c",
+      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Pedir um visto de residência para fixação de residência de reformados, religiosos e pessoas que vivem de rendimentos próprios\n-Informação sobre como e onde realizar o pedido de visto para cidadãos estrangeiros que pretendam obter visto de residência como reformados, religiosos ou pessoas que vivam de com rendimentos próprios em Portugal.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir no local\n-Pedir no local\n-Nos\n-Postos consulares portugueses\n-ou na Embaixada/Consulado que detém a jurisdição desse país, no caso de não haver um posto consular português\n-Tem o custo de 90€\n-Tem o prazo de 60 dias\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-Ilha do faial\n-Ilha do pico\n-Ilha terceira\n-Leiria\n-Lisboa\n-Portalegre\n-Porto\n-Santarém\n-Setúbal\n-Viana do Castelo\n-Vila Real\n-Viseu\n-Selecione um distrito primeiro\n-Selecione um distrito primeiro\n-Concelho\n-Concel"
+    },
+    {
+      "time": "2026-09-01T00:40:05Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "913f0e8d5464731348752f07cd3045bebcaf329aa353c45132514a2b4955f8e5",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 64.236.169.132\n+Attack ID: 20000051\n+Message ID: 007059352126"
+    },
+    {
       "time": "2026-08-31T20:54:29Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2800,156 +2947,6 @@
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
       "state": "temporary_source_response_ignored",
       "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-08-21T14:15:02Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "feffcca10fd20d6506fa2984bf06160fa068e28fd32d140f91bd357e342457d5",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 13.77.158.8\n+Attack ID: 20000051\n+Message ID: 006946706364"
-    },
-    {
-      "time": "2026-08-21T11:00:52Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-08-21T10:58:33Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "9fc0010952dbc031be3c9ff821ac246a642036e67a99aff50605f9fd123b50a6",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 68.220.61.209\n+Attack ID: 20000051\n+Message ID: 006944278457"
-    },
-    {
-      "time": "2026-08-21T10:56:12Z",
-      "source_id": "src_db343c2f6967",
-      "url": "https://aima.gov.pt/pt/viver/reagrupamento-familiar-com-familiar-fora-de-territorio-nacional-art-98-o-n-o-1",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/familia.html",
-        "familia.html"
-      ],
-      "candidate_sha256": "daeaf8ef29de00cac3797a412780045b5002cfb32e1c629aafb0b1dfc39a0a1d",
-      "diff_excerpt": "-Início\n-Notícias | News\n-A AIMA\n-FAQs\n-Viver | Living\n-Estudar | Studying\n-Trabalhar | Working\n-Empreender | Investing\n-Língua Portuguesa\n-Proteção Temporária\n-Brexit\n-Contactos | Contacts\n-Reagrupamento Familiar, com Familiar Fora de Território Nacional – Art. 98.º, n.º 1\n-Imprimir\n-Copiar\n-Partilhar\n-Facebook\n-ex Twitter\n-Mail\n-Documentos Necessários\n-O pedido é formulado mediante agendamento e é entregue presencialmente com impresso próprio assinado pelo requerente/titular do direito ao reagrupamento familiar e pode ser apresentado em qualquer Loja AIMA, que o pode remeter, após instrução e decisão, para os serviços da área de residência do requerente. Deve ser acompanhado de:\n-Autorização de Residência do cidadão que se encontra a residir em Portugal;\n-Cópia\n-autenticada\n-do passaporte do familiar a reagrupar;\n-Comprovativos devidamente\n-autenticados\n-dos vínculos familiares invocados (ver documentos específicos abaixo);\n-Declaração, sob compromisso de honra, da morada de residência, referindo em que termos se encontra a residir na habitação indicada\n-(ex. proprietário, arrendatário, subarrendatário, usufrutuário, comodatário, entre outras); e\n-Nas situações em que habita no l"
-    },
-    {
-      "time": "2026-08-21T10:56:04Z",
-      "source_id": "src_a4c0a29d56f8",
-      "url": "https://aima.gov.pt/pt/viver/menores-filhos-de-cidadaos-estrangeiros-titulares-de-autorizacao-de-residencia-nascidos-em-portugal-art-122-o-1-al-a",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/situacoes-especiais.html",
-        "situacoes-especiais.html"
-      ],
-      "candidate_sha256": "daeaf8ef29de00cac3797a412780045b5002cfb32e1c629aafb0b1dfc39a0a1d",
-      "diff_excerpt": "-Início\n-Notícias | News\n-A AIMA\n-FAQs\n-Viver | Living\n-Estudar | Studying\n-Trabalhar | Working\n-Empreender | Investing\n-Língua Portuguesa\n-Proteção Temporária\n-Brexit\n-Contactos | Contacts\n-Menores, filhos ou filhas de cidadãos estrangeiros titulares de Autorização de Residência, nascidos ou nascidas em Portugal - Art. 122.º/1 al. a)\n-Imprimir\n-Copiar\n-Partilhar\n-Facebook\n-ex Twitter\n-Mail\n-Documentos Necessários\n-Passaporte válido;\n-Declaração, sob compromisso de honra, da morada de residência, referindo em que termos se encontra a residir na habitação indicada\n-(ex. proprietário, arrendatário, subarrendatário, usufrutuário, comodatário, entre outras); e\n-Nas situações em que habita no local por ser proprietário ou usufrutuário, deve apresentar certidão de registo predial ou disponibilização do respetivo código de acesso para comprovar o direito de propriedade ou o direito de usufruto, ou\n-Nas situações em que habita no local como arrendatário ou locatário, etc., declaração do senhorio do imóvel ou da entidade alojadora, com menção da situação jurídica subjacente ao direito de uso do imóvel;\n-Comprovativo de\n-meios de subsistência\n-Certidão de registo de nascimento do menor;\n-Cer"
-    },
-    {
-      "time": "2026-08-21T10:55:56Z",
-      "source_id": "src_139f74e2e14d",
-      "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-vitimas-de-trafico-de-pessoas-ou-de-acao-de-auxilio-a-imigracao-ilegal-art-109-o",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/situacoes-especiais.html",
-        "situacoes-especiais.html"
-      ],
-      "candidate_sha256": "daeaf8ef29de00cac3797a412780045b5002cfb32e1c629aafb0b1dfc39a0a1d",
-      "diff_excerpt": "-Início\n-Notícias | News\n-A AIMA\n-FAQs\n-Viver | Living\n-Estudar | Studying\n-Trabalhar | Working\n-Empreender | Investing\n-Língua Portuguesa\n-Proteção Temporária\n-Brexit\n-Contactos | Contacts\n-Autorização de Residência para Vítimas de Tráfico de Pessoas ou de Ação de Auxílio à Imigração Ilegal – Art. 109.º\n-Imprimir\n-Copiar\n-Partilhar\n-Facebook\n-ex Twitter\n-Mail\n-Requisitos\n-A Autorização de Residência é concedida ao cidadão estrangeiro que seja ou tenha sido vítima de infrações penais ligadas ao tráfico de pessoas ou ao auxílio à imigração ilegal, mesmo que:\n-Tenha entrado ilegalmente no país ou\n-Não preencha as condições de concessão de Autorização de Residência\n-O procedimento é iniciado após comunicação à AIMA pelas Autoridades responsáveis pela investigação\n-Notas\n-A autorização de residência é válida (emitida) pelo período de 1 ano.\n-Finda a situação que gerou a concessão da Autorização de Residência a Vítimas de Tráfico de Pessoas ou de Ação de Auxílio à Imigração Ilegal, poderá solicitar concessão de Autorização de Residência Temporária nos termos da alínea\n-) do n.º 1 do art.º 122º da Lei de Estrangeiros.\n-Taxas\n-Tabela de taxas e demais encargos a cobrar pelos procedimentos"
-    },
-    {
-      "time": "2026-08-21T08:15:34Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-08-21T08:15:34Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "temporary_source_response_ignored",
-      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
-    },
-    {
-      "time": "2026-08-21T08:15:10Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "d8cd7250a52f9bdeb2c7967fbfc3ac3d8fa4553374df6faf90dba079a528cdb8",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 20-8-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-08-21T08:13:32Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "0b4315b177a05f34a8fcaa2cc349e4046c6f3a430c9e610e3554b78a7d18a464",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 40.76.239.21\n+Attack ID: 20000051\n+Message ID: 006942317970"
-    },
-    {
-      "time": "2026-08-21T03:40:17Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-08-21T03:38:07Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "8ae0d3d4de0af26dfb61bef69d91de80ac532fde564343d7d0f08ffb2a7a6587",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 52.165.59.10\n+Attack ID: 20000051\n+Message ID: 006941201866"
-    },
-    {
-      "time": "2026-08-20T19:59:53Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-08-20T19:57:36Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "fcfc46a1a6fd0bcb2485e1cdbabd0850db66738d76460e5181c3c3b77c7ba11a",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 52.234.2.52\n+Attack ID: 20000051\n+Message ID: 006938475961"
-    },
-    {
-      "time": "2026-08-20T19:37:58Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "baseline_seeded_from_verified_official_page",
-      "reason": "https://justica.gov.pt/Registos/Civil/Casamento"
     }
   ]
 }

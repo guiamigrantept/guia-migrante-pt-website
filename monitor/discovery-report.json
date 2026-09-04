@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T04:34:08Z",
+  "generated_at": "2026-09-04T11:19:09Z",
   "ok": true,
   "partial_ok": true,
   "sources_total": 4,
@@ -16,10 +16,11 @@
     {
       "source": "gov.pt",
       "ok": true,
-      "count": 2,
-      "index": "https://www.gov.pt/",
+      "count": 0,
+      "index": null,
       "fallback_errors": [],
-      "error": null
+      "error": null,
+      "note": "official index reachable; no migration-relevant entries found in this cycle"
     },
     {
       "source": "Justiça",
@@ -43,8 +44,5 @@
   "count": 6,
   "new_updates": [],
   "error": null,
-  "rejected_mismatched_updates": [
-    "https://www.gov.pt/noticias/candidaturas-ao-fundo-de-emergencia-municipal-abertas-ate-30-de-novembro",
-    "https://www.gov.pt/noticias/pedidos-de-certificados-e-cartoes-de-residencia-permanente-no-portal-de-renovacoes-da-aima"
-  ]
+  "rejected_mismatched_updates": []
 }

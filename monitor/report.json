@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T10:43:48Z",
+  "generated_at": "2026-09-05T15:27:03Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
@@ -83,7 +83,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
+      "failure_count": 87,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -94,30 +94,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
+      "failure_count": 87,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
-    },
-    {
-      "id": "src_1a5a6913096f",
-      "url": "https://anacom.pt/render.jsp?contentId=1825544",
-      "domain": "anacom.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "fetch_error",
-      "failure_count": 3,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f1b17f21490>, 'Connection to anacom.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://anacom.pt/render.jsp?contentId=1825544']' timed out after 70 seconds"
-    },
-    {
-      "id": "src_1d0d8bb32004",
-      "url": "https://anacom.pt/render.jsp?contentId=1842813",
-      "domain": "anacom.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "fetch_error",
-      "failure_count": 3,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f1b17f21940>, 'Connection to anacom.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://anacom.pt/render.jsp?contentId=1842813']' timed out after 70 seconds"
     },
     {
       "id": "src_65c308f94048",
@@ -127,8 +105,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f1b18861af0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 87,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7ff784f871a0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_e36005383a29",
@@ -171,7 +149,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
+      "failure_count": 87,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -182,7 +160,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
+      "failure_count": 87,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -193,7 +171,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
+      "failure_count": 87,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -204,8 +182,19 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f1b17eb6180>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 87,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7ff78483b620>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+    },
+    {
+      "id": "src_9ddecb880ea8",
+      "url": "https://www.cm-amadora.pt/pt/intervencao-social/interculturalidade/10606-claim-centro-local-de-apoio-a-integracao-de-migrantes.html",
+      "domain": "www.cm-amadora.pt",
+      "risk": "medium",
+      "required": false,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
       "id": "src_6262714f7433",
@@ -215,7 +204,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
+      "failure_count": 87,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -226,18 +215,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 86,
+      "failure_count": 87,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
-    },
-    {
-      "id": "src_76e249b224e7",
-      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
-      "domain": "www2.gov.pt",
-      "risk": "high",
-      "required": true,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_5d4da7730964",
@@ -246,8 +225,53 @@
       "risk": "high",
       "required": true,
       "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='www2.gov.pt', port=443): Max retries exceeded with url: /pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios (Caused by ConnectTimeoutError(<HTTPSConnection(host='www2.gov.pt', port=443) at 0x7ff784fcbe30>, 'Connection to www2.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios']' timed out after 70 seconds"
+    },
+    {
+      "id": "src_c37bb2face2a",
+      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
+      "domain": "www2.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='www2.gov.pt', port=443): Max retries exceeded with url: /pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens (Caused by ConnectTimeoutError(<HTTPSConnection(host='www2.gov.pt', port=443) at 0x7ff785054530>, 'Connection to www2.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens']' timed out after 70 seconds"
+    },
+    {
+      "id": "src_76e249b224e7",
+      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
+      "domain": "www2.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='www2.gov.pt', port=443): Max retries exceeded with url: /pt/inicio/espaco-empresa/qualificacoes-profissionais (Caused by ConnectTimeoutError(<HTTPSConnection(host='www2.gov.pt', port=443) at 0x7ff78459aae0>, 'Connection to www2.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais']' timed out after 70 seconds"
+    },
+    {
+      "id": "src_8c6490bfe53c",
+      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
+      "domain": "www2.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='www2.gov.pt', port=443): Max retries exceeded with url: /pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act- (Caused by ConnectTimeoutError(<HTTPSConnection(host='www2.gov.pt', port=443) at 0x7ff784598380>, 'Connection to www2.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-']' timed out after 70 seconds"
+    },
+    {
+      "id": "src_fd8d32085235",
+      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
+      "domain": "www2.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='www2.gov.pt', port=443): Max retries exceeded with url: /pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act- (Caused by ConnectTimeoutError(<HTTPSConnection(host='www2.gov.pt', port=443) at 0x7ff78459a000>, 'Connection to www2.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-']' timed out after 70 seconds"
     },
     {
       "id": "src_9e47f0771d1a",
@@ -256,8 +280,9 @@
       "risk": "high",
       "required": true,
       "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='www2.gov.pt', port=443): Max retries exceeded with url: /pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa (Caused by ConnectTimeoutError(<HTTPSConnection(host='www2.gov.pt', port=443) at 0x7ff784599850>, 'Connection to www2.gov.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://www2.gov.pt/pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa']' timed out after 70 seconds"
     },
     {
       "id": "src_2b928469124c",
@@ -268,36 +293,6 @@
       "had_baseline": true,
       "kind": "temporary_source_response",
       "error": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
-    },
-    {
-      "id": "src_c37bb2face2a",
-      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
-      "domain": "www2.gov.pt",
-      "risk": "high",
-      "required": true,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "id": "src_8c6490bfe53c",
-      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "domain": "www2.gov.pt",
-      "risk": "high",
-      "required": true,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "id": "src_fd8d32085235",
-      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "domain": "www2.gov.pt",
-      "risk": "high",
-      "required": true,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     }
   ],
   "critical_errors": [],

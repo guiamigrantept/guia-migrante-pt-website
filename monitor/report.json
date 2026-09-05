@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T17:27:47Z",
+  "generated_at": "2026-09-05T20:25:14Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
@@ -9,13 +9,13 @@
     "src_0bb3fdad0761",
     "src_1b8b2c1bcde6",
     "src_2b0880736b8a",
+    "src_42ae5fe404b9",
     "src_48b0a401cee7",
     "src_7c058712b7c1",
     "src_984aab257167",
     "src_a819c8428bc5",
     "src_b223c78629bb",
-    "src_cbed4d38b3bf",
-    "src_ea73d986f525"
+    "src_cbed4d38b3bf"
   ],
   "blocked_pages": {
     "en/situacoes-urgentes.html": [
@@ -26,13 +26,11 @@
     ],
     "en/legalizacao.html": [
       "src_2b0880736b8a",
-      "src_48b0a401cee7",
-      "src_ea73d986f525"
+      "src_48b0a401cee7"
     ],
     "legalizacao.html": [
       "src_2b0880736b8a",
-      "src_48b0a401cee7",
-      "src_ea73d986f525"
+      "src_48b0a401cee7"
     ],
     "en/ue-familiares.html": [
       "src_984aab257167"
@@ -51,6 +49,12 @@
     ],
     "protecao-temporaria.html": [
       "src_7c058712b7c1"
+    ],
+    "en/registos-civis.html": [
+      "src_42ae5fe404b9"
+    ],
+    "registos-civis.html": [
+      "src_42ae5fe404b9"
     ],
     "en/servicos-casa.html": [
       "src_a819c8428bc5"
@@ -86,7 +90,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
+      "failure_count": 89,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -97,7 +101,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
+      "failure_count": 89,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -108,8 +112,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f15cc85b110>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 89,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f0e3220aed0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_e36005383a29",
@@ -152,7 +156,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
+      "failure_count": 89,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -163,7 +167,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
+      "failure_count": 89,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -174,7 +178,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
+      "failure_count": 89,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -185,8 +189,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f15cc74b7d0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 89,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f0e319c7560>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_6262714f7433",
@@ -196,7 +200,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
+      "failure_count": 89,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -207,7 +211,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 88,
+      "failure_count": 89,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -239,16 +243,6 @@
       "had_baseline": true,
       "kind": "temporary_source_response",
       "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "domain": "simuladorprecos.erse.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
     },
     {
       "id": "src_c37bb2face2a",

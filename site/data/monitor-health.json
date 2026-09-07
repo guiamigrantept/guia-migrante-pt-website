@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "generated_at": "2026-09-07T04:46:04Z",
-  "state": "degraded",
+  "generated_at": "2026-09-07T12:40:53Z",
+  "state": "healthy",
   "schedule_hours": 3,
   "warning_after_hours": 6,
   "critical_after_hours": 12,
@@ -9,13 +9,10 @@
   "procedure_coverage_ok": true,
   "required_sources": 81,
   "missing_required": [],
-  "blocked_pages": [
-    "en/registos-civis.html",
-    "registos-civis.html"
-  ],
+  "blocked_pages": [],
   "critical_error_count": 0,
-  "source_error_count": 18,
-  "optional_source_error_count": 9,
+  "source_error_count": 21,
+  "optional_source_error_count": 12,
   "repeated_source_failure_count": 0,
   "discovery_ok": true,
   "discovery_error": null,

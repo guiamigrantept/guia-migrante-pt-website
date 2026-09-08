@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T04:36:54Z",
+  "generated_at": "2026-09-08T11:20:00Z",
   "ok": true,
   "partial_ok": true,
   "sources_total": 4,
@@ -17,9 +17,10 @@
       "source": "gov.pt",
       "ok": true,
       "count": 2,
-      "index": "https://www.gov.pt/",
+      "index": null,
       "fallback_errors": [],
-      "error": null
+      "error": null,
+      "note": "official index reachable; no migration-relevant entries found in this cycle"
     },
     {
       "source": "Justiça",

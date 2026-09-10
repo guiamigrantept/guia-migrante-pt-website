@@ -2,6 +2,434 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-09-10T20:59:44Z",
+      "state": "known_good_baselines_restored",
+      "source_ids": [
+        "src_0bb3fdad0761",
+        "src_48b0a401cee7",
+        "src_7c058712b7c1",
+        "src_984aab257167",
+        "src_cbed4d38b3bf"
+      ],
+      "reason": "transient/WAF response could not replace a committed valid baseline"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_0d3e737b44ae",
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_b55923d59614",
+      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_42ae5fe404b9",
+      "url": "https://www.gov.pt/servicos/registar-um-nascimento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_33c397772684",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_e9c2fda70bd4",
+      "url": "https://www.gov.pt/servicos/consultar-corpo-diplomatico-acreditado-em-lisboa",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_e5000174ce7b",
+      "url": "https://www.gov.pt/servicos/realizar-o-processo-de-transcricao-do-assento-de-casamento-no-estrangeiro",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_348272c45029",
+      "url": "https://www.gov.pt/servicos/alterar-a-morada-e-outros-dados-registados-na-seguranca-social",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_b223c78629bb",
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_5677a3a829ee",
+      "url": "https://www.gov.pt/servicos/pedir-o-reconhecimento-de-graus-academicos-e-diplomas-de-ensino-superior-estrangeiros",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_51345bfaef9d",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-estudo-intercambio-de-estudantes-estagio-profissional-ou-voluntariado",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_8066e6d33e60",
+      "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_5c470c1c6222",
+      "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_f95c7a71032d",
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-utente-do-sns",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_c1912bc0f3da",
+      "url": "https://www.gov.pt/servicos/pedir-visto-de-residencia-para-o-exercicio-de-atividade-profissional-independente-ou-para-imigrantes-empreendedores",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_2e5a8d9c1488",
+      "url": "https://www.gov.pt/servicos/pedir-equivalencia-de-habilitacoes-estrangeiras-do-ensino-basico-e-secundario",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_94e2ebb14db9",
+      "url": "https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_d047de31a87b",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-trabalho-dependente",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_1b8b2c1bcde6",
+      "url": "https://www.gov.pt/servicos/livro-de-reclamacoes-compra",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:44Z",
+      "source_id": "src_e83566f7adcc",
+      "url": "https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-10T20:59:31Z",
+      "source_id": "src_42ae5fe404b9",
+      "url": "https://www.gov.pt/servicos/registar-um-nascimento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Registar um nascimento\n-Todas as crianças que nascem em Portugal têm de ser registadas, mesmo se os pais forem estrangeiros. O registo de nascimento do bebé é obrigatório. Quando as crianças nascem no estrangeiro e, pelo menos, um dos pais é português, têm direito à nacionalidade portuguesa.\n-Durante o processo do pedido online do registo de nascimento também é possível\n-pedir o Cartão de Cidadão\n-Registar\n-Atualizado em\n-25.06.2026\n-Nesta página\n-Informação à sua medida\n-Quem pode registar um nascimento\n-Quando se pode registar um nascimento\n-Como e onde se pode registar um nascimento\n-Quanto tempo demora a receber o registo?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação à sua medida\n-Responda a um breve questionário e veja apenas a informação que lhe interessa.\n-1 / 2\n-Quem vai registar o nascimento?\n-Um ou ambos os pais\n-Outra pessoa\n-Anterior\n-Próximo\n-Pedido online\n-Se a criança nasceu em Portugal:\n-Pode ser feito por qualquer um dos progenitores, desde que sejam casados um com o outro.\n-Se os pais não forem casados\n-, um progenitor submete a declaração online e outro recebe um email para confirmar o registo.\n-Se um dos progenitores e"
+    },
+    {
+      "time": "2026-09-10T20:59:31Z",
+      "source_id": "src_e5000174ce7b",
+      "url": "https://www.gov.pt/servicos/realizar-o-processo-de-transcricao-do-assento-de-casamento-no-estrangeiro",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Registar um casamento realizado perante as autoridades de um país estrangeiro\n-Se casou perante as autoridades (civis ou religiosas) de outro país, deve contactar um posto consular para transcrever o assento do seu casamento para o registo civil português. Assim, o seu casamento fica registado em Portugal.\n-Atualizado em\n-20.07.2026\n-Nesta página\n-Quem pode registar o casamento\n-Quando se pode registar o casamento\n-Como e onde se pode registar o casamento\n-Conteúdos relacionados\n-Entidade responsável\n-Pessoas de nacionalidade portuguesa que tenham casado perante as autoridades de outro país, com uma pessoa portuguesa ou estrangeira.\n-A qualquer momento após a celebração do casamento no estrangeiro.\n-Serviços\n-Casar no estrangeiro\n-Ver todos os serviços\n-Temas\n-Família\n-Casamento e união de facto\n-Viajar e viver no estrangeiro\n-Emigrar\n-Entidade responsável\n-O serviço \"Registar um casamento realizado perante as autoridades de um país estrangeiro\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n-Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas\n-Ir para a página da entidade\n+Devido a uma intervenção t"
+    },
+    {
+      "time": "2026-09-10T20:59:31Z",
+      "source_id": "src_c1912bc0f3da",
+      "url": "https://www.gov.pt/servicos/pedir-visto-de-residencia-para-o-exercicio-de-atividade-profissional-independente-ou-para-imigrantes-empreendedores",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/fora-de-portugal.html",
+        "en/independente-empreendedor.html",
+        "fora-de-portugal.html",
+        "independente-empreendedor.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir visto de residência para o exercício de atividade profissional independente ou para imigrantes empreendedores\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade profissional independente ou para imigrantes empreendedores em Portugal.\n-Atualizado em\n-25.05.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Prazo\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Todos os cidadãos estrangeiros, que não sejam nacionais de Estados Membros UE, do Espaço Económico Europeu e Suíça que pretendam exercer uma atividade independente ou investir em Portugal.\n-Deverá ser consultado o Posto Consular competente de modo a saber os horários de atendimento para receção de pedidos de visto.\n-Tem um prazo de 60 dias.\n-Legislação\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional\n-Regula os Meios de Subsistência\n-Altera a Portaria dos Meios de Subsistên"
+    },
+    {
+      "time": "2026-09-10T20:59:31Z",
+      "source_id": "src_d047de31a87b",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-trabalho-dependente",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/fora-de-portugal.html",
+        "en/trabalho.html",
+        "fora-de-portugal.html",
+        "trabalho.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para trabalho dependente\n-Informações sobre onde e como realizar o pedido de visto de residência para o exercício de uma atividade profissional subordinada em Portugal.\n-Atualizado em\n-16.04.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Todos os cidadãos estrangeiros, que não sejam nacionais de Estados Membros UE, do Espaço Económico Europeu e Suíça que pretendam trabalhar em Portugal.\n-Deverá ser consultado o Posto Consular competente de modo a saber os horários de atendimento para receção de pedidos de visto.\n-Legislação\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Altera a portaria dos meios de subsistência.\n-Regula os meios de subsistência.\n-Resolução que aprova o Contingente Global de Oportunidades de Trabalho Anual\n-Tabela de Emolumentos Consulares.\n-Temas\n-Cidadania e documentos\n-Outros docume"
+    },
+    {
+      "time": "2026-09-10T20:59:31Z",
+      "source_id": "src_33c397772684",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
+      "state": "changed_pending_review",
+      "pages": [
+        "altamente-qualificado.html",
+        "en/altamente-qualificado.html",
+        "en/fora-de-portugal.html",
+        "fora-de-portugal.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Quando pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Onde pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Como pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-O que precisa para pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Prazo\n-Qual o preço pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade de investigação ou altamente qualificada em Portugal.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que"
+    },
+    {
+      "time": "2026-09-10T20:59:31Z",
+      "source_id": "src_51345bfaef9d",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-estudo-intercambio-de-estudantes-estagio-profissional-ou-voluntariado",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/estudantes.html",
+        "en/fora-de-portugal.html",
+        "estudantes.html",
+        "fora-de-portugal.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\n-Aviso: Esta página pode estar desatualizada.\n-Aceda ao portal do MNE para consultar informação mais atualizada\n-Informação sobre como e onde realizar o pedido de informação e instrução de visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado em Portugal.\n-Atualizado em\n-06.08.2026\n-Nesta página\n-Quem pode pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\n-Quando se pode pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\n-Como e onde se pode pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer cidadão estrangeiro que não seja nacional de Estados Membros da União Europeia (UE), do Espaço Económico Europeu e Suíça que pretendam estudar num estabelecimento de ensino reconhecido, participar num programa de intercâmbio de estudantes, estágio profissional ou de voluntariado.\n-A qualquer momento,"
+    },
+    {
+      "time": "2026-09-10T20:59:30Z",
+      "source_id": "src_e83566f7adcc",
+      "url": "https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros",
+      "state": "changed_pending_review",
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "index.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir os números de identificação fiscal, segurança social e nacional de utente (saúde) para estrangeiros\n-As pessoas estrangeiras com morada em Portugal podem pedir, de uma só vez, o Número de Identificação Fiscal (NIF), o Número de Identificação da Segurança Social (NISS), e o número nacional de utente do Serviço Nacional de Saúde (SNS).\n-O pedido destes números de identificação é feito, de momento, em 12 Espaços Cidadão.\n-Atualizado em\n-15.06.2026\n-Nesta página\n-Quem pode pedir o NIF, o NISS e o número nacional de utente (saúde) para estrangeiros?\n-Como e onde pedir o NIF, o NISS e o número nacional de utente (saúde) para estrangeiros?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Podem pedir os números de identificação as pessoas estrangeiras, com morada portuguesa, que não tenham Cartão de Cidadão português, e que cumpram uma das seguintes condições:\n-Ter pedido ou já ter obtido autorização de residência\n-Ter nacionalidade de um país da União Europeia (UE)\n-Ter pedido Proteção Internacional (inclui requerentes de asilo e proteção subsidiária)\n-Ter o estatuto de refugiados ou beneficiários de proteção internacional\n-O pedido pode ser feito pela p"
+    },
+    {
+      "time": "2026-09-10T20:59:30Z",
+      "source_id": "src_5677a3a829ee",
+      "url": "https://www.gov.pt/servicos/pedir-o-reconhecimento-de-graus-academicos-e-diplomas-de-ensino-superior-estrangeiros",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/qualificacoes.html",
+        "qualificacoes.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros\n-Quem tenha concluído um curso de ensino superior no estrangeiro pode pedir o reconhecimento de graus académicos e diplomas em Portugal.\n-Pedir reconhecimento\n-Atualizado em\n-08.05.2026\n-Nesta página\n-Quem pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Quando se pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Como e onde se pode pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa que tenha concluído um curso de ensino superior no estrangeiro, numa instituição de ensino superior reconhecida/acreditada pelas autoridades competentes do respetivo país.\n-A qualquer momento.\n-Legislação\n-Decreto-Lei n.º 66/2018, de 16 de agosto\n-- Aprova o regime jurídico de reconhecimento de graus académicos e diplomas de ensino superior atribuídos por instituições de ensino superior estrangeiras.\n-Portaria n.º 33/2019, de 25 de janeiro\n-- Regula os processos inerentes ao pedido de reconhecimento de gra"
+    },
+    {
+      "time": "2026-09-10T20:59:30Z",
+      "source_id": "src_f95c7a71032d",
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-utente-do-sns",
+      "state": "changed_pending_review",
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/index.html",
+        "index.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\n-O número nacional de utente do Serviço Nacional de Saúde (SNS) é atribuído a quem precise de cuidados de saúde nas unidades públicas do SNS.\n-As pessoas de cidadania portuguesa obtêm o número nacional de utente de forma automática, quando pedem o Cartão de Cidadão (o número aparece no verso do documento). Para pessoas estrangeiras, o número é atribuído na primeira vez que se dirijam a uma unidade de saúde pública, por exemplo, um centro de saúde ou hospital.\n-A atribuição do número de utente de saúde não garante a cobertura das despesas dos cuidados de saúde pelo SNS.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como se pode realizar o serviço?\n-Conteúdos relacionados\n-Entidade responsável\n-Pessoas estrangeiras que acedem pela primeira vez aos serviços das unidades públicas de cuidados de saúde do Serviço Nacional de Saúde.\n-Quem tem Cartão de Cidadão português não precisa de pedir o número de utente.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\" é da responsabilidade da entidade Admin"
+    },
+    {
+      "time": "2026-09-10T20:59:30Z",
+      "source_id": "src_0d3e737b44ae",
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular",
+      "state": "changed_pending_review",
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/index.html",
+        "index.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir o Número de Identificação Fiscal (NIF) para pessoa singular\n-O Número de Identificação Fiscal (NIF), também conhecido por número de contribuinte, é necessário para comprar bens ou serviços, fazer contratos ou abrir contas bancárias. Para pessoas com nacionalidade portuguesa e Cartão de Cidadão, o NIF é atribuído automaticamente. Nos restantes casos, é necessário pedir o NIF.\n-É possível consultar também a página \"Como pedir o NIF e o NISS para pessoas estrangeiras em Portugal\" nas seguintes línguas:\n-português\n-inglês\n-árabe\n-hindi\n-mandarim\n-Realizar serviço\n-Atualizado em\n-01.09.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa portuguesa ou estrangeira, residente ou não residente em Portugal pode pedir o número de contribuinte.\n-Para ser considerado residente em Portugal, precisa de cumprir pelo menos um dos seguintes requisitos:\n-Viver em Portugal mais de 183 dias, seguidos ou interpolados, num ano\n-Ter em Portugal habitação permanente disponível (arrendamento de longa duração ou casa própria), presumindo-s"
+    },
+    {
+      "time": "2026-09-10T20:59:30Z",
+      "source_id": "src_b223c78629bb",
+      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
+      "state": "changed_pending_review",
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/index.html",
+        "index.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir o Número de Identificação da Segurança Social (NISS)\n-O Número de Identificação da Segurança Social (NISS) é o número que permite aceder a direitos e cumprir deveres na Segurança Social.\n-Podem pedir o NISS as pessoas estrangeiras, e portuguesas com bilhete de identidade vitalício. O pedido é feito online.\n-Consulte também a página\n-\"Como pedir o NIF e o NISS para pessoas estrangeiras em Portugal\"\n-nas seguintes línguas:\n-português\n-inglês\n-árabe\n-hindi\n-mandarim\n-Pedir NISS\n-Atualizado em\n-03.09.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-O Número de Identificação da Segurança Social pode ser pedido por:\n-Pessoas estrangeiras\n-Pessoas portuguesas com bilhete de identidade vitalício\n-Representantes legais em nome da pessoa estrangeira\n-Entidades empregadoras em nome da pessoa estrangeira que estejam a contratar\n-No caso de o pedido ser feito pela entidade empregadora, para que o NISS seja atribuído é necessário que a entidade empregadora celebre, previamente, um contrato de trabalho com a pessoa em causa, e comunique o vínculo de trabalho na\n-Segurança So"
+    },
+    {
+      "time": "2026-09-10T20:59:30Z",
+      "source_id": "src_2e5a8d9c1488",
+      "url": "https://www.gov.pt/servicos/pedir-equivalencia-de-habilitacoes-estrangeiras-do-ensino-basico-e-secundario",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/escola-familias.html",
+        "escola-familias.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Através deste serviço é possível obter informações e o formulário para realizar pedido de equivalência, equiparação ou reconhecimento de habilitações, estudos e diplomas de sistemas educativos estrangeiros do ensino básico e secundário a habilitações do sistema educativo português.\n-Atualizado em\n-22.05.2026\n-Nesta página\n-Quem pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Quando se pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Como e onde se pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer cidadão português ou estrangeiro residente em território nacional.\n-A qualquer momento, dentro do horário de funcionamento dos balcões.\n-Legislação\n-Aprova as tabelas comparativas entre o sistema de ensino português e outros sistemas de ensino, bem como as tabelas de conversão dos sistemas de classificação correspondentes.\n-Aprova as tabelas comparativas entre o sistema de ensino português e outros sistemas de ensino, bem co"
+    },
+    {
+      "time": "2026-09-10T20:59:30Z",
+      "source_id": "src_b55923d59614",
+      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Pedir a nacionalidade portuguesa\n-A atribuição da nacionalidade portuguesa pode depender do lugar de nascimento da pessoa, de há quantos anos vive em Portugal, da nacionalidade dos seus familiares ou cônjuge, da relação com a comunidade portuguesa, entre outros fatores.\n-O pedido de nacionalidade portuguesa pode ser feito online por um/a advogado/a ou solicitador/a. O pedido também pode ser feito, pela própria pessoa, ao balcão ou por correio.\n-Pedir\n-Atualizado em\n-21.05.2026\n-Nesta página\n-Quem pode pedir a nacionalidade portuguesa\n-Como e onde se pode pedir a nacionalidade portuguesa\n-Outras informações\n-Entidade responsável\n-A nacionalidade portuguesa pode ser pedida pela própria pessoa que quer ter a nacionalidade, mas também por alguém que queira pedir para outra pessoa, como é o caso de pais que pedem a nacionalidade para os seus filhos.\n-Os advogados e solicitadores inscritos nas respetivas Ordens em Portugal podem usar o serviço online da nacionalidade para representar cidadãos que pedem a nacionalidade portuguesa nas seguintes situações:\n-Nascido/a no estrangeiro, filho/a de mãe/pai português à data do nascimento (por transcrição)\n-Neto/a de avó/avô português o"
+    },
+    {
+      "time": "2026-09-10T20:59:29Z",
+      "source_id": "src_5c470c1c6222",
+      "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/saude-completa.html",
+        "saude-completa.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Mudar de centro de saúde\n-Quando muda de casa, é recomendado que peça a transferência para o centro de saúde do Serviço Nacional de Saúde (SNS) correspondente à sua nova área de residência.\n-A transferência não é obrigatória, mas deve dar preferência ao centro de saúde mais perto da sua nova morada.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode mudar de centro de saúde?\n-Como e onde se pode mudar de centro de saúde?\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa que já esteja inscrita num centro de saúde do SNS.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Mudar de centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n-Administração Central do Sistema de Saúde\n-Ir para a página da entidade\n+Devido a uma intervenção técnica programada, esta página encontra-se temporariamente indisponível.\n+Esperamos ser breves, tente novamente mais tarde. Lamentamos o incómodo."
+    },
+    {
+      "time": "2026-09-10T20:59:29Z",
+      "source_id": "src_1b8b2c1bcde6",
+      "url": "https://www.gov.pt/servicos/livro-de-reclamacoes-compra",
+      "state": "changed_pending_review",
+      "pages": [
+        "consumidor.html",
+        "en/consumidor.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Livro de Reclamações - comprar\n-O Livro de Reclamações físico é obrigatório para os fornecedores de bens e prestadores de serviços abrangidos pela legislação. Este serviço permite comprar o livro através da Imprensa Nacional-Casa da Moeda (INCM).\n-Comprar\n-Atualizado em\n-04.09.2026\n-Nesta página\n-Como e onde se pode comprar\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Legislação\n-Decreto-Lei n.º 156/2005\n-- Estabelece a obrigatoriedade de disponibilização do livro de reclamações a todos os fornecedores de bens ou prestadores de serviços que tenham contacto com o público em geral. Publica em anexos as entidades que passam a estar sujeitas e as que já se encontram sujeitas a essa obrigatoriedade e disponibilização do citado livro;\n-Portaria n.º 1288/2005\n-- Aprova o modelo, edição, preço, fornecimento e distribuição do livro de reclamações a ser disponibilizado pelos fornecedores de bens e prestadores de serviços abrangidos pelo Decreto-Lei n.º 156/2005, de 15 de setembro;\n-Decreto-Lei n.º 371/2007\n-- Altera o Decreto-Lei n.º 156/2005, de 15 de setembro (primeira alteração), estabelecendo a obrigatoriedade de disponibilização do livro de reclamações e"
+    },
+    {
+      "time": "2026-09-10T20:59:29Z",
+      "source_id": "src_94e2ebb14db9",
+      "url": "https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude",
+      "state": "changed_pending_review",
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "en/saude-completa.html",
+        "saude-completa.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Inscrever-se no centro de saúde\n-Pode inscrever-se no centro de saúde apresentando o seu número de utente do Serviço Nacional de Saúde (SNS). Dê preferência ao centro de saúde da sua área de residência. Se não tiver número de utente, pode obter o número de utente no momento em que se inscrever no centro de saúde.\n-Os centros de saúde do SNS asseguram consultas, medicina familiar, cuidados de enfermagem e serviços de proximidade (nutrição, psicologia, saúde oral e apoio social).\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode inscrever-se no centro de saúde?\n-Como e onde se pode inscrever no centro de saúde?\n-Conteúdos relacionados\n-Entidade responsável\n-Pode inscrever-se no centro de saúde qualquer pessoa com nacionalidade portuguesa, ou pessoa de nacionalidade estrangeira com autorização de residência em Portugal.\n-Para fazer a inscrição é preciso ter número nacional de utente de saúde, e apresentar alguns documentos e informações.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Inscrever-se no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n-Administração Central do Sistema de Saúde\n-Ir para a página"
+    },
+    {
+      "time": "2026-09-10T20:59:29Z",
+      "source_id": "src_8066e6d33e60",
+      "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "candidate_sha256": "7de754ce48e265e5f9ffe0359ce2d79d4476fee15c43e0b4d28eed28d2273b0f",
+      "diff_excerpt": "-Serviços\n-Contactar Linha Telefónica de Informação às Vítimas de Violência Doméstica\n-O serviço de informação às vítimas de violência doméstica disponibiliza apoio e informação gratuita, de forma anónima e confidencial. A linha dá informação, em chamada, sobre direitos das vítimas, recursos de apoio existentes em Portugal e onde obter apoio psicológico, social e jurídico.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Como e onde se pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa pode contactar a linha de apoio, incluindo vítimas, familiares, profissionais ou quem precise de informação, esclarecimento ou orientação sobre violência doméstica.\n-Legislação\n-Lei n.º 112/2009, de 16 de setembro\n-– Estabelece o regime jurídico aplicável à prevenção da violência doméstica, à proteção e assistência das suas vítimas.\n-Decreto-Lei n.º 48/95, de 15 de março\n-– Aprova o Código Penal, que prevê e pune o crime de violência doméstica no artigo 152.º.\n-Decreto-Lei n.º 78/87, de 17 de fevereiro\n-– A"
+    },
+    {
+      "time": "2026-09-10T20:58:58Z",
+      "source_id": "src_e9c2fda70bd4",
+      "url": "https://www.gov.pt/servicos/consultar-corpo-diplomatico-acreditado-em-lisboa",
+      "state": "changed_pending_review",
+      "pages": [
+        "contactos.html",
+        "en/contactos.html"
+      ],
+      "candidate_sha256": "1e8fa96a34a51438c4f5009e7a75e4abf8420e09b5ba1d3d83e57bbc65623ba7",
+      "diff_excerpt": "-Serviços\n-Consultar corpo diplomático acreditado em Lisboa\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem consultar corpo diplomático acreditado em Lisboa?\n-Quando consultar corpo diplomático acreditado em Lisboa?\n-Onde consultar corpo diplomático acreditado em Lisboa?\n-Como consultar corpo diplomático acreditado em Lisboa?\n-Qual o preço consultar corpo diplomático acreditado em Lisboa?\n-Conteúdos relacionados\n-Entidade responsável\n-Informações e possibilidade de realizar\n-online\n-a consulta do corpo diplomático acreditado em Lisboa.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Qualquer cidadão.\n-A qualquer momento.\n-Através da Internet\n-Consulta da lista do corpo diplomático acreditado em Lisboa com todos os contactos das missões diplomáticas acreditadas em Portugal, incluindo:\n-Embaixadas\n-Consulados\n-Organizações internacionais com sede em Lisboa\n-Organizações internacionais com representação em Lisboa.\n-É gratuito.\n-Temas\n-Estrangeiros em Portugal\n-Cidadãos europeus em Portugal\n-Migrantes em Portugal\n-Entidade responsável\n-O serviço \"Consultar corpo diplomático acreditado em Lisboa\" é da responsabilidade da "
+    },
+    {
+      "time": "2026-09-10T20:57:56Z",
+      "source_id": "src_348272c45029",
+      "url": "https://www.gov.pt/servicos/alterar-a-morada-e-outros-dados-registados-na-seguranca-social",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "candidate_sha256": "4aa99460c03967136559642c59eeb8dd03cd66655ec31c463743cdfa83f3ad60",
+      "diff_excerpt": "-Serviços\n-Alterar a morada e outros dados registados na Segurança Social\n-Qualquer pessoa, portuguesa ou estrangeira, inscrita na Segurança Social pode alterar a morada e outros dados registados na Segurança Social, como número de telefone, telemóvel, email e IBAN\n-Quem tem Cartão de Cidadão só pode alterar a morada usando o serviço\n-alterar a morada do Cartão de Cidadão\n-Alterar dados\n-Atualizado em\n-03.09.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa, nacional ou estrangeira, que esteja inscrita na Segurança Social, ou seja, que tem um número de segurança social atribuído.\n-Temas\n-Cidadania e documentos\n-Outros documentos\n-Estrangeiros em Portugal\n-Cidadãos europeus em Portugal\n-Migrantes em Portugal\n-Entidade responsável\n-O serviço \"Alterar a morada e outros dados registados na Segurança Social\" é da responsabilidade da entidade Instituto da Segurança Social.\n-Instituto da Segurança Social\n-Ir para a página da entidade\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: www.gov.pt/servicos/alterar-a-mor"
+    },
+    {
+      "time": "2026-09-10T20:56:21Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "99164685ab14fa0b7a906fe2774b2a4ad27c2152c8b8fd18ed1df3f8878555e3",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 20.168.98.33\n+Attack ID: 20000051\n+Message ID: 007181276018"
+    },
+    {
+      "time": "2026-09-10T20:54:09Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "b5d83019f45bdec72a6fe547a3608df2081d5c2a92e8dffbf6ebd51f5a26f735",
+      "diff_excerpt": "+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
+    },
+    {
       "time": "2026-09-10T16:29:30Z",
       "state": "known_good_baselines_restored",
       "source_ids": [
@@ -2553,411 +2981,6 @@
       ],
       "candidate_sha256": "9bab2d18d8e2527e306f5e3dd92910ba85b54cad8ac993eff06ea3727881eef3",
       "diff_excerpt": "-Guias práticos\n-Qualificações profissionais\n-Atualizado em\n-11/05/2026\n-Nesta página\n-Qualificações profissionais\n-Guias relacionados\n-Algumas profissões são regulamentadas nos países da União Europeia (UE), Espaço Económico Europeu (EEE) e Suíça. Se quer trabalhar em Portugal numa profissão regulamentada, e obteve as suas qualificações profissionais noutro país da UE, EEE ou na Suíça, tem de pedir o reconhecimento de qualificações profissionais antes de começar a trabalhar.\n-Se obteve as suas qualificações profissionais num país fora da UE, EEE ou Suíça, deve contactar a autoridade competente dessa profissão para pedir o reconhecimento de qualificações.\n-Consulte a base de dados de Nomes Genéricos de Profissão\n-para saber se a sua profissão é regulamentada.\n-A entidade coordenadora para o reconhecimento de qualificações profissionais em Portugal é a\n-Direção-Geral do Emprego e das Relações de Trabalho\n-Pedir o reconhecimento de qualificações profissionais\n-Cada profissão regulamentada é da responsabilidade de uma autoridade competente em cada país. São as autoridades competentes que avaliam o seu pedido e dão autorização para trabalhar.\n-Por exemplo, se quer trabalhar em Portugal"
-    },
-    {
-      "time": "2026-09-06T20:28:43Z",
-      "source_id": "src_c37bb2face2a",
-      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
-      "state": "changed_pending_review",
-      "pages": [
-        "apoios-sociais.html",
-        "en/apoios-sociais.html"
-      ],
-      "candidate_sha256": "818bf86ee0849569581b2935d632c44717016046493ce9d542e38747c8c841aa",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Receber o abono de família para crianças e jovens\n-O abono de família é uma prestação em dinheiro, paga mensalmente, para compensar os encargos familiares relativos ao sustento e educação das crianças e jovens.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir agora\n-Pedir no local\n-Pedir agora\n-Através da\n-Segurança Social Direta\n-Gratuito\n-Para aceder à Segurança Social Direta (SSD)\n-vai precisar de se autenticar com um dos seguintes meios:\n-Cartão de Cidadão\n-Chave Móvel Digital\n-(CMD)\n-Número de identificação da Segurança Social e palavra passe\n-Pedir online\n-Pedir no local\n-Dirija-se a um dos\n-balcões de atendimento da Segurança Social\n-ou a uma das\n-Lojas de Cidadão ou Espaços Cidadão\n-Gratuito\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-Ilha do faial\n-Ilha do pico\n-Ilha terceira\n-Leiria\n-Lisboa\n-Portalegre\n-Porto\n-Santarém\n-Setúbal\n-Viana do Cas"
-    },
-    {
-      "time": "2026-09-06T20:28:37Z",
-      "source_id": "src_5d4da7730964",
-      "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/fora-de-portugal.html",
-        "en/rendimentos-proprios.html",
-        "fora-de-portugal.html",
-        "rendimentos-proprios.html"
-      ],
-      "candidate_sha256": "3a4aa7920a753d28df5b3b8693cf7b660f6f50e0faa30491becce268bee8cb64",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Pedir um visto de residência para fixação de residência de reformados, religiosos e pessoas que vivem de rendimentos próprios\n-Informação sobre como e onde realizar o pedido de visto para cidadãos estrangeiros que pretendam obter visto de residência como reformados, religiosos ou pessoas que vivam de com rendimentos próprios em Portugal.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir no local\n-Pedir no local\n-Nos\n-Postos consulares portugueses\n-ou na Embaixada/Consulado que detém a jurisdição desse país, no caso de não haver um posto consular português\n-Tem o custo de 90€\n-Tem o prazo de 60 dias\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-Ilha do faial\n-Ilha do pico\n-Ilha terceira\n-Leiria\n-Lisboa\n-Portalegre\n-Porto\n-Santarém\n-Setúbal\n-Viana do Castelo\n-Vila Real\n-Viseu\n-Selecione um distrito primeiro\n-Selecione um distrito primeiro\n-Concelho\n-Concel"
-    },
-    {
-      "time": "2026-09-06T20:27:45Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "92ec6776a3336c090ca7221835d8a352959da7f1becdba4e2e852e0e8ba8b439",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 52.159.161.234\n+Attack ID: 20000051\n+Message ID: 007127348380"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_cbed4d38b3bf",
-      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
-      "state": "non_substantive_change_accepted",
-      "reason": "only AIMA related-news teaser cards changed; the monitored article body is unchanged"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_b223c78629bb",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
-      "state": "non_substantive_change_accepted",
-      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_a819c8428bc5",
-      "url": "https://www.erse.pt/consumidores-de-energia/destaques/mudanca-de-comercializador",
-      "state": "non_substantive_change_accepted",
-      "reason": "ERSE page chrome/update-date changed; supplier-switching guidance is unchanged"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_984aab257167",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
-      "state": "non_substantive_change_accepted",
-      "reason": "only AIMA related-news teaser cards changed; the monitored article body is unchanged"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_7c058712b7c1",
-      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
-      "state": "non_substantive_change_accepted",
-      "reason": "only AIMA related-news teaser cards changed; the monitored article body is unchanged"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_48b0a401cee7",
-      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
-      "state": "non_substantive_change_accepted",
-      "reason": "only AIMA related-news teaser cards changed; the monitored article body is unchanged"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_2b0880736b8a",
-      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
-      "state": "non_substantive_change_accepted",
-      "reason": "only AIMA related-news teaser cards changed; the monitored article body is unchanged"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_1b8b2c1bcde6",
-      "url": "https://www.gov.pt/servicos/livro-de-reclamacoes-compra",
-      "state": "editorial_review_accepted",
-      "reason": "editorial review 2026-09-06: gov.pt simplified the physical complaints-book purchase page; Guia consumer claims remain supported and no removed price/order detail is published"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_0bb3fdad0761",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
-      "state": "non_substantive_change_accepted",
-      "reason": "only AIMA related-news teaser cards changed; the monitored article body is unchanged"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_fd8d32085235",
-      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_8c6490bfe53c",
-      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_c37bb2face2a",
-      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_9e47f0771d1a",
-      "url": "https://www2.gov.pt/pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_5d4da7730964",
-      "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_76e249b224e7",
-      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T18:53:04Z",
-      "source_id": "src_9e47f0771d1a",
-      "url": "https://www2.gov.pt/pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "carta-conducao.html",
-        "en/carta-conducao.html"
-      ],
-      "candidate_sha256": "2208ab775e5c6221d3a9f2680f87edead76f084a99f74a65d1f5b1ddf86bbdb0",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Trocar carta de condução estrangeira por portuguesa\n-As cartas de condução de países como Angola, Brasil, Cabo Verde, Reino Unido e Suíça, entre outros membros da OCDE e CPLP, permitem conduzir em Portugal sem necessidade de as trocar por um título de condução português.\n-Se a sua carta de condução for de um país da União Europeia pode conduzir em Portugal até ao fim da validade do documento.\n-Caso a carta de condução seja de um país com acordo bilateral com Portugal, terá até 2 anos para a trocar por uma carta portuguesa. Mas se a carta tiver sido emitida por um país não aderente às convenções internacionais, deve trocá-la imediatamente.\n-Conheça todas as condições em baixo.\n-Canais de atendimento\n-Trocar online\n-Trocar online\n-Preencha o\n-formulário online\n-30€ (poderá haver mais custos associados)\n-Consulte a lista de documentos necessários\n-Trocar agora\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-I"
-    },
-    {
-      "time": "2026-09-06T18:52:52Z",
-      "source_id": "src_fd8d32085235",
-      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/trabalho-direitos.html",
-        "trabalho-direitos.html"
-      ],
-      "candidate_sha256": "b9bf93ba16c6a1df47bee5f26bbd05cd927c3249e19384f74f50ae356ac15f26",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Pedir informações à Autoridade para as Condições do Trabalho (ACT)\n-A Autoridade para as Condições do Trabalho (ACT) responde às suas questões sobre relações laborais, segurança e saúde no trabalho.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir online\n-Pedir por telefone\n-Pedir no local\n-Pedir online\n-Preencha e envie o formulário\n-, disponível no site da ACT\n-Gratuito\n-Pedir agora\n-Pedir por telefone\n-Ligue 300 069 300\n-Custo de uma chamada para a rede fixa nacional\n-Disponível aos dias úteis, das 9h às 12h30\n-Pedir por telefone\n-Pedir no local\n-Faça a marcação na\n-plataforma SIGA\n-Gratuito\n-Dirija-se a um dos\n-serviços desconcentrados da ACT\n-Procurar balcão\n-Quem pode pedir informações à Autoridade para as Condições do Trabalho (ACT)?\n-O/A trabalhador/a.\n-O/A empregador/a.\n-O/A representante do/a trabalhador/a.\n-Qualquer outra pessoa interessada.\n-Ver mais\n-Qual o preço para pedir informações à Autoridade para as Condições do Trabalho (ACT)?\n-Tem o custo de uma chamada para a rede fixa nacional.\n-Temas relacionados\n-Trabalho\n-Trabalhadores independentes\n-Direitos e deveres de trabalhadores\n-Ve"
-    },
-    {
-      "time": "2026-09-06T18:52:45Z",
-      "source_id": "src_8c6490bfe53c",
-      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "changed_pending_review",
-      "pages": [
-        "discriminacao-apoio.html",
-        "en/discriminacao-apoio.html",
-        "en/situacoes-urgentes.html",
-        "en/trabalho-direitos.html",
-        "situacoes-urgentes.html",
-        "trabalho-direitos.html"
-      ],
-      "candidate_sha256": "aa5fb2cea4203d5666e935d75c1e6de44038e02feb9a2d876a4f60b060f4fdef",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Fazer uma queixa à Autoridade para as Condições do Trabalho (ACT)\n-Se a sua entidade empregadora não estiver a respeitar os direitos e condições de trabalho, pode fazer uma queixa.\n-Também é possível denunciar a situação mesmo que não seja a pessoa diretamente afetada. O anonimato é sempre garantido.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Fazer queixa\n-Entregar no Local\n-Fazer queixa\n-Faça queixa da sua entidade empregadora se não estiverem a respeitar os seus direitos e condições. O anonimato é garantido\n-Gratuito\n-Preencha o formulário e envie online para a ACT através do botão 'fazer queixa'\n-Fazer queixa\n-Entregar no Local\n-Faça uma queixa da sua entidade empregadora se não estiverem a respeitar os seus direitos e condições. O anonimato é garantido\n-Gratuito\n-Preencha o formulário e entregue ao serviço da ACT que abranja a morada do seu local de trabalho\n-Procurar balcão\n-Quem pode fazer uma queixa à Autoridade para as Condições do Trabalho (ACT)?\n-Qualquer pessoa pode apresentar uma queixa, incluindo:\n-A pessoa trabalhadora que foi diretamente afetada\n-Um representante da pessoa trabalhador"
-    },
-    {
-      "time": "2026-09-06T18:52:40Z",
-      "source_id": "src_76e249b224e7",
-      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/qualificacoes.html",
-        "qualificacoes.html"
-      ],
-      "candidate_sha256": "a9fd1b2e6605e277a42cf6454048525d5ea42dc79513d8a034203e473387917d",
-      "diff_excerpt": "-Guias práticos\n-Qualificações profissionais\n-Atualizado em\n-11/05/2026\n-Nesta página\n-Qualificações profissionais\n-Guias relacionados\n-Algumas profissões são regulamentadas nos países da União Europeia (UE), Espaço Económico Europeu (EEE) e Suíça. Se quer trabalhar em Portugal numa profissão regulamentada, e obteve as suas qualificações profissionais noutro país da UE, EEE ou na Suíça, tem de pedir o reconhecimento de qualificações profissionais antes de começar a trabalhar.\n-Se obteve as suas qualificações profissionais num país fora da UE, EEE ou Suíça, deve contactar a autoridade competente dessa profissão para pedir o reconhecimento de qualificações.\n-Consulte a base de dados de Nomes Genéricos de Profissão\n-para saber se a sua profissão é regulamentada.\n-A entidade coordenadora para o reconhecimento de qualificações profissionais em Portugal é a\n-Direção-Geral do Emprego e das Relações de Trabalho\n-Pedir o reconhecimento de qualificações profissionais\n-Cada profissão regulamentada é da responsabilidade de uma autoridade competente em cada país. São as autoridades competentes que avaliam o seu pedido e dão autorização para trabalhar.\n-Por exemplo, se quer trabalhar em Portugal"
-    },
-    {
-      "time": "2026-09-06T18:52:34Z",
-      "source_id": "src_c37bb2face2a",
-      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
-      "state": "changed_pending_review",
-      "pages": [
-        "apoios-sociais.html",
-        "en/apoios-sociais.html"
-      ],
-      "candidate_sha256": "1eb92502a07ad75359065468a0f67ab1ac16874c15eb8a9fac09dbc1abb032c1",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Receber o abono de família para crianças e jovens\n-O abono de família é uma prestação em dinheiro, paga mensalmente, para compensar os encargos familiares relativos ao sustento e educação das crianças e jovens.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir agora\n-Pedir no local\n-Pedir agora\n-Através da\n-Segurança Social Direta\n-Gratuito\n-Para aceder à Segurança Social Direta (SSD)\n-vai precisar de se autenticar com um dos seguintes meios:\n-Cartão de Cidadão\n-Chave Móvel Digital\n-(CMD)\n-Número de identificação da Segurança Social e palavra passe\n-Pedir online\n-Pedir no local\n-Dirija-se a um dos\n-balcões de atendimento da Segurança Social\n-ou a uma das\n-Lojas de Cidadão ou Espaços Cidadão\n-Gratuito\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-Ilha do faial\n-Ilha do pico\n-Ilha terceira\n-Leiria\n-Lisboa\n-Portalegre\n-Porto\n-Santarém\n-Setúbal\n-Viana do Cas"
-    },
-    {
-      "time": "2026-09-06T18:52:28Z",
-      "source_id": "src_5d4da7730964",
-      "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/fora-de-portugal.html",
-        "en/rendimentos-proprios.html",
-        "fora-de-portugal.html",
-        "rendimentos-proprios.html"
-      ],
-      "candidate_sha256": "10c989ff14a8686f0fdc6c26e56824a413cbffc82458ece066cc8c22470f0cf7",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Pedir um visto de residência para fixação de residência de reformados, religiosos e pessoas que vivem de rendimentos próprios\n-Informação sobre como e onde realizar o pedido de visto para cidadãos estrangeiros que pretendam obter visto de residência como reformados, religiosos ou pessoas que vivam de com rendimentos próprios em Portugal.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir no local\n-Pedir no local\n-Nos\n-Postos consulares portugueses\n-ou na Embaixada/Consulado que detém a jurisdição desse país, no caso de não haver um posto consular português\n-Tem o custo de 90€\n-Tem o prazo de 60 dias\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-Ilha do faial\n-Ilha do pico\n-Ilha terceira\n-Leiria\n-Lisboa\n-Portalegre\n-Porto\n-Santarém\n-Setúbal\n-Viana do Castelo\n-Vila Real\n-Viseu\n-Selecione um distrito primeiro\n-Selecione um distrito primeiro\n-Concelho\n-Concel"
-    },
-    {
-      "time": "2026-09-06T18:51:19Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "dc1c8ab6e19d580d91b73666b4e19d04ce5129ddac617c6464c2a4ec5ff2342b",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 172.208.152.208\n+Attack ID: 20000051\n+Message ID: 007126838297"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_fd8d32085235",
-      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_8c6490bfe53c",
-      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_c37bb2face2a",
-      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "temporary_source_response_ignored",
-      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_9e47f0771d1a",
-      "url": "https://www2.gov.pt/pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_5d4da7730964",
-      "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_76e249b224e7",
-      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-06T15:33:42Z",
-      "source_id": "src_9e47f0771d1a",
-      "url": "https://www2.gov.pt/pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "carta-conducao.html",
-        "en/carta-conducao.html"
-      ],
-      "candidate_sha256": "28397ad4d39f7d305a0c43b9ce12b6a8f9cc835fad6caf22c278c76e5334ceb4",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Trocar carta de condução estrangeira por portuguesa\n-As cartas de condução de países como Angola, Brasil, Cabo Verde, Reino Unido e Suíça, entre outros membros da OCDE e CPLP, permitem conduzir em Portugal sem necessidade de as trocar por um título de condução português.\n-Se a sua carta de condução for de um país da União Europeia pode conduzir em Portugal até ao fim da validade do documento.\n-Caso a carta de condução seja de um país com acordo bilateral com Portugal, terá até 2 anos para a trocar por uma carta portuguesa. Mas se a carta tiver sido emitida por um país não aderente às convenções internacionais, deve trocá-la imediatamente.\n-Conheça todas as condições em baixo.\n-Canais de atendimento\n-Trocar online\n-Trocar online\n-Preencha o\n-formulário online\n-30€ (poderá haver mais custos associados)\n-Consulte a lista de documentos necessários\n-Trocar agora\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-I"
-    },
-    {
-      "time": "2026-09-06T15:33:36Z",
-      "source_id": "src_fd8d32085235",
-      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/trabalho-direitos.html",
-        "trabalho-direitos.html"
-      ],
-      "candidate_sha256": "0c4ec1565aa9ba455f7a408b623fab72067988c992c5d4e547df7a919ce02f59",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Pedir informações à Autoridade para as Condições do Trabalho (ACT)\n-A Autoridade para as Condições do Trabalho (ACT) responde às suas questões sobre relações laborais, segurança e saúde no trabalho.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir online\n-Pedir por telefone\n-Pedir no local\n-Pedir online\n-Preencha e envie o formulário\n-, disponível no site da ACT\n-Gratuito\n-Pedir agora\n-Pedir por telefone\n-Ligue 300 069 300\n-Custo de uma chamada para a rede fixa nacional\n-Disponível aos dias úteis, das 9h às 12h30\n-Pedir por telefone\n-Pedir no local\n-Faça a marcação na\n-plataforma SIGA\n-Gratuito\n-Dirija-se a um dos\n-serviços desconcentrados da ACT\n-Procurar balcão\n-Quem pode pedir informações à Autoridade para as Condições do Trabalho (ACT)?\n-O/A trabalhador/a.\n-O/A empregador/a.\n-O/A representante do/a trabalhador/a.\n-Qualquer outra pessoa interessada.\n-Ver mais\n-Qual o preço para pedir informações à Autoridade para as Condições do Trabalho (ACT)?\n-Tem o custo de uma chamada para a rede fixa nacional.\n-Temas relacionados\n-Trabalho\n-Trabalhadores independentes\n-Direitos e deveres de trabalhadores\n-Ve"
-    },
-    {
-      "time": "2026-09-06T15:33:29Z",
-      "source_id": "src_8c6490bfe53c",
-      "url": "https://www2.gov.pt/pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "changed_pending_review",
-      "pages": [
-        "discriminacao-apoio.html",
-        "en/discriminacao-apoio.html",
-        "en/situacoes-urgentes.html",
-        "en/trabalho-direitos.html",
-        "situacoes-urgentes.html",
-        "trabalho-direitos.html"
-      ],
-      "candidate_sha256": "67a861681670098346c4955888ebf160a785918fca48b76d8b5d6a6b8c188e21",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Fazer uma queixa à Autoridade para as Condições do Trabalho (ACT)\n-Se a sua entidade empregadora não estiver a respeitar os direitos e condições de trabalho, pode fazer uma queixa.\n-Também é possível denunciar a situação mesmo que não seja a pessoa diretamente afetada. O anonimato é sempre garantido.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Fazer queixa\n-Entregar no Local\n-Fazer queixa\n-Faça queixa da sua entidade empregadora se não estiverem a respeitar os seus direitos e condições. O anonimato é garantido\n-Gratuito\n-Preencha o formulário e envie online para a ACT através do botão 'fazer queixa'\n-Fazer queixa\n-Entregar no Local\n-Faça uma queixa da sua entidade empregadora se não estiverem a respeitar os seus direitos e condições. O anonimato é garantido\n-Gratuito\n-Preencha o formulário e entregue ao serviço da ACT que abranja a morada do seu local de trabalho\n-Procurar balcão\n-Quem pode fazer uma queixa à Autoridade para as Condições do Trabalho (ACT)?\n-Qualquer pessoa pode apresentar uma queixa, incluindo:\n-A pessoa trabalhadora que foi diretamente afetada\n-Um representante da pessoa trabalhador"
-    },
-    {
-      "time": "2026-09-06T15:33:24Z",
-      "source_id": "src_76e249b224e7",
-      "url": "https://www2.gov.pt/pt/inicio/espaco-empresa/qualificacoes-profissionais",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/qualificacoes.html",
-        "qualificacoes.html"
-      ],
-      "candidate_sha256": "afaab7ba46cbafbb3988b3eeb7a1ee1be3f8af70b6d2e6a20f63553f23dd1c1d",
-      "diff_excerpt": "-Guias práticos\n-Qualificações profissionais\n-Atualizado em\n-11/05/2026\n-Nesta página\n-Qualificações profissionais\n-Guias relacionados\n-Algumas profissões são regulamentadas nos países da União Europeia (UE), Espaço Económico Europeu (EEE) e Suíça. Se quer trabalhar em Portugal numa profissão regulamentada, e obteve as suas qualificações profissionais noutro país da UE, EEE ou na Suíça, tem de pedir o reconhecimento de qualificações profissionais antes de começar a trabalhar.\n-Se obteve as suas qualificações profissionais num país fora da UE, EEE ou Suíça, deve contactar a autoridade competente dessa profissão para pedir o reconhecimento de qualificações.\n-Consulte a base de dados de Nomes Genéricos de Profissão\n-para saber se a sua profissão é regulamentada.\n-A entidade coordenadora para o reconhecimento de qualificações profissionais em Portugal é a\n-Direção-Geral do Emprego e das Relações de Trabalho\n-Pedir o reconhecimento de qualificações profissionais\n-Cada profissão regulamentada é da responsabilidade de uma autoridade competente em cada país. São as autoridades competentes que avaliam o seu pedido e dão autorização para trabalhar.\n-Por exemplo, se quer trabalhar em Portugal"
-    },
-    {
-      "time": "2026-09-06T15:33:18Z",
-      "source_id": "src_c37bb2face2a",
-      "url": "https://www2.gov.pt/pt-PT/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
-      "state": "changed_pending_review",
-      "pages": [
-        "apoios-sociais.html",
-        "en/apoios-sociais.html"
-      ],
-      "candidate_sha256": "1cad4b93e0de9009425df837337b73466428ce12163ee3d0efeee3b2cd74a922",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Receber o abono de família para crianças e jovens\n-O abono de família é uma prestação em dinheiro, paga mensalmente, para compensar os encargos familiares relativos ao sustento e educação das crianças e jovens.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir agora\n-Pedir no local\n-Pedir agora\n-Através da\n-Segurança Social Direta\n-Gratuito\n-Para aceder à Segurança Social Direta (SSD)\n-vai precisar de se autenticar com um dos seguintes meios:\n-Cartão de Cidadão\n-Chave Móvel Digital\n-(CMD)\n-Número de identificação da Segurança Social e palavra passe\n-Pedir online\n-Pedir no local\n-Dirija-se a um dos\n-balcões de atendimento da Segurança Social\n-ou a uma das\n-Lojas de Cidadão ou Espaços Cidadão\n-Gratuito\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-Ilha do faial\n-Ilha do pico\n-Ilha terceira\n-Leiria\n-Lisboa\n-Portalegre\n-Porto\n-Santarém\n-Setúbal\n-Viana do Cas"
-    },
-    {
-      "time": "2026-09-06T15:33:12Z",
-      "source_id": "src_5d4da7730964",
-      "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/fora-de-portugal.html",
-        "en/rendimentos-proprios.html",
-        "fora-de-portugal.html",
-        "rendimentos-proprios.html"
-      ],
-      "candidate_sha256": "befce03ced0c9cdbd695793a3dbad6eeed3a4aecc71503a6145dd69737f1d7e5",
-      "diff_excerpt": "-Voltar ao índice de conteúdos\n-Pedir um visto de residência para fixação de residência de reformados, religiosos e pessoas que vivem de rendimentos próprios\n-Informação sobre como e onde realizar o pedido de visto para cidadãos estrangeiros que pretendam obter visto de residência como reformados, religiosos ou pessoas que vivam de com rendimentos próprios em Portugal.\n-Canais de atendimento\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Pedir no local\n-Pedir no local\n-Nos\n-Postos consulares portugueses\n-ou na Embaixada/Consulado que detém a jurisdição desse país, no caso de não haver um posto consular português\n-Tem o custo de 90€\n-Tem o prazo de 60 dias\n-Pesquise por um ponto de atendimento perto de si:\n-Distrito\n-Distrito\n-Aveiro\n-Beja\n-Braga\n-Bragança\n-Castelo Branco\n-Coimbra\n-Évora\n-Faro\n-Guarda\n-Ilha da graciosa\n-Ilha da Madeira\n-Ilha das flores\n-Ilha de Porto Santo\n-Ilha de santa maria\n-Ilha de são jorge\n-Ilha de são miguel\n-Ilha do corvo\n-Ilha do faial\n-Ilha do pico\n-Ilha terceira\n-Leiria\n-Lisboa\n-Portalegre\n-Porto\n-Santarém\n-Setúbal\n-Viana do Castelo\n-Vila Real\n-Viseu\n-Selecione um distrito primeiro\n-Selecione um distrito primeiro\n-Concelho\n-Concel"
-    },
-    {
-      "time": "2026-09-06T15:32:41Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 2-9-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-09-06T15:32:16Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "d6ba752ded069ec14d9f8dd2ac62bbe08851d30d9406262472aad7a798499ddb",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 68.220.62.178\n+Attack ID: 20000051\n+Message ID: 007125436832"
-    },
-    {
-      "time": "2026-09-06T11:04:02Z",
-      "source_id": "src_fd8d32085235",
-      "url": "https://www2.gov.pt/pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     }
   ]
 }

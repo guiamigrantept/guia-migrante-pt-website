@@ -5,6 +5,7 @@ import difflib
 import hashlib
 import json
 import re
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -66,6 +67,10 @@ def is_access_block(text: str) -> bool:
 def is_temporary_maintenance(text: str) -> bool:
     low = compact(text).casefold()
     return any(marker in low for marker in TEMPORARY_MAINTENANCE_MARKERS)
+
+
+def is_transient_text(text: str) -> bool:
+    return is_access_block(text) or is_temporary_maintenance(text)
 
 
 def remove_target_from_quarantine(target: str, status: dict, report: dict):
@@ -138,21 +143,77 @@ def review_transient_candidates(status: dict, report: dict, log: dict):
         print('Transient-source filter: nothing to clear')
 
 
+def committed_baseline(path: Path) -> dict | None:
+    """Read the last committed baseline so transient fetches can never destroy known-good coverage."""
+    try:
+        proc = subprocess.run(
+            ['git', 'show', f'HEAD:{path.as_posix()}'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            timeout=10,
+            check=False,
+        )
+        if proc.returncode != 0 or not proc.stdout.strip():
+            return None
+        payload = json.loads(proc.stdout)
+        if not isinstance(payload, dict):
+            return None
+        text = payload.get('text', '')
+        if len(compact(text)) < 100 or is_transient_text(text):
+            return None
+        return payload
+    except Exception:
+        return None
+
+
 def review_bad_baselines(status: dict, report: dict, log: dict):
     rejected = []
+    restored = []
     for baseline_path in list(SNAPS.glob('src_*.json')):
         target = baseline_path.stem
         baseline = json.loads(baseline_path.read_text(encoding='utf-8'))
         text = baseline.get('text', '')
-        bad = is_access_block(text) or is_temporary_maintenance(text)
+        bad = is_transient_text(text)
         if target == ERSE_TARGET and ERSE_MARKER not in text and 'cookie' in text.casefold():
             bad = True
         if not bad:
             continue
 
+        # A source can briefly return maintenance/WAF content that monitor_sources may
+        # classify as a non-relevant change and write over the working baseline. Never
+        # let that destroy a previously committed, valid baseline.
+        previous = committed_baseline(baseline_path)
+        entry = status.setdefault('sources', {}).setdefault(target, {})
+        if previous is not None:
+            baseline_path.write_text(json.dumps(previous, ensure_ascii=False), encoding='utf-8')
+            (CANDS / f'{target}.json').unlink(missing_ok=True)
+            entry.update({
+                'state': 'fetch_error',
+                'checked_at': baseline.get('checked_at') or entry.get('checked_at'),
+                'changed_at': None,
+                'candidate_sha256': None,
+                'diff_excerpt': None,
+                'note': 'transient source response rejected; last committed known-good baseline restored',
+            })
+            remove_target_from_quarantine(target, status, report)
+            report['missing_required'] = [x for x in report.get('missing_required', []) if x != target]
+            report['critical_errors'] = [e for e in report.get('critical_errors', []) if e.get('id') != target]
+            report.setdefault('errors', []).append({
+                'id': target,
+                'url': entry.get('url') or baseline.get('url'),
+                'domain': entry.get('domain'),
+                'risk': 'high' if entry.get('required') else 'medium',
+                'required': bool(entry.get('required')),
+                'had_baseline': True,
+                'kind': 'temporary_source_response',
+                'error': 'transient response rejected; last committed known-good baseline retained',
+            })
+            restored.append(target)
+            continue
+
         baseline_path.unlink(missing_ok=True)
         (CANDS / f'{target}.json').unlink(missing_ok=True)
-        entry = status.setdefault('sources', {}).setdefault(target, {})
         entry.update({
             'state': 'baseline_failed',
             'checked_at': baseline.get('checked_at') or entry.get('checked_at'),
@@ -170,6 +231,14 @@ def review_bad_baselines(status: dict, report: dict, log: dict):
             report['coverage_ok'] = False
         rejected.append(target)
 
+    if restored:
+        log.setdefault('changes', []).insert(0, {
+            'time': now(),
+            'state': 'known_good_baselines_restored',
+            'source_ids': sorted(set(restored)),
+            'reason': 'transient/WAF response could not replace a committed valid baseline',
+        })
+        print('Restored last-known-good baselines:', ', '.join(sorted(set(restored))))
     if rejected:
         log.setdefault('changes', []).insert(0, {
             'time': now(),
@@ -178,6 +247,10 @@ def review_bad_baselines(status: dict, report: dict, log: dict):
             'reason': 'temporary WAF/maintenance/cookie-only content cannot be a baseline',
         })
         print('Rejected invalid baselines:', ', '.join(sorted(set(rejected))))
+
+    if not report.get('missing_required') and not report.get('critical_errors'):
+        report['baseline_complete'] = True
+        report['coverage_ok'] = True
 
 
 def normalize_erse(text: str) -> str:

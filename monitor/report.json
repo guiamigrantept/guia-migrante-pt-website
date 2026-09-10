@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T20:59:57Z",
+  "generated_at": "2026-09-10T23:34:16Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
@@ -74,7 +74,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
+      "failure_count": 111,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -85,7 +85,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
+      "failure_count": 111,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     {
@@ -96,8 +96,8 @@
       "required": false,
       "had_baseline": true,
       "kind": "fetch_error",
-      "failure_count": 6,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f3027472210>, 'Connection to anacom.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 7,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f7f9f9d6ae0>, 'Connection to anacom.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_1d0d8bb32004",
@@ -107,8 +107,8 @@
       "required": false,
       "had_baseline": true,
       "kind": "fetch_error",
-      "failure_count": 6,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f30274715e0>, 'Connection to anacom.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 7,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7f7f9f9d6420>, 'Connection to anacom.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_65c308f94048",
@@ -118,8 +118,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f3027473680>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 111,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7f7fa00632f0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_e36005383a29",
@@ -162,7 +162,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
+      "failure_count": 111,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -173,7 +173,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
+      "failure_count": 111,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -184,7 +184,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
+      "failure_count": 111,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -195,8 +195,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f30274bc5f0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 111,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7f7f9fe08980>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_6262714f7433",
@@ -206,7 +206,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
+      "failure_count": 111,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -217,7 +217,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 110,
+      "failure_count": 111,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -288,7 +288,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_1b8b2c1bcde6",
@@ -298,7 +298,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_d047de31a87b",
@@ -308,7 +308,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_94e2ebb14db9",
@@ -318,7 +318,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_2e5a8d9c1488",
@@ -328,7 +328,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_2b0880736b8a",
@@ -348,7 +348,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_f95c7a71032d",
@@ -358,7 +358,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_5c470c1c6222",
@@ -368,7 +368,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_8066e6d33e60",
@@ -378,7 +378,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_51345bfaef9d",
@@ -388,7 +388,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_5677a3a829ee",
@@ -398,7 +398,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_b223c78629bb",
@@ -408,7 +408,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_348272c45029",
@@ -428,7 +428,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_e9c2fda70bd4",
@@ -448,7 +448,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_42ae5fe404b9",
@@ -458,7 +458,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_b55923d59614",
@@ -468,7 +468,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_0d3e737b44ae",
@@ -478,7 +478,7 @@
       "required": true,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_984aab257167",
@@ -516,6 +516,16 @@
       "domain": "aima.gov.pt",
       "risk": "high",
       "required": true,
+      "had_baseline": true,
+      "kind": "temporary_source_response",
+      "error": "transient response rejected; last committed known-good baseline retained"
+    },
+    {
+      "id": "src_5e43ca0ff104",
+      "url": "https://www.seg-social.pt/",
+      "domain": "www.seg-social.pt",
+      "risk": "medium",
+      "required": false,
       "had_baseline": true,
       "kind": "temporary_source_response",
       "error": "transient response rejected; last committed known-good baseline retained"

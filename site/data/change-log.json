@@ -2,6 +2,139 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-09-14T19:54:34Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-14T19:54:34Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-14T19:54:34Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-14T19:54:34Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-14T19:54:34Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-14T19:54:34Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-14T19:54:34Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-14T19:53:45Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "ca7ecf3fa477d34258b2a97c946e1c7ef45a8eb77c0b0084a058a83c8089b54a",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 158.23.19.97\n+Attack ID: 20000051\n+Message ID: 007219621916"
+    },
+    {
+      "time": "2026-09-14T19:52:01Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/protecao-temporaria.html",
+        "protecao-temporaria.html"
+      ],
+      "candidate_sha256": "ae25e7fe8dabb0b3f20c7dcc0de18952d1a8d50b839dfaa885cba32bfae0ae5b",
+      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-14T19:51:57Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "0d71a15a89615a40200e9d73a0f4effe8d1e97a37de5b94bb919867258cb2af1",
+      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-14T19:51:54Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "candidate_sha256": "a1ed7219e3aaa251ac78c73153cc0bd7539412a4e4f1f85fc81376a757b791c6",
+      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-14T19:51:50Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/ue-familiares.html",
+        "ue-familiares.html"
+      ],
+      "candidate_sha256": "178cd8b14c82f0745c1e13f29a983675caf74362ecb17753a0aa7f2327ed5a66",
+      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-14T19:51:47Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "43e83a497413a710f00feb6d68754304be9bff631a8f71a722eed2bc1e64f994",
+      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-14T19:51:44Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "candidate_sha256": "41cd012764bb771aba91d8a88078fd5ea7fc25a4e1df65950953a668186d480d",
+      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
+    },
+    {
       "time": "2026-09-14T05:00:30Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2751,109 +2884,6 @@
       ],
       "candidate_sha256": "b5d83019f45bdec72a6fe547a3608df2081d5c2a92e8dffbf6ebd51f5a26f735",
       "diff_excerpt": "+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "state": "known_good_baselines_restored",
-      "source_ids": [
-        "src_0bb3fdad0761",
-        "src_48b0a401cee7",
-        "src_7c058712b7c1",
-        "src_984aab257167",
-        "src_cbed4d38b3bf"
-      ],
-      "reason": "transient/WAF response could not replace a committed valid baseline"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_0d3e737b44ae",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_b55923d59614",
-      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_42ae5fe404b9",
-      "url": "https://www.gov.pt/servicos/registar-um-nascimento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_33c397772684",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_e9c2fda70bd4",
-      "url": "https://www.gov.pt/servicos/consultar-corpo-diplomatico-acreditado-em-lisboa",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_e5000174ce7b",
-      "url": "https://www.gov.pt/servicos/realizar-o-processo-de-transcricao-do-assento-de-casamento-no-estrangeiro",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_348272c45029",
-      "url": "https://www.gov.pt/servicos/alterar-a-morada-e-outros-dados-registados-na-seguranca-social",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_b223c78629bb",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_5677a3a829ee",
-      "url": "https://www.gov.pt/servicos/pedir-o-reconhecimento-de-graus-academicos-e-diplomas-de-ensino-superior-estrangeiros",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_51345bfaef9d",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-estudo-intercambio-de-estudantes-estagio-profissional-ou-voluntariado",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_8066e6d33e60",
-      "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-10T20:59:44Z",
-      "source_id": "src_5c470c1c6222",
-      "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
     }
   ]
 }

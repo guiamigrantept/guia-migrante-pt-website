@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T04:55:39Z",
+  "generated_at": "2026-09-15T11:44:42Z",
   "ok": true,
   "partial_ok": true,
   "sources_total": 4,
@@ -16,7 +16,7 @@
     {
       "source": "gov.pt",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "index": "https://www.gov.pt/",
       "fallback_errors": [],
       "error": null
@@ -40,8 +40,21 @@
       "note": "official index reachable; no migration-relevant entries found in this cycle"
     }
   ],
-  "count": 8,
-  "new_updates": [],
+  "count": 9,
+  "new_updates": [
+    {
+      "source": "gov.pt",
+      "title": "Loja de Cidadão de Olhão já está em funcionamento",
+      "date": "",
+      "url": "https://www.gov.pt/noticias/loja-de-cidadao-de-olhao-ja-esta-em-funcionamento",
+      "pages": [
+        "atualizacoes.html",
+        "contactos.html"
+      ],
+      "summary_pt": "Nova informação oficial publicada por gov.pt com potencial impacto em procedimentos ou direitos de pessoas migrantes em Portugal. Confirme os detalhes na fonte oficial.",
+      "summary_en": "New official information published by gov.pt that may affect procedures or rights for migrants in Portugal. Check the official source for details."
+    }
+  ],
   "error": null,
   "rejected_mismatched_updates": []
 }

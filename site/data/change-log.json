@@ -2,6 +2,139 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-09-15T17:06:43Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-15T17:06:43Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-15T17:06:43Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-15T17:06:43Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-15T17:06:43Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-15T17:06:43Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-15T17:06:43Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-15T17:05:54Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "47088b7544488740f1dda52cab17e35452d22e03872b96c8601fd53cbd0fe57d",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 57.151.128.83\n+Attack ID: 20000051\n+Message ID: 007233361121"
+    },
+    {
+      "time": "2026-09-15T17:01:13Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/protecao-temporaria.html",
+        "protecao-temporaria.html"
+      ],
+      "candidate_sha256": "c99979b4e78e9e8506127a7883493a2a5f43c93d88e46cbec77c5440d3be30ac",
+      "diff_excerpt": "-AIMA reforça recursos humanos e acelera transformação tecnológica\n-03.09.2026\n-Aumento de 17% dos recursos humanos reforça capacidade da AIMA\n+Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n+15.09.2026\n+Indicação de NIF e NISS deixa de ser necessária\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Renovação de cartões de residência em papel\n-13.08.2026\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro"
+    },
+    {
+      "time": "2026-09-15T17:01:07Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "bb5812ed563740f564e57d67e4d11e8cc40733df92c24f5eed20c041e15afe08",
+      "diff_excerpt": "-AIMA reforça recursos humanos e acelera transformação tecnológica\n-03.09.2026\n-Aumento de 17% dos recursos humanos reforça capacidade da AIMA\n+Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n+15.09.2026\n+Indicação de NIF e NISS deixa de ser necessária\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Renovação de cartões de residência em papel\n-13.08.2026\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro"
+    },
+    {
+      "time": "2026-09-15T17:01:04Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "candidate_sha256": "89d8659cc0fa1623a138c20ad0947cc2e4a97e74ae6b42a5da8a9c99cbefbd7f",
+      "diff_excerpt": "-AIMA reforça recursos humanos e acelera transformação tecnológica\n-03.09.2026\n-Aumento de 17% dos recursos humanos reforça capacidade da AIMA\n+Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n+15.09.2026\n+Indicação de NIF e NISS deixa de ser necessária\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Renovação de cartões de residência em papel\n-13.08.2026\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro"
+    },
+    {
+      "time": "2026-09-15T17:01:00Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/ue-familiares.html",
+        "ue-familiares.html"
+      ],
+      "candidate_sha256": "6fdc0442a6a155b7e34614a1aa754113f0e34ef27775428038ebce39b1d01356",
+      "diff_excerpt": "-AIMA reforça recursos humanos e acelera transformação tecnológica\n-03.09.2026\n-Aumento de 17% dos recursos humanos reforça capacidade da AIMA\n+Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n+15.09.2026\n+Indicação de NIF e NISS deixa de ser necessária\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Renovação de cartões de residência em papel\n-13.08.2026\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro"
+    },
+    {
+      "time": "2026-09-15T17:00:57Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "a0ea0e22c2e28b153bba3fad3b1b077c357babd388d9d5b082d3c00b81d29d7a",
+      "diff_excerpt": "-AIMA reforça recursos humanos e acelera transformação tecnológica\n-03.09.2026\n-Aumento de 17% dos recursos humanos reforça capacidade da AIMA\n+Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n+15.09.2026\n+Indicação de NIF e NISS deixa de ser necessária\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Renovação de cartões de residência em papel\n-13.08.2026\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro"
+    },
+    {
+      "time": "2026-09-15T17:00:53Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "candidate_sha256": "b63fa0c149b5e8acfaa54f50791219aa14fec9f6a3ac9ccb73859f42a1893d30",
+      "diff_excerpt": "-AIMA reforça recursos humanos e acelera transformação tecnológica\n-03.09.2026\n-Aumento de 17% dos recursos humanos reforça capacidade da AIMA\n+Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n+15.09.2026\n+Indicação de NIF e NISS deixa de ser necessária\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Renovação de cartões de residência em papel\n-13.08.2026\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro"
+    },
+    {
       "time": "2026-09-15T11:50:57Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2711,156 +2844,6 @@
       ],
       "candidate_sha256": "7301971732b7a4fc7ac15d607555aefb2d8e87cf7a284667999f4b79267914e9",
       "diff_excerpt": "-Serviços\n-Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Quando pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Onde pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Como pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-O que precisa para pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Prazo\n-Qual o preço pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade de investigação ou altamente qualificada em Portugal.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que"
-    },
-    {
-      "time": "2026-09-11T11:29:44Z",
-      "source_id": "src_8066e6d33e60",
-      "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/situacoes-urgentes.html",
-        "situacoes-urgentes.html"
-      ],
-      "candidate_sha256": "978133bbd114c9f8041124335d5fcef045e15c29a3ac98d971aaa9a334dba979",
-      "diff_excerpt": "-Serviços\n-Contactar Linha Telefónica de Informação às Vítimas de Violência Doméstica\n-O serviço de informação às vítimas de violência doméstica disponibiliza apoio e informação gratuita, de forma anónima e confidencial. A linha dá informação, em chamada, sobre direitos das vítimas, recursos de apoio existentes em Portugal e onde obter apoio psicológico, social e jurídico.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Como e onde se pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa pode contactar a linha de apoio, incluindo vítimas, familiares, profissionais ou quem precise de informação, esclarecimento ou orientação sobre violência doméstica.\n-Legislação\n-Lei n.º 112/2009, de 16 de setembro\n-– Estabelece o regime jurídico aplicável à prevenção da violência doméstica, à proteção e assistência das suas vítimas.\n-Decreto-Lei n.º 48/95, de 15 de março\n-– Aprova o Código Penal, que prevê e pune o crime de violência doméstica no artigo 152.º.\n-Decreto-Lei n.º 78/87, de 17 de fevereiro\n-– A"
-    },
-    {
-      "time": "2026-09-11T11:28:42Z",
-      "source_id": "src_e9c2fda70bd4",
-      "url": "https://www.gov.pt/servicos/consultar-corpo-diplomatico-acreditado-em-lisboa",
-      "state": "changed_pending_review",
-      "pages": [
-        "contactos.html",
-        "en/contactos.html"
-      ],
-      "candidate_sha256": "a05967050fa6822877cd9bcaef46ddb7894a369e3574d8ce6e1c803363264f0a",
-      "diff_excerpt": "-Serviços\n-Consultar corpo diplomático acreditado em Lisboa\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem consultar corpo diplomático acreditado em Lisboa?\n-Quando consultar corpo diplomático acreditado em Lisboa?\n-Onde consultar corpo diplomático acreditado em Lisboa?\n-Como consultar corpo diplomático acreditado em Lisboa?\n-Qual o preço consultar corpo diplomático acreditado em Lisboa?\n-Conteúdos relacionados\n-Entidade responsável\n-Informações e possibilidade de realizar\n-online\n-a consulta do corpo diplomático acreditado em Lisboa.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Qualquer cidadão.\n-A qualquer momento.\n-Através da Internet\n-Consulta da lista do corpo diplomático acreditado em Lisboa com todos os contactos das missões diplomáticas acreditadas em Portugal, incluindo:\n-Embaixadas\n-Consulados\n-Organizações internacionais com sede em Lisboa\n-Organizações internacionais com representação em Lisboa.\n-É gratuito.\n-Temas\n-Estrangeiros em Portugal\n-Cidadãos europeus em Portugal\n-Migrantes em Portugal\n-Entidade responsável\n-O serviço \"Consultar corpo diplomático acreditado em Lisboa\" é da responsabilidade da "
-    },
-    {
-      "time": "2026-09-11T11:27:33Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 8-9-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-09-11T11:27:12Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "c1f150e742f75bb16fd426c27e16280964915e53ea5b7e020a84f9d1cdc12a76",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 48.214.55.33\n+Attack ID: 20000051\n+Message ID: 007186538128"
-    },
-    {
-      "time": "2026-09-11T11:22:49Z",
-      "source_id": "src_2b0880736b8a",
-      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/legalizacao.html",
-        "legalizacao.html"
-      ],
-      "candidate_sha256": "b5d83019f45bdec72a6fe547a3608df2081d5c2a92e8dffbf6ebd51f5a26f735",
-      "diff_excerpt": "+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-11T04:52:58Z",
-      "state": "known_good_baselines_restored",
-      "source_ids": [
-        "src_0bb3fdad0761",
-        "src_48b0a401cee7",
-        "src_7c058712b7c1",
-        "src_984aab257167",
-        "src_cbed4d38b3bf"
-      ],
-      "reason": "transient/WAF response could not replace a committed valid baseline"
-    },
-    {
-      "time": "2026-09-11T04:52:58Z",
-      "source_id": "src_33c397772684",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-11T04:52:58Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-11T04:52:58Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "temporary_source_response_ignored",
-      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
-    },
-    {
-      "time": "2026-09-11T04:52:58Z",
-      "source_id": "src_2b0880736b8a",
-      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-11T04:50:53Z",
-      "source_id": "src_33c397772684",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "altamente-qualificado.html",
-        "en/altamente-qualificado.html",
-        "en/fora-de-portugal.html",
-        "fora-de-portugal.html"
-      ],
-      "candidate_sha256": "6f2c7ea9d38633dd0587bd5be2d8dd7bf37476efef75bc8a5ea0a7179d7adfef",
-      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Quando pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Onde pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Como pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-O que precisa para pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Prazo\n-Qual o preço pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade de investigação ou altamente qualificada em Portugal.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que"
-    },
-    {
-      "time": "2026-09-11T04:45:26Z",
-      "source_id": "src_348272c45029",
-      "url": "https://www.gov.pt/servicos/alterar-a-morada-e-outros-dados-registados-na-seguranca-social",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/mudanca-saida.html",
-        "mudanca-saida.html"
-      ],
-      "candidate_sha256": "3429ccbb6fa7ba6afc2a921db280dfaca23aff917b9be9c5b234cef5e063cb6e",
-      "diff_excerpt": "-03.09.2026\n+10.09.2026\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n+Quem pode alterar a morada e outros dados registados na Segurança Social\n+Como e onde se pode alterar a morada e outros dados registados na Segurança Social"
-    },
-    {
-      "time": "2026-09-11T04:44:53Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 8-9-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-09-11T04:44:28Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "bd68d8c120e4551d9b9e8472ae5bcf32d54170b6f003d44aedd8ba723bcfb72b",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 52.155.33.244\n+Attack ID: 20000051\n+Message ID: 007183170208"
     }
   ]
 }

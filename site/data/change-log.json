@@ -2,6 +2,25 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-09-17T11:48:49Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-17T11:48:00Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "aef138455fd693731568185ff41ba44250000bddb0ee80a96f1fc9b50dcd4a06",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 20.169.70.123\n+Attack ID: 20000051\n+Message ID: 007257964803"
+    },
+    {
       "time": "2026-09-17T05:00:20Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2826,20 +2845,6 @@
       "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
       "state": "temporary_source_response_ignored",
       "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-12T04:41:58Z",
-      "source_id": "src_0bb3fdad0761",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-12T04:41:58Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "temporary_source_response_ignored",
-      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
     }
   ]
 }

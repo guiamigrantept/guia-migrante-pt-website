@@ -2,6 +2,64 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-09-17T21:28:57Z",
+      "source_id": "src_e83566f7adcc",
+      "url": "https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros",
+      "state": "non_substantive_change_accepted",
+      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
+    },
+    {
+      "time": "2026-09-17T21:28:57Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-17T21:28:57Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-09-17T21:28:42Z",
+      "source_id": "src_e83566f7adcc",
+      "url": "https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros",
+      "state": "changed_pending_review",
+      "pages": [
+        "dia-a-dia.html",
+        "en/dia-a-dia.html",
+        "index.html"
+      ],
+      "candidate_sha256": "351b0c79f9bb736aa8092d02f5ec3e4015e839bfb77c1795f0896bda37758798",
+      "diff_excerpt": "-15.06.2026\n+17.09.2026"
+    },
+    {
+      "time": "2026-09-17T21:28:33Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 16-9-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-09-17T21:28:11Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "b8c8a201af08b4c6bdb0a3c1c0103789180816ccfdcad0aa7b14c3c14ae3153f",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 20.118.231.187\n+Attack ID: 20000051\n+Message ID: 007266427529"
+    },
+    {
       "time": "2026-09-17T17:04:19Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2773,78 +2831,6 @@
       "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
       "state": "temporary_source_response_ignored",
       "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-12T10:50:07Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 11-9-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-09-12T10:49:46Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "3da89b5ec25a7ac2b1cd76837326415062a88fc8588a77033dbea45a8b992583",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 40.76.181.210\n+Attack ID: 20000051\n+Message ID: 007196419088"
-    },
-    {
-      "time": "2026-09-12T10:48:15Z",
-      "source_id": "src_7c058712b7c1",
-      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/protecao-temporaria.html",
-        "protecao-temporaria.html"
-      ],
-      "candidate_sha256": "ae25e7fe8dabb0b3f20c7dcc0de18952d1a8d50b839dfaa885cba32bfae0ae5b",
-      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-12T10:48:12Z",
-      "source_id": "src_2b0880736b8a",
-      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/legalizacao.html",
-        "legalizacao.html"
-      ],
-      "candidate_sha256": "0d71a15a89615a40200e9d73a0f4effe8d1e97a37de5b94bb919867258cb2af1",
-      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-12T10:48:09Z",
-      "source_id": "src_0bb3fdad0761",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/mudanca-saida.html",
-        "mudanca-saida.html"
-      ],
-      "candidate_sha256": "a1ed7219e3aaa251ac78c73153cc0bd7539412a4e4f1f85fc81376a757b791c6",
-      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-12T10:48:07Z",
-      "source_id": "src_984aab257167",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/ue-familiares.html",
-        "ue-familiares.html"
-      ],
-      "candidate_sha256": "178cd8b14c82f0745c1e13f29a983675caf74362ecb17753a0aa7f2327ed5a66",
-      "diff_excerpt": "+AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n+11.09.2026\n+Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+Ler mais\n+Portal de Renovações temporariamente indisponível\n+09.09.2026\n+Intervenção técnica programada entre 9 e 10 de setembro\n+Ler mais\n-Familiares UE nacionais de países terceiros: documentos necessários para apresentar pedido\n-14.08.2026\n-Informação sobre certidões de casamento e pedidos relativos a menores\n-Ler mais\n-Renovação de cartões de residência em papel\n-13.08.2026\n-Ler mais"
     }
   ]
 }

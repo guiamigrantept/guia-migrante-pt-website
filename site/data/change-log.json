@@ -2,6 +2,151 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-09-22T00:14:49Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-22T00:14:49Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-22T00:14:49Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-22T00:14:49Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-22T00:14:49Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-22T00:14:49Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-22T00:14:49Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-22T00:14:42Z",
+      "source_id": "src_768fda908f67",
+      "url": "https://www.parlamento.pt/Parlamento/Paginas/entidades-administrativas-independentes.aspx",
+      "state": "changed_pending_review",
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html"
+      ],
+      "candidate_sha256": "e18026f879d47683b2f228bb8bfc6a7884d1c9cad01c21839a75b79569ae8ae4",
+      "diff_excerpt": "-Bem-vindo à página oficial da Assembleia da República\n-Nota de apoio à navegação\n-Nesta página encontra 2 elementos auxiliares de\n-navegação: motor de busca (tecla de atalho 1) |\n-Saltar para o conteúdo (tecla de atalho 2)\n+Access to\n+www.parlamento.pt\n+was denied\n+You don't have authorization to view this page.\n+HTTP ERROR 403\n+Reload\n+You don't have authorization to view this page."
+    },
+    {
+      "time": "2026-09-22T00:13:58Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "0f87197d58b6105c38b9c94a62e7b52ab32a8818e629c35fc7c9e546d58e13e8",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 68.220.61.178\n+Attack ID: 20000051\n+Message ID: 007317126781"
+    },
+    {
+      "time": "2026-09-22T00:09:14Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/protecao-temporaria.html",
+        "protecao-temporaria.html"
+      ],
+      "candidate_sha256": "90cff84711521ce50ba2ce333f2d11eafdee7435a07c861b16b5b4a05f4b8e65",
+      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-22T00:09:10Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "79bbb409442f5ee1bbd4c26f01423efc7f984d02aac862066f52e70b76b6418f",
+      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-22T00:09:06Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "candidate_sha256": "984695ac72765db03a8390c572992c0498806aa41c28c5dc0bee3d1a1b9c7cf3",
+      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-22T00:09:01Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/ue-familiares.html",
+        "ue-familiares.html"
+      ],
+      "candidate_sha256": "8d67031972ec3d7a565fce22a6e41902dfe7e597a83dd719fb1e6f737cc8f22f",
+      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-22T00:08:57Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "d3f44700c97759e7aadfa9a55bd4c0a80e126d63e9f33e9935e6f274142fb502",
+      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-22T00:08:54Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "candidate_sha256": "2742f606d95af117b5830a20e712d53b92181d8aabc221e00743039ab12ae9df",
+      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
       "time": "2026-09-21T20:03:28Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2755,188 +2900,6 @@
       ],
       "candidate_sha256": "9126b24ed7cf91e5d6056abb7073fa03a7a2859b55c3e55c49573854c6725ea9",
       "diff_excerpt": "-Serviços\n-Pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Através deste serviço é possível obter informações e o formulário para realizar pedido de equivalência, equiparação ou reconhecimento de habilitações, estudos e diplomas de sistemas educativos estrangeiros do ensino básico e secundário a habilitações do sistema educativo português.\n-Atualizado em\n-22.05.2026\n-Nesta página\n-Quem pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Quando se pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Como e onde se pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer cidadão português ou estrangeiro residente em território nacional.\n-A qualquer momento, dentro do horário de funcionamento dos balcões.\n-Legislação\n-Aprova as tabelas comparativas entre o sistema de ensino português e outros sistemas de ensino, bem como as tabelas de conversão dos sistemas de classificação correspondentes.\n-Aprova as tabelas comparativas entre o sistema de ensino português e outros sistemas de ensino, bem co"
-    },
-    {
-      "time": "2026-09-20T11:28:32Z",
-      "source_id": "src_b55923d59614",
-      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "3213425b7c6d47d312e90c09755900eeac09dc255266e9476c2f663f27ebacf1",
-      "diff_excerpt": "-Serviços\n-Pedir a nacionalidade portuguesa\n-A atribuição da nacionalidade portuguesa pode depender do lugar de nascimento da pessoa, de há quantos anos vive em Portugal, da nacionalidade dos seus familiares ou cônjuge, da relação com a comunidade portuguesa, entre outros fatores.\n-O pedido de nacionalidade portuguesa pode ser feito online por um/a advogado/a ou solicitador/a. O pedido também pode ser feito, pela própria pessoa, ao balcão ou por correio.\n-Pedir\n-Atualizado em\n-21.05.2026\n-Nesta página\n-Quem pode pedir a nacionalidade portuguesa\n-Como e onde se pode pedir a nacionalidade portuguesa\n-Outras informações\n-Entidade responsável\n-A nacionalidade portuguesa pode ser pedida pela própria pessoa que quer ter a nacionalidade, mas também por alguém que queira pedir para outra pessoa, como é o caso de pais que pedem a nacionalidade para os seus filhos.\n-Os advogados e solicitadores inscritos nas respetivas Ordens em Portugal podem usar o serviço online da nacionalidade para representar cidadãos que pedem a nacionalidade portuguesa nas seguintes situações:\n-Nascido/a no estrangeiro, filho/a de mãe/pai português à data do nascimento (por transcrição)\n-Neto/a de avó/avô português o"
-    },
-    {
-      "time": "2026-09-20T11:28:31Z",
-      "source_id": "src_5c470c1c6222",
-      "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/saude-completa.html",
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "dd889b211685426d1149f58fda3539c679196fe7310384a1c38e107d70cf1ed3",
-      "diff_excerpt": "-Serviços\n-Mudar de centro de saúde\n-Quando muda de casa, é recomendado que peça a transferência para o centro de saúde do Serviço Nacional de Saúde (SNS) correspondente à sua nova área de residência.\n-A transferência não é obrigatória, mas deve dar preferência ao centro de saúde mais perto da sua nova morada.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode mudar de centro de saúde?\n-Como e onde se pode mudar de centro de saúde?\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa que já esteja inscrita num centro de saúde do SNS.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Mudar de centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n-Administração Central do Sistema de Saúde\n-Ir para a página da entidade\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: www.gov.pt/servicos/mudar-de-centro-de-saude\n+Client IP: 4.155.244.128\n+Attack ID: 20000051\n+Message ID: 000000000000"
-    },
-    {
-      "time": "2026-09-20T11:28:29Z",
-      "source_id": "src_1b8b2c1bcde6",
-      "url": "https://www.gov.pt/servicos/livro-de-reclamacoes-compra",
-      "state": "changed_pending_review",
-      "pages": [
-        "consumidor.html",
-        "en/consumidor.html"
-      ],
-      "candidate_sha256": "f20f49a61b6c9670c865c544cd179891f35ad4a340fb4d2574393871d857ba10",
-      "diff_excerpt": "-Serviços\n-Livro de Reclamações - comprar\n-O Livro de Reclamações físico é obrigatório para os fornecedores de bens e prestadores de serviços abrangidos pela legislação. Este serviço permite comprar o livro através da Imprensa Nacional-Casa da Moeda (INCM).\n-Comprar\n-Atualizado em\n-04.09.2026\n-Nesta página\n-Como e onde se pode comprar\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Legislação\n-Decreto-Lei n.º 156/2005\n-- Estabelece a obrigatoriedade de disponibilização do livro de reclamações a todos os fornecedores de bens ou prestadores de serviços que tenham contacto com o público em geral. Publica em anexos as entidades que passam a estar sujeitas e as que já se encontram sujeitas a essa obrigatoriedade e disponibilização do citado livro;\n-Portaria n.º 1288/2005\n-- Aprova o modelo, edição, preço, fornecimento e distribuição do livro de reclamações a ser disponibilizado pelos fornecedores de bens e prestadores de serviços abrangidos pelo Decreto-Lei n.º 156/2005, de 15 de setembro;\n-Decreto-Lei n.º 371/2007\n-- Altera o Decreto-Lei n.º 156/2005, de 15 de setembro (primeira alteração), estabelecendo a obrigatoriedade de disponibilização do livro de reclamações e"
-    },
-    {
-      "time": "2026-09-20T11:28:28Z",
-      "source_id": "src_94e2ebb14db9",
-      "url": "https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/saude-completa.html",
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "d2a4b0a6ca70a3aded80743c4b98a045456944a43fd2d9048ffc25d2f9a2a65d",
-      "diff_excerpt": "-Serviços\n-Inscrever-se no centro de saúde\n-Pode inscrever-se no centro de saúde apresentando o seu número de utente do Serviço Nacional de Saúde (SNS). Dê preferência ao centro de saúde da sua área de residência. Se não tiver número de utente, pode obter o número de utente no momento em que se inscrever no centro de saúde.\n-Os centros de saúde do SNS asseguram consultas, medicina familiar, cuidados de enfermagem e serviços de proximidade (nutrição, psicologia, saúde oral e apoio social).\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode inscrever-se no centro de saúde?\n-Como e onde se pode inscrever no centro de saúde?\n-Conteúdos relacionados\n-Entidade responsável\n-Pode inscrever-se no centro de saúde qualquer pessoa com nacionalidade portuguesa, ou pessoa de nacionalidade estrangeira com autorização de residência em Portugal.\n-Para fazer a inscrição é preciso ter número nacional de utente de saúde, e apresentar alguns documentos e informações.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Inscrever-se no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n-Administração Central do Sistema de Saúde\n-Ir para a página"
-    },
-    {
-      "time": "2026-09-20T11:28:27Z",
-      "source_id": "src_8066e6d33e60",
-      "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/situacoes-urgentes.html",
-        "situacoes-urgentes.html"
-      ],
-      "candidate_sha256": "4d17d80268238f97381878a4f54120b2b693ee818d36e8cd9938dc00b52eaee4",
-      "diff_excerpt": "-Serviços\n-Contactar Linha Telefónica de Informação às Vítimas de Violência Doméstica\n-O serviço de informação às vítimas de violência doméstica disponibiliza apoio e informação gratuita, de forma anónima e confidencial. A linha dá informação, em chamada, sobre direitos das vítimas, recursos de apoio existentes em Portugal e onde obter apoio psicológico, social e jurídico.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Como e onde se pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa pode contactar a linha de apoio, incluindo vítimas, familiares, profissionais ou quem precise de informação, esclarecimento ou orientação sobre violência doméstica.\n-Legislação\n-Lei n.º 112/2009, de 16 de setembro\n-– Estabelece o regime jurídico aplicável à prevenção da violência doméstica, à proteção e assistência das suas vítimas.\n-Decreto-Lei n.º 48/95, de 15 de março\n-– Aprova o Código Penal, que prevê e pune o crime de violência doméstica no artigo 152.º.\n-Decreto-Lei n.º 78/87, de 17 de fevereiro\n-– A"
-    },
-    {
-      "time": "2026-09-20T11:28:25Z",
-      "source_id": "src_e9c2fda70bd4",
-      "url": "https://www.gov.pt/servicos/consultar-corpo-diplomatico-acreditado-em-lisboa",
-      "state": "changed_pending_review",
-      "pages": [
-        "contactos.html",
-        "en/contactos.html"
-      ],
-      "candidate_sha256": "88b9e549b8e4b20fc43d85d86387d71424ea8e6ae7880d03e2fd74885a885c7b",
-      "diff_excerpt": "-Serviços\n-Consultar corpo diplomático acreditado em Lisboa\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem consultar corpo diplomático acreditado em Lisboa?\n-Quando consultar corpo diplomático acreditado em Lisboa?\n-Onde consultar corpo diplomático acreditado em Lisboa?\n-Como consultar corpo diplomático acreditado em Lisboa?\n-Qual o preço consultar corpo diplomático acreditado em Lisboa?\n-Conteúdos relacionados\n-Entidade responsável\n-Informações e possibilidade de realizar\n-online\n-a consulta do corpo diplomático acreditado em Lisboa.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Qualquer cidadão.\n-A qualquer momento.\n-Através da Internet\n-Consulta da lista do corpo diplomático acreditado em Lisboa com todos os contactos das missões diplomáticas acreditadas em Portugal, incluindo:\n-Embaixadas\n-Consulados\n-Organizações internacionais com sede em Lisboa\n-Organizações internacionais com representação em Lisboa.\n-É gratuito.\n-Temas\n-Estrangeiros em Portugal\n-Cidadãos europeus em Portugal\n-Migrantes em Portugal\n-Entidade responsável\n-O serviço \"Consultar corpo diplomático acreditado em Lisboa\" é da responsabilidade da "
-    },
-    {
-      "time": "2026-09-20T11:28:24Z",
-      "source_id": "src_348272c45029",
-      "url": "https://www.gov.pt/servicos/alterar-a-morada-e-outros-dados-registados-na-seguranca-social",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/mudanca-saida.html",
-        "mudanca-saida.html"
-      ],
-      "candidate_sha256": "84398eb8f3999de727aaea1580d63b28a5977b4eb0d76cd01a3c5e068b7f7b33",
-      "diff_excerpt": "-Serviços\n-Alterar a morada e outros dados registados na Segurança Social\n-Qualquer pessoa, portuguesa ou estrangeira, inscrita na Segurança Social pode alterar a morada e outros dados registados na Segurança Social, como número de telefone, telemóvel, email e IBAN\n-Quem tem Cartão de Cidadão só pode alterar a morada usando o serviço\n-alterar a morada do Cartão de Cidadão\n-Alterar dados\n-Atualizado em\n-03.09.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa, nacional ou estrangeira, que esteja inscrita na Segurança Social, ou seja, que tem um número de segurança social atribuído.\n-Temas\n-Cidadania e documentos\n-Outros documentos\n-Estrangeiros em Portugal\n-Cidadãos europeus em Portugal\n-Migrantes em Portugal\n-Entidade responsável\n-O serviço \"Alterar a morada e outros dados registados na Segurança Social\" é da responsabilidade da entidade Instituto da Segurança Social.\n-Instituto da Segurança Social\n-Ir para a página da entidade\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: www.gov.pt/servicos/alterar-a-mor"
-    },
-    {
-      "time": "2026-09-20T11:28:12Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 16-9-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-09-20T11:27:47Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "807e2cca5b3c71c3b6a790849d3879b95f14595f1616bb2bea82692b0f0f8854",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 4.155.244.128\n+Attack ID: 20000051\n+Message ID: 007291807535"
-    },
-    {
-      "time": "2026-09-20T11:25:50Z",
-      "source_id": "src_7c058712b7c1",
-      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/protecao-temporaria.html",
-        "protecao-temporaria.html"
-      ],
-      "candidate_sha256": "90cff84711521ce50ba2ce333f2d11eafdee7435a07c861b16b5b4a05f4b8e65",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-20T11:25:46Z",
-      "source_id": "src_2b0880736b8a",
-      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/legalizacao.html",
-        "legalizacao.html"
-      ],
-      "candidate_sha256": "79bbb409442f5ee1bbd4c26f01423efc7f984d02aac862066f52e70b76b6418f",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-20T11:25:42Z",
-      "source_id": "src_0bb3fdad0761",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/mudanca-saida.html",
-        "mudanca-saida.html"
-      ],
-      "candidate_sha256": "984695ac72765db03a8390c572992c0498806aa41c28c5dc0bee3d1a1b9c7cf3",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-20T11:25:38Z",
-      "source_id": "src_984aab257167",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/ue-familiares.html",
-        "ue-familiares.html"
-      ],
-      "candidate_sha256": "8d67031972ec3d7a565fce22a6e41902dfe7e597a83dd719fb1e6f737cc8f22f",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-20T11:25:35Z",
-      "source_id": "src_48b0a401cee7",
-      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/legalizacao.html",
-        "legalizacao.html"
-      ],
-      "candidate_sha256": "d3f44700c97759e7aadfa9a55bd4c0a80e126d63e9f33e9935e6f274142fb502",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-20T11:25:31Z",
-      "source_id": "src_cbed4d38b3bf",
-      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/situacoes-urgentes.html",
-        "situacoes-urgentes.html"
-      ],
-      "candidate_sha256": "2742f606d95af117b5830a20e712d53b92181d8aabc221e00743039ab12ae9df",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
     }
   ]
 }

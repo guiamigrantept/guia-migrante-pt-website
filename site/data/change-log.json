@@ -2,6 +2,158 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-09-23T17:06:03Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-23T17:06:03Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-23T17:06:03Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-23T17:06:03Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-09-23T17:06:03Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-23T17:06:03Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-23T17:06:03Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-23T17:06:03Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-09-23T17:05:36Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "523d5779b9ec0cb007c3a4b85b16aa1f1a02ad0295b7a217601c01bdcd304535",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 21-9-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-09-23T17:05:12Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "f89ea6bd5373950fa21a7a1ea30e68fe57202999cbc0cfbdfb9fa8aa3c0f00d8",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 20.168.157.86\n+Attack ID: 20000051\n+Message ID: 007350749391"
+    },
+    {
+      "time": "2026-09-23T17:00:28Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/protecao-temporaria.html",
+        "protecao-temporaria.html"
+      ],
+      "candidate_sha256": "072da5227f2fdaac548db5c208c23ae5e2c0e9e7b11df88a61ad076a05cceb78",
+      "diff_excerpt": "+Um retrato das migrações em Portugal: AIMA divulga Relatório de Migrações e Asilo 2025\n+22.09.2026\n+Retrato estatístico e analítico das migrações e do asilo em Portugal em 2025\n+Ler mais\n+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n-Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-23T17:00:25Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "13a6fdca4b22b584f4bf275bd4b8bb8145eec79103258228fe35966af647df0d",
+      "diff_excerpt": "+Um retrato das migrações em Portugal: AIMA divulga Relatório de Migrações e Asilo 2025\n+22.09.2026\n+Retrato estatístico e analítico das migrações e do asilo em Portugal em 2025\n+Ler mais\n+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n-Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-23T17:00:21Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "candidate_sha256": "55936779f3c30eac2e7865a12ac6ea44eff872af2471584004ce09c03b280206",
+      "diff_excerpt": "+Um retrato das migrações em Portugal: AIMA divulga Relatório de Migrações e Asilo 2025\n+22.09.2026\n+Retrato estatístico e analítico das migrações e do asilo em Portugal em 2025\n+Ler mais\n+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n-Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-23T17:00:18Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/ue-familiares.html",
+        "ue-familiares.html"
+      ],
+      "candidate_sha256": "5a49194ff07f89fe6e8272a21e970402570567912c30371eb35579965c716537",
+      "diff_excerpt": "+Um retrato das migrações em Portugal: AIMA divulga Relatório de Migrações e Asilo 2025\n+22.09.2026\n+Retrato estatístico e analítico das migrações e do asilo em Portugal em 2025\n+Ler mais\n+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n-Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-23T17:00:14Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "e1c3b38c34fb76d8d78a2e735fcfd13bf3366efcf2e00a2e6d6677a7f01a1941",
+      "diff_excerpt": "+Um retrato das migrações em Portugal: AIMA divulga Relatório de Migrações e Asilo 2025\n+22.09.2026\n+Retrato estatístico e analítico das migrações e do asilo em Portugal em 2025\n+Ler mais\n+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n-Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
+      "time": "2026-09-23T17:00:11Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "candidate_sha256": "a4655395752e007b3bebcd4de8f500bb5ea7f4adcb1f58aaf9c6cf803446622a",
+      "diff_excerpt": "+Um retrato das migrações em Portugal: AIMA divulga Relatório de Migrações e Asilo 2025\n+22.09.2026\n+Retrato estatístico e analítico das migrações e do asilo em Portugal em 2025\n+Ler mais\n+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n-Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
+    },
+    {
       "time": "2026-09-23T11:41:24Z",
       "source_id": "src_fb82d424d16e",
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
@@ -2702,204 +2854,6 @@
       ],
       "candidate_sha256": "be99659f7ce898994be24d0e33809accd75a712b540334c645998983cf9a3c37",
       "diff_excerpt": "-Serviços\n-Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\n-O número nacional de utente do Serviço Nacional de Saúde (SNS) é atribuído a quem precise de cuidados de saúde nas unidades públicas do SNS.\n-As pessoas de cidadania portuguesa obtêm o número nacional de utente de forma automática, quando pedem o Cartão de Cidadão (o número aparece no verso do documento). Para pessoas estrangeiras, o número é atribuído na primeira vez que se dirijam a uma unidade de saúde pública, por exemplo, um centro de saúde ou hospital.\n-A atribuição do número de utente de saúde não garante a cobertura das despesas dos cuidados de saúde pelo SNS.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como se pode realizar o serviço?\n-Conteúdos relacionados\n-Entidade responsável\n-Pessoas estrangeiras que acedem pela primeira vez aos serviços das unidades públicas de cuidados de saúde do Serviço Nacional de Saúde.\n-Quem tem Cartão de Cidadão português não precisa de pedir o número de utente.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\" é da responsabilidade da entidade Admin"
-    },
-    {
-      "time": "2026-09-20T20:55:45Z",
-      "source_id": "src_0d3e737b44ae",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "0bf3808477accd649aa6108804e6f9e11b12166a67731c754354d96a2fcce839",
-      "diff_excerpt": "-Serviços\n-Pedir o Número de Identificação Fiscal (NIF) para pessoa singular\n-O Número de Identificação Fiscal (NIF), também conhecido por número de contribuinte, é necessário para comprar bens ou serviços, fazer contratos ou abrir contas bancárias. Para pessoas com nacionalidade portuguesa e Cartão de Cidadão, o NIF é atribuído automaticamente. Nos restantes casos, é necessário pedir o NIF.\n-É possível consultar também a página \"Como pedir o NIF e o NISS para pessoas estrangeiras em Portugal\" nas seguintes línguas:\n-português\n-inglês\n-árabe\n-hindi\n-mandarim\n-Realizar serviço\n-Atualizado em\n-01.09.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa portuguesa ou estrangeira, residente ou não residente em Portugal pode pedir o número de contribuinte.\n-Para ser considerado residente em Portugal, precisa de cumprir pelo menos um dos seguintes requisitos:\n-Viver em Portugal mais de 183 dias, seguidos ou interpolados, num ano\n-Ter em Portugal habitação permanente disponível (arrendamento de longa duração ou casa própria), presumindo-s"
-    },
-    {
-      "time": "2026-09-20T20:55:44Z",
-      "source_id": "src_b223c78629bb",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "7bc9d02a5e20e17c0011a73e06c15273ae56913720b708a7e77619ecf0bc7270",
-      "diff_excerpt": "-Serviços\n-Pedir o Número de Identificação da Segurança Social (NISS)\n-O Número de Identificação da Segurança Social (NISS) é o número que permite aceder a direitos e cumprir deveres na Segurança Social.\n-Podem pedir o NISS as pessoas estrangeiras, e portuguesas com bilhete de identidade vitalício. O pedido é feito online.\n-Consulte também a página\n-\"Como pedir o NIF e o NISS para pessoas estrangeiras em Portugal\"\n-nas seguintes línguas:\n-português\n-inglês\n-árabe\n-hindi\n-mandarim\n-Pedir NISS\n-Atualizado em\n-03.09.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-O Número de Identificação da Segurança Social pode ser pedido por:\n-Pessoas estrangeiras\n-Pessoas portuguesas com bilhete de identidade vitalício\n-Representantes legais em nome da pessoa estrangeira\n-Entidades empregadoras em nome da pessoa estrangeira que estejam a contratar\n-No caso de o pedido ser feito pela entidade empregadora, para que o NISS seja atribuído é necessário que a entidade empregadora celebre, previamente, um contrato de trabalho com a pessoa em causa, e comunique o vínculo de trabalho na\n-Segurança So"
-    },
-    {
-      "time": "2026-09-20T20:55:43Z",
-      "source_id": "src_2e5a8d9c1488",
-      "url": "https://www.gov.pt/servicos/pedir-equivalencia-de-habilitacoes-estrangeiras-do-ensino-basico-e-secundario",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/escola-familias.html",
-        "escola-familias.html"
-      ],
-      "candidate_sha256": "cb6100693ca9e6651c506aa5a1bd2c15da18c00315a33e8cdb544a8ba1237710",
-      "diff_excerpt": "-Serviços\n-Pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Através deste serviço é possível obter informações e o formulário para realizar pedido de equivalência, equiparação ou reconhecimento de habilitações, estudos e diplomas de sistemas educativos estrangeiros do ensino básico e secundário a habilitações do sistema educativo português.\n-Atualizado em\n-22.05.2026\n-Nesta página\n-Quem pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Quando se pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Como e onde se pode pedir equivalência de habilitações estrangeiras do ensino básico e secundário\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer cidadão português ou estrangeiro residente em território nacional.\n-A qualquer momento, dentro do horário de funcionamento dos balcões.\n-Legislação\n-Aprova as tabelas comparativas entre o sistema de ensino português e outros sistemas de ensino, bem como as tabelas de conversão dos sistemas de classificação correspondentes.\n-Aprova as tabelas comparativas entre o sistema de ensino português e outros sistemas de ensino, bem co"
-    },
-    {
-      "time": "2026-09-20T20:55:42Z",
-      "source_id": "src_b55923d59614",
-      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "1eb2c2b3db7ba8be86be99236388e1c7e19938bbbaabe63116b32b23fa3ddcc5",
-      "diff_excerpt": "-Serviços\n-Pedir a nacionalidade portuguesa\n-A atribuição da nacionalidade portuguesa pode depender do lugar de nascimento da pessoa, de há quantos anos vive em Portugal, da nacionalidade dos seus familiares ou cônjuge, da relação com a comunidade portuguesa, entre outros fatores.\n-O pedido de nacionalidade portuguesa pode ser feito online por um/a advogado/a ou solicitador/a. O pedido também pode ser feito, pela própria pessoa, ao balcão ou por correio.\n-Pedir\n-Atualizado em\n-21.05.2026\n-Nesta página\n-Quem pode pedir a nacionalidade portuguesa\n-Como e onde se pode pedir a nacionalidade portuguesa\n-Outras informações\n-Entidade responsável\n-A nacionalidade portuguesa pode ser pedida pela própria pessoa que quer ter a nacionalidade, mas também por alguém que queira pedir para outra pessoa, como é o caso de pais que pedem a nacionalidade para os seus filhos.\n-Os advogados e solicitadores inscritos nas respetivas Ordens em Portugal podem usar o serviço online da nacionalidade para representar cidadãos que pedem a nacionalidade portuguesa nas seguintes situações:\n-Nascido/a no estrangeiro, filho/a de mãe/pai português à data do nascimento (por transcrição)\n-Neto/a de avó/avô português o"
-    },
-    {
-      "time": "2026-09-20T20:55:41Z",
-      "source_id": "src_5c470c1c6222",
-      "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/saude-completa.html",
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "80d4c789de2e39028d156dec031720219b0b201a4233aed3e2cc73860e704661",
-      "diff_excerpt": "-Serviços\n-Mudar de centro de saúde\n-Quando muda de casa, é recomendado que peça a transferência para o centro de saúde do Serviço Nacional de Saúde (SNS) correspondente à sua nova área de residência.\n-A transferência não é obrigatória, mas deve dar preferência ao centro de saúde mais perto da sua nova morada.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode mudar de centro de saúde?\n-Como e onde se pode mudar de centro de saúde?\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa que já esteja inscrita num centro de saúde do SNS.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Mudar de centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n-Administração Central do Sistema de Saúde\n-Ir para a página da entidade\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: www.gov.pt/servicos/mudar-de-centro-de-saude\n+Client IP: 135.119.79.35\n+Attack ID: 20000051\n+Message ID: 000000000000"
-    },
-    {
-      "time": "2026-09-20T20:55:40Z",
-      "source_id": "src_1b8b2c1bcde6",
-      "url": "https://www.gov.pt/servicos/livro-de-reclamacoes-compra",
-      "state": "changed_pending_review",
-      "pages": [
-        "consumidor.html",
-        "en/consumidor.html"
-      ],
-      "candidate_sha256": "22f5711b10be0ca14442afcd86f372cc8dc646b2b1c7f2c6ab9ee5d48cc022de",
-      "diff_excerpt": "-Serviços\n-Livro de Reclamações - comprar\n-O Livro de Reclamações físico é obrigatório para os fornecedores de bens e prestadores de serviços abrangidos pela legislação. Este serviço permite comprar o livro através da Imprensa Nacional-Casa da Moeda (INCM).\n-Comprar\n-Atualizado em\n-04.09.2026\n-Nesta página\n-Como e onde se pode comprar\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Legislação\n-Decreto-Lei n.º 156/2005\n-- Estabelece a obrigatoriedade de disponibilização do livro de reclamações a todos os fornecedores de bens ou prestadores de serviços que tenham contacto com o público em geral. Publica em anexos as entidades que passam a estar sujeitas e as que já se encontram sujeitas a essa obrigatoriedade e disponibilização do citado livro;\n-Portaria n.º 1288/2005\n-- Aprova o modelo, edição, preço, fornecimento e distribuição do livro de reclamações a ser disponibilizado pelos fornecedores de bens e prestadores de serviços abrangidos pelo Decreto-Lei n.º 156/2005, de 15 de setembro;\n-Decreto-Lei n.º 371/2007\n-- Altera o Decreto-Lei n.º 156/2005, de 15 de setembro (primeira alteração), estabelecendo a obrigatoriedade de disponibilização do livro de reclamações e"
-    },
-    {
-      "time": "2026-09-20T20:55:38Z",
-      "source_id": "src_94e2ebb14db9",
-      "url": "https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/saude-completa.html",
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "a6d9df9f47f7ce9d5d139c1ca00e3dbdca5e2bb585ed972c7356bdc3d882d1a3",
-      "diff_excerpt": "-Serviços\n-Inscrever-se no centro de saúde\n-Pode inscrever-se no centro de saúde apresentando o seu número de utente do Serviço Nacional de Saúde (SNS). Dê preferência ao centro de saúde da sua área de residência. Se não tiver número de utente, pode obter o número de utente no momento em que se inscrever no centro de saúde.\n-Os centros de saúde do SNS asseguram consultas, medicina familiar, cuidados de enfermagem e serviços de proximidade (nutrição, psicologia, saúde oral e apoio social).\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode inscrever-se no centro de saúde?\n-Como e onde se pode inscrever no centro de saúde?\n-Conteúdos relacionados\n-Entidade responsável\n-Pode inscrever-se no centro de saúde qualquer pessoa com nacionalidade portuguesa, ou pessoa de nacionalidade estrangeira com autorização de residência em Portugal.\n-Para fazer a inscrição é preciso ter número nacional de utente de saúde, e apresentar alguns documentos e informações.\n-Temas\n-Saúde\n-Assistência médica\n-Entidade responsável\n-O serviço \"Inscrever-se no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n-Administração Central do Sistema de Saúde\n-Ir para a página"
-    },
-    {
-      "time": "2026-09-20T20:55:37Z",
-      "source_id": "src_8066e6d33e60",
-      "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/situacoes-urgentes.html",
-        "situacoes-urgentes.html"
-      ],
-      "candidate_sha256": "9f600ac0e7581bd66151873081ffd11758d9f26bfad940d81e1b9b95dbbf40b9",
-      "diff_excerpt": "-Serviços\n-Contactar Linha Telefónica de Informação às Vítimas de Violência Doméstica\n-O serviço de informação às vítimas de violência doméstica disponibiliza apoio e informação gratuita, de forma anónima e confidencial. A linha dá informação, em chamada, sobre direitos das vítimas, recursos de apoio existentes em Portugal e onde obter apoio psicológico, social e jurídico.\n-Atualizado em\n-12.05.2026\n-Nesta página\n-Quem pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Como e onde se pode contactar a Linha Telefónica de Informação às Vítimas de Violência Doméstica?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa pode contactar a linha de apoio, incluindo vítimas, familiares, profissionais ou quem precise de informação, esclarecimento ou orientação sobre violência doméstica.\n-Legislação\n-Lei n.º 112/2009, de 16 de setembro\n-– Estabelece o regime jurídico aplicável à prevenção da violência doméstica, à proteção e assistência das suas vítimas.\n-Decreto-Lei n.º 48/95, de 15 de março\n-– Aprova o Código Penal, que prevê e pune o crime de violência doméstica no artigo 152.º.\n-Decreto-Lei n.º 78/87, de 17 de fevereiro\n-– A"
-    },
-    {
-      "time": "2026-09-20T20:55:36Z",
-      "source_id": "src_e9c2fda70bd4",
-      "url": "https://www.gov.pt/servicos/consultar-corpo-diplomatico-acreditado-em-lisboa",
-      "state": "changed_pending_review",
-      "pages": [
-        "contactos.html",
-        "en/contactos.html"
-      ],
-      "candidate_sha256": "9aae1d7f4f206347b48976b56029b5d232a4ad705d31c802c92ff361a559fb0b",
-      "diff_excerpt": "-Serviços\n-Consultar corpo diplomático acreditado em Lisboa\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem consultar corpo diplomático acreditado em Lisboa?\n-Quando consultar corpo diplomático acreditado em Lisboa?\n-Onde consultar corpo diplomático acreditado em Lisboa?\n-Como consultar corpo diplomático acreditado em Lisboa?\n-Qual o preço consultar corpo diplomático acreditado em Lisboa?\n-Conteúdos relacionados\n-Entidade responsável\n-Informações e possibilidade de realizar\n-online\n-a consulta do corpo diplomático acreditado em Lisboa.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Qualquer cidadão.\n-A qualquer momento.\n-Através da Internet\n-Consulta da lista do corpo diplomático acreditado em Lisboa com todos os contactos das missões diplomáticas acreditadas em Portugal, incluindo:\n-Embaixadas\n-Consulados\n-Organizações internacionais com sede em Lisboa\n-Organizações internacionais com representação em Lisboa.\n-É gratuito.\n-Temas\n-Estrangeiros em Portugal\n-Cidadãos europeus em Portugal\n-Migrantes em Portugal\n-Entidade responsável\n-O serviço \"Consultar corpo diplomático acreditado em Lisboa\" é da responsabilidade da "
-    },
-    {
-      "time": "2026-09-20T20:55:35Z",
-      "source_id": "src_348272c45029",
-      "url": "https://www.gov.pt/servicos/alterar-a-morada-e-outros-dados-registados-na-seguranca-social",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/mudanca-saida.html",
-        "mudanca-saida.html"
-      ],
-      "candidate_sha256": "dc599418eaf5dfaf97f6f14a77882a2e5f0206e4f56a290b2f16c81f54e32df8",
-      "diff_excerpt": "-Serviços\n-Alterar a morada e outros dados registados na Segurança Social\n-Qualquer pessoa, portuguesa ou estrangeira, inscrita na Segurança Social pode alterar a morada e outros dados registados na Segurança Social, como número de telefone, telemóvel, email e IBAN\n-Quem tem Cartão de Cidadão só pode alterar a morada usando o serviço\n-alterar a morada do Cartão de Cidadão\n-Alterar dados\n-Atualizado em\n-03.09.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Conteúdos relacionados\n-Entidade responsável\n-Qualquer pessoa, nacional ou estrangeira, que esteja inscrita na Segurança Social, ou seja, que tem um número de segurança social atribuído.\n-Temas\n-Cidadania e documentos\n-Outros documentos\n-Estrangeiros em Portugal\n-Cidadãos europeus em Portugal\n-Migrantes em Portugal\n-Entidade responsável\n-O serviço \"Alterar a morada e outros dados registados na Segurança Social\" é da responsabilidade da entidade Instituto da Segurança Social.\n-Instituto da Segurança Social\n-Ir para a página da entidade\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: www.gov.pt/servicos/alterar-a-mor"
-    },
-    {
-      "time": "2026-09-20T20:55:26Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "bd7326c7fa25ced1e2fcf7848e257391f9dffd82176b9e189d1f651cf2139d56",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 16-9-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-09-20T20:55:05Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "47a62893296b950fbc7ec0183181ffc0265b51971be6a609a3f89e75b701f7d4",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 135.119.79.35\n+Attack ID: 20000051\n+Message ID: 007295712403"
-    },
-    {
-      "time": "2026-09-20T20:50:36Z",
-      "source_id": "src_7c058712b7c1",
-      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/protecao-temporaria.html",
-        "protecao-temporaria.html"
-      ],
-      "candidate_sha256": "90cff84711521ce50ba2ce333f2d11eafdee7435a07c861b16b5b4a05f4b8e65",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-20T20:50:33Z",
-      "source_id": "src_2b0880736b8a",
-      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/legalizacao.html",
-        "legalizacao.html"
-      ],
-      "candidate_sha256": "79bbb409442f5ee1bbd4c26f01423efc7f984d02aac862066f52e70b76b6418f",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-20T20:50:29Z",
-      "source_id": "src_0bb3fdad0761",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/mudanca-saida.html",
-        "mudanca-saida.html"
-      ],
-      "candidate_sha256": "984695ac72765db03a8390c572992c0498806aa41c28c5dc0bee3d1a1b9c7cf3",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-09-20T20:50:25Z",
-      "source_id": "src_984aab257167",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/ue-familiares.html",
-        "ue-familiares.html"
-      ],
-      "candidate_sha256": "8d67031972ec3d7a565fce22a6e41902dfe7e597a83dd719fb1e6f737cc8f22f",
-      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+18.09.2026\n+Intervenção técnica programada durante o dia 20 de setembro 2026\n+Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
     }
   ]
 }

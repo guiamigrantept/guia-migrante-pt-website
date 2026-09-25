@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "generated_at": "2026-09-25T13:26:57Z",
-  "state": "degraded",
+  "generated_at": "2026-09-25T13:36:56Z",
+  "state": "healthy",
   "schedule_hours": 3,
   "warning_after_hours": 9,
   "critical_after_hours": 18,
@@ -9,10 +9,7 @@
   "procedure_coverage_ok": true,
   "required_sources": 83,
   "missing_required": [],
-  "blocked_pages": [
-    "carta-conducao.html",
-    "en/carta-conducao.html"
-  ],
+  "blocked_pages": [],
   "critical_error_count": 0,
   "source_error_count": 21,
   "optional_source_error_count": 12,

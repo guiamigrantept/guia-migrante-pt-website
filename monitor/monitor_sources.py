@@ -94,12 +94,17 @@ def browser_fetch(u):
  txt=html_text(raw)
  if len(txt)<100: raise RuntimeError('browser-rendered source text too short')
  return txt,u,'browser'
-def fetch(sess,u,allow_browser=True,fast_fail=False):
+def fetch(sess,u,allow_browser=True,fast_fail=False,try_removed_browser=False):
  err=None
  try:
   timeout=(4,12) if fast_fail else (8,30)
   r=sess.get(u,timeout=timeout,allow_redirects=True,headers={'User-Agent':UA,'Accept':'text/html,application/pdf;q=0.9,*/*;q=0.5'})
-  if r.status_code in (404,410): raise SourceRemovedError(f'official source returned HTTP {r.status_code}')
+  if r.status_code in (404,410):
+   removed=SourceRemovedError(f'official source returned HTTP {r.status_code}')
+   if not try_removed_browser:
+    raise removed
+   err=removed
+   raise RuntimeError(str(removed))
   r.raise_for_status(); c=(r.headers.get('content-type') or '').lower()
   if len(r.content)>15_000_000: raise RuntimeError('source over 15MB')
   pdf='pdf' in c or r.url.lower().endswith('.pdf'); txt=pdf_text(r.content) if pdf else html_text(r.content)
@@ -152,7 +157,7 @@ def main():
   i=src['id']; bp=SNAPS/f'{i}.json'; cp=CANDS/f'{i}.json'; old=json.loads(bp.read_text(encoding='utf-8')) if bp.exists() else None; prev=status.get('sources',{}).get(i,{})
   try:
    repeated_optional=(not src['required'] and int(prev.get('failure_count',0))>=3)
-   text,final,method=fetch(sess,src['url'],allow_browser=not repeated_optional,fast_fail=repeated_optional); h=hashlib.sha256(text.encode()).hexdigest(); ts=now()
+   text,final,method=fetch(sess,src['url'],allow_browser=not repeated_optional,fast_fail=repeated_optional,try_removed_browser=(old is None and src['domain']=='aima.gov.pt')); h=hashlib.sha256(text.encode()).hexdigest(); ts=now()
    if old is None:
     write_snap(bp,src,final,text,h,ts,method); cp.unlink(missing_ok=True); baseline+=1; update_facts(src['url'],text,facts,fact_changes); state='healthy'
     status.setdefault('sources',{})[i]={'url':src['url'],'domain':src['domain'],'state':state,'checked_at':ts,'changed_at':None,'pages':src['pages'],'required':src['required'],'fetch_method':method}; continue

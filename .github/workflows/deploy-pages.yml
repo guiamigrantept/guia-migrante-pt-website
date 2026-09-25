@@ -31,6 +31,7 @@ on:
       - 'scripts/inject_contact_channel.py'
       - 'scripts/check_contact_channel.py'
       - 'scripts/build_sitemap.py'
+      - 'scripts/normalize_seo.py'
       - '.github/workflows/deploy-pages.yml'
 
 permissions:
@@ -150,6 +151,8 @@ jobs:
         run: python scripts/build_inline_runtime_copy.py
       - name: Inject administration contact channel
         run: python scripts/inject_contact_channel.py
+      - name: Normalize SEO and social metadata
+        run: python scripts/normalize_seo.py
       - name: Build multilingual sitemap
         run: python scripts/build_sitemap.py
       - name: Check administration contact channel

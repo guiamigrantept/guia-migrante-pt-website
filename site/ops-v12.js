@@ -28,6 +28,29 @@ if(main){
 }
 document.querySelectorAll("main").forEach(m=>m.setAttribute("tabindex","-1"));
 
+/* Mobile navigation accessibility: expose the current page and provide
+   predictable close behaviour for keyboard and touch users. */
+const currentPage=(location.pathname.split('/').filter(Boolean).pop()||'index.html').split('?')[0];
+document.querySelectorAll('.mobile-nav a[href]').forEach(a=>{
+  const href=(a.getAttribute('href')||'').split('#')[0].split('?')[0];
+  const page=href.split('/').filter(Boolean).pop()||'index.html';
+  if(page===currentPage) a.setAttribute('aria-current','page');
+});
+const mobileMenu=document.querySelector('.mobile-nav');
+const mobileButton=document.querySelector('.menu-btn[aria-controls]');
+function closeMobileMenu(returnFocus=false){
+  if(!mobileMenu||!mobileButton) return;
+  mobileMenu.classList.remove('open');
+  mobileButton.setAttribute('aria-expanded','false');
+  if(returnFocus) mobileButton.focus();
+}
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&mobileMenu?.classList.contains('open')) closeMobileMenu(true);
+});
+mobileMenu?.addEventListener('click',event=>{
+  if(event.target.closest('a[href]')) closeMobileMenu(false);
+});
+
 const obs=new MutationObserver(()=>{
   document.querySelectorAll(".ux-search-results").forEach(el=>{
     if(!el.hasAttribute("role")){el.setAttribute("role","status");el.setAttribute("aria-live","polite");}

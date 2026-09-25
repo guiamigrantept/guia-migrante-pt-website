@@ -177,8 +177,46 @@ def main():
  for src in sources:
   if status.get('sources',{}).get(src['id'],{}).get('state') in {'changed_pending_review','source_removed'}:
    for pg in src['pages']: blocked.setdefault(pg,[]).append(src['id'])
- req=[s for s in sources if s['required']]; missing=[s['id'] for s in req if not (SNAPS/f"{s['id']}.json").exists()]; complete=not missing; critical=[e for e in errors if e.get('required') and not e.get('had_baseline')]; coverage=complete and not critical
- status.update(version=4,blocked_pages={k:sorted(set(v)) for k,v in blocked.items()},generated_at=now(),baseline_complete=complete,coverage_ok=coverage,summary={'checked':len(sources),'required_sources':len(req),'new_baselines':baseline,'relevant_changes':len(set(changed)),'blocked_pages':len(blocked),'errors':len(errors),'critical_errors':len(critical),'missing_required':len(missing),'fact_updates':len(fact_changes),'browser_fallback_available':bool(chrome())})
+ req=[s for s in sources if s['required']]
+ missing_all=[s for s in req if not (SNAPS/f"{s['id']}.json").exists()]
+ errors_by_id={e.get('id'):e for e in errors}
+
+ # A newly linked AIMA source can be temporarily unavailable before its first
+ # successful baseline. Do not make the whole site critical when every page
+ # using that source is already backed by another required official source
+ # with a last-known-good baseline. The pending source remains visible in the
+ # report and becomes actionable through the repeated-failure health policy.
+ def backed_by_existing_required_source(src):
+  for pg in src.get('pages',[]):
+   alternatives=[
+    other for other in req
+    if other['id']!=src['id']
+    and pg in other.get('pages',[])
+    and (SNAPS/f"{other['id']}.json").exists()
+   ]
+   if not alternatives:
+    return False
+  return bool(src.get('pages'))
+
+ pending_required=[]
+ for src in missing_all:
+  err=errors_by_id.get(src['id'],{})
+  if (
+   src.get('domain')=='aima.gov.pt'
+   and err.get('kind')=='fetch_error'
+   and backed_by_existing_required_source(src)
+  ):
+   pending_required.append(src['id'])
+   entry=status.setdefault('sources',{}).setdefault(src['id'],{})
+   entry['state']='baseline_pending_transient'
+   entry['note']='new AIMA source temporarily unavailable; page remains covered by another required last-known-good official source'
+
+ pending_set=set(pending_required)
+ missing=[s['id'] for s in missing_all if s['id'] not in pending_set]
+ complete=not missing
+ critical=[e for e in errors if e.get('required') and not e.get('had_baseline') and e.get('id') not in pending_set]
+ coverage=complete and not critical
+ status.update(version=4,blocked_pages={k:sorted(set(v)) for k,v in blocked.items()},generated_at=now(),baseline_complete=complete,coverage_ok=coverage,summary={'checked':len(sources),'required_sources':len(req),'new_baselines':baseline,'relevant_changes':len(set(changed)),'blocked_pages':len(blocked),'errors':len(errors),'critical_errors':len(critical),'missing_required':len(missing),'pending_required_baselines':len(pending_required),'fact_updates':len(fact_changes),'browser_fallback_available':bool(chrome())})
  spath.write_text(json.dumps(status,ensure_ascii=False,indent=2),encoding='utf-8'); fpath.write_text(json.dumps(facts,ensure_ascii=False,indent=2),encoding='utf-8'); log['changes']=log.get('changes',[])[:300]; lpath.write_text(json.dumps(log,ensure_ascii=False,indent=2),encoding='utf-8')
- report={'generated_at':now(),'baseline_complete':complete,'coverage_ok':coverage,'browser_fallback_available':bool(chrome()),'required_sources':len(req),'missing_required':missing,'changed_sources':sorted(set(changed)),'blocked_pages':status['blocked_pages'],'errors':errors,'critical_errors':critical,'fact_updates':fact_changes}; Path('monitor/report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8'); print(json.dumps(status['summary'],ensure_ascii=False))
+ report={'generated_at':now(),'baseline_complete':complete,'coverage_ok':coverage,'browser_fallback_available':bool(chrome()),'required_sources':len(req),'missing_required':missing,'pending_required_baselines':sorted(pending_required),'changed_sources':sorted(set(changed)),'blocked_pages':status['blocked_pages'],'errors':errors,'critical_errors':critical,'fact_updates':fact_changes}; Path('monitor/report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8'); print(json.dumps(status['summary'],ensure_ascii=False))
 if __name__=='__main__': main()

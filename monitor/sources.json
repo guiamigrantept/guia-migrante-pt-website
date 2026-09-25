@@ -231,24 +231,33 @@
       "url": "https://aima.gov.pt/pt/decreto-regulamentar-da-lei-de-estrangeiros-alteracoes/perguntas-frequentes",
       "domain": "aima.gov.pt",
       "pages": [
+        "aima-agendamento-problemas.html",
+        "contactos.html",
+        "en/aima-agendamento-problemas.html",
+        "en/contactos.html",
         "en/legalizacao.html",
         "index.html",
         "legalizacao.html"
       ],
       "watch_terms": [
+        "agendamento",
+        "agendamentos",
         "aima",
+        "aima.",
+        "apenas",
+        "appointment",
+        "appointment.",
         "appointments",
+        "canais",
+        "channels",
+        "channels.",
+        "como",
         "concessão",
         "confirmar",
         "consultar",
         "contact",
         "correta",
-        "form",
-        "geral",
-        "in-person",
-        "nova",
-        "oficial",
-        "renovação"
+        "fazer"
       ],
       "risk": "high",
       "required": true
@@ -359,15 +368,32 @@
       "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
       "domain": "aima.gov.pt",
       "pages": [
+        "en/legalizacao.html",
         "en/situacoes-urgentes.html",
-        "situacoes-urgentes.html"
+        "en/titulo-residencia-renovacao-segunda-via.html",
+        "legalizacao.html",
+        "situacoes-urgentes.html",
+        "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
         "aima",
+        "através",
+        "canal",
+        "channel",
+        "contact",
+        "contacto.",
         "dados",
+        "form.",
+        "formulário",
+        "instructions",
+        "instrução",
+        "instruções",
+        "oficiais",
+        "oficial",
+        "peça",
         "replacement",
-        "residence-card",
-        "título"
+        "request",
+        "residence-card"
       ],
       "risk": "high",
       "required": true
@@ -401,6 +427,8 @@
       "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
       "domain": "aima.gov.pt",
       "pages": [
+        "aima-agendamento-problemas.html",
+        "en/aima-agendamento-problemas.html",
         "en/ue-familiares.html",
         "ue-familiares.html"
       ],
@@ -408,8 +436,21 @@
         "agendamento",
         "aima",
         "appointments",
+        "canal",
+        "case",
+        "channel",
+        "contact",
+        "contacto",
         "familiares",
-        "family-member"
+        "family-member",
+        "follow",
+        "form",
+        "formulário",
+        "indicado",
+        "notification.",
+        "notificação.",
+        "oficial",
+        "processo"
       ],
       "risk": "high",
       "required": true
@@ -419,16 +460,30 @@
       "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
       "domain": "aima.gov.pt",
       "pages": [
+        "en/legalizacao.html",
         "en/mudanca-saida.html",
+        "legalizacao.html",
         "mudanca-saida.html"
       ],
       "watch_terms": [
         "aima",
+        "como",
+        "confirmar",
+        "consta",
         "contact",
+        "document",
+        "documento",
+        "enter",
+        "esta",
+        "exactly",
+        "exatamente",
         "form",
         "formulário",
-        "title",
-        "título"
+        "indicação",
+        "number",
+        "número",
+        "preencha",
+        "shown"
       ],
       "risk": "high",
       "required": true
@@ -439,16 +494,29 @@
       "domain": "aima.gov.pt",
       "pages": [
         "en/legalizacao.html",
-        "legalizacao.html"
+        "en/titulo-residencia-renovacao-segunda-via.html",
+        "legalizacao.html",
+        "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
+        "2025",
         "2026",
         "aima",
+        "atual",
         "atualização",
+        "availability",
         "concessão",
+        "current",
+        "disponibilidade",
+        "does",
+        "expirados",
+        "expired",
+        "funcionar",
+        "june",
         "nova",
-        "renovação",
-        "update"
+        "permits",
+        "portal",
+        "renewal"
       ],
       "risk": "high",
       "required": true
@@ -466,6 +534,27 @@
         "aima",
         "extension",
         "prorrogação"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_d1df42ba74b1",
+      "url": "https://aima.gov.pt/pt/perguntas-frequentes-faq-s",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "contactos.html",
+        "en/contactos.html"
+      ],
+      "watch_terms": [
+        "aima",
+        "contactos",
+        "contacts",
+        "number",
+        "oficiais",
+        "oficial",
+        "phone",
+        "telefone"
       ],
       "risk": "high",
       "required": true
@@ -492,6 +581,34 @@
         "visa",
         "visto",
         "waiver"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_a9b3512989a1",
+      "url": "https://aima.gov.pt/pt/temas-transversais/meios-de-subsistencia",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "en/reagrupamento-familiar.html",
+        "reagrupamento-familiar.html"
+      ],
+      "watch_terms": [
+        "aima",
+        "como",
+        "means",
+        "meios",
+        "minimum",
+        "mínimo",
+        "percentagens",
+        "percentages",
+        "reference.",
+        "referência.",
+        "salário",
+        "subsistence",
+        "subsistência",
+        "uses",
+        "wage"
       ],
       "risk": "high",
       "required": true
@@ -787,19 +904,34 @@
       "required": true
     },
     {
-      "id": "src_46b89dc01528",
-      "url": "https://aima.gov.pt/pt/viver/reagrupamento-familiar",
+      "id": "src_9826216c7f46",
+      "url": "https://aima.gov.pt/pt/viver/perguntas-frequentes-portal-de-servicos",
       "domain": "aima.gov.pt",
       "pages": [
-        "en/legalizacao.html",
-        "legalizacao.html"
+        "en/familia.html",
+        "en/reagrupamento-familiar.html",
+        "familia.html",
+        "reagrupamento-familiar.html"
       ],
       "watch_terms": [
+        "abrangido.",
         "aima",
-        "familiar",
-        "family",
-        "reagrupamento",
-        "reunification"
+        "case",
+        "caso",
+        "consultar",
+        "covered.",
+        "critérios",
+        "deve",
+        "eligibility",
+        "está",
+        "oficial",
+        "only",
+        "open",
+        "portal",
+        "próprios",
+        "quando",
+        "rules",
+        "services"
       ],
       "risk": "high",
       "required": true
@@ -810,12 +942,22 @@
       "domain": "aima.gov.pt",
       "pages": [
         "en/familia.html",
-        "familia.html"
+        "en/reagrupamento-familiar.html",
+        "familia.html",
+        "reagrupamento-familiar.html"
       ],
       "watch_terms": [
+        "aima",
+        "already",
+        "article",
+        "está",
         "familiar",
         "family",
+        "member",
+        "oficial",
         "portugal",
+        "procedimento",
+        "procedure",
         "reagrupamento",
         "reunification"
       ],
@@ -828,12 +970,19 @@
       "domain": "aima.gov.pt",
       "pages": [
         "en/familia.html",
-        "familia.html"
+        "en/reagrupamento-familiar.html",
+        "familia.html",
+        "reagrupamento-familiar.html"
       ],
       "watch_terms": [
+        "aima",
+        "article",
+        "está",
         "familiar",
         "family",
         "fora",
+        "member",
+        "oficial",
         "outside",
         "portugal",
         "reagrupamento",
@@ -921,13 +1070,32 @@
       "url": "https://contactenos.aima.gov.pt/contact-form",
       "domain": "contactenos.aima.gov.pt",
       "pages": [
-        "en/contactos.html"
+        "aima-agendamento-problemas.html",
+        "contactos.html",
+        "en/aima-agendamento-problemas.html",
+        "en/contactos.html",
+        "en/titulo-residencia-renovacao-segunda-via.html",
+        "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
+        "abrir",
         "aima",
+        "assunto",
+        "através",
+        "certo.",
+        "comece",
         "contact",
+        "contacto",
+        "contacto.",
+        "correct",
+        "disponível",
+        "estiver",
         "form",
-        "open"
+        "form.",
+        "formulário",
+        "issue",
+        "listed",
+        "oficial"
       ],
       "risk": "medium",
       "required": false
@@ -1004,11 +1172,19 @@
       ],
       "watch_terms": [
         "authority",
+        "confirmar",
+        "does",
         "finanças",
+        "issue",
+        "landlord",
+        "passa",
+        "receipt",
         "receipts",
+        "recibo",
         "recibos",
         "renda",
-        "rent"
+        "rent",
+        "senhorio"
       ],
       "risk": "medium",
       "required": false
@@ -1286,18 +1462,26 @@
       "domain": "portal-renovacoes.aima.gov.pt",
       "pages": [
         "en/legalizacao.html",
-        "legalizacao.html"
+        "en/titulo-residencia-renovacao-segunda-via.html",
+        "legalizacao.html",
+        "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
+        "2025",
         "2026",
         "abrir",
         "concessão",
+        "desde",
+        "from",
+        "july",
         "nova",
         "open",
+        "permits",
         "portal",
         "renewal",
         "renovação",
-        "renovações"
+        "renovações",
+        "títulos"
       ],
       "risk": "medium",
       "required": false
@@ -1587,11 +1771,16 @@
       ],
       "watch_terms": [
         "complaint",
+        "denunciar",
+        "employer",
         "employment",
         "fazer",
         "file",
         "laboral",
-        "queixa"
+        "queixa",
+        "quer",
+        "report",
+        "want"
       ],
       "risk": "high",
       "required": true
@@ -1714,8 +1903,13 @@
         "trabalho-direitos.html"
       ],
       "watch_terms": [
+        "atraso",
         "informações",
-        "pedir"
+        "late",
+        "pedir",
+        "salary",
+        "salário",
+        "unpaid"
       ],
       "risk": "high",
       "required": true

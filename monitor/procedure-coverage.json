@@ -9,10 +9,10 @@
         {
           "page": "legalizacao.html",
           "exists": true,
-          "official_sources": 22,
+          "official_sources": 24,
           "source_ids": [
+            "src_0bb3fdad0761",
             "src_2b0880736b8a",
-            "src_46b89dc01528",
             "src_482b94cf7722",
             "src_48b0a401cee7",
             "src_6be8c3783532",
@@ -20,9 +20,19 @@
             "src_81f1d1f37f02",
             "src_863b5ed4598b",
             "src_8673ad284f9a",
+            "src_cbed4d38b3bf",
             "src_f0b1b75348f3",
             "src_f1f0aab11199",
             "src_f7af44a4f429"
+          ]
+        },
+        {
+          "page": "titulo-residencia-renovacao-segunda-via.html",
+          "exists": true,
+          "official_sources": 4,
+          "source_ids": [
+            "src_2b0880736b8a",
+            "src_cbed4d38b3bf"
           ]
         }
       ],
@@ -80,9 +90,10 @@
         {
           "page": "familia.html",
           "exists": true,
-          "official_sources": 6,
+          "official_sources": 8,
           "source_ids": [
             "src_3a0611c027d0",
+            "src_9826216c7f46",
             "src_db343c2f6967",
             "src_e392a810f5d3"
           ]
@@ -247,12 +258,24 @@
         {
           "page": "contactos.html",
           "exists": true,
-          "official_sources": 6,
+          "official_sources": 11,
           "source_ids": [
             "src_064cff7e6d52",
             "src_3504f1eb6b62",
             "src_65c308f94048",
-            "src_c32f3c43a12c"
+            "src_81f1d1f37f02",
+            "src_c32f3c43a12c",
+            "src_d1df42ba74b1"
+          ]
+        },
+        {
+          "page": "aima-agendamento-problemas.html",
+          "exists": true,
+          "official_sources": 6,
+          "source_ids": [
+            "src_65c308f94048",
+            "src_81f1d1f37f02",
+            "src_984aab257167"
           ]
         }
       ],
@@ -350,6 +373,45 @@
         "deadlines",
         "country_exceptions",
         "documents"
+      ]
+    },
+    "reagrupamento_familiar": {
+      "priority": "critical",
+      "pages": [
+        {
+          "page": "reagrupamento-familiar.html",
+          "exists": true,
+          "official_sources": 8,
+          "source_ids": [
+            "src_3a0611c027d0",
+            "src_9826216c7f46",
+            "src_a9b3512989a1",
+            "src_db343c2f6967"
+          ]
+        },
+        {
+          "page": "familia.html",
+          "exists": true,
+          "official_sources": 8,
+          "source_ids": [
+            "src_3a0611c027d0",
+            "src_9826216c7f46",
+            "src_db343c2f6967",
+            "src_e392a810f5d3"
+          ]
+        }
+      ],
+      "auto_fact_ids": [
+        "aima_phone",
+        "aima_hours"
+      ],
+      "review_required_for": [
+        "eligibility",
+        "family_relationship",
+        "document_requirements",
+        "means_of_subsistence",
+        "channel_availability",
+        "exceptions"
       ]
     }
   }

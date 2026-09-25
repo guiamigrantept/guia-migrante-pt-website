@@ -92,9 +92,30 @@ def is_related_guides_only(old_text: str, new_text: str) -> bool:
     return old == new
 
 
+def strip_related_service_cards(lines: list[str]) -> list[str]:
+    # gov.pt service pages include a trailing recommendation block headed
+    # "Serviços/Services". Its cards can be reordered without any change to
+    # the monitored procedure. Only strip a late-page block that ends at the
+    # "Temas/Themes" or responsible-entity metadata section.
+    lows = [x.casefold() for x in lines]
+    for i in range(len(lines) - 1, -1, -1):
+        if lows[i] not in {'serviços', 'servicos', 'services'}:
+            continue
+        if i < len(lines) // 2:
+            continue
+        end = next(
+            (j for j in range(i + 1, len(lines))
+             if lows[j] in {'temas', 'themes', 'entidade responsável', 'entidade responsavel', 'responsible entity'}),
+            None,
+        )
+        if end is not None:
+            return lines[:i] + lines[end:]
+    return lines
+
+
 def is_service_metadata_only(old_text: str, new_text: str) -> bool:
-    old = normalize_service_metadata(compact_lines(old_text))
-    new = normalize_service_metadata(compact_lines(new_text))
+    old = strip_related_service_cards(normalize_service_metadata(compact_lines(old_text)))
+    new = strip_related_service_cards(normalize_service_metadata(compact_lines(new_text)))
     return old == new
 
 

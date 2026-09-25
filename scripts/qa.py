@@ -20,6 +20,10 @@ for rel,f in relmap.items():
     if f.name!='404.html':
         if len(soup.find_all('main'))!=1: problems.append(f'{rel}: expected one <main>')
         if len(soup.find_all('h1'))!=1: problems.append(f'{rel}: expected one <h1>')
+    for a in soup.find_all('a',href=True):
+        href=a.get('href','').strip()
+        if href.startswith(('https://www2.gov.pt/','http://www2.gov.pt/')):
+            problems.append(f'{rel}: legacy gov.pt URL must use www.gov.pt: {href}')
     for img in soup.find_all('img'):
         if not img.has_attr('alt'): problems.append(f'{rel}: image without alt')
     for b in soup.find_all('button'):

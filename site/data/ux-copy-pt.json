@@ -12,7 +12,13 @@
     "close": "Fechar",
     "question": "O que procura?",
     "placeholder": "Ex.: renovar residência, NIF, nacionalidade...",
-    "hints": ["NIF", "Renovação", "AIMA", "Nacionalidade", "CLAIM"],
+    "hints": [
+      "NIF",
+      "Renovação",
+      "AIMA",
+      "Nacionalidade",
+      "CLAIM"
+    ],
     "larger_text": "A+ Aumentar texto",
     "high_contrast": "◐ Alto contraste",
     "no_results": "Não encontrámos uma correspondência direta.",
@@ -33,17 +39,52 @@
     "template": "{done} de {total} passos marcados como concluídos · {pct}%"
   },
   "home": {
-    "kicker": "Comece pelo seu problema, não pela entidade",
+    "kicker": "Comece pelo problema, não pela entidade",
     "title": "O que precisa de resolver agora?",
-    "lead": "Não precisa de saber qual entidade procurar. Escolha a situação e encaminhamos para o conteúdo certo.",
+    "lead": "Escolha a sua situação e abrimos diretamente o conteúdo mais útil.",
     "intents": [
-      {"icon":"🧭","title":"Cheguei agora","text":"Quero organizar os primeiros passos","value":"start"},
-      {"icon":"🪪","title":"Residência","text":"Preciso de tratar da AIMA ou do meu título","value":"residence"},
-      {"icon":"↻","title":"Renovar","text":"O meu título está a expirar ou expirou","value":"renew"},
-      {"icon":"💼","title":"Trabalho","text":"NISS, Segurança Social e documentação","value":"work"},
-      {"icon":"✚","title":"Saúde","text":"Número de utente e centro de saúde","value":"health"},
-      {"icon":"PT","title":"Nacionalidade","text":"Quero perceber qual via se aplica","value":"nationality"},
-      {"icon":"?","title":"Não sei","text":"Quero responder a 3 perguntas rápidas","value":"guide"}
+      {
+        "icon": "🧭",
+        "title": "Cheguei agora",
+        "text": "Organizar os primeiros passos",
+        "value": "start"
+      },
+      {
+        "icon": "🪪",
+        "title": "Problema com a AIMA",
+        "text": "Agendamento, processo ou falta de resposta",
+        "value": "residence"
+      },
+      {
+        "icon": "↻",
+        "title": "Renovar residência",
+        "text": "Cartão a caducar, caducado, perdido ou 2.ª via",
+        "value": "renew"
+      },
+      {
+        "icon": "💼",
+        "title": "Trabalho e direitos",
+        "text": "Contrato, NISS, Segurança Social e direitos laborais",
+        "value": "work"
+      },
+      {
+        "icon": "✚",
+        "title": "NIF, NISS e SNS",
+        "text": "Documentos e serviços essenciais",
+        "value": "health"
+      },
+      {
+        "icon": "PT",
+        "title": "Nacionalidade",
+        "text": "Identificar o percurso aplicável",
+        "value": "nationality"
+      },
+      {
+        "icon": "?",
+        "title": "Não sei por onde começar",
+        "text": "Responder a 3 perguntas rápidas",
+        "value": "guide"
+      }
     ],
     "install_title": "Adicionar o Guia ao ecrã inicial",
     "install_text": "Abra como uma app e tenha acesso mais rápido às páginas principais.",
@@ -66,48 +107,139 @@
         "question": "Onde está neste momento?",
         "help": "Isto serve apenas para ordenar os conteúdos.",
         "choices": [
-          {"value":"portugal","label":"Já estou em Portugal"},
-          {"value":"outside","label":"Ainda estou fora de Portugal"}
+          {
+            "value": "portugal",
+            "label": "Já estou em Portugal"
+          },
+          {
+            "value": "outside",
+            "label": "Ainda estou fora de Portugal"
+          }
         ]
       },
       {
         "question": "Qual é o seu principal objetivo agora?",
         "help": "Escolha o assunto mais urgente.",
         "choices": [
-          {"value":"start","label":"Organizar os primeiros passos"},
-          {"value":"residence","label":"Tratar da residência / AIMA"},
-          {"value":"renew","label":"Renovar o meu título"},
-          {"value":"work","label":"Trabalhar / Segurança Social"},
-          {"value":"health","label":"Saúde / número de utente"},
-          {"value":"nationality","label":"Nacionalidade portuguesa"},
-          {"value":"family","label":"Família / filhos"},
-          {"value":"help","label":"Preciso de apoio presencial"}
+          {
+            "value": "start",
+            "label": "Organizar os primeiros passos"
+          },
+          {
+            "value": "residence",
+            "label": "Tratar da residência / AIMA"
+          },
+          {
+            "value": "renew",
+            "label": "Renovar o meu título"
+          },
+          {
+            "value": "work",
+            "label": "Trabalhar / Segurança Social"
+          },
+          {
+            "value": "health",
+            "label": "Saúde / número de utente"
+          },
+          {
+            "value": "nationality",
+            "label": "Nacionalidade portuguesa"
+          },
+          {
+            "value": "family",
+            "label": "Família / filhos"
+          },
+          {
+            "value": "help",
+            "label": "Preciso de apoio presencial"
+          }
         ]
       },
       {
         "question": "Já tem alguns documentos essenciais?",
         "help": "Selecione a opção que melhor descreve a sua situação.",
         "choices": [
-          {"value":"none","label":"Ainda não tenho NIF, NISS nem número de utente"},
-          {"value":"some","label":"Já tenho pelo menos um deles"},
-          {"value":"most","label":"Já tenho os documentos essenciais"}
+          {
+            "value": "none",
+            "label": "Ainda não tenho NIF, NISS nem número de utente"
+          },
+          {
+            "value": "some",
+            "label": "Já tenho pelo menos um deles"
+          },
+          {
+            "value": "most",
+            "label": "Já tenho os documentos essenciais"
+          }
         ]
       }
     ],
     "results": {
-      "outside": {"title":"Confirme primeiro a via de entrada adequada","text":"Vistos e condições de entrada dependem do objetivo e da nacionalidade.","url":"legalizacao.html#vias"},
-      "none": {"title":"Organize os identificadores essenciais","text":"Comece por NIF e veja se o serviço conjunto NIF + NISS + Utente se aplica.","url":"dia-a-dia.html"},
-      "some": {"title":"Complete os documentos essenciais em falta","text":"Use a checklist gratuita para ver o que já tem.","url":"ferramentas.html#checklist"},
-      "start": {"title":"Siga o roteiro dos primeiros 30 dias","text":"Use uma ordem prática e confirme cada passo nas fontes oficiais.","url":"index.html#roteiro"},
-      "residence": {"title":"Confirme a sua via de residência","text":"Primeira concessão, renovação e regime transitório são procedimentos diferentes.","url":"legalizacao.html"},
-      "renew": {"title":"Veja as regras atuais de renovação","text":"Confirme se o seu título e a data estão abrangidos pelo portal atual.","url":"legalizacao.html#renovacoes"},
-      "work": {"title":"Organize NISS e situação profissional","text":"Depois confirme a via de residência correspondente ao seu caso.","url":"dia-a-dia.html#niss"},
-      "health": {"title":"Trate do SNS / número de utente","text":"Veja atribuição do número e inscrição no centro de saúde.","url":"dia-a-dia.html#sns"},
-      "nationality": {"title":"Identifique a sua via de nacionalidade","text":"Residência, casamento e descendência têm requisitos diferentes.","url":"nacionalidade.html"},
-      "family": {"title":"Veja família, residência e serviços do dia a dia","text":"Comece pelos documentos e pelo fundamento familiar aplicável.","url":"legalizacao.html#vias"},
-      "help": {"title":"Procure apoio presencial adequado","text":"CLAIM pode orientar localmente; AIMA trata processos migratórios.","url":"contactos.html"},
-      "nearby": {"title":"Encontre o contacto certo perto de si","text":"Use Lojas AIMA, CLAIM e outros canais apenas quando correspondem ao assunto.","url":"contactos.html"},
-      "save": {"title":"Guarde o seu progresso sem conta","text":"A checklist fica apenas neste dispositivo.","url":"ferramentas.html#checklist"}
+      "outside": {
+        "title": "Confirme primeiro a via de entrada adequada",
+        "text": "Vistos e condições de entrada dependem do objetivo e da nacionalidade.",
+        "url": "fora-de-portugal.html"
+      },
+      "none": {
+        "title": "Organize os identificadores essenciais",
+        "text": "Comece por NIF e veja se o serviço conjunto NIF + NISS + Utente se aplica.",
+        "url": "dia-a-dia.html"
+      },
+      "some": {
+        "title": "Complete os documentos essenciais em falta",
+        "text": "Use a checklist gratuita para ver o que já tem.",
+        "url": "ferramentas.html#checklist"
+      },
+      "start": {
+        "title": "Siga o roteiro dos primeiros 30 dias",
+        "text": "Use uma ordem prática e confirme cada passo nas fontes oficiais.",
+        "url": "index.html#roteiro"
+      },
+      "residence": {
+        "title": "Resolver um problema com a AIMA",
+        "text": "Veja canais, documentos e passos para agendamento, processo sem resposta ou acompanhamento.",
+        "url": "aima-agendamento-problemas.html"
+      },
+      "renew": {
+        "title": "Renovação, perda ou 2.ª via",
+        "text": "Distinga renovação, substituição do cartão e alteração de dados antes de avançar.",
+        "url": "titulo-residencia-renovacao-segunda-via.html"
+      },
+      "work": {
+        "title": "Trabalho e direitos",
+        "text": "Consulte contrato, NISS, Segurança Social e direitos laborais no percurso dedicado.",
+        "url": "trabalho-direitos.html"
+      },
+      "health": {
+        "title": "NIF, NISS e SNS",
+        "text": "Veja os documentos e serviços essenciais e confirme o que falta no seu caso.",
+        "url": "dia-a-dia.html"
+      },
+      "nationality": {
+        "title": "Identifique a sua via de nacionalidade",
+        "text": "Residência, casamento e descendência têm requisitos diferentes.",
+        "url": "nacionalidade.html"
+      },
+      "family": {
+        "title": "Escolha o regime familiar correto",
+        "text": "Reagrupamento e familiar de cidadão UE/português têm percursos diferentes.",
+        "url": "familia.html"
+      },
+      "help": {
+        "title": "Procure apoio presencial adequado",
+        "text": "CLAIM pode orientar localmente; AIMA trata processos migratórios.",
+        "url": "contactos.html"
+      },
+      "nearby": {
+        "title": "Encontre o contacto certo perto de si",
+        "text": "Use Lojas AIMA, CLAIM e outros canais apenas quando correspondem ao assunto.",
+        "url": "contactos.html"
+      },
+      "save": {
+        "title": "Guarde o seu progresso sem conta",
+        "text": "A checklist fica apenas neste dispositivo.",
+        "url": "ferramentas.html#checklist"
+      }
     }
   }
 }

@@ -30,27 +30,28 @@ for rel,f in relmap.items():
     for b in soup.find_all('button'):
         if not (b.get('aria-label') or b.get_text(' ',strip=True)): problems.append(f'{rel}: button without accessible name')
 
-    robots=soup.find('meta',attrs={'name':'robots'})
-    robots_content=((robots.get('content') or '').lower() if robots else '')
-    if f.name in private_names:
-        if 'noindex' not in robots_content:
-            problems.append(f'{rel}: private/error page must be noindex')
-    else:
-        title=soup.find('title')
-        desc=soup.find('meta',attrs={'name':'description'})
-        canonical=soup.find('link',rel=lambda v: v and 'canonical' in v)
-        og_title=soup.find('meta',attrs={'property':'og:title'})
-        og_desc=soup.find('meta',attrs={'property':'og:description'})
-        og_url=soup.find('meta',attrs={'property':'og:url'})
-        og_image=soup.find('meta',attrs={'property':'og:image'})
-        if not title or not title.get_text(strip=True): problems.append(f'{rel}: missing page title')
-        if not desc or not (desc.get('content') or '').strip(): problems.append(f'{rel}: missing meta description')
-        if not canonical or not (canonical.get('href') or '').startswith(base+'/'): problems.append(f'{rel}: missing/non-production canonical')
-        if not og_title or not (og_title.get('content') or '').strip(): problems.append(f'{rel}: missing og:title')
-        if not og_desc or not (og_desc.get('content') or '').strip(): problems.append(f'{rel}: missing og:description')
-        if not og_url or not (og_url.get('content') or '').startswith(base+'/'): problems.append(f'{rel}: missing/non-production og:url')
-        if not og_image or not (og_image.get('content') or '').startswith(base+'/'): problems.append(f'{rel}: missing/non-absolute og:image')
-        if 'noindex' in robots_content: problems.append(f'{rel}: public page is noindex')
+    if not source_monitor_mode:
+        robots=soup.find('meta',attrs={'name':'robots'})
+        robots_content=((robots.get('content') or '').lower() if robots else '')
+        if f.name in private_names:
+            if 'noindex' not in robots_content:
+                problems.append(f'{rel}: private/error page must be noindex')
+        else:
+            title=soup.find('title')
+            desc=soup.find('meta',attrs={'name':'description'})
+            canonical=soup.find('link',rel=lambda v: v and 'canonical' in v)
+            og_title=soup.find('meta',attrs={'property':'og:title'})
+            og_desc=soup.find('meta',attrs={'property':'og:description'})
+            og_url=soup.find('meta',attrs={'property':'og:url'})
+            og_image=soup.find('meta',attrs={'property':'og:image'})
+            if not title or not title.get_text(strip=True): problems.append(f'{rel}: missing page title')
+            if not desc or not (desc.get('content') or '').strip(): problems.append(f'{rel}: missing meta description')
+            if not canonical or not (canonical.get('href') or '').startswith(base+'/'): problems.append(f'{rel}: missing/non-production canonical')
+            if not og_title or not (og_title.get('content') or '').strip(): problems.append(f'{rel}: missing og:title')
+            if not og_desc or not (og_desc.get('content') or '').strip(): problems.append(f'{rel}: missing og:description')
+            if not og_url or not (og_url.get('content') or '').startswith(base+'/'): problems.append(f'{rel}: missing/non-production og:url')
+            if not og_image or not (og_image.get('content') or '').startswith(base+'/'): problems.append(f'{rel}: missing/non-absolute og:image')
+            if 'noindex' in robots_content: problems.append(f'{rel}: public page is noindex')
 
 for rel,f in relmap.items():
     soup=BeautifulSoup(f.read_text(encoding='utf-8'),'html.parser')
@@ -187,15 +188,16 @@ else:
     except Exception as exc:
         problems.append(f'data/locales.json: invalid JSON/configuration ({exc})')
 
-sitemap=site/'sitemap.xml'
-if not sitemap.exists():
-    problems.append('sitemap.xml: missing')
-else:
-    sitemap_text=sitemap.read_text(encoding='utf-8')
-    for private in ['admin-mensagens.html','admin-estatisticas.html','404.html']:
-        if private in sitemap_text: problems.append(f'sitemap.xml: private/error page included ({private})')
-    if 'hreflang="x-default"' not in sitemap_text:
-        problems.append('sitemap.xml: missing x-default hreflang')
+if not source_monitor_mode:
+    sitemap=site/'sitemap.xml'
+    if not sitemap.exists():
+        problems.append('sitemap.xml: missing')
+    else:
+        sitemap_text=sitemap.read_text(encoding='utf-8')
+        for private in ['admin-mensagens.html','admin-estatisticas.html','404.html']:
+            if private in sitemap_text: problems.append(f'sitemap.xml: private/error page included ({private})')
+        if 'hreflang="x-default"' not in sitemap_text:
+            problems.append('sitemap.xml: missing x-default hreflang')
 
 for required in ['language-switcher.js','language-switcher.css','runtime-inline-i18n.js']:
     if not (site/required).exists(): problems.append(f'{required}: missing multilingual asset')

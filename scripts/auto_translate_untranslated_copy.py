@@ -153,6 +153,27 @@ def translate_batch(strings: list[str], target: str) -> dict[str, str]:
     return out
 
 
+def translate_batch_resilient(strings: list[str], target: str, depth: int = 0) -> dict[str, str]:
+    """Translate a batch, splitting it when the provider rejects a larger request.
+
+    The public draft translation endpoint can intermittently fail for one language
+    or payload size while succeeding for others. Splitting keeps one transient
+    batch from aborting the whole locale build; genuinely unavailable single
+    requests still fail and are reported by the caller.
+    """
+    try:
+        return translate_batch(strings, target)
+    except Exception:
+        if len(strings) <= 1:
+            raise
+        mid = max(1, len(strings) // 2)
+        left = translate_batch_resilient(strings[:mid], target, depth + 1)
+        time.sleep(min(1.0 + depth * 0.5, 3.0))
+        right = translate_batch_resilient(strings[mid:], target, depth + 1)
+        left.update(right)
+        return left
+
+
 def preserve_outer_whitespace(original: str, translated: str) -> str:
     prefix = original[: len(original) - len(original.lstrip())]
     suffix = original[len(original.rstrip()):]
@@ -211,7 +232,7 @@ def main():
 
         for n, batch in enumerate(batches, 1):
             try:
-                translated_map.update(translate_batch(batch, code))
+                translated_map.update(translate_batch_resilient(batch, code))
                 print(f'  {code}: translated batch {n}/{len(batches)} ({len(batch)} strings)')
             except Exception as exc:
                 failures.append({'batch': n, 'size': len(batch), 'error': str(exc)})

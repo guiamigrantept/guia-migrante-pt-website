@@ -232,9 +232,7 @@
       "domain": "aima.gov.pt",
       "pages": [
         "aima-agendamento-problemas.html",
-        "contactos.html",
         "en/aima-agendamento-problemas.html",
-        "en/contactos.html",
         "en/legalizacao.html",
         "index.html",
         "legalizacao.html"
@@ -249,7 +247,6 @@
         "appointment.",
         "appointments",
         "canais",
-        "channels",
         "channels.",
         "como",
         "concessão",
@@ -257,7 +254,8 @@
         "consultar",
         "contact",
         "correta",
-        "fazer"
+        "fazer",
+        "form"
       ],
       "risk": "high",
       "required": true
@@ -368,18 +366,14 @@
       "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
       "domain": "aima.gov.pt",
       "pages": [
-        "en/legalizacao.html",
         "en/situacoes-urgentes.html",
         "en/titulo-residencia-renovacao-segunda-via.html",
-        "legalizacao.html",
         "situacoes-urgentes.html",
         "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
         "aima",
         "através",
-        "canal",
-        "channel",
         "contact",
         "contacto.",
         "dados",
@@ -387,13 +381,13 @@
         "formulário",
         "instructions",
         "instrução",
-        "instruções",
-        "oficiais",
         "oficial",
         "peça",
         "replacement",
         "request",
-        "residence-card"
+        "residence-card",
+        "through",
+        "título"
       ],
       "risk": "high",
       "required": true
@@ -460,30 +454,16 @@
       "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
       "domain": "aima.gov.pt",
       "pages": [
-        "en/legalizacao.html",
         "en/mudanca-saida.html",
-        "legalizacao.html",
         "mudanca-saida.html"
       ],
       "watch_terms": [
         "aima",
-        "como",
-        "confirmar",
-        "consta",
         "contact",
-        "document",
-        "documento",
-        "enter",
-        "esta",
-        "exactly",
-        "exatamente",
         "form",
         "formulário",
-        "indicação",
-        "number",
-        "número",
-        "preencha",
-        "shown"
+        "title",
+        "título"
       ],
       "risk": "high",
       "required": true
@@ -534,27 +514,6 @@
         "aima",
         "extension",
         "prorrogação"
-      ],
-      "risk": "high",
-      "required": true
-    },
-    {
-      "id": "src_d1df42ba74b1",
-      "url": "https://aima.gov.pt/pt/perguntas-frequentes-faq-s",
-      "domain": "aima.gov.pt",
-      "pages": [
-        "contactos.html",
-        "en/contactos.html"
-      ],
-      "watch_terms": [
-        "aima",
-        "contactos",
-        "contacts",
-        "number",
-        "oficiais",
-        "oficial",
-        "phone",
-        "telefone"
       ],
       "risk": "high",
       "required": true
@@ -725,6 +684,23 @@
         "manifestação",
         "oficial",
         "página"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_7550184ea06d",
+      "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-subordinada-com-visto-de-residencia-art-88-o-n-o-1",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "trabalho.html"
+      ],
+      "watch_terms": [
+        "aima",
+        "residência",
+        "subordinado",
+        "trabalho",
+        "visto"
       ],
       "risk": "high",
       "required": true
@@ -908,9 +884,7 @@
       "url": "https://aima.gov.pt/pt/viver/perguntas-frequentes-portal-de-servicos",
       "domain": "aima.gov.pt",
       "pages": [
-        "en/familia.html",
         "en/reagrupamento-familiar.html",
-        "familia.html",
         "reagrupamento-familiar.html"
       ],
       "watch_terms": [
@@ -918,20 +892,17 @@
         "aima",
         "case",
         "caso",
-        "consultar",
         "covered.",
-        "critérios",
         "deve",
-        "eligibility",
         "está",
-        "oficial",
         "only",
-        "open",
         "portal",
-        "próprios",
         "quando",
-        "rules",
-        "services"
+        "services",
+        "serviços",
+        "usado",
+        "when",
+        "your"
       ],
       "risk": "high",
       "required": true
@@ -956,8 +927,6 @@
         "member",
         "oficial",
         "portugal",
-        "procedimento",
-        "procedure",
         "reagrupamento",
         "reunification"
       ],
@@ -1071,7 +1040,6 @@
       "domain": "contactenos.aima.gov.pt",
       "pages": [
         "aima-agendamento-problemas.html",
-        "contactos.html",
         "en/aima-agendamento-problemas.html",
         "en/contactos.html",
         "en/titulo-residencia-renovacao-segunda-via.html",
@@ -1083,19 +1051,19 @@
         "assunto",
         "através",
         "certo.",
-        "comece",
         "contact",
         "contacto",
         "contacto.",
         "correct",
-        "disponível",
-        "estiver",
         "form",
         "form.",
         "formulário",
-        "issue",
-        "listed",
-        "oficial"
+        "open",
+        "peça",
+        "replacement",
+        "request",
+        "subject.",
+        "through"
       ],
       "risk": "medium",
       "required": false
@@ -2250,10 +2218,17 @@
       ],
       "watch_terms": [
         "carta",
+        "carta.",
+        "conforme",
+        "consultar",
         "driving",
+        "emitiu",
         "estrangeira",
         "foreign",
         "licence",
+        "muda",
+        "país",
+        "regra",
         "tenho"
       ],
       "risk": "medium",

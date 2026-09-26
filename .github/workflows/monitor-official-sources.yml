@@ -20,6 +20,7 @@ on:
       - 'site/verified-facts.js'
       - 'site/update-health.js'
       - 'requirements-monitor.txt'
+      - 'scripts/qa.py'
       - '.github/workflows/monitor-official-sources.yml'
   schedule:
     - cron: '17 */3 * * *'

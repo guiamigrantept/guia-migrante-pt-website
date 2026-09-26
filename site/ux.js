@@ -15,6 +15,7 @@
 
   let t=safe;
   let searchIndexPromise=null;
+  let searchOpener=null;
   const norm=s=>(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
   const page=()=>location.pathname.split("/").filter(Boolean).pop()||"index.html";
   const fmt=(template,data)=>Object.entries(data).reduce((s,[k,v])=>s.replaceAll(`{${k}}`,String(v)),template||"");
@@ -38,13 +39,13 @@
     document.body.appendChild(overlay);
     const input=overlay.querySelector("#uxGlobalSearch"),results=overlay.querySelector("#uxSearchResults");
     overlay.querySelector(".ux-close").addEventListener("click",closeSearch);overlay.addEventListener("click",e=>{if(e.target===overlay)closeSearch();});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&overlay.classList.contains("open"))closeSearch();});
-    async function render(q){const items=await(searchIndexPromise||=(loadSearchIndex()));const nq=norm(q);const matches=nq?items.filter(item=>norm(`${item.title||""} ${item.text||""} ${item.keys||""}`).includes(nq)):items.slice(0,7);results.innerHTML=matches.length?matches.slice(0,10).map(item=>`<a class="ux-result" href="${item.url}"><span class="ux-result-icon">${item.code||"•"}</span><span><strong>${item.title||""}</strong><span>${item.text||""}</span></span><span class="ux-result-arrow">›</span></a>`).join(""):`<div class="ux-no-results">${t.search.no_results}<br>${t.search.try}</div>`;}
+    async function render(q){const items=await(searchIndexPromise||=(loadSearchIndex()));const tokens=norm(q).split(/\s+/).filter(Boolean);const ranked=tokens.length?items.map(item=>{const title=norm(item.title||""),keys=norm(item.keys||""),text=norm(item.text||""),all=`${title} ${keys} ${text}`;if(!tokens.every(token=>all.includes(token)))return null;const score=tokens.reduce((n,token)=>n+(title.includes(token)?5:0)+(keys.includes(token)?3:0)+(text.includes(token)?1:0),0);return{item,score};}).filter(Boolean).sort((a,b)=>b.score-a.score).map(x=>x.item):items.slice(0,7);results.innerHTML=ranked.length?ranked.slice(0,10).map(item=>`<a class="ux-result" href="${item.url}"><span class="ux-result-icon">${item.code||"•"}</span><span><strong>${item.title||""}</strong><span>${item.text||""}</span></span><span class="ux-result-arrow">›</span></a>`).join(""):`<div class="ux-no-results">${t.search.no_results}<br>${t.search.try}</div>`;}
     input.addEventListener("input",()=>render(input.value));overlay.querySelectorAll(".ux-search-hints button").forEach(b=>b.addEventListener("click",()=>{input.value=b.textContent;render(input.value);input.focus();}));
     overlay.querySelector("[data-ux-font]").addEventListener("click",()=>{document.body.classList.toggle("ux-large-text");saveSettings();toast(document.body.classList.contains("ux-large-text")?t.search.text_on:t.search.text_off);});
     overlay.querySelector("[data-ux-contrast]").addEventListener("click",()=>{document.body.classList.toggle("ux-high-contrast");saveSettings();toast(document.body.classList.contains("ux-high-contrast")?t.search.contrast_on:t.search.contrast_off);});render("");
   }
-  function openSearch(){buildSearch();const overlay=document.getElementById("uxSearchOverlay");overlay.classList.add("open");document.body.classList.add("ux-lock");setTimeout(()=>overlay.querySelector("#uxGlobalSearch").focus(),50);}
-  function closeSearch(){const overlay=document.getElementById("uxSearchOverlay");if(overlay)overlay.classList.remove("open");document.body.classList.remove("ux-lock");}
+  function openSearch(event){searchOpener=event?.currentTarget||document.activeElement;buildSearch();const overlay=document.getElementById("uxSearchOverlay");overlay.classList.add("open");document.body.classList.add("ux-lock");setTimeout(()=>overlay.querySelector("#uxGlobalSearch").focus(),50);}
+  function closeSearch(){const overlay=document.getElementById("uxSearchOverlay");if(overlay)overlay.classList.remove("open");document.body.classList.remove("ux-lock");if(searchOpener&&typeof searchOpener.focus==="function")searchOpener.focus();searchOpener=null;}
   function saveSettings(){localStorage.setItem(UX.settingsKey,JSON.stringify({large:document.body.classList.contains("ux-large-text"),contrast:document.body.classList.contains("ux-high-contrast")}));}
   function loadSettings(){try{const s=JSON.parse(localStorage.getItem(UX.settingsKey)||"{}");if(s.large)document.body.classList.add("ux-large-text");if(s.contrast)document.body.classList.add("ux-high-contrast");}catch{}}
 

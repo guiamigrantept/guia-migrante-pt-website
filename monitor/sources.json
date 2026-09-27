@@ -1110,6 +1110,23 @@
       "required": false
     },
     {
+      "id": "src_32f173d0d4e1",
+      "url": "https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/17-2026-1123539997",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "nacionalidade.html"
+      ],
+      "watch_terms": [
+        "2026",
+        "legal",
+        "nacionalidade",
+        "residência",
+        "retificação"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_e36005383a29",
       "url": "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996",
       "domain": "diariodarepublica.pt",
@@ -1118,7 +1135,9 @@
         "nacionalidade.html"
       ],
       "watch_terms": [
+        "15.º",
         "2026",
+        "artigo",
         "bisneto",
         "consultar",
         "great-grandchild",
@@ -1128,14 +1147,12 @@
         "nacionalidade",
         "naturalisation",
         "nenhum",
+        "norma",
         "organic",
         "orgânica",
         "originário",
         "país",
-        "português",
-        "residence",
-        "situations",
-        "tenho"
+        "português"
       ],
       "risk": "high",
       "required": true
@@ -1328,6 +1345,52 @@
         "non-resident",
         "resident",
         "residente"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_55765f903ba5",
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00054.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "pages": [
+        "impostos.html"
+      ],
+      "watch_terms": [
+        "finanças",
+        "obrigação",
+        "prazo"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_5c94ae949d3d",
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00307.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "pages": [
+        "impostos.html"
+      ],
+      "watch_terms": [
+        "finanças",
+        "fiscal",
+        "representação"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_d4c5a7e76503",
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00505.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "pages": [
+        "impostos.html"
+      ],
+      "watch_terms": [
+        "finanças",
+        "fiscal",
+        "parcial",
+        "residência"
       ],
       "risk": "medium",
       "required": false
@@ -1754,6 +1817,23 @@
       "required": false
     },
     {
+      "id": "src_bede7315e9ef",
+      "url": "https://www.dges.gov.pt/pt/faq/faqs-reconhecimento-de-graus-e-diplomas",
+      "domain": "www.dges.gov.pt",
+      "pages": [
+        "qualificacoes.html"
+      ],
+      "watch_terms": [
+        "custos",
+        "dges",
+        "frequentes",
+        "perguntas",
+        "prazos"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
       "id": "src_558a74079aff",
       "url": "https://www.dges.gov.pt/pt/pagina/reconhecimento?canal=Sou-Estudante",
       "domain": "www.dges.gov.pt",
@@ -1857,11 +1937,35 @@
         "qualificacoes.html"
       ],
       "watch_terms": [
+        "académico",
+        "autoridade",
+        "competente",
         "gov.pt",
+        "pagar",
         "professional",
         "profissionais",
+        "profissão",
+        "profissões",
         "qualifications",
-        "qualificações"
+        "qualificações",
+        "reconhecimento",
+        "regulamentada.",
+        "regulamentadas"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_06fc81b77210",
+      "url": "https://www.gov.pt/guias/ter-uma-crianca/licenca-parental",
+      "domain": "www.gov.pt",
+      "pages": [
+        "apoios-sociais.html"
+      ],
+      "watch_terms": [
+        "gov.pt",
+        "licença",
+        "parental"
       ],
       "risk": "high",
       "required": true
@@ -2141,6 +2245,21 @@
       "required": true
     },
     {
+      "id": "src_b257c9d151f0",
+      "url": "https://www.gov.pt/servicos/obter-informacoes-sobre-o-subsidio-de-doenca",
+      "domain": "www.gov.pt",
+      "pages": [
+        "apoios-sociais.html"
+      ],
+      "watch_terms": [
+        "doença",
+        "gov.pt",
+        "subsídio"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_b55923d59614",
       "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
       "domain": "www.gov.pt",
@@ -2308,6 +2427,22 @@
         "graus",
         "recognition",
         "reconhecimento"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_98fc5f38477c",
+      "url": "https://www.gov.pt/servicos/pedir-o-rendimento-social-de-insercao",
+      "domain": "www.gov.pt",
+      "pages": [
+        "apoios-sociais.html"
+      ],
+      "watch_terms": [
+        "gov.pt",
+        "inserção",
+        "rendimento",
+        "social"
       ],
       "risk": "high",
       "required": true
@@ -2516,6 +2651,21 @@
       "required": true
     },
     {
+      "id": "src_a03296df1147",
+      "url": "https://www.gov.pt/servicos/requerer-o-subsidio-de-desemprego",
+      "domain": "www.gov.pt",
+      "pages": [
+        "apoios-sociais.html"
+      ],
+      "watch_terms": [
+        "desemprego",
+        "gov.pt",
+        "subsídio"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_c56963332c91",
       "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
       "domain": "www.gov.pt",
@@ -2557,6 +2707,21 @@
         "país",
         "regra",
         "tenho"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_73176a671d41",
+      "url": "https://www.imt-ip.pt/condutores/reconhecimento/troca-de-titulo-de-conducao-estrangeiro/cartas-de-conducao-emitidas-pelos-paises-da-ocde-e-cplp",
+      "domain": "www.imt-ip.pt",
+      "pages": [
+        "carta-conducao.html"
+      ],
+      "watch_terms": [
+        "cartas",
+        "cplp",
+        "ocde"
       ],
       "risk": "medium",
       "required": false

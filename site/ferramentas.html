@@ -761,6 +761,39 @@
 
     .privacy-note{display:grid;grid-template-columns:35px 1fr;gap:10px;align-items:start;margin-top:17px;padding:13px;border-radius:12px;background:var(--success-soft);border:1px solid #a7f3d0;color:#065f46;font-size:.76rem}
     .privacy-note b{width:33px;height:33px;border-radius:10px;display:grid;place-items:center;background:white}
+
+    .tools-dashboard{padding:34px 0 18px;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+    .dashboard-head{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+    .dashboard-head .eyebrow{margin:0}
+    .dashboard-head h2{margin:0;color:var(--brand-dark);font-size:clamp(1.75rem,6vw,2.6rem);line-height:1.05;letter-spacing:-.035em}
+    .dashboard-head p{margin:0;max-width:760px;color:var(--muted);font-size:.86rem}
+    .tool-dashboard-grid{display:grid;grid-template-columns:1fr;gap:11px}
+    .tool-launch-card{display:grid;grid-template-columns:46px 1fr auto;gap:12px;align-items:center;border:1px solid var(--line);background:#fff;border-radius:17px;padding:15px;text-decoration:none;box-shadow:var(--shadow-sm);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+    .tool-launch-card:hover{transform:translateY(-2px);border-color:#bfdbfe;box-shadow:0 12px 30px rgba(15,23,42,.08)}
+    .tool-launch-icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand-dark);font-size:1.25rem;font-weight:950}
+    .tool-launch-card strong{display:block;color:var(--brand-dark);font-size:.9rem}
+    .tool-launch-card p{margin:3px 0 0;color:var(--muted);font-size:.72rem;line-height:1.45}
+    .tool-launch-arrow{color:var(--brand);font-size:1.35rem;font-weight:900}
+    .tool-launch-meta{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}
+    .tool-chip{display:inline-flex;align-items:center;min-height:22px;padding:3px 7px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);color:#64748b;font-size:.63rem;font-weight:850}
+
+    .resume-panel{display:none;margin-top:15px;border:1px solid #bfdbfe;background:linear-gradient(135deg,#eff6ff,#fff);border-radius:17px;padding:16px;box-shadow:var(--shadow-sm)}
+    .resume-panel.show{display:grid;gap:12px}
+    .resume-panel-top{display:flex;gap:11px;align-items:flex-start}
+    .resume-panel-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--brand);color:#fff;font-weight:950;flex:0 0 auto}
+    .resume-panel strong{display:block;color:var(--brand-dark);font-size:.88rem}
+    .resume-panel p{margin:4px 0 0;color:var(--muted);font-size:.74rem}
+    .resume-actions{display:flex;gap:8px;flex-wrap:wrap}
+
+    .tool-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+    .tool-meta span{display:inline-flex;align-items:center;min-height:25px;padding:4px 8px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);color:#64748b;font-size:.66rem;font-weight:850}
+    .tool-card{position:relative;overflow:hidden}
+    .tool-card::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(180deg,var(--brand),#60a5fa);opacity:.65}
+    .jump-nav a[aria-current="true"]{background:var(--brand);color:white;border-color:var(--brand)}
+    .progress-summary{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:4px}
+    .progress-summary strong{font-size:.82rem;color:var(--brand-dark)}
+    .progress-percent{font-size:.78rem;font-weight:900;color:var(--brand)}
+
     .print-only{display:none}
 
     @media print{
@@ -775,9 +808,11 @@
       .tools-hero-grid{grid-template-columns:1.18fr .82fr;gap:42px}
       .choice-grid{grid-template-columns:1fr 1fr}
       .form-grid.two{grid-template-columns:1fr 1fr}
+      .tool-dashboard-grid{grid-template-columns:1fr 1fr}
       .glossary-grid{grid-template-columns:1fr 1fr}
     }
     @media(min-width:980px){
+      .tool-dashboard-grid{grid-template-columns:repeat(3,1fr)}
       .glossary-grid{grid-template-columns:repeat(3,1fr)}
     }
 </style>
@@ -847,8 +882,8 @@
         <div>
           <div class="breadcrumbs"><a href="index.html">Início</a><span>›</span><span>Ferramentas</span></div>
           <span class="eyebrow">100% gratuitas · Sem registo</span>
-          <h1>Ferramentas para <span>organizar a vida em Portugal.</span></h1>
-          <p>Use o roteiro, a checklist, o contador de validade e os restantes recursos sem criar conta. As ferramentas servem para organização e encaminhamento — não substituem a decisão da entidade competente.</p>
+          <h1>Resolva uma tarefa de cada vez, <span>sem se perder na burocracia.</span></h1>
+          <p>Escolha o que precisa de fazer agora. O Guia ajuda a organizar próximos passos, documentos, prazos e entidades sem criar conta e sem enviar os seus dados para uma base de dados.</p>
           <div class="hero-actions">
             <a class="btn-primary" href="#roteiro-personalizado">Criar o meu roteiro →</a>
             <a class="btn-secondary" href="#checklist">Abrir checklist</a>
@@ -862,6 +897,57 @@
       </div>
     </section>
 
+    <section class="tools-dashboard" aria-labelledby="tools-dashboard-title">
+      <div class="container">
+        <div class="dashboard-head">
+          <span class="eyebrow">Escolha a tarefa</span>
+          <h2 id="tools-dashboard-title">O que quer resolver hoje?</h2>
+          <p>Entre diretamente na ferramenta certa. Pode voltar a esta página sempre que precisar — o progresso que for guardado fica apenas neste dispositivo.</p>
+        </div>
+
+        <div class="tool-dashboard-grid">
+          <a class="tool-launch-card" href="#roteiro-personalizado">
+            <span class="tool-launch-icon" aria-hidden="true">01</span>
+            <span><strong>Criar o meu roteiro</strong><p>Organizar próximos passos conforme o que já tem e o problema mais urgente.</p><span class="tool-launch-meta"><span class="tool-chip">~2 min</span><span class="tool-chip">Sem conta</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="tool-launch-card" href="#checklist">
+            <span class="tool-launch-icon" aria-hidden="true">✓</span>
+            <span><strong>Ver o que ainda me falta</strong><p>Checklist dos primeiros passos com progresso guardado no browser.</p><span class="tool-launch-meta"><span class="tool-chip">Progresso local</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="tool-launch-card" href="#documentos">
+            <span class="tool-launch-icon" aria-hidden="true">☰</span>
+            <span><strong>Preparar documentos</strong><p>Gerar uma lista-base por tema antes de confirmar a lista oficial.</p><span class="tool-launch-meta"><span class="tool-chip">Imprimível</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="tool-launch-card" href="#validade">
+            <span class="tool-launch-icon" aria-hidden="true">⌛</span>
+            <span><strong>Ver a validade de um documento</strong><p>Calcular quantos dias faltam ou passaram desde a data indicada.</p><span class="tool-launch-meta"><span class="tool-chip">Guarda localmente</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="tool-launch-card" href="#servico">
+            <span class="tool-launch-icon" aria-hidden="true">→</span>
+            <span><strong>Descobrir onde tratar</strong><p>Escolher o problema e perceber qual entidade ou canal procurar primeiro.</p><span class="tool-launch-meta"><span class="tool-chip">Encaminhamento</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="tool-launch-card" href="#glossario">
+            <span class="tool-launch-icon" aria-hidden="true">?</span>
+            <span><strong>Perceber uma sigla</strong><p>Pesquisar AIMA, NISS, CLAIM, CPLP e outros termos em linguagem simples.</p><span class="tool-launch-meta"><span class="tool-chip">Pesquisa rápida</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+        </div>
+
+        <div class="resume-panel" id="resumePanel" aria-live="polite">
+          <div class="resume-panel-top">
+            <span class="resume-panel-icon" aria-hidden="true">↺</span>
+            <div><strong>Continuar de onde ficou</strong><p id="resumeText">Tem progresso guardado neste dispositivo.</p></div>
+          </div>
+          <div class="resume-actions" id="resumeActions"></div>
+        </div>
+      </div>
+    </section>
+
     <div class="jump-wrap">
       <div class="container">
         <nav class="jump-nav" aria-label="Atalhos das ferramentas">
@@ -872,7 +958,7 @@
 
     <section class="tool-section" id="roteiro-personalizado">
       <div class="container">
-        <div class="tool-head"><span class="tool-kicker">Ferramenta 01</span><h2>Crie o seu roteiro de próximos passos</h2><p>Marque o que já tem e diga qual é a sua principal necessidade. O Guia organiza os passos seguintes por prioridade prática.</p></div>
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 01</span><h2>Crie o seu roteiro de próximos passos</h2><p>Marque o que já tem e diga qual é a sua principal necessidade. O Guia organiza os passos seguintes por prioridade prática.</p><div class="tool-meta"><span>~2 minutos</span><span>Não decide direitos</span><span>Resultado imediato</span></div></div>
         <div class="tool-card">
           <div class="form-grid two">
             <fieldset class="field" style="border:0;padding:0;margin:0">
@@ -916,9 +1002,10 @@
 
     <section class="tool-section white" id="checklist">
       <div class="container">
-        <div class="tool-head"><span class="tool-kicker">Ferramenta 02</span><h2>Checklist dos primeiros passos</h2><p>Marque o que já tratou. O progresso é guardado apenas neste browser para voltar mais tarde sem conta.</p></div>
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 02</span><h2>Checklist dos primeiros passos</h2><p>Marque o que já tratou. O progresso é guardado apenas neste browser para voltar mais tarde sem conta.</p><div class="tool-meta"><span>Progresso local</span><span>Sem conta</span></div></div>
         <div class="tool-card">
-          <div class="progress-shell"><div class="progress-bar" id="progressBar"></div></div>
+          <div class="progress-summary"><strong>O seu progresso</strong><span class="progress-percent" id="progressPercent">0%</span></div>
+          <div class="progress-shell" role="progressbar" aria-label="Progresso da checklist" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressShell"><div class="progress-bar" id="progressBar"></div></div>
           <div class="progress-text" id="progressText">0 de 8 concluídos</div>
           <div class="checklist" id="mainChecklist">
             <label class="check-row"><input type="checkbox" data-key="nif"><span><strong>NIF</strong><span>Identificação fiscal.</span></span></label>
@@ -938,7 +1025,7 @@
 
     <section class="tool-section" id="validade">
       <div class="container">
-        <div class="tool-head"><span class="tool-kicker">Ferramenta 03</span><h2>Contador de validade de documentos</h2><p>Introduza uma data e veja quantos dias faltam. É um organizador pessoal — não calcula automaticamente prazos legais de renovação.</p></div>
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 03</span><h2>Contador de validade de documentos</h2><p>Introduza uma data e veja quantos dias faltam. É um organizador pessoal — não calcula automaticamente prazos legais de renovação.</p><div class="tool-meta"><span>Organizador pessoal</span><span>Não calcula prazos legais</span></div></div>
         <div class="tool-card">
           <div class="form-grid two">
             <div class="field"><label for="docType">Documento</label><select id="docType"><option>Autorização de residência</option><option>Passaporte</option><option>Visto</option><option>Cartão / certificado de residência</option><option>Outro documento</option></select></div>
@@ -952,7 +1039,7 @@
 
     <section class="tool-section white" id="servico">
       <div class="container">
-        <div class="tool-head"><span class="tool-kicker">Ferramenta 04</span><h2>Qual serviço devo procurar?</h2><p>Escolha o problema. Indicamos a entidade que normalmente trata desse assunto e onde continuar no Guia.</p></div>
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 04</span><h2>Qual serviço devo procurar?</h2><p>Escolha o problema. Indicamos a entidade que normalmente trata desse assunto e onde continuar no Guia.</p><div class="tool-meta"><span>Encaminhamento rápido</span><span>Sem dados pessoais</span></div></div>
         <div class="tool-card">
           <div class="field"><label for="serviceNeed">Preciso de ajuda com...</label>
             <select id="serviceNeed"><option value="">Escolha uma opção</option><option value="nif">NIF / Finanças</option><option value="niss">NISS / Segurança Social</option><option value="health">Saúde / número de utente</option><option value="residence">Autorização de residência / AIMA</option><option value="renew">Renovação de residência</option><option value="nationality">Nacionalidade portuguesa</option><option value="integration">Apoio local / integração</option><option value="consulate">Passaporte ou documento do meu país</option><option value="emergency">Emergência</option></select>
@@ -964,7 +1051,7 @@
 
     <section class="tool-section" id="documentos">
       <div class="container">
-        <div class="tool-head"><span class="tool-kicker">Ferramenta 05</span><h2>Gerador de checklist de documentos</h2><p>Escolha um tema para preparar uma lista base. Confirme sempre a lista oficial do procedimento concreto antes de entregar o pedido.</p></div>
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 05</span><h2>Gerador de checklist de documentos</h2><p>Escolha um tema para preparar uma lista base. Confirme sempre a lista oficial do procedimento concreto antes de entregar o pedido.</p><div class="tool-meta"><span>Lista-base</span><span>Imprimir / PDF</span></div></div>
         <div class="tool-card">
           <div class="field"><label for="documentTopic">Tema</label><select id="documentTopic"><option value="">Escolha uma checklist</option><option value="nif">NIF</option><option value="niss">NISS</option><option value="sns">SNS / centro de saúde</option><option value="residence">Autorização de residência — preparação geral</option><option value="nationality">Nacionalidade — preparação geral</option></select></div>
           <div class="generated-checklist" id="generatedChecklist"><h3 id="generatedTitle"></h3><ul id="generatedList"></ul><div class="warning">Lista orientadora. Os documentos podem variar conforme nacionalidade, fundamento legal, datas e procedimento.</div><div class="action-row"><button class="tool-btn secondary" id="printChecklist" type="button">Imprimir / Guardar em PDF</button></div></div>
@@ -974,7 +1061,7 @@
 
     <section class="tool-section white" id="glossario">
       <div class="container">
-        <div class="tool-head"><span class="tool-kicker">Ferramenta 06</span><h2>Glossário de imigração em linguagem simples</h2><p>Pesquise uma sigla ou palavra que apareceu numa carta, notícia ou página oficial.</p></div>
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 06</span><h2>Glossário de imigração em linguagem simples</h2><p>Pesquise uma sigla ou palavra que apareceu numa carta, notícia ou página oficial.</p><div class="tool-meta"><span>Pesquisa instantânea</span><span>Linguagem simples</span></div></div>
         <div class="tool-card">
           <div class="field"><label for="glossarySearch">Pesquisar termo</label><input type="search" id="glossarySearch" placeholder="Ex.: AIMA, NISS, CPLP, CLAIM..."></div>
           <div class="glossary-grid" id="glossaryGrid">
@@ -1098,15 +1185,34 @@ const routeMap={
 
     const checklistKey='guiaMigranteChecklistV1',checks=[...document.querySelectorAll('#mainChecklist input[type="checkbox"]')];
     function readChecklist(){try{return JSON.parse(localStorage.getItem(checklistKey)||'{}')}catch{return{}}}
-    function updateProgress(){const c=checks.filter(x=>x.checked).length,p=Math.round(c/checks.length*100);progressBar.style.width=p+'%';progressText.textContent=`${c} de ${checks.length} concluídos · ${p}%`;}
+    function updateProgress(){const c=checks.filter(x=>x.checked).length,p=Math.round(c/checks.length*100);progressBar.style.width=p+'%';progressText.textContent=`${c} de ${checks.length} concluídos`;progressPercent.textContent=p+'%';progressShell.setAttribute('aria-valuenow',String(p));updateResumePanel();}
     const saved=readChecklist();checks.forEach(c=>{c.checked=!!saved[c.dataset.key];c.addEventListener('change',()=>{const d=readChecklist();d[c.dataset.key]=c.checked;localStorage.setItem(checklistKey,JSON.stringify(d));updateProgress();});});updateProgress();
     resetChecklist.addEventListener('click',()=>{localStorage.removeItem(checklistKey);checks.forEach(c=>c.checked=false);updateProgress();});
 
     const expiryKey='guiaMigranteExpiryV1';
-    try{const s=JSON.parse(localStorage.getItem(expiryKey)||'null');if(s){docType.value=s.type;expiryDate.value=s.date;}}catch{}
+
+    function updateResumePanel(){
+      const panel=document.getElementById('resumePanel'),actions=document.getElementById('resumeActions'),text=document.getElementById('resumeText');
+      if(!panel||!actions||!text)return;
+      const completed=checks.filter(x=>x.checked).length;
+      let expiry=null;try{expiry=JSON.parse(localStorage.getItem(expiryKey)||'null')}catch{}
+      const hasChecklist=completed>0;
+      const hasExpiry=!!(expiry&&expiry.date);
+      if(!hasChecklist&&!hasExpiry){panel.classList.remove('show');actions.innerHTML='';return;}
+      const parts=[];
+      if(hasChecklist)parts.push(`${completed} de ${checks.length} passos concluídos`);
+      if(hasExpiry)parts.push(`${expiry.type}: ${expiry.date}`);
+      text.textContent=parts.join(' · ');
+      actions.innerHTML=[
+        hasChecklist?'<a class="tool-btn primary" href="#checklist">Continuar checklist →</a>':'',
+        hasExpiry?'<a class="tool-btn secondary" href="#validade">Ver documento guardado</a>':''
+      ].join('');
+      panel.classList.add('show');
+    }
+    try{const s=JSON.parse(localStorage.getItem(expiryKey)||'null');if(s){docType.value=s.type;expiryDate.value=s.date;}}catch{} updateResumePanel();
     function calculateDays(){if(!expiryDate.value){alert('Escolha uma data de validade.');return;}const t=new Date();t.setHours(0,0,0,0);const d=new Date(expiryDate.value+'T00:00:00');const days=Math.ceil((d-t)/86400000);daysNumber.textContent=days===0?'Hoje':Math.abs(days);if(days>0){daysTitle.textContent=days===1?'dia até à validade':'dias até à validade';daysMessage.textContent=`${docType.value}: confirme as regras atuais e não espere pelo último momento.`;}else if(days===0){daysTitle.textContent='é a data indicada';daysMessage.textContent='Confirme nos canais oficiais qual o procedimento adequado.';}else{daysTitle.textContent=Math.abs(days)===1?'dia desde a data indicada':'dias desde a data indicada';daysMessage.textContent='A data já passou. Isto não determina, por si só, a sua situação jurídica. Consulte a informação oficial.';}counterResult.classList.add('show');}
     calculateExpiry.addEventListener('click',calculateDays);
-    saveExpiry.addEventListener('click',()=>{if(!expiryDate.value){alert('Escolha primeiro uma data.');return;}localStorage.setItem(expiryKey,JSON.stringify({type:docType.value,date:expiryDate.value}));calculateDays();alert('Data guardada apenas neste dispositivo.');});
+    saveExpiry.addEventListener('click',()=>{if(!expiryDate.value){alert('Escolha primeiro uma data.');return;}localStorage.setItem(expiryKey,JSON.stringify({type:docType.value,date:expiryDate.value}));calculateDays();updateResumePanel();alert('Data guardada apenas neste dispositivo.');});
 
     const services={
       nif:['Finanças','Autoridade Tributária / Finanças','Para NIF e assuntos fiscais.','dia-a-dia.html#nif'],
@@ -1136,7 +1242,21 @@ const routeMap={
     const terms=[...document.querySelectorAll('.term')];
     glossarySearch.addEventListener('input',()=>{const q=norm(glossarySearch.value);terms.forEach(t=>t.hidden=!!q&&!norm(t.dataset.term+' '+t.textContent).includes(q));});
 
-    clearLocalData.addEventListener('click',()=>{if(!confirm('Apagar checklist e datas guardadas pelo Guia Migrante PT neste dispositivo?'))return;localStorage.removeItem(checklistKey);localStorage.removeItem(expiryKey);checks.forEach(c=>c.checked=false);updateProgress();expiryDate.value='';counterResult.classList.remove('show');alert('Dados locais apagados deste dispositivo.');});
+    clearLocalData.addEventListener('click',()=>{if(!confirm('Apagar checklist e datas guardadas pelo Guia Migrante PT neste dispositivo?'))return;localStorage.removeItem(checklistKey);localStorage.removeItem(expiryKey);checks.forEach(c=>c.checked=false);updateProgress();expiryDate.value='';counterResult.classList.remove('show');updateResumePanel();alert('Dados locais apagados deste dispositivo.');});
+
+    const toolSections=[...document.querySelectorAll('.tool-section[id]')];
+    const jumpLinks=[...document.querySelectorAll('.jump-nav a[href^="#"]')];
+    if('IntersectionObserver' in window){
+      const sectionObserver=new IntersectionObserver(entries=>{
+        const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+        if(!visible)return;
+        jumpLinks.forEach(link=>{
+          const active=link.getAttribute('href')==='#'+visible.target.id;
+          if(active)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');
+        });
+      },{rootMargin:'-25% 0px -60% 0px',threshold:[0,.2,.5]});
+      toolSections.forEach(section=>sectionObserver.observe(section));
+    }
   </script>
 
   <script src="ux.js" defer></script>

@@ -7,12 +7,18 @@
       "domain": "aima.gov.pt",
       "pages": [
         "en/mudanca-saida.html",
-        "mudanca-saida.html"
+        "mudanca-saida.html",
+        "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
+        "abrigo",
         "address",
         "aima",
-        "morada"
+        "estrangeiros",
+        "morada",
+        "oficial",
+        "permanente",
+        "sobre"
       ],
       "risk": "high",
       "required": false
@@ -491,12 +497,12 @@
         "does",
         "expirados",
         "expired",
+        "familiares",
         "funcionar",
         "june",
         "nova",
-        "permits",
-        "portal",
-        "renewal"
+        "permanentes",
+        "permits"
       ],
       "risk": "high",
       "required": true
@@ -514,6 +520,23 @@
         "aima",
         "extension",
         "prorrogação"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_ac4c209d3df8",
+      "url": "https://aima.gov.pt/pt/noticias/veja-conhecer-as-regras-para-renovacao-do-titulo-de-residencia-cplp",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "cplp.html"
+      ],
+      "watch_terms": [
+        "aima",
+        "certificado",
+        "cplp",
+        "renovação",
+        "substituição"
       ],
       "risk": "high",
       "required": true
@@ -745,6 +768,27 @@
       "required": true
     },
     {
+      "id": "src_e17cf1ff2121",
+      "url": "https://aima.gov.pt/pt/trabalhar/protocolo-de-cooperacao-para-a-migracao-laboral-regulada",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "trabalho.html"
+      ],
+      "watch_terms": [
+        "2025",
+        "aima",
+        "criou",
+        "laboral",
+        "migração",
+        "novo",
+        "protocolo",
+        "regulada",
+        "visto."
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_b5f7c69a3a4d",
       "url": "https://aima.gov.pt/pt/viver/aquisicao-do-estatuto-de-residente-de-longa-duracao-erld-art-125-o",
       "domain": "aima.gov.pt",
@@ -888,19 +932,18 @@
         "reagrupamento-familiar.html"
       ],
       "watch_terms": [
-        "abrangido.",
         "aima",
+        "altera",
+        "canal",
         "case",
-        "caso",
         "covered.",
-        "deve",
-        "está",
+        "disponível",
+        "legais.",
         "only",
         "portal",
-        "quando",
+        "requisitos",
         "services",
         "serviços",
-        "usado",
         "when",
         "your"
       ],
@@ -914,18 +957,15 @@
       "pages": [
         "en/familia.html",
         "en/reagrupamento-familiar.html",
-        "familia.html",
-        "reagrupamento-familiar.html"
+        "familia.html"
       ],
       "watch_terms": [
         "aima",
         "already",
         "article",
-        "está",
         "familiar",
         "family",
         "member",
-        "oficial",
         "portugal",
         "reagrupamento",
         "reunification"
@@ -1040,6 +1080,7 @@
       "domain": "contactenos.aima.gov.pt",
       "pages": [
         "aima-agendamento-problemas.html",
+        "cplp.html",
         "en/aima-agendamento-problemas.html",
         "en/contactos.html",
         "en/titulo-residencia-renovacao-segunda-via.html",
@@ -1047,10 +1088,12 @@
       ],
       "watch_terms": [
         "abrir",
+        "agendamento",
         "aima",
         "assunto",
         "através",
         "certo.",
+        "concessão",
         "contact",
         "contacto",
         "contacto.",
@@ -1061,9 +1104,7 @@
         "open",
         "peça",
         "replacement",
-        "request",
-        "subject.",
-        "through"
+        "request"
       ],
       "risk": "medium",
       "required": false
@@ -1115,6 +1156,40 @@
       "required": true
     },
     {
+      "id": "src_fe50511a824a",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075-1112898475",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "habitacao.html"
+      ],
+      "watch_terms": [
+        "1076.º",
+        "antecipação",
+        "artigo",
+        "caução"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_daecb58c53fe",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075-122540646",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "habitacao.html"
+      ],
+      "watch_terms": [
+        "1069.º",
+        "artigo",
+        "civil",
+        "contrato",
+        "código",
+        "escrito"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_38d2ecb1321b",
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975-48303975",
       "domain": "diariodarepublica.pt",
@@ -1129,6 +1204,68 @@
       ],
       "risk": "high",
       "required": true
+    },
+    {
+      "id": "src_aba82de720d2",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-67564445",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "reagrupamento-familiar.html"
+      ],
+      "watch_terms": [
+        "agora",
+        "altera",
+        "canal",
+        "consolidada",
+        "disponível",
+        "esta",
+        "estrangeiros",
+        "legais.",
+        "limitada",
+        "requisitos"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_b9552feafebd",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-67564445-946245941",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "reagrupamento-familiar.html"
+      ],
+      "watch_terms": [
+        "98.º",
+        "artigo",
+        "direito",
+        "diário",
+        "fazer",
+        "mínimos",
+        "parte",
+        "passaram",
+        "prazos",
+        "próprio",
+        "reagrupamento.",
+        "república"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_886ba2b702cb",
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Casa_e_propriedades/Arrendamento/Contrato%20urbano/Paginas/default.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "pages": [
+        "habitacao.html"
+      ],
+      "watch_terms": [
+        "arrendamento",
+        "comunicado",
+        "contrato",
+        "finanças"
+      ],
+      "risk": "medium",
+      "required": false
     },
     {
       "id": "src_374e8dd744ee",
@@ -1191,6 +1328,21 @@
         "non-resident",
         "resident",
         "residente"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_7273b7756241",
+      "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/artigo-53-o-do-civa.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "pages": [
+        "independente-empreendedor.html"
+      ],
+      "watch_terms": [
+        "53.º",
+        "artigo",
+        "finanças"
       ],
       "risk": "medium",
       "required": false
@@ -1389,6 +1541,34 @@
       "required": true
     },
     {
+      "id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "domain": "justica.gov.pt",
+      "pages": [
+        "habitacao.html",
+        "seguranca.html"
+      ],
+      "watch_terms": [
+        "casa",
+        "como",
+        "disponível",
+        "documental",
+        "isco.",
+        "justiça",
+        "peça",
+        "pode",
+        "predial",
+        "propriedade",
+        "prova",
+        "simplificada",
+        "também",
+        "usada",
+        "verificar"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_8075539b4165",
       "url": "https://justica.gov.pt/Servicos/Submeter-pedido-de-nacionalidade",
       "domain": "justica.gov.pt",
@@ -1449,7 +1629,7 @@
         "renewal",
         "renovação",
         "renovações",
-        "títulos"
+        "temporária"
       ],
       "risk": "medium",
       "required": false
@@ -1478,6 +1658,26 @@
         "services",
         "social",
         "started"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_f52b4b71ccfa",
+      "url": "https://services.aima.gov.pt/CPLP",
+      "domain": "services.aima.gov.pt",
+      "pages": [
+        "cplp.html"
+      ],
+      "watch_terms": [
+        "abrir",
+        "aima",
+        "cplp",
+        "procedimento",
+        "própria",
+        "renovação",
+        "services",
+        "substituição"
       ],
       "risk": "medium",
       "required": false
@@ -1591,6 +1791,23 @@
       "required": false
     },
     {
+      "id": "src_bcb6fdeda2b8",
+      "url": "https://www.gov.pt/guias/migrantes-cuidados-de-saude-em-portugal",
+      "domain": "www.gov.pt",
+      "pages": [
+        "saude-completa.html"
+      ],
+      "watch_terms": [
+        "cuidados",
+        "gov.pt",
+        "migrantes",
+        "portugal",
+        "saúde"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_2b7fd322021d",
       "url": "https://www.gov.pt/guias/migrantes-ensino-em-portugal-para-criancas-jovens-e-adultos",
       "domain": "www.gov.pt",
@@ -1662,6 +1879,116 @@
         "portugal",
         "trabalhar",
         "working"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_8b098b243b4f",
+      "url": "https://www.gov.pt/guias/trabalhar-por-conta-propria-guia-para-trabalhadores-independentes",
+      "domain": "www.gov.pt",
+      "pages": [
+        "impostos.html"
+      ],
+      "watch_terms": [
+        "distintos.",
+        "fiscal",
+        "guia",
+        "independentes",
+        "oficial",
+        "recibos",
+        "relacionados",
+        "residência",
+        "temas",
+        "trabalhadores",
+        "verdes"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_6ec7d92b195f",
+      "url": "https://www.gov.pt/guias/trabalhar-por-conta-propria-guia-para-trabalhadores-independentes/obrigacoes-fiscais-e-pagamentos-impostos-e-contribuicoes",
+      "domain": "www.gov.pt",
+      "pages": [
+        "independente-empreendedor.html"
+      ],
+      "watch_terms": [
+        "contributivas",
+        "fiscais",
+        "gov.pt",
+        "isenção",
+        "obrigações",
+        "segurança",
+        "significa",
+        "social"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_e3c3c460cae2",
+      "url": "https://www.gov.pt/guias/trabalhar-por-conta-propria-guia-para-trabalhadores-independentes/trabalhador-independente",
+      "domain": "www.gov.pt",
+      "pages": [
+        "independente-empreendedor.html"
+      ],
+      "watch_terms": [
+        "abertura",
+        "atividade.",
+        "exigir",
+        "gov.pt",
+        "independente",
+        "ocasional",
+        "pagamento",
+        "pode",
+        "trabalhador"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_b4112d074e22",
+      "url": "https://www.gov.pt/noticias/contratos-de-trabalho-para-pessoas-estrangeiras",
+      "domain": "www.gov.pt",
+      "pages": [
+        "trabalho-direitos.html",
+        "trabalho.html"
+      ],
+      "watch_terms": [
+        "atual.",
+        "contratar",
+        "contrato",
+        "contrato.",
+        "contratos",
+        "corresponde",
+        "esclarecimento",
+        "estrangeiras",
+        "existir",
+        "gov.pt",
+        "niss",
+        "oficial",
+        "orientação",
+        "pessoas",
+        "posso",
+        "sobre",
+        "trabalho"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_ad5fd491e054",
+      "url": "https://www.gov.pt/servicos/abrir-atividade-nas-financas",
+      "domain": "www.gov.pt",
+      "pages": [
+        "independente-empreendedor.html"
+      ],
+      "watch_terms": [
+        "abrir",
+        "atividade",
+        "finanças",
+        "gov.pt"
       ],
       "risk": "high",
       "required": true

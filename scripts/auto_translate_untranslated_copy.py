@@ -70,7 +70,7 @@ def attr_slots(soup: BeautifulSoup):
     return slots
 
 
-def post_translate(text: str, target: str, attempts: int = 4) -> str:
+def post_translate(text: str, target: str, attempts: int = 6) -> str:
     endpoint = 'https://translate.googleapis.com/translate_a/single'
     payload = urlencode({
         'client': 'gtx',
@@ -100,7 +100,8 @@ def post_translate(text: str, target: str, attempts: int = 4) -> str:
             last_error = RuntimeError('empty translation response')
         except (URLError, HTTPError, TimeoutError, ValueError, OSError) as exc:
             last_error = exc
-        time.sleep(2.0 * (attempt + 1))
+        wait = min(20 * (2 ** attempt), 180)
+        time.sleep(wait)
     raise RuntimeError(f'translation request failed: {last_error}')
 
 

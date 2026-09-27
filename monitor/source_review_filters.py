@@ -224,11 +224,39 @@ def review_bad_baselines(status: dict, report: dict, log: dict):
         })
         remove_target_from_quarantine(target, status, report)
         if entry.get('required'):
-            missing = set(report.get('missing_required', []))
-            missing.add(target)
-            report['missing_required'] = sorted(missing)
-            report['baseline_complete'] = False
-            report['coverage_ok'] = False
+            # A newly discovered required URL can occasionally return only WAF,
+            # maintenance or cookie-shell content on its first monitor pass.
+            # If every page using it is already covered by another required source
+            # with a valid baseline, keep it visible as pending instead of declaring
+            # the whole public guidance uncovered.
+            pages = entry.get('pages') or []
+            alternatives_ok = bool(pages)
+            for page in pages:
+                alternatives = [
+                    (other_id, other)
+                    for other_id, other in status.get('sources', {}).items()
+                    if other_id != target
+                    and other.get('required')
+                    and page in (other.get('pages') or [])
+                    and (SNAPS / f'{other_id}.json').exists()
+                ]
+                if not alternatives:
+                    alternatives_ok = False
+                    break
+
+            if alternatives_ok:
+                entry['state'] = 'baseline_pending_transient'
+                entry['note'] = 'invalid first baseline rejected; page remains covered by another required official source'
+                pending = set(report.get('pending_required_baselines', []))
+                pending.add(target)
+                report['pending_required_baselines'] = sorted(pending)
+                report['missing_required'] = [x for x in report.get('missing_required', []) if x != target]
+            else:
+                missing = set(report.get('missing_required', []))
+                missing.add(target)
+                report['missing_required'] = sorted(missing)
+                report['baseline_complete'] = False
+                report['coverage_ok'] = False
         rejected.append(target)
 
     if restored:

@@ -753,6 +753,20 @@
     .generated-checklist li+li{margin-top:6px}
     .generated-checklist .warning{margin-top:12px;color:#713f12;background:var(--warning-soft);border:1px solid #fde68a;border-radius:9px;padding:10px;font-size:.72rem}
 
+    .utility-grid{display:grid;gap:10px;margin-top:14px}
+    .utility-item{border:1px solid var(--line);border-radius:12px;background:white;padding:12px}
+    .utility-item strong{display:block;color:var(--brand-dark);font-size:.8rem}
+    .utility-item p{margin:4px 0 0;color:var(--muted);font-size:.72rem}
+    .utility-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+    .mini-btn{border:1px solid var(--line);background:#fff;color:var(--brand);border-radius:9px;padding:7px 9px;font-size:.69rem;font-weight:900}
+    .status-pill{display:inline-flex;align-items:center;min-height:24px;padding:4px 8px;border-radius:999px;font-size:.67rem;font-weight:900;margin-top:8px}
+    .status-pill.ok{background:var(--success-soft);color:#065f46;border:1px solid #a7f3d0}
+    .status-pill.warn{background:var(--warning-soft);color:#92400e;border:1px solid #fde68a}
+    .status-pill.neutral{background:#f8fafc;color:#475569;border:1px solid var(--line)}
+    .copy-box{margin-top:14px;border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px;white-space:pre-wrap;color:#334155;font-size:.78rem;line-height:1.55}
+    .field textarea{width:100%;min-height:140px;border:1px solid var(--line);border-radius:11px;background:white;color:var(--text);padding:10px 11px;outline:none;resize:vertical}
+    .field textarea:focus{border-color:#93c5fd;box-shadow:0 0 0 3px rgba(37,99,235,.08)}
+
     .glossary-grid{display:grid;gap:9px;margin-top:14px}
     .term{border:1px solid var(--line);border-radius:12px;background:white;padding:12px}
     .term[hidden]{display:none}
@@ -936,6 +950,26 @@
             <span><strong>Perceber uma sigla</strong><p>Pesquisar AIMA, NISS, CLAIM, CPLP e outros termos em linguagem simples.</p><span class="tool-launch-meta"><span class="tool-chip">Pesquisa rápida</span></span></span>
             <span class="tool-launch-arrow" aria-hidden="true">›</span>
           </a>
+          <a class="tool-launch-card" href="#prazos">
+            <span class="tool-launch-icon" aria-hidden="true">07</span>
+            <span><strong>Organizar prazos pessoais</strong><p>Guardar datas importantes e ver o que está mais próximo.</p><span class="tool-launch-meta"><span class="tool-chip">Só neste dispositivo</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="tool-launch-card" href="#atendimento">
+            <span class="tool-launch-icon" aria-hidden="true">08</span>
+            <span><strong>Preparar um atendimento</strong><p>Gerar perguntas e itens para levar à AIMA, Finanças, Segurança Social ou outro serviço.</p><span class="tool-launch-meta"><span class="tool-chip">Checklist rápida</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="tool-launch-card" href="#link-oficial">
+            <span class="tool-launch-icon" aria-hidden="true">09</span>
+            <span><strong>Verificar um link oficial</strong><p>Confirmar se o endereço pertence a um domínio público conhecido.</p><span class="tool-launch-meta"><span class="tool-chip">Anti-burla</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
+          <a class="tool-launch-card" href="#notas">
+            <span class="tool-launch-icon" aria-hidden="true">10</span>
+            <span><strong>Guardar notas do processo</strong><p>Manter datas, referências e perguntas num bloco privado local.</p><span class="tool-launch-meta"><span class="tool-chip">Privado</span><span class="tool-chip">Exportável</span></span></span>
+            <span class="tool-launch-arrow" aria-hidden="true">›</span>
+          </a>
         </div>
 
         <div class="resume-panel" id="resumePanel" aria-live="polite">
@@ -951,7 +985,7 @@
     <div class="jump-wrap">
       <div class="container">
         <nav class="jump-nav" aria-label="Atalhos das ferramentas">
-          <a href="#roteiro-personalizado">Meu roteiro</a><a href="#checklist">Checklist</a><a href="#validade">Validade</a><a href="#servico">Qual serviço?</a><a href="#documentos">Documentos</a><a href="#glossario">Glossário</a>
+          <a href="#roteiro-personalizado">Meu roteiro</a><a href="#checklist">Checklist</a><a href="#validade">Validade</a><a href="#servico">Qual serviço?</a><a href="#documentos">Documentos</a><a href="#glossario">Glossário</a><a href="#prazos">Prazos</a><a href="#atendimento">Atendimento</a><a href="#link-oficial">Link oficial</a><a href="#notas">Notas</a>
         </nav>
       </div>
     </div>
@@ -1082,6 +1116,58 @@
         </div>
       </div>
     </section>
+
+    <section class="tool-section" id="prazos">
+      <div class="container">
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 07</span><h2>Organizador de prazos pessoais</h2><p>Guarde datas que quer acompanhar, como validade de passaporte, marcação, entrega de documentos ou outro compromisso. Esta ferramenta não calcula prazos legais.</p><div class="tool-meta"><span>Dados locais</span><span>Ordenação automática</span><span>Não calcula prazos legais</span></div></div>
+        <div class="tool-card">
+          <div class="form-grid two">
+            <div class="field"><label for="deadlineLabel">O que quer acompanhar?</label><input id="deadlineLabel" type="text" placeholder="Ex.: marcação AIMA, passaporte, entrega de documentos"></div>
+            <div class="field"><label for="deadlineDate">Data</label><input id="deadlineDate" type="date"></div>
+          </div>
+          <div class="action-row"><button class="tool-btn primary" id="addDeadline" type="button">Guardar data</button><button class="tool-btn secondary" id="clearDeadlines" type="button">Apagar todas</button></div>
+          <div class="utility-grid" id="deadlineList" aria-live="polite"></div>
+          <div class="privacy-note"><b>⌛</b><div><strong>Atenção:</strong> isto é um organizador pessoal. Confirme sempre o prazo jurídico ou administrativo na fonte oficial aplicável.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-section white" id="atendimento">
+      <div class="container">
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 08</span><h2>Prepare um atendimento ou contacto</h2><p>Escolha a entidade e o tema. O Guia cria uma lista curta de coisas para levar e perguntas para não se esquecer.</p><div class="tool-meta"><span>~1 minuto</span><span>Preparação prática</span></div></div>
+        <div class="tool-card">
+          <div class="form-grid two">
+            <div class="field"><label for="appointmentEntity">Entidade</label><select id="appointmentEntity"><option value="aima">AIMA</option><option value="financas">Finanças</option><option value="ss">Segurança Social</option><option value="sns">Centro de saúde / SNS</option><option value="irn">IRN / Registos</option><option value="claim">CLAIM</option></select></div>
+            <div class="field"><label for="appointmentTopic">Tema</label><select id="appointmentTopic"><option value="process">Processo / pedido pendente</option><option value="documents">Documentos em falta</option><option value="appointment">Marcação / atendimento</option><option value="data">Alteração de dados</option><option value="other">Outro assunto</option></select></div>
+          </div>
+          <div class="action-row"><button class="tool-btn primary" id="buildAppointment" type="button">Preparar atendimento</button></div>
+          <div class="generated-checklist" id="appointmentResult"><h3 id="appointmentTitle"></h3><ul id="appointmentList"></ul><div class="warning">Não inclua palavras-passe nem dados bancários. Leve apenas os documentos necessários ao seu caso.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-section" id="link-oficial">
+      <div class="container">
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 09</span><h2>O endereço parece pertencer a um site oficial?</h2><p>Cole um endereço web. A ferramenta verifica apenas o domínio contra uma lista de domínios públicos conhecidos — não garante que o conteúdo da página esteja correto ou atual.</p><div class="tool-meta"><span>Anti-burla</span><span>Verificação de domínio</span></div></div>
+        <div class="tool-card">
+          <div class="field"><label for="officialUrl">Endereço web</label><input id="officialUrl" type="text" inputmode="url" placeholder="Ex.: https://aima.gov.pt/..."></div>
+          <div class="action-row"><button class="tool-btn primary" id="checkOfficialUrl" type="button">Verificar domínio</button></div>
+          <div class="service-result" id="officialUrlResult" aria-live="polite"><span class="service-label" id="officialUrlLabel"></span><h3 id="officialUrlTitle"></h3><p id="officialUrlText"></p></div>
+          <div class="privacy-note"><b>!</b><div><strong>Importante:</strong> um domínio não reconhecido não significa automaticamente burla. Quando tiver dúvidas, procure a entidade através da nossa página de <a href="contactos.html">Contactos oficiais</a>.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-section white" id="notas">
+      <div class="container">
+        <div class="tool-head"><span class="tool-kicker">Ferramenta 10</span><h2>Notas privadas do seu processo</h2><p>Guarde referências, datas, perguntas e o que ficou combinado. O texto fica apenas no armazenamento local deste browser.</p><div class="tool-meta"><span>Privado</span><span>Guardado localmente</span><span>Exportável</span></div></div>
+        <div class="tool-card">
+          <div class="field"><label for="processNotes">Notas</label><textarea id="processNotes" placeholder="Ex.: 12/09 — enviei formulário; 20/09 — responderam a pedir comprovativo..."></textarea></div>
+          <div class="action-row"><button class="tool-btn primary" id="saveNotes" type="button">Guardar notas</button><button class="tool-btn secondary" id="exportNotes" type="button">Exportar TXT</button><button class="tool-btn danger" id="clearNotes" type="button">Apagar notas</button></div>
+          <div class="progress-text" id="notesStatus" aria-live="polite">Nada guardado ainda.</div>
+        </div>
+      </div>
+    </section>
   </main>
   <div id="printArea" class="print-only"></div>
 
@@ -1196,16 +1282,24 @@ const routeMap={
       if(!panel||!actions||!text)return;
       const completed=checks.filter(x=>x.checked).length;
       let expiry=null;try{expiry=JSON.parse(localStorage.getItem(expiryKey)||'null')}catch{}
+      let deadlines=[];try{deadlines=JSON.parse(localStorage.getItem('guiaMigranteDeadlinesV1')||'[]')}catch{}
+      const notes=(localStorage.getItem('guiaMigranteProcessNotesV1')||'').trim();
       const hasChecklist=completed>0;
       const hasExpiry=!!(expiry&&expiry.date);
-      if(!hasChecklist&&!hasExpiry){panel.classList.remove('show');actions.innerHTML='';return;}
+      const hasDeadlines=Array.isArray(deadlines)&&deadlines.length>0;
+      const hasNotes=!!notes;
+      if(!hasChecklist&&!hasExpiry&&!hasDeadlines&&!hasNotes){panel.classList.remove('show');actions.innerHTML='';return;}
       const parts=[];
       if(hasChecklist)parts.push(`${completed} de ${checks.length} passos concluídos`);
       if(hasExpiry)parts.push(`${expiry.type}: ${expiry.date}`);
+      if(hasDeadlines)parts.push(`${deadlines.length} data(s) guardada(s)`);
+      if(hasNotes)parts.push('notas do processo guardadas');
       text.textContent=parts.join(' · ');
       actions.innerHTML=[
         hasChecklist?'<a class="tool-btn primary" href="#checklist">Continuar checklist →</a>':'',
-        hasExpiry?'<a class="tool-btn secondary" href="#validade">Ver documento guardado</a>':''
+        hasExpiry?'<a class="tool-btn secondary" href="#validade">Ver documento guardado</a>':'',
+        hasDeadlines?'<a class="tool-btn secondary" href="#prazos">Ver prazos</a>':'',
+        hasNotes?'<a class="tool-btn secondary" href="#notas">Abrir notas</a>':''
       ].join('');
       panel.classList.add('show');
     }
@@ -1242,7 +1336,56 @@ const routeMap={
     const terms=[...document.querySelectorAll('.term')];
     glossarySearch.addEventListener('input',()=>{const q=norm(glossarySearch.value);terms.forEach(t=>t.hidden=!!q&&!norm(t.dataset.term+' '+t.textContent).includes(q));});
 
-    clearLocalData.addEventListener('click',()=>{if(!confirm('Apagar checklist e datas guardadas pelo Guia Migrante PT neste dispositivo?'))return;localStorage.removeItem(checklistKey);localStorage.removeItem(expiryKey);checks.forEach(c=>c.checked=false);updateProgress();expiryDate.value='';counterResult.classList.remove('show');updateResumePanel();alert('Dados locais apagados deste dispositivo.');});
+    const deadlinesKey='guiaMigranteDeadlinesV1';
+    function readDeadlines(){try{return JSON.parse(localStorage.getItem(deadlinesKey)||'[]')}catch{return[]}}
+    function renderDeadlines(){
+      const list=document.getElementById('deadlineList'); if(!list)return;
+      const items=readDeadlines().sort((a,b)=>a.date.localeCompare(b.date));
+      if(!items.length){list.innerHTML='<div class="utility-item"><strong>Sem datas guardadas</strong><p>Adicione uma data importante para a acompanhar aqui.</p></div>';updateResumePanel();return;}
+      const today=new Date();today.setHours(0,0,0,0);
+      list.innerHTML=items.map((item,i)=>{const d=new Date(item.date+'T00:00:00');const days=Math.ceil((d-today)/86400000);const state=days<0?'warn':days<=14?'warn':'ok';const label=days<0?`${Math.abs(days)} dia(s) depois da data`:days===0?'Hoje':`Faltam ${days} dia(s)`;return `<div class="utility-item"><strong>${item.label}</strong><p>${item.date}</p><span class="status-pill ${state}">${label}</span><div class="utility-actions"><button class="mini-btn" type="button" data-deadline-remove="${i}">Remover</button></div></div>`}).join('');
+      list.querySelectorAll('[data-deadline-remove]').forEach(btn=>btn.addEventListener('click',()=>{const arr=readDeadlines().sort((a,b)=>a.date.localeCompare(b.date));arr.splice(Number(btn.dataset.deadlineRemove),1);localStorage.setItem(deadlinesKey,JSON.stringify(arr));renderDeadlines();}));
+      updateResumePanel();
+    }
+    addDeadline.addEventListener('click',()=>{const label=deadlineLabel.value.trim(),date=deadlineDate.value;if(!label||!date){alert('Indique um nome e uma data.');return;}const arr=readDeadlines();arr.push({label,date});localStorage.setItem(deadlinesKey,JSON.stringify(arr));deadlineLabel.value='';deadlineDate.value='';renderDeadlines();});
+    clearDeadlines.addEventListener('click',()=>{if(!confirm('Apagar todas as datas guardadas?'))return;localStorage.removeItem(deadlinesKey);renderDeadlines();});
+    renderDeadlines();
+
+    const appointmentEntityLabels={aima:'AIMA',financas:'Finanças',ss:'Segurança Social',sns:'Centro de saúde / SNS',irn:'IRN / Registos',claim:'CLAIM'};
+    buildAppointment.addEventListener('click',()=>{
+      const entity=appointmentEntityLabels[appointmentEntity.value]||'Entidade';
+      const topic=appointmentTopic.options[appointmentTopic.selectedIndex].text;
+      appointmentTitle.textContent=`Preparação — ${entity}: ${topic}`;
+      const base=['Documento de identificação válido.','Referência, comprovativo ou número do pedido, se existir.','Cópias dos documentos já entregues e das respostas recebidas.','Datas dos contactos anteriores e nomes/canais usados.','Uma pergunta concreta sobre o próximo passo e, se aplicável, o prazo estimado.'];
+      if(appointmentTopic.value==='documents')base.push('Lista exata dos documentos que lhe disseram estar em falta.');
+      if(appointmentTopic.value==='appointment')base.push('Confirme o canal oficial de marcação e leve comprovativo da marcação, se existir.');
+      if(appointmentTopic.value==='data')base.push('Documento que comprove a alteração que pretende comunicar.');
+      appointmentList.innerHTML=base.map(x=>`<li>${x}</li>`).join('');
+      appointmentResult.classList.add('show');
+    });
+
+    const officialDomains=[
+      'gov.pt','aima.gov.pt','seg-social.pt','sns24.gov.pt','justica.gov.pt','eportugal.gov.pt',
+      'portaldasfinancas.gov.pt','imt-ip.pt','diariodarepublica.pt','irn.justica.gov.pt','acm.gov.pt'
+    ];
+    checkOfficialUrl.addEventListener('click',()=>{
+      let raw=officialUrl.value.trim();if(!raw){alert('Cole primeiro um endereço web.');return;}
+      if(!/^https?:\/\//i.test(raw))raw='https://'+raw;
+      let host='';try{host=new URL(raw).hostname.toLowerCase().replace(/^www\./,'')}catch{officialUrlLabel.textContent='Endereço inválido';officialUrlTitle.textContent='Não foi possível ler este endereço';officialUrlText.textContent='Confirme se copiou o link completo.';officialUrlResult.classList.add('show');return;}
+      const known=officialDomains.find(d=>host===d||host.endsWith('.'+d));
+      officialUrlLabel.textContent=known?'Domínio reconhecido':'Domínio não reconhecido';
+      officialUrlTitle.textContent=known?'Parece pertencer a um domínio oficial conhecido':'Confirme antes de introduzir dados ou efetuar pagamentos';
+      officialUrlText.textContent=known?`Domínio identificado: ${host}. Confirme ainda se a página corresponde ao serviço que procura e se usa HTTPS.`:`O domínio ${host} não está na nossa lista de domínios públicos conhecidos. Isto não prova fraude; confirme a entidade por um canal oficial independente.`;
+      officialUrlResult.classList.add('show');
+    });
+
+    const notesKey='guiaMigranteProcessNotesV1';
+    try{processNotes.value=localStorage.getItem(notesKey)||'';if(processNotes.value)notesStatus.textContent='Notas guardadas neste dispositivo.';}catch{}
+    saveNotes.addEventListener('click',()=>{localStorage.setItem(notesKey,processNotes.value);notesStatus.textContent='Notas guardadas neste dispositivo.';updateResumePanel();});
+    clearNotes.addEventListener('click',()=>{if(!confirm('Apagar as notas guardadas?'))return;localStorage.removeItem(notesKey);processNotes.value='';notesStatus.textContent='Nada guardado ainda.';updateResumePanel();});
+    exportNotes.addEventListener('click',()=>{const text=processNotes.value.trim();if(!text){alert('Não existem notas para exportar.');return;}const blob=new Blob([text],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='notas-guia-migrante.txt';document.body.appendChild(a);a.click();URL.revokeObjectURL(a.href);a.remove();});
+
+    clearLocalData.addEventListener('click',()=>{if(!confirm('Apagar checklist, datas e notas guardadas pelo Guia Migrante PT neste dispositivo?'))return;localStorage.removeItem(checklistKey);localStorage.removeItem(expiryKey);localStorage.removeItem(deadlinesKey);localStorage.removeItem(notesKey);checks.forEach(c=>c.checked=false);updateProgress();expiryDate.value='';counterResult.classList.remove('show');processNotes.value='';notesStatus.textContent='Nada guardado ainda.';renderDeadlines();updateResumePanel();alert('Dados locais apagados deste dispositivo.');});
 
     const toolSections=[...document.querySelectorAll('.tool-section[id]')];
     const jumpLinks=[...document.querySelectorAll('.jump-nav a[href^="#"]')];

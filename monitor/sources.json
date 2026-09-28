@@ -1036,6 +1036,54 @@
       "required": false
     },
     {
+      "id": "src_7d91211809f3",
+      "url": "https://clientebancario.bportugal.pt/pt-pt/encargos",
+      "domain": "clientebancario.bportugal.pt",
+      "pages": [
+        "banco-pagamentos.html"
+      ],
+      "watch_terms": [
+        "banco",
+        "comissões",
+        "encargos",
+        "portugal"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_0896c35b1872",
+      "url": "https://clientebancario.bportugal.pt/pt-pt/encerramento-de-conta",
+      "domain": "clientebancario.bportugal.pt",
+      "pages": [
+        "banco-pagamentos.html"
+      ],
+      "watch_terms": [
+        "banco",
+        "conta",
+        "encerramento",
+        "portugal"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_210aa30079b3",
+      "url": "https://clientebancario.bportugal.pt/pt-pt/mudanca-de-conta",
+      "domain": "clientebancario.bportugal.pt",
+      "pages": [
+        "banco-pagamentos.html"
+      ],
+      "watch_terms": [
+        "banco",
+        "conta",
+        "mudança",
+        "portugal"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
       "id": "src_5c8489b0954a",
       "url": "https://clientebancario.bportugal.pt/pt-pt/o-que-sao",
       "domain": "clientebancario.bportugal.pt",
@@ -1227,19 +1275,38 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-67564445",
       "domain": "diariodarepublica.pt",
       "pages": [
+        "mudanca-saida.html",
         "reagrupamento-familiar.html"
       ],
       "watch_terms": [
         "agora",
         "altera",
         "canal",
+        "comunicação",
         "consolidada",
         "disponível",
+        "domicílio",
         "esta",
         "estrangeiros",
         "legais.",
         "limitada",
         "requisitos"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_10ebd41bdea5",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-67564445-222587916",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "mudanca-saida.html"
+      ],
+      "watch_terms": [
+        "85.º",
+        "artigo",
+        "ausências",
+        "cancelamento"
       ],
       "risk": "high",
       "required": true

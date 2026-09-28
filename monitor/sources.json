@@ -1189,6 +1189,37 @@
       "required": true
     },
     {
+      "id": "src_f24085bfea03",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-legislativo-regional/1-2026-M-1033291312",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "trabalho-direitos.html"
+      ],
+      "watch_terms": [
+        "madeira",
+        "mínimo",
+        "regional",
+        "salário"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_d23eb38ebff9",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/139-2025-992879809",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "trabalho-direitos.html"
+      ],
+      "watch_terms": [
+        "2026",
+        "continente",
+        "rmmg"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_79e0a2f33906",
       "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/173-2026-1164281329",
       "domain": "diariodarepublica.pt",
@@ -1379,6 +1410,54 @@
         "próprio",
         "reagrupamento.",
         "república"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_183bc89798c1",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475-211441912",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "trabalho-direitos.html"
+      ],
+      "watch_terms": [
+        "código",
+        "suplementar",
+        "trabalho"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_2d23b8d636a9",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475-211441930",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "trabalho-direitos.html"
+      ],
+      "watch_terms": [
+        "código",
+        "denúncia",
+        "pelo",
+        "trabalhador",
+        "trabalho"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_631229e5133e",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475-213560866",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "trabalho-direitos.html"
+      ],
+      "watch_terms": [
+        "código",
+        "experimental",
+        "período",
+        "trabalho"
       ],
       "risk": "high",
       "required": true
@@ -2120,6 +2199,21 @@
       "required": true
     },
     {
+      "id": "src_cf925da656d8",
+      "url": "https://www.gov.pt/guias/pedir-o-divorcio-ou-a-separacao",
+      "domain": "www.gov.pt",
+      "pages": [
+        "registos-civis.html"
+      ],
+      "watch_terms": [
+        "divórcio",
+        "gov.pt",
+        "separação"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_22eed2787439",
       "url": "https://www.gov.pt/guias/qualificacoes-profissionais",
       "domain": "www.gov.pt",
@@ -2158,6 +2252,21 @@
         "consumo",
         "gov.pt",
         "resolução"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_43eeda813121",
+      "url": "https://www.gov.pt/guias/saude-preventiva-em-portugal-vacinas-e-programas-de-rastreio",
+      "domain": "www.gov.pt",
+      "pages": [
+        "saude-completa.html"
+      ],
+      "watch_terms": [
+        "gov.pt",
+        "prevenção",
+        "vacinação"
       ],
       "risk": "high",
       "required": true
@@ -2433,6 +2542,23 @@
       "required": true
     },
     {
+      "id": "src_b8fe052c05da",
+      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
+      "domain": "www.gov.pt",
+      "pages": [
+        "saude-completa.html"
+      ],
+      "watch_terms": [
+        "centro",
+        "consulta",
+        "gov.pt",
+        "marcar",
+        "saúde"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_5c470c1c6222",
       "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
       "domain": "www.gov.pt",
@@ -2462,6 +2588,22 @@
         "doença",
         "gov.pt",
         "subsídio"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_a21e2f4e0949",
+      "url": "https://www.gov.pt/servicos/pedir-a-isencao-de-taxas-moderadoras-por-insuficiencia-economica",
+      "domain": "www.gov.pt",
+      "pages": [
+        "saude-completa.html"
+      ],
+      "watch_terms": [
+        "gov.pt",
+        "isenção",
+        "moderadoras",
+        "taxas"
       ],
       "risk": "high",
       "required": true
@@ -2661,7 +2803,8 @@
       "pages": [
         "dia-a-dia.html",
         "en/dia-a-dia.html",
-        "index.html"
+        "index.html",
+        "saude-completa.html"
       ],
       "watch_terms": [
         "2026",
@@ -2675,12 +2818,13 @@
         "destas",
         "gov.pt",
         "menos",
+        "niss",
+        "número",
         "participating",
+        "pedir",
         "pelo",
         "service",
-        "serviço",
-        "shops",
-        "unificado"
+        "serviço"
       ],
       "risk": "high",
       "required": true
@@ -2835,6 +2979,21 @@
         "nascimento",
         "registar",
         "register"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_62896b90e5a4",
+      "url": "https://www.gov.pt/servicos/registar-um-nascimento-no-estrangeiro",
+      "domain": "www.gov.pt",
+      "pages": [
+        "registos-civis.html"
+      ],
+      "watch_terms": [
+        "estrangeiro",
+        "gov.pt",
+        "nascimento"
       ],
       "risk": "high",
       "required": true

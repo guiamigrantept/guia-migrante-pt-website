@@ -1,0 +1,741 @@
+<!doctype html><html lang="pt-PT"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09315c">
+<meta name="description" content="Transportes públicos em Portugal: bilhetes e validação, multas, comboios e autocarros, atrasos, cancelamentos, reembolsos e reclamações."><link rel="canonical" href="https://guia-migrante-pt.pages.dev/transportes.html">
+<link rel="alternate" hreflang="pt-PT" href="https://guia-migrante-pt.pages.dev/transportes.html">
+<meta name="last-reviewed" content="2026-09-28">
+  <title>Transportes públicos e direitos dos passageiros | Guia Migrante PT</title><link rel="icon" href="favicon.png">
+<style>
+    :root{
+      --brand:#1e3a8a;
+      --brand-dark:#172554;
+      --brand-mid:#2563eb;
+      --brand-soft:#eff6ff;
+      --bg:#f8fafc;
+      --surface:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --success:#047857;
+      --success-soft:#ecfdf5;
+      --warning:#a16207;
+      --warning-soft:#fffbeb;
+      --danger:#b91c1c;
+      --danger-soft:#fef2f2;
+      --radius-sm:12px;
+      --radius:18px;
+      --radius-lg:26px;
+      --shadow-sm:0 8px 24px rgba(15,23,42,.06);
+      --shadow:0 18px 44px rgba(15,23,42,.09);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    svg{display:block}
+    :focus-visible{outline:3px solid #60a5fa;outline-offset:3px}
+
+    .container{width:min(calc(100% - 24px),var(--max));margin-inline:auto}
+    .sr-only{
+      position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0
+    }
+
+    /* Top notice */
+    .topbar{
+      background:var(--brand-dark);
+      color:#dbeafe;
+      font-size:.78rem;
+    }
+    .topbar-inner{
+      min-height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      text-align:center;
+      padding:6px 0;
+    }
+    .status-dot{
+      width:7px;height:7px;border-radius:50%;
+      background:#34d399;
+      box-shadow:0 0 0 4px rgba(52,211,153,.12);
+      flex:0 0 auto;
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{
+      min-height:70px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:max-content;
+    }
+    .brand-mark{
+      width:42px;height:42px;
+      border-radius:13px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(145deg,var(--brand),var(--brand-dark));
+      color:white;
+      box-shadow:0 9px 22px rgba(30,58,138,.2);
+    }
+    .brand-name{
+      color:var(--brand-dark);
+      font-weight:900;
+      font-size:.98rem;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    .brand-name small{
+      display:block;
+      margin-top:4px;
+      font-size:.65rem;
+      font-weight:650;
+      color:var(--muted);
+      letter-spacing:0;
+    }
+
+    .desktop-nav{
+      display:none;
+      justify-content:center;
+      gap:2px;
+    }
+    .desktop-nav a{
+      padding:9px 11px;
+      border-radius:10px;
+      color:#334155;
+      font-weight:750;
+      font-size:.88rem;
+    }
+    .desktop-nav a:hover,
+    .desktop-nav a[aria-current="page"]{
+      color:var(--brand);
+      background:var(--brand-soft);
+    }
+
+    .header-actions{
+      justify-self:end;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .lang{
+      display:none;
+      padding:3px;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:var(--bg);
+    }
+    .lang button{
+      border:0;
+      background:transparent;
+      color:var(--muted);
+      font-size:.76rem;
+      font-weight:850;
+      padding:6px 8px;
+      border-radius:8px;
+    }
+    .lang button.active{
+      background:white;
+      color:var(--brand);
+      box-shadow:0 2px 7px rgba(15,23,42,.08);
+    }
+    .menu-btn{
+      width:41px;height:41px;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:white;
+      color:var(--brand-dark);
+    }
+    .mobile-nav{
+      display:none;
+      background:white;
+      border-top:1px solid var(--line);
+      padding:10px 12px 16px;
+    }
+    .mobile-nav.open{display:grid}
+    .mobile-nav a{
+      padding:12px;
+      border-radius:10px;
+      font-weight:750;
+      color:#334155;
+    }
+    .mobile-nav a:hover{background:var(--brand-soft);color:var(--brand)}
+
+    /* Hero */
+    .hero{
+      padding:52px 0 42px;
+      background:
+        radial-gradient(circle at 86% 14%,rgba(37,99,235,.08),transparent 28%),
+        linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+    }
+    .hero-grid{
+      display:grid;
+      gap:30px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid #bfdbfe;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-weight:850;
+      font-size:.76rem;
+    }
+    .hero h1{
+      margin:17px 0 0;
+      max-width:780px;
+      color:var(--brand-dark);
+      font-size:clamp(2.35rem,11vw,4.8rem);
+      line-height:1;
+      letter-spacing:-.052em;
+    }
+    .hero h1 span{color:var(--brand)}
+    .hero p{
+      max-width:690px;
+      margin:20px 0 0;
+      color:var(--muted);
+      font-size:1rem;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:23px;
+    }
+    .btn-primary,.btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:44px;
+      padding:10px 14px;
+      border-radius:11px;
+      font-size:.84rem;
+      font-weight:850;
+    }
+    .btn-primary{background:var(--brand);color:white}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-secondary{background:white;color:var(--brand);border:1px solid var(--line)}
+    .hero-card{
+      border-radius:var(--radius-lg);
+      background:var(--brand-dark);
+      color:white;
+      padding:23px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card small{
+      color:#93c5fd;
+      font-weight:850;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+    .hero-card h2{
+      margin:7px 0 8px;
+      font-size:1.45rem;
+      line-height:1.15;
+      letter-spacing:-.025em;
+    }
+    .hero-card p{
+      color:#cbd5e1;
+      margin:0;
+      font-size:.9rem;
+    }
+    .hero-points{
+      display:grid;
+      gap:9px;
+      margin-top:18px;
+    }
+    .hero-point{
+      display:grid;
+      grid-template-columns:31px 1fr;
+      gap:10px;
+      align-items:center;
+      padding:10px;
+      border-radius:11px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.09);
+      font-size:.85rem;
+      font-weight:700;
+    }
+    .hero-point b{
+      width:29px;height:29px;border-radius:9px;
+      display:grid;place-items:center;
+      background:#dbeafe;color:var(--brand-dark);
+      font-size:.74rem;
+    }
+
+    /* Current alert */
+    .current{padding:16px 0 0}
+    .current-alert{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      align-items:start;
+      padding:17px;
+      border-radius:15px;
+      background:#eff6ff;
+      border:1px solid #bfdbfe;
+    }
+    .current-icon{
+      width:39px;height:39px;
+      border-radius:11px;
+      display:grid;place-items:center;
+      background:white;
+      color:var(--brand);
+    }
+    .current-alert strong{
+      display:block;
+      color:var(--brand-dark);
+      font-size:.92rem;
+    }
+    .current-alert p{
+      margin:4px 0 0;
+      color:#52647b;
+      font-size:.84rem;
+    }
+    .current-alert a{
+      display:inline-flex;
+      margin-top:9px;
+      color:var(--brand);
+      font-size:.8rem;
+      font-weight:850;
+    }
+
+    /* Sections */
+    section.content{padding:60px 0}
+    .section-head{margin-bottom:24px}
+    .section-kicker{
+      display:block;
+      color:var(--brand);
+      font-size:.73rem;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      margin-bottom:7px;
+    }
+    .section-head h2{
+      margin:0;
+      color:var(--brand-dark);
+      font-size:clamp(1.9rem,8vw,3rem);
+      line-height:1.06;
+      letter-spacing:-.042em;
+    }
+    .section-head p{
+      max-width:680px;
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    /* 30 days cards */
+    .steps-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .step-card{
+      position:relative;
+      overflow:hidden;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:21px;
+      box-shadow:var(--shadow-sm);
+    }
+    .step-card::before{
+      content:"";
+      position:absolute;
+      left:0;top:0;bottom:0;width:4px;
+      background:var(--brand);
+    }
+    .step-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .step-num{
+      width:39px;height:39px;
+      border-radius:11px;
+      display:grid;place-items:center;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-weight:900;
+      font-size:.78rem;
+    }
+    .step-label{
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:850;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+    .step-card h3{
+      margin:17px 0 7px;
+      color:var(--brand-dark);
+      font-size:1.2rem;
+      letter-spacing:-.02em;
+    }
+    .step-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.86rem;
+    }
+    .fact-list{
+      list-style:none;
+      padding:0;
+      margin:16px 0 0;
+      display:grid;
+      gap:8px;
+    }
+    .fact-list li{
+      display:grid;
+      grid-template-columns:18px 1fr;
+      gap:8px;
+      align-items:start;
+      color:#475569;
+      font-size:.81rem;
+    }
+    .fact-list li::before{
+      content:"✓";
+      width:18px;height:18px;
+      border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--success-soft);
+      color:var(--success);
+      font-size:.69rem;
+      font-weight:900;
+      margin-top:2px;
+    }
+    .critical{
+      margin-top:14px;
+      padding:11px 12px;
+      border-radius:10px;
+      background:var(--warning-soft);
+      border:1px solid #fde68a;
+      color:#713f12;
+      font-size:.79rem;
+    }
+    .step-link{
+      display:inline-flex;
+      margin-top:15px;
+      color:var(--brand);
+      font-size:.8rem;
+      font-weight:850;
+    }
+
+    /* Security */
+    .security-section{background:white}
+    .security-wrap{
+      display:grid;
+      gap:20px;
+      align-items:start;
+    }
+    .security-intro{
+      padding:23px;
+      border-radius:var(--radius-lg);
+      background:linear-gradient(145deg,var(--brand-dark),var(--brand));
+      color:white;
+      box-shadow:var(--shadow);
+    }
+    .security-intro .section-kicker{color:#bfdbfe}
+    .security-intro h2{
+      margin:0;
+      font-size:2rem;
+      line-height:1.08;
+      letter-spacing:-.035em;
+    }
+    .security-intro p{
+      color:#dbeafe;
+      font-size:.88rem;
+      margin:10px 0 0;
+    }
+    .security-list{display:grid;gap:10px}
+    .safety-item{
+      display:grid;
+      grid-template-columns:35px 1fr;
+      gap:11px;
+      align-items:start;
+      background:var(--bg);
+      border:1px solid var(--line);
+      border-radius:13px;
+      padding:14px;
+    }
+    .safety-check{
+      width:34px;height:34px;
+      display:grid;place-items:center;
+      border-radius:10px;
+      background:var(--success-soft);
+      color:var(--success);
+      font-weight:900;
+    }
+    .safety-item strong{
+      display:block;
+      color:var(--brand-dark);
+      font-size:.86rem;
+    }
+    .safety-item p{
+      margin:3px 0 0;
+      color:var(--muted);
+      font-size:.8rem;
+    }
+    .scam-note{
+      padding:13px 14px;
+      border-radius:11px;
+      background:var(--warning-soft);
+      border:1px solid #fde68a;
+      color:#713f12;
+      font-size:.79rem;
+    }
+
+    /* FAQ */
+    .faq-section{background:var(--bg)}
+    .faq-list{display:grid;gap:9px}
+    .faq-item{
+      border:1px solid var(--line);
+      border-radius:13px;
+      background:white;
+      overflow:hidden;
+    }
+    .faq-question{
+      width:100%;
+      border:0;
+      background:white;
+      color:var(--brand-dark);
+      padding:16px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:13px;
+      align-items:center;
+      text-align:left;
+      font-weight:800;
+      font-size:.88rem;
+    }
+    .faq-question:hover{background:#fbfdff}
+    .faq-symbol{
+      width:28px;height:28px;
+      border-radius:8px;
+      display:grid;place-items:center;
+      background:var(--brand-soft);
+      color:var(--brand);
+      font-size:1.1rem;
+      line-height:1;
+    }
+    .faq-answer{
+      display:none;
+      padding:0 16px 16px;
+      color:var(--muted);
+      font-size:.83rem;
+    }
+    .faq-item.open .faq-answer{display:block}
+    .faq-answer p{margin:0 0 9px}
+    .faq-answer p:last-child{margin-bottom:0}
+    .faq-answer a{color:var(--brand);font-weight:800}
+
+    /* Footer */
+    footer{
+      background:var(--brand-dark);
+      color:#cbd5e1;
+      padding:38px 0 22px;
+    }
+    .footer-grid{
+      display:grid;
+      gap:25px;
+    }
+    .footer-brand p{
+      max-width:470px;
+      margin:11px 0 0;
+      color:#aebdd1;
+      font-size:.8rem;
+    }
+    .footer-title{
+      color:white;
+      font-size:.81rem;
+      font-weight:850;
+      margin-bottom:9px;
+    }
+    .footer-links{
+      display:grid;
+      gap:7px;
+    }
+    .footer-links a{
+      color:#bac8dc;
+      font-size:.79rem;
+    }
+    .footer-links a:hover{color:white}
+    .legal{
+      margin-top:27px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.11);
+      color:#91a3bb;
+      font-size:.73rem;
+    }
+    .legal strong{color:#cbd5e1}
+    .footer-bottom{
+      margin-top:17px;
+      display:flex;
+      gap:12px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      color:#8395ad;
+      font-size:.71rem;
+    }
+
+    /* Toast */
+    .toast{
+      position:fixed;
+      z-index:100;
+      left:12px;right:12px;bottom:14px;
+      display:none;
+      background:var(--brand-dark);
+      color:white;
+      padding:13px 14px;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      font-size:.82rem;
+    }
+    .toast.show{display:block}
+
+    @media (min-width:700px){
+      .container{width:min(calc(100% - 40px),var(--max))}
+      .lang{display:flex}
+      .hero{padding:68px 0 52px}
+      .hero-grid{grid-template-columns:1.15fr .85fr;gap:44px}
+      .steps-grid{grid-template-columns:1fr 1fr}
+      .security-wrap{grid-template-columns:.9fr 1.1fr;gap:26px}
+      .footer-grid{grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+      .toast{left:auto;right:20px;width:360px}
+    }
+
+    @media (min-width:980px){
+      .desktop-nav{display:flex}
+      .menu-btn{display:none}
+      .mobile-nav{display:none!important}
+      .steps-grid{grid-template-columns:repeat(4,1fr)}
+      .section-head{
+        display:flex;
+        justify-content:space-between;
+        align-items:end;
+        gap:28px;
+      }
+      .section-head p{margin:0;max-width:530px}
+      .footer-grid{grid-template-columns:1.5fr repeat(3,1fr)}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important;animation:none!important}
+    }
+  </style><link rel="stylesheet" href="ux.css"><link rel="stylesheet" href="brand.css"><link rel="stylesheet" href="verify.css"><link rel="stylesheet" href="v7.css"><link rel="stylesheet" href="qa-v8.css"><link rel="stylesheet" href="routes-v9.css"><link rel="stylesheet" href="life-v10.css">
+  <link rel="stylesheet" href="practical-v11.css">
+  <link rel="stylesheet" href="ops-v12.css">
+  <meta name="official-source-ids" content="src_1b8b2c1bcde6 src_d5d7259f1e55">
+  <meta name="source-policy" content="quarantine">
+  <link rel="stylesheet" href="source-guard.css">
+</head><body>
+<div class="topbar"><div class="container topbar-inner"><span><span class="status-dot"></span> Informação independente para migrantes em Portugal</span><span>Verificado em 28/09/2026</span></div></div>
+<header><div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-mark brand-mark-official" aria-hidden="true"><img class="brand-logo" src="logo-guia-migrante-256.png" alt=""></span><span class="brand-name">Guia Migrante PT<small>Informação · Orientação · Confiança</small></span></a>
+<nav class="desktop-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="percursos.html">Percursos</a><a href="viver-em-portugal.html">Viver em Portugal</a><a href="nacionalidade.html">Nacionalidade</a><a href="ferramentas.html">Ferramentas</a><a href="contactos.html">Contactos</a></nav><div class="header-actions"><div class="site-lang" aria-label="Idioma"><a class="active" href="transportes.html" aria-current="page">PT</a><a href="en/transportes.html">EN</a></div><button class="menu-btn" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menu"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</div><nav class="mobile-nav" id="mobileNav" aria-label="Navegação móvel"><a href="index.html">Início</a><a href="percursos.html">Percursos</a><a href="viver-em-portugal.html">Viver em Portugal</a><a href="nacionalidade.html">Nacionalidade</a><a href="ferramentas.html">Ferramentas</a><a href="contactos.html">Contactos</a></nav></header><div class="brand-stripe" aria-hidden="true"></div>
+<div class="verification-strip"><div class="container verification-inner"><span class="verified-badge">Informação principal verificada em 28/09/2026</span><span>Fontes oficiais prioritárias</span><a href="atualizacoes.html">Ver o que mudou →</a></div></div>
+<main id="conteudo">
+<section class="life-hero"><div class="container"><div class="life-breadcrumbs"><a href="index.html">Início</a><span>›</span><a href="viver-em-portugal.html">Viver em Portugal</a><span>›</span><span>Transportes públicos</span></div><span class="life-kicker">VIDA PRÁTICA</span><h1>Bilhete, validação, atraso ou multa? <span>Saiba o que fazer antes de viajar.</span></h1><p>Comboios, autocarros, metro, elétricos e transporte fluvial têm regras próprias, mas existem direitos comuns sobre informação, reclamações e acessibilidade.</p><div class="life-meta"><span>Verificado em 28/09/2026</span><span>Orientação com fontes oficiais</span></div></div></section>
+
+<section class="life-section white"><div class="container"><div class="life-head"><span class="life-label">Guia prático</span><h2>O que saber primeiro</h2></div><div class="practical-grid two">
+<article class="practical-card"><div class="practical-num">01</div><h3>Tenha e valide o título</h3><p>O passageiro deve adquirir o título antes do embarque quando existam meios de venda, conservá-lo até ao fim da viagem/saída da estação e validá-lo quando o sistema o exigir.</p></article>
+<article class="practical-card"><div class="practical-num">02</div><h3>Passe também pode exigir validação</h3><p>Ter passe mensal não significa poder ignorar a validação. A falta de validação, quando obrigatória, pode constituir contraordenação mesmo que o passe esteja pago.</p></article>
+<article class="practical-card"><div class="practical-num">03</div><h3>Comboio atrasado</h3><p>No transporte ferroviário, atraso de 60 a 119 minutos pode dar direito a indemnização de <strong>25%</strong> do preço do bilhete; atraso igual ou superior a 120 minutos pode dar direito a <strong>50%</strong>, nas condições do regulamento.</p></article>
+<article class="practical-card"><div class="practical-num">04</div><h3>Reclamações</h3><p>Comece pelo operador. Pode também usar o Livro de Reclamações. A Autoridade da Mobilidade e dos Transportes (AMT) é o organismo nacional responsável pela aplicação dos regulamentos europeus de direitos dos passageiros.</p></article>
+</div><div class="practical-alert"><strong>Atenção:</strong> o Decreto-Lei n.º 173/2026 foi publicado em setembro e reforça a proteção transversal dos passageiros. Algumas alterações têm efeitos apenas a partir de <strong>1 de dezembro de 2026</strong>; não trate todas as novas regras como já plenamente aplicáveis em setembro.</div></div></section>
+
+<section class="life-section" id="multas"><div class="container"><div class="life-head"><span class="life-label">Fiscalização e coimas</span><h2>“Tenho passe” não basta se a validação era obrigatória.</h2><p>A Lei n.º 28/2006 distingue infrações graves de infrações simples.</p></div><div class="practical-grid two">
+<article class="practical-card"><h3>Contraordenação grave</h3><p>Inclui viajar sem título, recusar exibi-lo, usar título inválido para o percurso/zona/classe, usar título expirado, usar desconto sem provar o direito ou usar título nominativo de outra pessoa.</p></article>
+<article class="practical-card"><h3>Falta de validação</h3><p>A falta de validação de entrada é grave em muitos casos. Contudo, para passes mensais, passes de 30 dias e certos títulos ocasionais a partir do segundo embarque da mesma viagem, a lei qualifica a situação como contraordenação simples.</p></article>
+<article class="practical-card"><h3>Valores</h3><p>Nos transportes urbanos, metropolitanos, fluviais e ferroviários urbanos/regionais até 50 km, as contraordenações graves têm coimas de <strong>120 € a 350 €</strong>. Em comboios inter-regionais e de longo curso, de <strong>250 € a 700 €</strong>.</p></article>
+<article class="practical-card"><h3>Primeira infração simples</h3><p>Nas contraordenações simples, os limites são reduzidos em <strong>75%</strong> quando é a primeira contraordenação do passageiro e em 40% em caso de reincidência.</p></article>
+</div><div class="practical-note">Os agentes de fiscalização podem pedir identificação e solicitar intervenção policial quando necessário. Guarde sempre o auto/aviso e confirme os prazos antes de pagar ou contestar.</div></div></section>
+
+<section class="life-section white" id="ferroviario"><div class="container"><div class="life-head"><span class="life-label">Comboios</span><h2>Atrasos e cancelamentos podem dar direito a reembolso, reencaminhamento e assistência.</h2></div><div class="practical-grid two">
+<article class="practical-card"><h3>Atraso superior a 60 minutos</h3><p>O passageiro pode ter direito a reembolso ou reencaminhamento. Também pode existir assistência gratuita, como refeições e bebidas adequadas ao tempo de espera e, quando necessário, alojamento.</p></article>
+<article class="practical-card"><h3>Indemnização por atraso</h3><p>Em regra, 25% do preço do bilhete para atrasos de 60 a 119 minutos e 50% para atrasos de 120 minutos ou mais, sem prejuízo das exceções previstas no regulamento.</p></article>
+<article class="practical-card"><h3>Informação</h3><p>O operador deve fornecer informação correta e atempada antes e durante a viagem, incluindo informação acessível a pessoas com deficiência ou mobilidade reduzida.</p></article>
+<article class="practical-card"><h3>Mobilidade reduzida</h3><p>Reservas e bilhetes não podem ter agravamento de preço por motivo de deficiência ou mobilidade reduzida, e existe direito a assistência gratuita nas condições do regulamento.</p></article>
+</div></div></section>
+
+<section class="life-section" id="rodoviario"><div class="container"><div class="life-head"><span class="life-label">Autocarros de longo curso</span><h2>Nos percursos de 250 km ou mais há proteção reforçada.</h2><p>O Regulamento europeu do transporte rodoviário aplica algumas regras a todos os serviços e um conjunto mais amplo aos percursos regulares iguais ou superiores a 250 km.</p></div><div class="practical-grid two">
+<article class="practical-card"><h3>Atraso superior a 120 minutos</h3><p>Nos serviços abrangidos de 250 km ou mais, cancelamento, sobrelotação ou atraso superior a 120 minutos na partida pode dar direito a reembolso ou reencaminhamento.</p></article>
+<article class="practical-card"><h3>Se não oferecerem solução</h3><p>Quando o transportador não oferece a escolha entre reencaminhamento e reembolso nos casos legalmente previstos, pode existir indemnização de <strong>50%</strong> do preço do bilhete.</p></article>
+<article class="practical-card"><h3>Assistência</h3><p>Em certas viagens longas, cancelamento ou atraso superior a 90 minutos pode dar direito a refeições/bebidas e, se necessário, alojamento até aos limites previstos no regulamento.</p></article>
+<article class="practical-card"><h3>Não discriminação</h3><p>As condições contratuais e tarifas não podem discriminar diretamente ou indiretamente em função da nacionalidade do passageiro.</p></article>
+</div></div></section>
+
+<section class="life-section white" id="passe"><div class="container"><div class="life-head"><span class="life-label">Passes e cartões</span><h2>Confirme a área onde o seu título é válido.</h2><p>Os títulos metropolitanos e regionais não têm uma regra única para todo o país.</p></div><div class="practical-grid two">
+<article class="practical-card"><h3>Lisboa — navegante</h3><p>O cartão navegante personalizado custa atualmente <strong>7 €</strong> e pode carregar passes mensais, zapping e outros tarifários na Área Metropolitana de Lisboa. A gratuitidade jovem até aos 23 anos pode ser ativada nos canais navegante quando cumpridas as condições.</p></article>
+<article class="practical-card"><h3>Outras regiões</h3><p>Porto e outras áreas têm sistemas próprios. Antes de carregar, confirme zonas, operadores incluídos, necessidade de validação, documentos para descontos e prazo de validade.</p></article>
+<article class="practical-card"><h3>Título nominativo</h3><p>Um cartão/passe nominativo é pessoal. Emprestá-lo a outra pessoa pode transformar o título em inválido e levar à sua apreensão.</p></article>
+<article class="practical-card"><h3>Cartão danificado</h3><p>O novo regime publicado em 2026 prevê regras reforçadas sobre prova de aquisição e substituição de suportes deteriorados; algumas alterações só produzem efeitos a partir de dezembro de 2026.</p></article>
+</div></div></section>
+
+<section class="life-section" id="reclamar"><div class="container"><div class="life-head"><span class="life-label">Se algo correr mal</span><h2>Reclame com bilhete, hora, serviço e prova do atraso.</h2></div><div class="practical-grid two">
+<article class="practical-card"><h3>1. Operador</h3><p>Use o formulário/canal do operador e indique número do bilhete ou passe, data, hora, origem, destino, linha/carreira e o que aconteceu.</p></article>
+<article class="practical-card"><h3>2. Livro de Reclamações</h3><p>Os operadores abrangidos devem disponibilizar Livro de Reclamações físico e eletrónico nos termos legais.</p></article>
+<article class="practical-card"><h3>3. AMT</h3><p>Se estiver em causa o incumprimento de direitos dos passageiros, consulte a AMT e os mecanismos de reclamação indicados para o modo de transporte.</p></article>
+<article class="practical-card"><h3>4. Guarde prova</h3><p>Fotografia do painel, captura da app, bilhete, recibo, email do operador e comprovativos de despesas podem ser importantes num pedido de reembolso ou indemnização.</p></article>
+</div></div></section>
+
+<section class="life-section white"><div class="container practical-grid two">
+<article class="practical-card"><span class="life-label">Fontes oficiais</span><h2>Confirme antes de agir</h2>
+<a class="practical-source" target="_blank" rel="noopener" href="https://www.amt-autoridade.pt/consumidor/direitos-dos-passageiros/">Direitos dos passageiros — AMT ↗</a><br>
+<a class="practical-source" target="_blank" rel="noopener" href="https://www.amt-autoridade.pt/consumidor/direitos-dos-passageiros/direitos-dos-passageiros-no-transporte-ferroviario/">Transporte ferroviário — AMT ↗</a><br>
+<a class="practical-source" target="_blank" rel="noopener" href="https://www.amt-autoridade.pt/consumidor/direitos-dos-passageiros/direitos-dos-passageiros-no-transporte-rodoviario/">Transporte rodoviário — AMT ↗</a><br>
+<a class="practical-source" target="_blank" rel="noopener" href="https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2006-108134506">Lei n.º 28/2006 — títulos e coimas ↗</a><br>
+<a class="practical-source" target="_blank" rel="noopener" href="https://diariodarepublica.pt/dr/detalhe/decreto-lei/173-2026-1164281329">Decreto-Lei n.º 173/2026 ↗</a><br>
+<a class="practical-source" target="_blank" rel="noopener" href="https://loja.navegante.pt/product/cartao-navegante-personalizado">Cartão navegante personalizado ↗</a><br>
+<div class="practical-note">Algumas regras dependem do tipo de transporte, distância e título utilizado. A fonte oficial e as condições gerais do operador prevalecem.</div>
+</article>
+<article class="practical-card"><span class="life-label">Temas relacionados</span><h2>Continue a partir daqui</h2><div class="life-related"><a href="consumidor.html">Direitos do consumidor →</a><a href="carta-conducao.html">Carta de condução →</a><a href="seguranca.html">Evite burlas →</a></div></article>
+</div></section>
+
+<footer><div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark brand-mark-official" aria-hidden="true"><img class="brand-logo" src="logo-guia-migrante-256.png" alt=""></span><span class="brand-name">Guia Migrante PT<small>Informação · Orientação · Confiança</small></span></a><p class="footer-note">Portal independente e gratuito de informação e orientação para migrantes em Portugal.</p></div>
+<div><div class="footer-title">Portal</div><div class="footer-links"><a href="index.html">Início</a><a href="percursos.html">Percursos</a><a href="viver-em-portugal.html">Viver em Portugal</a><a href="legalizacao.html">Regularização</a><a href="dia-a-dia.html">Dia a Dia</a><a href="nacionalidade.html">Nacionalidade</a></div></div>
+<div><div class="footer-title">Confiança</div><div class="footer-links"><a href="seguranca.html">Evite burlas</a><a href="faq.html">FAQs</a><a href="atualizacoes.html">O que mudou?</a><a href="privacidade.html">Privacidade</a><a href="acessibilidade.html">Acessibilidade</a><a href="estado-informacao.html">Estado da informação</a><a href="termos.html">Termos</a></div></div>
+<div><div class="footer-title">Fontes úteis</div><div class="footer-links"><a href="https://www.gov.pt/" target="_blank" rel="noopener">gov.pt ↗</a><a href="https://aima.gov.pt/" target="_blank" rel="noopener">AIMA ↗</a><a href="https://www.seg-social.pt/" target="_blank" rel="noopener">Segurança Social ↗</a><a href="https://justica.gov.pt/" target="_blank" rel="noopener">Justiça ↗</a></div></div>
+</div><div class="container footer-bottom"><span>© 2026 Guia Migrante PT.</span><span>Portal independente; não representa entidades públicas.</span></div></footer>
+<script>const menuButton=document.getElementById('menuButton'),mobileNav=document.getElementById('mobileNav');if(menuButton&&mobileNav)menuButton.addEventListener('click',()=>{const o=mobileNav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(o));});</script><script src="ux.js" defer></script>
+  <script src="ops-v12.js" defer></script>
+  <script src="source-guard.js" defer></script>
+</body></html>

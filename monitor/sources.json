@@ -2,6 +2,20 @@
   "version": 4,
   "sources": [
     {
+      "id": "src_12250e4f5a61",
+      "url": "https://aima.gov.pt/",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "en/transportes.html",
+        "transportes.html"
+      ],
+      "watch_terms": [
+        "aima"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_08741fbb1e64",
       "url": "https://aima.gov.pt/documents/respostas-perguntas-frequentes-informacoes-032026.pdf",
       "domain": "aima.gov.pt",
@@ -1175,6 +1189,22 @@
       "required": true
     },
     {
+      "id": "src_79e0a2f33906",
+      "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/173-2026-1164281329",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "en/transportes.html",
+        "transportes.html"
+      ],
+      "watch_terms": [
+        "2026",
+        "decree-law",
+        "decreto-lei"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_e36005383a29",
       "url": "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996",
       "domain": "diariodarepublica.pt",
@@ -1266,6 +1296,24 @@
         "legal",
         "nacionalidade",
         "residência"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_4da13ca00752",
+      "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2006-108134506",
+      "domain": "diariodarepublica.pt",
+      "pages": [
+        "en/transportes.html",
+        "transportes.html"
+      ],
+      "watch_terms": [
+        "2006",
+        "coimas",
+        "fines",
+        "tickets",
+        "títulos"
       ],
       "risk": "high",
       "required": true
@@ -1476,6 +1524,21 @@
       ],
       "risk": "medium",
       "required": false
+    },
+    {
+      "id": "src_151611dd5ea8",
+      "url": "https://justica.gov.pt/",
+      "domain": "justica.gov.pt",
+      "pages": [
+        "en/transportes.html",
+        "transportes.html"
+      ],
+      "watch_terms": [
+        "justice",
+        "justiça"
+      ],
+      "risk": "high",
+      "required": true
     },
     {
       "id": "src_0ea9b0928bd2",
@@ -1938,6 +2001,67 @@
       "required": false
     },
     {
+      "id": "src_26f04e98a644",
+      "url": "https://www.erse.pt/consumidores-de-energia/eletricidade/contratarmudar-de-comercializador",
+      "domain": "www.erse.pt",
+      "pages": [
+        "servicos-casa.html"
+      ],
+      "watch_terms": [
+        "contratos",
+        "eletricidade",
+        "erse"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_08fe4e274ce1",
+      "url": "https://www.erse.pt/consumidores-de-energia/eletricidade/o-que-esta-incluido-no-preco",
+      "domain": "www.erse.pt",
+      "pages": [
+        "servicos-casa.html"
+      ],
+      "watch_terms": [
+        "eletricidade",
+        "erse",
+        "social",
+        "tarifa"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_895f18d4d170",
+      "url": "https://www.gov.pt/",
+      "domain": "www.gov.pt",
+      "pages": [
+        "en/transportes.html",
+        "transportes.html"
+      ],
+      "watch_terms": [
+        "gov.pt"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_ed371aefaa82",
+      "url": "https://www.gov.pt/guias/garantia-de-produtos-comprados-em-portugal",
+      "domain": "www.gov.pt",
+      "pages": [
+        "consumidor.html"
+      ],
+      "watch_terms": [
+        "garantias",
+        "gov.pt",
+        "livre",
+        "resolução"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_bcb6fdeda2b8",
       "url": "https://www.gov.pt/guias/migrantes-cuidados-de-saude-em-portugal",
       "domain": "www.gov.pt",
@@ -2018,6 +2142,22 @@
         "reconhecimento",
         "regulamentada.",
         "regulamentadas"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_0009c3d374b2",
+      "url": "https://www.gov.pt/guias/resolucao-de-conflitos-de-consumo",
+      "domain": "www.gov.pt",
+      "pages": [
+        "consumidor.html"
+      ],
+      "watch_terms": [
+        "conflitos",
+        "consumo",
+        "gov.pt",
+        "resolução"
       ],
       "risk": "high",
       "required": true
@@ -2867,7 +3007,9 @@
       "domain": "www.seg-social.pt",
       "pages": [
         "apoios-sociais.html",
-        "en/apoios-sociais.html"
+        "en/apoios-sociais.html",
+        "en/transportes.html",
+        "transportes.html"
       ],
       "watch_terms": [
         "security",

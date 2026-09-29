@@ -2074,7 +2074,8 @@
       "url": "https://www.cig.gov.pt/area-portal-da-violencia/portal-violencia-domestica/servico-de-informacao-as-vitimas-de-violencia-domestica",
       "domain": "www.cig.gov.pt",
       "pages": [
-        "discriminacao-apoio.html"
+        "discriminacao-apoio.html",
+        "situacoes-urgentes.html"
       ],
       "watch_terms": [
         "doméstica",
@@ -2717,6 +2718,22 @@
       "required": true
     },
     {
+      "id": "src_20e086ae3712",
+      "url": "https://www.gov.pt/servicos/pedir-apoio-para-as-vitimas-de-trafico-de-pessoas",
+      "domain": "www.gov.pt",
+      "pages": [
+        "situacoes-urgentes.html"
+      ],
+      "watch_terms": [
+        "apoio",
+        "pessoas",
+        "tráfico",
+        "vítimas"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_2e5a8d9c1488",
       "url": "https://www.gov.pt/servicos/pedir-equivalencia-de-habilitacoes-estrangeiras-do-ensino-basico-e-secundario",
       "domain": "www.gov.pt",
@@ -3268,6 +3285,22 @@
       "watch_terms": [
         "security",
         "segurança",
+        "social"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_b65c4147496a",
+      "url": "https://www.seg-social.pt/documents/10152/729656/LINHA%2BNACIONAL%2BDE%2BEMERG%C3%8ANCIA%2BSOCIAL%2B-%2B144%2BLNES/597f3fad-9e5a-46ac-991d-9d375fb4610e",
+      "domain": "www.seg-social.pt",
+      "pages": [
+        "situacoes-urgentes.html"
+      ],
+      "watch_terms": [
+        "emergência",
+        "linha",
+        "nacional",
         "social"
       ],
       "risk": "medium",

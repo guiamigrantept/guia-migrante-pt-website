@@ -1544,6 +1544,22 @@
       "required": false
     },
     {
+      "id": "src_63b9bbc29c27",
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/IRS/Pages/Rendimentos_estrangeiro.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "pages": [
+        "impostos.html"
+      ],
+      "watch_terms": [
+        "anexo",
+        "estrangeiro",
+        "finanças",
+        "rendimentos"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
       "id": "src_55765f903ba5",
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00054.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
@@ -1590,10 +1606,25 @@
       "required": false
     },
     {
+      "id": "src_03a4843a0b8f",
+      "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-01018.aspx",
+      "domain": "info.portaldasfinancas.gov.pt",
+      "pages": [
+        "impostos.html"
+      ],
+      "watch_terms": [
+        "finanças",
+        "ifici"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
       "id": "src_7273b7756241",
       "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/artigo-53-o-do-civa.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "pages": [
+        "impostos.html",
         "independente-empreendedor.html"
       ],
       "watch_terms": [
@@ -1757,6 +1788,22 @@
       "required": true
     },
     {
+      "id": "src_2234ef846c7c",
+      "url": "https://justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento",
+      "domain": "justica.gov.pt",
+      "pages": [
+        "habitacao.html"
+      ],
+      "watch_terms": [
+        "arrendamento",
+        "balcão",
+        "justiça",
+        "nacional"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_1a10460aaa69",
       "url": "https://justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade",
       "domain": "justica.gov.pt",
@@ -1836,6 +1883,21 @@
         "também",
         "usada",
         "verificar"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_6de9d828fd49",
+      "url": "https://justica.gov.pt/Servicos/Protecao-juridica",
+      "domain": "justica.gov.pt",
+      "pages": [
+        "discriminacao-apoio.html"
+      ],
+      "watch_terms": [
+        "jurídica",
+        "justiça",
+        "proteção"
       ],
       "risk": "high",
       "required": true
@@ -2002,6 +2064,20 @@
         "domestic",
         "doméstica",
         "violence",
+        "violência"
+      ],
+      "risk": "medium",
+      "required": false
+    },
+    {
+      "id": "src_52cdd04300b4",
+      "url": "https://www.cig.gov.pt/area-portal-da-violencia/portal-violencia-domestica/servico-de-informacao-as-vitimas-de-violencia-domestica",
+      "domain": "www.cig.gov.pt",
+      "pages": [
+        "discriminacao-apoio.html"
+      ],
+      "watch_terms": [
+        "doméstica",
         "violência"
       ],
       "risk": "medium",
@@ -2331,17 +2407,20 @@
       "url": "https://www.gov.pt/guias/trabalhar-por-conta-propria-guia-para-trabalhadores-independentes/obrigacoes-fiscais-e-pagamentos-impostos-e-contribuicoes",
       "domain": "www.gov.pt",
       "pages": [
+        "impostos.html",
         "independente-empreendedor.html"
       ],
       "watch_terms": [
         "contributivas",
         "fiscais",
         "gov.pt",
+        "independentes",
         "isenção",
         "obrigações",
         "segurança",
         "significa",
-        "social"
+        "social",
+        "trabalhadores"
       ],
       "risk": "high",
       "required": true
@@ -3026,6 +3105,22 @@
       "watch_terms": [
         "desemprego",
         "gov.pt",
+        "subsídio"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_77ef0713e4c1",
+      "url": "https://www.gov.pt/servicos/requerer-o-subsidio-social-de-desemprego",
+      "domain": "www.gov.pt",
+      "pages": [
+        "apoios-sociais.html"
+      ],
+      "watch_terms": [
+        "desemprego",
+        "gov.pt",
+        "social",
         "subsídio"
       ],
       "risk": "high",

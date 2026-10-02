@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T09:46:42Z",
+  "generated_at": "2026-10-02T17:52:52Z",
   "ok": true,
   "partial_ok": true,
   "sources_total": 4,
@@ -8,9 +8,11 @@
     {
       "source": "AIMA",
       "ok": true,
-      "count": 6,
-      "index": "https://aima.gov.pt/pt/noticias",
-      "fallback_errors": [],
+      "count": 3,
+      "index": "https://aima.gov.pt/",
+      "fallback_errors": [
+        "https://aima.gov.pt/pt/noticias: no relevant entries extracted"
+      ],
       "error": null
     },
     {
@@ -40,7 +42,7 @@
       "note": "official index reachable; no migration-relevant entries found in this cycle"
     }
   ],
-  "count": 8,
+  "count": 5,
   "new_updates": [],
   "error": null,
   "rejected_mismatched_updates": []

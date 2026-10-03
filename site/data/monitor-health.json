@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "generated_at": "2026-10-03T11:45:02Z",
+  "generated_at": "2026-10-03T16:24:37Z",
   "state": "degraded",
   "schedule_hours": 3,
   "warning_after_hours": 9,
   "critical_after_hours": 18,
   "source_coverage_ok": true,
   "procedure_coverage_ok": true,
-  "required_sources": 130,
+  "required_sources": 131,
   "missing_required": [],
   "blocked_pages": [
     "aima-agendamento-problemas.html",
@@ -30,8 +30,8 @@
     "ue-familiares.html"
   ],
   "critical_error_count": 0,
-  "source_error_count": 37,
-  "optional_source_error_count": 21,
+  "source_error_count": 39,
+  "optional_source_error_count": 23,
   "repeated_source_failure_count": 0,
   "discovery_ok": true,
   "discovery_error": null,

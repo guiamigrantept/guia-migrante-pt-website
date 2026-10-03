@@ -69,6 +69,20 @@
       "required": true
     },
     {
+      "id": "src_28774aead548",
+      "url": "https://aima.gov.pt/media/pages/documents/2362d0cee2-1738969731/faqs-acolhimento_site-aima.pdf",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "asilo.html"
+      ],
+      "watch_terms": [
+        "acolhimento",
+        "aima"
+      ],
+      "risk": "high",
+      "required": false
+    },
+    {
       "id": "src_076880484ab9",
       "url": "https://aima.gov.pt/media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf",
       "domain": "aima.gov.pt",
@@ -84,6 +98,21 @@
         "international",
         "oficial",
         "protection",
+        "proteção"
+      ],
+      "risk": "high",
+      "required": false
+    },
+    {
+      "id": "src_759b7e28e04f",
+      "url": "https://aima.gov.pt/media/pages/documents/ae8d126274-1750428776/lei-27.pdf",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "asilo.html"
+      ],
+      "watch_terms": [
+        "2008",
+        "internacional",
         "proteção"
       ],
       "risk": "high",
@@ -2542,6 +2571,24 @@
         "pagamento",
         "pode",
         "trabalhador"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_c19276c8aef5",
+      "url": "https://www.gov.pt/guias/ucrania-informacoes-e-apoios-disponiveis-em-portugal",
+      "domain": "www.gov.pt",
+      "pages": [
+        "protecao-temporaria.html"
+      ],
+      "watch_terms": [
+        "apoios",
+        "gov.pt",
+        "proteção",
+        "regime",
+        "temporária",
+        "ucrânia"
       ],
       "risk": "high",
       "required": true

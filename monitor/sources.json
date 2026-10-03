@@ -302,6 +302,87 @@
       "required": true
     },
     {
+      "id": "src_f52860abec7d",
+      "url": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-emitida-a-estudantes-do-ensino-superior-art-o-91",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "estudantes.html"
+      ],
+      "watch_terms": [
+        "91.º",
+        "aima",
+        "artigo",
+        "ensino",
+        "superior"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_428c67712ce8",
+      "url": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-para-estagiarios-art-93-o",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "estudantes.html"
+      ],
+      "watch_terms": [
+        "93.º",
+        "aima",
+        "artigo",
+        "estagiários"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_31ab41788719",
+      "url": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-para-investigadores-art-91-o-b",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "estudantes.html"
+      ],
+      "watch_terms": [
+        "91.º-b",
+        "aima",
+        "artigo",
+        "investigadores"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_5372b7055017",
+      "url": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-para-voluntarios-art-94-o",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "estudantes.html"
+      ],
+      "watch_terms": [
+        "94.º",
+        "aima",
+        "artigo",
+        "voluntários"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_24d035e3352c",
+      "url": "https://aima.gov.pt/pt/estudar/mobilidade-de-estudantes-do-ensino-superior-art-91-o-a",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "estudantes.html"
+      ],
+      "watch_terms": [
+        "91.º-a",
+        "aima",
+        "artigo",
+        "mobilidade"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_996c678197f2",
       "url": "https://aima.gov.pt/pt/lingua-portuguesa/cursos-de-portugues-lingua-de-acolhimento-pla",
       "domain": "aima.gov.pt",
@@ -798,6 +879,24 @@
         "protocolo",
         "regulada",
         "visto."
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_bfa195da03bc",
+      "url": "https://aima.gov.pt/pt/trabalhar/tendo-beneficiado-de-ar-para-estudantes-do-2-o-ou-3-o-ciclos-do-ensino-superior-ou-de-ar-para-investigacao-e-concluido-os-estudo",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "estudantes.html"
+      ],
+      "watch_terms": [
+        "122.º",
+        "aima",
+        "artigo",
+        "depois",
+        "estudos",
+        "investigação"
       ],
       "risk": "high",
       "required": true
@@ -2926,6 +3025,22 @@
       "required": true
     },
     {
+      "id": "src_cba148b16793",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
+      "domain": "www.gov.pt",
+      "pages": [
+        "altamente-qualificado.html"
+      ],
+      "watch_terms": [
+        "estada",
+        "gov.pt",
+        "temporária",
+        "visto"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_51345bfaef9d",
       "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-estudo-intercambio-de-estudantes-estagio-profissional-ou-voluntariado",
       "domain": "www.gov.pt",
@@ -2989,8 +3104,8 @@
         "highly",
         "investigação",
         "qualificada",
-        "qualificado",
         "qualified",
+        "residência",
         "visa",
         "visto"
       ],

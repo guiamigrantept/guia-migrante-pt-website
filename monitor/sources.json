@@ -151,6 +151,19 @@
       "required": true
     },
     {
+      "id": "src_d3b88e353cf6",
+      "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "investimento.html"
+      ],
+      "watch_terms": [
+        "aima"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_2c926c8cea06",
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/concessao-de-autorizacao-de-residencia-cplp",
       "domain": "aima.gov.pt",
@@ -547,6 +560,21 @@
       "required": true
     },
     {
+      "id": "src_52321d8bd72b",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-agendamento-para-aquisicao-do-estatuto-de-residente-de-longa-duracao",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "longa-duracao.html"
+      ],
+      "watch_terms": [
+        "agendamento",
+        "aima",
+        "erld"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_984aab257167",
       "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
       "domain": "aima.gov.pt",
@@ -649,6 +677,22 @@
       "required": true
     },
     {
+      "id": "src_c71b71d3bfa4",
+      "url": "https://aima.gov.pt/pt/noticias/renovacao-do-titulo-de-residente-de-longa-duracao",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "longa-duracao.html"
+      ],
+      "watch_terms": [
+        "aima",
+        "erld",
+        "renovação",
+        "título"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_ac4c209d3df8",
       "url": "https://aima.gov.pt/pt/noticias/veja-conhecer-as-regras-para-renovacao-do-titulo-de-residencia-cplp",
       "domain": "aima.gov.pt",
@@ -697,7 +741,8 @@
       "domain": "aima.gov.pt",
       "pages": [
         "en/reagrupamento-familiar.html",
-        "reagrupamento-familiar.html"
+        "reagrupamento-familiar.html",
+        "rendimentos-proprios.html"
       ],
       "watch_terms": [
         "aima",
@@ -976,8 +1021,7 @@
       "watch_terms": [
         "aima",
         "portal",
-        "renewals",
-        "renovações"
+        "renewals"
       ],
       "risk": "high",
       "required": true
@@ -1274,6 +1318,7 @@
         "en/aima-agendamento-problemas.html",
         "en/contactos.html",
         "en/titulo-residencia-renovacao-segunda-via.html",
+        "longa-duracao.html",
         "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
@@ -1288,13 +1333,13 @@
         "contacto",
         "contacto.",
         "correct",
+        "documentos",
         "form",
         "form.",
         "formulário",
         "open",
-        "peça",
-        "replacement",
-        "request"
+        "pedido",
+        "peça"
       ],
       "risk": "medium",
       "required": false
@@ -2073,7 +2118,9 @@
       "pages": [
         "en/legalizacao.html",
         "en/titulo-residencia-renovacao-segunda-via.html",
+        "investimento.html",
         "legalizacao.html",
+        "longa-duracao.html",
         "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
@@ -2091,7 +2138,8 @@
         "renewal",
         "renovação",
         "renovações",
-        "temporária"
+        "temporária",
+        "título"
       ],
       "risk": "medium",
       "required": false
@@ -2619,6 +2667,22 @@
         "posso",
         "sobre",
         "trabalho"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_d7d25428293c",
+      "url": "https://www.gov.pt/noticias/governo-aumenta-salario-minimo-para-920-euros-em-2026",
+      "domain": "www.gov.pt",
+      "pages": [
+        "rendimentos-proprios.html"
+      ],
+      "watch_terms": [
+        "2026",
+        "gov.pt",
+        "mínimo",
+        "salário"
       ],
       "risk": "high",
       "required": true

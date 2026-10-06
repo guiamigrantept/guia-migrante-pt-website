@@ -2,6 +2,97 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-10-06T16:05:21Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "baseline_seeded_from_verified_official_listing",
+      "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
+    },
+    {
+      "time": "2026-10-06T16:05:12Z",
+      "source_id": "src_c56963332c91",
+      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "state": "non_substantive_change_accepted",
+      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
+    },
+    {
+      "time": "2026-10-06T16:05:12Z",
+      "source_id": "src_b8fe052c05da",
+      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
+      "state": "non_substantive_change_accepted",
+      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
+    },
+    {
+      "time": "2026-10-06T16:05:12Z",
+      "state": "invalid_baselines_rejected",
+      "source_ids": [
+        "src_12250e4f5a61",
+        "src_d7d25428293c"
+      ],
+      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
+    },
+    {
+      "time": "2026-10-06T16:05:11Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-06T16:05:11Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-06T16:05:01Z",
+      "source_id": "src_c56963332c91",
+      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "state": "changed_pending_review",
+      "pages": [
+        "carta-conducao.html",
+        "en/carta-conducao.html"
+      ],
+      "candidate_sha256": "40a3da2d83bd11e3da77cd1024d30a40ed416fc726ef77261722386a18d47dc7",
+      "diff_excerpt": "-Substituir a carta de condução\n-Renovar a carta de condução\n+Renovar a carta de condução\n+Substituir a carta de condução"
+    },
+    {
+      "time": "2026-10-06T16:04:58Z",
+      "source_id": "src_b8fe052c05da",
+      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
+      "state": "changed_pending_review",
+      "pages": [
+        "saude-completa.html"
+      ],
+      "candidate_sha256": "52a68259cbca293c675eef774810b0825e65f636a904220263d4fa65a6c000c0",
+      "diff_excerpt": "+Marcar consulta médica no hospital\n-Marcar consulta médica no hospital\n+Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\n-Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)"
+    },
+    {
+      "time": "2026-10-06T16:04:16Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "changed_pending_review",
+      "pages": [
+        "habitacao.html",
+        "seguranca.html"
+      ],
+      "candidate_sha256": "13413c7b22731566e4981c05d35f76324b4fd5df7216887986b772c0efcacdd0",
+      "diff_excerpt": "-Informação predial simplificada — informação oficial da Justiça verificada em 27-09-2026. Permite saber quem é o proprietário de um imóvel e se existem hipotecas, penhoras, outros encargos ou pedidos de registo pendentes. A consulta é feita online mediante um código de acesso que pode ser pedido online.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/predio/certidoes-e-informacoes-de-registo-predial\n+Client IP: 172.178.118.197\n+Attack ID: 20000051\n+Message ID: 007514734753"
+    },
+    {
+      "time": "2026-10-06T16:04:11Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "4c96530067e2e0ad107d2b90f195c17d65b53023cb13dfcd9474d4b68192603c",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 172.178.118.197\n+Attack ID: 20000051\n+Message ID: 007514733499"
+    },
+    {
       "time": "2026-10-06T06:27:45Z",
       "source_id": "src_5d9fd6dbb527",
       "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
@@ -2717,78 +2808,6 @@
       "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
       "state": "baseline_seeded_from_verified_official_listing",
       "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_c56963332c91",
-      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "non_substantive_change_accepted",
-      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "state": "invalid_baselines_rejected",
-      "source_ids": [
-        "src_12250e4f5a61",
-        "src_ac4c209d3df8"
-      ],
-      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "temporary_source_response_ignored",
-      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_0bb3fdad0761",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_48b0a401cee7",
-      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_2b0880736b8a",
-      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_7c058712b7c1",
-      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-09-30T20:06:54Z",
-      "source_id": "src_cbed4d38b3bf",
-      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
     }
   ]
 }

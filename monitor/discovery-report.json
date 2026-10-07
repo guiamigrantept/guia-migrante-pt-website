@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T13:24:12Z",
+  "generated_at": "2026-10-07T20:38:13Z",
   "ok": true,
   "partial_ok": true,
   "sources_total": 4,
@@ -8,11 +8,9 @@
     {
       "source": "AIMA",
       "ok": true,
-      "count": 3,
-      "index": "https://aima.gov.pt/",
-      "fallback_errors": [
-        "https://aima.gov.pt/pt/noticias: no relevant entries extracted"
-      ],
+      "count": 6,
+      "index": "https://aima.gov.pt/pt/noticias",
+      "fallback_errors": [],
       "error": null
     },
     {
@@ -42,17 +40,40 @@
       "note": "official index reachable; no migration-relevant entries found in this cycle"
     }
   ],
-  "count": 5,
+  "count": 8,
   "new_updates": [
     {
       "source": "AIMA",
-      "title": "4.º Encontro Regional AIMA em Rede reforça cooperação para a integração na Região Centro",
-      "date": "2026-10-07",
-      "url": "https://aima.gov.pt/pt/noticias/4-o-encontro-regional-aima-em-rede-reforca-cooperacao-para-a-integracao-na-regiao-centro",
+      "title": "Um retrato das migrações em Portugal: AIMA divulga Relatório de Migrações e Asilo 2025",
+      "date": "2026-09-22",
+      "url": "https://aima.gov.pt/pt/noticias/um-retrato-das-migracoes-em-portugal-aima-divulga-relatorio-de-migracoes-e-asilo-2025",
+      "pages": [
+        "asilo.html",
+        "atualizacoes.html"
+      ],
+      "summary_pt": "Nova informação oficial publicada por AIMA com potencial impacto em procedimentos ou direitos de pessoas migrantes em Portugal. Confirme os detalhes na fonte oficial.",
+      "summary_en": "New official information published by AIMA that may affect procedures or rights for migrants in Portugal. Check the official source for details."
+    },
+    {
+      "source": "AIMA",
+      "title": "Formulário de Contacto temporariamente indisponível",
+      "date": "2026-09-18",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-temporariamente-indisponivel",
       "pages": [
         "atualizacoes.html",
-        "integracao.html",
-        "trabalho.html"
+        "contactos.html"
+      ],
+      "summary_pt": "Nova informação oficial publicada por AIMA com potencial impacto em procedimentos ou direitos de pessoas migrantes em Portugal. Confirme os detalhes na fonte oficial.",
+      "summary_en": "New official information published by AIMA that may affect procedures or rights for migrants in Portugal. Check the official source for details."
+    },
+    {
+      "source": "AIMA",
+      "title": "AIMA avalia satisfação dos utentes em 14 Lojas",
+      "date": "2026-09-16",
+      "url": "https://aima.gov.pt/pt/noticias/aima-avalia-satisfacao-dos-utentes-em-14-lojas",
+      "pages": [
+        "atualizacoes.html",
+        "contactos.html"
       ],
       "summary_pt": "Nova informação oficial publicada por AIMA com potencial impacto em procedimentos ou direitos de pessoas migrantes em Portugal. Confirme os detalhes na fonte oficial.",
       "summary_en": "New official information published by AIMA that may affect procedures or rights for migrants in Portugal. Check the official source for details."

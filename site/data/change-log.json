@@ -2,6 +2,271 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-10-08T18:55:40Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "baseline_seeded_from_verified_official_listing",
+      "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_c56963332c91",
+      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "state": "non_substantive_change_accepted",
+      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_b8fe052c05da",
+      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
+      "state": "non_substantive_change_accepted",
+      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "state": "invalid_baselines_rejected",
+      "source_ids": [
+        "src_12250e4f5a61",
+        "src_d7d25428293c"
+      ],
+      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_52321d8bd72b",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-agendamento-para-aquisicao-do-estatuto-de-residente-de-longa-duracao",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_c71b71d3bfa4",
+      "url": "https://aima.gov.pt/pt/noticias/renovacao-do-titulo-de-residente-de-longa-duracao",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_ac4c209d3df8",
+      "url": "https://aima.gov.pt/pt/noticias/veja-conhecer-as-regras-para-renovacao-do-titulo-de-residencia-cplp",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:31Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-10-08T18:55:22Z",
+      "source_id": "src_c56963332c91",
+      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "state": "changed_pending_review",
+      "pages": [
+        "carta-conducao.html",
+        "en/carta-conducao.html"
+      ],
+      "candidate_sha256": "56a8fbbef2f9b0a2eae26a685f671a7ce97963ddd9f4a015290d0e1cf5492d2f",
+      "diff_excerpt": "+Tirar a carta de condução\n-Tirar a carta de condução"
+    },
+    {
+      "time": "2026-10-08T18:55:19Z",
+      "source_id": "src_b8fe052c05da",
+      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
+      "state": "changed_pending_review",
+      "pages": [
+        "saude-completa.html"
+      ],
+      "candidate_sha256": "3e1f1df53107f3c2fa9d9038322b0ac2742360178406a93480ee5e6d28ab7824",
+      "diff_excerpt": "+Mudar de centro de saúde\n+Consultar a área pessoal do portal SNS 24\n-Consultar a área pessoal do portal SNS 24\n-Mudar de centro de saúde"
+    },
+    {
+      "time": "2026-10-08T18:54:39Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "changed_pending_review",
+      "pages": [
+        "habitacao.html",
+        "seguranca.html"
+      ],
+      "candidate_sha256": "f6a894a0ce3583e89d25e5e66dc62d84e36cbf1007a6d6213565a09c6316a4a5",
+      "diff_excerpt": "-Informação predial simplificada — informação oficial da Justiça verificada em 27-09-2026. Permite saber quem é o proprietário de um imóvel e se existem hipotecas, penhoras, outros encargos ou pedidos de registo pendentes. A consulta é feita online mediante um código de acesso que pode ser pedido online.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/predio/certidoes-e-informacoes-de-registo-predial\n+Client IP: 20.51.199.193\n+Attack ID: 20000051\n+Message ID: 007544312730"
+    },
+    {
+      "time": "2026-10-08T18:54:34Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "0a05be25bd039a51fbcc7808171b9ca4a6f53ee5fc169686df4f267a0f5d5835",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 20.51.199.193\n+Attack ID: 20000051\n+Message ID: 007544311644"
+    },
+    {
+      "time": "2026-10-08T18:52:24Z",
+      "source_id": "src_ac4c209d3df8",
+      "url": "https://aima.gov.pt/pt/noticias/veja-conhecer-as-regras-para-renovacao-do-titulo-de-residencia-cplp",
+      "state": "changed_pending_review",
+      "pages": [
+        "cplp.html"
+      ],
+      "candidate_sha256": "fec5954bbb9c3e6669f2e83583f01581e301b3c1595a845f3bafc3abee9f2d6d",
+      "diff_excerpt": "-Página não encontrada\n+Renovação e Substituição do Título de Residência CPLP\n+A Estrutura de Missão para a Recuperação dos Processos Pendentes na AIMA (EMAIMA) começou a notificar os titulares de Autorização de Residência da CPLP esta sexta-feira, dia 14 de fevereiro.\n+A notificação com instruções vai ser enviada, por-email, a todos os utentes que têm um Certificado de Concessão de Autorização de Residência para Cidadãos da Comunidade dos Países de Língua Portuguesa (AR CPLP), emitido ao abrigo da Portaria n.º 97/2023, de 28 de fevereiro, tendo em vista a sua renovação e substituição pelo modelo uniforme de título de residência, previstas na Portaria n.º 36-B/2025/1, de 13 de fevereiro.\n+Quando receberem a notificação, os titulares de Autorização de Residência CPLP devem aceder à plataforma services.aima.gov.pt e revalidar as suas credenciais de acesso, na opção “Renovar AR CPLP”.\n+Depois de atualizarem o registo, os requerentes devem pedir, na mesma plataforma, a geração de um Documento Único de Cobrança (DUC), para pagamento das taxas, que devem ser pagas nos 10 dias úteis seguintes.\n+Após a validação da conta e a confirmação do pagamento, os requerentes receberão, nos dias segu"
+    },
+    {
+      "time": "2026-10-08T18:52:21Z",
+      "source_id": "src_c71b71d3bfa4",
+      "url": "https://aima.gov.pt/pt/noticias/renovacao-do-titulo-de-residente-de-longa-duracao",
+      "state": "changed_pending_review",
+      "pages": [
+        "longa-duracao.html"
+      ],
+      "candidate_sha256": "29c9ea21fa7066b1322cf8890b3c6593cd433be5394f04965aed1c5fbb797317",
+      "diff_excerpt": "-Página não encontrada\n+Renovação do Título de Residente de Longa Duração\n+A AIMA esclarece que se encontra disponível o pedido de renovação do título de residente de longa duração no Portal das Renovações\n+(artigo 130, n.º 2º da Lei n.º 23/2007, de 04/07, na sua atual redação e art. 75º do Dec. Reg. N.º 84/2007, de 05/11, na sua atual redação)\n+Caso se encontre nesta situação, deverá renovar a sua Autorização de Residência no Portal das Renovações seguinte link:\n+portal-renovacoes.aima.gov.pt/ords/r/aima/aima-pr/pr-home\n+A AIMA relembra que:\n+• Para concluir o processo de renovação de Autorização de Residência com sucesso, é necessário o Número de Identificação da Segurança Social (NISS), podendo ser solicitado junto do Instituto da Segurança Social ou em algumas lojas do cidadão. Caso já possua NISS, mas não conste nos registos da AIMA, deverá proceder à sua atualização.\n+• Para receber o documento de Autorização de Residência na sua residência atual, é necessário que a sua morada esteja atualizada.\n+• Toda a informação deverá ser atualizada através do Formulário de Contacto (\n+https://contactenos.aima.gov.pt/contact-form\n+) .\n+Published on 10.12.2025 by AIMA\n+Notícias\n+Ver tudo\n"
+    },
+    {
+      "time": "2026-10-08T18:52:19Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/protecao-temporaria.html",
+        "protecao-temporaria.html"
+      ],
+      "candidate_sha256": "54ff83a6ee6d90cca2a2873cf90be1a3162fe6598c8d5a1c3bfc8cb314347e32",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+4.º Encontro Regional AIMA em Rede reforça cooperação para a integração na Região Centro\n+07.10.2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+Formulário de Contacto temporariamente indisponível\n+01.10.2026\n+Intervenção técnica programada entre 2 e 3 de outubro\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA em Rede reúne parceiros locais e institucionais no 3.º Encontro Regional, em Sines\n+25.09.2026\n+AIMA em Rede promove integração e cooperação"
+    },
+    {
+      "time": "2026-10-08T18:52:16Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "en/titulo-residencia-renovacao-segunda-via.html",
+        "legalizacao.html",
+        "titulo-residencia-renovacao-segunda-via.html"
+      ],
+      "candidate_sha256": "5803c842663588ad9dc1be85e827a0f5be394e8642d597c8a3c16a54757f5223",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+4.º Encontro Regional AIMA em Rede reforça cooperação para a integração na Região Centro\n+07.10.2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+Formulário de Contacto temporariamente indisponível\n+01.10.2026\n+Intervenção técnica programada entre 2 e 3 de outubro\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA em Rede reúne parceiros locais e institucionais no 3.º Encontro Regional, em Sines\n+25.09.2026\n+AIMA em Rede promove integração e cooperação"
+    },
+    {
+      "time": "2026-10-08T18:52:13Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "candidate_sha256": "43cd93d714b311acc1a240e089a5d0d6d255bb6438cdbc0a54aba7d8a91871fa",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+4.º Encontro Regional AIMA em Rede reforça cooperação para a integração na Região Centro\n+07.10.2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+Formulário de Contacto temporariamente indisponível\n+01.10.2026\n+Intervenção técnica programada entre 2 e 3 de outubro\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA em Rede reúne parceiros locais e institucionais no 3.º Encontro Regional, em Sines\n+25.09.2026\n+AIMA em Rede promove integração e cooperação"
+    },
+    {
+      "time": "2026-10-08T18:52:10Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "changed_pending_review",
+      "pages": [
+        "aima-agendamento-problemas.html",
+        "en/aima-agendamento-problemas.html",
+        "en/ue-familiares.html",
+        "ue-familiares.html"
+      ],
+      "candidate_sha256": "e0dadfc11ea29aa650bcc9020372b9df630fc62a532406c3c7a68379fd14fea1",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+4.º Encontro Regional AIMA em Rede reforça cooperação para a integração na Região Centro\n+07.10.2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+Formulário de Contacto temporariamente indisponível\n+01.10.2026\n+Intervenção técnica programada entre 2 e 3 de outubro\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA em Rede reúne parceiros locais e institucionais no 3.º Encontro Regional, em Sines\n+25.09.2026\n+AIMA em Rede promove integração e cooperação"
+    },
+    {
+      "time": "2026-10-08T18:52:08Z",
+      "source_id": "src_52321d8bd72b",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-agendamento-para-aquisicao-do-estatuto-de-residente-de-longa-duracao",
+      "state": "changed_pending_review",
+      "pages": [
+        "longa-duracao.html"
+      ],
+      "candidate_sha256": "a288d8e4a76b994598193783b7d6ac1ad01c95d2e1805bb655de3439579c3c82",
+      "diff_excerpt": "-Página não encontrada\n+Formulário: Agendamento para Aquisição do Estatuto de Residente de Longa Duração\n+A AIMA lança hoje o\n+formulário de agendamento para aquisição do estatuto de residente de longa duração\n+que se encontra disponível no seguinte link: contactenos.aima.gov.pt/contact-form.\n+Os\n+documentos obrigatórios\n+e que têm de ser submetidos são os seguintes:\n+• Cópia digitalizada do Título de Residência;\n+• Cópia digitalizada do Passaporte integral;\n+• Cópia digitalizada declaração de IRS dos últimos 5 anos;\n+• Estrato da carreira contributiva da Segurança Social.\n+Os\n+requisitos legais\n+para a aquisição do estatuto de residente de longa duração incluem:\n+Residência Legal e Ininterrupta:\n+O nacional de um país terceiro deve ter residência legal e ininterrupta em território nacional durante os cinco anos imediatamente anteriores à apresentação do requerimento. Para beneficiários de proteção internacional, o período é contado desde a data da apresentação do pedido que resultou na concessão da proteção.\n+Recursos Estáveis e Regulares:\n+O requerente deve dispor de recursos estáveis e regulares que sejam suficientes para a sua própria subsistência e para a dos seus familiares, "
+    },
+    {
+      "time": "2026-10-08T18:52:05Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "ca2bf124e947696ba539df302f975a9c9ca6493f4a3754ce672ba164c5c4d292",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+4.º Encontro Regional AIMA em Rede reforça cooperação para a integração na Região Centro\n+07.10.2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+Formulário de Contacto temporariamente indisponível\n+01.10.2026\n+Intervenção técnica programada entre 2 e 3 de outubro\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA em Rede reúne parceiros locais e institucionais no 3.º Encontro Regional, em Sines\n+25.09.2026\n+AIMA em Rede promove integração e cooperação"
+    },
+    {
+      "time": "2026-10-08T18:52:02Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "en/titulo-residencia-renovacao-segunda-via.html",
+        "situacoes-urgentes.html",
+        "titulo-residencia-renovacao-segunda-via.html"
+      ],
+      "candidate_sha256": "18109be7b3d51d59c0bd97301d2c36be97229d84c2abf666fe7b6a3641d19906",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+4.º Encontro Regional AIMA em Rede reforça cooperação para a integração na Região Centro\n+07.10.2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+Formulário de Contacto temporariamente indisponível\n+01.10.2026\n+Intervenção técnica programada entre 2 e 3 de outubro\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA em Rede reúne parceiros locais e institucionais no 3.º Encontro Regional, em Sines\n+25.09.2026\n+AIMA em Rede promove integração e cooperação"
+    },
+    {
       "time": "2026-10-08T10:42:09Z",
       "source_id": "src_5d9fd6dbb527",
       "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
@@ -2505,284 +2770,6 @@
       "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
       "state": "baseline_seeded_from_verified_official_listing",
       "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
-    },
-    {
-      "time": "2026-10-02T22:20:34Z",
-      "source_id": "src_c56963332c91",
-      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "non_substantive_change_accepted",
-      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
-    },
-    {
-      "time": "2026-10-02T22:20:34Z",
-      "state": "invalid_baselines_rejected",
-      "source_ids": [
-        "src_12250e4f5a61"
-      ],
-      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
-    },
-    {
-      "time": "2026-10-02T22:20:34Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "temporary_source_response_ignored",
-      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
-    },
-    {
-      "time": "2026-10-02T22:20:34Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-10-02T22:20:34Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-10-02T22:20:22Z",
-      "source_id": "src_c56963332c91",
-      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "carta-conducao.html",
-        "en/carta-conducao.html"
-      ],
-      "candidate_sha256": "282d5109f338f1f2eb6ace125008feb20a2e9ebdff21592d5d270558c510db3a",
-      "diff_excerpt": "+Substituir a carta de condução\n+Pedir a segunda via da carta de condução\n-Pedir a segunda via da carta de condução\n-Substituir a carta de condução"
-    },
-    {
-      "time": "2026-10-02T22:20:01Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/servicos-casa.html",
-        "servicos-casa.html"
-      ],
-      "candidate_sha256": "523d5779b9ec0cb007c3a4b85b16aa1f1a02ad0295b7a217601c01bdcd304535",
-      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 1-10-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
-    },
-    {
-      "time": "2026-10-02T22:19:27Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "habitacao.html",
-        "seguranca.html"
-      ],
-      "candidate_sha256": "d00e6de3ff6401ded04f178e76038f1b75054917f403a17b26849078b0fd7c20",
-      "diff_excerpt": "-Informação predial simplificada — informação oficial da Justiça verificada em 27-09-2026. Permite saber quem é o proprietário de um imóvel e se existem hipotecas, penhoras, outros encargos ou pedidos de registo pendentes. A consulta é feita online mediante um código de acesso que pode ser pedido online.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/predio/certidoes-e-informacoes-de-registo-predial\n+Client IP: 52.234.46.120\n+Attack ID: 20000051\n+Message ID: 007483283911"
-    },
-    {
-      "time": "2026-10-02T22:19:21Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "4937f97ebc4537d8d186182b2d0d92ad30c4c9f4b28e45c0656ba9feb832192f",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 52.234.46.120\n+Attack ID: 20000051\n+Message ID: 007483283409"
-    },
-    {
-      "time": "2026-10-02T17:58:24Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "baseline_seeded_from_verified_official_listing",
-      "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
-    },
-    {
-      "time": "2026-10-02T17:58:11Z",
-      "source_id": "src_c56963332c91",
-      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "non_substantive_change_accepted",
-      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
-    },
-    {
-      "time": "2026-10-02T17:58:11Z",
-      "source_id": "src_b8fe052c05da",
-      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
-      "state": "non_substantive_change_accepted",
-      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
-    },
-    {
-      "time": "2026-10-02T17:58:11Z",
-      "state": "invalid_baselines_rejected",
-      "source_ids": [
-        "src_12250e4f5a61"
-      ],
-      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
-    },
-    {
-      "time": "2026-10-02T17:58:11Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-10-02T17:58:11Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-10-02T17:58:00Z",
-      "source_id": "src_c56963332c91",
-      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "carta-conducao.html",
-        "en/carta-conducao.html"
-      ],
-      "candidate_sha256": "b1d3b77a98db038bae03ad4a3e96414c2d439e5f614322c7eaf0cb89bf39b1d5",
-      "diff_excerpt": "+Renovar a carta de condução\n-Renovar a carta de condução"
-    },
-    {
-      "time": "2026-10-02T17:57:49Z",
-      "source_id": "src_b8fe052c05da",
-      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "26868a0e91f53b264e69b1f35f4507d70e58d5c53d917d6709abf3355bce9027",
-      "diff_excerpt": "-Consultar a área pessoal do portal SNS 24\n+Consultar a área pessoal do portal SNS 24"
-    },
-    {
-      "time": "2026-10-02T17:57:02Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "habitacao.html",
-        "seguranca.html"
-      ],
-      "candidate_sha256": "4640216704dfe3fe98736ce8872ebc88d6a332165497badfd86b86d8011dfdf5",
-      "diff_excerpt": "-Informação predial simplificada — informação oficial da Justiça verificada em 27-09-2026. Permite saber quem é o proprietário de um imóvel e se existem hipotecas, penhoras, outros encargos ou pedidos de registo pendentes. A consulta é feita online mediante um código de acesso que pode ser pedido online.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/predio/certidoes-e-informacoes-de-registo-predial\n+Client IP: 172.215.218.21\n+Attack ID: 20000051\n+Message ID: 007481313291"
-    },
-    {
-      "time": "2026-10-02T17:56:57Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "837ab9f5a7350e939f2ba1e46777f9ec849627752f923f100deeec85681ab547",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+block\n+Web Page Blocked!\n+The page cannot be displayed. Please contact the administrator for additional information.\n+URL: conservatoria.justica.gov.pt/pt/cidadao/casamento/processo-preliminar-casamento\n+Client IP: 172.215.218.21\n+Attack ID: 20000051\n+Message ID: 007481312479"
-    },
-    {
-      "time": "2026-10-02T17:54:10Z",
-      "source_id": "src_7ef818918ee4",
-      "url": "https://aima.gov.pt/pt/pesquisa?q=artigo+122",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/legalizacao.html",
-        "legalizacao.html"
-      ],
-      "candidate_sha256": "1bbe6243e3879d20d12eccf57dc769e3ca432e0d60ce896a5be9f57ed3a47698",
-      "diff_excerpt": "-102 Resultados de Pesquisa \"artigo 122\"\n+85 Resultados de Pesquisa \"artigo 122\"\n-Formulário de Contacto: Pedido de AR Temporária – Art.º 122 alínea j)\n-Notícias | News\n-Formulário de Contacto: P…\n-Para titulares de AR estudante que não concluíram os estudos e estão a trabalhar\n-10\n+Tendo beneficiado de AR para estudantes do 2.º ou 3.º ciclos do ensino superior ou de AR para investigação e concluído os estudos ou investigação, pretendam trabalhar em Portugal – Art. 122.º/1 al. p)\n+Trabalhar | Working\n+Tendo beneficiado de AR p…\n+Tendo beneficiado de autorização de residência para estudantes do 2.º ou 3.º ciclos do ensino superior, concedida ao abrigo do artigo 91.º, ou de autorização de residência para investigação nos …"
-    },
-    {
-      "time": "2026-10-02T17:54:03Z",
-      "source_id": "src_7c058712b7c1",
-      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/protecao-temporaria.html",
-        "protecao-temporaria.html"
-      ],
-      "candidate_sha256": "b977c77a5a05baad2ee64af34afba07c1de401529591a01d96fe76f497163299",
-      "diff_excerpt": "+Nacionais UE e Familiares\n-Proteção Temporária para Pessoas Deslocadas da Ucrânia prorrogada até 2027\n-Foi publicada em Diário da República a Resolução do Conselho de Ministros n.º 53-A/2026, de 12 de março, que aprova a\n-prorrogação da validade dos Títulos de Proteção Temporária concedidos a favor de pessoas deslocadas da Ucrânia em Portugal até 4 de março de 2027\n-A Resolução, aprovada em conformidade com a Decisão de Execução (UE) 2025/1460 do Conselho, de 15 de julho de 2025, produz efeitos a 5 de março de 2026.\n+Página não encontrada\n-Links relacionados\n-Lei n.º 67/2003, de 23 de agosto\n-RCM n.º 53-A/2026, de 12 de março\n-Decisão de Execução (UE) 2025/1460 do Conselho, de 15 de julho de 2025\n-Published on 13.03.2026 by AIMA\n-Notícias\n-Ver tudo\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n-Ler mais\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n-Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamaçõ"
-    },
-    {
-      "time": "2026-10-02T17:54:01Z",
-      "source_id": "src_2b0880736b8a",
-      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/legalizacao.html",
-        "en/titulo-residencia-renovacao-segunda-via.html",
-        "legalizacao.html",
-        "titulo-residencia-renovacao-segunda-via.html"
-      ],
-      "candidate_sha256": "f1124fda4befb7bccbaddd1336c5b019c8fc4224dfe8edc6994f8ad7f28aa4fd",
-      "diff_excerpt": "+Nacionais UE e Familiares\n-Portal de Renovações: certificados e cartões de residência permanentes de Nacionais UE e Familiares\n-A AIMA informa que, a partir desta quarta-feira, dia\n-1 de julho\n-, passa a estar disponível, no\n-Portal de Renovações\n-, o pedido de emissão de\n-certificados e cartões de residência permanentes de Nacionais da União Europeia (UE) e Familiares\n-Esta nova funcionalidade integra o processo de modernização e digitalização dos serviços da AIMA, com o objetivo de os centralizar, simplificar e tornar mais acessíveis.\n-Renovações e pagamento de taxas através do Portal de Renovações\n-Os titulares de certificados ou cartões de residência abrangidos por esta funcionalidade devem realizar, através do\n-Portal de Renovações\n-o pedido de emissão de\n-certificado de residência permanente de Nacionais da UE (Artigo 16)\n-cartão de residência permanente de familiar de nacional da UE Nacional de Estado Terceiro (Artigo 17)\n-o pagamento das respetivas taxas\n-o envio dos documentos necessários\n-O Portal de Renovações passa, assim, a ser o canal para submissão e tramitação destes pedidos, substituindo as opções similares até agora disponíveis no Formulário de Contacto.\n-Os pedi"
-    },
-    {
-      "time": "2026-10-02T17:53:57Z",
-      "source_id": "src_0bb3fdad0761",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/mudanca-saida.html",
-        "mudanca-saida.html"
-      ],
-      "candidate_sha256": "a3f565c1a0b0cc88cdd5250fcb8e5df103f5f0567cad3131d5db681465572bed",
-      "diff_excerpt": "+Nacionais UE e Familiares\n-Formulário de Contacto: Número de Cartão/Título de Residência\n-A AIMA informa que o Formulário de Contacto tem\n-novo campo: “Número do Cartão/Título de Residência”.\n-Este campo aceita\n-todos os formatos de números existentes\n-, nomeadamente os\n-números de 6 dígitos\n-(cartões de papel desdobrável).\n-O Formulário de Contacto está disponível neste link:\n-contactenos.aima.gov.pt/contact-form\n+Página não encontrada\n-Published on 23.11.2025 by AIMA\n-Notícias\n-Ver tudo\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n-Ler mais\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n-Ler mais\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n-Ler mais"
-    },
-    {
-      "time": "2026-10-02T17:53:54Z",
-      "source_id": "src_984aab257167",
-      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
-      "state": "changed_pending_review",
-      "pages": [
-        "aima-agendamento-problemas.html",
-        "en/aima-agendamento-problemas.html",
-        "en/ue-familiares.html",
-        "ue-familiares.html"
-      ],
-      "candidate_sha256": "6a9c7ca32017cdd1ad95b20be691fbf898df48443e4f0bf46d3d959a4bfa8c6d",
-      "diff_excerpt": "+Nacionais UE e Familiares\n-Agendamento Cartões de Residência: Familiares do cidadão da União nacionais de Estado terceiro\n-A AIMA disponibiliza o formulário para agendamento de cartões de residência para os\n-familiares do cidadão da União nacionais de Estado terceiro cuja estada no território nacional se prolongue por período superior a três meses\n-no link\n-contactenos.aima.gov.pt/contact-form\n-O presente formulário está disponível nos campos \"Cartão de Residência UE\" e \"Pedido de Agendamento - Cartão de Residência ao abrigo do artigo 15\".\n-Para o pedido de agendamento é\n-obrigatória\n-a submissão dos seguintes documentos:\n-a) Cópia digitalizada de\n-Passaporte válido\n-b) Cópia digitalizada de\n-Documento comprovativo\n-da\n-relação familiar\n-com o cidadão da União ou da\n-qualidade de parceiro\n-[subalínea ii) da alínea e) do artigo 2.º];\n-c) Cópia digitalizada de\n-Certificado de registo\n-do cidadão da União que acompanhem ou ao qual se reúnam;\n-d) Cópia digitalizada de\n-prova documental\n-de que se encontram\n-a cargo do cidadão da União\n-[casos previstos nas subalíneas iii) e iv) da alínea e) do artigo 2.º];\n-e) Cópia digitalizada de\n-documento emitido pela autoridade competente\n-do paí"
-    },
-    {
-      "time": "2026-10-02T17:53:51Z",
-      "source_id": "src_48b0a401cee7",
-      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/legalizacao.html",
-        "legalizacao.html"
-      ],
-      "candidate_sha256": "fc476dde411c0540de9f86bb545c9ec3fe3a25b9b18b868ba3b4c532f0078b87",
-      "diff_excerpt": "+Nacionais UE e Familiares\n-Atualização da Tabela de Taxas\n-A partir de amanhã, dia\n-1 de março de 2026\n-, entra em vigor a atualização da\n-Tabela de Taxas\n-e demais encargos aplicáveis aos procedimentos administrativos previstos na\n-Lei n.º 23/2007, de 4 de julho\n-, que estabelece o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional, na sua redação atual.\n-Esta atualização decorre da v\n-ersão consolidada da Portaria n.º 307/2023, de 13 de outubro\n-, diploma que fixa os valores das taxas a cobrar no âmbito dos procedimentos administrativos relacionados com autorizações de residência, vistos, renovações, títulos e demais atos associados aos serviços de gestão migratória.\n-A nova tabela será aplicada\n-a partir de 1 de março de 2026\n-, inclusivamente.\n-Consulte a Tabela atualizada aqui\n+Página não encontrada\n-Links relacionados\n-Tabela de Taxas\n-Lei n.º 23/2007, de 4 de julho\n-Portaria n.º 307/2023, de 13 de outubro\n-Published on 28.02.2026 by AIMA\n-Notícias\n-Ver tudo\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n-Ler mais\n-Portal de Renovações atualizado para Nacio"
-    },
-    {
-      "time": "2026-10-02T17:53:48Z",
-      "source_id": "src_cbed4d38b3bf",
-      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/situacoes-urgentes.html",
-        "en/titulo-residencia-renovacao-segunda-via.html",
-        "situacoes-urgentes.html",
-        "titulo-residencia-renovacao-segunda-via.html"
-      ],
-      "candidate_sha256": "b75b1ac10f358929f23da7e88dd600b5b60022af8801322d4eab75004ada018d",
-      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA lança novo serviço online!\n-A AIMA disponibiliza mais um\n-serviço online relativo à Autorização de Residência\n-Esta nova funcionalidade está disponível no Formulário de Contacto que se encontra no seguinte link:\n-contactenos.aima.gov.pt\n-Todos os cidadãos estrangeiros detentores de cartão/título ao escolherem o tema “Autorização de Residência” podem pedir à AIMA:\n-alteração dos dados disponibilizados para concessão de Autorização de Residência\n-2.ª via do Cartão/Título de Residência\n-correto preenchimento\n-do formulário obriga à submissão de\n-cópia do passaporte e do cartão/título de residência\n-no campo disponibilizado para o efeito.\n-Para além destes documentos, e conforme o pedido formulado, é também necessário o envio de cópia dos seguintes documentos:\n-Alteração de dados -\n-Comprovativo do motivo de alteração\n-2.ª Via -\n-Comprovativo de participação policial apresentada junto do órgão de polícia\n-Nota:\n-Os pedidos só podem ser feitos até\n-90 dias\n-antes da validade do Cartão/Título de Residência.\n+Página não encontrada\n-Published on 19.03.2025 by AIMA\n-Notícias\n-Ver tudo\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação "
-    },
-    {
-      "time": "2026-10-02T09:51:17Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "baseline_seeded_from_verified_official_listing",
-      "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
-    },
-    {
-      "time": "2026-10-02T09:51:07Z",
-      "source_id": "src_c56963332c91",
-      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "non_substantive_change_accepted",
-      "reason": "only gov.pt service UI label/update-date metadata changed; substantive service guidance is unchanged"
     }
   ]
 }

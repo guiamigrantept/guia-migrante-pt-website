@@ -155,10 +155,19 @@
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari",
       "domain": "aima.gov.pt",
       "pages": [
-        "investimento.html"
+        "investimento.html",
+        "legalizacao.html",
+        "titulo-residencia-renovacao-segunda-via.html"
       ],
       "watch_terms": [
-        "aima"
+        "2026",
+        "aima",
+        "concessão",
+        "familiares",
+        "janela",
+        "nova",
+        "permanentes",
+        "renovação"
       ],
       "risk": "high",
       "required": true
@@ -627,6 +636,30 @@
       "required": true
     },
     {
+      "id": "src_8fe207c2a621",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-atualizado-para-nacionais-da-uniao-europeia-ue-e-familiares",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "legalizacao.html",
+        "titulo-residencia-renovacao-segunda-via.html",
+        "ue-familiares.html"
+      ],
+      "watch_terms": [
+        "2026",
+        "aima",
+        "atualizado",
+        "atualização",
+        "concessão",
+        "familiares",
+        "nova",
+        "permanentes",
+        "portal",
+        "renovação"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_2b0880736b8a",
       "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
       "domain": "aima.gov.pt",
@@ -649,12 +682,12 @@
         "does",
         "expirados",
         "expired",
-        "familiares",
         "funcionar",
         "june",
         "nova",
-        "permanentes",
-        "permits"
+        "permits",
+        "portal",
+        "renewal"
       ],
       "risk": "high",
       "required": true

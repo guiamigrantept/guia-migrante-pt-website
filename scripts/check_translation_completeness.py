@@ -25,6 +25,7 @@ WHITELIST = {
     'Portugal', 'Portal das Finanças', 'Segurança Social', 'Diário da República',
     'Autoridade Tributária', 'IRN', 'IMT', 'DGES', 'ACT', 'CIG', 'ERSE', 'gov.pt',
     'EN', 'PT', 'html', 'HTML',
+    'FAQ ARI — AIMA', 'ARI FAQ — AIMA',
 }
 
 DISTINCTIVE_PT_RE = re.compile(

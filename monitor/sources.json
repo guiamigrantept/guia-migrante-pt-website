@@ -298,6 +298,35 @@
       "required": true
     },
     {
+      "id": "src_ef29c2230ffc",
+      "url": "https://aima.gov.pt/pt/decreto-regulamentar-da-lei-de-estrangeiros-alteracoes",
+      "domain": "aima.gov.pt",
+      "pages": [
+        "aima-agendamento-problemas.html",
+        "reagrupamento-familiar.html"
+      ],
+      "watch_terms": [
+        "aima",
+        "alargado",
+        "alterações",
+        "autorização",
+        "canal",
+        "decreto",
+        "digital",
+        "está",
+        "estão",
+        "fases.",
+        "online",
+        "online.",
+        "pedidos",
+        "regulamentar",
+        "residência",
+        "todos"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_81f1d1f37f02",
       "url": "https://aima.gov.pt/pt/decreto-regulamentar-da-lei-de-estrangeiros-alteracoes/perguntas-frequentes",
       "domain": "aima.gov.pt",
@@ -1152,15 +1181,15 @@
       ],
       "watch_terms": [
         "aima",
-        "altera",
+        "alargado",
         "canal",
         "case",
         "covered.",
-        "disponível",
-        "legais.",
+        "está",
+        "fases.",
+        "online",
         "only",
         "portal",
-        "requisitos",
         "services",
         "serviços",
         "when",
@@ -1565,17 +1594,17 @@
       ],
       "watch_terms": [
         "agora",
-        "altera",
+        "alargado",
         "canal",
         "comunicação",
         "consolidada",
-        "disponível",
         "domicílio",
         "esta",
         "estrangeiros",
-        "legais.",
+        "está",
+        "fases.",
         "limitada",
-        "requisitos"
+        "online"
       ],
       "risk": "high",
       "required": true
@@ -2485,6 +2514,22 @@
       "required": true
     },
     {
+      "id": "src_ea8e3c5afeca",
+      "url": "https://www.gov.pt/guias/migrantes-vistos-e-autorizacoes-para-entrar-e-viver-em-portugal",
+      "domain": "www.gov.pt",
+      "pages": [
+        "fora-de-portugal.html"
+      ],
+      "watch_terms": [
+        "autorizações",
+        "gov.pt",
+        "guia",
+        "vistos"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
       "id": "src_cf925da656d8",
       "url": "https://www.gov.pt/guias/pedir-o-divorcio-ou-a-separacao",
       "domain": "www.gov.pt",
@@ -3180,6 +3225,22 @@
         "gov.pt",
         "temporária",
         "visto"
+      ],
+      "risk": "high",
+      "required": true
+    },
+    {
+      "id": "src_07b86f035fc9",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
+      "domain": "www.gov.pt",
+      "pages": [
+        "trabalho.html"
+      ],
+      "watch_terms": [
+        "estada",
+        "gov.pt",
+        "temporária",
+        "trabalho"
       ],
       "risk": "high",
       "required": true

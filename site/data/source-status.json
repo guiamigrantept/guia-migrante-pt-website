@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generated_at": "2026-11-02T11:12:55Z",
+  "generated_at": "2026-11-02T21:50:01Z",
   "baseline_complete": true,
   "blocked_pages": {
     "en/legalizacao.html": [
@@ -115,6 +115,14 @@
     ],
     "trabalho-direitos.html": [
       "src_b4112d074e22"
+    ],
+    "saude-completa.html": [
+      "src_d771f142ded7",
+      "src_f85f411871fc"
+    ],
+    "en/saude-completa.html": [
+      "src_d771f142ded7",
+      "src_f85f411871fc"
     ]
   },
   "sources": {
@@ -122,7 +130,7 @@
       "url": "https://aima.gov.pt/documents/respostas-perguntas-frequentes-informacoes-032026.pdf",
       "domain": "aima.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:07:23Z",
+      "checked_at": "2026-11-02T21:42:34Z",
       "changed_at": null,
       "pages": [
         "en/mudanca-saida.html",
@@ -130,14 +138,14 @@
         "titulo-residencia-renovacao-segunda-via.html"
       ],
       "required": false,
-      "failure_count": 317,
+      "failure_count": 318,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     "src_3504f1eb6b62": {
       "url": "https://aima.gov.pt/en/lojas-aima",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:26Z",
+      "checked_at": "2026-11-02T21:42:37Z",
       "changed_at": null,
       "pages": [
         "contactos.html",
@@ -150,21 +158,21 @@
       "url": "https://aima.gov.pt/media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf",
       "domain": "aima.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:07:28Z",
+      "checked_at": "2026-11-02T21:42:38Z",
       "changed_at": null,
       "pages": [
         "asilo.html",
         "en/asilo.html"
       ],
       "required": false,
-      "failure_count": 317,
+      "failure_count": 318,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     "src_6be8c3783532": {
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:33Z",
+      "checked_at": "2026-11-02T21:42:41Z",
       "changed_at": null,
       "pages": [
         "en/estudantes.html",
@@ -185,7 +193,7 @@
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/concessao-de-autorizacao-de-residencia-cplp",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:39Z",
+      "checked_at": "2026-11-02T21:42:47Z",
       "changed_at": null,
       "pages": [
         "cplp.html",
@@ -198,7 +206,7 @@
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/protecao-temporaria",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:43Z",
+      "checked_at": "2026-11-02T21:42:49Z",
       "changed_at": null,
       "pages": [
         "en/protecao-temporaria.html",
@@ -211,7 +219,7 @@
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/rede-claim",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:46Z",
+      "checked_at": "2026-11-02T21:42:52Z",
       "changed_at": null,
       "pages": [
         "contactos.html",
@@ -230,7 +238,7 @@
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/regime-transitorio",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:49Z",
+      "checked_at": "2026-11-02T21:42:55Z",
       "changed_at": null,
       "pages": [
         "en/legalizacao.html",
@@ -244,7 +252,7 @@
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/renovacao-de-titulo-de-residencia-cplp",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:53Z",
+      "checked_at": "2026-11-02T21:42:58Z",
       "changed_at": null,
       "pages": [
         "cplp.html",
@@ -257,7 +265,7 @@
       "url": "https://aima.gov.pt/pt/a-aima/sobre-nos/estatutos",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:56Z",
+      "checked_at": "2026-11-02T21:43:00Z",
       "changed_at": null,
       "pages": [
         "contactos.html"
@@ -269,7 +277,7 @@
       "url": "https://aima.gov.pt/pt/decreto-regulamentar-da-lei-de-estrangeiros-alteracoes/perguntas-frequentes",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:08:03Z",
+      "checked_at": "2026-11-02T21:43:05Z",
       "changed_at": null,
       "pages": [
         "aima-agendamento-problemas.html",
@@ -285,7 +293,7 @@
       "url": "https://aima.gov.pt/pt/estudar",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:08:06Z",
+      "checked_at": "2026-11-02T21:43:08Z",
       "changed_at": "2026-09-28T21:15:02Z",
       "pages": [
         "en/legalizacao.html",
@@ -300,7 +308,7 @@
       "url": "https://aima.gov.pt/pt/lingua-portuguesa/cursos-de-portugues-lingua-de-acolhimento-pla",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:08:25Z",
+      "checked_at": "2026-11-02T21:43:24Z",
       "changed_at": null,
       "pages": [
         "en/portugues.html",
@@ -313,7 +321,7 @@
       "url": "https://aima.gov.pt/pt/nacionais-ue-e-familiares/familiares-de-nacionais-ue",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:08:28Z",
+      "checked_at": "2026-11-02T21:43:27Z",
       "changed_at": "2026-09-28T21:15:07Z",
       "pages": [
         "en/familia.html",
@@ -330,7 +338,7 @@
       "url": "https://aima.gov.pt/pt/nacionais-ue-e-familiares/nacionais-ue/certificado-de-registo-para-nacionais-ue",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:08:31Z",
+      "checked_at": "2026-11-02T21:43:30Z",
       "changed_at": null,
       "pages": [
         "en/ue-familiares.html",
@@ -343,7 +351,7 @@
       "url": "https://aima.gov.pt/pt/nacionais-ue-e-familiares/nacionais-ue/certificado-de-residencia-permanente-para-nacionais-ue",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:08:34Z",
+      "checked_at": "2026-11-02T21:43:32Z",
       "changed_at": null,
       "pages": [
         "en/longa-duracao.html",
@@ -358,7 +366,7 @@
       "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:08:38Z",
+      "checked_at": "2026-11-02T21:43:35Z",
       "changed_at": null,
       "pages": [
         "en/situacoes-urgentes.html",
@@ -376,7 +384,7 @@
       "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:08:41Z",
+      "checked_at": "2026-11-02T21:43:38Z",
       "changed_at": null,
       "pages": [
         "en/legalizacao.html",
@@ -392,7 +400,7 @@
       "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:08:49Z",
+      "checked_at": "2026-11-02T21:43:44Z",
       "changed_at": null,
       "pages": [
         "aima-agendamento-problemas.html",
@@ -410,7 +418,7 @@
       "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:08:53Z",
+      "checked_at": "2026-11-02T21:43:46Z",
       "changed_at": null,
       "pages": [
         "en/mudanca-saida.html",
@@ -426,7 +434,7 @@
       "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:08:59Z",
+      "checked_at": "2026-11-02T21:43:52Z",
       "changed_at": null,
       "pages": [
         "en/legalizacao.html",
@@ -444,7 +452,7 @@
       "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:09:04Z",
+      "checked_at": "2026-11-02T21:43:55Z",
       "changed_at": null,
       "pages": [
         "en/protecao-temporaria.html",
@@ -460,7 +468,7 @@
       "url": "https://aima.gov.pt/pt/pesquisa?q=artigo+122",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:14Z",
+      "checked_at": "2026-11-02T21:44:02Z",
       "changed_at": null,
       "pages": [
         "en/legalizacao.html",
@@ -473,7 +481,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:20Z",
+      "checked_at": "2026-11-02T21:44:07Z",
       "changed_at": null,
       "pages": [
         "en/legalizacao.html",
@@ -486,7 +494,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-atividade-altamente-qualificada-art-90-o",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:24Z",
+      "checked_at": "2026-11-02T21:44:10Z",
       "changed_at": null,
       "pages": [
         "altamente-qualificado.html",
@@ -499,7 +507,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-atividade-altamente-qualificada-exercida-para-empresa-certificada-art-90-o-tech-visa",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:27Z",
+      "checked_at": "2026-11-02T21:44:12Z",
       "changed_at": null,
       "pages": [
         "altamente-qualificado.html",
@@ -512,7 +520,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-independente-com-dispensa-de-visto-de-residencia-art-89-o-n-o",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:30Z",
+      "checked_at": "2026-11-02T21:44:15Z",
       "changed_at": null,
       "pages": [
         "legalizacao.html"
@@ -524,7 +532,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-independente-com-visto-de-residencia-art-89-o-n-o1",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:33Z",
+      "checked_at": "2026-11-02T21:44:18Z",
       "changed_at": null,
       "pages": [
         "en/independente-empreendedor.html",
@@ -537,7 +545,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-subordinada-com-dispensa-de-visto-de-residencia-art-88-o-n-o-",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:36Z",
+      "checked_at": "2026-11-02T21:44:20Z",
       "changed_at": null,
       "pages": [
         "legalizacao.html"
@@ -549,7 +557,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-subordinada-com-visto-para-procura-de-trabalho-art-88-o-n-o7",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:42Z",
+      "checked_at": "2026-11-02T21:44:26Z",
       "changed_at": null,
       "pages": [
         "en/trabalho.html",
@@ -562,7 +570,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-com-visto-de-residencia-para-o-exe",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:46Z",
+      "checked_at": "2026-11-02T21:44:29Z",
       "changed_at": null,
       "pages": [
         "en/nomada-digital.html",
@@ -575,7 +583,7 @@
       "url": "https://aima.gov.pt/pt/viver/aquisicao-do-estatuto-de-residente-de-longa-duracao-erld-art-125-o",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:55Z",
+      "checked_at": "2026-11-02T21:44:36Z",
       "changed_at": null,
       "pages": [
         "en/longa-duracao.html",
@@ -588,7 +596,7 @@
       "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:58Z",
+      "checked_at": "2026-11-02T21:44:39Z",
       "changed_at": null,
       "pages": [
         "en/investimento.html",
@@ -601,7 +609,7 @@
       "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:02Z",
+      "checked_at": "2026-11-02T21:44:41Z",
       "changed_at": null,
       "pages": [
         "en/investimento.html",
@@ -614,7 +622,7 @@
       "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-vitimas-de-trafico-de-pessoas-ou-de-acao-de-auxilio-a-imigracao-ilegal-art-109-o",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:05Z",
+      "checked_at": "2026-11-02T21:44:43Z",
       "changed_at": null,
       "pages": [
         "en/situacoes-especiais.html",
@@ -627,7 +635,7 @@
       "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-regime-e-requisitos-gerais-art-o-77-o-n-o-1",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:08Z",
+      "checked_at": "2026-11-02T21:44:46Z",
       "changed_at": null,
       "pages": [
         "en/legalizacao.html",
@@ -642,7 +650,7 @@
       "url": "https://aima.gov.pt/pt/viver/concessao-de-cartao-azul-ue-e-autorizacao-de-residencia-para-titulares-de-cartao-azul-ue-noutro-estado-membro-art-121-o-a-e-segu",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:11Z",
+      "checked_at": "2026-11-02T21:44:48Z",
       "changed_at": null,
       "pages": [
         "altamente-qualificado.html",
@@ -655,7 +663,7 @@
       "url": "https://aima.gov.pt/pt/viver/menores-filhos-de-cidadaos-estrangeiros-titulares-de-autorizacao-de-residencia-nascidos-em-portugal-art-122-o-1-al-a",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:14Z",
+      "checked_at": "2026-11-02T21:44:51Z",
       "changed_at": null,
       "pages": [
         "en/situacoes-especiais.html",
@@ -681,7 +689,7 @@
       "url": "https://aima.gov.pt/pt/viver/reagrupamento-familiar-com-familiar-em-territorio-nacional-art-98-o-n-o-2",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:10:21Z",
+      "checked_at": "2026-11-02T21:44:56Z",
       "changed_at": "2026-09-28T21:16:33Z",
       "pages": [
         "en/familia.html",
@@ -697,7 +705,7 @@
       "url": "https://aima.gov.pt/pt/viver/reagrupamento-familiar-com-familiar-fora-de-territorio-nacional-art-98-o-n-o-1",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:10:24Z",
+      "checked_at": "2026-11-02T21:44:59Z",
       "changed_at": "2026-09-28T21:16:36Z",
       "pages": [
         "en/familia.html",
@@ -713,34 +721,36 @@
     "src_1a5a6913096f": {
       "url": "https://anacom.pt/render.jsp?contentId=1825544",
       "domain": "anacom.pt",
-      "state": "healthy",
-      "checked_at": "2026-11-02T11:10:25Z",
+      "state": "fetch_error",
+      "checked_at": "2026-11-02T21:46:25Z",
       "changed_at": null,
       "pages": [
         "en/servicos-casa.html",
         "servicos-casa.html"
       ],
       "required": false,
-      "fetch_method": "requests"
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7d61ffaea000>, 'Connection to anacom.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://anacom.pt/render.jsp?contentId=1825544']' timed out after 70 seconds"
     },
     "src_1d0d8bb32004": {
       "url": "https://anacom.pt/render.jsp?contentId=1842813",
       "domain": "anacom.pt",
-      "state": "healthy",
-      "checked_at": "2026-11-02T11:10:26Z",
+      "state": "fetch_error",
+      "checked_at": "2026-11-02T21:47:51Z",
       "changed_at": null,
       "pages": [
         "en/servicos-casa.html",
         "servicos-casa.html"
       ],
       "required": false,
-      "fetch_method": "requests"
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7d61ffaeacf0>, 'Connection to anacom.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://anacom.pt/render.jsp?contentId=1842813']' timed out after 70 seconds"
     },
     "src_5c8489b0954a": {
       "url": "https://clientebancario.bportugal.pt/pt-pt/o-que-sao",
       "domain": "clientebancario.bportugal.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:39Z",
+      "checked_at": "2026-11-02T21:48:01Z",
       "changed_at": null,
       "pages": [
         "banco-pagamentos.html",
@@ -754,7 +764,7 @@
       "url": "https://clientebancario.bportugal.pt/pt-pt/perguntas-frequentes",
       "domain": "clientebancario.bportugal.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:43Z",
+      "checked_at": "2026-11-02T21:48:04Z",
       "changed_at": null,
       "pages": [
         "banco-pagamentos.html",
@@ -768,7 +778,7 @@
       "url": "https://contactenos.aima.gov.pt/contact-form",
       "domain": "contactenos.aima.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:10:51Z",
+      "checked_at": "2026-11-02T21:48:12Z",
       "changed_at": null,
       "pages": [
         "aima-agendamento-problemas.html",
@@ -780,14 +790,14 @@
         "titulo-residencia-renovacao-segunda-via.html"
       ],
       "required": false,
-      "failure_count": 317,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x78d5f2f3ca40>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 318,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7d61ff743d40>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     "src_e36005383a29": {
       "url": "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "en/nacionalidade.html",
@@ -802,7 +812,7 @@
       "url": "https://diariodarepublica.pt/dr/detalhe/lei/3-2024-836604892",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "discriminacao-apoio.html",
@@ -831,21 +841,21 @@
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Casa_e_propriedades/Arrendamento/Recibos/Paginas/default.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:19Z",
+      "checked_at": "2026-11-02T21:48:37Z",
       "changed_at": null,
       "pages": [
         "en/habitacao.html",
         "habitacao.html"
       ],
       "required": false,
-      "failure_count": 317,
+      "failure_count": 318,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_6400da2dbb70": {
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Dados_pessoais_familia/Dados_pessoais/Morada/Paginas/default.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:20Z",
+      "checked_at": "2026-11-02T21:48:38Z",
       "changed_at": null,
       "pages": [
         "en/impostos.html",
@@ -854,28 +864,28 @@
         "mudanca-saida.html"
       ],
       "required": false,
-      "failure_count": 317,
+      "failure_count": 318,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_cac85a755325": {
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Residir_em_Portugal/Alteracao_nao_residente_para_residente/Paginas/default.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:20Z",
+      "checked_at": "2026-11-02T21:48:38Z",
       "changed_at": null,
       "pages": [
         "en/impostos.html",
         "impostos.html"
       ],
       "required": false,
-      "failure_count": 317,
+      "failure_count": 318,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_0ea9b0928bd2": {
       "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:26Z",
+      "checked_at": "2026-11-02T21:48:43Z",
       "changed_at": "2026-10-29T18:35:35Z",
       "pages": [
         "en/nacionalidade.html",
@@ -883,14 +893,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "2d723e5e45b25266d396e663727cad9a31f6b9c247d402aa725e87a468bc3291",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "9b504baa4a69c7ed2bbc0792c98ada9e44174a00d654be046c5f77d783d5a6d9",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_10df7741dfe0": {
       "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:28Z",
+      "checked_at": "2026-11-02T21:48:45Z",
       "changed_at": "2026-10-29T18:35:36Z",
       "pages": [
         "en/nacionalidade.html",
@@ -898,14 +908,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "7285c9da1c0e05b35bb5a196c011e829a37aa8feca433ab5eb5ff79060342906",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "3b88231ccd12745a54e615574a781ce39bc5bf6a82037a4900d22404ac5aaa78",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_962f8edbc412": {
       "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:30Z",
+      "checked_at": "2026-11-02T21:48:46Z",
       "changed_at": "2026-10-29T18:35:38Z",
       "pages": [
         "en/nacionalidade.html",
@@ -913,14 +923,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "2463bac2b43b754c675fa4430575b0f213a9e5de6dfc564d5d87486c2acdad00",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "4cec872e8104003565074f4c2ae93c9eaa461b04e91aa232114a258dcb8be76e",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_ac02e2cb2311": {
       "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:32Z",
+      "checked_at": "2026-11-02T21:48:48Z",
       "changed_at": "2026-10-29T18:35:40Z",
       "pages": [
         "en/nacionalidade.html",
@@ -928,14 +938,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "9e1292dc568d880d49ec5f402e848069fe0feb495b886a135772aba6c6e9f983",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "f0c48a04d5d2d8ec827d247b3ad870a76e6518c8126277b8d42c25efd7e637f4",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_aa440bba100b": {
       "url": "https://justica.gov.pt/Registos/Nacionalidade/Nacionalidade-portuguesa",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:33Z",
+      "checked_at": "2026-11-02T21:48:50Z",
       "changed_at": "2026-10-29T18:35:41Z",
       "pages": [
         "en/nacionalidade.html",
@@ -943,14 +953,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "3eb9575d6b0843e2ab30effcb52d685742383cfe473f9a15565b290146b3a582",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Registos/Nacionalidade/Nacionalidade-portuguesa\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "ca303c8040b6b46fa7cf812e4d30785a123f686aa176ab6bfe18042e7e34d5ba",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Registos/Nacionalidade/Nacionalidade-portuguesa\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_3c7634597430": {
       "url": "https://justica.gov.pt/Servicos/Apresentar-queixa",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:35Z",
+      "checked_at": "2026-11-02T21:48:52Z",
       "changed_at": "2026-10-29T18:35:43Z",
       "pages": [
         "discriminacao-apoio.html",
@@ -960,14 +970,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "6b2240e3f6b0d402b96a60c19162da7edaa59c95736a0d1d4b73084d7186237f",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Apresentar-queixa\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "71240b682a9dd489a26175d5cdf5ab70b43185e75e9938dc3fe808557d6807b9",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Apresentar-queixa\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_1a10460aaa69": {
       "url": "https://justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:40Z",
+      "checked_at": "2026-11-02T21:48:55Z",
       "changed_at": "2026-10-29T18:35:47Z",
       "pages": [
         "en/nacionalidade.html",
@@ -975,14 +985,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "e5bd43fb7f2da48d9fa3dfc457bc4d42cde38084e5305da22b6f9e7833eae3c2",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "476cf894df942d84fa99420537160f201e2a8859dc7a579c69499edd43a1e1dd",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_fb82d424d16e": {
       "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
       "domain": "justica.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:11:41Z",
+      "checked_at": "2026-11-02T21:48:57Z",
       "changed_at": null,
       "pages": [
         "en/registos-civis.html",
@@ -998,7 +1008,7 @@
       "url": "https://justica.gov.pt/Servicos/Pedir-apoio-judiciario",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:43Z",
+      "checked_at": "2026-11-02T21:48:58Z",
       "changed_at": "2026-10-29T18:35:50Z",
       "pages": [
         "discriminacao-apoio.html",
@@ -1006,28 +1016,28 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "839ccda9f65a4577dec1afd9fb8afdff9973c0ee79d0dd6c8ba2a36f7aa61004",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Pedir-apoio-judiciario\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "5dfd44cf1eeb5447da3a7ecdc4db7fb3f09e5f2f35c7d7e3212d0a0e3b548d40",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Pedir-apoio-judiciario\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_8075539b4165": {
       "url": "https://justica.gov.pt/Servicos/Submeter-pedido-de-nacionalidade",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:48Z",
+      "checked_at": "2026-11-02T21:49:02Z",
       "changed_at": "2026-10-29T18:35:55Z",
       "pages": [
         "nacionalidade.html"
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "30d06540f86ad6465e0cd24693e5a92cbf563dd49cc2c7060be23d751e2ed216",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Submeter-pedido-de-nacionalidade\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "7f3e6d57f861a56b501d122d1ba3e67b83f50dc626f3ccdbc5d0b28dddc395a2",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Submeter-pedido-de-nacionalidade\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_2e8500a7bec3": {
       "url": "https://justica.gov.pt/servicos/registar-nascimento",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:50Z",
+      "checked_at": "2026-11-02T21:49:04Z",
       "changed_at": "2026-10-29T18:35:57Z",
       "pages": [
         "en/registos-civis.html",
@@ -1035,14 +1045,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "53b2c813a394c3ce158443974b572825d84ae2c19bb68c21ff40aaa801b69f8a",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/servicos/registar-nascimento\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "824a4726d942b384f3d7c1e71874e065ab29c70ee9a65b866eb97faa472adf73",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail\n-Outlook.com\n-Yahoo Mail\n-Email app\n-More…\n-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/servicos/registar-nascimento\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_ea73d986f525": {
       "url": "https://portal-renovacoes.aima.gov.pt/",
       "domain": "portal-renovacoes.aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:11:52Z",
+      "checked_at": "2026-11-02T21:49:06Z",
       "changed_at": null,
       "pages": [
         "en/legalizacao.html",
@@ -1060,21 +1070,21 @@
       "url": "https://services.aima.gov.pt/",
       "domain": "services.aima.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:12:01Z",
+      "checked_at": "2026-11-02T21:49:15Z",
       "changed_at": null,
       "pages": [
         "en/legalizacao.html",
         "legalizacao.html"
       ],
       "required": false,
-      "failure_count": 317,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x78d5f30dd490>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 318,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7d61ff3dd550>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     "src_7373fed611f4": {
       "url": "https://simuladorpotencia.erse.pt/",
       "domain": "simuladorpotencia.erse.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:10Z",
+      "checked_at": "2026-11-02T21:49:24Z",
       "changed_at": null,
       "pages": [
         "en/servicos-casa.html",
@@ -1087,20 +1097,21 @@
       "url": "https://simuladorprecos.erse.pt/",
       "domain": "simuladorprecos.erse.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:14Z",
+      "checked_at": "2026-11-02T21:49:27Z",
       "changed_at": null,
       "pages": [
         "en/servicos-casa.html",
         "servicos-casa.html"
       ],
       "required": false,
-      "fetch_method": "browser"
+      "fetch_method": "browser",
+      "note": "non-relevant source change accepted automatically"
     },
     "src_60492ffd3a5c": {
       "url": "https://www.cig.gov.pt/area-portal-da-violencia/portal-violencia-domestica/apoio-vitimas-violencia-domestica",
       "domain": "www.cig.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:16Z",
+      "checked_at": "2026-11-02T21:49:28Z",
       "changed_at": null,
       "pages": [
         "en/situacoes-urgentes.html",
@@ -1113,7 +1124,7 @@
       "url": "https://www.cm-amadora.pt/pt/intervencao-social/interculturalidade/10606-claim-centro-local-de-apoio-a-integracao-de-migrantes.html",
       "domain": "www.cm-amadora.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:18Z",
+      "checked_at": "2026-11-02T21:49:29Z",
       "changed_at": null,
       "pages": [
         "contactos.html",
@@ -1126,7 +1137,7 @@
       "url": "https://www.dges.gov.pt/pt/pagina/reconhecimento?canal=Sou-Estudante",
       "domain": "www.dges.gov.pt",
       "state": "source_removed",
-      "checked_at": "2026-11-02T11:12:19Z",
+      "checked_at": "2026-11-02T21:49:31Z",
       "changed_at": "2026-10-22T12:01:27Z",
       "pages": [
         "en/qualificacoes.html",
@@ -1139,7 +1150,7 @@
       "url": "https://www.erse.pt/consumidores-de-energia/destaques/mudanca-de-comercializador",
       "domain": "www.erse.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:21Z",
+      "checked_at": "2026-11-02T21:49:32Z",
       "changed_at": null,
       "pages": [
         "en/servicos-casa.html",
@@ -1152,7 +1163,7 @@
       "url": "https://www.gov.pt/guias/migrantes-ensino-em-portugal-para-criancas-jovens-e-adultos",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:23Z",
+      "checked_at": "2026-11-02T21:49:33Z",
       "changed_at": null,
       "pages": [
         "en/escola-familias.html",
@@ -1165,7 +1176,7 @@
       "url": "https://www.gov.pt/guias/migrantes-trabalhar-e-criar-um-negocio-em-portugal",
       "domain": "www.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:12:23Z",
+      "checked_at": "2026-11-02T21:49:34Z",
       "changed_at": "2026-10-28T20:25:03Z",
       "pages": [
         "en/integracao.html",
@@ -1182,7 +1193,7 @@
       "url": "https://www.gov.pt/guias/trabalhar-em-portugal",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:24Z",
+      "checked_at": "2026-11-02T21:49:35Z",
       "changed_at": null,
       "pages": [
         "en/trabalho-direitos.html",
@@ -1195,7 +1206,7 @@
       "url": "https://www.gov.pt/servicos/alterar-a-morada-e-outros-dados-registados-na-seguranca-social",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:27Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "en/mudanca-saida.html",
@@ -1208,7 +1219,7 @@
       "url": "https://www.gov.pt/servicos/consultar-corpo-diplomatico-acreditado-em-lisboa",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:27Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "contactos.html",
@@ -1221,7 +1232,7 @@
       "url": "https://www.gov.pt/servicos/contactar-linha-telefonica-de-informacao-as-vitimas-de-violencia-domestica",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:27Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "en/situacoes-urgentes.html",
@@ -1234,7 +1245,7 @@
       "url": "https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:28Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "dia-a-dia.html",
@@ -1249,7 +1260,7 @@
       "url": "https://www.gov.pt/servicos/livro-de-reclamacoes-compra",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:28Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "consumidor.html",
@@ -1262,7 +1273,7 @@
       "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:28Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "en/saude-completa.html",
@@ -1275,7 +1286,7 @@
       "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:29Z",
+      "checked_at": "2026-11-02T21:49:38Z",
       "changed_at": null,
       "pages": [
         "en/nacionalidade.html",
@@ -1288,7 +1299,7 @@
       "url": "https://www.gov.pt/servicos/pedir-equivalencia-de-habilitacoes-estrangeiras-do-ensino-basico-e-secundario",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:29Z",
+      "checked_at": "2026-11-02T21:49:38Z",
       "changed_at": null,
       "pages": [
         "en/escola-familias.html",
@@ -1301,7 +1312,7 @@
       "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:30Z",
+      "checked_at": "2026-11-02T21:49:38Z",
       "changed_at": null,
       "pages": [
         "dia-a-dia.html",
@@ -1316,7 +1327,7 @@
       "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:30Z",
+      "checked_at": "2026-11-02T21:49:39Z",
       "changed_at": null,
       "pages": [
         "dia-a-dia.html",
@@ -1331,7 +1342,7 @@
       "url": "https://www.gov.pt/servicos/pedir-o-numero-de-utente-do-sns",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:30Z",
+      "checked_at": "2026-11-02T21:49:39Z",
       "changed_at": null,
       "pages": [
         "dia-a-dia.html",
@@ -1346,7 +1357,7 @@
       "url": "https://www.gov.pt/servicos/pedir-o-reconhecimento-de-graus-academicos-e-diplomas-de-ensino-superior-estrangeiros",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:30Z",
+      "checked_at": "2026-11-02T21:49:39Z",
       "changed_at": null,
       "pages": [
         "en/qualificacoes.html",
@@ -1359,7 +1370,7 @@
       "url": "https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:30Z",
+      "checked_at": "2026-11-02T21:49:39Z",
       "changed_at": null,
       "pages": [
         "dia-a-dia.html",
@@ -1374,7 +1385,7 @@
       "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-estudo-intercambio-de-estudantes-estagio-profissional-ou-voluntariado",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:31Z",
+      "checked_at": "2026-11-02T21:49:40Z",
       "changed_at": null,
       "pages": [
         "en/estudantes.html",
@@ -1389,7 +1400,7 @@
       "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:31Z",
+      "checked_at": "2026-11-02T21:49:40Z",
       "changed_at": null,
       "pages": [
         "altamente-qualificado.html",
@@ -1404,7 +1415,7 @@
       "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-trabalho-dependente",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:31Z",
+      "checked_at": "2026-11-02T21:49:40Z",
       "changed_at": null,
       "pages": [
         "en/fora-de-portugal.html",
@@ -1419,7 +1430,7 @@
       "url": "https://www.gov.pt/servicos/pedir-visto-de-residencia-para-o-exercicio-de-atividade-profissional-independente-ou-para-imigrantes-empreendedores",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:32Z",
+      "checked_at": "2026-11-02T21:49:40Z",
       "changed_at": null,
       "pages": [
         "en/fora-de-portugal.html",
@@ -1434,7 +1445,7 @@
       "url": "https://www.gov.pt/servicos/realizar-o-processo-de-transcricao-do-assento-de-casamento-no-estrangeiro",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:32Z",
+      "checked_at": "2026-11-02T21:49:40Z",
       "changed_at": null,
       "pages": [
         "en/registos-civis.html",
@@ -1447,7 +1458,7 @@
       "url": "https://www.gov.pt/servicos/registar-um-nascimento",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:32Z",
+      "checked_at": "2026-11-02T21:49:40Z",
       "changed_at": null,
       "pages": [
         "en/registos-civis.html",
@@ -1460,35 +1471,35 @@
       "url": "https://www.imt-ip.pt/condutores/informacoes-gerais/quero-ser-condutor/tenho-carta-de-conducao-estrangeira",
       "domain": "www.imt-ip.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:12:34Z",
+      "checked_at": "2026-11-02T21:49:44Z",
       "changed_at": null,
       "pages": [
         "carta-conducao.html",
         "en/carta-conducao.html"
       ],
       "required": false,
-      "failure_count": 317,
+      "failure_count": 318,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_d5d7259f1e55": {
       "url": "https://www.livroreclamacoes.pt/",
       "domain": "www.livroreclamacoes.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:12:35Z",
+      "checked_at": "2026-11-02T21:49:47Z",
       "changed_at": null,
       "pages": [
         "consumidor.html",
         "en/consumidor.html"
       ],
       "required": false,
-      "failure_count": 317,
+      "failure_count": 318,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_768fda908f67": {
       "url": "https://www.parlamento.pt/Parlamento/Paginas/entidades-administrativas-independentes.aspx",
       "domain": "www.parlamento.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:37Z",
+      "checked_at": "2026-11-02T21:49:48Z",
       "changed_at": null,
       "pages": [
         "discriminacao-apoio.html",
@@ -1501,7 +1512,7 @@
       "url": "https://www.portaldahabitacao.pt/porta-65-jovem",
       "domain": "www.portaldahabitacao.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:38Z",
+      "checked_at": "2026-11-02T21:49:49Z",
       "changed_at": null,
       "pages": [
         "apoios-sociais.html",
@@ -1516,7 +1527,7 @@
       "url": "https://www.portaldahabitacao.pt/porta-65mais",
       "domain": "www.portaldahabitacao.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:38Z",
+      "checked_at": "2026-11-02T21:49:49Z",
       "changed_at": null,
       "pages": [
         "en/habitacao.html",
@@ -1529,7 +1540,7 @@
       "url": "https://www.seg-social.pt/",
       "domain": "www.seg-social.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:40Z",
+      "checked_at": "2026-11-02T21:49:51Z",
       "changed_at": null,
       "pages": [
         "apoios-sociais.html",
@@ -1543,28 +1554,32 @@
     "src_d771f142ded7": {
       "url": "https://www.sns24.gov.pt/pt/guia/direitos-e-deveres-do-utente",
       "domain": "www.sns24.gov.pt",
-      "state": "healthy",
-      "checked_at": "2026-11-02T11:12:42Z",
-      "changed_at": null,
+      "state": "changed_pending_review",
+      "checked_at": "2026-11-02T21:49:52Z",
+      "changed_at": "2026-11-02T21:49:52Z",
       "pages": [
         "en/saude-completa.html",
         "saude-completa.html"
       ],
       "required": false,
-      "fetch_method": "browser"
+      "fetch_method": "requests",
+      "candidate_sha256": "11fbb79e97af30d06881aad6e7fd01fc80972c004af16a8163cbc0fcaf37860d",
+      "diff_excerpt": "-Vm0weE5GWXhXWGxTV0d4VVYwZFNUMVpzWkc5V1ZteHlXa2M1YW1KSVFsaFpWVnBQVm0xS1IxWnFUbGROYmxGM1dWUkJlRmRXUm5KYVJtaG9UVlZ3VlZkV1dtRlRNazV6Vkc1V2FWSnRVbkJXYTFwaFYxWmtWMVZyWkZWTlZYQXdWa2QwYzFaWFNrZFRiR2hYWVd0YVRGWXhXbXRqYkZweldrZHdUbFpVVmtsV2JHTXhWakZrU0ZOc2FHeFRSVXBoV1ZSR1lVMHhjRWhsUm5Cc1VteGFlVlF4V21GVWJVcEdZMFJXV0ZZelVsaFpha1poVjBaT2RWUnRjRlJTVlhCb1YxZDBZVk15Vm5OVmJsSnNVak5TV0ZadGN6RldiRnBZVFZWa1ZXSkdjRmRaTUZaaFZqRktSbGRzVWxaV1JYQklWV3BHZDFKc2NFZFZiV3hwWVRCd1lWWXhaREJaVmtwMFZWaG9WbGRIVWxsWmJYTXhZMnhXYzFWdVRsaFdia0pIVjJ0U1UxWXdNVlpqUldoWFRXNVNhRlpxUVhoV01rNUpWMnhhYkdFelFsVlhWRWw0VXpGS2RGTnJaR0ZTTW1odlZGVm9RMDFzV25STldHUlZUV3RzTlZaV2FHOWhiRXAwWVVVNVYySkhVbFJaYWtaVFYwZFNTVlJyT1dsU2JGa3dWbXhqZDA1V1pFaFRiRnBxVTBkNFlWWnJWVEZVUmxwMFpVVjBXRkpzV25sYVZXUkhWakpLU1ZGclZsaFdSVzh3VjFaa1UxZEdVbkpoUjNSVFlYcFdVRlpYTUhkT1ZUQjRWMWhvWVZOSFVsWlVWbHBMWld4c2NWUnRPV2hXYTNCNlZUSjRUMWRzV1hwVmEzaGFUVlp3ZWxsNlJtRmtSa3AwWTBaT2FWWnJjRnBXYWtvd1ZURlZlVkpzV2s1V2JXaHpWVzAxUTFZeFVsZGFSazVxWWtkNFdWcFZWbmRoTURGWVZXNW9WMkpZYUhaV2FrcEhUbXhhY2xac2FHbFNia0p2VjJ0U1IyRXhXWGhXYmxaWFlsVmFWRlJYTlc5VlJtUlhXa1JTV2xZeFdsaFdNV2h6WWtaS05tSkdWbHBoTWsweFZHdGFjMk5zWkhSUFZscFRZVEozTVZac1l6RlNNVnBYVjFod2FGSXdXbWhXYkZwM1ZVWmFkRTFWWkZOaVJrb3dXV3RhVDJGWFJYZGpSWFJYVFZkUmQxbFVRWGhUUmtwellVWmthVkp1UWxaWFZtUXdaREZhVjFkdVRtRlNWR3hRVlcweE5GWXhaSEpXYlhSWVVteHdlbFV5ZUhOWFIwVjRZMFJPV2xadFVrZGFWM2hIWkZkT1IyRkhhRTVoZWxGM1ZtMHdlRTVIVW5SV2JHUldZbXR3YjFWdGRFdFhWbFYzVm10MGJGSnRVbnBXTWpGSFlXc3hjazVXYUZkV00yaDJXVmQ0UzFaV1duSlBWbFpYVm10d01sWkhNVFJYYlZaV1RWWldWbUpYYUZoWlZFWnlaVlphYzFkc1RsWk5WMUpJVmpKd1lWWXlSWHBWYkZaaFZqTlNhRlZyV2xaa01XUnlUMWQwVjAxSVFrbFdWekI0WXpGVmVGZHJaRmhoYkhCWVZtdFdZVmRHYkZWU2JFcHNWbXhhTVZaWGVGTmhWMHBIWTBab1dGWjZSWGRWZWtwUFVqSktTVlZ0ZUZOTlJuQjNWa1phYTAxRk5WZGlTRXBYWVhwc2IxVnRkSGRYVm5CV1ZtNU9WMVl3VmpWV1IzQlRWbXN4Y1ZKc2FGcE5ha1pNVld4YVlXTXhXblJpUjJ4b1RVWnNObFpxU2pCaE1ERklWRmhvVldFeVVsZFpiWGhoVjFac2MxcEVVbXBTYlhoYVdUQmFhMkpIU2tkaVJGWmFUVVpWTVZacVFYaGphelZXWWtaa1UyVnNXa1ZXYkdONFV6RmtTRkpyYUZOaVJscFlWRlJLYjJJeFpGVlRhbEpvVFdzeE5WVnRkR0ZoYkVsM1YyczVWMkZyTlhaV01uaGhVbFpHZEdSSGFFNWhNWEEyVmpKMFYyRXhaRWhUYmtwUFZteGFXRmxyWkZOa2JGWnlWMjVrVjAxWFVqRlhhMXB2VmpKS1IySXpaRmhpUmxweVdYcEtSMVl4WkhWVGJYQlVVMFZLV1ZaWGVHRlpWbFpIVm14V1ZHSkZjSE5XYlhNeFYyeHJkMWRzVGxkTlJFWjZWVEl3TlZkR1dYcGhSbWhYVFdwR1dGWnFTa3RUVmtwelZtMW9UazFGY0RSV2ExcFhZVEExUjFSc1pGaGhNbWhRVm1wQ1lXSXhXbkZSYm1Sc1lrWldOVlJWVWxkWFJrcHpZMFZrVldKR2NGUldNakZHWlVaa2RXTkdXazVTYkZWNFZsUkNZV1F4U1hsVWEyUm9VbXMxV0ZadWNISk5WbHB4VW0xR1dsWXdXbmxVYkZacllWVXdlV1ZHWkZwV1JWcE1WakZhWVdOV1VuSlViRlpPVmpOb1dsZFljRTlpTVZGNVUydGtWRlpGY0ZkVVZ6Vk9UVlpzVlZKc2NHdE5WMUo2V1d0YWExVXlWbk5YYlRsWFZrVnZNRlY2UVRGak1XUjFVbXhTYVZKcmNGbFdiWEJIVXpGa1YxcElTbGhpVlZweVZGWlZNVk5HV1hsT1ZtUm9WbXRzTTFZeWVHdFdWbHAwVlZSQ1lWWldjR2hWYWtaM1UxWndSMVp0YkZkaVNFSkpWbXRTUTJJeVRYaFdhMlJVWVRKU2NWVnNhRk5XTVd4VlUyMDVhMkpIZUhoVmJYTTFWakpLU1ZGcmJGVk5WMUV3Vm1wS1MyTnNUbk5qUm1Sb1lURndWVmRZY0VkVU1sSkhWRzVPYUZJd1drOVVWM2hMWWpGYVdHVkhkR2xOVlhCSVdUQmFiMkZ0Vm5OWGJrWldZa1pLZWxVeWVGcGxWVEZWVVd4V2FHVnJXalpXVnpGM1dWWlplRk5zYUZWWFIyaFlWV3RXZDFaR1dYZFhiRTVxVm0xU2VsWlhlR3RWTVZwWlVXeENWMDFYVVRCWlZFWldaREF4V1ZSdGNGTldNbWgyVjJ4a01GbFhUbk5WYkdoc1VsaFNWRlp0ZUVkT1JtUnlZVWQwYUZKc2NGWlZiVFZ2VmpKS1NHRklTbGROUm5Cb1drVmFWMk14Um5OV2JHUlhZbXRHTmxadE1UQldiVlpIV2taa1dHSnNTbkJWYkZKWFZERldjbFpzWkU5V2JIQldWVzB4TUdFeVJqWlNhMmhhWVdzMWVsWlVTa1psVjFaSFdrWndWMDB4U2sxWFZFWmhWbTFSZUZkc2JHRlNWRlp3VlcxMGQxTXhaRmRoU0dSWFRWWktlVlJXYUU5Vk1rWnpZMFpzVjJFeFZYaFdNRnB6VjBkTmVtRkhjRmRpU0VJMFZtcEtORll4V1hkTlNHUlVZa1pLV1ZsVVJuZGhSbkJJVFZaa1YyRjZiRmhXYlhoVFlVZFdjbGR1WkZoV2JFcEVXWHBCZDJWR1pISlhiRnBvVFRGS1YxWkdaRFJUTURGSFZsaHNUMVp0VWxoWmJGWjNWMVpzVmxwRlpGZFdiSEJIVmpKME5GZHRWbkpYYkZKV1lXdGFlbFJ0ZUV0a1IxSklZa1prVjFKcldUQldiWFJUVVRKRmVWSllhRmRpUjFKVVdWZDRkMk5HVm5WalNFNVhUVlphZUZaSGRFdFViRXAwWlVab1dHRXhWVEZaVjNoaFZsWmFjbGRzY0ZkV2JrRjZWMVphYTFKdFZsaFZhMnhwVW0xU2IxUldhRU5OYkZwMFkwVjBWVTFWTlVoV2JUVkxZVVpLY2xOc1VsVldNMmhNV2tSR1lWSXhjRVZSYlhST1VrWmFXVmRYZEdGaE1XeFhVMWh3Vm1KVWJGZFpiRkpYVWtaVmVGZHNTbXROYTFwSVYydGFZVll5UlhoaE0yeFlWak5TZGxWVVJtdGtSa3AxVTIxd1UySkZjRmRYVjNSaFpERktSMkV6YUdGU2EzQnpXV3RrVTAxR2JGWlhhemxwVWpCV05GWXhhSGRXTURGWVZWaGtWMVl6VGpSVmFrWkhZekZPYzFKc1pGTlNWVlV4\n+Direitos e deveres do utente\n+Os direitos e deveres dos utentes do SNS estão consagrados, nomeadamente, na\n+Lei n.º 15/2014, de 21 de março\n+, alterada pelo\n+Decreto-Lei n.º 44/2017, de 20 de abril\n+, na Portaria n.º 87/2015, de 23 de março, na\n+Portaria 153/2017, de 4 de maio\n+e no Despacho n.º 5344-A/2016, de 14 de abril, publicado no Diário da República n.º 76/2016, 1.º suplemento, Série II de 19 de abril.\n+A informação constante do presente documento não tem conteúdo legal vinculativo nem dispensa a leitura dos diplomas aplicáveis.\n+Quais são os direitos do utente nos serviços de saúde?\n+Direito de escolha\n+o utente tem direito à escolha dos serviços e prestadores de cuidados de saúde, na medida dos recursos existentes e das respetivas regras de organização\n+Direito a consentimento e recusa\n+o consentimento ou a recusa da prestação dos cuidados de saúde devem ser declarados de forma livre e esclarecida, salvo disposição especial da lei\n+o utente pode, em qualquer momento da prestação dos cuidados de saúde, revogar o consentimento\n+Direito à adequação da prestação dos cuidados de saúde\n+o utente tem direito a receber, com prontidão ou num período de tempo considerado clinicamente aceitável, consoante os casos, os cuidados de saúde de que necessita\n+o utente tem direito à prestação dos cuidados de saúde mais adequados e tecnicamente mais corretos\n+os cuidados de saúde devem ser prestados humanamente e com respeito pelo utente\n+Direito ao atendimento\n+em relação a utentes com um quadro clínico de gravidade e complexidade idênticas, deve ser dada prioridade de atendimento às pessoas com deficiência ou incapacidade igual ou superior a 60 %, exceto nas situações de atendimento presencial ao público realizado através de marcação prévia\n+Direito aos dados pessoais e proteção da vida privada\n+o utente é titular dos direitos à proteção de dados pessoais e à reserva da vida p"
     },
     "src_f85f411871fc": {
       "url": "https://www.sns24.gov.pt/pt/servico/servico-telefonico-de-callback",
       "domain": "www.sns24.gov.pt",
-      "state": "healthy",
-      "checked_at": "2026-11-02T11:12:43Z",
-      "changed_at": null,
+      "state": "changed_pending_review",
+      "checked_at": "2026-11-02T21:49:52Z",
+      "changed_at": "2026-11-02T21:49:52Z",
       "pages": [
         "en/saude-completa.html",
         "saude-completa.html"
       ],
       "required": false,
-      "fetch_method": "browser"
+      "fetch_method": "requests",
+      "candidate_sha256": "70062185322c5b41c0d5c58a09396db74837eb415bb7357b5412829601c2386d",
+      "diff_excerpt": "-Vm0weE5GWXhXWGxTV0d4VVYwZFNUMVpzWkc5V1ZteHlXa2M1YW1KSVFsaFpWVnBQVm0xS1IxWnFUbGROYmxGM1dWUkJlRmRXUm5KYVJtaG9UVlZ3VlZkV1dtRlRNazV6Vkc1V2FWSnRVbkJXYTFwaFYxWmtWMVZyWkZWTlZYQXdWa2QwYzFaWFNrZFRiR2hYWVd0YVRGWXhXbXRqYkZweldrZHdUbFpVVmtsV2JHTXhWakZrU0ZOc2FHeFRSVXBoV1ZSR1lVMHhjRWhsUm5Cc1VteGFlVlF4V21GVWJVcEdZMFJXV0ZZelVsaFpha1poVjBaT2RWUnRjRlJTVlhCb1YxZDBZVk15Vm5OVmJsSnNVak5TV0ZadGN6RldiRnBZVFZWa1ZXSkdjRmRaTUZaaFZqRktSbGRzVWxaV1JYQklWV3BHZDFKc2NFZFZiV3hwWVRCd1lWWXhaREJaVmtwMFZWaG9WbGRIVWxsWmJYTXhZMnhXYzFWdVRsaFdia0pIVjJ0U1UxWXdNVlpqUldoWFRXNVNhRlpxUVhoV01rNUpWMnhhYkdFelFsVlhWRWw0VXpGS2RGTnJaR0ZTTW1odlZGVm9RMDFzV25STldHUlZUV3RzTlZaV2FHOWhiRXAwWVVVNVYySkhVbFJaYWtaVFYwZFNTVlJyT1dsU2JGa3dWbXhqZDA1V1pFaFRiRnBxVTBkNFlWWnJWVEZVUmxwMFpVVjBXRkpzV25sYVZXUkhWakpLU1ZGclZsaFdSVzh3VjFaa1UxZEdVbkpoUjNSVFlYcFdVRlpYTUhkT1ZUQjRWMWhvWVZOSFVsWlVWbHBMWld4c2NWUnRPV2hXYTNCNlZUSjRUMWRzV1hwVmEzaGFUVlp3ZWxsNlJtRmtSa3AwWTBaT2FWWnJjRnBXYWtvd1ZURlZlVkpzV2s1V2JXaHpWVzAxUTFZeFVsZGFSazVxWWtkNFdWcFZWbmRoTURGWVZXNW9WMkpZYUhaV2FrcEhUbXhhY2xac2FHbFNia0p2VjJ0U1IyRXhXWGhXYmxaWFlsVmFWRlJYTlc5VlJtUlhXa1JTV2xZeFdsaFdNV2h6WWtaS05tSkdWbHBoTWsweFZHdGFjMk5zWkhSUFZscFRZVEozTVZac1l6RlNNVnBYVjFod2FGSXdXbWhXYkZwM1ZVWmFkRTFWWkZOaVJrb3dXV3RhVDJGWFJYZGpSWFJYVFZkUmQxbFVRWGhUUmtwellVWmthVkp1UWxaWFZtUXdaREZhVjFkdVRtRlNWR3hRVlcweE5GWXhaSEpXYlhSWVVteHdlbFV5ZUhOWFIwVjRZMFJPV2xadFVrZGFWM2hIWkZkT1IyRkhhRTVoZWxGM1ZtMHdlRTVIVW5SV2JHUldZbXR3YjFWdGRFdFhWbFYzVm10MGJGSnRVbnBXTWpGSFlXc3hjazVXYUZkV00yaDJXVmQ0UzFaV1duSlBWbFpYVm10d01sWkhNVFJYYlZaV1RWWldWbUpYYUZoWlZFWnlaVlphYzFkc1RsWk5WMUpJVmpKd1lWWXlSWHBWYkZaaFZqTlNhRlZyV2xaa01XUnlUMWQwVjAxSVFrbFdWekI0WXpGVmVGZHJaRmhoYkhCWVZtdFdZVmRHYkZWU2JFcHNWbXhhTVZaWGVGTmhWMHBIWTBab1dGWjZSWGRWZWtwUFVqSktTVlZ0ZUZOTlJuQjNWa1phYTAxRk5WZGlTRXBYWVhwc2IxVnRkSGRYVm5CV1ZtNU9WMVl3VmpWV1IzQlRWbXN4Y1ZKc2FGcE5ha1pNVld4YVlXTXhXblJpUjJ4b1RVWnNObFpxU2pCaE1ERklWRmhvVldFeVVsZFpiWGhoVjFac2MxcEVVbXBTYlhoYVdUQmFhMkpIU2tkaVJGWmFUVVpWTVZacVFYaGphelZXWWtaa1UyVnNXa1ZXYkdONFV6RmtTRkpyYUZOaVJscFlWRlJLYjJJeFpGVlRhbEpvVFdzeE5WVnRkR0ZoYkVsM1YyczVWMkZyTlhaV01uaGhVbFpHZEdSSGFFNWhNWEEyVmpKMFYyRXhaRWhUYmtwUFZteGFXRmxyWkZOa2JGWnlWMjVrVjAxWFVqRlhhMXB2VmpKS1IySXpaRmhpUmxweVdYcEtSMVl4WkhWVGJYQlVVMFZLV1ZaWGVHRlpWbFpIVm14V1ZHSkZjSE5XYlhNeFYyeHJkMWRzVGxkTlJFWjZWVEl3TlZkR1dYcGhSbWhYVFdwR1dGWnFTa3RUVmtwelZtMW9UazFGY0RSV2ExcFhZVEExUjFSc1pGaGhNbWhRVm1wQ1lXSXhXbkZSYm1Sc1lrWldOVlJWVWxkWFJrcHpZMFZrVldKR2NGUldNakZHWlVaa2RXTkdXazVTYkZWNFZsUkNZV1F4U1hsVWEyUm9VbXMxV0ZadWNISk5WbHB4VW0xR1dsWXdXbmxVYkZacllWVXdlV1ZHWkZwV1JWcE1WakZhWVdOV1VuSlViRlpPVmpOb1dsZFljRTlpTVZGNVUydGtWRlpGY0ZkVVZ6Vk9UVlpzVlZKc2NHdE5WMUo2V1d0YWExVXlWbk5YYlRsWFZrVnZNRlY2UVRGak1XUjFVbXhTYVZKcmNGbFdiWEJIVXpGa1YxcElTbGhpVlZweVZGWlZNVk5HV1hsT1ZtUm9WbXRzTTFZeWVHdFdWbHAwVlZSQ1lWWldjR2hWYWtaM1UxWndSMVp0YkZkaVNFSkpWbXRTUTJJeVRYaFdhMlJVWVRKU2NWVnNhRk5XTVd4VlUyMDVhMkpIZUhoVmJYTTFWakpLU1ZGcmJGVk5WMUV3Vm1wS1MyTnNUbk5qUm1Sb1lURndWVmRZY0VkVU1sSkhWRzVPYUZJd1drOVVWM2hMWWpGYVdHVkhkR2xOVlhCSVdUQmFiMkZ0Vm5OWGJrWldZa1pLZWxVeWVGcGxWVEZWVVd4V2FHVnJXalpXVnpGM1dWWlplRk5zYUZWWFIyaFlWV3RXZDFaR1dYZFhiRTVxVm0xU2VsWlhlR3RWTVZwWlVXeENWMDFYVVRCWlZFWldaREF4V1ZSdGNGTldNbWgyVjJ4a01GbFhUbk5WYkdoc1VsaFNWRlp0ZUVkT1JtUnlZVWQwYUZKc2NGWlZiVFZ2VmpKS1NHRklTbGROUm5Cb1drVmFWMk14Um5OV2JHUlhZbXRHTmxadE1UQldiVlpIV2taa1dHSnNTbkJWYkZKWFZERldjbFpzWkU5V2JIQldWVzB4TUdFeVJqWlNhMmhhWVdzMWVsWlVTa1psVjFaSFdrWndWMDB4U2sxWFZFWmhWbTFSZUZkc2JHRlNWRlp3VlcxMGQxTXhaRmRoU0dSWFRWWktlVlJXYUU5Vk1rWnpZMFpzVjJFeFZYaFdNRnB6VjBkTmVtRkhjRmRpU0VJMFZtcEtORll4V1hkTlNHUlVZa1pLV1ZsVVJuZGhSbkJJVFZaa1YyRjZiRmhXYlhoVFlVZFdjbGR1WkZoV2JFcEVXWHBCZDJWR1pISlhiRnBvVFRGS1YxWkdaRFJUTURGSFZsaHNUMVp0VWxoWmJGWjNWMVpzVmxwRlpGZFdiSEJIVmpKME5GZHRWbkpYYkZKV1lXdGFlbFJ0ZUV0a1IxSklZa1prVjFKcldUQldiWFJUVVRKRmVWSllhRmRpUjFKVVdWZDRkMk5HVm5WalNFNVhUVlphZUZaSGRFdFViRXAwWlVab1dHRXhWVEZaVjNoaFZsWmFjbGRzY0ZkV2JrRjZWMVphYTFKdFZsaFZhMnhwVW0xU2IxUldhRU5OYkZwMFkwVjBWVTFWTlVoV2JUVkxZVVpLY2xOc1VsVldNMmhNV2tSR1lWSXhjRVZSYlhST1VrWmFXVmRYZEdGaE1XeFhVMWh3Vm1KVWJGZFpiRkpYVWtaVmVGZHNTbXROYTFwSVYydGFZVll5UlhoaE0yeFlWak5TZGxWVVJtdGtSa3AxVTIxd1UySkZjRmRYVjNSaFpERktSMkV6YUdGU2EzQnpXV3RrVTAxR2JGWlhhemxwVWpCV05GWXhhSGRXTURGWVZWaGtWMVl6VGpSVmFrWkhZekZPYzFKc1pGTlNWVlV4\n+Serviço telefónico de callback\n+O que é o serviço telefónico de\n+callback\n+do SNS 24?\n+callback\n+é um serviço que permite ao utente receber uma chamada de volta do SNS 24 quando a linha está muito ocupada\n+. Em vez de ficar em espera, o utente agenda uma chamada automática para um horário próximo.\n+Como funciona este serviço?\n+Quando contacta a Linha telefónica do SNS 24 –\n+808242424\n+– e o tempo de espera é superior ao habitual,\n+é-lhe oferecido o serviço de\n+callback\n+Ou seja, o sistema de atendimento automático (IVR –\n+Interactive Voice Response\n+) pergunta-lhe se gostaria de receber uma chamada mais tarde, sem precisar de aguardar em linha.\n+Ao aceitar,\n+receberá uma SMS\n+com:\n+estimativa de tempo em que será contactado. Por exemplo, “nos próximos 20 minutos”\n+o número a partir do qual será contactado\n+Vou perder o meu lugar ao aceitar o serviço de\n+callback\n+Não\n+. Ao aceitar o\n+callback\n+, o seu pedido fica registado e será contactado sem necessidade de voltar a ligar.\n+Devo desligar a chamada depois de aceitar o\n+callback\n+Sim\n+. Após confirmar que quer receber o\n+callback\n+, a chamada atual termina automaticamente e não é necessário aguardar.\n+Posso cancelar ou desistir do\n+callback\n+Sim\n+. Pode cancelar ao não confirmar quando o sistema ligar ou ao optar pela triagem digital antes da hora marcada. Por outro lado, se contactar a Linha SNS 24 através do\n+808242424\n+antes de receber a chamada de retorno, o serviço de\n+callback\n+fica sem efeito e não lhe ligará de volta.\n+Através de que número serei contactado?\n+A chamada poderá ser feita a partir de um número do SNS 24 diferente do habitual. A SMS que recebe, após aceitar o serviço de\n+callback\n+, informará o número pelo qual vai ser contactado.\n+Quando receber a chamada, o que acontece?\n+Quando o sistema ligar, será perguntado se quer continuar com o atendimento. Se confirmar, o serviço coloca algumas perguntas "
     },
     "src_5d4da7730964": {
       "url": "https://www2.gov.pt/pt-PT/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
@@ -1654,7 +1669,7 @@
       "url": "https://www.gov.pt/guias/qualificacoes-profissionais",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:23Z",
+      "checked_at": "2026-11-02T21:49:34Z",
       "changed_at": null,
       "pages": [
         "en/qualificacoes.html",
@@ -1667,7 +1682,7 @@
       "url": "https://www.gov.pt/servicos/fazer-uma-queixa-a-autoridade-para-as-condicoes-do-trabalho-act-",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:28Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "discriminacao-apoio.html",
@@ -1684,7 +1699,7 @@
       "url": "https://www.gov.pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:29Z",
+      "checked_at": "2026-11-02T21:49:38Z",
       "changed_at": null,
       "pages": [
         "en/trabalho-direitos.html",
@@ -1697,7 +1712,7 @@
       "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:31Z",
+      "checked_at": "2026-11-02T21:49:40Z",
       "changed_at": null,
       "pages": [
         "en/fora-de-portugal.html",
@@ -1712,7 +1727,7 @@
       "url": "https://www.gov.pt/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:32Z",
+      "checked_at": "2026-11-02T21:49:41Z",
       "changed_at": null,
       "pages": [
         "apoios-sociais.html",
@@ -1725,17 +1740,14 @@
       "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:33Z",
+      "checked_at": "2026-11-02T21:49:41Z",
       "changed_at": null,
       "pages": [
         "carta-conducao.html",
         "en/carta-conducao.html"
       ],
       "required": true,
-      "fetch_method": "requests",
-      "candidate_sha256": null,
-      "diff_excerpt": null,
-      "note": "gov.pt service metadata-only change accepted automatically; substantive service guidance unchanged"
+      "fetch_method": "requests"
     },
     "src_d1df42ba74b1": {
       "url": "https://aima.gov.pt/pt/perguntas-frequentes-faq-s",
@@ -1754,7 +1766,7 @@
       "url": "https://aima.gov.pt/pt/temas-transversais/meios-de-subsistencia",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:17Z",
+      "checked_at": "2026-11-02T21:44:05Z",
       "changed_at": null,
       "pages": [
         "en/reagrupamento-familiar.html",
@@ -1768,7 +1780,7 @@
       "url": "https://aima.gov.pt/pt/viver/perguntas-frequentes-portal-de-servicos",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:17Z",
+      "checked_at": "2026-11-02T21:44:53Z",
       "changed_at": null,
       "pages": [
         "en/reagrupamento-familiar.html",
@@ -1781,7 +1793,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-subordinada-com-visto-de-residencia-art-88-o-n-o-1",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:39Z",
+      "checked_at": "2026-11-02T21:44:24Z",
       "changed_at": null,
       "pages": [
         "trabalho.html"
@@ -1793,7 +1805,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975-48303975",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "nacionalidade.html"
@@ -1807,7 +1819,7 @@
       "url": "https://aima.gov.pt/pt/noticias/veja-conhecer-as-regras-para-renovacao-do-titulo-de-residencia-cplp",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:09:11Z",
+      "checked_at": "2026-11-02T21:44:00Z",
       "changed_at": null,
       "pages": [
         "cplp.html"
@@ -1822,7 +1834,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/protocolo-de-cooperacao-para-a-migracao-laboral-regulada",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:49Z",
+      "checked_at": "2026-11-02T21:44:31Z",
       "changed_at": null,
       "pages": [
         "trabalho.html"
@@ -1834,7 +1846,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075-1112898475",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "habitacao.html"
@@ -1848,7 +1860,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075-122540646",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "habitacao.html"
@@ -1862,7 +1874,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-67564445",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "mudanca-saida.html",
@@ -1877,7 +1889,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-67564445-946245941",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "reagrupamento-familiar.html"
@@ -1891,34 +1903,34 @@
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Casa_e_propriedades/Arrendamento/Contrato%20urbano/Paginas/default.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:19Z",
+      "checked_at": "2026-11-02T21:48:37Z",
       "changed_at": null,
       "pages": [
         "habitacao.html"
       ],
       "required": false,
-      "failure_count": 136,
+      "failure_count": 137,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_7273b7756241": {
       "url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/artigo-53-o-do-civa.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:22Z",
+      "checked_at": "2026-11-02T21:48:40Z",
       "changed_at": null,
       "pages": [
         "impostos.html",
         "independente-empreendedor.html"
       ],
       "required": false,
-      "failure_count": 136,
+      "failure_count": 137,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_5d9fd6dbb527": {
       "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
       "domain": "justica.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:54Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "habitacao.html",
@@ -1934,20 +1946,20 @@
       "url": "https://services.aima.gov.pt/CPLP",
       "domain": "services.aima.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:12:09Z",
+      "checked_at": "2026-11-02T21:49:23Z",
       "changed_at": null,
       "pages": [
         "cplp.html"
       ],
       "required": false,
-      "failure_count": 136,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x78d5f30de570>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 137,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7d61ff3dcc50>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     "src_bcb6fdeda2b8": {
       "url": "https://www.gov.pt/guias/migrantes-cuidados-de-saude-em-portugal",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:22Z",
+      "checked_at": "2026-11-02T21:49:33Z",
       "changed_at": null,
       "pages": [
         "saude-completa.html"
@@ -1959,7 +1971,7 @@
       "url": "https://www.gov.pt/guias/trabalhar-por-conta-propria-guia-para-trabalhadores-independentes",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:24Z",
+      "checked_at": "2026-11-02T21:49:35Z",
       "changed_at": null,
       "pages": [
         "impostos.html"
@@ -1971,7 +1983,7 @@
       "url": "https://www.gov.pt/guias/trabalhar-por-conta-propria-guia-para-trabalhadores-independentes/obrigacoes-fiscais-e-pagamentos-impostos-e-contribuicoes",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:25Z",
+      "checked_at": "2026-11-02T21:49:35Z",
       "changed_at": null,
       "pages": [
         "impostos.html",
@@ -1984,7 +1996,7 @@
       "url": "https://www.gov.pt/guias/trabalhar-por-conta-propria-guia-para-trabalhadores-independentes/trabalhador-independente",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:25Z",
+      "checked_at": "2026-11-02T21:49:35Z",
       "changed_at": null,
       "pages": [
         "independente-empreendedor.html"
@@ -1996,7 +2008,7 @@
       "url": "https://www.gov.pt/noticias/contratos-de-trabalho-para-pessoas-estrangeiras",
       "domain": "www.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:12:25Z",
+      "checked_at": "2026-11-02T21:49:35Z",
       "changed_at": "2026-10-20T14:23:50Z",
       "pages": [
         "trabalho-direitos.html",
@@ -2011,7 +2023,7 @@
       "url": "https://www.gov.pt/servicos/abrir-atividade-nas-financas",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:27Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "independente-empreendedor.html"
@@ -2023,7 +2035,7 @@
       "url": "https://diariodarepublica.pt/dr/detalhe/declaracao-retificacao/17-2026-1123539997",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "nacionalidade.html"
@@ -2037,7 +2049,7 @@
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00054.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:21Z",
+      "checked_at": "2026-11-02T21:48:39Z",
       "changed_at": null,
       "pages": [
         "impostos.html"
@@ -2049,7 +2061,7 @@
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00307.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:21Z",
+      "checked_at": "2026-11-02T21:48:39Z",
       "changed_at": null,
       "pages": [
         "impostos.html"
@@ -2061,7 +2073,7 @@
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-00505.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:21Z",
+      "checked_at": "2026-11-02T21:48:39Z",
       "changed_at": null,
       "pages": [
         "impostos.html"
@@ -2073,7 +2085,7 @@
       "url": "https://www.dges.gov.pt/pt/faq/faqs-reconhecimento-de-graus-e-diplomas",
       "domain": "www.dges.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:12:19Z",
+      "checked_at": "2026-11-02T21:49:30Z",
       "changed_at": "2026-10-22T12:01:27Z",
       "pages": [
         "qualificacoes.html"
@@ -2087,7 +2099,7 @@
       "url": "https://www.gov.pt/guias/ter-uma-crianca/licenca-parental",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:24Z",
+      "checked_at": "2026-11-02T21:49:34Z",
       "changed_at": null,
       "pages": [
         "apoios-sociais.html"
@@ -2099,7 +2111,7 @@
       "url": "https://www.gov.pt/servicos/obter-informacoes-sobre-o-subsidio-de-doenca",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:29Z",
+      "checked_at": "2026-11-02T21:49:38Z",
       "changed_at": null,
       "pages": [
         "apoios-sociais.html"
@@ -2111,7 +2123,7 @@
       "url": "https://www.gov.pt/servicos/pedir-o-rendimento-social-de-insercao",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:30Z",
+      "checked_at": "2026-11-02T21:49:39Z",
       "changed_at": null,
       "pages": [
         "apoios-sociais.html"
@@ -2123,7 +2135,7 @@
       "url": "https://www.gov.pt/servicos/requerer-o-subsidio-de-desemprego",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:33Z",
+      "checked_at": "2026-11-02T21:49:41Z",
       "changed_at": null,
       "pages": [
         "apoios-sociais.html"
@@ -2135,20 +2147,20 @@
       "url": "https://www.imt-ip.pt/condutores/reconhecimento/troca-de-titulo-de-conducao-estrangeiro/cartas-de-conducao-emitidas-pelos-paises-da-ocde-e-cplp",
       "domain": "www.imt-ip.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:12:35Z",
+      "checked_at": "2026-11-02T21:49:47Z",
       "changed_at": null,
       "pages": [
         "carta-conducao.html"
       ],
       "required": false,
-      "failure_count": 135,
+      "failure_count": 136,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_7d91211809f3": {
       "url": "https://clientebancario.bportugal.pt/pt-pt/encargos",
       "domain": "clientebancario.bportugal.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:29Z",
+      "checked_at": "2026-11-02T21:47:54Z",
       "changed_at": null,
       "pages": [
         "banco-pagamentos.html"
@@ -2161,7 +2173,7 @@
       "url": "https://clientebancario.bportugal.pt/pt-pt/encerramento-de-conta",
       "domain": "clientebancario.bportugal.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:33Z",
+      "checked_at": "2026-11-02T21:47:56Z",
       "changed_at": null,
       "pages": [
         "banco-pagamentos.html"
@@ -2174,7 +2186,7 @@
       "url": "https://clientebancario.bportugal.pt/pt-pt/mudanca-de-conta",
       "domain": "clientebancario.bportugal.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:10:36Z",
+      "checked_at": "2026-11-02T21:47:59Z",
       "changed_at": null,
       "pages": [
         "banco-pagamentos.html"
@@ -2187,7 +2199,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-67564445-222587916",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "mudanca-saida.html"
@@ -2201,7 +2213,7 @@
       "url": "https://aima.gov.pt/",
       "domain": "aima.gov.pt",
       "state": "baseline_pending_transient",
-      "checked_at": "2026-11-02T11:07:22Z",
+      "checked_at": "2026-11-02T21:42:33Z",
       "changed_at": null,
       "pages": [
         "en/transportes.html",
@@ -2217,7 +2229,7 @@
       "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/173-2026-1164281329",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "en/transportes.html",
@@ -2232,7 +2244,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2006-108134506",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "en/transportes.html",
@@ -2247,7 +2259,7 @@
       "url": "https://justica.gov.pt/",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:24Z",
+      "checked_at": "2026-11-02T21:48:42Z",
       "changed_at": "2026-10-29T18:35:33Z",
       "pages": [
         "en/transportes.html",
@@ -2255,14 +2267,14 @@
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "28e8d59fe2fd85dc0b5e366d2d1fc53187c4d4513759cceb3a4d76e9f319075b",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "61ea988cd0c9a5545954c0fda436b223966d5830651af3996513ebd3398f2138",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_26f04e98a644": {
       "url": "https://www.erse.pt/consumidores-de-energia/eletricidade/contratarmudar-de-comercializador",
       "domain": "www.erse.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:21Z",
+      "checked_at": "2026-11-02T21:49:32Z",
       "changed_at": null,
       "pages": [
         "servicos-casa.html"
@@ -2274,7 +2286,7 @@
       "url": "https://www.erse.pt/consumidores-de-energia/eletricidade/o-que-esta-incluido-no-preco",
       "domain": "www.erse.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:21Z",
+      "checked_at": "2026-11-02T21:49:32Z",
       "changed_at": null,
       "pages": [
         "servicos-casa.html"
@@ -2286,7 +2298,7 @@
       "url": "https://www.gov.pt/",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:22Z",
+      "checked_at": "2026-11-02T21:49:33Z",
       "changed_at": null,
       "pages": [
         "en/transportes.html",
@@ -2300,7 +2312,7 @@
       "url": "https://www.gov.pt/guias/garantia-de-produtos-comprados-em-portugal",
       "domain": "www.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:12:22Z",
+      "checked_at": "2026-11-02T21:49:33Z",
       "changed_at": "2026-10-16T21:14:12Z",
       "pages": [
         "consumidor.html"
@@ -2314,7 +2326,7 @@
       "url": "https://www.gov.pt/guias/resolucao-de-conflitos-de-consumo",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:24Z",
+      "checked_at": "2026-11-02T21:49:34Z",
       "changed_at": null,
       "pages": [
         "consumidor.html"
@@ -2326,7 +2338,7 @@
       "url": "https://diariodarepublica.pt/dr/detalhe/decreto-legislativo-regional/1-2026-M-1033291312",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "trabalho-direitos.html"
@@ -2340,7 +2352,7 @@
       "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/139-2025-992879809",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "trabalho-direitos.html"
@@ -2354,7 +2366,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475-211441912",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "trabalho-direitos.html"
@@ -2368,7 +2380,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475-211441930",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "trabalho-direitos.html"
@@ -2382,7 +2394,7 @@
       "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2009-34546475-213560866",
       "domain": "diariodarepublica.pt",
       "state": "covered_by_official_rss",
-      "checked_at": "2026-11-02T11:12:55Z",
+      "checked_at": "2026-11-02T21:50:01Z",
       "changed_at": null,
       "pages": [
         "trabalho-direitos.html"
@@ -2396,7 +2408,7 @@
       "url": "https://www.gov.pt/guias/pedir-o-divorcio-ou-a-separacao",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:23Z",
+      "checked_at": "2026-11-02T21:49:34Z",
       "changed_at": null,
       "pages": [
         "registos-civis.html"
@@ -2408,7 +2420,7 @@
       "url": "https://www.gov.pt/guias/saude-preventiva-em-portugal-vacinas-e-programas-de-rastreio",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:24Z",
+      "checked_at": "2026-11-02T21:49:34Z",
       "changed_at": null,
       "pages": [
         "saude-completa.html"
@@ -2420,19 +2432,22 @@
       "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:28Z",
+      "checked_at": "2026-11-02T21:49:37Z",
       "changed_at": null,
       "pages": [
         "saude-completa.html"
       ],
       "required": true,
-      "fetch_method": "requests"
+      "fetch_method": "requests",
+      "candidate_sha256": null,
+      "diff_excerpt": null,
+      "note": "gov.pt service metadata-only change accepted automatically; substantive service guidance unchanged"
     },
     "src_a21e2f4e0949": {
       "url": "https://www.gov.pt/servicos/pedir-a-isencao-de-taxas-moderadoras-por-insuficiencia-economica",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:29Z",
+      "checked_at": "2026-11-02T21:49:38Z",
       "changed_at": null,
       "pages": [
         "saude-completa.html"
@@ -2444,7 +2459,7 @@
       "url": "https://www.gov.pt/servicos/registar-um-nascimento-no-estrangeiro",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:32Z",
+      "checked_at": "2026-11-02T21:49:40Z",
       "changed_at": null,
       "pages": [
         "registos-civis.html"
@@ -2456,20 +2471,20 @@
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/IRS/Pages/Rendimentos_estrangeiro.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:21Z",
+      "checked_at": "2026-11-02T21:48:39Z",
       "changed_at": null,
       "pages": [
         "impostos.html"
       ],
       "required": false,
-      "failure_count": 129,
+      "failure_count": 130,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     "src_03a4843a0b8f": {
       "url": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/questoes_frequentes/Pages/faqs-01018.aspx",
       "domain": "info.portaldasfinancas.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:11:22Z",
+      "checked_at": "2026-11-02T21:48:40Z",
       "changed_at": null,
       "pages": [
         "impostos.html"
@@ -2481,35 +2496,35 @@
       "url": "https://justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:38Z",
+      "checked_at": "2026-11-02T21:48:54Z",
       "changed_at": "2026-10-29T18:35:45Z",
       "pages": [
         "habitacao.html"
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "dae9c62d173fee867fe37e34889e6eae32339f386ccfaf6bf1139ddbe9ce9b37",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "31516c3139904e0c9c2e5f9bf44da2a4b14121793c0e00e4332155b02f2bd4c1",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_6de9d828fd49": {
       "url": "https://justica.gov.pt/Servicos/Protecao-juridica",
       "domain": "justica.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:11:47Z",
+      "checked_at": "2026-11-02T21:49:01Z",
       "changed_at": "2026-10-29T18:35:53Z",
       "pages": [
         "discriminacao-apoio.html"
       ],
       "required": true,
       "fetch_method": "browser",
-      "candidate_sha256": "824afea1e83abf85f8ca63b12fb72df7cd4f8a7d1e0fea3918fd027258c7e783",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Protecao-juridica\n+Your IP: 128.24.160.247\n+Supply above information and time if you need any help"
+      "candidate_sha256": "2be28b0458a6216c8bd0b0d5c225c2ea4fc6958bfc3d4819febc209c5098eb48",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+You tried to reach justica.gov.pt/Servicos/Protecao-juridica\n+Your IP: 4.236.155.76\n+Supply above information and time if you need any help"
     },
     "src_52cdd04300b4": {
       "url": "https://www.cig.gov.pt/area-portal-da-violencia/portal-violencia-domestica/servico-de-informacao-as-vitimas-de-violencia-domestica",
       "domain": "www.cig.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:17Z",
+      "checked_at": "2026-11-02T21:49:29Z",
       "changed_at": null,
       "pages": [
         "discriminacao-apoio.html",
@@ -2522,7 +2537,7 @@
       "url": "https://www.gov.pt/servicos/requerer-o-subsidio-social-de-desemprego",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:33Z",
+      "checked_at": "2026-11-02T21:49:41Z",
       "changed_at": null,
       "pages": [
         "apoios-sociais.html"
@@ -2534,7 +2549,7 @@
       "url": "https://www.gov.pt/servicos/pedir-apoio-para-as-vitimas-de-trafico-de-pessoas",
       "domain": "www.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:12:29Z",
+      "checked_at": "2026-11-02T21:49:38Z",
       "changed_at": "2026-10-28T05:51:09Z",
       "pages": [
         "situacoes-urgentes.html"
@@ -2548,7 +2563,7 @@
       "url": "https://www.seg-social.pt/documents/10152/729656/LINHA%2BNACIONAL%2BDE%2BEMERG%C3%8ANCIA%2BSOCIAL%2B-%2B144%2BLNES/597f3fad-9e5a-46ac-991d-9d375fb4610e",
       "domain": "www.seg-social.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:40Z",
+      "checked_at": "2026-11-02T21:49:51Z",
       "changed_at": null,
       "pages": [
         "situacoes-urgentes.html"
@@ -2560,7 +2575,7 @@
       "url": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-emitida-a-estudantes-do-ensino-superior-art-o-91",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:08:09Z",
+      "checked_at": "2026-11-02T21:43:11Z",
       "changed_at": "2026-10-20T14:19:35Z",
       "pages": [
         "estudantes.html"
@@ -2574,7 +2589,7 @@
       "url": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-para-estagiarios-art-93-o",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:08:12Z",
+      "checked_at": "2026-11-02T21:43:13Z",
       "changed_at": "2026-10-20T14:19:38Z",
       "pages": [
         "estudantes.html"
@@ -2588,7 +2603,7 @@
       "url": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-para-investigadores-art-91-o-b",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:08:15Z",
+      "checked_at": "2026-11-02T21:43:16Z",
       "changed_at": "2026-10-20T14:19:41Z",
       "pages": [
         "estudantes.html"
@@ -2602,7 +2617,7 @@
       "url": "https://aima.gov.pt/pt/estudar/autorizacao-de-residencia-para-voluntarios-art-94-o",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:08:19Z",
+      "checked_at": "2026-11-02T21:43:19Z",
       "changed_at": "2026-10-20T14:19:44Z",
       "pages": [
         "estudantes.html"
@@ -2616,7 +2631,7 @@
       "url": "https://aima.gov.pt/pt/estudar/mobilidade-de-estudantes-do-ensino-superior-art-91-o-a",
       "domain": "aima.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:08:22Z",
+      "checked_at": "2026-11-02T21:43:22Z",
       "changed_at": "2026-10-20T14:19:47Z",
       "pages": [
         "estudantes.html"
@@ -2630,7 +2645,7 @@
       "url": "https://aima.gov.pt/pt/trabalhar/tendo-beneficiado-de-ar-para-estudantes-do-2-o-ou-3-o-ciclos-do-ensino-superior-ou-de-ar-para-investigacao-e-concluido-os-estudo",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:09:52Z",
+      "checked_at": "2026-11-02T21:44:34Z",
       "changed_at": null,
       "pages": [
         "estudantes.html"
@@ -2642,7 +2657,7 @@
       "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:31Z",
+      "checked_at": "2026-11-02T21:49:39Z",
       "changed_at": null,
       "pages": [
         "altamente-qualificado.html"
@@ -2654,33 +2669,33 @@
       "url": "https://aima.gov.pt/media/pages/documents/2362d0cee2-1738969731/faqs-acolhimento_site-aima.pdf",
       "domain": "aima.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:07:27Z",
+      "checked_at": "2026-11-02T21:42:38Z",
       "changed_at": null,
       "pages": [
         "asilo.html"
       ],
       "required": false,
-      "failure_count": 115,
+      "failure_count": 116,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/2362d0cee2-1738969731/faqs-acolhimento_site-aima.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     "src_759b7e28e04f": {
       "url": "https://aima.gov.pt/media/pages/documents/ae8d126274-1750428776/lei-27.pdf",
       "domain": "aima.gov.pt",
       "state": "baseline_failed",
-      "checked_at": "2026-11-02T11:07:29Z",
+      "checked_at": "2026-11-02T21:42:39Z",
       "changed_at": null,
       "pages": [
         "asilo.html"
       ],
       "required": false,
-      "failure_count": 115,
+      "failure_count": 116,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/ae8d126274-1750428776/lei-27.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
     },
     "src_c19276c8aef5": {
       "url": "https://www.gov.pt/guias/ucrania-informacoes-e-apoios-disponiveis-em-portugal",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:25Z",
+      "checked_at": "2026-11-02T21:49:35Z",
       "changed_at": null,
       "pages": [
         "protecao-temporaria.html"
@@ -2692,7 +2707,7 @@
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:07:36Z",
+      "checked_at": "2026-11-02T21:42:44Z",
       "changed_at": null,
       "pages": [
         "investimento.html",
@@ -2706,7 +2721,7 @@
       "url": "https://aima.gov.pt/pt/noticias/formulario-agendamento-para-aquisicao-do-estatuto-de-residente-de-longa-duracao",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:08:45Z",
+      "checked_at": "2026-11-02T21:43:41Z",
       "changed_at": null,
       "pages": [
         "longa-duracao.html"
@@ -2721,7 +2736,7 @@
       "url": "https://aima.gov.pt/pt/noticias/renovacao-do-titulo-de-residente-de-longa-duracao",
       "domain": "aima.gov.pt",
       "state": "fetch_error",
-      "checked_at": "2026-11-02T11:09:07Z",
+      "checked_at": "2026-11-02T21:43:57Z",
       "changed_at": null,
       "pages": [
         "longa-duracao.html"
@@ -2736,7 +2751,7 @@
       "url": "https://www.gov.pt/noticias/governo-aumenta-salario-minimo-para-920-euros-em-2026",
       "domain": "www.gov.pt",
       "state": "baseline_pending_transient",
-      "checked_at": "2026-11-02T11:12:27Z",
+      "checked_at": "2026-11-02T21:49:36Z",
       "changed_at": null,
       "pages": [
         "rendimentos-proprios.html"
@@ -2751,7 +2766,7 @@
       "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-atualizado-para-nacionais-da-uniao-europeia-ue-e-familiares",
       "domain": "aima.gov.pt",
       "state": "baseline_pending_transient",
-      "checked_at": "2026-11-02T11:08:56Z",
+      "checked_at": "2026-11-02T21:43:49Z",
       "changed_at": null,
       "pages": [
         "legalizacao.html",
@@ -2768,7 +2783,7 @@
       "url": "https://aima.gov.pt/pt/decreto-regulamentar-da-lei-de-estrangeiros-alteracoes",
       "domain": "aima.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:08:00Z",
+      "checked_at": "2026-11-02T21:43:03Z",
       "changed_at": null,
       "pages": [
         "aima-agendamento-problemas.html",
@@ -2781,7 +2796,7 @@
       "url": "https://www.gov.pt/guias/migrantes-vistos-e-autorizacoes-para-entrar-e-viver-em-portugal",
       "domain": "www.gov.pt",
       "state": "changed_pending_review",
-      "checked_at": "2026-11-02T11:12:23Z",
+      "checked_at": "2026-11-02T21:49:34Z",
       "changed_at": "2026-10-16T21:14:13Z",
       "pages": [
         "fora-de-portugal.html"
@@ -2795,7 +2810,7 @@
       "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
       "domain": "www.gov.pt",
       "state": "healthy",
-      "checked_at": "2026-11-02T11:12:31Z",
+      "checked_at": "2026-11-02T21:49:39Z",
       "changed_at": null,
       "pages": [
         "trabalho.html"
@@ -2808,9 +2823,9 @@
     "checked": 184,
     "required_sources": 139,
     "new_baselines": 3,
-    "relevant_changes": 41,
+    "relevant_changes": 43,
     "blocked_pages": 32,
-    "errors": 37,
+    "errors": 39,
     "critical_errors": 0,
     "missing_required": 0,
     "pending_required_baselines": 0,

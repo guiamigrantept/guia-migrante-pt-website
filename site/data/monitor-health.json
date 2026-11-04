@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-11-04T06:28:38Z",
+  "generated_at": "2026-11-04T17:21:21Z",
   "state": "degraded",
   "schedule_hours": 3,
   "warning_after_hours": 9,
@@ -43,13 +43,13 @@
     "ue-familiares.html"
   ],
   "critical_error_count": 0,
-  "source_error_count": 46,
-  "optional_source_error_count": 21,
+  "source_error_count": 47,
+  "optional_source_error_count": 22,
   "repeated_source_failure_count": 0,
   "discovery_ok": true,
   "discovery_error": null,
   "dre_rss_ok": true,
-  "dre_alert_count": 0,
+  "dre_alert_count": 2,
   "fact_updates": [],
   "policy": {
     "objective_facts": "automatic",

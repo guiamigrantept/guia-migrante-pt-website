@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-11-13T11:19:29Z",
+  "generated_at": "2026-11-13T19:47:07Z",
   "state": "degraded",
   "schedule_hours": 3,
   "warning_after_hours": 9,
@@ -12,6 +12,7 @@
   "blocked_pages": [
     "aima-agendamento-problemas.html",
     "consumidor.html",
+    "cplp.html",
     "discriminacao-apoio.html",
     "en/aima-agendamento-problemas.html",
     "en/discriminacao-apoio.html",
@@ -52,13 +53,13 @@
     "ue-familiares.html"
   ],
   "critical_error_count": 0,
-  "source_error_count": 41,
-  "optional_source_error_count": 24,
+  "source_error_count": 37,
+  "optional_source_error_count": 21,
   "repeated_source_failure_count": 0,
   "discovery_ok": true,
   "discovery_error": null,
   "dre_rss_ok": true,
-  "dre_alert_count": 1,
+  "dre_alert_count": 0,
   "fact_updates": [],
   "policy": {
     "objective_facts": "automatic",

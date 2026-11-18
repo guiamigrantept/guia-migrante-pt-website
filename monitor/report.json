@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T16:04:39Z",
+  "generated_at": "2026-11-18T01:02:19Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
@@ -10,47 +10,80 @@
   ],
   "changed_sources": [
     "src_0bb3fdad0761",
+    "src_0d3e737b44ae",
     "src_0ea9b0928bd2",
     "src_10df7741dfe0",
     "src_12250e4f5a61",
     "src_151611dd5ea8",
     "src_1a10460aaa69",
+    "src_1d26a663b9c8",
     "src_20e086ae3712",
     "src_2234ef846c7c",
     "src_24d035e3352c",
     "src_2b0880736b8a",
+    "src_2b7fd322021d",
+    "src_2e5a8d9c1488",
     "src_2e8500a7bec3",
     "src_31ab41788719",
+    "src_348272c45029",
     "src_3a0611c027d0",
     "src_3c7634597430",
     "src_428c67712ce8",
+    "src_42ae5fe404b9",
     "src_48b0a401cee7",
+    "src_51345bfaef9d",
     "src_52321d8bd72b",
     "src_5372b7055017",
     "src_558a74079aff",
+    "src_5677a3a829ee",
+    "src_5c470c1c6222",
+    "src_62896b90e5a4",
     "src_6de9d828fd49",
+    "src_719747d5f007",
+    "src_77ef0713e4c1",
     "src_7c058712b7c1",
     "src_8075539b4165",
     "src_863b5ed4598b",
     "src_87d4fe096076",
     "src_895f18d4d170",
+    "src_94e2ebb14db9",
     "src_962f8edbc412",
     "src_984aab257167",
+    "src_98fc5f38477c",
+    "src_a03296df1147",
+    "src_a21e2f4e0949",
     "src_aa440bba100b",
     "src_ac02e2cb2311",
     "src_ac4c209d3df8",
+    "src_ad5fd491e054",
+    "src_b223c78629bb",
+    "src_b257c9d151f0",
     "src_b4112d074e22",
+    "src_b4ac6b5d98df",
+    "src_b55923d59614",
+    "src_b8fe052c05da",
+    "src_bcb6fdeda2b8",
     "src_bede7315e9ef",
+    "src_c1912bc0f3da",
+    "src_c19276c8aef5",
+    "src_c56963332c91",
     "src_c71b71d3bfa4",
+    "src_cba148b16793",
     "src_cbed4d38b3bf",
     "src_d3d76ad6c512",
     "src_d771f142ded7",
     "src_db343c2f6967",
     "src_e392a810f5d3",
+    "src_e5000174ce7b",
+    "src_e7caf78e6e2a",
+    "src_e83566f7adcc",
+    "src_e9c2fda70bd4",
     "src_ea8e3c5afeca",
     "src_ed371aefaa82",
     "src_f52860abec7d",
-    "src_f85f411871fc"
+    "src_f6b1ed8a92fe",
+    "src_f85f411871fc",
+    "src_f95c7a71032d"
   ],
   "blocked_pages": {
     "en/transportes.html": [
@@ -77,6 +110,7 @@
       "src_24d035e3352c",
       "src_31ab41788719",
       "src_428c67712ce8",
+      "src_51345bfaef9d",
       "src_5372b7055017",
       "src_f52860abec7d"
     ],
@@ -100,6 +134,7 @@
     ],
     "en/situacoes-urgentes.html": [
       "src_3c7634597430",
+      "src_719747d5f007",
       "src_cbed4d38b3bf"
     ],
     "en/titulo-residencia-renovacao-segunda-via.html": [
@@ -109,6 +144,7 @@
     "situacoes-urgentes.html": [
       "src_20e086ae3712",
       "src_3c7634597430",
+      "src_719747d5f007",
       "src_cbed4d38b3bf"
     ],
     "titulo-residencia-renovacao-segunda-via.html": [
@@ -126,16 +162,19 @@
       "src_984aab257167"
     ],
     "en/mudanca-saida.html": [
-      "src_0bb3fdad0761"
+      "src_0bb3fdad0761",
+      "src_348272c45029"
     ],
     "mudanca-saida.html": [
-      "src_0bb3fdad0761"
+      "src_0bb3fdad0761",
+      "src_348272c45029"
     ],
     "en/protecao-temporaria.html": [
       "src_7c058712b7c1"
     ],
     "protecao-temporaria.html": [
-      "src_7c058712b7c1"
+      "src_7c058712b7c1",
+      "src_c19276c8aef5"
     ],
     "cplp.html": [
       "src_ac4c209d3df8"
@@ -153,7 +192,8 @@
       "src_1a10460aaa69",
       "src_962f8edbc412",
       "src_aa440bba100b",
-      "src_ac02e2cb2311"
+      "src_ac02e2cb2311",
+      "src_b55923d59614"
     ],
     "nacionalidade.html": [
       "src_0ea9b0928bd2",
@@ -162,35 +202,63 @@
       "src_8075539b4165",
       "src_962f8edbc412",
       "src_aa440bba100b",
-      "src_ac02e2cb2311"
+      "src_ac02e2cb2311",
+      "src_b55923d59614"
     ],
     "discriminacao-apoio.html": [
       "src_3c7634597430",
       "src_6de9d828fd49",
+      "src_719747d5f007",
       "src_d3d76ad6c512"
     ],
     "en/discriminacao-apoio.html": [
       "src_3c7634597430",
+      "src_719747d5f007",
       "src_d3d76ad6c512"
     ],
     "habitacao.html": [
       "src_2234ef846c7c"
     ],
     "en/registos-civis.html": [
-      "src_2e8500a7bec3"
+      "src_2e8500a7bec3",
+      "src_42ae5fe404b9",
+      "src_e5000174ce7b"
     ],
     "registos-civis.html": [
-      "src_2e8500a7bec3"
+      "src_2e8500a7bec3",
+      "src_42ae5fe404b9",
+      "src_62896b90e5a4",
+      "src_e5000174ce7b"
     ],
     "qualificacoes.html": [
       "src_558a74079aff",
+      "src_5677a3a829ee",
       "src_bede7315e9ef"
     ],
     "en/qualificacoes.html": [
-      "src_558a74079aff"
+      "src_558a74079aff",
+      "src_5677a3a829ee"
     ],
     "consumidor.html": [
       "src_ed371aefaa82"
+    ],
+    "saude-completa.html": [
+      "src_5c470c1c6222",
+      "src_94e2ebb14db9",
+      "src_a21e2f4e0949",
+      "src_b8fe052c05da",
+      "src_bcb6fdeda2b8",
+      "src_d771f142ded7",
+      "src_e83566f7adcc",
+      "src_f85f411871fc"
+    ],
+    "en/escola-familias.html": [
+      "src_2b7fd322021d",
+      "src_2e5a8d9c1488"
+    ],
+    "escola-familias.html": [
+      "src_2b7fd322021d",
+      "src_2e5a8d9c1488"
     ],
     "en/integracao.html": [
       "src_87d4fe096076"
@@ -206,18 +274,98 @@
       "src_b4112d074e22"
     ],
     "fora-de-portugal.html": [
+      "src_51345bfaef9d",
+      "src_c1912bc0f3da",
+      "src_e7caf78e6e2a",
       "src_ea8e3c5afeca"
     ],
-    "trabalho-direitos.html": [
-      "src_b4112d074e22"
+    "en/trabalho-direitos.html": [
+      "src_1d26a663b9c8",
+      "src_719747d5f007",
+      "src_b4ac6b5d98df"
     ],
-    "saude-completa.html": [
-      "src_d771f142ded7",
-      "src_f85f411871fc"
+    "trabalho-direitos.html": [
+      "src_1d26a663b9c8",
+      "src_719747d5f007",
+      "src_b4112d074e22",
+      "src_b4ac6b5d98df"
+    ],
+    "independente-empreendedor.html": [
+      "src_ad5fd491e054",
+      "src_c1912bc0f3da"
+    ],
+    "contactos.html": [
+      "src_e9c2fda70bd4"
+    ],
+    "en/contactos.html": [
+      "src_e9c2fda70bd4"
+    ],
+    "dia-a-dia.html": [
+      "src_0d3e737b44ae",
+      "src_94e2ebb14db9",
+      "src_b223c78629bb",
+      "src_e83566f7adcc",
+      "src_f95c7a71032d"
+    ],
+    "en/dia-a-dia.html": [
+      "src_0d3e737b44ae",
+      "src_94e2ebb14db9",
+      "src_b223c78629bb",
+      "src_e83566f7adcc",
+      "src_f95c7a71032d"
     ],
     "en/saude-completa.html": [
+      "src_5c470c1c6222",
+      "src_94e2ebb14db9",
       "src_d771f142ded7",
       "src_f85f411871fc"
+    ],
+    "apoios-sociais.html": [
+      "src_77ef0713e4c1",
+      "src_98fc5f38477c",
+      "src_a03296df1147",
+      "src_b257c9d151f0",
+      "src_f6b1ed8a92fe"
+    ],
+    "en/index.html": [
+      "src_0d3e737b44ae",
+      "src_b223c78629bb",
+      "src_f95c7a71032d"
+    ],
+    "index.html": [
+      "src_0d3e737b44ae",
+      "src_b223c78629bb",
+      "src_e83566f7adcc",
+      "src_f95c7a71032d"
+    ],
+    "altamente-qualificado.html": [
+      "src_cba148b16793"
+    ],
+    "en/estudantes.html": [
+      "src_51345bfaef9d"
+    ],
+    "en/fora-de-portugal.html": [
+      "src_51345bfaef9d",
+      "src_c1912bc0f3da",
+      "src_e7caf78e6e2a"
+    ],
+    "en/rendimentos-proprios.html": [
+      "src_e7caf78e6e2a"
+    ],
+    "rendimentos-proprios.html": [
+      "src_e7caf78e6e2a"
+    ],
+    "en/independente-empreendedor.html": [
+      "src_c1912bc0f3da"
+    ],
+    "en/apoios-sociais.html": [
+      "src_f6b1ed8a92fe"
+    ],
+    "carta-conducao.html": [
+      "src_c56963332c91"
+    ],
+    "en/carta-conducao.html": [
+      "src_c56963332c91"
     ]
   },
   "errors": [
@@ -229,7 +377,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
+      "failure_count": 362,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -240,7 +388,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 159,
+      "failure_count": 160,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/2362d0cee2-1738969731/faqs-acolhimento_site-aima.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -251,7 +399,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
+      "failure_count": 362,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -262,30 +410,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 159,
+      "failure_count": 160,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/ae8d126274-1750428776/lei-27.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
-    },
-    {
-      "id": "src_1a5a6913096f",
-      "url": "https://anacom.pt/render.jsp?contentId=1825544",
-      "domain": "anacom.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "fetch_error",
-      "failure_count": 4,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7648c26b3d70>, 'Connection to anacom.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
-    },
-    {
-      "id": "src_1d0d8bb32004",
-      "url": "https://anacom.pt/render.jsp?contentId=1842813",
-      "domain": "anacom.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "fetch_error",
-      "failure_count": 4,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7648c26b0d70>, 'Connection to anacom.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_65c308f94048",
@@ -295,8 +421,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7648c2c6fe30>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 362,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x732a3c4af1a0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_32f173d0d4e1",
@@ -482,7 +608,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 180,
+      "failure_count": 181,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -493,7 +619,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
+      "failure_count": 362,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -504,7 +630,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
+      "failure_count": 362,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -515,7 +641,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
+      "failure_count": 362,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -526,7 +652,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 173,
+      "failure_count": 174,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -577,7 +703,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 180,
+      "failure_count": 181,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -588,8 +714,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7648c2fbb7a0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 362,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x732a3c4ac7d0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_f52b4b71ccfa",
@@ -599,8 +725,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 180,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7648c2fbb380>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 181,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x732a3c4ac200>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_558a74079aff",
@@ -620,7 +746,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
+      "failure_count": 362,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -631,7 +757,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 179,
+      "failure_count": 180,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -642,8 +768,49 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 361,
+      "failure_count": 362,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
+    },
+    {
+      "id": "src_768fda908f67",
+      "url": "https://www.parlamento.pt/Parlamento/Paginas/entidades-administrativas-independentes.aspx",
+      "domain": "www.parlamento.pt",
+      "risk": "medium",
+      "required": false,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: 403 Client Error: Forbidden for url: https://www.parlamento.pt/Parlamento/Paginas/entidades-administrativas-independentes.aspx; browser fallback failed: browser fallback failed (0)"
+    },
+    {
+      "id": "src_33c397772684",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
+      "domain": "www.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "temporary_source_response",
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "id": "src_07b86f035fc9",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
+      "domain": "www.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "temporary_source_response",
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "id": "src_d047de31a87b",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-trabalho-dependente",
+      "domain": "www.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "temporary_source_response",
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     }
   ],
   "critical_errors": [],

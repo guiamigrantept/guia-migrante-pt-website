@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T02:39:10Z",
+  "generated_at": "2026-11-19T11:46:08Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
@@ -388,7 +388,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
+      "failure_count": 366,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -399,7 +399,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 163,
+      "failure_count": 164,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/2362d0cee2-1738969731/faqs-acolhimento_site-aima.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -410,7 +410,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
+      "failure_count": 366,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -421,8 +421,30 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 163,
+      "failure_count": 164,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/ae8d126274-1750428776/lei-27.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
+    },
+    {
+      "id": "src_1a5a6913096f",
+      "url": "https://anacom.pt/render.jsp?contentId=1825544",
+      "domain": "anacom.pt",
+      "risk": "medium",
+      "required": false,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: 403 Client Error: Forbidden for url: https://anacom.pt/render.jsp?contentId=1825544; browser fallback failed: browser-rendered source text too short"
+    },
+    {
+      "id": "src_1d0d8bb32004",
+      "url": "https://anacom.pt/render.jsp?contentId=1842813",
+      "domain": "anacom.pt",
+      "risk": "medium",
+      "required": false,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: 403 Client Error: Forbidden for url: https://anacom.pt/render.jsp?contentId=1842813; browser fallback failed: browser-rendered source text too short"
     },
     {
       "id": "src_65c308f94048",
@@ -432,8 +454,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7550cb5bb8c0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 366,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7519e026bf50>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_32f173d0d4e1",
@@ -619,7 +641,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 184,
+      "failure_count": 185,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -630,7 +652,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
+      "failure_count": 366,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -641,7 +663,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
+      "failure_count": 366,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -652,7 +674,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
+      "failure_count": 366,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -663,7 +685,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 177,
+      "failure_count": 178,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -714,7 +736,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 184,
+      "failure_count": 185,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -725,8 +747,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7550cb36fbc0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 366,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7519e02b0110>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_f52b4b71ccfa",
@@ -736,8 +758,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 184,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7550cb36deb0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 185,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7519e02b09e0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_558a74079aff",
@@ -757,7 +779,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
+      "failure_count": 366,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -768,7 +790,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 183,
+      "failure_count": 184,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -779,18 +801,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 365,
+      "failure_count": 366,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
-    },
-    {
-      "id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "domain": "simuladorprecos.erse.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
     },
     {
       "id": "src_42ae5fe404b9",
@@ -803,24 +815,14 @@
       "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
-      "id": "src_b65c4147496a",
-      "url": "https://www.seg-social.pt/documents/10152/729656/LINHA%2BNACIONAL%2BDE%2BEMERG%C3%8ANCIA%2BSOCIAL%2B-%2B144%2BLNES/597f3fad-9e5a-46ac-991d-9d375fb4610e",
-      "domain": "www.seg-social.pt",
+      "id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "domain": "simuladorprecos.erse.pt",
       "risk": "medium",
       "required": false,
       "had_baseline": true,
       "kind": "temporary_source_response",
-      "error": "transient response rejected; last committed known-good baseline retained"
-    },
-    {
-      "id": "src_5e43ca0ff104",
-      "url": "https://www.seg-social.pt/",
-      "domain": "www.seg-social.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "transient response rejected; last committed known-good baseline retained"
+      "error": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
     }
   ],
   "critical_errors": [],

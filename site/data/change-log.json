@@ -2,6 +2,242 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-11-22T01:24:50Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "baseline_seeded_from_verified_official_listing",
+      "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
+    },
+    {
+      "time": "2026-11-22T01:24:41Z",
+      "state": "invalid_baselines_rejected",
+      "source_ids": [
+        "src_d7d25428293c"
+      ],
+      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
+    },
+    {
+      "time": "2026-11-22T01:24:41Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-11-22T01:24:31Z",
+      "source_id": "src_c56963332c91",
+      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "state": "changed_pending_review",
+      "pages": [
+        "carta-conducao.html",
+        "en/carta-conducao.html"
+      ],
+      "candidate_sha256": "cd867ef23fa7102a1a9655e7c12626b71a3bf62981ad933cdfef8a2a7cb868f4",
+      "diff_excerpt": "-06.03.2026\n+19.10.2026\n+Renovar a carta de condução\n-Renovar a carta de condução\n-O serviço \"Trocar carta de condução estrangeira por portuguesa\" é da responsabilidade da entidade Instituto da Mobilidade e dos Transportes, IP.\n+O serviço \"Trocar carta de condução estrangeira por portuguesa\" é da responsabilidade da entidade Instituto da Mobilidade e dos Transportes, IP. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
+    },
+    {
+      "time": "2026-11-22T01:24:26Z",
+      "source_id": "src_b8fe052c05da",
+      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
+      "state": "changed_pending_review",
+      "pages": [
+        "saude-completa.html"
+      ],
+      "candidate_sha256": "0c77e89fa95dca05555636b5d63d300f20d961790e4907fe96b82414dde7d275",
+      "diff_excerpt": "-05.06.2025\n+19.10.2026\n+Mudar de centro de saúde\n+Consultar a área pessoal do portal SNS 24\n-Mudar de centro de saúde\n-Consultar a área pessoal do portal SNS 24\n-O serviço \"Marcar uma consulta no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n+O serviço \"Marcar uma consulta no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
+    },
+    {
+      "time": "2026-11-22T01:24:10Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "e4cd7ea61b769bbc9d5fc95321badfaba46a29e1c5769445bb7745bf1eddddf3",
+      "diff_excerpt": "-Última atualização da declaração de cookies em 10/21/26 pela\n+Última atualização da declaração de cookies em 11/21/26 pela\n-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 17-11-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-11-22T01:23:46Z",
+      "source_id": "src_2e8500a7bec3",
+      "url": "https://justica.gov.pt/servicos/registar-nascimento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "40ea1cf02f20acc22019784f9f71cde5123feb7ea236a78408b6841adad05f8d",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-22T01:23:44Z",
+      "source_id": "src_8075539b4165",
+      "url": "https://justica.gov.pt/Servicos/Submeter-pedido-de-nacionalidade",
+      "state": "changed_pending_review",
+      "pages": [
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "2b9e74d68754c98faefe0ac9c172b609cd171b74dce9175aa2df7a75507013d2",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-22T01:23:42Z",
+      "source_id": "src_6de9d828fd49",
+      "url": "https://justica.gov.pt/Servicos/Protecao-juridica",
+      "state": "changed_pending_review",
+      "pages": [
+        "discriminacao-apoio.html"
+      ],
+      "candidate_sha256": "063dc219f05180f795d6911da73f856cb7ec0469c9c5f3b7bcbf47ff4a873e43",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Protecao-juridica\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:40Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "changed_pending_review",
+      "pages": [
+        "habitacao.html",
+        "seguranca.html"
+      ],
+      "candidate_sha256": "20fcb791b8a890ecda4edf774f56231113599b03d87269ee162d67cfafd9d1d4",
+      "diff_excerpt": "-Informação predial simplificada — informação oficial da Justiça verificada em 27-09-2026. Permite saber quem é o proprietário de um imóvel e se existem hipotecas, penhoras, outros encargos ou pedidos de registo pendentes. A consulta é feita online mediante um código de acesso que pode ser pedido online.\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:38Z",
+      "source_id": "src_d3d76ad6c512",
+      "url": "https://justica.gov.pt/Servicos/Pedir-apoio-judiciario",
+      "state": "changed_pending_review",
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html"
+      ],
+      "candidate_sha256": "4e2cfe79db3872176bca0d1960a4593aeb3bd77f98d92eb629c732fc9d0e7c2d",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Pedir-apoio-judiciario\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:36Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "fcb282aa1138702bf4a167abd633a592821c64c4b3bdf297e394907abe293b06",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Iniciar-processo-de-casamento\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:34Z",
+      "source_id": "src_1a10460aaa69",
+      "url": "https://justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "9115664ec8f7f9352b34747f8dd3ad8b74f718ac1f775d48fafdc66205afc6cc",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-22T01:23:33Z",
+      "source_id": "src_2234ef846c7c",
+      "url": "https://justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "habitacao.html"
+      ],
+      "candidate_sha256": "435af015d6114cf06143cf53d6f45f7ed367c1d885399414d565ddf3db0bd273",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:30Z",
+      "source_id": "src_3c7634597430",
+      "url": "https://justica.gov.pt/Servicos/Apresentar-queixa",
+      "state": "changed_pending_review",
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html",
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "candidate_sha256": "d67e918c20f7ce3c9385ff6c2d2d144c02e0fdb61fec1ac810c66a7f62cc6b59",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-22T01:23:28Z",
+      "source_id": "src_aa440bba100b",
+      "url": "https://justica.gov.pt/Registos/Nacionalidade/Nacionalidade-portuguesa",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "993c4fdaaca36693b1b7b5df87b097017d33608eab4bebd51c64571f5d25e53d",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-22T01:23:26Z",
+      "source_id": "src_ac02e2cb2311",
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "1d5f79f507ccf9e5a71bb1442b2ff754475054952c9733a8377774572f1f37f5",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:24Z",
+      "source_id": "src_962f8edbc412",
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "ec23e9107427da3dbe25f72784cf2f10765789f4212679838c6d3f5d5d804de5",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:23Z",
+      "source_id": "src_10df7741dfe0",
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "668247494ee0242000c7f999e0f95f74e96b0e7c2ba1b3bbc4ecd1c92012fbb9",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:21Z",
+      "source_id": "src_0ea9b0928bd2",
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "e262c7785f60afcef4290510d1aef2fcac5bafd9a12db5da54baed84c469eb82",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-22T01:23:19Z",
+      "source_id": "src_151611dd5ea8",
+      "url": "https://justica.gov.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/transportes.html",
+        "transportes.html"
+      ],
+      "candidate_sha256": "4abb2d532646ab833383adbdcaf06b32d1b17b3da6c59f9fa467a3c1969bb1d4",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/\n+Your IP: 13.66.168.25\n+Supply above information and time if you need any help"
+    },
+    {
       "time": "2026-11-21T19:21:55Z",
       "source_id": "src_5d9fd6dbb527",
       "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
@@ -3140,269 +3376,6 @@
       ],
       "candidate_sha256": "8a0c75fc7057d4af0d414551c3d94d401741f96a0cd2ef0133cdefa98771ddc5",
       "diff_excerpt": "-25.05.2026\n+19.10.2026\n-O serviço \"Pedir visto de residência para o exercício de atividade profissional independente ou para imigrantes empreendedores\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n+O serviço \"Pedir visto de residência para o exercício de atividade profissional independente ou para imigrantes empreendedores\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:02:02Z",
-      "source_id": "src_d047de31a87b",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-trabalho-dependente",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/fora-de-portugal.html",
-        "en/trabalho.html",
-        "fora-de-portugal.html",
-        "trabalho.html"
-      ],
-      "candidate_sha256": "75164d2c15aa83431d23b5791b17697306a9959ffca31c55fad02a35faf4a4ef",
-      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para trabalho dependente\n-Informações sobre onde e como realizar o pedido de visto de residência para o exercício de uma atividade profissional subordinada em Portugal.\n-Atualizado em\n-16.04.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Todos os cidadãos estrangeiros, que não sejam nacionais de Estados Membros UE, do Espaço Económico Europeu e Suíça que pretendam trabalhar em Portugal.\n-Deverá ser consultado o Posto Consular competente de modo a saber os horários de atendimento para receção de pedidos de visto.\n-Legislação\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Altera a portaria dos meios de subsistência.\n-Regula os meios de subsistência.\n-Resolução que aprova o Contingente Global de Oportunidades de Trabalho Anual\n-Tabela de Emolumentos Consulares.\n-Temas\n-Cidadania e documentos\n-Outros docume"
-    },
-    {
-      "time": "2026-11-18T01:02:01Z",
-      "source_id": "src_33c397772684",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "altamente-qualificado.html",
-        "en/altamente-qualificado.html",
-        "en/fora-de-portugal.html",
-        "fora-de-portugal.html"
-      ],
-      "candidate_sha256": "1f114fb92b7b7d0d878aac7fb2ca46b882ed6dd0208d9ac48a99f74093d4094a",
-      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Quando pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Onde pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Como pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-O que precisa para pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Prazo\n-Qual o preço pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade de investigação ou altamente qualificada em Portugal.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que"
-    },
-    {
-      "time": "2026-11-18T01:02:00Z",
-      "source_id": "src_e7caf78e6e2a",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/fora-de-portugal.html",
-        "en/rendimentos-proprios.html",
-        "fora-de-portugal.html",
-        "rendimentos-proprios.html"
-      ],
-      "candidate_sha256": "158fc61da9372d827575d781bd33b5e5a574fb573c9149974c9207b2e39e7f8d",
-      "diff_excerpt": "-22.05.2026\n+19.10.2026\n-O serviço \"Pedir um visto de residência para fixação de residência de reformados, religiosos e pessoas que vivem de rendimentos próprios\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n+O serviço \"Pedir um visto de residência para fixação de residência de reformados, religiosos e pessoas que vivem de rendimentos próprios\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:02:00Z",
-      "source_id": "src_51345bfaef9d",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-estudo-intercambio-de-estudantes-estagio-profissional-ou-voluntariado",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/estudantes.html",
-        "en/fora-de-portugal.html",
-        "estudantes.html",
-        "fora-de-portugal.html"
-      ],
-      "candidate_sha256": "415da588792c654ecfccfa6218604441977188389b4147e2f7bc6e65426ad27d",
-      "diff_excerpt": "-06.08.2026\n+19.10.2026\n-O serviço \"Pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n+O serviço \"Pedir um visto de residência para estudo, intercâmbio de estudantes, estágio profissional ou voluntariado\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:02:00Z",
-      "source_id": "src_07b86f035fc9",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
-      "state": "changed_pending_review",
-      "pages": [
-        "trabalho.html"
-      ],
-      "candidate_sha256": "c882508abf4c4d8326d99220c1487c44cb480b66a29ed717175b95a321134dd6",
-      "diff_excerpt": "-Serviços\n-Pedir um visto de estada temporária para trabalho subordinado ou independente\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Quando pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Onde pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Como pedir um visto de estada temporária para trabalho subordinado ou independente?\n-O que precisa para pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Prazo\n-Qual o preço pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto para o exercício de uma atividade profissional subordinada ou independente.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que não sejam nacionais de Estados Membros UE, do Espaço Económico Europeu e Suíça que pretendam exercer em Portugal uma profissão, subordinada ou independente, de carácter temporário"
-    },
-    {
-      "time": "2026-11-18T01:01:59Z",
-      "source_id": "src_cba148b16793",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "altamente-qualificado.html"
-      ],
-      "candidate_sha256": "5d9d23184a2a074ec98f781ee6d99b6e52f7806ff79f26c378a12651169a5379",
-      "diff_excerpt": "-27.03.2026\n+10.11.2026\n-O serviço \"Pedir um visto de estada temporária para o exercício de atividade de investigação ou altamente qualificada\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n+O serviço \"Pedir um visto de estada temporária para o exercício de atividade de investigação ou altamente qualificada\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:59Z",
-      "source_id": "src_e83566f7adcc",
-      "url": "https://www.gov.pt/servicos/pedir-os-numeros-de-identificacao-fiscal-seguranca-social-e-nacional-de-utente-saude-para-estrangeiros",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "index.html",
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "893a6690a5e64cd8b865dcb015cc8fef55fa63b63b270bd98d12bfc043121acb",
-      "diff_excerpt": "-17.09.2026\n+19.10.2026\n-O serviço \"Pedir os números de identificação fiscal, segurança social e nacional de utente (saúde) para estrangeiros\" é da responsabilidade da entidade Agência para a Integração, Migrações e Asilo.\n+O serviço \"Pedir os números de identificação fiscal, segurança social e nacional de utente (saúde) para estrangeiros\" é da responsabilidade da entidade Agência para a Integração, Migrações e Asilo. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:58Z",
-      "source_id": "src_98fc5f38477c",
-      "url": "https://www.gov.pt/servicos/pedir-o-rendimento-social-de-insercao",
-      "state": "changed_pending_review",
-      "pages": [
-        "apoios-sociais.html"
-      ],
-      "candidate_sha256": "b385b38539fda2a5ba4d2b65fc8e3dc059c7537d4e244545f7dd85ec10acb1d4",
-      "diff_excerpt": "-14.09.2026\n+19.10.2026\n-O serviço \"Pedir o Rendimento Social de Inserção\" é da responsabilidade da entidade Instituto da Segurança Social.\n+O serviço \"Pedir o Rendimento Social de Inserção\" é da responsabilidade da entidade Instituto da Segurança Social. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:58Z",
-      "source_id": "src_5677a3a829ee",
-      "url": "https://www.gov.pt/servicos/pedir-o-reconhecimento-de-graus-academicos-e-diplomas-de-ensino-superior-estrangeiros",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/qualificacoes.html",
-        "qualificacoes.html"
-      ],
-      "candidate_sha256": "76725b80b1ef53819e6fe5f4c299b5b45736cf769bb73d69306bf482e33aa9bb",
-      "diff_excerpt": "-08.05.2026\n+19.10.2026\n-O serviço \"Pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros\" é da responsabilidade da entidade Direção-Geral do Ensino Superior.\n+O serviço \"Pedir o reconhecimento de graus académicos e diplomas de ensino superior estrangeiros\" é da responsabilidade da entidade Direção-Geral do Ensino Superior. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:58Z",
-      "source_id": "src_f95c7a71032d",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-utente-do-sns",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "0de59c170c36d308f7cf70475ac7c4517a4b72fd51c45136d586cf0183611776",
-      "diff_excerpt": "-12.05.2026\n+10.11.2026\n-O serviço \"Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n+O serviço \"Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\" é da responsabilidade da entidade Administração Central do Sistema de Saúde. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:58Z",
-      "source_id": "src_0d3e737b44ae",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "071eb6b0b43ee900a4325e4d805468f41625d8b07daffe29d7c6e31d8a0f0045",
-      "diff_excerpt": "-01.09.2026\n+19.10.2026\n-O serviço \"Pedir o Número de Identificação Fiscal (NIF) para pessoa singular\" é da responsabilidade da entidade Autoridade Tributária e Aduaneira.\n+O serviço \"Pedir o Número de Identificação Fiscal (NIF) para pessoa singular\" é da responsabilidade da entidade Autoridade Tributária e Aduaneira. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:58Z",
-      "source_id": "src_b223c78629bb",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "74d17153a2c15acbc53122878c7fc9e2624348b5bab8ac9fe2b84d2e6f4c9d4f",
-      "diff_excerpt": "-03.09.2026\n+19.10.2026\n-O serviço \"Pedir o Número de Identificação da Segurança Social (NISS)\" é da responsabilidade da entidade Instituto da Segurança Social.\n+O serviço \"Pedir o Número de Identificação da Segurança Social (NISS)\" é da responsabilidade da entidade Instituto da Segurança Social. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:58Z",
-      "source_id": "src_b4ac6b5d98df",
-      "url": "https://www.gov.pt/servicos/pedir-informacoes-a-autoridade-para-as-condicoes-do-trabalho-act-",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/trabalho-direitos.html",
-        "trabalho-direitos.html"
-      ],
-      "candidate_sha256": "41e9f665c7183cdf6666b1b6db5d68b4c59645949d1e91281639a49e6209529e",
-      "diff_excerpt": "-09.11.2026\n+10.11.2026\n-O serviço \"Pedir informações à Autoridade para as Condições do Trabalho (ACT)\" é da responsabilidade da entidade Autoridade para as Condições do Trabalho.\n+O serviço \"Pedir informações à Autoridade para as Condições do Trabalho (ACT)\" é da responsabilidade da entidade Autoridade para as Condições do Trabalho. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:57Z",
-      "source_id": "src_2e5a8d9c1488",
-      "url": "https://www.gov.pt/servicos/pedir-equivalencia-de-habilitacoes-estrangeiras-do-ensino-basico-e-secundario",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/escola-familias.html",
-        "escola-familias.html"
-      ],
-      "candidate_sha256": "4b3da054c399327d48bee810af2bf26432031601d0c24cc1f87b4d652ccb4037",
-      "diff_excerpt": "-22.05.2026\n+19.10.2026\n-O serviço \"Pedir equivalência de habilitações estrangeiras do ensino básico e secundário\" é da responsabilidade da entidade Agência para a Gestão do Sistema Educativo.\n+O serviço \"Pedir equivalência de habilitações estrangeiras do ensino básico e secundário\" é da responsabilidade da entidade Agência para a Gestão do Sistema Educativo. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:57Z",
-      "source_id": "src_20e086ae3712",
-      "url": "https://www.gov.pt/servicos/pedir-apoio-para-as-vitimas-de-trafico-de-pessoas",
-      "state": "changed_pending_review",
-      "pages": [
-        "situacoes-urgentes.html"
-      ],
-      "candidate_sha256": "22f33eb322366fa85162919a606a66139dcb67298856925e27e828a36e63ddf5",
-      "diff_excerpt": "+O serviço de informação funciona 24 horas por dia, 7 dias por semana, para apoiar vítimas de tráfico de pessoas que procuram informação sobre os meios de apoio e proteção que estão disponíveis.\n+É um serviço anónimo e confidencial.\n-27.03.2026\n+10.11.2026\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir apoio para as vítimas de tráfico de pessoas?\n-Quando pedir apoio para as vítimas de tráfico de pessoas?\n-Como pedir apoio para as vítimas de tráfico de pessoas?\n-Qual o preço pedir apoio para as vítimas de tráfico de pessoas?\n+Quem pode pedir apoio para as vítimas de tráfico de pessoas\n+Quando se pode pedir apoio para as vítimas de tráfico de pessoas\n+Como e onde se pode pedir apoio para as vítimas de tráfico de pessoas\n-O serviço de informação funciona 24 horas por dia, 7 dias por semana, para apoiar vítimas de tráfico de pessoas que procuram informação sobre os meios de apoio e proteção que estão disponíveis.\n-É um serviço anónimo e confidencial.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Ao recorrer ao serviço de apoio às vítimas de tráfico de pessoas através do\n-número de telefone nacional 964 608 288\n-, irá contar com o apoio de pessoas espec"
-    },
-    {
-      "time": "2026-11-18T01:01:57Z",
-      "source_id": "src_b55923d59614",
-      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "77d4e2b4a2c409de5198e50b2393f9471eb3b892178f7843095721eba0378dbf",
-      "diff_excerpt": "-21.05.2026\n+19.10.2026\n-O serviço \"Pedir a nacionalidade portuguesa\" é da responsabilidade da entidade Instituto dos Registos e do Notariado.\n+O serviço \"Pedir a nacionalidade portuguesa\" é da responsabilidade da entidade Instituto dos Registos e do Notariado. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:57Z",
-      "source_id": "src_a21e2f4e0949",
-      "url": "https://www.gov.pt/servicos/pedir-a-isencao-de-taxas-moderadoras-por-insuficiencia-economica",
-      "state": "changed_pending_review",
-      "pages": [
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "0a3877d90c2506369ababa17e91aa7815d1199bbd838278e9f14c6e51748d665",
-      "diff_excerpt": "-08.09.2026\n+19.10.2026\n-O serviço \"Pedir a isenção de taxas moderadoras por insuficiência económica\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n+O serviço \"Pedir a isenção de taxas moderadoras por insuficiência económica\" é da responsabilidade da entidade Administração Central do Sistema de Saúde. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:57Z",
-      "source_id": "src_b257c9d151f0",
-      "url": "https://www.gov.pt/servicos/obter-informacoes-sobre-o-subsidio-de-doenca",
-      "state": "changed_pending_review",
-      "pages": [
-        "apoios-sociais.html"
-      ],
-      "candidate_sha256": "82612988e80d0d74ff5d05a09bd0ee99cf8f15a5a0b63da8e22a56b45eafde16",
-      "diff_excerpt": "-02.10.2026\n+19.10.2026\n-O serviço \"Pedir o subsídio de doença\" é da responsabilidade da entidade Instituto da Segurança Social.\n+O serviço \"Pedir o subsídio de doença\" é da responsabilidade da entidade Instituto da Segurança Social. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:57Z",
-      "source_id": "src_5c470c1c6222",
-      "url": "https://www.gov.pt/servicos/mudar-de-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/saude-completa.html",
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "f31f3ba4f0beef9d84a9099080f7f140be2a329e551d9fc036584ef98842b368",
-      "diff_excerpt": "-12.05.2026\n+19.10.2026\n-O serviço \"Mudar de centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n+O serviço \"Mudar de centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:57Z",
-      "source_id": "src_b8fe052c05da",
-      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "b5d3436ed3ef7bb3f7eaf4f8eab56f1687334b7345509a2ab4a56037c0ca68df",
-      "diff_excerpt": "-05.06.2025\n+19.10.2026\n+Consultar a área pessoal do portal SNS 24\n-Consultar a área pessoal do portal SNS 24\n-O serviço \"Marcar uma consulta no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n+O serviço \"Marcar uma consulta no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-18T01:01:56Z",
-      "source_id": "src_94e2ebb14db9",
-      "url": "https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/saude-completa.html",
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "79eabaf626504afe2842f1b18b63487f29e6aae370364de2612305223947d6f2",
-      "diff_excerpt": "-12.05.2026\n+19.10.2026\n-O serviço \"Inscrever-se no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n+O serviço \"Inscrever-se no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
     }
   ]
 }

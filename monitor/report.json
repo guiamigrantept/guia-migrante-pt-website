@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T19:23:28Z",
+  "generated_at": "2026-11-26T03:40:06Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
@@ -17,6 +17,8 @@
     "src_12250e4f5a61",
     "src_151611dd5ea8",
     "src_1a10460aaa69",
+    "src_1a5a6913096f",
+    "src_1d0d8bb32004",
     "src_1d26a663b9c8",
     "src_20e086ae3712",
     "src_2234ef846c7c",
@@ -188,6 +190,14 @@
     ],
     "reagrupamento-familiar.html": [
       "src_db343c2f6967"
+    ],
+    "en/servicos-casa.html": [
+      "src_1a5a6913096f",
+      "src_1d0d8bb32004"
+    ],
+    "servicos-casa.html": [
+      "src_1a5a6913096f",
+      "src_1d0d8bb32004"
     ],
     "en/nacionalidade.html": [
       "src_0ea9b0928bd2",
@@ -391,7 +401,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
+      "failure_count": 384,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -402,7 +412,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 181,
+      "failure_count": 182,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/2362d0cee2-1738969731/faqs-acolhimento_site-aima.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -413,7 +423,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
+      "failure_count": 384,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -424,30 +434,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 181,
+      "failure_count": 182,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/ae8d126274-1750428776/lei-27.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
-    },
-    {
-      "id": "src_1a5a6913096f",
-      "url": "https://anacom.pt/render.jsp?contentId=1825544",
-      "domain": "anacom.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "fetch_error",
-      "failure_count": 1,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7047249630e0>, 'Connection to anacom.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://anacom.pt/render.jsp?contentId=1825544']' timed out after 70 seconds"
-    },
-    {
-      "id": "src_1d0d8bb32004",
-      "url": "https://anacom.pt/render.jsp?contentId=1842813",
-      "domain": "anacom.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "fetch_error",
-      "failure_count": 1,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x704724961a30>, 'Connection to anacom.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://anacom.pt/render.jsp?contentId=1842813']' timed out after 70 seconds"
     },
     {
       "id": "src_65c308f94048",
@@ -457,8 +445,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x704724b6d310>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 384,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x73dfabbe4bc0>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_32f173d0d4e1",
@@ -644,7 +632,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 202,
+      "failure_count": 203,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -655,7 +643,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
+      "failure_count": 384,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -666,7 +654,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
+      "failure_count": 384,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -677,7 +665,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
+      "failure_count": 384,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -688,7 +676,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 195,
+      "failure_count": 196,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -739,7 +727,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 202,
+      "failure_count": 203,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -750,8 +738,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x704724915af0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 384,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x73dfab61f230>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_f52b4b71ccfa",
@@ -761,8 +749,19 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 202,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x704724917620>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 203,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x73dfab61dc70>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+    },
+    {
+      "id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "domain": "simuladorprecos.erse.pt",
+      "risk": "medium",
+      "required": false,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: source text too short; browser fallback failed: browser-rendered source text too short"
     },
     {
       "id": "src_558a74079aff",
@@ -782,7 +781,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
+      "failure_count": 384,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -793,7 +792,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 201,
+      "failure_count": 202,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -804,18 +803,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 383,
+      "failure_count": 384,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
-    },
-    {
-      "id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "domain": "simuladorprecos.erse.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
     }
   ],
   "critical_errors": [],
@@ -840,18 +829,5 @@
     "src_f24085bfea03",
     "src_fe50511a824a"
   ],
-  "dre_rss_alerts": [
-    {
-      "title": "Acórdão do Supremo Tribunal Administrativo n.º 19/2026 - Diário da República n.º 229/2026, Série I de 2026-11-25",
-      "url": "https://diariodarepublica.pt/dr/detalhe/acordao-supremo-tribunal-administrativo/19-2026-1197651248",
-      "published": "",
-      "source": "https://files.diariodarepublica.pt/rss/serie1-html.xml"
-    },
-    {
-      "title": "Acórdão do Supremo Tribunal Administrativo n.º 21/2026 - Diário da República n.º 229/2026, Série I de 2026-11-25",
-      "url": "https://diariodarepublica.pt/dr/detalhe/acordao-supremo-tribunal-administrativo/21-2026-1197651250",
-      "published": "",
-      "source": "https://files.diariodarepublica.pt/rss/serie1-html.xml"
-    }
-  ]
+  "dre_rss_alerts": []
 }

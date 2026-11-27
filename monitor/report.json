@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T12:24:42Z",
+  "generated_at": "2026-11-27T23:35:03Z",
   "baseline_complete": true,
   "coverage_ok": true,
   "browser_fallback_available": true,
@@ -9,14 +9,11 @@
     "src_d7d25428293c"
   ],
   "changed_sources": [
-    "src_07b86f035fc9",
     "src_0d3e737b44ae",
     "src_0ea9b0928bd2",
     "src_10df7741dfe0",
     "src_151611dd5ea8",
     "src_1a10460aaa69",
-    "src_1a5a6913096f",
-    "src_1d0d8bb32004",
     "src_1d26a663b9c8",
     "src_20e086ae3712",
     "src_2234ef846c7c",
@@ -25,7 +22,6 @@
     "src_2e5a8d9c1488",
     "src_2e8500a7bec3",
     "src_31ab41788719",
-    "src_33c397772684",
     "src_348272c45029",
     "src_3a0611c027d0",
     "src_3c7634597430",
@@ -36,7 +32,6 @@
     "src_558a74079aff",
     "src_5677a3a829ee",
     "src_5c470c1c6222",
-    "src_62896b90e5a4",
     "src_6de9d828fd49",
     "src_719747d5f007",
     "src_77ef0713e4c1",
@@ -144,14 +139,6 @@
     "reagrupamento-familiar.html": [
       "src_db343c2f6967"
     ],
-    "en/servicos-casa.html": [
-      "src_1a5a6913096f",
-      "src_1d0d8bb32004"
-    ],
-    "servicos-casa.html": [
-      "src_1a5a6913096f",
-      "src_1d0d8bb32004"
-    ],
     "en/nacionalidade.html": [
       "src_0ea9b0928bd2",
       "src_10df7741dfe0",
@@ -193,7 +180,6 @@
     "registos-civis.html": [
       "src_2e8500a7bec3",
       "src_42ae5fe404b9",
-      "src_62896b90e5a4",
       "src_e5000174ce7b"
     ],
     "qualificacoes.html": [
@@ -237,13 +223,11 @@
       "src_87d4fe096076"
     ],
     "trabalho.html": [
-      "src_07b86f035fc9",
       "src_87d4fe096076",
       "src_b4112d074e22",
       "src_d047de31a87b"
     ],
     "fora-de-portugal.html": [
-      "src_33c397772684",
       "src_51345bfaef9d",
       "src_c1912bc0f3da",
       "src_d047de31a87b",
@@ -310,14 +294,12 @@
       "src_f95c7a71032d"
     ],
     "altamente-qualificado.html": [
-      "src_33c397772684",
       "src_cba148b16793"
     ],
     "en/estudantes.html": [
       "src_51345bfaef9d"
     ],
     "en/fora-de-portugal.html": [
-      "src_33c397772684",
       "src_51345bfaef9d",
       "src_c1912bc0f3da",
       "src_d047de31a87b",
@@ -328,9 +310,6 @@
     ],
     "rendimentos-proprios.html": [
       "src_e7caf78e6e2a"
-    ],
-    "en/altamente-qualificado.html": [
-      "src_33c397772684"
     ],
     "en/independente-empreendedor.html": [
       "src_c1912bc0f3da"
@@ -354,7 +333,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
+      "failure_count": 388,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /documents/respostas-perguntas-frequentes-informacoes-032026.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -365,7 +344,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 185,
+      "failure_count": 186,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/2362d0cee2-1738969731/faqs-acolhimento_site-aima.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -376,7 +355,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
+      "failure_count": 388,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/65bdef72e3-1738778874/pi_portugues.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     },
     {
@@ -387,8 +366,30 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 185,
+      "failure_count": 186,
       "error": "HTTPSConnectionPool(host='aima.gov.pt', port=443): Max retries exceeded with url: /media/pages/documents/ae8d126274-1750428776/lei-27.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
+    },
+    {
+      "id": "src_1a5a6913096f",
+      "url": "https://anacom.pt/render.jsp?contentId=1825544",
+      "domain": "anacom.pt",
+      "risk": "medium",
+      "required": false,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1825544 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7979d6a598e0>, 'Connection to anacom.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://anacom.pt/render.jsp?contentId=1825544']' timed out after 70 seconds"
+    },
+    {
+      "id": "src_1d0d8bb32004",
+      "url": "https://anacom.pt/render.jsp?contentId=1842813",
+      "domain": "anacom.pt",
+      "risk": "medium",
+      "required": false,
+      "had_baseline": true,
+      "kind": "fetch_error",
+      "failure_count": 1,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='anacom.pt', port=443): Max retries exceeded with url: /render.jsp?contentId=1842813 (Caused by ConnectTimeoutError(<HTTPSConnection(host='anacom.pt', port=443) at 0x7979d6a5bf20>, 'Connection to anacom.pt timed out. (connect timeout=8)')); browser fallback failed: Command '['/usr/bin/google-chrome', '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-background-networking', '--dump-dom', 'https://anacom.pt/render.jsp?contentId=1842813']' timed out after 70 seconds"
     },
     {
       "id": "src_65c308f94048",
@@ -398,8 +399,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7d626b274e60>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 388,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='contactenos.aima.gov.pt', port=443): Max retries exceeded with url: /contact-form (Caused by ConnectTimeoutError(<HTTPSConnection(host='contactenos.aima.gov.pt', port=443) at 0x7979d6a35130>, 'Connection to contactenos.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_32f173d0d4e1",
@@ -585,7 +586,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 206,
+      "failure_count": 207,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -596,7 +597,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
+      "failure_count": 388,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -607,7 +608,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
+      "failure_count": 388,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -618,7 +619,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
+      "failure_count": 388,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -629,7 +630,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 199,
+      "failure_count": 200,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -680,7 +681,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 206,
+      "failure_count": 207,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -691,8 +692,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7d626b81f170>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
+      "failure_count": 388,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7979d63ffbc0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_f52b4b71ccfa",
@@ -702,19 +703,8 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 206,
-      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7d626b81f110>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
-    },
-    {
-      "id": "src_9ddecb880ea8",
-      "url": "https://www.cm-amadora.pt/pt/intervencao-social/interculturalidade/10606-claim-centro-local-de-apoio-a-integracao-de-migrantes.html",
-      "domain": "www.cm-amadora.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "fetch_error",
-      "failure_count": 1,
-      "error": "primary fetch failed: 403 Client Error: Forbidden for url: https://www.cm-amadora.pt/pt/intervencao-social/interculturalidade/10606-claim-centro-local-de-apoio-a-integracao-de-migrantes.html; browser fallback failed: browser-rendered source text too short"
+      "failure_count": 207,
+      "error": "primary fetch failed: HTTPSConnectionPool(host='services.aima.gov.pt', port=443): Max retries exceeded with url: /CPLP (Caused by ConnectTimeoutError(<HTTPSConnection(host='services.aima.gov.pt', port=443) at 0x7979d63fcdd0>, 'Connection to services.aima.gov.pt timed out. (connect timeout=4)')); browser fallback skipped for repeatedly failing optional source"
     },
     {
       "id": "src_558a74079aff",
@@ -727,6 +717,16 @@
       "error": "official source returned HTTP 404"
     },
     {
+      "id": "src_f6b1ed8a92fe",
+      "url": "https://www.gov.pt/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
+      "domain": "www.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "removed",
+      "error": "official source returned HTTP 404"
+    },
+    {
       "id": "src_6262714f7433",
       "url": "https://www.imt-ip.pt/condutores/informacoes-gerais/quero-ser-condutor/tenho-carta-de-conducao-estrangeira",
       "domain": "www.imt-ip.pt",
@@ -734,7 +734,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
+      "failure_count": 388,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -745,7 +745,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 205,
+      "failure_count": 206,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -756,7 +756,7 @@
       "required": false,
       "had_baseline": false,
       "kind": "fetch_error",
-      "failure_count": 387,
+      "failure_count": 388,
       "error": "primary fetch failed: source text too short; browser fallback skipped for repeatedly failing optional source"
     },
     {
@@ -780,6 +780,16 @@
       "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
     },
     {
+      "id": "src_33c397772684",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
+      "domain": "www.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "temporary_source_response",
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
       "id": "src_c71b71d3bfa4",
       "url": "https://aima.gov.pt/pt/noticias/renovacao-do-titulo-de-residente-de-longa-duracao",
       "domain": "aima.gov.pt",
@@ -788,6 +798,16 @@
       "had_baseline": true,
       "kind": "temporary_source_response",
       "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "id": "src_07b86f035fc9",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
+      "domain": "www.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "temporary_source_response",
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
     },
     {
       "id": "src_ac4c209d3df8",
@@ -810,6 +830,16 @@
       "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
     },
     {
+      "id": "src_62896b90e5a4",
+      "url": "https://www.gov.pt/servicos/registar-um-nascimento-no-estrangeiro",
+      "domain": "www.gov.pt",
+      "risk": "high",
+      "required": true,
+      "had_baseline": true,
+      "kind": "temporary_source_response",
+      "error": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
       "id": "src_52321d8bd72b",
       "url": "https://aima.gov.pt/pt/noticias/formulario-agendamento-para-aquisicao-do-estatuto-de-residente-de-longa-duracao",
       "domain": "aima.gov.pt",
@@ -818,16 +848,6 @@
       "had_baseline": true,
       "kind": "temporary_source_response",
       "error": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
-    },
-    {
-      "id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "domain": "simuladorprecos.erse.pt",
-      "risk": "medium",
-      "required": false,
-      "had_baseline": true,
-      "kind": "temporary_source_response",
-      "error": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
     },
     {
       "id": "src_2b0880736b8a",

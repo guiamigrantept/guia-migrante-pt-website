@@ -2,6 +2,512 @@
   "version": 1,
   "changes": [
     {
+      "time": "2026-11-28T07:57:29Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "baseline_seeded_from_verified_official_listing",
+      "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
+    },
+    {
+      "time": "2026-11-28T07:57:21Z",
+      "state": "invalid_baselines_rejected",
+      "source_ids": [
+        "src_d7d25428293c"
+      ],
+      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_8fe207c2a621",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-atualizado-para-nacionais-da-uniao-europeia-ue-e-familiares",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_52321d8bd72b",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-agendamento-para-aquisicao-do-estatuto-de-residente-de-longa-duracao",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_62896b90e5a4",
+      "url": "https://www.gov.pt/servicos/registar-um-nascimento-no-estrangeiro",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_ac4c209d3df8",
+      "url": "https://aima.gov.pt/pt/noticias/veja-conhecer-as-regras-para-renovacao-do-titulo-de-residencia-cplp",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_07b86f035fc9",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_c71b71d3bfa4",
+      "url": "https://aima.gov.pt/pt/noticias/renovacao-do-titulo-de-residente-de-longa-duracao",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_33c397772684",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_12250e4f5a61",
+      "url": "https://aima.gov.pt/",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:20Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "temporary_source_response_ignored",
+      "reason": "temporary maintenance/unavailable page ignored; last known-good baseline retained"
+    },
+    {
+      "time": "2026-11-28T07:57:09Z",
+      "source_id": "src_c56963332c91",
+      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
+      "state": "changed_pending_review",
+      "pages": [
+        "carta-conducao.html",
+        "en/carta-conducao.html"
+      ],
+      "candidate_sha256": "2b94f7e4e9bc23185d13f3cd72a29c57fe5823547d9478973ea4a26fb34f1ebb",
+      "diff_excerpt": "-06.03.2026\n+19.10.2026\n+Substituir a carta de condução\n+Renovar a carta de condução\n-Substituir a carta de condução\n-Renovar a carta de condução\n-O serviço \"Trocar carta de condução estrangeira por portuguesa\" é da responsabilidade da entidade Instituto da Mobilidade e dos Transportes, IP.\n+O serviço \"Trocar carta de condução estrangeira por portuguesa\" é da responsabilidade da entidade Instituto da Mobilidade e dos Transportes, IP. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
+    },
+    {
+      "time": "2026-11-28T07:57:08Z",
+      "source_id": "src_62896b90e5a4",
+      "url": "https://www.gov.pt/servicos/registar-um-nascimento-no-estrangeiro",
+      "state": "changed_pending_review",
+      "pages": [
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "75aa507bf2d3f4c21dfeac04dfbe55dd3b49994958d13cce3dcb99ad930ceac8",
+      "diff_excerpt": "-Serviços\n-Registar um nascimento no estrangeiro\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem registar um nascimento no estrangeiro?\n-Quando registar um nascimento no estrangeiro?\n-Onde registar um nascimento no estrangeiro?\n-Como registar um nascimento no estrangeiro?\n-O que precisa para registar um nascimento no estrangeiro?\n-Prazo\n-Qual o preço registar um nascimento no estrangeiro?\n-Conteúdos relacionados\n-Entidade responsável\n-Informações sobre como e onde realizar o registo de nascimento no estrangeiro.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Cidadão com nacionalidade portuguesa residente no estrangeiro.\n-A qualquer momento, dentro do horário de atendimento.\n-Num Posto Consular português\n-Registo de nascimento no estrangeiro de cidadão com direito a nacionalidade portuguesa.\n-O registo de nascimento é feito:\n-Por inscrição, mediante declaração dos pais, (os quais devem estar inscritos nos serviços consulares);\n-ou\n-Por transcrição, com base em certidão de nascimento emitida pelas autoridades locais do país onde ocorreu o nascimento.\n-Bilhete de Identidade\n-ou\n-Certidão de nascimento dos pais, emitida"
+    },
+    {
+      "time": "2026-11-28T07:57:06Z",
+      "source_id": "src_33c397772684",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
+      "state": "changed_pending_review",
+      "pages": [
+        "altamente-qualificado.html",
+        "en/altamente-qualificado.html",
+        "en/fora-de-portugal.html",
+        "fora-de-portugal.html"
+      ],
+      "candidate_sha256": "6918d83ae4a8e1bce33e5b471e68ba6c777bca3604192aa6b3e8e7a8973bd969",
+      "diff_excerpt": "-Serviços\n-Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Quando pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Onde pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Como pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-O que precisa para pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Prazo\n-Qual o preço pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto de residência para o exercício de uma atividade de investigação ou altamente qualificada em Portugal.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que"
+    },
+    {
+      "time": "2026-11-28T07:57:04Z",
+      "source_id": "src_07b86f035fc9",
+      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
+      "state": "changed_pending_review",
+      "pages": [
+        "trabalho.html"
+      ],
+      "candidate_sha256": "dc76a5dd54288346c7e8622c803f12b545c7d33199de78b6648b3cdef809ce77",
+      "diff_excerpt": "-Serviços\n-Pedir um visto de estada temporária para trabalho subordinado ou independente\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Quando pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Onde pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Como pedir um visto de estada temporária para trabalho subordinado ou independente?\n-O que precisa para pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Prazo\n-Qual o preço pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto para o exercício de uma atividade profissional subordinada ou independente.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que não sejam nacionais de Estados Membros UE, do Espaço Económico Europeu e Suíça que pretendam exercer em Portugal uma profissão, subordinada ou independente, de carácter temporário"
+    },
+    {
+      "time": "2026-11-28T07:57:01Z",
+      "source_id": "src_b8fe052c05da",
+      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
+      "state": "changed_pending_review",
+      "pages": [
+        "saude-completa.html"
+      ],
+      "candidate_sha256": "39311e567157065bc4bf654bbe91f68ba702587d9ff75ff56ab0136d10f834af",
+      "diff_excerpt": "-05.06.2025\n+19.10.2026\n+Mudar de centro de saúde\n-Mudar de centro de saúde\n+Consultar a área pessoal do portal SNS 24\n-Consultar a área pessoal do portal SNS 24\n-O serviço \"Marcar uma consulta no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n+O serviço \"Marcar uma consulta no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
+    },
+    {
+      "time": "2026-11-28T07:56:47Z",
+      "source_id": "src_2b928469124c",
+      "url": "https://simuladorprecos.erse.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/servicos-casa.html",
+        "servicos-casa.html"
+      ],
+      "candidate_sha256": "e4cd7ea61b769bbc9d5fc95321badfaba46a29e1c5769445bb7745bf1eddddf3",
+      "diff_excerpt": "-Compare os preços das ofertas comerciais de eletricidade e gás natural\n-O simulador de preços de energia da ERSE compara todas as ofertas comerciais disponíveis para os clientes de eletricidade (Baixa Tensão Normal) e de gás natural (Baixa Pressão) em Portugal continental.\n-Eletricidade\n-Gás Natural\n-Eletricidade e Gás Natural\n-Perguntas frequentes sobre este simulador ↗\n-Ofertas comerciais (CSV) - Atualizado em 25-11-2026 ↗\n-Boletim das ofertas comerciais de eletricidade ↗\n-Boletim das ofertas comerciais de gás natural ↗"
+    },
+    {
+      "time": "2026-11-28T07:56:23Z",
+      "source_id": "src_2e8500a7bec3",
+      "url": "https://justica.gov.pt/servicos/registar-nascimento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "3d7662968f7a8310f43429ff3d49c777c7c9177e15d21cfcffa4edf12b6c1721",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-28T07:56:21Z",
+      "source_id": "src_8075539b4165",
+      "url": "https://justica.gov.pt/Servicos/Submeter-pedido-de-nacionalidade",
+      "state": "changed_pending_review",
+      "pages": [
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "10078ff642c961cf99612e118fcd3c74444d2c969a94cf2967717b6a64c5b127",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-28T07:56:20Z",
+      "source_id": "src_6de9d828fd49",
+      "url": "https://justica.gov.pt/Servicos/Protecao-juridica",
+      "state": "changed_pending_review",
+      "pages": [
+        "discriminacao-apoio.html"
+      ],
+      "candidate_sha256": "29b25fa2a553624f83f5758af594c4056a0c4d9c02e0b5cfd9c8efc3fd94fc8c",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Protecao-juridica\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:56:18Z",
+      "source_id": "src_5d9fd6dbb527",
+      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
+      "state": "changed_pending_review",
+      "pages": [
+        "habitacao.html",
+        "seguranca.html"
+      ],
+      "candidate_sha256": "285160352feec7b0ac0c1941abe73f0a23562996bb072a019f16337f4cf9fdce",
+      "diff_excerpt": "-Informação predial simplificada — informação oficial da Justiça verificada em 27-09-2026. Permite saber quem é o proprietário de um imóvel e se existem hipotecas, penhoras, outros encargos ou pedidos de registo pendentes. A consulta é feita online mediante um código de acesso que pode ser pedido online.\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:56:16Z",
+      "source_id": "src_d3d76ad6c512",
+      "url": "https://justica.gov.pt/Servicos/Pedir-apoio-judiciario",
+      "state": "changed_pending_review",
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html"
+      ],
+      "candidate_sha256": "194efab7497d0189c81868fea1d8feec0727b957e1aa87832d74f86726cb9749",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Pedir-apoio-judiciario\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:56:14Z",
+      "source_id": "src_fb82d424d16e",
+      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/registos-civis.html",
+        "registos-civis.html"
+      ],
+      "candidate_sha256": "27594389637bf4aaf0889cab8841ff8462fbea87cd7db2fcc106c8369e18fd73",
+      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Iniciar-processo-de-casamento\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:56:13Z",
+      "source_id": "src_1a10460aaa69",
+      "url": "https://justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "e44f2f0e166fb7a51d036afda68d236ce465a052bd1f0383085ccc893cba602f",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-28T07:56:11Z",
+      "source_id": "src_2234ef846c7c",
+      "url": "https://justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento",
+      "state": "changed_pending_review",
+      "pages": [
+        "habitacao.html"
+      ],
+      "candidate_sha256": "ee2712bd9491496dbba671807f9be1f88bf2eea7c3ee7d90353e123ac2c95d7c",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:56:08Z",
+      "source_id": "src_3c7634597430",
+      "url": "https://justica.gov.pt/Servicos/Apresentar-queixa",
+      "state": "changed_pending_review",
+      "pages": [
+        "discriminacao-apoio.html",
+        "en/discriminacao-apoio.html",
+        "en/situacoes-urgentes.html",
+        "situacoes-urgentes.html"
+      ],
+      "candidate_sha256": "42b2812f5c337d1b2c11a8c4b8f7a22cb54fd07e74afa0b8ece0bcebe39f59d0",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-28T07:56:07Z",
+      "source_id": "src_aa440bba100b",
+      "url": "https://justica.gov.pt/Registos/Nacionalidade/Nacionalidade-portuguesa",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "0c56f59c997d75a7f2cc35e8e235594fba6e2525fca498f7800c34cd3ed270cc",
+      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
+    },
+    {
+      "time": "2026-11-28T07:56:05Z",
+      "source_id": "src_ac02e2cb2311",
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "3c423fd265508a7cedb3e19c996a315acd4fccc8d372fa71c831e1e245673065",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:56:03Z",
+      "source_id": "src_962f8edbc412",
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "9af26f3327e793de8798c519a294c9680050546fe52fb1066645f0384f37f187",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:56:01Z",
+      "source_id": "src_10df7741dfe0",
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "c3bd4172033e8b0e6cc2a37f09fc695eea8c9cb2f821a87a9bb5fff42be246eb",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:56:00Z",
+      "source_id": "src_0ea9b0928bd2",
+      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/nacionalidade.html",
+        "nacionalidade.html"
+      ],
+      "candidate_sha256": "16544b15d1855f4a8dcbc048d999a8ff2b29181a692ea47d7a8555f662a685c1",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:55:58Z",
+      "source_id": "src_151611dd5ea8",
+      "url": "https://justica.gov.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/transportes.html",
+        "transportes.html"
+      ],
+      "candidate_sha256": "a0df4adb35813ebaaf7ab6c9361b92b1e418b29763ca18cbe8c549a90f0532fd",
+      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/\n+Your IP: 172.208.158.196\n+Supply above information and time if you need any help"
+    },
+    {
+      "time": "2026-11-28T07:50:56Z",
+      "source_id": "src_ac4c209d3df8",
+      "url": "https://aima.gov.pt/pt/noticias/veja-conhecer-as-regras-para-renovacao-do-titulo-de-residencia-cplp",
+      "state": "changed_pending_review",
+      "pages": [
+        "cplp.html"
+      ],
+      "candidate_sha256": "b1525bc90cdeae70700f5da020a81940a803c08c3857b9c9e9bddaa06f470d94",
+      "diff_excerpt": "-Página não encontrada\n+Renovação e Substituição do Título de Residência CPLP\n+A Estrutura de Missão para a Recuperação dos Processos Pendentes na AIMA (EMAIMA) começou a notificar os titulares de Autorização de Residência da CPLP esta sexta-feira, dia 14 de fevereiro.\n+A notificação com instruções vai ser enviada, por-email, a todos os utentes que têm um Certificado de Concessão de Autorização de Residência para Cidadãos da Comunidade dos Países de Língua Portuguesa (AR CPLP), emitido ao abrigo da Portaria n.º 97/2023, de 28 de fevereiro, tendo em vista a sua renovação e substituição pelo modelo uniforme de título de residência, previstas na Portaria n.º 36-B/2025/1, de 13 de fevereiro.\n+Quando receberem a notificação, os titulares de Autorização de Residência CPLP devem aceder à plataforma services.aima.gov.pt e revalidar as suas credenciais de acesso, na opção “Renovar AR CPLP”.\n+Depois de atualizarem o registo, os requerentes devem pedir, na mesma plataforma, a geração de um Documento Único de Cobrança (DUC), para pagamento das taxas, que devem ser pagas nos 10 dias úteis seguintes.\n+Após a validação da conta e a confirmação do pagamento, os requerentes receberão, nos dias segu"
+    },
+    {
+      "time": "2026-11-28T07:50:53Z",
+      "source_id": "src_c71b71d3bfa4",
+      "url": "https://aima.gov.pt/pt/noticias/renovacao-do-titulo-de-residente-de-longa-duracao",
+      "state": "changed_pending_review",
+      "pages": [
+        "longa-duracao.html"
+      ],
+      "candidate_sha256": "5b012a1dd66ca226b0293dc1c16e7dc63ce7c9a1bb2420d38440522d2e0a2d67",
+      "diff_excerpt": "-Página não encontrada\n+Renovação do Título de Residente de Longa Duração\n+A AIMA esclarece que se encontra disponível o pedido de renovação do título de residente de longa duração no Portal das Renovações\n+(artigo 130, n.º 2º da Lei n.º 23/2007, de 04/07, na sua atual redação e art. 75º do Dec. Reg. N.º 84/2007, de 05/11, na sua atual redação)\n+Caso se encontre nesta situação, deverá renovar a sua Autorização de Residência no Portal das Renovações seguinte link:\n+portal-renovacoes.aima.gov.pt/ords/r/aima/aima-pr/pr-home\n+A AIMA relembra que:\n+• Para concluir o processo de renovação de Autorização de Residência com sucesso, é necessário o Número de Identificação da Segurança Social (NISS), podendo ser solicitado junto do Instituto da Segurança Social ou em algumas lojas do cidadão. Caso já possua NISS, mas não conste nos registos da AIMA, deverá proceder à sua atualização.\n+• Para receber o documento de Autorização de Residência na sua residência atual, é necessário que a sua morada esteja atualizada.\n+• Toda a informação deverá ser atualizada através do Formulário de Contacto (\n+https://contactenos.aima.gov.pt/contact-form\n+) .\n+Published on 10.12.2025 by AIMA\n+Notícias\n+Ver tudo\n"
+    },
+    {
+      "time": "2026-11-28T07:50:50Z",
+      "source_id": "src_7c058712b7c1",
+      "url": "https://aima.gov.pt/pt/noticias/protecao-temporaria-para-pessoas-deslocados-da-ucrania-prorrogada-ate-2027",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/protecao-temporaria.html",
+        "protecao-temporaria.html"
+      ],
+      "candidate_sha256": "cd95ef23b16e61b7aff9756e27d8628b70034c24a9663531e58594eaaecf4a1a",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+Formulário de Contacto temporariamente indisponível\n+27.11.2026\n+contactenos.aima.gov.pt: intervenção técnica programada dia 29 de novembro de 2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+AIMA abre candidaturas ao Programa OPRE\n+25.11.2026\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA abre candidaturas ao Programa ROMA Educa\n+25.11.2026"
+    },
+    {
+      "time": "2026-11-28T07:50:46Z",
+      "source_id": "src_2b0880736b8a",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-certificados-e-cartoes-de-residencia-permanentes-de-nacionais-ue-e-familiares",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "en/titulo-residencia-renovacao-segunda-via.html",
+        "legalizacao.html",
+        "titulo-residencia-renovacao-segunda-via.html"
+      ],
+      "candidate_sha256": "8912865b34b7fd11b537bc05b1316953311e7b59d43765039d3ab1605c8a640d",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+Formulário de Contacto temporariamente indisponível\n+27.11.2026\n+contactenos.aima.gov.pt: intervenção técnica programada dia 29 de novembro de 2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+AIMA abre candidaturas ao Programa OPRE\n+25.11.2026\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA abre candidaturas ao Programa ROMA Educa\n+25.11.2026"
+    },
+    {
+      "time": "2026-11-28T07:50:43Z",
+      "source_id": "src_8fe207c2a621",
+      "url": "https://aima.gov.pt/pt/noticias/portal-de-renovacoes-atualizado-para-nacionais-da-uniao-europeia-ue-e-familiares",
+      "state": "changed_pending_review",
+      "pages": [
+        "legalizacao.html",
+        "titulo-residencia-renovacao-segunda-via.html",
+        "ue-familiares.html"
+      ],
+      "candidate_sha256": "4f54865d3bb359d221ffa3f22fd52569d73f1f4e0566addfa4191ab8612416c9",
+      "diff_excerpt": "+Formulário de Contacto temporariamente indisponível\n+27.11.2026\n+contactenos.aima.gov.pt: intervenção técnica programada dia 29 de novembro de 2026\n+Ler mais\n-Formulário de Contacto: novas opções para segunda via e alteração de dados\n-25.11.2026\n-Opções distinguem os pedidos com e sem agendamento para atendimento presencial\n-Ler mais"
+    },
+    {
+      "time": "2026-11-28T07:50:40Z",
+      "source_id": "src_0bb3fdad0761",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto-cartao-titulo-de-residencia",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/mudanca-saida.html",
+        "mudanca-saida.html"
+      ],
+      "candidate_sha256": "52fd75a05d357277eccc364414531ff339f9b063fabb40fc5dcee26546bc26ca",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+Formulário de Contacto temporariamente indisponível\n+27.11.2026\n+contactenos.aima.gov.pt: intervenção técnica programada dia 29 de novembro de 2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+AIMA abre candidaturas ao Programa OPRE\n+25.11.2026\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA abre candidaturas ao Programa ROMA Educa\n+25.11.2026"
+    },
+    {
+      "time": "2026-11-28T07:50:36Z",
+      "source_id": "src_984aab257167",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-de-contacto",
+      "state": "changed_pending_review",
+      "pages": [
+        "aima-agendamento-problemas.html",
+        "en/aima-agendamento-problemas.html",
+        "en/ue-familiares.html",
+        "ue-familiares.html"
+      ],
+      "candidate_sha256": "cb7507792c905b6fc03d73fec90a56ee54d0f7ec8cced520ab7a994e5f232448",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+Formulário de Contacto temporariamente indisponível\n+27.11.2026\n+contactenos.aima.gov.pt: intervenção técnica programada dia 29 de novembro de 2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+AIMA abre candidaturas ao Programa OPRE\n+25.11.2026\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA abre candidaturas ao Programa ROMA Educa\n+25.11.2026"
+    },
+    {
+      "time": "2026-11-28T07:50:33Z",
+      "source_id": "src_52321d8bd72b",
+      "url": "https://aima.gov.pt/pt/noticias/formulario-agendamento-para-aquisicao-do-estatuto-de-residente-de-longa-duracao",
+      "state": "changed_pending_review",
+      "pages": [
+        "longa-duracao.html"
+      ],
+      "candidate_sha256": "38d3be7291568c79cc53f64df61526b253a3b41c6ae7f8701e24ab7515144a2c",
+      "diff_excerpt": "-Página não encontrada\n+Formulário: Agendamento para Aquisição do Estatuto de Residente de Longa Duração\n+A AIMA lança hoje o\n+formulário de agendamento para aquisição do estatuto de residente de longa duração\n+que se encontra disponível no seguinte link: contactenos.aima.gov.pt/contact-form.\n+Os\n+documentos obrigatórios\n+e que têm de ser submetidos são os seguintes:\n+• Cópia digitalizada do Título de Residência;\n+• Cópia digitalizada do Passaporte integral;\n+• Cópia digitalizada declaração de IRS dos últimos 5 anos;\n+• Estrato da carreira contributiva da Segurança Social.\n+Os\n+requisitos legais\n+para a aquisição do estatuto de residente de longa duração incluem:\n+Residência Legal e Ininterrupta:\n+O nacional de um país terceiro deve ter residência legal e ininterrupta em território nacional durante os cinco anos imediatamente anteriores à apresentação do requerimento. Para beneficiários de proteção internacional, o período é contado desde a data da apresentação do pedido que resultou na concessão da proteção.\n+Recursos Estáveis e Regulares:\n+O requerente deve dispor de recursos estáveis e regulares que sejam suficientes para a sua própria subsistência e para a dos seus familiares, "
+    },
+    {
+      "time": "2026-11-28T07:50:30Z",
+      "source_id": "src_48b0a401cee7",
+      "url": "https://aima.gov.pt/pt/noticias/atualizacao-da-tabela-de-taxas",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/legalizacao.html",
+        "legalizacao.html"
+      ],
+      "candidate_sha256": "ae081384ecf91406d3f5fc6f927252ae878507cbe93ff70f2e9cf1da136f9a02",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+Formulário de Contacto temporariamente indisponível\n+27.11.2026\n+contactenos.aima.gov.pt: intervenção técnica programada dia 29 de novembro de 2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+AIMA abre candidaturas ao Programa OPRE\n+25.11.2026\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA abre candidaturas ao Programa ROMA Educa\n+25.11.2026"
+    },
+    {
+      "time": "2026-11-28T07:50:26Z",
+      "source_id": "src_cbed4d38b3bf",
+      "url": "https://aima.gov.pt/pt/noticias/aima-lanca-novo-servico-online",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/situacoes-urgentes.html",
+        "en/titulo-residencia-renovacao-segunda-via.html",
+        "situacoes-urgentes.html",
+        "titulo-residencia-renovacao-segunda-via.html"
+      ],
+      "candidate_sha256": "8ee4d99cdcb4f3da18110971af13a6f10d5f95fdb4000c3a05082b065bcc3f85",
+      "diff_excerpt": "+Nacionais UE e Familiares\n-AIMA avalia satisfação dos utentes em 14 Lojas\n-16.09.2026\n-Participação voluntária, anónima e confidencial\n+Formulário de Contacto temporariamente indisponível\n+27.11.2026\n+contactenos.aima.gov.pt: intervenção técnica programada dia 29 de novembro de 2026\n-Portal de Renovações atualizado para Nacionais da União Europeia (UE) e Familiares\n-15.09.2026\n-Indicação de NIF e NISS deixa de ser necessária\n+AIMA abre candidaturas ao Programa OPRE\n+25.11.2026\n-AIMA aumenta mais de 60% os atendimentos, reduz reclamações e regista aumento de elogios no primeiro semestre de 2026\n-11.09.2026\n-Mais atendimentos, menos reclamações e mais elogios no primeiro semestre de 2026\n+AIMA abre candidaturas ao Programa ROMA Educa\n+25.11.2026"
+    },
+    {
+      "time": "2026-11-28T07:49:13Z",
+      "source_id": "src_12250e4f5a61",
+      "url": "https://aima.gov.pt/",
+      "state": "changed_pending_review",
+      "pages": [
+        "en/transportes.html",
+        "transportes.html"
+      ],
+      "candidate_sha256": "5ce4321f24301d225de06fba647e0e83ac6057940c4433a2ec5e7a9792e7064b",
+      "diff_excerpt": "-Coimbra acolhe o 5.º Encontro Regional AIMA em Rede e reforça cooperação territorial para a integração\n-06.11.2026\n+Formulário de Contacto temporariamente indisponível\n+27.11.2026\n+contactenos.aima.gov.pt: intervenção técnica programada dia 29 de novembro de 2026\n-Formulário de Contacto: Autorização de Residência Permanente\n-05.11.2026\n-Nova opção disponível\n+AIMA abre candidaturas ao Programa OPRE\n+25.11.2026\n-4.º Encontro Regional AIMA em Rede reforça cooperação para a integração na Região Centro\n-07.10.2026\n+AIMA abre candidaturas ao Programa ROMA Educa\n+25.11.2026"
+    },
+    {
       "time": "2026-11-27T23:35:03Z",
       "source_id": "src_5d9fd6dbb527",
       "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
@@ -2771,550 +3277,6 @@
       ],
       "candidate_sha256": "a7b5618786774c2bb8ab36498350d4d629d3728b79ce6c247b8ba8d10d839381",
       "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Pedir-apoio-judiciario\n+Your IP: 20.64.220.80\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-25T00:01:30Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "08c8012a48f4e3fb5ce7190e3939f2a35b177e47f6f2774a2f35c69c879f2d3e",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Iniciar-processo-de-casamento\n+Your IP: 20.64.220.80\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-25T00:01:28Z",
-      "source_id": "src_1a10460aaa69",
-      "url": "https://justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "4b717e12d9fdf384a08d6d77650f7c968cb2c3e6c27dd2cf5ceda4bcb9b5c4a4",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
-    },
-    {
-      "time": "2026-11-25T00:01:27Z",
-      "source_id": "src_2234ef846c7c",
-      "url": "https://justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "habitacao.html"
-      ],
-      "candidate_sha256": "60361a650b4d37107721f1b1501f831294133a92e29c6cdd97e0ef75e2e7fd95",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento\n+Your IP: 20.64.220.80\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-25T00:01:24Z",
-      "source_id": "src_3c7634597430",
-      "url": "https://justica.gov.pt/Servicos/Apresentar-queixa",
-      "state": "changed_pending_review",
-      "pages": [
-        "discriminacao-apoio.html",
-        "en/discriminacao-apoio.html",
-        "en/situacoes-urgentes.html",
-        "situacoes-urgentes.html"
-      ],
-      "candidate_sha256": "8ee8486603fb0286e12bdbc45ecfec714607105c03a8b6e9fd979284010e256d",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
-    },
-    {
-      "time": "2026-11-25T00:01:22Z",
-      "source_id": "src_aa440bba100b",
-      "url": "https://justica.gov.pt/Registos/Nacionalidade/Nacionalidade-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "ea9468defac677662db817d7157b0e7f0d88cedfdc79c22c5ad3468cd33161e4",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
-    },
-    {
-      "time": "2026-11-25T00:01:21Z",
-      "source_id": "src_ac02e2cb2311",
-      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "a15c9fea4e439ca28e8843b7d0a407e01129e84fc2470e92b8d0ef76202cb02c",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues\n+Your IP: 20.64.220.80\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-25T00:01:19Z",
-      "source_id": "src_962f8edbc412",
-      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "e83b87e93429a02487961351905d199719e2ea68e5eb618d1e485e7fcbc579a9",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal\n+Your IP: 20.64.220.80\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-25T00:01:17Z",
-      "source_id": "src_10df7741dfe0",
-      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "ab5a9268538ad1118abd1307df3e542b356261cae67d51edaf7440b2a211c0df",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues\n+Your IP: 20.64.220.80\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-25T00:01:15Z",
-      "source_id": "src_0ea9b0928bd2",
-      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "9ab04b978d319964d82e167f2afed822d5a01b823ef80aa26d3f274b8c664c65",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos\n+Your IP: 20.64.220.80\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-25T00:01:13Z",
-      "source_id": "src_151611dd5ea8",
-      "url": "https://justica.gov.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/transportes.html",
-        "transportes.html"
-      ],
-      "candidate_sha256": "badbe90d716f01ef9ec117c3fcf36f5f9e8b86e4fb213e60fc8749e68bcad702",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/\n+Your IP: 20.64.220.80\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:48:54Z",
-      "source_id": "dre-series1-rss",
-      "url": "https://diariodarepublica.pt/dr/detalhe/resolucao-assembleia-republica/290-2026-1197651189",
-      "state": "new_legislation_pending_review",
-      "pages": [],
-      "title": "Resolução da Assembleia da República n.º 290/2026 - Diário da República n.º 228/2026, Série I de 2026-11-24",
-      "published": ""
-    },
-    {
-      "time": "2026-11-24T13:48:53Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "baseline_seeded_from_verified_official_listing",
-      "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
-    },
-    {
-      "time": "2026-11-24T13:48:44Z",
-      "state": "invalid_baselines_rejected",
-      "source_ids": [
-        "src_d7d25428293c"
-      ],
-      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
-    },
-    {
-      "time": "2026-11-24T13:48:35Z",
-      "source_id": "src_62896b90e5a4",
-      "url": "https://www.gov.pt/servicos/registar-um-nascimento-no-estrangeiro",
-      "state": "changed_pending_review",
-      "pages": [
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "321901c7104321a9aea745bea0222f47e315d47d69473dcd49334e99c7fba67c",
-      "diff_excerpt": "-27.03.2026\n+23.05.2025\n-Prazo\n+Qual o prazo registar um nascimento no estrangeiro?\n-O serviço \"Registar um nascimento no estrangeiro\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n+O serviço \"Registar um nascimento no estrangeiro\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-24T13:48:34Z",
-      "source_id": "src_07b86f035fc9",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
-      "state": "changed_pending_review",
-      "pages": [
-        "trabalho.html"
-      ],
-      "candidate_sha256": "70e994c450af1c58f076e38c248f5aad26c41026dbb4bb187263df806ab35b3a",
-      "diff_excerpt": "-27.03.2026\n+23.05.2025\n-Prazo\n+Qual o prazo pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Outras informações\n-Legislação\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional\n-Altera a portaria dos meios de subsistência.\n-Regula os meios de subsistência.\n-Contingente Global de 2010.\n-Tabela de Emolumentos Consulares.\n-O serviço \"Pedir um visto de estada temporária para trabalho subordinado ou independente\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n+O serviço \"Pedir um visto de estada temporária para trabalho subordinado ou independente\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-24T13:48:33Z",
-      "source_id": "src_b223c78629bb",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "74d17153a2c15acbc53122878c7fc9e2624348b5bab8ac9fe2b84d2e6f4c9d4f",
-      "diff_excerpt": "-03.09.2026\n+19.10.2026\n-O serviço \"Pedir o Número de Identificação da Segurança Social (NISS)\" é da responsabilidade da entidade Instituto da Segurança Social.\n+O serviço \"Pedir o Número de Identificação da Segurança Social (NISS)\" é da responsabilidade da entidade Instituto da Segurança Social. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-24T13:48:28Z",
-      "source_id": "src_b55923d59614",
-      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "77d4e2b4a2c409de5198e50b2393f9471eb3b892178f7843095721eba0378dbf",
-      "diff_excerpt": "-21.05.2026\n+19.10.2026\n-O serviço \"Pedir a nacionalidade portuguesa\" é da responsabilidade da entidade Instituto dos Registos e do Notariado.\n+O serviço \"Pedir a nacionalidade portuguesa\" é da responsabilidade da entidade Instituto dos Registos e do Notariado. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-24T13:48:27Z",
-      "source_id": "src_b8fe052c05da",
-      "url": "https://www.gov.pt/servicos/marcar-uma-consulta-no-centro-de-saude",
-      "state": "changed_pending_review",
-      "pages": [
-        "saude-completa.html"
-      ],
-      "candidate_sha256": "be3fb0226e252e143faca9fa85fbd005a2543f4bcb33781bfbcdf9dfeac0dd05",
-      "diff_excerpt": "-05.06.2025\n+19.10.2026\n+Consultar a área pessoal do portal SNS 24\n+Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\n-Obter o número nacional de utente do Serviço Nacional de Saúde (SNS)\n-Consultar a área pessoal do portal SNS 24\n-O serviço \"Marcar uma consulta no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde.\n+O serviço \"Marcar uma consulta no centro de saúde\" é da responsabilidade da entidade Administração Central do Sistema de Saúde. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-24T13:48:21Z",
-      "source_id": "src_895f18d4d170",
-      "url": "https://www.gov.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/transportes.html",
-        "transportes.html"
-      ],
-      "candidate_sha256": "5af2bc3f70b7f09af2b183783fbde32b2e76857ff488cf45052295f4f192ebe0",
-      "diff_excerpt": "-Situação de calamidade\n+Calamidades e situações de emergência\n-Ir para notícia\n+Ir para página\n-248\n+249\n-327\n+329\n-169\n+168\n-1213\n+1211\n-149\n+150\n-446\n+447\n-Campanha Cidadão Digital promove os serviços públicos digitais\n-Com o mote “O próximo passo é clicar”, esta iniciativa está a ser divulgada na televisão, nos meios digitais, nas redes sociais e em mais de 1.000 Lojas e Espaços Cidadão.\n+ARTE renova espaços de atendimento e pretende abrir mais Lojas de Cidadão em 2026\n+Mais Lojas de Cidadão e Espaços Cidadão, para tratar dos serviços públicos com apoio presencial.\n-Nova Loja de Cidadão de Ferreira do Zêzere já está aberta\n+Carteira Digital da Empresa tem nova área para fundos e oportunidades de financiamento\n-A Loja de Cidadão da Maia já abriu\n+AIMA tem nova forma de pedir agendamento de residência permanente\n-ARTE renova espaços de atendimento e pretende abrir mais Lojas de Cidadão em 2026\n+Nova Loja de Cidadão reúne vários serviços públicos em Vila Nova de Paiva\n-Atestado Médico de Incapacidade Multiuso na app gov.pt\n+Campanha Cidadão Digital promove os serviços públicos digitais\n-2505\n+2501\n-235\n+236\n-618\n+620\n-574\n+576\n-3787\n+3816"
-    },
-    {
-      "time": "2026-11-24T13:47:45Z",
-      "source_id": "src_2e8500a7bec3",
-      "url": "https://justica.gov.pt/servicos/registar-nascimento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "f5ddaa183eb51fc48ccb6625f86c4751234b0337c05e04bd6ba5a5d5a8873ca0",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
-    },
-    {
-      "time": "2026-11-24T13:47:44Z",
-      "source_id": "src_8075539b4165",
-      "url": "https://justica.gov.pt/Servicos/Submeter-pedido-de-nacionalidade",
-      "state": "changed_pending_review",
-      "pages": [
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "d21dc73720bf4fb9a4b4bfb825419b639f361c968e39e599ce10ba01401353e7",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
-    },
-    {
-      "time": "2026-11-24T13:47:42Z",
-      "source_id": "src_6de9d828fd49",
-      "url": "https://justica.gov.pt/Servicos/Protecao-juridica",
-      "state": "changed_pending_review",
-      "pages": [
-        "discriminacao-apoio.html"
-      ],
-      "candidate_sha256": "2c5e16b57ecdfee6e62675cab87e8e5f081c4ede398dbbd7eb68394904a2770a",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Protecao-juridica\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:41Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "habitacao.html",
-        "seguranca.html"
-      ],
-      "candidate_sha256": "f840970169eca653f4093cc3d6858f9f681515c588ab2bf2450109d3025a6fde",
-      "diff_excerpt": "-Informação predial simplificada — informação oficial da Justiça verificada em 27-09-2026. Permite saber quem é o proprietário de um imóvel e se existem hipotecas, penhoras, outros encargos ou pedidos de registo pendentes. A consulta é feita online mediante um código de acesso que pode ser pedido online.\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:39Z",
-      "source_id": "src_d3d76ad6c512",
-      "url": "https://justica.gov.pt/Servicos/Pedir-apoio-judiciario",
-      "state": "changed_pending_review",
-      "pages": [
-        "discriminacao-apoio.html",
-        "en/discriminacao-apoio.html"
-      ],
-      "candidate_sha256": "153bc44ec1e49e5b191c3f248a25372142d2e483b3488236eb645906ec0b9c82",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Pedir-apoio-judiciario\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:37Z",
-      "source_id": "src_fb82d424d16e",
-      "url": "https://justica.gov.pt/Servicos/Iniciar-processo-de-casamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/registos-civis.html",
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "168820379f82ad4dd95b2344aae4cd8204411208b6b0b68daf5d7f3edbca2a7f",
-      "diff_excerpt": "-Casamento — informação oficial da Justiça verificada em 20-08-2026. O casamento deve ser registado. O processo de casamento pode ser iniciado online ou presencialmente num Registo Civil. Depois de escolherem uma data, os noivos devem organizar o processo com pelo menos um mês de antecedência.\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Iniciar-processo-de-casamento\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:36Z",
-      "source_id": "src_1a10460aaa69",
-      "url": "https://justica.gov.pt/Servicos/Consultar-estado-do-processo-de-nacionalidade",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "ebb21c22a091e9d4ac884d93b5ba60a5ddc337ab1c89b978523949817a063852",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
-    },
-    {
-      "time": "2026-11-24T13:47:34Z",
-      "source_id": "src_2234ef846c7c",
-      "url": "https://justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento",
-      "state": "changed_pending_review",
-      "pages": [
-        "habitacao.html"
-      ],
-      "candidate_sha256": "aadf0b7bbfe66dc943423cfbff9c651617e6eee8acc49b5e4e082b31d401ba94",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Servicos/Balcao-Nacional-do-Arrendamento\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:32Z",
-      "source_id": "src_3c7634597430",
-      "url": "https://justica.gov.pt/Servicos/Apresentar-queixa",
-      "state": "changed_pending_review",
-      "pages": [
-        "discriminacao-apoio.html",
-        "en/discriminacao-apoio.html",
-        "en/situacoes-urgentes.html",
-        "situacoes-urgentes.html"
-      ],
-      "candidate_sha256": "0a9e7f03cff44c25fcd1d46630a5f4531b80a341be14a783e5b6ee24b610ceb0",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
-    },
-    {
-      "time": "2026-11-24T13:47:30Z",
-      "source_id": "src_aa440bba100b",
-      "url": "https://justica.gov.pt/Registos/Nacionalidade/Nacionalidade-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "9cf260a3060423dcae5adb45038e39cbc1c08bf6fd4ea7e181d1bac02206b7df",
-      "diff_excerpt": "-Copied!\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-WordPress\n-Google Gmail\n-WhatsApp\n-StumbleUpon\n-AIM\n-Amazon Wish List\n-AOL Mail\n-App.net\n-Baidu\n-Balatarin\n-BibSonomy\n-Bitty Browser\n-Blinklist\n-Blogger Post\n-BlogMarks\n-Bookmarks.fr\n-Box.net\n-BuddyMarks\n-Buffer\n-Care2 News\n-CiteULike\n-Copy Link\n-Delicious\n-Design Float\n-Diary.Ru\n-Diaspora\n-Digg\n-diHITT\n-Diigo\n-Douban\n-Draugiem\n-DZone\n-Evernote\n-Facebook Messenger\n-Fark\n-Flipboard\n-Folkd\n-Google Bookmarks\n-Google Classroom\n-Hacker News\n-Hatena\n-Instapaper\n-Jamespot\n-Kakao\n-Kik\n-Kindle It\n-Known\n-Line\n-LiveJournal\n-Mail.Ru\n-Mendeley\n-Meneame\n-Mixi\n-MySpace\n-Netlog\n-Netvouz\n-NewsVine\n-NUjij\n-Odnoklassniki\n-Oknotizie\n-Outlook.com\n-Pinboard\n-Plurk\n-Pocket\n-Polyvore\n-Print\n-PrintFriendly\n-Protopage Bookmarks\n-Pusha\n-Qzone\n-Rediff MyPage\n-Renren\n-Segnalo\n-Sina Weibo\n-SiteJot\n-Skype\n-Slashdot\n-SMS\n-Stumpedia\n-Svejo\n-Symbaloo Feeds\n-Telegram\n-Trello\n-Tuenti\n-Twiddla\n-TypePad Post\n-Viadeo\n-Viber\n-VK\n-Wanelo\n-Webnews\n-WeChat\n-Wykop\n-XING\n-Yahoo Bookmarks\n-Yahoo Mail\n-Yahoo Messenger\n-Yoolink\n-YouMob\n-Yummly\n-AddToAny\n-Facebook\n-Twitter\n-Google+\n-Pinterest\n-Email\n-LinkedIn\n-Reddit\n-Tumblr\n-Google Gmail\n-AOL Mail"
-    },
-    {
-      "time": "2026-11-24T13:47:29Z",
-      "source_id": "src_ac02e2cb2311",
-      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "8fbe5e556d069345e68c2a1bc9c96d21ad57f42301ce4a6839509c8436b3b09e",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-no-estrangeiro-e-e-filho-de-um-portugues\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:28Z",
-      "source_id": "src_962f8edbc412",
-      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "d4043ab7983e6bfbddf680c917f45814690e88db4d07303d1a2c13a8e6ee7d34",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/Nasceu-em-Portugal\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:26Z",
-      "source_id": "src_10df7741dfe0",
-      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "07c09820823485c7f3f4818e87f9005ca32a4e3e6f8af5fb4e662c85f210f554",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-neto-de-um-portugues\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:25Z",
-      "source_id": "src_0ea9b0928bd2",
-      "url": "https://justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/nacionalidade.html",
-        "nacionalidade.html"
-      ],
-      "candidate_sha256": "dcc4ab84346fdb7f0b60ddf12541009d61523518a9068517d137c6764d93c05f",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/Como-obter-nacionalidade-portuguesa/E-casado-ou-vive-em-uniao-de-facto-com-um-portugues-ha-mais-de-3-anos\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T13:47:23Z",
-      "source_id": "src_151611dd5ea8",
-      "url": "https://justica.gov.pt/",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/transportes.html",
-        "transportes.html"
-      ],
-      "candidate_sha256": "3729eeba532f61333d903e7d458130f2dea53e778a2a1d3923e6a4b02a24c661",
-      "diff_excerpt": "-Este website utiliza cookies.\n-Ao continuar a navegação está a aceitar a sua utilização. Consulte a nossa\n-política de privacidade\n-Fechar\n+Something Went Wrong\n+Please check information submitted\n+Date/Time:\n+You tried to reach justica.gov.pt/\n+Your IP: 57.154.31.81\n+Supply above information and time if you need any help"
-    },
-    {
-      "time": "2026-11-24T02:17:51Z",
-      "source_id": "src_5d9fd6dbb527",
-      "url": "https://justica.gov.pt/Servicos/Pedir-informacao-predial-simplificada",
-      "state": "baseline_seeded_from_verified_official_listing",
-      "reason": "https://justica.gov.pt/Servicos?organismo=IRN&tematica=Registos"
-    },
-    {
-      "time": "2026-11-24T02:17:44Z",
-      "state": "invalid_baselines_rejected",
-      "source_ids": [
-        "src_d7d25428293c"
-      ],
-      "reason": "temporary WAF/maintenance/cookie-only content cannot be a baseline"
-    },
-    {
-      "time": "2026-11-24T02:17:44Z",
-      "source_id": "src_b55923d59614",
-      "url": "https://www.gov.pt/servicos/pedir-a-nacionalidade-portuguesa",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-11-24T02:17:44Z",
-      "source_id": "src_2b928469124c",
-      "url": "https://simuladorprecos.erse.pt/",
-      "state": "temporary_source_response_ignored",
-      "reason": "ERSE cookie-only render ignored; last known-good simulator baseline retained"
-    },
-    {
-      "time": "2026-11-24T02:17:44Z",
-      "source_id": "src_62896b90e5a4",
-      "url": "https://www.gov.pt/servicos/registar-um-nascimento-no-estrangeiro",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-11-24T02:17:44Z",
-      "source_id": "src_b223c78629bb",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-11-24T02:17:44Z",
-      "source_id": "src_07b86f035fc9",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
-      "state": "temporary_source_response_ignored",
-      "reason": "temporary anti-bot/WAF response ignored; last known-good baseline retained"
-    },
-    {
-      "time": "2026-11-24T02:17:36Z",
-      "source_id": "src_c56963332c91",
-      "url": "https://www.gov.pt/servicos/trocar-carta-de-conducao-estrangeira-por-portuguesa",
-      "state": "changed_pending_review",
-      "pages": [
-        "carta-conducao.html",
-        "en/carta-conducao.html"
-      ],
-      "candidate_sha256": "45966e7fede67601a7107c374b26e16b70e669c897d6ca098b7a2adb222cb04a",
-      "diff_excerpt": "-06.03.2026\n+19.10.2026\n+Substituir a carta de condução\n-Substituir a carta de condução\n-O serviço \"Trocar carta de condução estrangeira por portuguesa\" é da responsabilidade da entidade Instituto da Mobilidade e dos Transportes, IP.\n+O serviço \"Trocar carta de condução estrangeira por portuguesa\" é da responsabilidade da entidade Instituto da Mobilidade e dos Transportes, IP. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-24T02:17:35Z",
-      "source_id": "src_f6b1ed8a92fe",
-      "url": "https://www.gov.pt/servicos/requerer-o-abono-de-familia-para-criancas-e-jovens",
-      "state": "changed_pending_review",
-      "pages": [
-        "apoios-sociais.html",
-        "en/apoios-sociais.html"
-      ],
-      "candidate_sha256": "c8daef68aeaa2a6b6b90b1e5775e0e4755423a535128369e7f648bac20f884f7",
-      "diff_excerpt": "-Realizar serviço\n-02.10.2026\n+03.09.2026\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Entidade responsável\n-Informação adicional\n-Para mais informações consulte o\n-portal da Segurança Social\n-Entidade responsável\n-O serviço \"Receber o abono de família para crianças e jovens\" é da responsabilidade da entidade Instituto da Segurança Social.\n-Ir para a página da entidade"
-    },
-    {
-      "time": "2026-11-24T02:17:35Z",
-      "source_id": "src_62896b90e5a4",
-      "url": "https://www.gov.pt/servicos/registar-um-nascimento-no-estrangeiro",
-      "state": "changed_pending_review",
-      "pages": [
-        "registos-civis.html"
-      ],
-      "candidate_sha256": "13b2aeb3b5e21bd05b2e0dc42c4c1e2fa686ffb69fd1b57f47191972c85607d5",
-      "diff_excerpt": "-Serviços\n-Registar um nascimento no estrangeiro\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem registar um nascimento no estrangeiro?\n-Quando registar um nascimento no estrangeiro?\n-Onde registar um nascimento no estrangeiro?\n-Como registar um nascimento no estrangeiro?\n-O que precisa para registar um nascimento no estrangeiro?\n-Prazo\n-Qual o preço registar um nascimento no estrangeiro?\n-Conteúdos relacionados\n-Entidade responsável\n-Informações sobre como e onde realizar o registo de nascimento no estrangeiro.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Cidadão com nacionalidade portuguesa residente no estrangeiro.\n-A qualquer momento, dentro do horário de atendimento.\n-Num Posto Consular português\n-Registo de nascimento no estrangeiro de cidadão com direito a nacionalidade portuguesa.\n-O registo de nascimento é feito:\n-Por inscrição, mediante declaração dos pais, (os quais devem estar inscritos nos serviços consulares);\n-ou\n-Por transcrição, com base em certidão de nascimento emitida pelas autoridades locais do país onde ocorreu o nascimento.\n-Bilhete de Identidade\n-ou\n-Certidão de nascimento dos pais, emitida"
-    },
-    {
-      "time": "2026-11-24T02:17:33Z",
-      "source_id": "src_d047de31a87b",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-trabalho-dependente",
-      "state": "changed_pending_review",
-      "pages": [
-        "en/fora-de-portugal.html",
-        "en/trabalho.html",
-        "fora-de-portugal.html",
-        "trabalho.html"
-      ],
-      "candidate_sha256": "a0f1c6cb0463f8f543d2cd07d36731b6559fa28794ad05f07235bdba05dd60ad",
-      "diff_excerpt": "-Quem pode realizar o serviço\n-Quando se pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Legislação\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Altera a portaria dos meios de subsistência.\n-Regula os meios de subsistência.\n-Resolução que aprova o Contingente Global de Oportunidades de Trabalho Anual\n-Tabela de Emolumentos Consulares.\n-Temas\n-Entidade responsável\n-O serviço \"Pedir um visto de residência para trabalho dependente\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n-Ir para a página da entidade"
-    },
-    {
-      "time": "2026-11-24T02:17:33Z",
-      "source_id": "src_33c397772684",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-residencia-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "altamente-qualificado.html",
-        "en/altamente-qualificado.html",
-        "en/fora-de-portugal.html",
-        "fora-de-portugal.html"
-      ],
-      "candidate_sha256": "a47334bfb5b0f6dcca50f51f09fc4b7cc9469ed07f04a440f1caebdd2ee0467b",
-      "diff_excerpt": "-27.03.2026\n+23.05.2025\n-Prazo\n+Qual o prazo pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Legislação\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Altera a Portaria dos Meios de Subsistência.\n-Regula os Meios de Subsistência.\n-Tabela de Emolumentos Consulares.\n-O serviço \"Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n+O serviço \"Pedir um visto de residência para o exercício de atividade de investigação ou altamente qualificada\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-24T02:17:32Z",
-      "source_id": "src_07b86f035fc9",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-trabalho-subordinado-ou-independente",
-      "state": "changed_pending_review",
-      "pages": [
-        "trabalho.html"
-      ],
-      "candidate_sha256": "01fcb819086929288c9c0b94aa65da6af6a22bc9d120721bc6c71bbb09a4d224",
-      "diff_excerpt": "-Serviços\n-Pedir um visto de estada temporária para trabalho subordinado ou independente\n-Atualizado em\n-27.03.2026\n-Nesta página\n-Sobre este serviço\n-Canais de atendimento\n-Quem pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Quando pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Onde pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Como pedir um visto de estada temporária para trabalho subordinado ou independente?\n-O que precisa para pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Prazo\n-Qual o preço pedir um visto de estada temporária para trabalho subordinado ou independente?\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-Informação sobre como e onde realizar o pedido de visto para o exercício de uma atividade profissional subordinada ou independente.\n-Saiba onde pode realizar o serviço e quais as vantagens de cada canal\n-Todos os cidadãos estrangeiros, que não sejam nacionais de Estados Membros UE, do Espaço Económico Europeu e Suíça que pretendam exercer em Portugal uma profissão, subordinada ou independente, de carácter temporário"
-    },
-    {
-      "time": "2026-11-24T02:17:31Z",
-      "source_id": "src_cba148b16793",
-      "url": "https://www.gov.pt/servicos/pedir-um-visto-de-estada-temporaria-para-o-exercicio-de-atividade-de-investigacao-ou-altamente-qualificada",
-      "state": "changed_pending_review",
-      "pages": [
-        "altamente-qualificado.html"
-      ],
-      "candidate_sha256": "cc9667bf2fd284152a452fc126f7ece80711bf004140a8cb732d0e762e2a60a8",
-      "diff_excerpt": "-27.03.2026\n+23.05.2025\n-Prazo\n+Qual o prazo pedir um visto de estada temporária para o exercício de atividade de investigação ou altamente qualificada?\n-Outras informações\n-Legislação\n-Regulamenta a Lei que aprova o regime jurídico de entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Regulamenta a entrada, permanência, saída e afastamento de cidadãos estrangeiros do território nacional.\n-Altera a portaria dos meios de subsistência.\n-Regula os meios de subsistência.\n-Tabela de Emolumentos Consulares.\n-O serviço \"Pedir um visto de estada temporária para o exercício de atividade de investigação ou altamente qualificada\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas.\n+O serviço \"Pedir um visto de estada temporária para o exercício de atividade de investigação ou altamente qualificada\" é da responsabilidade da entidade Direção-Geral dos Assuntos Consulares e das Comunidades Portuguesas. Em caso de dúvidas, utilize todos os contactos disponíveis para entrar em contacto com esta entidade.\n-Ir para a página da entidade\n+Ver portal da entidade"
-    },
-    {
-      "time": "2026-11-24T02:17:30Z",
-      "source_id": "src_b223c78629bb",
-      "url": "https://www.gov.pt/servicos/pedir-o-numero-de-identificacao-da-seguranca-social-niss-",
-      "state": "changed_pending_review",
-      "pages": [
-        "dia-a-dia.html",
-        "en/dia-a-dia.html",
-        "en/index.html",
-        "index.html"
-      ],
-      "candidate_sha256": "85895fad6205ded4e802f0fb7a1d5d4ae0f23e600649709dd28d27009d6e2bff",
-      "diff_excerpt": "-Serviços\n-Pedir o Número de Identificação da Segurança Social (NISS)\n-O Número de Identificação da Segurança Social (NISS) é o número que permite aceder a direitos e cumprir deveres na Segurança Social.\n-Podem pedir o NISS as pessoas estrangeiras, e portuguesas com bilhete de identidade vitalício. O pedido é feito online.\n-Consulte também a página\n-\"Como pedir o NIF e o NISS para pessoas estrangeiras em Portugal\"\n-nas seguintes línguas:\n-português\n-inglês\n-árabe\n-hindi\n-mandarim\n-Pedir NISS\n-Atualizado em\n-03.09.2026\n-Nesta página\n-Quem pode realizar o serviço\n-Como e onde se pode realizar o serviço\n-Outras informações\n-Conteúdos relacionados\n-Entidade responsável\n-O Número de Identificação da Segurança Social pode ser pedido por:\n-Pessoas estrangeiras\n-Pessoas portuguesas com bilhete de identidade vitalício\n-Representantes legais em nome da pessoa estrangeira\n-Entidades empregadoras em nome da pessoa estrangeira que estejam a contratar\n-No caso de o pedido ser feito pela entidade empregadora, para que o NISS seja atribuído é necessário que a entidade empregadora celebre, previamente, um contrato de trabalho com a pessoa em causa, e comunique o vínculo de trabalho na\n-Segurança So"
     }
   ]
 }
